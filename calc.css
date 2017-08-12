@@ -1,0 +1,78 @@
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.circle {
+  border-radius: 50%;
+  width:56px;
+  height:56px;
+  background:#000;
+  border: 2px solid #aaa;
+  border-right: 0px;
+  border-bottom: 0px;
+  background-size:100%;
+}
+
+.small {
+  width:48px;
+  height:48px;
+}
+
+.large {
+  width:64px;
+  height:64px;
+}
+
+.nopadding {
+  padding: 0px !important;
+}
+
+.lightup {
+  border: 3px solid #fff;
+}
+
+.gearicon {
+  width:64px;
+  height:64px;
+  margin:auto;
+  display:block;
+  background: rgba(255,255,255,0.2);
+  border: dashed 2px #fff;
+}
+
+.skillicon {
+  width:64px;
+  height:64px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.skillicon.small {
+  width:32px;
+  height:32px;
+}
+
+.lvl-target {
+  border:solid 2px #fff;
+}
+
+.gear{
+  background:#00ff00;
+  border: solid 2px #fff;
+}
+
+.bgstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+}

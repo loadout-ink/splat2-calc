@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/jquery/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+  <script src="lib/angular-animate.min.js"></script>
+  <script src="lib/angular-touch.min.js"></script>
+  <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="lib/jquery-ui-custom/jquery-ui.js"></script>
+  <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
+
+
+  <script src="./loadout.js"></script>
+  <script src="./calc.js"></script>
+  <link rel="stylesheet" href="./calc.css">
+  <script src="./skills.js"></script>
+  <script src="./ui.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container" ng-app="splatApp" ng-controller="splatController">
+    <div class="row">
+    <div class="col-md-6 col-xs-12" style="background:#00ffff min-height:500px">
+        <div class="row">
+          <div class="col-md-12 weapon" style="background: #ff00ff">
+            <div class="row">
+              <div class="col-md-6">
+                <select class="form-control btn btn-primary dropdown-toggle" data-ng-options="x for x in placeholder" data-ng-model="dummy"></select>
+              </div>
+              <div class="col-md-6">
+                <select class="form-control btn btn-primary dropdown-toggle" data-ng-options="x for x in placeholder" data-ng-model="dummy"></select>
+              </div>
+          </div>
+            <div style="height:150px">I'm a placeholder!</div>
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+
+            <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row">
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="geariconbg"><img class="gearicon" src="./img/gear/Hed_EYE011.png" /></div></div>
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="circle large" ability-slot="loadout.head.Main" style="background-image:url({{loadout.head.getMainIcon()}})"></div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.head.Subs[0]" style="background-image:url({{loadout.head.getSubIcon(0)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.head.Subs[1]" style="background-image:url({{loadout.head.getSubIcon(1)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.head.Subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row">
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="geariconbg"><img class="gearicon" src="./img/gear/Clt_PRK005.png" /></div></div>
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="circle large" ability-slot="loadout.clothes.Main" style="background-image:url({{loadout.clothes.getMainIcon()}})"></div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.clothes.Subs[0]" style="background-image:url({{loadout.clothes.getSubIcon(0)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.clothes.Subs[1]" style="background-image:url({{loadout.clothes.getSubIcon(1)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.clothes.Subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row">
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="geariconbg"><img class="gearicon" src="./img/gear/Shs_SHI004.png" /></div></div>
+                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="circle large" ability-slot="loadout.shoes.Main" style="background-image:url({{loadout.shoes.getMainIcon()}})"></div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.shoes.Subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})">></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.shoes.Subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="circle small" ability-slot="loadout.shoes.Subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="min-height:500px">
+          <div ng-repeat="skill in skills" class="circle " id="{{$index}}" ng-click="loadout.setOpenSlot(skill)" test-draggable="{'helper':'clone'}" style="float: left; background-image:url('{{skill.Image}}')"></div>
+        </div>
+    </div>
+  </div>
+    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (PH)<br>
+        <div class="col-md-6">
+          <uib-progressbar value="44" class="progress-striped"></uib-progressbar>
+        </div>
+        <div class="col-md-6">
+          <uib-progressbar value="44" class="progress-striped"></uib-progressbar>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
