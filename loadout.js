@@ -43,4 +43,24 @@ function Loadout() {
     else if(this.shoes.hasEmptySlots()){ this.shoes.setNextSlot(skill); return true; }
     return false;
   }
+
+  this.calcAbilityScore = function(skill) {
+    var total = 0;
+    if(this.head.main==skill) total += 10;
+    for(var i = 0; i < this.head.subs.length; i++) {
+      if(this.head.subs[i] == skill) total +=3;
+    }
+
+    if(this.clothes.main==skill) total += 10;
+    for(var i = 0; i < this.clothes.subs.length; i++) {
+      if(this.clothes.subs[i] == skill) total +=3;
+    }
+
+    if(this.shoes.main==skill) total += 10;
+    for(var i = 0; i < this.shoes.subs.length; i++) {
+      if(this.shoes.subs[i] == skill) total +=3;
+    }
+      return total;
+  }
+
 }

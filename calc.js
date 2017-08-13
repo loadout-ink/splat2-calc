@@ -4,7 +4,7 @@ angular
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
-
+    angular.module('splatApp').stats($scope);
     $scope.loadout = new Loadout();
 
   }])

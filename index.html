@@ -14,6 +14,7 @@
   <script src="./calc.js"></script>
   <link rel="stylesheet" href="./calc.css">
   <script src="./skills.js"></script>
+  <script src="./stats.js"></script>
   <script src="./ui.js"></script>
 
 
@@ -84,16 +85,14 @@
       </div>
       <div class="row">
         <div class="col-md-12" style="min-height:500px">
-          <div ng-repeat="skill in skills" class="circle abilitymenu" id="{{$index}}" ng-click="loadout.setOpenSlot(skill)" test-draggable="{'helper':'clone'}" style="float: left; background-image:url('{{skill.image}}')"></div>
+          <div ng-repeat="skill in skills" class="circle abilitymenu" uib-tooltip="{{skill.name}}" id="{{$index}}" ng-click="loadout.setOpenSlot(skill)" test-draggable="{'helper':'clone'}" style="float: left; background-image:url('{{skill.image}}')"></div>
         </div>
     </div>
   </div>
-    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (PH)<br>
-        <div class="col-md-6">
-          <uib-progressbar value="44" class="progress-striped"></uib-progressbar>
-        </div>
-        <div class="col-md-6">
-          <uib-progressbar value="44" class="progress-striped"></uib-progressbar>
+    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (Mouseover for details)<br>
+        <div class="col-md-6" ng-repeat="stat in stats">
+          {{stat.name}}
+          <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
         </div>
     </div>
   </div>

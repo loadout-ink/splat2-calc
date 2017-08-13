@@ -1,3 +1,4 @@
+
 angular.module('splatApp').skills = function ($scope) {
 $scope.skills = [
   {
@@ -112,4 +113,10 @@ $scope.skills = [
     exclusive:"loadout.shoes.main"
   }
 ]
+$scope.getSkillByName = function(name) {
+    return $scope.skills.filter(function(skill) {
+      return skill.name == name;
+    })[0]
+}
+
 }

@@ -5,7 +5,7 @@ angular.module('splatApp')
       var options = {
         helper: 'clone',
         zIndex:100,
-        snap: ".circle",
+        snap: "[ability-slot]",
         snapMode: "inner",
         snapTolerance: 8
       }
