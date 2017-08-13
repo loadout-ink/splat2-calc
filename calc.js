@@ -7,6 +7,15 @@ angular
     angular.module('splatApp').stats($scope);
     angular.module('splatApp').weapons($scope);
     $scope.loadout = new Loadout();
-    $scope.loadout.weapon = $scope.weapons[0]
 
+    $scope.switchSet = function() {
+      $scope.loadout.weapon = $scope.availableWeapons()[0];
+    }
+
+    $scope.availableWeapons = function() {
+      return $scope.selectedSet.weapons.filter(filter_available)
+    }
+    $scope.selectedSet = $scope.weaponSets[0];
+    $scope.loadout.weapon = $scope.availableWeapons()[0];
+    
   }])
