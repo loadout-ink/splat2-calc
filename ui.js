@@ -23,7 +23,7 @@ angular.module('splatApp')
         drop: function(event,ui) {
           scope.$apply(function() {
             if(ui.draggable.is('[ability-menu]')) {
-              scope.bind = scope.$parent.skills[ui.draggable.attr('skill-id')];
+              scope.bind = scope.$eval(ui.draggable.attr('skill'));
             }
             if(ui.draggable.is('[ability-slot]')) {
               scope.$parent.loadout.swapSlots(ui.draggable.attr('ability-slot'), attrs.abilitySlot);
@@ -32,8 +32,9 @@ angular.module('splatApp')
         },
         accept: function(draggable) {
           if(draggable.is('[ability-menu]')) {
-            if(draggable.attr('skill-exclusive')) {
-            if(draggable.attr('skill-exclusive') == attrs.abilitySlot) {
+            var draggableSkill = scope.$eval(draggable.attr('skill'))
+            if(draggableSkill.exclusive) {
+            if(draggableSkill.exclusive == attrs.abilitySlot) {
               return true;
             }
           }

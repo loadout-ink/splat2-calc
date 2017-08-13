@@ -87,7 +87,7 @@
       </div>
       <div class="row">
         <div class="col-md-12" style="min-height:500px">
-          <div ng-repeat="skill in skills" class="circle abilitymenu" ability-menu uib-tooltip="{{skill.name}}" skill-id="{{$index}}" skill-exclusive="{{skill.exclusive}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability="{'helper':'clone'}" style="float: left; background-image:url('{{skill.image}}')"></div>
+          <div ng-repeat="skill in skills" class="circle abilitymenu" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="float: left; background-image:url('{{skill.image}}')"></div>
         </div>
     </div>
   </div>
