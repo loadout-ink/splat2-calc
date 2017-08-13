@@ -79,3 +79,20 @@ angular.module('splatApp')
     }
   }
 })
+.directive('abilityBox', function() {
+  return {
+    link: function(scope,elm,attrs) {
+      var options = {
+        accept: function(draggable) {
+          if(draggable.is('[ability-slot]')) return true;
+        },
+        drop: function(event,ui) {
+          scope.$apply(function() {
+            scope.loadout.clearSlot(ui.draggable.attr('ability-slot'))
+          })
+        }
+      }
+      elm.droppable(options)
+    }
+  }
+})

@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="abilitybox">
+      <div class="abilitybox" ability-box>
       <div class="row">
         <div class="col-md-12">
           <div ng-repeat="skill in getStackableSkills()" class="circle" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>

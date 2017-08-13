@@ -35,6 +35,10 @@
   display: inline-block;
 }
 
+.abilitybox .col-md-12 {
+  padding: 8px;
+}
+
 .nopadding {
   padding: 0px !important;
 }

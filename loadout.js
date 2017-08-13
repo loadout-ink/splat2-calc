@@ -80,4 +80,9 @@ function Loadout() {
     eval('this.' + slot2 + '= tmp');
   }
 
+  this.clearSlot = function(s) {
+    var slot = s.replace('loadout.', 'this.');
+    eval(slot + '= null');
+  }
+
 }
