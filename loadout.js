@@ -24,12 +24,28 @@ function Gear() {
     if(this.main == null || this.subs[0]==null || this.subs[1]==null || this.subs[2]==null) return true;
     else return false;
   }
+  this.hasAbility = function(skill) {
+    if(this.main != null) if(this.main.name == skill) return true;
+    for(var i=0; i<this.subs.length; i++) {
+      if(this.subs[i] != null) if(this.subs[i].name == skill) return true;
+    }
+  }
+  this.calcAbilityScore = function(skill) {
+    var total = 0;
+    if(this.main != null) if(this.main.name == skill) total += 10;
+    for(var i = 0; i < this.subs.length; i++) {
+      if(this.subs[i] != null) if(this.subs[i].name == skill) total +=3;
+    }
+    return total;
+  }
 }
 
 function Loadout() {
   this.head = new Gear();
   this.clothes = new Gear();
   this.shoes = new Gear();
+
+  this.weapon = null;
 
   this.setOpenSlot = function(skill) {
     if(skill.hasOwnProperty('exclusive')) {
@@ -45,22 +61,11 @@ function Loadout() {
   }
 
   this.calcAbilityScore = function(skill) {
-    var total = 0;
-    if(this.head.main==skill) total += 10;
-    for(var i = 0; i < this.head.subs.length; i++) {
-      if(this.head.subs[i] == skill) total +=3;
-    }
+      return this.head.calcAbilityScore(skill) + this.clothes.calcAbilityScore(skill) + this.shoes.calcAbilityScore(skill);
+  }
 
-    if(this.clothes.main==skill) total += 10;
-    for(var i = 0; i < this.clothes.subs.length; i++) {
-      if(this.clothes.subs[i] == skill) total +=3;
-    }
-
-    if(this.shoes.main==skill) total += 10;
-    for(var i = 0; i < this.shoes.subs.length; i++) {
-      if(this.shoes.subs[i] == skill) total +=3;
-    }
-      return total;
+  this.hasAbility = function(skill) {
+    return this.head.hasAbility(skill) || this.clothes.hasAbility(skill) || this.shoes.hasAbility(skill);
   }
 
 }

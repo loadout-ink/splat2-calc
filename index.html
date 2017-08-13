@@ -14,6 +14,7 @@
   <script src="./calc.js"></script>
   <link rel="stylesheet" href="./calc.css">
   <script src="./skills.js"></script>
+  <script src="./weapons.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
 
@@ -34,7 +35,7 @@
                 <select class="form-control btn btn-primary dropdown-toggle" data-ng-options="x for x in placeholder" data-ng-model="dummy"></select>
               </div>
           </div>
-            <div style="height:150px">I'm a placeholder!</div>
+            <div style="height:150px">Equipped: {{loadout.weapon.name}}</div>
           </div>
         </div>
 
@@ -89,7 +90,7 @@
         </div>
     </div>
   </div>
-    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (Mouseover for details)<br>
+    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (Hover/touch for details)<br>
         <div class="col-md-6" ng-repeat="stat in stats">
           {{stat.name}}
           <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>

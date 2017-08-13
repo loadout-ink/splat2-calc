@@ -1,322 +1,328 @@
-[
+angular.module('splatApp').weapons = function ($scope) {
+
+$scope.weapons = [
   {
-    "Name": "Splattershot Jr.",
-    "Sub": "Splat Bomb",
-    "Special": "Ink Armor",
-    "Special Cost": 180,
-    "Level": 1,
-    "Ink Saver Level": "Middle"
+    name: "Splattershot Jr.",
+    sub: "Splat Bomb",
+    special: "Ink Armor",
+    specialCost: 180,
+    level: 1,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splattershot",
-    "Sub": "Burst Bomb",
-    "Special": "Splashdown",
-    "Special Cost": 180,
-    "Level": 2,
-    "Ink Saver Level": "Middle"
+    name: "Splattershot",
+    sub: "Burst Bomb",
+    special: "Splashdown",
+    specialCost: 180,
+    level: 2,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splat Roller",
-    "Sub": "Curling Bomb",
-    "Special": "Splashdown",
-    "Special Cost": 180,
-    "Level": 3,
-    "Ink Saver Level": "Middle"
+    name: "Splat Roller",
+    sub: "Curling Bomb",
+    special: "Splashdown",
+    specialCost: 180,
+    level: 3,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splat Charger",
-    "Sub": "Splat Bomb",
-    "Special": "Sting Ray",
-    "Special Cost": 180,
-    "Level": 3,
-    "Ink Saver Level": "Middle"
+    name: "Splat Charger",
+    sub: "Splat Bomb",
+    special: "Sting Ray",
+    specialCost: 180,
+    level: 3,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splat Dualies",
-    "Sub": "Burst Bomb",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 4,
-    "Ink Saver Level": "Middle"
+    name: "Splat Dualies",
+    sub: "Burst Bomb",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 4,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Tentatek Splattershot",
-    "Sub": "Splat Bomb",
-    "Special": "Inkjet",
-    "Special Cost": 190,
-    "Level": 4,
-    "Ink Saver Level": "Middle"
+    name: "Tentatek Splattershot",
+    sub: "Splat Bomb",
+    special: "Inkjet",
+    specialCost: 190,
+    level: 4,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Slosher",
-    "Sub": "Suction Bomb",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 5,
-    "Ink Saver Level": "Middle"
+    name: "Slosher",
+    sub: "Suction Bomb",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 5,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Inkbrush",
-    "Sub": "Splat Bomb",
-    "Special": "Splashdown",
-    "Special Cost": 170,
-    "Level": 5,
-    "Ink Saver Level": "Middle"
+    name: "Inkbrush",
+    sub: "Splat Bomb",
+    special: "Splashdown",
+    specialCost: 170,
+    level: 5,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Blaster",
-    "Sub": "Toxic Mist",
-    "Special": "Splashdown",
-    "Special Cost": 180,
-    "Level": 5,
-    "Ink Saver Level": "Middle"
+    name: "Blaster",
+    sub: "Toxic Mist",
+    special: "Splashdown",
+    specialCost: 180,
+    level: 5,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Aerospray MG",
-    "Sub": "Suction Bomb",
-    "Special": "Curling-Bomb Launcher",
-    "Special Cost": 170,
-    "Level": 6,
-    "Ink Saver Level": "Middle"
+    name: "Aerospray MG",
+    sub: "Suction Bomb",
+    special: "Curling-Bomb Launcher",
+    specialCost: 170,
+    level: 6,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Carbon Roller",
-    "Sub": "Autobomb",
-    "Special": "Ink Storm",
-    "Special Cost": 180,
-    "Level": 7,
-    "Ink Saver Level": "Middle"
+    name: "Carbon Roller",
+    sub: "Autobomb",
+    special: "Ink Storm",
+    specialCost: 180,
+    level: 7,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Heavy Splatling",
-    "Sub": "Sprinkler",
-    "Special": "Sting Ray",
-    "Special Cost": 180,
-    "Level": 8,
-    "Ink Saver Level": "Middle"
+    name: "Heavy Splatling",
+    sub: "Sprinkler",
+    special: "Sting Ray",
+    specialCost: 180,
+    level: 8,
+    inkSaver: "Middle"
   },
   {
-    "Name": "N-ZAP '85",
-    "Sub": "Suction Bomb",
-    "Special": "Ink Armor",
-    "Special Cost": 180,
-    "Level": 9,
-    "Ink Saver Level": "Middle"
+    name: "N-ZAP '85",
+    sub: "Suction Bomb",
+    special: "Ink Armor",
+    specialCost: 180,
+    level: 9,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Octobrush",
-    "Sub": "Autobomb",
-    "Special": "Inkjet",
-    "Special Cost": 180,
-    "Level": 10,
-    "Ink Saver Level": "Middle"
+    name: "Octobrush",
+    sub: "Autobomb",
+    special: "Inkjet",
+    specialCost: 180,
+    level: 10,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splattershot Pro",
-    "Sub": "Point Sensor",
-    "Special": "Ink Storm",
-    "Special Cost": 180,
-    "Level": 10,
-    "Ink Saver Level": "High"
+    name: "Splattershot Pro",
+    sub: "Point Sensor",
+    special: "Ink Storm",
+    specialCost: 180,
+    level: 10,
+    inkSaver: "High"
   },
   {
-    "Name": "Enperry Splat Dualies",
-    "Sub": "Curling Bomb",
-    "Special": "Inkjet",
-    "Special Cost": 180,
-    "Level": 11,
-    "Ink Saver Level": "Middle"
+    name: "Enperry Splat Dualies",
+    sub: "Curling Bomb",
+    special: "Inkjet",
+    specialCost: 180,
+    level: 11,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Krak-On Splat Roller",
-    "Sub": "Squid Beakon",
-    "Special": "Baller",
-    "Special Cost": 180,
-    "Level": 12,
-    "Ink Saver Level": "Middle"
+    name: "Krak-On Splat Roller",
+    sub: "Squid Beakon",
+    special: "Baller",
+    specialCost: 180,
+    level: 12,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Dualie Squelchers",
-    "Sub": "Point Sensor",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 12,
-    "Ink Saver Level": "Middle"
+    name: "Dualie Squelchers",
+    sub: "Point Sensor",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 12,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Rapid Blaster",
-    "Sub": "Ink Mine",
-    "Special": "Splat-Bomb Launcher",
-    "Special Cost": 180,
-    "Level": 13,
-    "Ink Saver Level": "Middle"
+    name: "Rapid Blaster",
+    sub: "Ink Mine",
+    special: "Splat-Bomb Launcher",
+    specialCost: 180,
+    level: 13,
+    inkSaver: "Middle"
   },
   {
-    "Name": ".52 Gal",
-    "Sub": "Point Sensor",
-    "Special": "Baller",
-    "Special Cost": 180,
-    "Level": 14,
-    "Ink Saver Level": "Middle"
+    name: ".52 Gal",
+    sub: "Point Sensor",
+    special: "Baller",
+    specialCost: 180,
+    level: 14,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Tri-Slosher",
-    "Sub": "Burst Bomb",
-    "Special": "Ink Armor",
-    "Special Cost": 180,
-    "Level": 15,
-    "Ink Saver Level": "Middle"
+    name: "Tri-Slosher",
+    sub: "Burst Bomb",
+    special: "Ink Armor",
+    specialCost: 180,
+    level: 15,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splatterscope",
-    "Sub": "Splat Bomb",
-    "Special": "Sting Ray",
-    "Special Cost": 180,
-    "Level": 15,
-    "Ink Saver Level": "Middle"
+    name: "Splatterscope",
+    sub: "Splat Bomb",
+    special: "Sting Ray",
+    specialCost: 180,
+    level: 15,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Firefin Splat Charger",
-    "Sub": "Splash Wall",
-    "Special": "Suction-Bomb Launcher",
-    "Special Cost": 190,
-    "Level": 16,
-    "Ink Saver Level": "Middle"
+    name: "Firefin Splat Charger",
+    sub: "Splash Wall",
+    special: "Suction-Bomb Launcher",
+    specialCost: 190,
+    level: 16,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Jet Squelcher",
-    "Sub": "Toxic Mist",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 17,
-    "Ink Saver Level": "Middle"
+    name: "Jet Squelcher",
+    sub: "Toxic Mist",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 17,
+    inkSaver: "Middle"
   },
   {
-    "Name": "L-3 Nozzlenose",
-    "Sub": "Curling Bomb",
-    "Special": "Baller",
-    "Special Cost": 180,
-    "Level": 18,
-    "Ink Saver Level": "Middle"
+    name: "L-3 Nozzlenose",
+    sub: "Curling Bomb",
+    special: "Baller",
+    specialCost: 180,
+    level: 18,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Luna Blaster",
-    "Sub": "Splat Bomb",
-    "Special": "Baller",
-    "Special Cost": 180,
-    "Level": 19,
-    "Ink Saver Level": "High"
+    name: "Luna Blaster",
+    sub: "Splat Bomb",
+    special: "Baller",
+    specialCost: 180,
+    level: 19,
+    inkSaver: "High"
   },
   {
-    "Name": "E-liter 4K",
-    "Sub": "Ink Mine",
-    "Special": "Ink Storm",
-    "Special Cost": 190,
-    "Level": 20,
-    "Ink Saver Level": "High"
+    name: "E-liter 4K",
+    sub: "Ink Mine",
+    special: "Ink Storm",
+    specialCost: 190,
+    level: 20,
+    inkSaver: "High",
+    swimPenalty: true
   },
   {
-    "Name": "Dynamo Roller",
-    "Sub": "Ink Mine",
-    "Special": "Sting Ray",
-    "Special Cost": 180,
-    "Level": 20,
-    "Ink Saver Level": "High"
+    name: "Dynamo Roller",
+    sub: "Ink Mine",
+    special: "Sting Ray",
+    specialCost: 180,
+    level: 20,
+    inkSaver: "High",
+    swimPenalty: true
   },
   {
-    "Name": ".96 Gal",
-    "Sub": "Sprinkler",
-    "Special": "Ink Armor",
-    "Special Cost": 180,
-    "Level": 21,
-    "Ink Saver Level": "Middle"
+    name: ".96 Gal",
+    sub: "Sprinkler",
+    special: "Ink Armor",
+    specialCost: 180,
+    level: 21,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Goo Tuber",
-    "Sub": "Suction Bomb",
-    "Special": "Splashdown",
-    "Special Cost": 180,
-    "Level": 22,
-    "Ink Saver Level": "Middle"
+    name: "Goo Tuber",
+    sub: "Suction Bomb",
+    special: "Splashdown",
+    specialCost: 180,
+    level: 22,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Mini Splatling",
-    "Sub": "Burst Bomb",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 23,
-    "Ink Saver Level": "Middle"
+    name: "Mini Splatling",
+    sub: "Burst Bomb",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 23,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Flingza Roller",
-    "Sub": "Splash Wall",
-    "Special": "Splat-Bomb Launcher",
-    "Special Cost": 180,
-    "Level": 24,
-    "Ink Saver Level": "Middle"
+    name: "Flingza Roller",
+    sub: "Splash Wall",
+    special: "Splat-Bomb Launcher",
+    specialCost: 180,
+    level: 24,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Firefin Splatterscope",
-    "Sub": "Splash Wall",
-    "Special": "Suction-Bomb Launcher",
-    "Special Cost": 190,
-    "Level": 25,
-    "Ink Saver Level": "Middle"
+    name: "Firefin Splatterscope",
+    sub: "Splash Wall",
+    special: "Suction-Bomb Launcher",
+    specialCost: 190,
+    level: 25,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Splash-o-matic",
-    "Sub": "Toxic Mist",
-    "Special": "Inkjet",
-    "Special Cost": 180,
-    "Level": 25,
-    "Ink Saver Level": "Middle"
+    name: "Splash-o-matic",
+    sub: "Toxic Mist",
+    special: "Inkjet",
+    specialCost: 180,
+    level: 25,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Dapple Dualies",
-    "Sub": "Squid Beakon",
-    "Special": "Suction-Bomb Launcher",
-    "Special Cost": 180,
-    "Level": 26,
-    "Ink Saver Level": "Middle"
+    name: "Dapple Dualies",
+    sub: "Squid Beakon",
+    special: "Suction-Bomb Launcher",
+    specialCost: 180,
+    level: 26,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Custom Blaster",
-    "Sub": "Autobomb",
-    "Special": "Inkjet",
-    "Special Cost": 180,
-    "Level": 27,
-    "Ink Saver Level": "Middle"
+    name: "Custom Blaster",
+    sub: "Autobomb",
+    special: "Inkjet",
+    specialCost: 180,
+    level: 27,
+    inkSaver: "Middle"
   },
   {
-    "Name": "Aerospray RG",
-    "Sub": "Sprinkler",
-    "Special": "Baller",
-    "Special Cost": 180,
-    "Level": 28,
-    "Ink Saver Level": "Middle"
+    name: "Aerospray RG",
+    sub: "Sprinkler",
+    special: "Baller",
+    specialCost: 180,
+    level: 28,
+    inkSaver: "Middle"
   },
   {
-    "Name": "H-3 Nozzlenose",
-    "Sub": "Point Sensor",
-    "Special": "Tenta Missiles",
-    "Special Cost": 180,
-    "Level": 29,
-    "Ink Saver Level": "High"
+    name: "H-3 Nozzlenose",
+    sub: "Point Sensor",
+    special: "Tenta Missiles",
+    specialCost: 180,
+    level: 29,
+    inkSaver: "High"
   },
   {
-    "Name": "E-liter 4K Scope",
-    "Sub": "Ink Mine",
-    "Special": "Ink Storm",
-    "Special Cost": 190,
-    "Level": 30,
-    "Ink Saver Level": "High"
+    name: "E-liter 4K Scope",
+    sub: "Ink Mine",
+    special: "Ink Storm",
+    specialCost: 190,
+    level: 30,
+    inkSaver: "High",
+    swimPenalty: true
   },
   {
-    "Name": "Clash Blaster",
-    "Sub": "Splat Bomb",
-    "Special": "Sting Ray",
-    "Special Cost": 170,
-    "Level": 30,
-    "Ink Saver Level": "Middle"
+    name: "Clash Blaster",
+    sub: "Splat Bomb",
+    special: "Sting Ray",
+    specialCost: 170,
+    level: 30,
+    inkSaver: "Middle"
   }
 ]
+}
