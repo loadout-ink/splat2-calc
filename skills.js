@@ -1,4 +1,3 @@
-
 angular.module('splatApp').skills = function ($scope) {
 $scope.skills = [
   {
@@ -118,5 +117,18 @@ $scope.getSkillByName = function(name) {
       return skill.name == name;
     })[0]
 }
+
+$scope.getExclusiveSkills = function(slot) {
+  return $scope.skills.filter(function(skill) {
+    if(skill.exclusive) if(skill.exclusive==slot) return true;
+  })
+}
+
+$scope.getStackableSkills = function() {
+  return $scope.skills.filter(function(skill) {
+    if(!skill.exclusive) return true;
+  })
+}
+
 
 }

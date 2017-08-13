@@ -36,7 +36,6 @@
               </div>
           </div>
             <div style="height:150px">Equipped: {{loadout.weapon.name}}</div>
-            <button ng-click="loadout.swapSlots('head.main','clothes.main')">hey</button>
           </div>
         </div>
 
@@ -85,11 +84,20 @@
           </div>
         </div>
       </div>
+      <div class="abilitybox">
       <div class="row">
-        <div class="col-md-12" style="min-height:500px">
-          <div ng-repeat="skill in skills" class="circle abilitymenu" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="float: left; background-image:url('{{skill.image}}')"></div>
+        <div class="col-md-12">
+          <div ng-repeat="skill in getStackableSkills()" class="circle" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="circle" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+          <div ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="circle" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+          <div ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="circle" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
         </div>
     </div>
+  </div>
   </div>
     <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (Hover/touch for details)<br>
         <div class="col-md-6" ng-repeat="stat in stats">
