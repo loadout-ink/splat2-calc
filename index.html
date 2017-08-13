@@ -29,7 +29,7 @@
           <div class="col-md-12 weapon" style="background: #ff00ff">
             <div class="row">
               <div class="col-md-6">
-                <select class="form-control btn btn-primary dropdown-toggle" data-ng-options="x for x in placeholder" data-ng-model="dummy"></select>
+                <select class="form-control btn btn-primary dropdown-toggle" ng-model="loadout.weapon" data-ng-options="x.name for x in weapons"></select>
               </div>
               <div class="col-md-6">
                 <select class="form-control btn btn-primary dropdown-toggle" data-ng-options="x for x in placeholder" data-ng-model="dummy"></select>
