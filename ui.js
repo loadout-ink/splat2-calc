@@ -31,12 +31,21 @@ angular.module('splatApp')
           })
         },
         accept: function(draggable) {
-          if(draggable.attr('skill-exclusive')) {
+          if(draggable.is('[ability-menu]')) {
+            if(draggable.attr('skill-exclusive')) {
             if(draggable.attr('skill-exclusive') == attrs.abilitySlot) {
               return true;
             }
           }
-          else return true;
+            else return true;
+        }
+        if(draggable.is('[ability-slot]')) {
+          var draggedAbility = scope.$eval(draggable.attr('slot-contents'))
+          var myAbility = scope.$eval(attrs.slotContents)
+          if(draggedAbility) if(draggedAbility.exclusive) return false;
+          if(myAbility) if(myAbility.exclusive) return false;
+          return true;
+        }
         },
         activate: function(event,ui) {
           $(this).addClass('lightup')
