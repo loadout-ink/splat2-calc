@@ -1,18 +1,18 @@
 function Gear() {
-  this.equipped = "";
+  this.equipped = '';
   this.main = null;
   this.subs = [null,null,null],
   this.getmainIcon = function() {
     if(this.main != null) {
       return this.main.image
     }
-    else return "img/skills/Unknown.png"
+    else return 'img/skills/Unknown.png'
   };
   this.getSubIcon = function(x) {
     if(this.subs[x] != null) {
       return this.subs[x].image
     }
-    else return "img/skills/Unknown.png"
+    else return 'img/skills/Unknown.png'
   };
   this.setNextSlot = function(skill) {
     if(this.main == null){ this.main = skill; return; }
@@ -49,9 +49,9 @@ function Loadout() {
 
   this.setOpenSlot = function(skill) {
     if(skill.hasOwnProperty('exclusive')) {
-      if(skill.exclusive=="loadout.head.main"){ this.head.main=skill; return true; }
-      if(skill.exclusive=="loadout.clothes.main"){ this.clothes.main=skill; return true; }
-      if(skill.exclusive=="loadout.shoes.main"){ this.shoes.main=skill; return true; }
+      if(skill.exclusive=='loadout.head.main'){ this.head.main=skill; return true; }
+      if(skill.exclusive=='loadout.clothes.main'){ this.clothes.main=skill; return true; }
+      if(skill.exclusive=='loadout.shoes.main'){ this.shoes.main=skill; return true; }
       return false;
     }
     if(this.head.hasEmptySlots()){ this.head.setNextSlot(skill); return true; }
@@ -66,6 +66,18 @@ function Loadout() {
 
   this.hasAbility = function(skill) {
     return this.head.hasAbility(skill) || this.clothes.hasAbility(skill) || this.shoes.hasAbility(skill);
+  }
+
+  this.swapSlots = function(s1, s2) {
+    var slot1 = s1.replace("loadout.","")
+    var slot2 = s2.replace("loadout.","")
+    var slot1Value = eval('this.' + slot1)
+    var slot2Value = eval('this.' + slot2)
+    if(slot1Value != null) if(slot1Value.exclusive) return;
+    if(slot2Value != null) if(slot2Value.exclusive) return;
+    var tmp = slot1Value;
+    eval('this.' + slot1 + '= slot2Value');
+    eval('this.' + slot2 + '= tmp');
   }
 
 }

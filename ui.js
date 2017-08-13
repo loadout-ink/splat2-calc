@@ -1,12 +1,12 @@
 angular.module('splatApp')
-.directive('testDraggable', function() {
+.directive('draggableAbility', function() {
   return {
     link: function(scope,elm,attrs) {
       var options = {
         helper: 'clone',
         zIndex:100,
-        snap: "[ability-slot]",
-        snapMode: "inner",
+        snap: '[ability-slot]',
+        snapMode: 'inner',
         snapTolerance: 8
       }
       elm.draggable(options)
@@ -22,12 +22,17 @@ angular.module('splatApp')
       var options = {
         drop: function(event,ui) {
           scope.$apply(function() {
-            scope.bind = scope.$parent.skills[ui.draggable.prop("id")];
+            if(ui.draggable.is('[ability-menu]')) {
+              scope.bind = scope.$parent.skills[ui.draggable.attr('skill-id')];
+            }
+            if(ui.draggable.is('[ability-slot]')) {
+              scope.$parent.loadout.swapSlots(ui.draggable.attr('ability-slot'), attrs.abilitySlot);
+            }
           })
         },
         accept: function(draggable) {
-          if(scope.$parent.skills[draggable.prop("id")].hasOwnProperty('exclusive')) {
-            if(scope.$parent.skills[draggable.prop("id")].exclusive == attrs.abilitySlot) {
+          if(draggable.attr('skill-exclusive')) {
+            if(draggable.attr('skill-exclusive') == attrs.abilitySlot) {
               return true;
             }
           }
