@@ -20,7 +20,7 @@ $scope.stats = [
         baseSpeed = 1.55;
         coeff = 75;
       }
-      if(!loadout.weapon.swimPenalty && loadout.hasAbility("NinjaSquid")) {
+      if(!loadout.weapon.swimPenalty && loadout.hasAbility("Ninja Squid")) {
         baseSpeed = 1.81;
       }
       var speed = baseSpeed * (1 + (0.99 * swimScore - Math.pow(0.09 * swimScore,2))/coeff);
