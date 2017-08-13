@@ -26,8 +26,8 @@ angular.module('splatApp')
           })
         },
         accept: function(draggable) {
-          if(scope.$parent.skills[draggable.prop("id")].hasOwnProperty('Exclusive')) {
-            if(scope.$parent.skills[draggable.prop("id")].Exclusive == attrs.abilitySlot) {
+          if(scope.$parent.skills[draggable.prop("id")].hasOwnProperty('exclusive')) {
+            if(scope.$parent.skills[draggable.prop("id")].exclusive == attrs.abilitySlot) {
               return true;
             }
           }

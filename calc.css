@@ -25,6 +25,10 @@
   height:64px;
 }
 
+.abilitymenu {
+  margin: 5px;
+}
+
 .nopadding {
   padding: 0px !important;
 }

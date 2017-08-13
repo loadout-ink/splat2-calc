@@ -1,27 +1,27 @@
 function Gear() {
-  this.Equipped = "";
-  this.Main = null;
-  this.Subs = [null,null,null],
-  this.getMainIcon = function() {
-    if(this.Main != null) {
-      return this.Main.Image
+  this.equipped = "";
+  this.main = null;
+  this.subs = [null,null,null],
+  this.getmainIcon = function() {
+    if(this.main != null) {
+      return this.main.image
     }
     else return "img/skills/Unknown.png"
   };
   this.getSubIcon = function(x) {
-    if(this.Subs[x] != null) {
-      return this.Subs[x].Image
+    if(this.subs[x] != null) {
+      return this.subs[x].image
     }
     else return "img/skills/Unknown.png"
   };
   this.setNextSlot = function(skill) {
-    if(this.Main == null){ this.Main = skill; return;}
-    if(this.Subs[0] == null){ this.Subs[0] = skill; return;}
-    if(this.Subs[1] == null){ this.Subs[1] = skill; return;}
-    if(this.Subs[2] == null){ this.Subs[2] = skill; return;}
+    if(this.main == null){ this.main = skill; return; }
+    if(this.subs[0] == null){ this.subs[0] = skill; return; }
+    if(this.subs[1] == null){ this.subs[1] = skill; return; }
+    if(this.subs[2] == null){ this.subs[2] = skill; return; }
   };
   this.hasEmptySlots = function() {
-    if(this.Main == null || this.Subs[0]==null || this.Subs[1]==null || this.Subs[2]==null) return true;
+    if(this.main == null || this.subs[0]==null || this.subs[1]==null || this.subs[2]==null) return true;
     else return false;
   }
 }
@@ -32,10 +32,10 @@ function Loadout() {
   this.shoes = new Gear();
 
   this.setOpenSlot = function(skill) {
-    if(skill.hasOwnProperty('Exclusive')) {
-      if(this.head.Main==null && skill.Exclusive=="loadout.head.Main") this.head.Main=skill;
-      if(this.clothes.Main==null && skill.Exclusive=="loadout.clothes.Main") this.clothes.Main=skill;
-      if(this.shoes.Main==null && skill.Exclusive=="loadout.shoes.Main") this.shoes.Main=skill;
+    if(skill.hasOwnProperty('exclusive')) {
+      if(this.head.main==null && skill.exclusive=="loadout.head.main") this.head.main=skill;
+      if(this.clothes.main==null && skill.exclusive=="loadout.clothes.main") this.clothes.main=skill;
+      if(this.shoes.main==null && skill.exclusive=="loadout.shoes.main") this.shoes.main=skill;
       return false;
     }
     if(this.head.hasEmptySlots()){ this.head.setNextSlot(skill); return true; }
