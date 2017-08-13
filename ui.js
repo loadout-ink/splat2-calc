@@ -40,11 +40,8 @@ angular.module('splatApp')
             else return true;
         }
         if(draggable.is('[ability-slot]')) {
-          var draggedAbility = scope.$eval(draggable.attr('slot-contents'))
-          var myAbility = scope.$eval(attrs.slotContents)
-          if(draggedAbility) if(draggedAbility.exclusive) return false;
-          if(myAbility) if(myAbility.exclusive) return false;
-          return true;
+          if(draggable.attr('contains-exclusive')=="true" || attrs.containsExclusive=="true") return false;
+          else return true;
         }
         },
         activate: function(event,ui) {
