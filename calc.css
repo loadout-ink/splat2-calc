@@ -71,6 +71,10 @@
   border: solid 2px #fff;
 }
 
+.weapon {
+  background: #eee
+}
+
 .bgstripes {
   background: repeating-linear-gradient(
   45deg,

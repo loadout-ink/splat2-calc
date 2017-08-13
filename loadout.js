@@ -49,9 +49,9 @@ function Loadout() {
 
   this.setOpenSlot = function(skill) {
     if(skill.hasOwnProperty('exclusive')) {
-      if(this.head.main==null && skill.exclusive=="loadout.head.main") this.head.main=skill;
-      if(this.clothes.main==null && skill.exclusive=="loadout.clothes.main") this.clothes.main=skill;
-      if(this.shoes.main==null && skill.exclusive=="loadout.shoes.main") this.shoes.main=skill;
+      if(skill.exclusive=="loadout.head.main"){ this.head.main=skill; return true; }
+      if(skill.exclusive=="loadout.clothes.main"){ this.clothes.main=skill; return true; }
+      if(skill.exclusive=="loadout.shoes.main"){ this.shoes.main=skill; return true; }
       return false;
     }
     if(this.head.hasEmptySlots()){ this.head.setNextSlot(skill); return true; }
