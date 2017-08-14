@@ -98,4 +98,10 @@ angular.module('splatApp').subs = function ($scope) {
         return sub.name == name;
       })[0]
   }
+
+  $scope.getDamagingSubs = function() {
+    return $scope.subs.filter(function(sub) {
+      return sub.hasOwnProperty("damage")
+    })
+  }
 }

@@ -100,14 +100,43 @@
     </div>
   </div>
   </div>
-    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">
+    <div class="col-md-6 col-xs-12">
+    <div class="row">
       <h4>Stats (Hover/touch for details) <small tooltip-placement="bottom" uib-tooltip="There isn't full data on all of the abilities in Splatoon 2 yet. Check back later!">Why are stats missing?</small></h5>
         <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
           {{stat.name}}
           <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
         </div>
     </div>
+  <div class="row">
+    <div class="col-md-12">
+      <uib-accordion>
+        <div uib-accordion-group class="panel-default" is-open="status.open">
+          <uib-accordion-heading>
+            Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+          </uib-accordion-heading>
+      <table class="table table-sm">
+        <tr>
+          <th>Bomb</th>
+          <th>Direct</th>
+          <th>Near</th>
+          <th>Far</th>
+        </tr>
+        <tbody>
+          <tr ng-repeat="sub in getDamagingSubs()">
+            <td>{{sub.name}}</td>
+            <td>{{getAdjustedSubSpeDamage(sub,loadout)["Direct"]}}</td>
+            <td>{{getAdjustedSubSpeDamage(sub,loadout)["Near"]}}</td>
+            <td>{{getAdjustedSubSpeDamage(sub,loadout)["Far"]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </uib-accordion>
   </div>
+    </div>
+  </div>
+  </div>
+</div>
 </div>
 </body>
 </html>

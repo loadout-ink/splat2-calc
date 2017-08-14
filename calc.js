@@ -1,5 +1,5 @@
 angular
-  .module('splatApp', ['ui.bootstrap'])
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate'])
   .controller('splatController', ['$scope', function splatCtrl($scope) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
@@ -8,6 +8,8 @@ angular
     angular.module('splatApp').weapons($scope);
     angular.module('splatApp').subs($scope);
     $scope.loadout = new Loadout();
+
+    $scope.status = {}
 
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];

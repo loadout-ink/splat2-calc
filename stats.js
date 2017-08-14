@@ -85,11 +85,32 @@ $scope.stats = [
       this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + "p for special")
       return chargeSpeed * 100;
     }, 130, '%'),
-    new Stat("Sub Power", function(loadout) {
-      var chargeScore = loadout.calcAbilityScore("Special Charge Up");
-      var chargeSpeed = (1 + (0.99 * chargeScore - Math.pow((0.09 * chargeScore),2)) / 100)
-      this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + "p for special")
-      return chargeSpeed * 100;
-    }, 130, '%')
+    new Stat("Sub Power (Bomb Range) *", function(loadout) {
+      var powerScore = loadout.calcAbilityScore("Sub Power Up");
+      var range = (1 + (0.99 * powerScore - Math.pow((0.09 * powerScore),2)) / 60)
+      this.desc = ("No formulas available for some subs. Possibly inaccurate.")
+      return range * 100;
+    }, 150, '%'),
+    new Stat("Bomb Damage Taken", function(loadout) {
+      var defScore = loadout.calcAbilityScore("Bomb Defense Up");
+      var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
+      this.desc = ("Possibly inaccurate.")
+      return damageTaken * 100;
+    }, 100, '%')
   ]
+  $scope.getStatByName = function(name) {
+    return $scope.stats.filter(function(stat) {
+      return stat.name == name
+    })[0]
+  }
+  $scope.getAdjustedSubSpeDamage = function(sub,loadout) {
+  var stat = $scope.getStatByName("Bomb Damage Taken")
+  var damageReduction = stat.calc(loadout)/100
+    var results = {}
+    for(damageValue in sub.damage) {
+      subDamage = sub.damage[damageValue]
+      results[damageValue] = (subDamage * damageReduction).toFixed(1);
+    }
+    return results
+  }
 }
