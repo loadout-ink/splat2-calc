@@ -68,6 +68,28 @@ $scope.stats = [
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.desc = (Math.floor(100/costPerShot) + " " + $scope.selectedSet.shotUnit + " to empty")
       return (1 - reduction) * 100;
-    }, 100, '%')
+    }, 100, '%'),
+    new Stat("Ink Consumption (Sub)", function(loadout) {
+      var saverScore = loadout.calcAbilityScore("Sub Saver");
+      var coeff = (600 / 7)
+      var sub = $scope.getSubByName(loadout.weapon.sub)
+      if(sub.inkSaver == "Low") coeff = 100
+      var reduction =  (0.99 * saverScore - Math.pow((0.09 * saverScore),2)) / coeff
+      var costPerSub = sub.cost * (1 - reduction)
+      this.desc = (costPerSub.toFixed(1) + " ink per " + sub.name)
+      return (1 - reduction) * 100;
+    }, 100, '%'),
+    new Stat("Special Charge Speed", function(loadout) {
+      var chargeScore = loadout.calcAbilityScore("Special Charge Up");
+      var chargeSpeed = (1 + (0.99 * chargeScore - Math.pow((0.09 * chargeScore),2)) / 100)
+      this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + "p for special")
+      return chargeSpeed * 100;
+    }, 130, '%'),
+    new Stat("Sub Power", function(loadout) {
+      var chargeScore = loadout.calcAbilityScore("Special Charge Up");
+      var chargeSpeed = (1 + (0.99 * chargeScore - Math.pow((0.09 * chargeScore),2)) / 100)
+      this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + "p for special")
+      return chargeSpeed * 100;
+    }, 130, '%')
   ]
 }

@@ -6,6 +6,7 @@ angular
     angular.module('splatApp').skills($scope);
     angular.module('splatApp').stats($scope);
     angular.module('splatApp').weapons($scope);
+    angular.module('splatApp').subs($scope);
     $scope.loadout = new Loadout();
 
     $scope.switchSet = function() {
@@ -17,5 +18,5 @@ angular
     }
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[0];
-    
+
   }])

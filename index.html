@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./calc.css">
   <script src="./skills.js"></script>
   <script src="./weapons.js"></script>
+  <script src="./subs.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
 
@@ -99,8 +100,9 @@
     </div>
   </div>
   </div>
-    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">Stats (Hover/touch for details)<br>
-        <div class="col-md-6" ng-repeat="stat in stats">
+    <div class="col-md-6 col-xs-12" style="background:#ddd; min-height:500px">
+      <h4>Stats (Hover/touch for details) <small tooltip-placement="bottom" uib-tooltip="There isn't full data on all of the abilities in Splatoon 2 yet. Rather than including inaccurate data, the calculator simply doesn't present the information.">Why are stats missing?</small></h5>
+        <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
           {{stat.name}}
           <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
         </div>

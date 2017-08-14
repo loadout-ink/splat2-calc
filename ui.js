@@ -53,9 +53,11 @@ angular.module('splatApp')
         },
         over: function(event,ui) {
           if($(this).hasClass('small')) {
+            ui.helper.removeClass('large')
             ui.helper.addClass('small')
           }
           if($(this).hasClass('large')) {
+            ui.helper.removeClass('small')
             ui.helper.addClass('large')
           }
           ui.helper.addClass('lightup')
