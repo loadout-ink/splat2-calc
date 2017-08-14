@@ -1,18 +1,27 @@
+body {
+  background: #ccc !important
+}
+
 .equal {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
 
-.circle {
+.abilityicon {
   border-radius: 50%;
   width:56px;
   height:56px;
   background:#000;
-  border: 2px solid #aaa;
+  border: 2px solid #888;
   border-right: 0px;
   border-bottom: 0px;
   background-size:100%;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.gear .abilityicon.large {
+  margin-top:4px;
 }
 
 .small {
@@ -29,10 +38,14 @@
   text-align:center;
 }
 
-.abilitybox .circle {
+.abilitybox .abilityicon {
   margin-left: 4px;
   margin-right: 4px;
   display: inline-block;
+}
+
+.maincontainer {
+  background: #fff;
 }
 
 .abilitybox .col-md-12 {
@@ -52,24 +65,19 @@
   height:64px;
   margin:auto;
   display:block;
+}
+
+
+.bubble {
   background: rgba(255,255,255,0.2);
-  border: dashed 2px #fff;
-}
-
-.skillicon {
-  width:64px;
-  height:64px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.skillicon.small {
-  width:32px;
-  height:32px;
+  border-radius: 10px;
+  border-left: solid 4px rgba(255,255,255,0.4);
+  border-top: solid 4px rgba(255,255,255,0.4);
+  border-right: solid 4px rgba(0,0,0,0.2);
+  border-bottom: solid 4px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+  margin: 5px;
+  padding:2px;
 }
 
 .lvl-target {
@@ -78,10 +86,32 @@
 
 .gear{
   background:#00ff00;
-  border: solid 2px #fff;
+  border-radius: 25px;
+  border: solid 4px #eee;
+  padding: 3px;
 }
 
 .weapon {
+  background:#00ff00;
+  border-radius: 25px;
+  padding:10px;
+  overflow:hidden
+}
+
+.weaponicon {
+  max-height:130px;
+  width:auto;
+}
+
+.weaponicon.bubble {
+  border-left: solid 6px rgba(255,255,255,0.4);
+  border-top: solid 6px rgba(255,255,255,0.4);
+  border-right: solid 6px rgba(0,0,0,0.2);
+  border-bottom: solid 6px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.grey {
   background: #eee
 }
 
