@@ -2,6 +2,11 @@ body {
   background: #ccc !important
 }
 
+@font-face {
+    font-family: "Paintball";
+    src: url(./project-paintball.ttf) format("truetype");
+}
+
 .equal {
   display: flex;
   display: -webkit-flex;
@@ -97,6 +102,24 @@ body {
   border-radius: 25px;
   border: solid 4px #eee;
   padding: 3px;
+  padding-top:0px;
+  overflow:hidden;
+}
+
+.paintballWhite {
+  font-family: "Paintball";
+  font-size: 16pt;
+  color: #fff;
+}
+
+.gearheader {
+  padding-top:4px;
+  padding-bottom:2px;
+  background: rgba(50,50,50,0.8);
+  font-family: "Paintball";
+  font-size: 16pt;
+  text-align:center;
+  color: #fff;
 }
 
 .weapon {
@@ -108,10 +131,13 @@ body {
 }
 
 .weaponheader {
-  padding-top:10px;
-  padding-bottom:8px;
-  border-radius:25px 25px 0px 0px;
+  padding-top:4px;
+  padding-bottom:2px;
   background: rgba(50,50,50,0.8);
+  font-family: "Paintball";
+  font-size: 16pt;
+  text-align:center;
+  color: #fff;
 }
 
 .weaponicon {
@@ -144,8 +170,8 @@ body {
   background: repeating-linear-gradient(
   45deg,
   #606dbc,
-  #606dbc 10px,
-  #465298 10px,
-  #465298 20px
+  #606dbc 30px,
+  #465298 30px,
+  #465298 60px
 );
 }

@@ -47,7 +47,7 @@
             <img fallback-img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
             <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{selectedWeapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
             <br>
-            <h3>{{selectedWeapon.specialCost}}p</h3>
+            <span class="paintballWhite">{{selectedWeapon.specialCost}}p</span><br>
               more stats blah blah
           </div>
         </div>
@@ -85,9 +85,7 @@
               <div class="col-md-12 nopadding">
                 <div class="weapon bgstripes">
                   <div class="row weaponheader">
-                    <div class="col-md-12" style="color:#fff">
-                      Equipped: {{loadout.weapon.name}}
-                    </div>
+                      {{loadout.weapon.name}}
                   </div>
                   <div class="row">
                     <div class="col-sm-5" align=center>
@@ -97,7 +95,7 @@
                       <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
                       <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
                       <br>
-                      <h3>{{loadout.weapon.specialCost}}p</h3>
+                      <span class="paintballWhite">{{loadout.weapon.specialCost}}p</span><br>
                         more stats blah blah
                     </div>
                   </div>
@@ -112,6 +110,9 @@
           <div class="col-md-12">
             <div class="row">
               <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row gearheader">
+                Head
+              </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding"  align="center"><img fallback-img class="gearicon bubble" ng-src="./img/gear/Hed_EYE011.png" /></div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
@@ -123,6 +124,9 @@
                 </div>
               </div>
               <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row gearheader">
+                Clothes
+              </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><img fallback-img class="gearicon bubble" ng-src="./img/gear/Clt_PRK005.png"></div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
@@ -134,6 +138,9 @@
                 </div>
               </div>
               <div class="col-md-4 col-sm-4 gear bgstripes">
+              <div class="row gearheader">
+                Shoes
+              </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><img fallback-img class="gearicon bubble" ng-src="./img/gear/Shs_SHI004.png" /></div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}"  style="background-image:url({{loadout.shoes.getmainIcon()}})"></div>
