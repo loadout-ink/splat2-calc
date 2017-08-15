@@ -95,11 +95,10 @@ body {
   background:#00ff00;
   border-radius: 25px;
   padding:10px;
-  overflow:hidden
 }
 
 .weaponicon {
-  max-height:130px;
+  max-height:90px;
   width:auto;
 }
 
@@ -109,6 +108,15 @@ body {
   border-right: solid 6px rgba(0,0,0,0.2);
   border-bottom: solid 6px rgba(0,0,0,0.2);
   box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.row.match-my-cols {
+    overflow: hidden;
+}
+
+.matched{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
 }
 
 .grey {

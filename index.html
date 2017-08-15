@@ -28,8 +28,8 @@
     Splatoon 2 Stat Calculator
   </header>
   <div class="container maincontainer" ng-app="splatApp" ng-controller="splatController">
-    <div class="row">
-      <div class="col-md-6 col-xs-12 grey">
+    <div class="row match-my-cols">
+      <div class="col-md-6 col-xs-12 grey matched">
         <div class="row">
           <div class="col-md-12">
             <div class="row">
@@ -41,14 +41,22 @@
               </div>
             </div>
             <div class="row">
-            <div class="weapon bgstripes">
-              <div class="col-sm-4" align=center>
-              <img class="weaponicon bubble" src="{{loadout.weapon.image}}" />
+              <div class="col-md-6">
+                <div class="weapon bgstripes">
+                  <div class="row">
+                    <div class="col-sm-5" align=center>
+                      <img class="weaponicon bubble" src="{{loadout.weapon.image}}" />
+                    </div>
+                    <div class="col-sm-7" align=center>
+                      <img src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
+                      <img src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-8">
-                Stats go here
+              <div class="col-md-6">
+                details
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -67,79 +75,83 @@
                   <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
                 </div>
               </div>
-            <div class="col-md-4 col-sm-4 gear bgstripes">
-              <div class="row">
-                <div class="col-md-6 col-xs-6 nopadding" align="center"><img class="gearicon bubble" src="./img/gear/Clt_PRK005.png"></div>
-                <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
+              <div class="col-md-4 col-sm-4 gear bgstripes">
+                <div class="row">
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><img class="gearicon bubble" src="./img/gear/Clt_PRK005.png"></div>
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[0]" style="background-image:url({{loadout.clothes.getSubIcon(0)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[1]" style="background-image:url({{loadout.clothes.getSubIcon(1)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
+                </div>
               </div>
-            <div class="row">
-              <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[0]" style="background-image:url({{loadout.clothes.getSubIcon(0)}})"></div></div>
-              <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[1]" style="background-image:url({{loadout.clothes.getSubIcon(1)}})"></div></div>
-              <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
+              <div class="col-md-4 col-sm-4 gear bgstripes">
+                <div class="row">
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><img class="gearicon bubble" src="./img/gear/Shs_SHI004.png" /></div>
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}"  style="background-image:url({{loadout.shoes.getmainIcon()}})"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})">></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
+                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4 gear bgstripes">
-            <div class="row">
-              <div class="col-md-6 col-xs-6 nopadding" align="center"><img class="gearicon bubble" src="./img/gear/Shs_SHI004.png" /></div>
-              <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}"  style="background-image:url({{loadout.shoes.getmainIcon()}})"></div>
-            </div>
+        </div>
+      </div>
+      <div class="abilitybox" ability-box>
+        <div class="row">
+          <div class="col-md-12">
+            <div ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
           </div>
-          <div class="row">
-            <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})">></div></div>
-            <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
-            <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+            <div ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+            <div ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="abilitybox" ability-box>
-    <div class="row">
-      <div class="col-md-12">
-        <div ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+    <div class="col-md-6 col-xs-12 matched">
+      <div class="row">
+      <h4>Stats (Hover/touch for details) <small tooltip-placement="bottom" uib-tooltip="There isn't full data on all of the abilities in Splatoon 2 yet. Check back later!">Why are stats missing?</small></h5>
+        <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
+          {{stat.name}}
+          <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
-        <div ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
-        <div ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-md-6 col-xs-12">
-    <h4>Stats (Hover/touch for details) <small tooltip-placement="bottom" uib-tooltip="There isn't full data on all of the abilities in Splatoon 2 yet. Check back later!">Why are stats missing?</small></h5>
-      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
-        {{stat.name}}
-        <uib-progressbar value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="progress-striped">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
-      </div>
-      <div class="col-md-12">
-        <uib-accordion>
-          <div uib-accordion-group class="panel-default" is-open="status.open">
-            <uib-accordion-heading>
-              Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-            </uib-accordion-heading>
-            <table class="table table-sm">
-              <tr>
-                <th>Bomb</th>
-                <th>Direct</th>
-                <th>Near</th>
-                <th>Far</th>
-              </tr>
-              <tbody>
-                <tr ng-repeat="sub in getDamagingSubs()">
-                  <td>{{sub.name}}</td>
-                  <td>{{getAdjustedSubSpeDamage(sub,loadout)["Direct"]}}</td>
-                  <td>{{getAdjustedSubSpeDamage(sub,loadout)["Near"]}}</td>
-                  <td>{{getAdjustedSubSpeDamage(sub,loadout)["Far"]}}</td>
+      <div class="row">
+        <div class="col-md-12">
+          <uib-accordion>
+            <div uib-accordion-group class="panel-default" is-open="status.open">
+              <uib-accordion-heading>
+                Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </uib-accordion-heading>
+              <table class="table table-sm">
+                <tr>
+                  <th>Bomb</th>
+                  <th>Direct</th>
+                  <th>Near</th>
+                  <th>Far</th>
                 </tr>
-              </tbody>
-            </table>
-          </uib-accordion>
+                <tbody>
+                  <tr ng-repeat="sub in getDamagingSubs()">
+                    <td>{{sub.name}}</td>
+                    <td>{{getAdjustedSubSpeDamage(sub,loadout)["Direct"]}}</td>
+                    <td>{{getAdjustedSubSpeDamage(sub,loadout)["Near"]}}</td>
+                    <td>{{getAdjustedSubSpeDamage(sub,loadout)["Far"]}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </uib-accordion>
+          </div>
         </div>
       </div>
+      </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>
