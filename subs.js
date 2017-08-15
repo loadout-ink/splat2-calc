@@ -43,7 +43,7 @@ angular.module('splatApp').subs = function ($scope) {
     },
     {
       name: "Curling Bomb",
-      image: "img/subspe/Wsb_Bomb_Robot.png",
+      image: "img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
       inkSaver: "Normal",
       damage: {

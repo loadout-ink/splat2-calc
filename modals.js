@@ -8,6 +8,7 @@ angular.module('splatApp').controller('ModalDemoCtrl', function($scope, $uibModa
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'myModalContent.html',
+      windowTemplateUrl: 'custom.html',
       controller: 'ModalInstanceCtrl',
       size: size,
       resolve: {
@@ -16,6 +17,9 @@ angular.module('splatApp').controller('ModalDemoCtrl', function($scope, $uibModa
         },
         weaponSets: function() {
           return $scope.weaponSets;
+        },
+        subs: function() {
+          return $scope.subs;
         },
         selectedWeapon: function() {
           return $scope.loadout.weapon;
@@ -40,23 +44,32 @@ angular.module('splatApp').controller('ModalDemoCtrl', function($scope, $uibModa
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
-angular.module('splatApp').controller('ModalInstanceCtrl', function($scope, $uibModalInstance, weaponSets, selectedSet, selectedWeapon) {
+angular.module('splatApp').controller('ModalInstanceCtrl', function($scope, $uibModalInstance, weaponSets, subs, selectedSet, selectedWeapon) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
 
-  $scope.results = {'set' : selectedSet, 'weapon': selectedWeapon}
-
   $scope.switchSet = function() {
-    $scope.selectedWeapon = $scope.availableWeapons()[0];
+    this.selectedWeapon = this.availableWeapons()[0];
   }
 
   $scope.availableWeapons = function() {
-    return $scope.selectedSet.weapons.filter(filter_available)
+    return this.selectedSet.weapons.filter(filter_available)
+  }
+
+  $scope.getSubByName = function(name) {
+      return subs.filter(function(sub) {
+        return sub.name == name;
+      })[0]
+  }
+
+  $scope.getSubIcon = function(name) {
+    return $scope.getSubByName(name).image;
   }
 
   $scope.ok = function() {
-    $uibModalInstance.close({'set' : $scope.selectedSet, 'weapon': $scope.selectedWeapon});
+    console.log(this.selectedWeapon)
+    $uibModalInstance.close({'set' : this.selectedSet, 'weapon': this.selectedWeapon});
   };
 
   $scope.cancel = function() {

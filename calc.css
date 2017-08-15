@@ -84,6 +84,10 @@ body {
   padding:2px;
 }
 
+.bubble.clickable:hover {
+    background: rgba(255,255,255,0.4)
+}
+
 .lvl-target {
   border:solid 2px #fff;
 }
@@ -100,13 +104,14 @@ body {
   border-radius: 25px;
   padding:10px;
   padding-top:0px;
+  overflow:hidden;
 }
 
 .weaponheader {
   padding-top:10px;
   padding-bottom:8px;
   border-radius:25px 25px 0px 0px;
-  background: #333;
+  background: rgba(50,50,50,0.8);
 }
 
 .weaponicon {
