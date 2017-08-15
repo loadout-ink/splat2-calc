@@ -62,7 +62,7 @@ $scope.weaponSets = [{
       image: "img/weapons/Wst_Shooter_QuickMiddle_00.png",
       sub: "Suction Bomb",
       special: "Ink Armor",
-      specialCost: 180,
+      specialCost: 200,
       level: 9,
       inkSaver: "Middle",
       inkPerShot: 0.8

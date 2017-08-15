@@ -6,8 +6,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
   <script src="lib/angular-animate.min.js"></script>
   <script src="lib/angular-touch.min.js"></script>
-  <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
   <script src="lib/jquery-ui-custom/jquery-ui.js"></script>
+  <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
 
 
@@ -19,44 +19,62 @@
   <script src="./subs.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
+  <script src="./modals.js"></script>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+  <div ng-app="splatApp" ng-controller="splatController">
+    <div ng-controller="ModalDemoCtrl">
+      <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-body">
+          <div class="row weaponheader">
+            <div class="col-md-6">
+              <select class="form-control dropdown-toggle" data-ng-options="x.type for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control dropdown-toggle" data-ng-options="x.name for x in availableWeapons()" data-ng-model="selectedWeapon"></select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+          <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+      </script>
+    </div>
   <header class="hero-unit" style="height:100px; text-align: center; background: #fff">
     Splatoon 2 Stat Calculator
   </header>
-  <div class="container maincontainer" ng-app="splatApp" ng-controller="splatController">
+  <div class="container maincontainer">
     <div class="row match-my-cols">
       <div class="col-md-6 col-xs-12 grey matched">
         <div class="row">
           <div class="col-md-12">
             <div class="row">
-              <div class="col-md-6">
-                <select class="form-control dropdown-toggle" data-ng-options="x.type for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
-              </div>
-              <div class="col-md-6">
-                <select class="form-control dropdown-toggle" data-ng-options="x.name for x in availableWeapons()" data-ng-model="loadout.weapon"></select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12 nopadding">
                 <div class="weapon bgstripes">
+                  <div class="row weaponheader">
+                    <div class="col-md-12" style="color:#fff">
+                      Equipped: {{loadout.weapon.name}}
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-sm-5" align=center>
-                      <img class="weaponicon bubble" src="{{loadout.weapon.image}}" />
+                      <img class="weaponicon bubble" ng-controller="ModalDemoCtrl" src="{{loadout.weapon.image}}"  ng-click="open()" />
                     </div>
                     <div class="col-sm-7" align=center>
                       <img src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
-                      <img src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
+                      <img src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
+                      <br>
+                      <h3>{{loadout.weapon.specialCost}}p</h3>
+                        more stats blah blah
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                details
-              </div>
+
             </div>
           </div>
         </div>
@@ -104,19 +122,19 @@
       <div class="abilitybox" ability-box>
         <div class="row">
           <div class="col-md-12">
-            <div ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+            <img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" src="{{skill.image}}">
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
-            <div ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
-            <div ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" style="background-image:url('{{skill.image}}')"></div>
+            <img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" src="{{skill.image}}">
+            <img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" src="{{skill.image}}">
+            <img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" src="{{skill.image}}">
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-xs-12 matched">
+    <div class="col-md-6 col-xs-12 statbox matched">
       <div class="row">
       <h4>Stats (Hover/touch for details) <small tooltip-placement="bottom" uib-tooltip="There isn't full data on all of the abilities in Splatoon 2 yet. Check back later!">Why are stats missing?</small></h5>
         <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
@@ -153,5 +171,6 @@
       </div>
       </div>
     </div>
+  </div>
   </body>
   </html>

@@ -1,6 +1,6 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate'])
-  .controller('splatController', ['$scope', function splatCtrl($scope) {
+  .controller('splatController', ['$scope', function splatCtrl($scope, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -20,5 +20,5 @@ angular
     }
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[0];
-
+    
   }])

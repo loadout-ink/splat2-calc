@@ -40,8 +40,12 @@ body {
 
 .abilitybox .abilityicon {
   margin-left: 4px;
+  margin-bottom:4px;
   margin-right: 4px;
-  display: inline-block;
+}
+
+.statbox {
+  background: #fff
 }
 
 .maincontainer {
@@ -95,6 +99,14 @@ body {
   background:#00ff00;
   border-radius: 25px;
   padding:10px;
+  padding-top:0px;
+}
+
+.weaponheader {
+  padding-top:10px;
+  padding-bottom:8px;
+  border-radius:25px 25px 0px 0px;
+  background: #333;
 }
 
 .weaponicon {
