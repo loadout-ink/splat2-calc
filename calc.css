@@ -1,16 +1,27 @@
 body {
-  background: #ccc !important
+  background: #444 !important;
 }
 
 @font-face {
     font-family: "Paintball";
-    src: url(./project-paintball.ttf) format("truetype");
+    src: url(./ProjectPaintball.woff) format("woff"),
+    url(./ProjectPaintball.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: "Splatfont";
+    src: url(./Splatfont2.woff) format("woff"),
+    url(./ProjectPaintball.woff) format("ttf");
 }
 
 .equal {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
+}
+
+.splatheader {
+  background: #cc1053 !important;
 }
 
 .abilityicon {
@@ -49,8 +60,59 @@ body {
   margin-right: 4px;
 }
 
+.ability1 {
+  background: #fe2472;
+}
+
+.ability2 {
+  background: #cc1053;
+}
+
 .statbox {
-  background: #fff
+font-family: "Splatfont";
+  background: repeating-linear-gradient(
+  45deg,
+  #c9c9c9,
+  #c9c9c9 30px,
+  #bbbbbb 30px,
+  #bbbbbb 60px
+);
+  background-attachment:fixed;
+}
+
+.statlabel {
+  background: rgba(0,0,0,0.6);
+  font-family: "Splatfont";
+  display:block;
+  border-radius:10px;
+  padding: 5px;
+  padding-bottom:8px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.statbar {
+  font-family: "Splatfont";
+  color:black;
+  margin:0px !important;
+  background: #000 !important;
+}
+
+.progress-bar-test {
+  color:black !important;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  background: repeating-linear-gradient(
+  45deg,
+  #fe2472,
+  #fe2472 15px,
+  #cc1053 15px,
+  #cc1053 30px
+);
 }
 
 .maincontainer {
@@ -106,8 +168,8 @@ body {
   overflow:hidden;
 }
 
-.paintballWhite {
-  font-family: "Paintball";
+.splatfont-white {
+  font-family: "Splatfont";
   font-size: 16pt;
   color: #fff;
 }
@@ -169,9 +231,9 @@ body {
 .bgstripes {
   background: repeating-linear-gradient(
   45deg,
-  #606dbc,
-  #606dbc 30px,
-  #465298 30px,
-  #465298 60px
+  #5cfc42,
+  #5cfc42 30px,
+  #2fc123 30px,
+  #2fc123 60px
 );
 }
