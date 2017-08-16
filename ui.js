@@ -4,6 +4,7 @@ angular.module('splatApp')
     link: function(scope,elm,attrs) {
       var options = {
         helper: 'clone',
+        appendTo: '#draggable-parent',
         zIndex:100,
         snap: '[ability-slot]',
         snapMode: 'inner',

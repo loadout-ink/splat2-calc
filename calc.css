@@ -174,16 +174,6 @@ font-family: "Splatfont";
   color: #fff;
 }
 
-.gearheader {
-  padding-top:4px;
-  padding-bottom:2px;
-  background: rgba(50,50,50,0.8);
-  font-family: "Paintball";
-  font-size: 16pt;
-  text-align:center;
-  color: #fff;
-}
-
 .weapon {
   background:#00ff00;
   border-radius: 25px;
@@ -192,10 +182,10 @@ font-family: "Splatfont";
   overflow:hidden;
 }
 
-.weaponheader {
+.cardheader {
   padding-top:4px;
   padding-bottom:2px;
-  background: rgba(50,50,50,0.8);
+  background: rgba(20,20,20,0.8);
   font-family: "Paintball";
   font-size: 16pt;
   text-align:center;
