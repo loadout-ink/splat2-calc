@@ -1,5 +1,5 @@
 body {
-  background: #444 !important;
+  background: #222 !important;
 }
 
 @font-face {
@@ -21,7 +21,13 @@ body {
 }
 
 .splatheader {
-  background: #cc1053 !important;
+  background: #222;
+  text-align: center;
+  padding:20px;
+}
+
+.splatheader img {
+  height:100px;
 }
 
 .abilityicon {
@@ -58,14 +64,6 @@ body {
   margin-left: 4px;
   margin-bottom:4px;
   margin-right: 4px;
-}
-
-.ability1 {
-  background: #fe2472;
-}
-
-.ability2 {
-  background: #cc1053;
 }
 
 .statbox {
@@ -108,10 +106,10 @@ font-family: "Splatfont";
      1px 1px 0 #000;
   background: repeating-linear-gradient(
   45deg,
-  #fe2472,
-  #fe2472 15px,
-  #cc1053 15px,
-  #cc1053 30px
+  #f22d8a,
+  #f22d8a 15px,
+  #d11b71 15px,
+  #d11b71 30px
 );
 }
 
@@ -222,13 +220,62 @@ html {
 .bgstripes {
   background: repeating-linear-gradient(
   45deg,
-  #5cfc42,
-  #5cfc42 30px,
-  #2fc123 30px,
-  #2fc123 60px
+  #0eed5d,
+  #0eed5d 30px,
+  #09cd4e 30px,
+  #09cd4e 60px
 );
 }
 
+.neonstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #dbe826,
+  #dbe826 30px,
+  #c4d412 30px,
+  #c4d412 60px
+);
+}
+
+.redstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #d63e53,
+  #d63e53 30px,
+  #f0624a 30px,
+  #f0624a 60px
+);
+}
+
+.tealstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #19e1ba,
+  #19e1ba 30px,
+  #06be8a 30px,
+  #06be8a 60px
+);
+}
+
+.orangestripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #f07807,
+  #f07807 30px,
+  #d25012 30px,
+  #d25012 60px
+);
+}
+
+.blackstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #222,
+  #222 30px,
+  #444 30px,
+  #444 60px
+);
+}
 .panel-stats {
   border: 0px !important;
 
@@ -238,9 +285,9 @@ html {
   border-radius: 5px;
   background: repeating-linear-gradient(
   45deg,
-  #5cfc42,
-  #5cfc42 30px,
-  #2fc123 30px,
-  #2fc123 60px
+  #0eed5d,
+  #0eed5d 30px,
+  #09cd4e 30px,
+  #09cd4e 60px
 );
 }
