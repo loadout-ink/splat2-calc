@@ -66,7 +66,7 @@ $scope.stats = [
       if(loadout.weapon.inkSaver == "High") coeff = 60
       var reduction =  (0.99 * saverScore - Math.pow((0.09 * saverScore),2)) / coeff
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
-      this.desc = (Math.floor(100/costPerShot) + " " + $scope.selectedSet.shotUnit + " to empty")
+      this.desc = (Math.floor(100/costPerShot) + " " + loadout.weapon.shotUnit + " to empty")
       return (1 - reduction) * 100;
     }, 100, '%'),
     new Stat("Ink Consumption (Sub)", function(loadout) {

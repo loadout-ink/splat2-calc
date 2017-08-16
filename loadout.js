@@ -38,6 +38,11 @@ function Gear() {
     }
     return total;
   }
+  this.clearAll = function() {
+    this.main = null;
+    this.subs = [null,null,null];
+  }
+
 }
 
 function Loadout() {
@@ -83,6 +88,12 @@ function Loadout() {
   this.clearSlot = function(s) {
     var slot = s.replace('loadout.', 'this.');
     eval(slot + '= null');
+  }
+
+  this.clearAll = function() {
+      this.head.clearAll();
+      this.clothes.clearAll();
+      this.shoes.clearAll();
   }
 
 }

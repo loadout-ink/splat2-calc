@@ -171,6 +171,14 @@ font-family: "Splatfont";
   color: #fff;
 }
 
+.edit-button {
+  float:right;
+  margin-right:16px;
+  font-size:12pt;
+  padding-top:5px;
+  cursor:pointer;
+}
+
 .weapon {
   background:#00ff00;
   border-radius: 25px;

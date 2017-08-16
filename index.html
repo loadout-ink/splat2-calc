@@ -46,23 +46,27 @@
               <div class="col-md-6 nopadding">
                 <div class="weapon neonstripes">
                   <div class="row cardheader">
+                  <span ng-controller="ModalCtrl" ng-click="openWeaponPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
                       {{loadout.weapon.name}}
                   </div>
                   <div class="row">
                     <div class="col-sm-5" align=center>
-                      <img fallback-img class="weaponicon  clickable" ng-controller="ModalCtrl" ng-src="{{loadout.weapon.image}}"  ng-click="openWeaponPicker()" />
+                      <img fallback-img class="weaponicon" ng-src="{{loadout.weapon.image}}"/>
                     </div>
-                    <div class="col-sm-7" align=center>
-                      <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
-                      <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
-                      <br>
+                    <div class="col-sm-7">
+                      <div class="col-xs-6">
+                      <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-append-to-body="true" tooltip-placement="right" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" /><br>
+                      <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-append-to-body="true" tooltip-placement="right" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
+                      </div>
+                      <div class="col-xs-6">
                       <span class="splatfont-white">{{loadout.weapon.specialCost}}p</span><br>
+                    </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                share/clear UI here
+                <button ng-click="loadout.clearAll()">Clear Abilities</button>
               </div>
             </div>
           </div>
@@ -73,10 +77,11 @@
             <div class="row">
               <div class="col-md-4 col-sm-4 gear redstripes">
               <div class="row cardheader">
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
                 Head
               </div>
                 <div class="row">
-                  <div class="col-md-6 col-xs-6 nopadding"  align="center"><img fallback-img class="gearicon " ng-src="./img/gear/Hed_EYE011.png" /></div>
+                  <div class="col-md-6 col-xs-6 nopadding"  align="center"><img ng-controller="ModalCtrl" ng-click="openGearPicker()" fallback-img class="gearicon" ng-src="./img/gear/Hed_EYE011.png" /></div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
                 </div>
                 <div class="row">
@@ -87,6 +92,7 @@
               </div>
               <div class="col-md-4 col-sm-4 gear tealstripes">
               <div class="row cardheader">
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
                 Clothes
               </div>
                 <div class="row">
@@ -101,6 +107,7 @@
               </div>
               <div class="col-md-4 col-sm-4 gear orangestripes">
               <div class="row cardheader">
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
                 Shoes
               </div>
                 <div class="row">

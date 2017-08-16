@@ -5,10 +5,10 @@ function filter_available(weapon) {
 angular.module('splatApp').weapons = function ($scope) {
 $scope.weaponSets = [{
   type: "Shooters",
-  shotUnit: "shots",
   weapons: [
     {
       name: "Splattershot Jr.",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_First_00.png",
       sub: "Splat Bomb",
       special: "Ink Armor",
@@ -19,6 +19,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splattershot",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Normal_00.png",
       sub: "Burst Bomb",
       special: "Splashdown",
@@ -29,6 +30,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splat Dualies",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Normal_00.png",
       sub: "Burst Bomb",
       special: "Tenta Missiles",
@@ -39,6 +41,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Tentatek Splattershot",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Normal_01.png",
       sub: "Splat Bomb",
       special: "Inkjet",
@@ -49,6 +52,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Aerospray MG",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Blaze_00.png",
       sub: "Suction Bomb",
       special: "Curling-Bomb Launcher",
@@ -59,6 +63,7 @@ $scope.weaponSets = [{
     },
     {
       name: "N-ZAP '85",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_QuickMiddle_00.png",
       sub: "Suction Bomb",
       special: "Ink Armor",
@@ -69,6 +74,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splattershot Pro",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Expert_00.png",
       sub: "Point Sensor",
       special: "Ink Storm",
@@ -79,6 +85,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Enperry Splat Dualies",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Normal_01.png",
       sub: "Curling Bomb",
       special: "Inkjet",
@@ -89,6 +96,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Dualie Squelchers",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Dual_00.png",
       sub: "Point Sensor",
       special: "Tenta Missiles",
@@ -99,6 +107,7 @@ $scope.weaponSets = [{
     },
     {
       name: ".52 Gal",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Gravity_00.png",
       sub: "Point Sensor",
       special: "Baller",
@@ -109,6 +118,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Jet Squelcher",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Long_00.png",
       sub: "Toxic Mist",
       special: "Tenta Missiles",
@@ -119,6 +129,7 @@ $scope.weaponSets = [{
     },
     {
       name: "L-3 Nozzlenose",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_TripleQuick_00.png",
       sub: "Curling Bomb",
       special: "Baller",
@@ -129,6 +140,7 @@ $scope.weaponSets = [{
     },
     {
       name: ".96 Gal",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Heavy_00.png",
       sub: "Sprinkler",
       special: "Ink Armor",
@@ -139,6 +151,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splash-o-matic",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Precision_00.png",
       sub: "Toxic Mist",
       special: "Inkjet",
@@ -149,6 +162,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Dapple Dualies",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Short_00.png",
       sub: "Squid Beakon",
       special: "Suction-Bomb Launcher",
@@ -159,6 +173,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Aerospray RG",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Blaze_01.png",
       sub: "Sprinkler",
       special: "Baller",
@@ -169,6 +184,7 @@ $scope.weaponSets = [{
     },
     {
       name: "H-3 Nozzlenose",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_TripleMiddle_01.png",
       sub: "Point Sensor",
       special: "Tenta Missiles",
@@ -179,6 +195,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom Splattershot Jr.",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_First_01.png",
       sub: "Autobomb",
       special: "Ink Storm",
@@ -190,6 +207,7 @@ $scope.weaponSets = [{
     },
     {
       name: "N-ZAP '89",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_QuickMiddle_01.png",
       sub: "Autobomb",
       special: "Tenta Missiles",
@@ -201,6 +219,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom Dualie Squelchers",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Dual_01.png",
       sub: "Splat Bomb",
       special: "Ink Armor",
@@ -212,6 +231,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Forge Splattershot Pro",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Expert_01.png",
       sub: "Suction Bomb",
       special: "Bubble Blower",
@@ -223,6 +243,7 @@ $scope.weaponSets = [{
     },
     {
       name: ".52 Gal Deco",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Gravity_01.png",
       sub: "Curling Bomb",
       special: "Sting Ray",
@@ -234,6 +255,7 @@ $scope.weaponSets = [{
     },
     {
       name: "L-3 Nozzlenose D",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_TripleQuick_01.png",
       sub: "Burst Bomb",
       special: "Inkjet",
@@ -245,6 +267,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom Jet Squelcher",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Long_01.png",
       sub: "Burst Bomb",
       special: "Sting Ray",
@@ -256,6 +279,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Neo Splash-o-matic",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Precision_01.png",
       sub: "Burst Bomb",
       special: "Suction-Bomb Launcher",
@@ -267,6 +291,7 @@ $scope.weaponSets = [{
     },
     {
       name: ".96 Gal Deco",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_Heavy_01.png",
       sub: "Splash Wall",
       special: "Splashdown",
@@ -278,6 +303,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Dapple Dualies Nouveau",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Twins_Short_01.png",
       sub: "Toxic Mist",
       special: "Ink Storm",
@@ -289,6 +315,7 @@ $scope.weaponSets = [{
     },
     {
       name: "H-3 Nozzlenose D",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_TripleMiddle_01.png",
       sub: "Sprinkler",
       special: "Ink Armor",
@@ -302,10 +329,10 @@ $scope.weaponSets = [{
   },
   {
     type: "Rollers/Brushes",
-    shotUnit: "flicks",
     weapons: [
       {
         name: "Splat Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Normal_00.png",
         sub: "Curling Bomb",
         special: "Splashdown",
@@ -317,6 +344,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Inkbrush",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_BrushMini_00.png",
         sub: "Splat Bomb",
         special: "Splashdown",
@@ -327,6 +355,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Carbon Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Compact_00.png",
         sub: "Autobomb",
         special: "Ink Storm",
@@ -337,6 +366,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Octobrush",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_BrushNormal_00.png",
         sub: "Autobomb",
         special: "Inkjet",
@@ -347,6 +377,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Krak-On Splat Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Normal_01.png",
         sub: "Squid Beakon",
         special: "Baller",
@@ -357,6 +388,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Dynamo Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Heavy_00.png",
         sub: "Ink Mine",
         special: "Sting Ray",
@@ -368,6 +400,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Flingza Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Hunter_00.png",
         sub: "Splash Wall",
         special: "Splat-Bomb Launcher",
@@ -378,6 +411,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Inkbrush Nouveau",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_BrushMini_01.png",
         sub: "Ink Mine",
         special: "Baller",
@@ -389,6 +423,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Carbon Roller Deco",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Compact_01.png",
         sub: "Sprinkler",
         special: "Inkjet",
@@ -400,6 +435,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Octobrush Nouveau",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_BrushNormal_01.png",
         sub: "Squid Beakon",
         special: "Tenta Missiles",
@@ -411,6 +447,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Gold Dynamo Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Heavy_01.png",
         sub: "Toxic Mist",
         special: "Ink Armor",
@@ -422,6 +459,7 @@ $scope.weaponSets = [{
       },
       {
         name: "Foil Flingza Roller",
+        shotUnit: "flicks",
         image: "img/weapons/Wst_Roller_Hunter_01.png",
         sub: "Suction Bomb",
         special: "Tenta Missiles",
@@ -435,10 +473,10 @@ $scope.weaponSets = [{
 },
 {
   type: "Blasters/Brellas",
-  shotUnit: "shots",
   weapons: [
     {
       name: "Blaster",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterMiddle_00.png",
       sub: "Toxic Mist",
       special: "Splashdown",
@@ -449,6 +487,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Rapid Blaster",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterLight_00.png",
       sub: "Ink Mine",
       special: "Splat-Bomb Launcher",
@@ -459,6 +498,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Luna Blaster",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterShort_00.png",
       sub: "Splat Bomb",
       special: "Baller",
@@ -469,6 +509,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom Blaster",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterMiddle_01.png",
       sub: "Autobomb",
       special: "Inkjet",
@@ -479,6 +520,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Clash Blaster",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterLightShort_00.png",
       sub: "Splat Bomb",
       special: "Sting Ray",
@@ -489,6 +531,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splat Brella",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Umbrella_Normal_00.png",
       sub: "Sprinkler",
       special: "Ink Storm",
@@ -499,6 +542,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Sorella Brella",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Umbrella_Normal_01.png",
       sub: "Toxic Mist",
       special: "Splat-Bomb Launcher",
@@ -510,6 +554,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Luna Blaster Neo",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterShort_01.png",
       sub: "Ink Mine",
       special: "Suction-Bomb Launcher",
@@ -521,6 +566,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Clash Blaster Neo",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterLightShort_01.png",
       sub: "Sprinkler",
       special: "Tenta Missiles",
@@ -532,6 +578,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Rapid Blaster Deco",
+      shotUnit: "shots",
       image: "img/weapons/Wst_Shooter_BlasterLight_01.png",
       sub: "Suction Bomb",
       special: "Inkjet",
@@ -545,10 +592,10 @@ $scope.weaponSets = [{
 },
 {
   type: "Sloshers",
-  shotUnit: "sloshes",
   weapons: [
     {
       name: "Slosher",
+      shotUnit: "sloshes",
       image: "img/weapons/Wst_Slosher_Strong_00.png",
       sub: "Suction Bomb",
       special: "Tenta Missiles",
@@ -559,6 +606,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Tri-Slosher",
+      shotUnit: "sloshes",
       image: "img/weapons/Wst_Slosher_Diffusion_00.png",
       sub: "Burst Bomb",
       special: "Ink Armor",
@@ -569,6 +617,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Slosher Deco",
+      shotUnit: "sloshes",
       image: "img/weapons/Wst_Slosher_Strong_01.png",
       sub: "Sprinkler",
       special: "Baller",
@@ -580,6 +629,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Tri-Slosher Nouveau",
+      shotUnit: "sloshes",
       image: "img/weapons/Wst_Slosher_Diffusion_01.png",
       sub: "Splat Bomb",
       special: "Autobomb Launcher",
@@ -593,10 +643,10 @@ $scope.weaponSets = [{
 },
 {
   type: "Chargers/Splatlings",
-  shotUnit: "full charges",
   weapons: [
     {
       name: "Splat Charger",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Normal_00.png",
       sub: "Splat Bomb",
       special: "Sting Ray",
@@ -607,6 +657,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Heavy Splatling",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Spinner_Standard_00.png",
       sub: "Sprinkler",
       special: "Sting Ray",
@@ -617,6 +668,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Splatterscope",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_NormalScope_00.png",
       sub: "Splat Bomb",
       special: "Sting Ray",
@@ -627,6 +679,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Firefin Splat Charger",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Normal_01.png",
       sub: "Splash Wall",
       special: "Suction-Bomb Launcher",
@@ -637,6 +690,7 @@ $scope.weaponSets = [{
     },
     {
       name: "E-liter 4K",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Long_00.png",
       sub: "Ink Mine",
       special: "Ink Storm",
@@ -648,6 +702,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Goo Tuber",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Keeper_00.png",
       sub: "Suction Bomb",
       special: "Splashdown",
@@ -658,6 +713,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Mini Splatling",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Spinner_Quick_00.png",
       sub: "Burst Bomb",
       special: "Tenta Missiles",
@@ -668,6 +724,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Firefin Splatterscope",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_NormalScope_01.png",
       sub: "Splash Wall",
       special: "Suction-Bomb Launcher",
@@ -678,6 +735,7 @@ $scope.weaponSets = [{
     },
     {
       name: "E-liter 4K Scope",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_LongScope_00.png",
       sub: "Ink Mine",
       special: "Ink Storm",
@@ -689,6 +747,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Heavy Splatling Deco",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Spinner_Standard_01.png",
       sub: "Splash Wall",
       special: "Bubble Blower",
@@ -700,6 +759,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Zink Mini Splatling",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Spinner_Quick_01.png",
       sub: "Curling Bomb",
       special: "Ink Storm",
@@ -711,6 +771,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom E-liter 4K",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Long_01.png",
       sub: "Squid Beakon",
       special: "Bubble Blower",
@@ -722,6 +783,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom Goo Tuber",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_Keeper_01.png",
       sub: "Curling Bomb",
       special: "Inkjet",
@@ -733,6 +795,7 @@ $scope.weaponSets = [{
     },
     {
       name: "Custom E-liter 4K Scope",
+      shotUnit: "full charges",
       image: "img/weapons/Wst_Charger_LongScope_01.png",
       sub: "Squid Beakon",
       special: "Bubble Blower",

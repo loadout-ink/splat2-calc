@@ -18,6 +18,7 @@ angular
     $scope.availableWeapons = function() {
       return $scope.selectedSet.weapons.filter(filter_available)
     }
+
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[1];
 

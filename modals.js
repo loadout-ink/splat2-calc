@@ -35,7 +35,25 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                 </div>
             </div>
           </div>
-        </div>`
+        </div>`,
+        gearPicker : `<div class="row">
+                <div class="col-md-12">
+                  <div class="weapon neonstripes">
+                  <div class="row cardheader">
+                    placeholder
+                  </div>
+                  <div class="row">
+                </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <button class="btn" type="button" ng-click="ok()">OK</button>
+                    </div>
+                    <div class="col-xs-6">
+                    <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+              </div>
+            </div>`
   }
 
   $scope.openWeaponPicker = function(size) {
@@ -65,7 +83,25 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $scope.selectedSet=results.set;
       $scope.loadout.weapon=results.weapon;
     }, function() {
-      $log.info('Modal dismissed at: ' + new Date());
+      $log.info('Weapon picker cancelled');
+    });
+  };
+
+  $scope.openGearPicker = function(size) {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["gearPicker"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'GearPickerCtrl',
+      size: size,
+      resolve: {
+
+      }
+    });
+
+    modalInstance.result.then(function(results) {
+    }, function() {
+      $log.info('Gear picker cancelled');
     });
   };
 
@@ -74,9 +110,6 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
   };
 
 });
-
-// Please note that $uibModalInstance represents a modal window (instance) dependency.
-// It is not the same as the $uibModal service used above.
 
 angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, weaponSets, subs, selectedSet, selectedWeapon) {
   $scope.selectedSet = selectedSet;
@@ -102,8 +135,18 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
   }
 
   $scope.ok = function() {
-    console.log(this.selectedWeapon)
     $uibModalInstance.close({'set' : this.selectedSet, 'weapon': this.selectedWeapon});
+  };
+
+  $scope.cancel = function() {
+    $uibModalInstance.dismiss('cancel');
+  };
+});
+
+
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance) {
+  $scope.ok = function() {
+    $uibModalInstance.close();
   };
 
   $scope.cancel = function() {
