@@ -159,14 +159,14 @@
       <div class="abilitybox" ability-box>
         <div class="row">
           <div class="col-md-12x blackstripes">
-            <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
           </div>
         </div>
         <div class="row" >
           <div class="col-md-12x blackstripes">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
           </div>
         </div>
       </div>
