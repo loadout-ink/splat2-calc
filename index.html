@@ -78,7 +78,7 @@
   </header>
   <div class="container maincontainer">
     <div class="row match-my-cols">
-      <div class="col-md-6 col-xs-12 grey matched">
+      <div class="col-md-6 col-xs-12 grey ">
         <div class="row">
           <div class="col-md-12">
             <div class="row">
@@ -183,7 +183,7 @@
       <div class="row">
         <div class="col-md-12">
           <uib-accordion>
-            <div uib-accordion-group class="panel-default" is-open="status.open">
+            <div uib-accordion-group class="panel-stats" is-open="status.open">
               <uib-accordion-heading>
                 Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
               </uib-accordion-heading>
@@ -203,11 +203,32 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+            <div uib-accordion-group class="panel-stats" is-open="status.speOpen">
+              <uib-accordion-heading>
+                Special Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
+              </uib-accordion-heading>
+              <table class="table table-sm">
+                <tr>
+                  <th>Bomb</th>
+                  <th>Direct</th>
+                  <th>Near</th>
+                  <th>Far</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>PH</td>
+                    <td>PH</td>
+                    <td>PH</td>
+                    <td>PH</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             </uib-accordion>
-          </div>
         </div>
       </div>
-      </div>
+        </div>
     </div>
   </div>
   <div id="draggable-parent"></div>

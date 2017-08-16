@@ -116,7 +116,6 @@ font-family: "Splatfont";
 }
 
 .maincontainer {
-  background: #fff;
 }
 
 .abilitybox .col-md-12 {
@@ -204,7 +203,9 @@ font-family: "Splatfont";
   border-bottom: solid 6px rgba(0,0,0,0.2);
   box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
 }
-
+html {
+  overflow-y: scroll;
+}
 .row.match-my-cols {
     overflow: hidden;
 }
@@ -219,6 +220,22 @@ font-family: "Splatfont";
 }
 
 .bgstripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #5cfc42,
+  #5cfc42 30px,
+  #2fc123 30px,
+  #2fc123 60px
+);
+}
+
+.panel-stats {
+  border: 0px !important;
+
+}
+
+.panel-stats .panel-heading {
+  border-radius: 5px;
   background: repeating-linear-gradient(
   45deg,
   #5cfc42,
