@@ -40,10 +40,19 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                 <div class="col-md-12">
                   <div class="weapon neonstripes">
                   <div class="row cardheader">
-                    placeholder
+                    Hat Picker
                   </div>
                   <div class="row">
-                </div>
+                  <div class="col-md-4">
+                  <img fallback-img ng-src="{{selectedGear.image}}" /><br>
+                  {{selectedGear.name}}
+                  </div>
+                  <div class="col-md-8">
+                  <div style="height:150px; overflow-y:scroll">
+                    <img ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,loadout.head.main.name).primary" fallback-img ng-src="{{item.image}}" style="height:65px"/><img ng-repeat="item in filterByMain(set,loadout.head.main.name).secondary" fallback-img ng-src="{{item.image}}" style="height:65px; background:rgba(255,0,0,0.3)"/>
+                  </div>
+                  </div>
+                  </div>
                   <div class="row">
                     <div class="col-xs-6">
                       <button class="btn" type="button" ng-click="ok()">OK</button>
@@ -95,11 +104,26 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       controller: 'GearPickerCtrl',
       size: size,
       resolve: {
-
+        loadout: function() {
+          return $scope.loadout
+        },
+        getGearByName: function() {
+          return $scope.getGearByName
+        },
+        set: function() {
+          return $scope.hats
+        },
+        filterByMain: function() {
+          return $scope.filterByMain
+        },
+        selectedGear: function() {
+          return $scope.loadout.head.equipped
+        }
       }
     });
 
     modalInstance.result.then(function(results) {
+      $scope.loadout.head.equipped = results.selected
     }, function() {
       $log.info('Gear picker cancelled');
     });
@@ -144,9 +168,18 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance) {
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, loadout, set, filterByMain, selectedGear) {
+  $scope.loadout = loadout
+  $scope.set = set
+  $scope.filterByMain = filterByMain
+  $scope.selectedGear = selectedGear
+
+  $scope.selectGear = function(item) {
+    $scope.selectedGear=item;
+  }
+
   $scope.ok = function() {
-    $uibModalInstance.close();
+    $uibModalInstance.close({selected : this.selectedGear});
   };
 
   $scope.cancel = function() {

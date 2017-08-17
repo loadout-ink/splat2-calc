@@ -8,6 +8,7 @@ angular
     angular.module('splatApp').weapons($scope);
     angular.module('splatApp').subs($scope);
     angular.module('splatApp').specials($scope);
+    angular.module('splatApp').gear($scope);
     $scope.loadout = new Loadout();
 
     $scope.status = {}
@@ -22,5 +23,6 @@ angular
 
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[1];
+    $scope.loadout.head.equipped = $scope.hats[0]
 
   }])

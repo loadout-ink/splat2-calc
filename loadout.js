@@ -1,5 +1,5 @@
 function Gear() {
-  this.equipped = '';
+  this.equipped = null;
   this.main = null;
   this.subs = [null,null,null],
   this.getmainIcon = function() {
