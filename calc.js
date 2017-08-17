@@ -7,6 +7,7 @@ angular
     angular.module('splatApp').stats($scope);
     angular.module('splatApp').weapons($scope);
     angular.module('splatApp').subs($scope);
+    angular.module('splatApp').specials($scope);
     $scope.loadout = new Loadout();
 
     $scope.status = {}

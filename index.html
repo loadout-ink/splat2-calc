@@ -17,6 +17,7 @@
   <script src="./skills.js"></script>
   <script src="./weapons.js"></script>
   <script src="./subs.js"></script>
+  <script src="./specials.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
   <script src="./modals.js"></script>
@@ -56,7 +57,7 @@
                     <div class="col-sm-7">
                       <div class="col-xs-6">
                       <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-append-to-body="true" tooltip-placement="right" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" /><br>
-                      <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{loadout.weapon.sub}}" tooltip-append-to-body="true" tooltip-placement="right" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
+                      <img fallback-img ng-src="{{getSpecialByName(loadout.weapon.special).image}}" uib-tooltip="{{loadout.weapon.special}}" tooltip-append-to-body="true" tooltip-placement="right" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
                       </div>
                       <div class="col-xs-6">
                       <span class="splatfont-white">{{loadout.weapon.specialCost}}p</span><br>
@@ -145,7 +146,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
           <div class="statlabel">
           {{stat.name}}
-          <uib-progressbar type="test" value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar">{{stat.calc(loadout).toFixed(1) + stat.unit}}</uib-progressbar>
+          <uib-progressbar type="test" value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar">{{stat.calc(loadout) + stat.unit}}</uib-progressbar>
         </div>
       </div>
       </div>
@@ -179,17 +180,17 @@
               </uib-accordion-heading>
               <table class="table table-sm">
                 <tr>
-                  <th>Bomb</th>
-                  <th>Direct</th>
+                  <th>Special</th>
+                  <th>Hit</th>
                   <th>Near</th>
                   <th>Far</th>
                 </tr>
                 <tbody>
-                  <tr>
-                    <td>PH</td>
-                    <td>PH</td>
-                    <td>PH</td>
-                    <td>PH</td>
+                  <tr ng-repeat="special in getDamagingSpecials()">
+                    <td>{{special.name}}</td>
+                    <td>{{getAdjustedSubSpeDamage(special,loadout)["Direct"]}}</td>
+                    <td>{{getAdjustedSubSpeDamage(special,loadout)["Near"]}}</td>
+                    <td>{{getAdjustedSubSpeDamage(special,loadout)["Far"]}}</td>
                   </tr>
                 </tbody>
               </table>
