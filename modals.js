@@ -43,20 +43,20 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                     Hat Picker
                   </div>
                   <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-4" style="font-family:Splatfont" align="center">
                   <img fallback-img ng-src="{{selectedGear.image}}" /><br>
-                  {{selectedGear.name}}<br>
-                  Main: {{selectedGear.main}}<br>
-                  Brand: {{selectedGear.brand}}<br>
-                  Likely: X<br>
-                  Unlikely: Y
+                  <span style="font-size: 14pt">{{selectedGear.name}}</span><br>
+                  <img ng-src="{{brands[selectedGear.brand].image}}" style="width:28px; height:auto"/> {{selectedGear.brand}}<br>
+                  <img ng-src="{{getSkillByName(selectedGear.main).image}}" style="width:28px; height:auto"/>  {{selectedGear.main}}<br>
+                  + {{brands[selectedGear.brand].common}}<br>
+                  - {{brands[selectedGear.brand].uncommon}}
                   </div>
                   <div class="col-md-8">
                   <div style="height:250px; overflow-y:scroll">
                   <div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).primary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
                     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto"/>
                     <span style="position:absolute; left:0px; bottom:0px;">
-                      <img src="img/brands/B00.png" style="width:28px; height:auto; border-radius: 50%;"/>
+                      <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
                     </span>
                     <span style="position:absolute; right:0px; top:4px;">
                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
@@ -64,7 +64,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   </div><div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
                                     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
                                     <span style="position:absolute; left:0px; bottom:0px;">
-                                      <img src="img/brands/B00.png" style="width:28px; height:auto; border-radius: 50%;"/>
+                                      <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;/>
                                     </span>
                                     <span style="position:absolute; right:0px; top:4px;">
                                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
@@ -140,6 +140,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
         },
         set: function() {
           return $scope.hats
+        },
+        brands: function() {
+          return $scope.brands
         },
         filterByMain: function() {
           return $scope.filterByMain
@@ -230,12 +233,13 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, slot, set, filterByMain, selectedGear, getSkillByName) {
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, slot, set, brands, filterByMain, selectedGear, getSkillByName) {
   $scope.slot = slot
   $scope.set = set
   $scope.filterByMain = filterByMain
   $scope.selectedGear = selectedGear
   $scope.getSkillByName = getSkillByName
+  $scope.brands = brands
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;

@@ -27,7 +27,7 @@ $scope.stats = [
       this.desc = speed.toFixed(2) + " Distance Units/frame";
       return ((speed / 2.02) * 100).toFixed(1);
     }, 120, '%'),
-    new Stat("Run Speed (incorrect)", function(loadout) {
+    new Stat("Run Speed", function(loadout) {
         var abilityScore = loadout.calcAbilityScore("Run Speed Up");
         var baseSpeed = 0.96;
         var coeff = 60;
