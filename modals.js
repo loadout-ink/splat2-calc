@@ -62,12 +62,15 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                     </span>
                   </div><div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
-                                    <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto; background:rgba(255,0,0,0.2)"/>
+                                    <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
                                     <span style="position:absolute; left:0px; bottom:0px;">
                                       <img src="img/brands/B00.png" style="width:28px; height:auto; border-radius: 50%;"/>
                                     </span>
                                     <span style="position:absolute; right:0px; top:4px;">
                                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                    </span>
+                                    <span style="position:absolute; right:0px; bottom:4px;">
+                                      <img src="img/misc/annie.png" style="width:24px;" />
                                     </span>
                                     </div>
 

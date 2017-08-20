@@ -87,8 +87,7 @@
                     <div class="gearWrapper" style="position:relative">
                       <img ng-controller="ModalCtrl" ng-click="openHatPicker()" fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
                       <span style="position:absolute; right:0px; bottom:0px;">
-                        <img src="img/skills/MainInk_Save.png" style="width:18px; border-radius: 50%; box-shadow:0px 0px 0px 2px #ff0000; background: rgba(0,0,0,0.8); vertical-align:bottom" />
-                        <img src="img/skills/OpInkEffect_Reduction.png" style="width:24px; border-radius: 50%; box-shadow:0px 0px 0px 2px #00ff00; background: rgba(0,0,0,0.8)" />
+                        <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?true:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
                       </span>
                     </div>
                   </div>
