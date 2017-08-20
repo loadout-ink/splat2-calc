@@ -1,11 +1,11 @@
 angular.module('splatApp').skills = function ($scope) {
 $scope.skills = [
   {
-    name:"Main Saver",
+    name:"Ink Saver (Main)",
     image:"img/skills/MainInk_Save.png"
   },
   {
-    name:"Sub Saver",
+    name:"Ink Saver (Sub)",
     image:"img/skills/SubInk_Save.png",
   },
   {
@@ -33,7 +33,7 @@ $scope.skills = [
     image:"img/skills/BombDamage_Reduction.png",
   },
   {
-    name:"Cold Blooded",
+    name:"Cold-Blooded",
     image:"img/skills/MarkingTime_Reduction.png",
   },
   {

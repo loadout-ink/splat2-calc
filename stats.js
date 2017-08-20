@@ -12,39 +12,41 @@ $scope.stats = [
       var abilityScore = loadout.calcAbilityScore("Swim Speed Up");
       var baseSpeed = 2.02;
       var coeff = 150;
-      if(loadout.weapon.swimPenalty && !loadout.hasAbility("Ninja Squid")) {
+      if(loadout.weapon.speedLevel == "Low" && !loadout.hasAbility("Ninja Squid")) {
         baseSpeed = 1.74;
         coeff = 80;
       }
-      if(loadout.weapon.swimPenalty && loadout.hasAbility("Ninja Squid")) {
+      if(loadout.weapon.speedLevel == "Low" && loadout.hasAbility("Ninja Squid")) {
         baseSpeed = 1.55;
         coeff = 75;
       }
-      if(!loadout.weapon.swimPenalty && loadout.hasAbility("Ninja Squid")) {
+      if(!loadout.weapon.speedLevel == "Low" && loadout.hasAbility("Ninja Squid")) {
         baseSpeed = 1.81;
       }
       var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
       this.desc = speed.toFixed(2) + " Distance Units/frame";
       return ((speed / 2.02) * 100).toFixed(1);
     }, 120, '%'),
-    new Stat("Run Speed", function(loadout) {
+    new Stat("Run Speed (incorrect)", function(loadout) {
         var abilityScore = loadout.calcAbilityScore("Run Speed Up");
         var baseSpeed = 0.96;
-        var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/60);
+        var coeff = 60;
+        if(loadout.weapon.speedLevel == "High") {
+          baseSpeed = 1.04;
+          coeff = 78;
+        }
+        if(loadout.weapon.speedLevel == "Low") {
+          baseSpeed = 0.88;
+          coeff = (420/9);
+        }
+        var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
         this.desc = speed.toFixed(2) + " Distance Units/frame";
         return ((speed / 0.96) * 100).toFixed(1);
       }, 150, '%'),
-    new Stat("Run Speed (Shooting)", function(loadout) {
-        var abilityScore = loadout.calcAbilityScore("Run Speed Up");
-        var baseSpeed = 0.72;
-        var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120);
-        this.desc = speed.toFixed(2) + " Distance Units/frame";
-        return ((speed / 0.96) * 100).toFixed(1);
-      }, 100, '%'),
     new Stat("Run Speed (Enemy Ink)", function(loadout) {
         var abilityScore = loadout.calcAbilityScore("Ink Resistance Up");
         var baseSpeed = 0.32;
-        var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) * (2/31))
+        var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
         this.desc = speed.toFixed(2) + " Distance Units/frame";
         return ((speed / 0.96) * 100).toFixed(1);
       }, 100, '%'),
@@ -61,7 +63,7 @@ $scope.stats = [
       return ((10 / seconds) * 100).toFixed(1);
     }, 251, '%'),
     new Stat("Ink Consumption (Main)", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore("Main Saver");
+      var abilityScore = loadout.calcAbilityScore("Ink Saver (Main)");
       var coeff = (200 / 3)
       if(loadout.weapon.inkSaver == "High") coeff = 60
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
@@ -70,7 +72,7 @@ $scope.stats = [
       return ((1 - reduction) * 100).toFixed(1);
     }, 100, '%'),
     new Stat("Ink Consumption (Sub)", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore("Sub Saver");
+      var abilityScore = loadout.calcAbilityScore("Ink Saver (Sub)");
       var coeff = (600 / 7)
       var sub = $scope.getSubByName(loadout.weapon.sub)
       if(sub.inkSaver == "Low") coeff = 100
@@ -107,7 +109,7 @@ $scope.stats = [
       return ((prepPhase + mainPhase + actionPhase + (loadout.hasAbility("Stealth Jump")?50:0)) / 60).toFixed(2);
     }, 4.8, 's'),
     new Stat("Tracking Time", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore("Cold Blooded");
+      var abilityScore = loadout.calcAbilityScore("Cold-Blooded");
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
       this.desc = ("Point sensor/ink mine duration")
       return (8 * (1 - trackReduction)).toFixed(2);

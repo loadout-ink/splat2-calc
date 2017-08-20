@@ -79,11 +79,19 @@
             <div class="row">
               <div class="col-md-4 col-sm-4 gear redstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" ng-click="openHatPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
                 Head
               </div>
                 <div class="row">
-                  <div class="col-md-6 col-xs-6 nopadding"  align="center"><img ng-controller="ModalCtrl" ng-click="openGearPicker()" fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" /></div>
+                  <div class="col-md-6 col-xs-6 nopadding"  align="center">
+                    <div class="gearWrapper" style="position:relative">
+                      <img ng-controller="ModalCtrl" ng-click="openHatPicker()" fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
+                      <span style="position:absolute; right:0px; bottom:0px;">
+                        <img src="img/skills/MainInk_Save.png" style="width:18px; border-radius: 50%; box-shadow:0px 0px 0px 2px #ff0000; background: rgba(0,0,0,0.8); vertical-align:bottom" />
+                        <img src="img/skills/OpInkEffect_Reduction.png" style="width:24px; border-radius: 50%; box-shadow:0px 0px 0px 2px #00ff00; background: rgba(0,0,0,0.8)" />
+                      </span>
+                    </div>
+                  </div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
                 </div>
                 <div class="row">
@@ -94,7 +102,7 @@
               </div>
               <div class="col-md-4 col-sm-4 gear tealstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" class="glyphicon glyphicon-pencil edit-button "></span>
                 Clothes
               </div>
                 <div class="row">
@@ -109,7 +117,7 @@
               </div>
               <div class="col-md-4 col-sm-4 gear orangestripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" class="glyphicon glyphicon-pencil edit-button "></span>
                 Shoes
               </div>
                 <div class="row">

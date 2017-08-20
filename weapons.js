@@ -15,6 +15,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 1,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.5
     },
     {
@@ -26,6 +27,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 2,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1
     },
     {
@@ -37,6 +39,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 4,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 0.8
     },
     {
@@ -48,6 +51,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 4,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1
     },
     {
@@ -59,6 +63,7 @@ $scope.weaponSets = [{
       specialCost: 170,
       level: 6,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.55
     },
     {
@@ -70,6 +75,7 @@ $scope.weaponSets = [{
       specialCost: 200,
       level: 9,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 0.8
     },
     {
@@ -81,6 +87,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 10,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 2
     },
     {
@@ -92,6 +99,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 11,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 0.8
     },
     {
@@ -103,6 +111,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 12,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1
     },
     {
@@ -114,6 +123,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 14,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1.3
     },
     {
@@ -125,6 +135,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 17,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1.6
     },
     {
@@ -136,6 +147,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 18,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1
     },
     {
@@ -147,6 +159,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 21,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 2.5
     },
     {
@@ -158,6 +171,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 25,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.8
     },
     {
@@ -169,6 +183,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 26,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.9
     },
     {
@@ -180,6 +195,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 28,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.55
     },
     {
@@ -191,6 +207,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 29,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 1.8
     },
     {
@@ -202,6 +219,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 4,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.5,
       unreleased: true
     },
@@ -214,6 +232,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 11,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 0.8,
       unreleased: true
     },
@@ -226,6 +245,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 16,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1,
       unreleased: true
     },
@@ -238,6 +258,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 20,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 2,
       unreleased: true
     },
@@ -262,6 +283,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 23,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1,
       unreleased: true
     },
@@ -274,6 +296,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 27,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 1.6,
       unreleased: true
     },
@@ -286,6 +309,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 27,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.8,
       unreleased: true
     },
@@ -298,6 +322,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 26,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 2.5,
       unreleased: true
     },
@@ -310,6 +335,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 29,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 0.9,
       unreleased: true
     },
@@ -322,6 +348,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 30,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 1.8,
       unreleased: true
     }
@@ -339,6 +366,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 3,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 10,
         shotUnit: "flicks"
       },
@@ -351,6 +379,7 @@ $scope.weaponSets = [{
         specialCost: 170,
         level: 5,
         inkSaver: "Middle",
+        speedLevel: "High",
         inkPerShot: 2
       },
       {
@@ -362,6 +391,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 7,
         inkSaver: "Middle",
+        speedLevel: "High",
         inkPerShot: 6
       },
       {
@@ -373,6 +403,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 10,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 3.2
       },
       {
@@ -384,6 +415,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 12,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 10
       },
       {
@@ -395,7 +427,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 20,
         inkSaver: "High",
-        swimPenalty: true,
+        speedLevel: "Low",
         inkPerShot: 18
       },
       {
@@ -407,6 +439,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 24,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 8
       },
       {
@@ -418,6 +451,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 7,
         inkSaver: "High",
+        speedLevel: "High",
         inkPerShot: 2,
         unreleased: true
       },
@@ -430,6 +464,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 10,
         inkSaver: "Middle",
+        speedLevel: "High",
         inkPerShot: 6,
         unreleased: true
       },
@@ -442,6 +477,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 15,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 3.2,
         unreleased: true
       },
@@ -454,6 +490,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 25,
         inkSaver: "High",
+        speedLevel: "Low",
         inkPerShot: 18,
         unreleased: true
       },
@@ -466,6 +503,7 @@ $scope.weaponSets = [{
         specialCost: 180,
         level: 28,
         inkSaver: "Middle",
+        speedLevel: "Middle",
         inkPerShot: 8,
         unreleased: true
       }
@@ -483,6 +521,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 5,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 10
     },
     {
@@ -494,6 +533,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 13,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 7
     },
     {
@@ -505,6 +545,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 19,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 9
     },
     {
@@ -516,6 +557,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 27,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 10
     },
     {
@@ -527,6 +569,7 @@ $scope.weaponSets = [{
       specialCost: 170,
       level: 30,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 5
     },
     {
@@ -538,6 +581,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 9,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 5
     },
     {
@@ -549,6 +593,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 15,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 5,
       unreleased: true
     },
@@ -561,6 +606,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 24,
       inkSaver: "High",
+      speedLevel: "Middle",
       inkPerShot: 9,
       unreleased: true
     },
@@ -573,6 +619,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 30,
       inkSaver: "Middle",
+      speedLevel: "High",
       inkPerShot: 5,
       unreleased: true
     },
@@ -585,6 +632,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 16,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 7,
       unreleased: true
     }
@@ -602,6 +650,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 5,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 7
     },
     {
@@ -613,6 +662,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 15,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 6
     },
     {
@@ -624,6 +674,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 8,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 7,
       unreleased: true
     },
@@ -636,6 +687,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 17,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 6,
       unreleased: true
     }
@@ -653,6 +705,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 3,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 18
     },
     {
@@ -664,6 +717,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 8,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 22.5
     },
     {
@@ -675,6 +729,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 15,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 18
     },
     {
@@ -686,6 +741,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 16,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 18
     },
     {
@@ -697,8 +753,8 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 20,
       inkSaver: "High",
+      speedLevel: "Low",
       inkPerShot: 25,
-      swimPenalty: true
     },
     {
       name: "Goo Tuber",
@@ -709,6 +765,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 22,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 15
     },
     {
@@ -720,6 +777,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 23,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 15
     },
     {
@@ -731,6 +789,7 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 25,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 18
     },
     {
@@ -742,8 +801,8 @@ $scope.weaponSets = [{
       specialCost: 190,
       level: 30,
       inkSaver: "High",
+      speedLevel: "Low",
       inkPerShot: 25,
-      swimPenalty: true
     },
     {
       name: "Heavy Splatling Deco",
@@ -754,6 +813,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 12,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 22.5,
       unreleased: true
     },
@@ -766,6 +826,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 26,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 15,
       unreleased: true
     },
@@ -778,6 +839,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 26,
       inkSaver: "Middle",
+      speedLevel: "Low",
       inkPerShot: 25,
       unreleased: true
     },
@@ -790,6 +852,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 28,
       inkSaver: "Middle",
+      speedLevel: "Middle",
       inkPerShot: 15,
       unreleased: true
     },
@@ -802,6 +865,7 @@ $scope.weaponSets = [{
       specialCost: 180,
       level: 30,
       inkSaver: "High",
+      speedLevel: "Low",
       inkPerShot: 25,
       unreleased: true
     },

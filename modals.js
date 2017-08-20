@@ -45,11 +45,33 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="row">
                   <div class="col-md-4">
                   <img fallback-img ng-src="{{selectedGear.image}}" /><br>
-                  {{selectedGear.name}}
+                  {{selectedGear.name}}<br>
+                  Main: {{selectedGear.main}}<br>
+                  Brand: {{selectedGear.brand}}<br>
+                  Likely: X<br>
+                  Unlikely: Y
                   </div>
                   <div class="col-md-8">
-                  <div style="height:150px; overflow-y:scroll">
-                    <img ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,loadout.head.main.name).primary" fallback-img ng-src="{{item.image}}" style="height:65px"/><img ng-repeat="item in filterByMain(set,loadout.head.main.name).secondary" fallback-img ng-src="{{item.image}}" style="height:65px; background:rgba(255,0,0,0.3)"/>
+                  <div style="height:250px; overflow-y:scroll">
+                  <div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).primary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                    <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto"/>
+                    <span style="position:absolute; left:0px; bottom:0px;">
+                      <img src="img/brands/B00.png" style="width:28px; height:auto; border-radius: 50%;"/>
+                    </span>
+                    <span style="position:absolute; right:0px; top:4px;">
+                      <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                    </span>
+                  </div><div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                                    <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto; background:rgba(255,0,0,0.2)"/>
+                                    <span style="position:absolute; left:0px; bottom:0px;">
+                                      <img src="img/brands/B00.png" style="width:28px; height:auto; border-radius: 50%;"/>
+                                    </span>
+                                    <span style="position:absolute; right:0px; top:4px;">
+                                      <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                    </span>
+                                    </div>
+
+
                   </div>
                   </div>
                   </div>
@@ -96,7 +118,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     });
   };
 
-  $scope.openGearPicker = function(size) {
+  $scope.openHatPicker = function(size) {
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       template: templates["gearPicker"],
@@ -104,11 +126,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       controller: 'GearPickerCtrl',
       size: size,
       resolve: {
-        loadout: function() {
-          return $scope.loadout
+        slot: function() {
+          return $scope.loadout.head
         },
         getGearByName: function() {
           return $scope.getGearByName
+        },
+        getSkillByName: function() {
+          return $scope.getSkillByName
         },
         set: function() {
           return $scope.hats
@@ -128,6 +153,40 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $log.info('Gear picker cancelled');
     });
   };
+
+  $scope.openClothesPicker = function(size) {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["gearPicker"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'GearPickerCtrl',
+      size: size,
+      resolve: {
+        slot: function() {
+          return $scope.loadout.clothes
+        },
+        getGearByName: function() {
+          return $scope.getGearByName
+        },
+        set: function() {
+          return $scope.clothes
+        },
+        filterByMain: function() {
+          return $scope.filterByMain
+        },
+        selectedGear: function() {
+          return $scope.loadout.clothes.equipped
+        }
+      }
+    });
+
+    modalInstance.result.then(function(results) {
+      $scope.loadout.head.equipped = results.selected
+    }, function() {
+      $log.info('Gear picker cancelled');
+    });
+  };
+
 
   $scope.toggleAnimation = function() {
     $scope.animationsEnabled = !$scope.animationsEnabled;
@@ -168,11 +227,12 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, loadout, set, filterByMain, selectedGear) {
-  $scope.loadout = loadout
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, slot, set, filterByMain, selectedGear, getSkillByName) {
+  $scope.slot = slot
   $scope.set = set
   $scope.filterByMain = filterByMain
   $scope.selectedGear = selectedGear
+  $scope.getSkillByName = getSkillByName
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;
