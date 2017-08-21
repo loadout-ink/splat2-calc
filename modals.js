@@ -44,7 +44,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   </div>
                   <div class="row">
                   <div class="col-md-4" style="font-family:Splatfont" align="center">
-                  <img fallback-img ng-src="{{selectedGear.image}}" /><br>
+                  <div class="row">
+                  <div class="col-md-12 col-sm-6">
+                  <img fallback-img ng-src="{{selectedGear.image}}" />
+                  </div>
+                  <div class="col-md-12 col-sm-6">
                   <span style="font-size: 14pt">{{selectedGear.name}}</span><br>
                   <img ng-src="{{getSkillByName(selectedGear.main).image}}" style="width:28px; height:auto"/>  {{selectedGear.main}}<br>
                   <img ng-src="{{brands[selectedGear.brand].image}}" style="width:28px; height:auto"/> {{selectedGear.brand}}<br>
@@ -52,6 +56,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   + {{brands[selectedGear.brand].common}}<br>
                   - {{brands[selectedGear.brand].uncommon}}
                   </span>
+                  </div>
+                  </div>
                   </div>
                   <div class="col-md-8">
                   <div style="height:250px; overflow-y:scroll">
@@ -176,6 +182,10 @@ $scope.openGearPicker = function(gear, equipped, slot) {
       }
     });
         modalInstance.result.then(function(results) {
+          eval("$scope.loadout." + slot + ".equipped = results.selected")
+          if(eval("$scope.loadout." + slot + ".main") == null) {
+            eval(("$scope.loadout." + slot + ".main = $scope.getSkillByName('" + results.selected.main + "')"))
+          }
           eval("$scope.loadout." + slot + ".equipped = results.selected")
         }, function() {
           $log.info('Gear picker cancelled');
