@@ -20,10 +20,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                 </div>
               <div class="col-xs-7" align="center">
                 <img fallback-img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
-                <img fallback-img ng-src="img/subspe/Wsp_Jetpack.png" uib-tooltip="{{selectedWeapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
+                <img fallback-img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
                 <br>
                 <span class="splatfont-white">{{selectedWeapon.specialCost}}p</span><br>
-                  more stats blah blah
               </div>
             </div>
               <div class="row">
@@ -36,6 +35,51 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
             </div>
           </div>
         </div>`,
+        weaponPickerNew : `
+        <div class="row">
+                <div class="col-md-12">
+                  <div class="weapon neonstripes">
+                  <div class="row cardheader">
+                    Weapon Picker
+                  </div>
+                  <div class="row">
+                  <div class="col-md-4" style="font-family:Splatfont" align="center">
+                  <div class="row">
+                  <div class="col-md-12 col-sm-6">
+                  <img fallback-img ng-src="{{selectedWeapon.image}}" />
+                  </div>
+                  <div class="col-md-12 col-sm-6">
+                  <span style="font-size: 14pt">{{selectedWeapon.name}}</span><br>
+                  Stats
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col-md-8">
+                  <div class="row">
+                  <div class="col-md-12">
+                  <select class="form-control dropdown-toggle" data-ng-options="x.type for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+                  </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="row">
+                  <div style="height:230px; overflow-y:scroll">
+                  <img ng-repeat="weapon in availableWeapons()" ng-src="{{weapon.image}}" ng-click="selectWeapon(weapon)" style="width:80px;height:auto"/>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <button class="btn" type="button" ng-click="ok()">OK</button>
+                    </div>
+                    <div class="col-xs-6">
+                    <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        `,
         gearPicker : `<div class="row">
                 <div class="col-md-12">
                   <div class="weapon neonstripes">
@@ -125,7 +169,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
   $scope.openWeaponPicker = function(size) {
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
-      template: templates["weaponPicker"],
+      template: templates["weaponPickerNew"],
       windowTemplateUrl: 'blankModal.html',
       controller: 'WeaponPickerCtrl',
       size: size,
@@ -141,6 +185,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
         },
         selectedWeapon: function() {
           return $scope.loadout.weapon;
+        },
+        getSubByName: function() {
+          return $scope.getSubByName;
+        },
+        getSpecialByName: function() {
+          return $scope.getSpecialByName
         }
       }
     });
@@ -191,108 +241,35 @@ $scope.openGearPicker = function(gear, equipped, slot) {
           $log.info('Gear picker cancelled');
         });
       };
-
-
-  $scope.openHatPicker = function(size) {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["gearPicker"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'GearPickerCtrl',
-      size: size,
-      resolve: {
-        slot: function() {
-          return $scope.loadout.head
-        },
-        getGearByName: function() {
-          return $scope.getGearByName
-        },
-        getSkillByName: function() {
-          return $scope.getSkillByName
-        },
-        set: function() {
-          return $scope.hats
-        },
-        brands: function() {
-          return $scope.brands
-        },
-        filterByMain: function() {
-          return $scope.filterByMain
-        },
-        selectedGear: function() {
-          return $scope.loadout.head.equipped
-        }
-      }
-    });
-
-    modalInstance.result.then(function(results) {
-      $scope.loadout.head.equipped = results.selected
-    }, function() {
-      $log.info('Gear picker cancelled');
-    });
-  };
-
-  $scope.openClothesPicker = function(size) {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["gearPicker"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'GearPickerCtrl',
-      size: size,
-      resolve: {
-        slot: function() {
-          return $scope.loadout.clothes
-        },
-        getGearByName: function() {
-          return $scope.getGearByName
-        },
-        set: function() {
-          return $scope.clothes
-        },
-        filterByMain: function() {
-          return $scope.filterByMain
-        },
-        selectedGear: function() {
-          return $scope.loadout.clothes.equipped
-        }
-      }
-    });
-
-    modalInstance.result.then(function(results) {
-      $scope.loadout.head.equipped = results.selected
-    }, function() {
-      $log.info('Gear picker cancelled');
-    });
-  };
-
-
-  $scope.toggleAnimation = function() {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
-
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, weaponSets, subs, selectedSet, selectedWeapon) {
+angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
 
   $scope.switchSet = function() {
-    this.selectedWeapon = this.availableWeapons()[0];
+    $scope.selectedWeapon = this.availableWeapons()[0];
+  }
+
+  $scope.selectWeapon = function(item) {
+    $scope.selectedWeapon=item;
   }
 
   $scope.availableWeapons = function() {
     return this.selectedSet.weapons.filter(filter_available)
   }
 
-  $scope.getSubByName = function(name) {
-      return subs.filter(function(sub) {
-        return sub.name == name;
-      })[0]
-  }
+  $scope.getSubByName = getSubByName
 
   $scope.getSubIcon = function(name) {
     return $scope.getSubByName(name).image;
+  }
+
+  $scope.getSpecialByName = getSpecialByName
+
+  $scope.getSpecialIcon = function(name) {
+    return $scope.getSpecialByName(name).image;
   }
 
   $scope.ok = function() {
