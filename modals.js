@@ -48,8 +48,6 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-12 col-sm-6">
                   <img fallback-img ng-src="{{selectedWeapon.image}}" />
                   </div>
-                  </div>
-                  <div class="row">
                   <div class="col-md-12 col-sm-6">
                   <div style=" height:3.2em; line-height:1.5em;">
                   <span style="font-size: 14pt;">{{selectedWeapon.name}}</span></div>
