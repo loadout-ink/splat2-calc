@@ -30,6 +30,10 @@ body {
   height:100px;
 }
 
+.notEligible {
+  background: rgba(255,0,0,0.5)
+}
+
 .abilityicon {
   border-radius: 50%;
   width:56px;

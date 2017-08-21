@@ -79,16 +79,19 @@
             <div class="row">
               <div class="col-md-4 col-sm-4 gear redstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openHatPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" class="glyphicon glyphicon-pencil edit-button "></span>
                 Head
               </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding"  align="center">
                     <div class="gearWrapper" style="position:relative">
-                      <img ng-controller="ModalCtrl" ng-click="openHatPicker()" fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
-                      <span style="position:absolute; right:0px; bottom:0px;">
-                        <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?true:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                      <img fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
+                      <span style="position:absolute;left:16px;top:0px;">
+                        <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)" />
                       </span>
+                      <span style="position:absolute; right:0px; bottom:0px;">
+                      <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?true:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                    </span>
                     </div>
                   </div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
@@ -101,11 +104,21 @@
               </div>
               <div class="col-md-4 col-sm-4 gear tealstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" class="glyphicon glyphicon-pencil edit-button "></span>
                 Clothes
               </div>
                 <div class="row">
-                  <div class="col-md-6 col-xs-6 nopadding" align="center"><img fallback-img class="gearicon " ng-src="./img/gear/Clt_PRK005.png"></div>
+                  <div class="col-md-6 col-xs-6 nopadding"  align="center">
+                  <div class="gearWrapper" style="position:relative" align="center">
+                    <img fallback-img class="gearicon" ng-src="{{loadout.clothes.equipped.image}}" />
+                      <span style="position:absolute;left:16px;top:0px;">
+                        <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)" />
+                      </span>
+                      <span style="position:absolute; right:0px; bottom:0px;">
+                      <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?true:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                    </span>
+                  </div>
+                </div>
                   <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
                 </div>
                 <div class="row">
@@ -115,20 +128,29 @@
                 </div>
               </div>
               <div class="col-md-4 col-sm-4 gear orangestripes">
-              <div class="row cardheader">
-                <span ng-controller="ModalCtrl" class="glyphicon glyphicon-pencil edit-button "></span>
-                Shoes
-              </div>
-                <div class="row">
-                  <div class="col-md-6 col-xs-6 nopadding" align="center"><img fallback-img class="gearicon " ng-src="./img/gear/Shs_SHI004.png" /></div>
-                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}"  style="background-image:url({{loadout.shoes.getmainIcon()}})"></div>
+                <div class="row cardheader">
+                  <span ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" class="glyphicon glyphicon-pencil edit-button "></span>
+                  Shoes
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})">></div></div>
-                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
-                <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
-              </div>
+                  <div class="row">
+                    <div class="col-md-6 col-xs-6 nopadding"  align="center">
+                      <div class="gearWrapper" style="position:relative">
+                        <img fallback-img class="gearicon" ng-src="{{loadout.shoes.equipped.image}}" />
+                        <span style="position:absolute;left:16px;top:0px;">
+                          <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)" />
+                        </span>
+                        <span style="position:absolute; right:0px; bottom:0px;">
+                        <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?true:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                      </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.shoes.getmainIcon()}})"></div></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})"></div></div>
+                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
+                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
+                  </div>
             </div>
           </div>
         </div>

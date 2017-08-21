@@ -24,5 +24,7 @@ angular
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[1];
     $scope.loadout.head.equipped = $scope.hats[0]
+    $scope.loadout.clothes.equipped = $scope.clothes[0]
+    $scope.loadout.shoes.equipped = $scope.shoes[0]
 
   }])

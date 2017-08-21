@@ -61,10 +61,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                     <span style="position:absolute; right:0px; top:4px;">
                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                     </span>
-                  </div><div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                  </div>
+                  <div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
                                     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
                                     <span style="position:absolute; left:0px; bottom:0px;">
-                                      <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;/>
+                                      <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
                                     </span>
                                     <span style="position:absolute; right:0px; top:4px;">
                                       <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
@@ -73,7 +74,30 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                                       <img src="img/misc/annie.png" style="width:24px;" />
                                     </span>
                                     </div>
-
+                        <div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                                          <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
+                                          <span style="position:absolute; left:0px; bottom:0px;">
+                                            <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
+                                          </span>
+                                          <span style="position:absolute; right:0px; top:4px;">
+                                            <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                          </span>
+                                          <span style="position:absolute; right:0px; bottom:4px;">
+                                            <img src="img/misc/annie.png" style="width:24px;" />
+                                          </span>
+                                          </div>
+                                          <div ng-repeat="item in filterByMain(set,slot.main.name).notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                                                            <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
+                                                            <span style="position:absolute; left:0px; bottom:0px;">
+                                                              <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
+                                                            </span>
+                                                            <span style="position:absolute; right:0px; top:4px;">
+                                                              <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                                            </span>
+                                                            <span style="position:absolute;left:10px;top:10px;" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true">
+                                                              <img src="img/ui/notPossible.png" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)" />
+                                                            </span>
+                                                            </div>
 
                   </div>
                   </div>
@@ -120,6 +144,42 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $log.info('Weapon picker cancelled');
     });
   };
+
+$scope.openGearPicker = function(gear, equipped, slot) {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["gearPicker"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'GearPickerCtrl',
+      resolve: {
+        slot: function() {
+          return eval("$scope.loadout." + slot)
+        //  return $scope.loadout.head
+        },
+        getSkillByName: function() {
+          return $scope.getSkillByName
+        },
+        set: function() {
+          return gear
+        },
+        brands: function() {
+          return $scope.brands
+        },
+        filterByMain: function() {
+          return $scope.filterByMain
+        },
+        selectedGear: function() {
+          return equipped
+        }
+      }
+    });
+        modalInstance.result.then(function(results) {
+          eval("$scope.loadout." + slot + ".equipped = results.selected")
+        }, function() {
+          $log.info('Gear picker cancelled');
+        });
+      };
+
 
   $scope.openHatPicker = function(size) {
     var modalInstance = $uibModal.open({
