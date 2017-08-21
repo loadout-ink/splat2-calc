@@ -46,10 +46,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-4" style="font-family:Splatfont" align="center">
                   <img fallback-img ng-src="{{selectedGear.image}}" /><br>
                   <span style="font-size: 14pt">{{selectedGear.name}}</span><br>
-                  <img ng-src="{{brands[selectedGear.brand].image}}" style="width:28px; height:auto"/> {{selectedGear.brand}}<br>
                   <img ng-src="{{getSkillByName(selectedGear.main).image}}" style="width:28px; height:auto"/>  {{selectedGear.main}}<br>
+                  <img ng-src="{{brands[selectedGear.brand].image}}" style="width:28px; height:auto"/> {{selectedGear.brand}}<br>
+                  <span ng-if="brands[selectedGear.brand].common">
                   + {{brands[selectedGear.brand].common}}<br>
                   - {{brands[selectedGear.brand].uncommon}}
+                  </span>
                   </div>
                   <div class="col-md-8">
                   <div style="height:250px; overflow-y:scroll">
@@ -83,7 +85,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                                             <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                                           </span>
                                           <span style="position:absolute; right:0px; bottom:4px;">
-                                            <img src="img/misc/annie.png" style="width:24px;" />
+                                            <img ng-if="item.brand!='Grizzco'" src="img/misc/annie.png" style="width:24px;" />
                                           </span>
                                           </div>
                                           <div ng-repeat="item in filterByMain(set,slot.main.name).notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
