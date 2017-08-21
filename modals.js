@@ -48,9 +48,27 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-12 col-sm-6">
                   <img fallback-img ng-src="{{selectedWeapon.image}}" />
                   </div>
+                  </div>
+                  <div class="row">
                   <div class="col-md-12 col-sm-6">
-                  <span style="font-size: 14pt">{{selectedWeapon.name}}</span><br>
-                  Stats
+                  <div style=" height:3.2em; line-height:1.5em;">
+                  <span style="font-size: 14pt;">{{selectedWeapon.name}}</span></div>
+                  <div class="row">
+                  <div class="col-md-12">
+                  <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-append-to-body="true"  class="subspeicon" />
+                  <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-append-to-body="true" class="subspeicon" />
+                  </div>
+                  </div>
+                  <div class="col-md-12" style="background:rgba(0,0,0,0.6); border:3px solid rgba(0,0,0,0); border-radius:6px; margin-top:4px">
+                  <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
+                  <div class="col-xs-6 nopadding" style="text-align:right; vertical-align: middle; color:#fff; font-size:9pt; padding-right:4px !important">
+                  {{stat}}
+                  </div>
+                  <div class="col-xs-6 nopadding">
+                  <uib-progressbar max="100" type="test" value="value" class="statbar mini" />
+                  </div>
+                  </div>
+                  </div>
                   </div>
                   </div>
                   </div>
@@ -62,7 +80,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   </div>
                   <div class="col-md-12">
                   <div class="row">
-                  <div style="height:230px; overflow-y:scroll">
+                  <div style="height:250px; overflow-y:scroll">
                   <img ng-repeat="weapon in availableWeapons()" ng-src="{{weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{weapon.name}}" tooltip-append-to-body="true" style="width:80px;height:auto"/>
                   </div>
                   </div>

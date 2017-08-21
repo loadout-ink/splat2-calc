@@ -93,11 +93,23 @@ font-family: "Splatfont";
   color: #fff;
 }
 
+.subspeicon {
+  background:rgba(0,0,0,0.5);
+  border-radius:8px;
+  height:48px
+}
+
 .statbar {
   font-family: "Splatfont";
   color:black;
   margin:0px !important;
   background: #000 !important;
+}
+
+.statbar.mini {
+  margin-top: 3px !important;
+  border-radius: 0px;
+  height:15px;
 }
 
 .progress-bar-test {
