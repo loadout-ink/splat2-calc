@@ -38,7 +38,12 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Inkjet",
       image: "img/subspe/Wsp_Jetpack.png",
-      duration: 8
+      duration: 8,
+      damage: {
+        "Direct": 120,
+        "Near": 50,
+        "Far": 30
+      }
     },
     {
       name: "Sting Ray",
