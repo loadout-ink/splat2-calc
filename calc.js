@@ -22,9 +22,51 @@ angular
     }
 
     $scope.selectedSet = $scope.weaponSets[0];
-    $scope.loadout.weapon = $scope.availableWeapons()[1];
+    $scope.loadout.weapon = $scope.availableWeapons()[0];
     $scope.loadout.head.equipped = $scope.hats[0]
     $scope.loadout.clothes.equipped = $scope.clothes[0]
     $scope.loadout.shoes.equipped = $scope.shoes[0]
+
+    $scope.encode = function() {
+      return encode($scope.selectedSet.id,$scope.loadout)
+    }
+
+    $scope.loadCode = function(code) {
+      var newLoadout = new Loadout();
+      var results = decode(code)
+      if(results) {
+      $scope.selectedSet = $scope.getWeaponSetById(results.set)
+      newLoadout.weapon = $scope.getWeaponById(results.set,results.weapon)
+      newLoadout.head.equipped = $scope.getHatById(results.head.gear)
+      newLoadout.clothes.equipped = $scope.getClothesById(results.clothes.gear)
+      newLoadout.shoes.equipped = $scope.getShoesById(results.shoes.gear)
+      newLoadout.head.main = $scope.getSkillById(results.head.main)
+      for(var i=0; i<3; i++) {
+        newLoadout.head.subs[i] = $scope.getSkillById(results.head.subs[i])
+      }
+      newLoadout.clothes.main = $scope.getSkillById(results.clothes.main)
+      for(var i=0; i<3; i++) {
+        newLoadout.clothes.subs[i] = $scope.getSkillById(results.clothes.subs[i])
+      }
+      newLoadout.shoes.main = $scope.getSkillById(results.shoes.main)
+      for(var i=0; i<3; i++) {
+        newLoadout.shoes.subs[i] = $scope.getSkillById(results.shoes.subs[i])
+      }
+
+      return newLoadout
+    }
+      return false;
+    }
+
+    $scope.copyLink = function() {
+      window.prompt("Copy to Clipboard", window.location.href + "#" + $scope.encode())
+    }
+
+        if(window.location.hash) {
+          var newLoadout = $scope.loadCode(window.location.hash.replace('#',''))
+          if(newLoadout) {
+            $scope.loadout = newLoadout
+          }
+        }
 
   }])

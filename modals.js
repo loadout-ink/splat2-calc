@@ -200,8 +200,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     });
 
     modalInstance.result.then(function(results) {
-      $scope.selectedSet=results.set;
-      $scope.loadout.weapon=results.weapon;
+      $scope.$parent.selectedSet=results.set; // ???
+      $scope.$parent.loadout.weapon=results.weapon;
     }, function() {
       $log.info('Weapon picker cancelled');
     });

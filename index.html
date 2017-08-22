@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
 
 
-  <script src="./loadout.js"></script>
   <script src="./calc.js"></script>
+  <script src="./loadout.js"></script>
+  <script src="./encode.js"></script>
   <link rel="stylesheet" href="./calc.css">
   <script src="./skills.js"></script>
   <script src="./weapons.js"></script>
@@ -69,6 +70,7 @@
               </div>
               <div class="col-sm-6">
                 <button ng-click="loadout.clearAll()">Clear Abilities</button>
+                  <button ng-click="copyLink()">Share</button>
               </div>
             </div>
           </div>
