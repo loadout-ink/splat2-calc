@@ -59,14 +59,14 @@ angular
     }
 
     $scope.copyLink = function() {
-      window.prompt("Copy to Clipboard", window.location.href + "#" + $scope.encode())
+      window.prompt("Copy to Clipboard", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encode())
     }
 
-        if(window.location.hash) {
-          var newLoadout = $scope.loadCode(window.location.hash.replace('#',''))
-          if(newLoadout) {
-            $scope.loadout = newLoadout
-          }
-        }
+    if(window.location.hash) {
+      var newLoadout = $scope.loadCode(window.location.hash.replace('#',''))
+      if(newLoadout) {
+        $scope.loadout = newLoadout
+      }
+    }
 
   }])

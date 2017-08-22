@@ -56,12 +56,17 @@ function decode(code) {
         console.log("invalid code")
         return false;
     }
-    var weaponset = parseInt(code[1])
-    var weaponid = parseInt(code.substring(2, 4), 16)
-    var head = decodeGear(code.substring(4,11))
-    var clothes = decodeGear(code.substring(11,18))
-    var shoes = decodeGear(code.substring(18,25))
-
+    try {
+      var weaponset = parseInt(code[1])
+      var weaponid = parseInt(code.substring(2, 4), 16)
+      var head = decodeGear(code.substring(4,11))
+      var clothes = decodeGear(code.substring(11,18))
+      var shoes = decodeGear(code.substring(18,25))
+    }
+    catch(err) {
+      console.log("Invalid code: " + err.message)
+      return false;
+    }
     return {set: weaponset, weapon: weaponid, head: head, clothes: clothes, shoes: shoes};
 }
 
