@@ -503,7 +503,7 @@ angular.module('splatApp').weapons = function ($scope) {
           sub: "Burst Bomb",
           special: "Tenta Missiles",
           level: 4,
-          specialCost: 170,
+          specialCost: 200,
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
@@ -521,7 +521,7 @@ angular.module('splatApp').weapons = function ($scope) {
           sub: "Burst Bomb",
           special: "Tenta Missiles",
           level: 4,
-          specialCost: 170,
+          specialCost: 200,
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
@@ -704,7 +704,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 3,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 10,
+          inkPerShot: 9,
           speedLevel: "Middle",
           price: 1800,
           stats: {
@@ -722,7 +722,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 3,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 10,
+          inkPerShot: 9,
           speedLevel: "Middle",
           price: 2300,
           stats: {
@@ -776,7 +776,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 7,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 6,
+          inkPerShot: 4.5,
           speedLevel: "High",
           price: 6200,
           stats: {
@@ -830,7 +830,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 10,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 6,
+          inkPerShot: 4.5,
           speedLevel: "High",
           price: 8500,
           stats: {
@@ -848,7 +848,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 12,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 10,
+          inkPerShot: 9,
           speedLevel: "Middle",
           price: 9200,
           stats: {
