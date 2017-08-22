@@ -1157,7 +1157,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 30,
           specialCost: 170,
           inkSaver: "Middle",
-          inkPerShot: 5,
+          inkPerShot: 4,
           speedLevel: "High",
           price: 18200,
           stats: {
@@ -1175,7 +1175,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 30,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 5,
+          inkPerShot: 4,
           speedLevel: "High",
           price: 20500,
           stats: {
