@@ -1,5 +1,5 @@
 angular
-  .module('splatApp', ['ui.bootstrap', 'ngAnimate'])
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'imagesLoaded'])
   .controller('splatController', ['$scope', function splatCtrl($scope, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
@@ -20,7 +20,7 @@ angular
     $scope.availableWeapons = function() {
       return $scope.selectedSet.weapons.filter(filter_available)
     }
-
+    
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[0];
     $scope.loadout.head.equipped = $scope.hats[0]
