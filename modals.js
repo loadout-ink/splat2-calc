@@ -120,7 +120,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   </div>
                   </div>
                   <div class="col-md-8">
-                  <div data-images-loaded style="height:250px; overflow-y:scroll">
+                  <div data-images-loaded ng-show="loaded" style="height:250px; overflow-y:scroll">
                   <div ng-click="selectGear(item)"  ng-repeat="item in filterByMain(set,slot.main.name).primary" uib-tooltip="{{item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
                     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto"/>
                     <span style="position:absolute; left:0px; bottom:0px;">
@@ -294,7 +294,7 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibMod
   $scope.brands = brands
   $scope.loaded = false;
 
-  $scope.$on('SUCCESS', function() {
+  $scope.$on('ALWAYS', function() {
     console.log("Loaded")
     $scope.loaded = true;
   });
