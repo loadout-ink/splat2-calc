@@ -28,7 +28,7 @@ angular
     $scope.loadout.shoes.equipped = $scope.shoes[0]
 
      $scope.$watch('loadout', function() {
-       history.replaceState(undefined, undefined, "#" + $scope.encode())
+       history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
      },true);
 
     $scope.encodeLoadout = function() {
