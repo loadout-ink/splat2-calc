@@ -10,7 +10,7 @@ angular
     angular.module('splatApp').specials($scope);
     angular.module('splatApp').gear($scope);
     $scope.loadout = new Loadout();
-
+    new Clipboard('#copybtn');
     $scope.status = {}
 
     $scope.switchSet = function() {
@@ -27,7 +27,11 @@ angular
     $scope.loadout.clothes.equipped = $scope.clothes[0]
     $scope.loadout.shoes.equipped = $scope.shoes[0]
 
-    $scope.encode = function() {
+    // $scope.$watch('loadout', function() {
+    //   history.replaceState(undefined, undefined, "#" + $scope.encode())
+    // },true);
+
+    $scope.encodeLoadout = function() {
       return encode($scope.selectedSet.id,$scope.loadout)
     }
 
@@ -58,8 +62,12 @@ angular
       return false;
     }
 
+    $scope.encodedURL = function() {
+      return window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout()
+    }
+
     $scope.copyLink = function() {
-      window.prompt("Copy to Clipboard", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encode())
+      window.prompt("Copy to Clipboard", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
     }
 
     if(window.location.hash) {
@@ -67,6 +75,7 @@ angular
       if(newLoadout) {
         $scope.loadout = newLoadout
       }
+      history.pushState('', '', window.location.pathname);
     }
 
   }])

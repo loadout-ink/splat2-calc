@@ -9,7 +9,7 @@
   <script src="lib/jquery-ui-custom/jquery-ui.js"></script>
   <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
   <script src="./calc.js"></script>
   <script src="./loadout.js"></script>
@@ -68,9 +68,14 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <button ng-click="loadout.clearAll()">Clear Abilities</button>
-                  <button ng-click="copyLink()">Share</button>
+              <div class="col-sm-6 nopadding">
+                  <div class="input-group">
+                    <input type="text" id="url" class="form-control" value="{{encodedURL()}}" readonly>
+                    <span  class="input-group-btn" >
+                  <button id="copybtn" class="btn" data-clipboard-target="#url" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="'click mouseleave'"><span class="glyphicon glyphicon-copy"></span></button>
+                </span>
+                </div>
+                  <button ng-click="loadout.clearAll()">Clear Abilities</button>
               </div>
             </div>
           </div>
