@@ -72,7 +72,7 @@
                   <div class="input-group">
                     <input type="text" id="url" class="form-control" value="{{encodedURL()}}" readonly>
                     <span  class="input-group-btn" >
-                  <button id="copybtn" class="btn" data-clipboard-target="#url" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="'click mouseleave'"><span class="glyphicon glyphicon-copy"></span></button>
+                  <button id="copybtn" class="btn" data-clipboard-target="#url" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="{'click':'mouseleave'}"><span class="glyphicon glyphicon-copy"></span></button>
                 </span>
                 </div>
                   <button ng-click="loadout.clearAll()">Clear Abilities</button>

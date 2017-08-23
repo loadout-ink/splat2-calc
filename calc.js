@@ -27,9 +27,9 @@ angular
     $scope.loadout.clothes.equipped = $scope.clothes[0]
     $scope.loadout.shoes.equipped = $scope.shoes[0]
 
-    // $scope.$watch('loadout', function() {
-    //   history.replaceState(undefined, undefined, "#" + $scope.encode())
-    // },true);
+     $scope.$watch('loadout', function() {
+       history.replaceState(undefined, undefined, "#" + $scope.encode())
+     },true);
 
     $scope.encodeLoadout = function() {
       return encode($scope.selectedSet.id,$scope.loadout)
@@ -75,7 +75,6 @@ angular
       if(newLoadout) {
         $scope.loadout = newLoadout
       }
-      history.pushState('', '', window.location.pathname);
     }
 
   }])
