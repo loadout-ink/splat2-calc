@@ -89,21 +89,32 @@ $scope.stats = {
       this.desc = ("No formulas available for some subs. Possibly inaccurate.")
       return (range * 100).toFixed(1);
     }, 150, '%'),
-    "Bomb Damage Taken": new Stat("Bomb Damage Taken", function(loadout) {
+    "Bomb Damage Taken": new Stat("Bomb Damage Taken *", function(loadout) {
       var defScore = loadout.calcAbilityScore("Bomb Defense Up");
       var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
       this.desc = ("Possibly inaccurate.")
       return (damageTaken * 100).toFixed(1);
     }, 100, '%'),
-    "Super Jump Time": new Stat("Super Jump Time", function(loadout) {
+    "Super Jump Time (Squid)": new Stat("Super Jump Time (Squid)", function(loadout) {
       var abilityScore = loadout.calcAbilityScore("Quick Super Jump");
-      var jumpReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60
-      var prepPhase = 20 + 60 * (1 - jumpReduction)
-      var mainPhase = 130 * (1 - jumpReduction)
-      var actionPhase = 30
-      this.desc = ("Splatoon 1 data. Possibly inaccurate.")
-      return ((prepPhase + mainPhase + actionPhase + (loadout.hasAbility("Stealth Jump")?50:0)) / 60).toFixed(2);
-    }, 4.8, 's'),
+      var windup = 71
+      var airtime = 108
+      var action = 30
+      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))
+      var windupFrames = 10 +(windup * (1 - mod/45))
+      var mainFrames = action + (airtime * (1 - mod/78))
+      return ((windupFrames + mainFrames) / 60).toFixed(2);
+    }, 3.65, 's'),
+    "Super Jump Time (Kid)": new Stat("Super Jump Time (Kid)", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore("Quick Super Jump");
+      var windup = 92
+      var airtime = 108
+      var action = 30
+      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))
+      var windupFrames = 10 +(windup * (1 - mod/45))
+      var mainFrames = action + (airtime * (1 - mod/78))
+      return ((windupFrames + mainFrames) / 60).toFixed(2);
+    }, 4, 's'),
     "Tracking Time": new Stat("Tracking Time", function(loadout) {
       var abilityScore = loadout.calcAbilityScore("Cold-Blooded");
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40

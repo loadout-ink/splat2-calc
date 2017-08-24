@@ -173,7 +173,6 @@ font-family: "Splatfont";
 }
 
 .gear{
-  background:#00ff00;
   border-radius: 25px;
   border: solid 4px #eee;
   padding: 3px;
@@ -196,7 +195,6 @@ font-family: "Splatfont";
 }
 
 .weapon {
-  background:#00ff00;
   border-radius: 25px;
   padding:10px;
   padding-top:0px;
@@ -300,6 +298,17 @@ html {
   #444 60px
 );
 }
+
+.purplestripes {
+  background: repeating-linear-gradient(
+  45deg,
+  #842cd6,
+  #842cd6 30px,
+  #6b01bb 30px,
+  #6b01bb 60px
+);
+}
+
 .panel-stats {
   border: 0px !important;
 
