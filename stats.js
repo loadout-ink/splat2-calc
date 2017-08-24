@@ -46,6 +46,21 @@ $scope.stats = {
         this.desc = speed.toFixed(2) + " Distance Units/frame";
         return ((speed / 0.96) * 100).toFixed(1);
       }, 100, '%'),
+    "Run Speed (Firing)": new Stat("Run Speed (Firing)", function(loadout) {
+        var abilityScore = loadout.calcAbilityScore("Run Speed Up");
+        if(loadout.weapon.name.toLowerCase().indexOf("brush") != -1 || loadout.weapon.name.toLowerCase().indexOf("roller") != -1) {
+          this.name = "Run Speed (Rolling)"
+          this.desc = loadout.weapon.baseSpeed.toFixed(2) + " Distance Units/frame";
+          return ((loadout.weapon.baseSpeed / 0.96) * 100).toFixed(1);
+        }
+        else {
+          this.name = "Run Speed (Firing)"
+        }
+        var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
+        var speed = loadout.weapon.baseSpeed * (weaponRSU);
+        this.desc = speed.toFixed(2) + " Distance Units/frame";
+        return ((speed / 0.96) * 100).toFixed(1);
+      }, 150, '%'),
     "Ink Recovery Speed (Squid)": new Stat("Ink Recovery Speed (Squid)", function(loadout) {
       var abilityScore = loadout.calcAbilityScore("Ink Recovery Up");
       var seconds = 3 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (600 / 7))
@@ -83,6 +98,95 @@ $scope.stats = {
       this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + "p for special")
       return (chargeSpeed * 100).toFixed(1);
     }, 130, '%'),
+    "Special Saved": new Stat("Special Saved", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore("Special Saver");
+      var loss  = (0.5 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+      return (loss * 100).toFixed(1);
+    }, 100, '%'),
+//TODO: clean this up a bit
+    "Special Power": new Stat("Special Power", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore("Special Power Up");
+      var equippedSpecial = $scope.getSpecialByName(loadout.weapon.special)
+      var coeff = 0;
+      var base = 0;
+      var results = 0;
+      this.desc = null;
+      this.name = "Special Power (???)"
+      switch(equippedSpecial.name) {
+        case "Suction-Bomb Launcher":
+        case "Burst-Bomb Launcher":
+        case "Curling-Bomb Launcher":
+        case "Autobomb Launcher":
+        case "Splat-Bomb Launcher":
+          coeff = 90;
+          base = 360;
+          this.max = 8.1;
+          this.unit = 's'
+          this.name = 'Special Power (Duration)'
+          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          return results.toFixed(2);
+          break;
+        case "Ink Armor":
+          coeff = 60;
+          base = 360;
+          this.max = 9;
+          this.unit = 's'
+          this.name = 'Special Power (Duration)'
+          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          return results.toFixed(2);
+          break;
+        case "Inkjet":
+        case "Ink Storm":
+          coeff = 120;
+          base = 480;
+          this.max = 10;
+          this.unit = 's'
+          this.name = 'Special Power (Duration)'
+          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          return results.toFixed(2);
+          break;
+        case "Sting Ray":
+          coeff = 90;
+          base = 450;
+          this.max = 10;
+          this.unit = 's'
+          this.name = 'Special Power (Duration)'
+          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          return results.toFixed(2);
+          break;
+        case "Baller":
+          coeff = 30;
+          base = 300;
+          this.max = 600;
+          this.unit = ' HP'
+          this.name = 'Special Power (Baller HP)'
+          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))
+          return results.toFixed(1);
+          break;
+        case "Tenta Missiles":
+          coeff = 45;
+          base = 4.8;
+          this.max = 8;
+          this.unit = "%"
+          this.max = "166"
+          this.name = 'Special Power (Reticule Size)'
+          results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)*100
+          return results.toFixed(1);
+          break;
+        case "Splashdown":
+          coeff = 110;
+          base = 110;
+          this.max = 127.4;
+          this.unit = "%"
+          this.name = 'Special Power (Splash Diameter)'
+          results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
+          this.desc = (base*results).toFixed(1) + " Distance Units"
+          return (results*100).toFixed(1);
+          break;
+      }
+      return results;
+    }, 10, 's'),
+//TODO: get effects for all subs
     "Sub Power (Bomb Range)": new Stat("Sub Power (Bomb Range) *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore("Sub Power Up");
       var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
@@ -120,49 +224,7 @@ $scope.stats = {
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
       this.desc = ("Point sensor/ink mine duration")
       return (8 * (1 - trackReduction)).toFixed(2);
-    }, 8, 's'),
-    "Special Power (Duration)": new Stat("Special Power (Duration)", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore("Special Power Up");
-      var equippedSpecial = $scope.getSpecialByName(loadout.weapon.special)
-      var coeff = 0;
-      var base = 0;
-      switch(equippedSpecial.name) {
-        case "Suction-Bomb Launcher":
-        case "Burst-Bomb Launcher":
-        case "Curling-Bomb Launcher":
-        case "Autobomb Launcher":
-        case "Splat-Bomb Launcher":
-          coeff = (600/7);
-          base = 6;
-          this.max = 8.1;
-          break;
-        case "Ink Armor":
-          coeff = 80;
-          base = 8;
-          this.max = 11;
-          break;
-        case "Inkjet":
-        case "Ink Storm":
-          coeff = 120;
-          base = 8;
-          this.max = 10;
-          break;
-        case "Sting Ray":
-          coeff = 90;
-          base = 7.5;
-          this.max = 10;
-          break;
-      }
-      var increase = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
-      this.desc = null;
-      this.unit = 's'
-      if(base == 0) {
-        this.desc = ("Not applicable for " + equippedSpecial.name)
-        this.unit = ""
-        return "N/A"
-      }
-      return (base * (1 + increase)).toFixed(2);
-    }, 10, 's')
+    }, 8, 's')
   }
   $scope.getStatByName = function(name) {
     return $scope.stats[name]

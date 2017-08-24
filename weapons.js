@@ -19,6 +19,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.5,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 0,
           stats: {
             "Range": 35,
@@ -38,6 +39,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.5,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 1900,
           stats: {
             "Range": 35,
@@ -57,6 +59,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 900,
           stats: {
             "Range": 50,
@@ -76,6 +79,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 1500,
           stats: {
             "Range": 50,
@@ -95,6 +99,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 2100,
           stats: {
             "Range": 50,
@@ -114,6 +119,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 2,
           speedLevel: "Middle",
+          baseSpeed: 0.5,
           price: 13800,
           stats: {
             "Range": 70,
@@ -133,6 +139,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 2,
           speedLevel: "Middle",
+          baseSpeed: 0.5,
           price: 20800,
           stats: {
             "Range": 70,
@@ -152,6 +159,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.55,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 4900,
           stats: {
             "Range": 35,
@@ -171,6 +179,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.55,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 16900,
           stats: {
             "Range": 35,
@@ -190,6 +199,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
+          baseSpeed: 0.8,
           price: 7100,
           stats: {
             "Range": 50,
@@ -209,6 +219,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
+          baseSpeed: 0.8,
           price: 8800,
           stats: {
             "Range": 50,
@@ -228,6 +239,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 9700,
           stats: {
             "Range": 12,
@@ -247,6 +259,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 12200,
           stats: {
             "Range": 12,
@@ -266,6 +279,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 11200,
           stats: {
             "Range": 35,
@@ -285,6 +299,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
+          baseSpeed: 0.72,
           price: 16800,
           stats: {
             "Range": 35,
@@ -304,6 +319,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1.3,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 9500,
           stats: {
             "Range": 50,
@@ -323,6 +339,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1.3,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 12700,
           stats: {
             "Range": 50,
@@ -342,6 +359,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 2.5,
           speedLevel: "Middle",
+          baseSpeed: 0.4,
           price: 12600,
           stats: {
             "Range": 70,
@@ -361,6 +379,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 2.5,
           speedLevel: "Middle",
+          baseSpeed: 0.4,
           price: 16200,
           stats: {
             "Range": 70,
@@ -380,6 +399,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1.6,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 11300,
           stats: {
             "Range": 82,
@@ -399,6 +419,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1.6,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 15900,
           stats: {
             "Range": 82,
@@ -418,6 +439,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 10400,
           stats: {
             "Range": 62,
@@ -437,6 +459,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 12500,
           stats: {
             "Range": 62,
@@ -456,6 +479,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 1.8,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 17200,
           stats: {
             "Range": 70,
@@ -475,6 +499,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 1.8,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 18400,
           stats: {
             "Range": 70,
@@ -536,6 +561,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
+          baseSpeed: 0.8,
           price: 2400,
           stats: {
             "Range": 39,
@@ -555,6 +581,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
+          baseSpeed: 0.8,
           price: 3100,
           stats: {
             "Range": 39,
@@ -574,6 +601,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
+          baseSpeed: 0.8,
           price: 9000,
           stats: {
             "Range": 39,
@@ -593,6 +621,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 9800,
           stats: {
             "Range": 70,
@@ -612,6 +641,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 1,
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 12900,
           stats: {
             "Range": 70,
@@ -631,6 +661,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.9,
           speedLevel: "High",
+          baseSpeed: 0.8,
           price: 14700,
           stats: {
             "Range": 24,
@@ -650,6 +681,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.9,
           speedLevel: "High",
+          baseSpeed: 0.8,
           price: 17500,
           stats: {
             "Range": 24,
@@ -747,6 +779,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 9,
           speedLevel: "Middle",
+          baseSpeed: 1.08,
           price: 1800,
           stats: {
             "Range": 48,
@@ -766,6 +799,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 9,
           speedLevel: "Middle",
+          baseSpeed: 1.08,
           price: 2300,
           stats: {
             "Range": 48,
@@ -785,6 +819,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 9,
           speedLevel: "Middle",
+          baseSpeed: 1.08,
           price: 9200,
           stats: {
             "Range": 48,
@@ -804,6 +839,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 4.5,
           speedLevel: "High",
+          baseSpeed: 1.28,
           price: 6200,
           stats: {
             "Range": 20,
@@ -823,6 +859,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 4.5,
           speedLevel: "High",
+          baseSpeed: 1.28,
           price: 8500,
           stats: {
             "Range": 20,
@@ -842,6 +879,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 18,
           speedLevel: "Low",
+          baseSpeed: 0.88,
           price: 24500,
           stats: {
             "Range": 76,
@@ -861,6 +899,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 18,
           speedLevel: "Low",
+          baseSpeed: 0.88,
           price: 29000,
           stats: {
             "Range": 76,
@@ -880,6 +919,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 8,
           speedLevel: "Middle",
+          baseSpeed: 1.08,
           price: 15700,
           stats: {
             "Range": 55,
@@ -899,6 +939,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 8,
           speedLevel: "Middle",
+          baseSpeed: 1.08,
           price: 21300,
           stats: {
             "Range": 55,
@@ -924,6 +965,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 2,
           speedLevel: "High",
+          baseSpeed: 1.92,
           price: 2600,
           stats: {
             "Range": 5,
@@ -943,6 +985,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 2,
           speedLevel: "High",
+          baseSpeed: 1.92,
           price: 7000,
           stats: {
             "Range": 5,
@@ -962,6 +1005,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 3.2,
           speedLevel: "Middle",
+          baseSpeed: 1.68,
           price: 8200,
           stats: {
             "Range": 23,
@@ -981,6 +1025,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 3.2,
           speedLevel: "Middle",
+          baseSpeed: 1.68,
           price: 9400,
           stats: {
             "Range": 23,
@@ -1000,6 +1045,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 3.2,
           speedLevel: "Middle",
+          baseSpeed: 1.68,
           price: 9900,
           stats: {
             "Range": 23,
@@ -1025,6 +1071,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 10,
           speedLevel: "Middle",
+          baseSpeed: 0.45,
           price: 3000,
           stats: {
             "Range": 27,
@@ -1044,6 +1091,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 10,
           speedLevel: "Middle",
+          baseSpeed: 0.45,
           price: 3800,
           stats: {
             "Range": 27,
@@ -1063,6 +1111,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 10,
           speedLevel: "Middle",
+          baseSpeed: 0.45,
           price: 15300,
           stats: {
             "Range": 27,
@@ -1081,6 +1130,7 @@ angular.module('splatApp').weapons = function ($scope) {
           specialCost: 180,
           inkSaver: "Middle",
           speedLevel: "Middle",
+          baseSpeed: 0.45,
           price: 9300,
           stats: {
             "Range": 56,
@@ -1099,6 +1149,7 @@ angular.module('splatApp').weapons = function ($scope) {
           specialCost: 180,
           inkSaver: "Middle",
           speedLevel: "Middle",
+          baseSpeed: 0.45,
           price: 11400,
           stats: {
             "Range": 56,
@@ -1118,6 +1169,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.55,
           price: 9800,
           stats: {
             "Range": 62,
@@ -1137,6 +1189,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.55,
           price: 11500,
           stats: {
             "Range": 62,
@@ -1156,6 +1209,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.55,
           price: 12800,
           stats: {
             "Range": 72,
@@ -1175,6 +1229,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.55,
           price: 14000,
           stats: {
             "Range": 72,
@@ -1194,6 +1249,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 9,
           speedLevel: "Middle",
+          baseSpeed: 0.5,
           price: 12100,
           stats: {
             "Range": 9,
@@ -1213,6 +1269,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 9,
           speedLevel: "Middle",
+          baseSpeed: 0.5,
           price: 13600,
           stats: {
             "Range": 9,
@@ -1232,6 +1289,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 4,
           speedLevel: "High",
+          baseSpeed: 0.65,
           price: 18200,
           stats: {
             "Range": 21,
@@ -1251,6 +1309,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 4,
           speedLevel: "High",
+          baseSpeed: 0.65,
           price: 20500,
           stats: {
             "Range": 21,
@@ -1276,6 +1335,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 5,
           speedLevel: "Middle",
+          baseSpeed: 0.65,
           price: 8300,
           stats: {
             "Range": 43,
@@ -1295,6 +1355,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 5,
           speedLevel: "Middle",
+          baseSpeed: 0.65,
           price: 9000,
           stats: {
             "Range": 43,
@@ -1314,6 +1375,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 5,
           speedLevel: "Middle",
+          baseSpeed: 0.65,
           price: 12000,
           stats: {
             "Range": 43,
@@ -1339,6 +1401,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.4,
           price: 2500,
           stats: {
             "Range": 58,
@@ -1357,6 +1420,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.4,
           price: 3100,
           stats: {
             "Range": 58,
@@ -1376,6 +1440,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 7,
           speedLevel: "Middle",
+          baseSpeed: 0.4,
           price: 8000,
           stats: {
             "Range": 58,
@@ -1395,6 +1460,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 6,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 10200,
           stats: {
             "Range": 39,
@@ -1414,6 +1480,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 6,
           speedLevel: "Middle",
+          baseSpeed: 0.6,
           price: 11700,
           stats: {
             "Range": 39,
@@ -1475,6 +1542,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 18,
           speedLevel: "Middle",
+          baseSpeed: 0.2,
           price: 2200,
           stats: {
             "Range": 88,
@@ -1494,6 +1562,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 18,
           speedLevel: "Middle",
+          baseSpeed: 0.2,
           price: 2700,
           stats: {
             "Range": 88,
@@ -1513,6 +1582,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 18,
           speedLevel: "Middle",
+          baseSpeed: 0.2,
           price: 10600,
           stats: {
             "Range": 88,
@@ -1532,6 +1602,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 18,
           speedLevel: "Middle",
+          baseSpeed: 0.2,
           price: 11400,
           stats: {
             "Range": 91,
@@ -1551,6 +1622,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 18,
           speedLevel: "Middle",
+          baseSpeed: 0.2,
           price: 13900,
           stats: {
             "Range": 91,
@@ -1570,6 +1642,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 11,
           speedLevel: "Middle",
+          baseSpeed: 0.3,
           price: 8900,
           stats: {
             "Range": 75,
@@ -1589,6 +1662,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 11,
           speedLevel: "Middle",
+          baseSpeed: 0.3,
           price: 11000,
           stats: {
             "Range": 75,
@@ -1608,6 +1682,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 25,
           speedLevel: "Low",
+          baseSpeed: 0.15,
           price: 13900,
           stats: {
             "Range": 96,
@@ -1627,6 +1702,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 25,
           speedLevel: "Low",
+          baseSpeed: 0.15,
           price: 17300,
           stats: {
             "Range": 96,
@@ -1646,6 +1722,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 25,
           speedLevel: "Low",
+          baseSpeed: 0.15,
           price: 23200,
           stats: {
             "Range": 100,
@@ -1665,6 +1742,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "High",
           inkPerShot: 25,
           speedLevel: "Low",
+          baseSpeed: 0.15,
           price: 29900,
           stats: {
             "Range": 100,
@@ -1684,6 +1762,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 15,
           speedLevel: "Middle",
+          baseSpeed: 0.3,
           price: 13400,
           stats: {
             "Range": 78,
@@ -1703,6 +1782,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 15,
           speedLevel: "Middle",
+          baseSpeed: 0.3,
           price: 19300,
           stats: {
             "Range": 78,
@@ -1764,6 +1844,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
+          baseSpeed: 0.64,
           price: 7800,
           stats: {
             "Range": 78,
@@ -1783,6 +1864,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
+          baseSpeed: 0.64,
           price: 8600,
           stats: {
             "Range": 78,
@@ -1802,6 +1884,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
+          baseSpeed: 0.64,
           price: 9600,
           stats: {
             "Range": 78,
@@ -1821,6 +1904,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 15,
           speedLevel: "Middle",
+          baseSpeed: 0.7,
           price: 12300,
           stats: {
             "Range": 62,
@@ -1840,6 +1924,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 15,
           speedLevel: "Middle",
+          baseSpeed: 0.7,
           price: 15400,
           stats: {
             "Range": 62,
