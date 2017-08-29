@@ -243,4 +243,8 @@ $scope.stats = {
     }
     return results
   }
+  $scope.getAdjustedSpecialCost = function(loadout) {
+    var stat = $scope.getStatByName("Special Charge Speed");
+    return Math.floor(loadout.weapon.specialCost / (stat.calc(loadout)/100))
+  }
 }

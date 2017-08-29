@@ -19,10 +19,18 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-12 col-sm-6">
                   <div style=" height:3.2em; line-height:1.5em;">
                   <span style="font-size: 14pt;">{{selectedWeapon.name}}</span></div>
-                  <div class="row">
+
                   <div class="col-md-12">
+                                    <div class="row">
+                  <div class="col-xs-4 nopadding">
                   <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-append-to-body="true"  class="subspeicon" />
+                  </div>
+                  <div class="col-xs-8 nopadding">
+                  <div class="subspe-bubble">
                   <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-append-to-body="true" class="subspeicon" />
+                  {{selectedWeapon.specialCost}}p
+                  </div>
+                  </div>
                   </div>
                   </div>
                   <div class="col-md-12" id="minibar-container">

@@ -95,8 +95,17 @@ font-family: "Splatfont";
 
 .subspeicon {
   background:rgba(0,0,0,0.5);
-  border-radius:8px;
+  border-radius:5px;
   height:48px
+}
+.subspe-bubble {
+  background: rgba(0,0,0,0.5);
+  padding:0px;
+  border-radius: 5px;
+  text-align:left;
+  font-size:12pt;
+  font-family:"Splatfont";
+  color:#fff;
 }
 
 .statbar {
@@ -178,6 +187,12 @@ font-family: "Splatfont";
   color: #fff;
 }
 
+.icon-button {
+  cursor:pointer;
+  color: #fff;
+  font-size:16pt;
+}
+
 .edit-button {
   float:right;
   margin-right:16px;
@@ -196,13 +211,26 @@ font-family: "Splatfont";
 }
 
 #weapon {
-  height: 150px;
+  height: 105px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
+#weapon .subspe-bubble {
+  margin-right:10px;
+}
+
+#weapon .col-sm-7 .row {
+  padding-top:5px;
+}
+
+#weaponicon {
+    max-height:60px;
+    width:auto;
+}
+
 #utils {
-  height: 150px;
+  height: 105px;
 }
 
 #dialog {
@@ -213,7 +241,7 @@ font-family: "Splatfont";
 }
 
 #minibar-container {
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.5);
   border:3px solid rgba(0,0,0,0);
   border-radius:6px;
   margin-top:4px;
@@ -236,11 +264,6 @@ font-family: "Splatfont";
   font-size: 16pt;
   text-align:center;
   color: #fff;
-}
-
-.weaponicon {
-  max-height:90px;
-  width:auto;
 }
 
 .weaponicon.bubble {

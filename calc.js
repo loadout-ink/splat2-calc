@@ -10,9 +10,12 @@ angular
     angular.module('splatApp').specials($scope);
     angular.module('splatApp').gear($scope);
     $scope.loadout = new Loadout();
-    new Clipboard('#copybtn');
+    $scope.clipboard = new Clipboard('#copybtn');
     $scope.status = {}
 
+    $scope.clipboard.on('error', function(e) {
+      $scope.copyLink();
+    })
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
     }
@@ -67,7 +70,7 @@ angular
     }
 
     $scope.copyLink = function() {
-      window.prompt("Copy to Clipboard", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
+      window.prompt("Sharable URL", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
     }
 
     if(window.location.hash) {

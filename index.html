@@ -54,28 +54,30 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-5" align=center>
-                      <img fallback-img class="weaponicon" ng-src="{{loadout.weapon.image}}"/>
+                      <img id="weaponicon" fallback-img ng-src="{{loadout.weapon.image}}"/>
                     </div>
                     <div class="col-sm-7">
-                      <div class="col-xs-6">
-                      <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" uib-tooltip="{{loadout.weapon.sub}}" tooltip-append-to-body="true" tooltip-placement="right" class="subspeicon" /><br>
-                      <img fallback-img ng-src="{{getSpecialByName(loadout.weapon.special).image}}" uib-tooltip="{{loadout.weapon.special}}" tooltip-append-to-body="true" tooltip-placement="right"  class="subspeicon" />
+                        <div class="row">
+                        <div class="col-xs-4 nopadding">
+                        <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" class="subspeicon" /><br>
                       </div>
-                      <div class="col-xs-6">
-                      <span class="splatfont-white">{{loadout.weapon.specialCost}}p</span><br>
+                      <div class="col-xs-8 nopadding">
+                        <div class="subspe-bubble">
+                          <img fallback-img ng-src="{{getSpecialByName(loadout.weapon.special).image}}" class="subspeicon" />
+
+                            {{getAdjustedSpecialCost(loadout)}}p
+
+                        </div>
+                      </div>
                     </div>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-sm-6 nopadding">
                 <div class="itemcard purplestripes" id="utils">
-                  <div class="input-group">
-                    <input type="text" id="url" class="form-control" value="{{encodedURL()}}" readonly>
-                    <span  class="input-group-btn" >
-                  <button id="copybtn" class="btn" data-clipboard-target="#url" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="{'click':'mouseleave'}"><span class="glyphicon glyphicon-copy"></span></button>
-                </span>
-                </div>
+                  <span id="copybtn" class="icon-button glyphicon glyphicon-copy" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="{'click':'mouseleave'}"></span>
                   <button ng-click="loadout.clearAll()">Clear Abilities</button>
               </div>
             </div>
