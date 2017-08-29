@@ -1,7 +1,3 @@
-function filter_available(weapon) {
-  return !weapon.unreleased
-}
-
 angular.module('splatApp').weapons = function ($scope) {
   $scope.weaponSets = [
     {

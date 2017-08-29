@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
+  <script src="./util.js"></script>
   <script src="./calc.js"></script>
   <script src="./loadout.js"></script>
   <script src="./encode.js"></script>
@@ -19,6 +20,9 @@
   <script src="./weapons.js"></script>
   <script src="./subs.js"></script>
   <script src="./specials.js"></script>
+  <script src="./hats.js"></script>
+  <script src="./clothes.js"></script>
+  <script src="./shoes.js"></script>
   <script src="./gear.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
@@ -64,9 +68,7 @@
                       <div class="col-xs-8 nopadding">
                         <div class="subspe-bubble">
                           <img fallback-img ng-src="{{getSpecialByName(loadout.weapon.special).image}}" class="subspeicon" />
-
                             {{getAdjustedSpecialCost(loadout)}}p
-
                         </div>
                       </div>
                     </div>
@@ -79,6 +81,7 @@
                 <div class="itemcard purplestripes" id="utils">
                   <span id="copybtn" class="icon-button glyphicon glyphicon-copy" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="{'click':'mouseleave'}"></span>
                   <button ng-click="loadout.clearAll()">Clear Abilities</button>
+                  <button ng-click="randomizeBuild()">Randomize</button>
               </div>
             </div>
           </div>

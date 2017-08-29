@@ -73,6 +73,16 @@ angular
       window.prompt("Sharable URL", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
     }
 
+    $scope.randomizeBuild = function() {
+      var randomized = new Loadout()
+      $scope.selectedSet = randomFrom($scope.weaponSets)
+      randomized.weapon = randomFrom($scope.availableWeapons())
+      randomized.head.equipped = randomFrom($scope.hats)
+      randomized.clothes.equipped = randomFrom($scope.clothes)
+      randomized.shoes.equipped = randomFrom($scope.shoes)
+      $scope.loadout = randomized
+    }
+
     if(window.location.hash) {
       var newLoadout = $scope.loadCode(window.location.hash.replace('#',''))
       if(newLoadout) {
