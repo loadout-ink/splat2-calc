@@ -3,42 +3,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
 
 
   var templates = {
-    "weaponPicker" : `<div class="row">
-            <div class="col-md-12">
-              <div class="weapon neonstripes">
-              <div class="row cardheader">
-                <div class="col-md-6">
-                  <select class="form-control dropdown-toggle" data-ng-options="x.type for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control dropdown-toggle" data-ng-options="x.name for x in availableWeapons()" data-ng-model="selectedWeapon"></select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-5" style="min-height:180px" align="center">
-                  <img fallback-img class="weaponicon " style="max-height:200px; width: auto;" ng-src="{{selectedWeapon.image}}"/>
-                </div>
-              <div class="col-xs-7" align="center">
-                <img fallback-img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px" />
-                <img fallback-img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-placement="top" style="background:rgba(0,0,0,0.5); border-radius:8px; height:48px"  />
-                <br>
-                <span class="splatfont-white">{{selectedWeapon.specialCost}}p</span><br>
-              </div>
-            </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <button class="btn" type="button" ng-click="ok()">OK</button>
-                </div>
-                <div class="col-xs-6">
-                <button class="btn" type="button" ng-click="cancel()">Cancel</button>
-                </div>
-            </div>
-          </div>
-        </div>`,
         weaponPickerNew : `
         <div class="row">
                 <div class="col-md-12">
-                  <div class="weapon neonstripes">
+                  <div class="itemcard neonstripes" id="dialog">
                   <div class="row cardheader">
                     Weapon Picker
                   </div>
@@ -57,9 +25,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-append-to-body="true" class="subspeicon" />
                   </div>
                   </div>
-                  <div class="col-md-12" style="background:rgba(0,0,0,0.6); border:3px solid rgba(0,0,0,0); border-radius:6px; margin-top:4px">
+                  <div class="col-md-12" id="minibar-container">
                   <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
-                  <div class="col-xs-6 nopadding" style="text-align:right; vertical-align: middle; color:#fff; font-size:9pt; padding-right:4px !important">
+                  <div class="col-xs-6 nopadding minibar-label">
                   {{stat}}
                   </div>
                   <div class="col-xs-6 nopadding">
@@ -98,7 +66,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
         `,
         gearPicker : `<div class="row">
                 <div class="col-md-12">
-                  <div class="weapon neonstripes">
+                  <div class="itemcard {{background}}" id="dialog">
                   <div class="row cardheader">
                   Gear Picker
                   </div>
@@ -109,13 +77,16 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <img fallback-img ng-src="{{selectedGear.image}}" />
                   </div>
                   <div class="col-md-12 col-sm-6">
-                  <span style="font-size: 14pt">{{selectedGear.name}}</span><br>
+                  <div style=" height:3.2em; line-height:1.5em;">
+                  <span style="font-size: 14pt;">{{selectedGear.name}}</span></div>
                   <img ng-src="{{getSkillByName(selectedGear.main).image}}" style="width:28px; height:auto"/>  {{selectedGear.main}}<br>
                   <img ng-src="{{brands[selectedGear.brand].image}}" style="width:28px; height:auto"/> {{selectedGear.brand}}<br>
+                  <div style=" height:2.2em; line-height:1em;">
                   <span ng-if="brands[selectedGear.brand].common">
                   + {{brands[selectedGear.brand].common}}<br>
                   - {{brands[selectedGear.brand].uncommon}}
                   </span>
+                  </div>
                   </div>
                   </div>
                   </div>
@@ -231,6 +202,20 @@ $scope.openGearPicker = function(gear, equipped, slot) {
         },
         selectedGear: function() {
           return equipped
+        },
+        background: function() {
+          if(slot=='head') {
+            return 'redstripes'
+          }
+          else if(slot=='clothes') {
+              return 'tealstripes'
+            }
+          else if(slot=='shoes') {
+              return 'orangestripes'
+            }
+          else {
+            return 'neonstripes'
+          }
         }
       }
     });
@@ -285,13 +270,14 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, slot, set, brands, filterByMain, selectedGear, getSkillByName) {
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName) {
   $scope.slot = slot
   $scope.set = set
   $scope.filterByMain = filterByMain
   $scope.selectedGear = selectedGear
   $scope.getSkillByName = getSkillByName
   $scope.brands = brands
+  $scope.background = background
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;

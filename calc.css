@@ -129,7 +129,7 @@ font-family: "Splatfont";
 );
 }
 
-.maincontainer {
+#maincontainer {
 }
 
 .abilitybox .col-md-12 {
@@ -172,14 +172,6 @@ font-family: "Splatfont";
   border:solid 2px #fff;
 }
 
-.gear{
-  border-radius: 25px;
-  border: solid 4px #eee;
-  padding: 3px;
-  padding-top:0px;
-  overflow:hidden;
-}
-
 .splatfont-white {
   font-family: "Splatfont";
   font-size: 16pt;
@@ -194,11 +186,46 @@ font-family: "Splatfont";
   cursor:pointer;
 }
 
-.weapon {
+.itemcard {
+  height:160px;
+  border: solid 4px #eee;
   border-radius: 25px;
-  padding:10px;
+  padding: 3px;
   padding-top:0px;
   overflow:hidden;
+}
+
+#weapon {
+  height: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#utils {
+  height: 150px;
+}
+
+#dialog {
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:auto;
+}
+
+#minibar-container {
+  background:rgba(0,0,0,0.6);
+  border:3px solid rgba(0,0,0,0);
+  border-radius:6px;
+  margin-top:4px;
+}
+
+.minibar-label {
+  font-family:"Splatfont";
+  text-align:right;
+  vertical-align: middle;
+  color:#fff;
+  font-size:9pt;
+  padding-right:4px !important
 }
 
 .cardheader {
