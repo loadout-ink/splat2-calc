@@ -27,7 +27,7 @@
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
   <script src="./modals.js"></script>
-
+  <script src="https://use.fontawesome.com/c7118d472c.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -46,14 +46,14 @@
   </header>
   <div class="container" id="maincontainer">
     <div class="row match-my-cols">
-      <div class="col-md-6 col-xs-12 grey">
+      <div class="col-md-6 col-xs-12" id="loadout">
         <div class="row">
           <div class="col-md-12">
             <div class="row">
               <div class="col-sm-6 nopadding">
                 <div class="itemcard neonstripes" id="weapon">
                   <div class="row cardheader">
-                  <span ng-controller="ModalCtrl" ng-click="openWeaponPicker()" class="glyphicon glyphicon-pencil edit-button "></span>
+                  <span ng-controller="ModalCtrl" ng-click="openWeaponPicker()" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                       {{loadout.weapon.name}}
                   </div>
                   <div class="row">
@@ -79,9 +79,26 @@
               </div>
               <div class="col-sm-6 nopadding">
                 <div class="itemcard purplestripes" id="utils">
-                  <span id="copybtn" class="icon-button glyphicon glyphicon-copy" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copied" tooltip-append-to-body="true" tooltip-trigger="{'click':'mouseleave'}"></span>
-                  <button ng-click="loadout.clearAll()">Clear Abilities</button>
-                  <button ng-click="randomizeBuild()">Randomize</button>
+
+                  <div class="row">
+                    <div class="col-xs-4">
+                  <span id="copybtn" class="icon-button fa-3x fa fa-clipboard" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"></span>
+                </div>
+                  <div class="col-xs-4">
+                  <span class="icon-button fa-3x fa fa-undo" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"></span>
+                </div>
+                  <div class="col-xs-4">
+                  <span class="icon-button fa-3x fa fa-bomb" ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"></span>
+                </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <span class="splatfont-white">
+                    ver. 1.0 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="What's New?" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                  </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -93,15 +110,15 @@
             <div class="row">
               <div class="col-md-4 col-sm-4 itemcard redstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                 Head
               </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding"  align="center">
                     <div class="gearWrapper" style="position:relative">
                       <img fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
-                      <span style="position:absolute;left:16px;top:0px;">
-                        <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)" />
+                      <span style="position:absolute;left:20px;top:5px;">
+                        <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
                       </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
                       <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
@@ -118,16 +135,16 @@
               </div>
               <div class="col-md-4 col-sm-4 itemcard tealstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" class="glyphicon glyphicon-pencil edit-button "></span>
+                <span ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                 Clothes
               </div>
                 <div class="row">
                   <div class="col-md-6 col-xs-6 nopadding"  align="center">
                   <div class="gearWrapper" style="position:relative" align="center">
                     <img fallback-img class="gearicon" ng-src="{{loadout.clothes.equipped.image}}" />
-                      <span style="position:absolute;left:16px;top:0px;">
-                        <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)" />
-                      </span>
+                    <span style="position:absolute;left:20px;top:5px;">
+                      <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
+                    </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
                       <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
                     </span>
@@ -143,7 +160,7 @@
               </div>
               <div class="col-md-4 col-sm-4 itemcard orangestripes">
                 <div class="row cardheader">
-                  <span ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" class="glyphicon glyphicon-pencil edit-button "></span>
+                  <span ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                   Shoes
                 </div>
                   <div class="row">
@@ -153,9 +170,9 @@
                         <span style="position:absolute;left:16px;top:0px;">
                           <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)" />
                         </span>
-                        <span style="position:absolute; right:0px; bottom:0px;">
-                        <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?loadout.shoes.equipped.brand!='Grizzco'?true:false:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
-                      </span>
+                        <span style="position:absolute;left:20px;top:5px;">
+                          <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
+                        </span>
                       </div>
                     </div>
                     <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.shoes.getmainIcon()}})"></div></div>
@@ -169,14 +186,14 @@
           </div>
         </div>
       </div>
-      <div class="abilitybox" ability-box>
+      <div id="abilitybox" ability-box>
         <div class="row">
-          <div class="col-md-12x blackstripes">
+          <div class="blackstripes">
             <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
           </div>
         </div>
-        <div class="row" >
-          <div class="col-md-12x blackstripes">
+        <div class="row">
+          <div class="blackstripes">
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">

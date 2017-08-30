@@ -26,9 +26,9 @@ angular
 
     $scope.selectedSet = $scope.weaponSets[0];
     $scope.loadout.weapon = $scope.availableWeapons()[0];
-    $scope.loadout.head.equipped = $scope.hats[0]
-    $scope.loadout.clothes.equipped = $scope.clothes[0]
-    $scope.loadout.shoes.equipped = $scope.shoes[0]
+    $scope.loadout.head.equipped = $scope.hats[0];
+    $scope.loadout.clothes.equipped = $scope.clothes[0];
+    $scope.loadout.shoes.equipped = $scope.shoes[0];
 
      $scope.$watch('loadout', function() {
        history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
@@ -81,6 +81,15 @@ angular
       randomized.clothes.equipped = randomFrom($scope.clothes)
       randomized.shoes.equipped = randomFrom($scope.shoes)
       $scope.loadout = randomized
+    }
+
+    $scope.resetLoadout = function() {
+      $scope.loadout.clearAbilities();
+      $scope.selectedSet = $scope.weaponSets[0];
+      $scope.loadout.weapon = $scope.availableWeapons()[0];
+      $scope.loadout.head.equipped = $scope.hats[0];
+      $scope.loadout.clothes.equipped = $scope.clothes[0];
+      $scope.loadout.shoes.equipped = $scope.shoes[0];
     }
 
     if(window.location.hash) {

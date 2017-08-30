@@ -60,11 +60,11 @@ body {
   height:64px;
 }
 
-.abilitybox {
+#abilitybox {
   text-align:center;
 }
 
-.abilitybox .abilityicon {
+#abilitybox .abilityicon {
   margin-left: 4px;
   margin-bottom:4px;
   margin-right: 4px;
@@ -190,7 +190,30 @@ font-family: "Splatfont";
 .icon-button {
   cursor:pointer;
   color: #fff;
-  font-size:16pt;
+  font-size:20pt;
+}
+
+.fa.green {
+  color: #00ff00;
+}
+
+.fa.red {
+  color: #ff0000;
+}
+
+.icon-button:hover {
+  color: #ccc;
+}
+
+.btn {
+  background: #000;
+  font-family:"Splatfont";
+  color: #fff;
+  min-width: 60px;
+}
+
+.btn:hover {
+  color: #ccc !important;
 }
 
 .edit-button {
@@ -203,7 +226,7 @@ font-family: "Splatfont";
 
 .itemcard {
   height:160px;
-  border: solid 4px #eee;
+  border: solid 4px #000;
   border-radius: 25px;
   padding: 3px;
   padding-top:0px;
@@ -230,7 +253,9 @@ font-family: "Splatfont";
 }
 
 #utils {
+  padding-top:15px;
   height: 105px;
+  text-align: center;
 }
 
 #dialog {
@@ -240,11 +265,39 @@ font-family: "Splatfont";
   height:auto;
 }
 
+#gearpicker-stats {
+  background: rgba(0,0,0,0.5);
+  padding:0px;
+  border-radius: 5px;
+  font-size:10pt;
+  font-family:"Splatfont";
+  color:#fff;
+}
+
 #minibar-container {
   background:rgba(0,0,0,0.5);
   border:3px solid rgba(0,0,0,0);
   border-radius:6px;
   margin-top:4px;
+}
+
+.picker {
+  height:260px;
+  overflow-y:scroll;
+  background: rgba(0,0,0,0.25);
+  border: 4px solid rgba(0,0,0,0.25);
+  border-bottom: none;
+  border-top: none;
+}
+
+.picker-right {
+  text-align:center;
+}
+
+@media only screen and (min-width:992px) {
+  .picker-right {
+    padding-left:0px !important;
+  }
 }
 
 .minibar-label {
@@ -266,13 +319,6 @@ font-family: "Splatfont";
   color: #fff;
 }
 
-.weaponicon.bubble {
-  border-left: solid 6px rgba(255,255,255,0.4);
-  border-top: solid 6px rgba(255,255,255,0.4);
-  border-right: solid 6px rgba(0,0,0,0.2);
-  border-bottom: solid 6px rgba(0,0,0,0.2);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
-}
 html {
   overflow-y: scroll;
 }
@@ -285,8 +331,8 @@ html {
     padding-bottom: 99999px;
 }
 
-.grey {
-  background: #eee
+#loadout {
+  background: #000;
 }
 
 .bgstripes {

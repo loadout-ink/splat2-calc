@@ -90,7 +90,7 @@ function Loadout() {
     eval(slot + '= null');
   }
 
-  this.clearAll = function() {
+  this.clearAbilities = function() {
       this.head.clearAll();
       this.clothes.clearAll();
       this.shoes.clearAll();
