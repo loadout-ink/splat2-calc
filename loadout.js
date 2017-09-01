@@ -6,13 +6,13 @@ function Gear() {
     if(this.main != null) {
       return this.main.image
     }
-    else return 'img/skills/Unknown.png'
+    else return 'assets/img/skills/Unknown.png'
   };
   this.getSubIcon = function(x) {
     if(this.subs[x] != null) {
       return this.subs[x].image
     }
-    else return 'img/skills/Unknown.png'
+    else return 'assets/img/skills/Unknown.png'
   };
   this.setNextSlot = function(skill) {
     if(this.main == null){ this.main = skill; return; }

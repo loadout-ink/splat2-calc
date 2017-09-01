@@ -16,13 +16,13 @@
   <script src="./loadout.js"></script>
   <script src="./encode.js"></script>
   <link rel="stylesheet" href="./calc.css">
-  <script src="./skills.js"></script>
-  <script src="./weapons.js"></script>
-  <script src="./subs.js"></script>
-  <script src="./specials.js"></script>
-  <script src="./hats.js"></script>
-  <script src="./clothes.js"></script>
-  <script src="./shoes.js"></script>
+  <script src="./data/skills.js"></script>
+  <script src="./data/weapons.js"></script>
+  <script src="./data/subs.js"></script>
+  <script src="./data/specials.js"></script>
+  <script src="./data/hats.js"></script>
+  <script src="./data/clothes.js"></script>
+  <script src="./data/shoes.js"></script>
   <script src="./gear.js"></script>
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
@@ -42,7 +42,7 @@
       </script>
 
   <header class="hero-unit splatheader blackstripes">
-    <img src="./img/ui/logo.png" />
+    <img src="./assets/img/ui/logo.png" />
   </header>
   <div class="container" id="maincontainer">
     <div class="row">
@@ -121,7 +121,7 @@
                         <span class="fa fa-4x fa-ban" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
                       </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
-                      <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                      <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
                     </span>
                     </div>
                   </div>
@@ -148,7 +148,7 @@
                       <span class="fa fa-4x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
                     </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
-                      <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
+                      <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
                     </span>
                   </div>
                 </div>
@@ -172,7 +172,7 @@
                       <div class="gearWrapper" style="position:relative">
                         <img fallback-img class="gearicon" ng-src="{{loadout.shoes.equipped.image}}" />
                         <span style="position:absolute;left:16px;top:0px;">
-                          <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)" />
+                          <img src="assets/img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)" />
                         </span>
                         <span style="position:absolute;left:20px;top:5px;">
                           <span class="fa fa-4x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>

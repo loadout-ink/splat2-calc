@@ -5,7 +5,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 0,
       weapons: [
         {
-          image: "img/weapons/Wst_Shooter_First_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_First_00.png",
           name: "Splattershot Jr.",
           shotUnit: "shot",
           sub: "Splat Bomb",
@@ -25,7 +25,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Shooter_First_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_First_01.png",
           name: "Custom Splattershot Jr.",
           unreleased: true,
           shotUnit: "shot",
@@ -46,7 +46,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Shooter_Normal_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Normal_00.png",
           name: "Splattershot",
           shotUnit: "shot",
           sub: "Burst Bomb",
@@ -66,7 +66,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Shooter_Normal_H.png",
+          image: "./assets/img/weapons/Wst_Shooter_Normal_H.png",
           name: "Hero Shot Replica",
           shotUnit: "shot",
           sub: "Burst Bomb",
@@ -86,7 +86,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Shooter_Normal_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Normal_01.png",
           name: "Tentatek Splattershot",
           shotUnit: "shot",
           sub: "Splat Bomb",
@@ -106,7 +106,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Shooter_Expert_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Expert_00.png",
           name: "Splattershot Pro",
           shotUnit: "shot",
           sub: "Point Sensor",
@@ -126,7 +126,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Shooter_Expert_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Expert_01.png",
           name: "Forge Splattershot Pro",
           unreleased: true,
           shotUnit: "shot",
@@ -147,7 +147,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 6
         },
         {
-          image: "img/weapons/Wst_Shooter_Blaze_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Blaze_00.png",
           name: "Aerospray MG",
           shotUnit: "shot",
           sub: "Suction Bomb",
@@ -167,7 +167,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 7
         },
         {
-          image: "img/weapons/Wst_Shooter_Blaze_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Blaze_01.png",
           name: "Aerospray RG",
           shotUnit: "shot",
           sub: "Sprinkler",
@@ -187,7 +187,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 8
         },
         {
-          image: "img/weapons/Wst_Shooter_QuickMiddle_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_QuickMiddle_00.png",
           name: "N-ZAP '85",
           shotUnit: "shot",
           sub: "Suction Bomb",
@@ -207,7 +207,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 9
         },
         {
-          image: "img/weapons/Wst_Shooter_QuickMiddle_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_QuickMiddle_01.png",
           name: "N-ZAP '89",
           unreleased: true,
           shotUnit: "shot",
@@ -228,7 +228,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 10
         },
         {
-          image: "img/weapons/Wst_Shooter_Short_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Short_00.png",
           name: "Sploosh-o-matic",
           shotUnit: "shot",
           sub: "Curling Bomb",
@@ -248,7 +248,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 11
         },
         {
-          image: "img/weapons/Wst_Shooter_Short_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Short_01.png",
           name: "Neo Sploosh-o-matic",
           unreleased: true,
           shotUnit: "shot",
@@ -269,7 +269,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 12
         },
         {
-          image: "img/weapons/Wst_Shooter_Precision_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Precision_00.png",
           name: "Splash-o-matic",
           shotUnit: "shot",
           sub: "Toxic Mist",
@@ -289,7 +289,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 13
         },
         {
-          image: "img/weapons/Wst_Shooter_Precision_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Precision_01.png",
           name: "Neo Splash-o-matic",
           unreleased: true,
           shotUnit: "shot",
@@ -310,7 +310,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 14
         },
         {
-          image: "img/weapons/Wst_Shooter_Gravity_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Gravity_00.png",
           name: ".52 Gal",
           shotUnit: "shot",
           sub: "Point Sensor",
@@ -330,7 +330,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 15
         },
         {
-          image: "img/weapons/Wst_Shooter_Gravity_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Gravity_01.png",
           name: ".52 Gal Deco",
           unreleased: true,
           shotUnit: "shot",
@@ -351,7 +351,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 16
         },
         {
-          image: "img/weapons/Wst_Shooter_Heavy_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Heavy_00.png",
           name: ".96 Gal",
           shotUnit: "shot",
           sub: "Sprinkler",
@@ -371,7 +371,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 17
         },
         {
-          image: "img/weapons/Wst_Shooter_Heavy_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Heavy_01.png",
           name: ".96 Gal Deco",
           unreleased: true,
           shotUnit: "shot",
@@ -392,7 +392,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 18
         },
         {
-          image: "img/weapons/Wst_Shooter_Long_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Long_00.png",
           name: "Jet Squelcher",
           shotUnit: "shot",
           sub: "Toxic Mist",
@@ -412,7 +412,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 19
         },
         {
-          image: "img/weapons/Wst_Shooter_Long_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Long_01.png",
           name: "Custom Jet Squelcher",
           unreleased: true,
           shotUnit: "shot",
@@ -433,7 +433,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 20
         },
         {
-          image: "img/weapons/Wst_Shooter_TripleQuick_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_TripleQuick_00.png",
           name: "L-3 Nozzlenose",
           shotUnit: "shot",
           sub: "Curling Bomb",
@@ -453,7 +453,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 21
         },
         {
-          image: "img/weapons/Wst_Shooter_TripleQuick_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_TripleQuick_01.png",
           name: "L-3 Nozzlenose D",
           unreleased: true,
           shotUnit: "shot",
@@ -474,7 +474,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 22
         },
         {
-          image: "img/weapons/Wst_Shooter_TripleMiddle_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_TripleMiddle_00.png",
           name: "H-3 Nozzlenose",
           shotUnit: "shot",
           sub: "Point Sensor",
@@ -494,7 +494,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 23
         },
         {
-          image: "img/weapons/Wst_Shooter_TripleMiddle_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_TripleMiddle_01.png",
           name: "H-3 Nozzlenose D",
           unreleased: true,
           shotUnit: "shot",
@@ -515,7 +515,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 24
         },
         {
-          image: "img/weapons/Wst_Shooter_Flash_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_Flash_00.png",
           name: "Squeezer",
           unreleased: true,
           shotUnit: "shot",
@@ -534,7 +534,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 25
         },
         {
-          image: "img/weapons/Wst_Shooter_Flash_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_Flash_01.png",
           name: "Foil Squeezer",
           unreleased: true,
           shotUnit: "shot",
@@ -559,7 +559,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 1,
       weapons: [
         {
-          image: "img/weapons/Wst_Twins_Normal_00.png",
+          image: "./assets/img/weapons/Wst_Twins_Normal_00.png",
           name: "Splat Dualies",
           shotUnit: "shot",
           sub: "Burst Bomb",
@@ -579,7 +579,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Twins_Normal_H.png",
+          image: "./assets/img/weapons/Wst_Twins_Normal_H.png",
           name: "Hero Dualie Replicas",
           shotUnit: "shot",
           sub: "Burst Bomb",
@@ -599,7 +599,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Twins_Normal_01.png",
+          image: "./assets/img/weapons/Wst_Twins_Normal_01.png",
           name: "Enperry Splat Dualies",
           shotUnit: "shot",
           sub: "Curling Bomb",
@@ -619,7 +619,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Twins_Dual_00.png",
+          image: "./assets/img/weapons/Wst_Twins_Dual_00.png",
           name: "Dualie Squelchers",
           shotUnit: "shot",
           sub: "Point Sensor",
@@ -639,7 +639,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Twins_Dual_01.png",
+          image: "./assets/img/weapons/Wst_Twins_Dual_01.png",
           name: "Custom Dualie Squelchers",
           unreleased: true,
           shotUnit: "shot",
@@ -660,7 +660,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Twins_Short_00.png",
+          image: "./assets/img/weapons/Wst_Twins_Short_00.png",
           name: "Dapple Dualies",
           shotUnit: "shot",
           sub: "Squid Beakon",
@@ -680,7 +680,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Twins_Short_01.png",
+          image: "./assets/img/weapons/Wst_Twins_Short_01.png",
           name: "Dapple Dualies Nouveau",
           unreleased: true,
           shotUnit: "shot",
@@ -701,7 +701,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 6
         },
         {
-          image: "img/weapons/Wst_Twins_Stepper_00.png",
+          image: "./assets/img/weapons/Wst_Twins_Stepper_00.png",
           name: "Dark Tetra Dualies",
           unreleased: true,
           shotUnit: "shot",
@@ -720,7 +720,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 7
         },
         {
-          image: "img/weapons/Wst_Twins_Stepper_01.png",
+          image: "./assets/img/weapons/Wst_Twins_Stepper_01.png",
           name: "Light Tetra Dualies",
           unreleased: true,
           shotUnit: "shot",
@@ -739,7 +739,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 8
         },
         {
-          image: "img/weapons/Wst_Twins_Gallon_00.png",
+          image: "./assets/img/weapons/Wst_Twins_Gallon_00.png",
           name: "Glooga Dualies",
           unreleased: true,
           shotUnit: "shot",
@@ -758,7 +758,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 9
         },
         {
-          image: "img/weapons/Wst_Twins_Gallon_01.png",
+          image: "./assets/img/weapons/Wst_Twins_Gallon_01.png",
           name: "Glooga Dualies Deco",
           unreleased: true,
           shotUnit: "shot",
@@ -783,7 +783,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 2,
       weapons: [
         {
-          image: "img/weapons/Wst_Roller_Normal_00.png",
+          image: "./assets/img/weapons/Wst_Roller_Normal_00.png",
           name: "Splat Roller",
           shotUnit: "flick",
           sub: "Curling Bomb",
@@ -803,7 +803,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Roller_Normal_H.png",
+          image: "./assets/img/weapons/Wst_Roller_Normal_H.png",
           name: "Hero Roller Replica",
           shotUnit: "flick",
           sub: "Curling Bomb",
@@ -823,7 +823,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Roller_Normal_01.png",
+          image: "./assets/img/weapons/Wst_Roller_Normal_01.png",
           name: "Krak-On Splat Roller",
           shotUnit: "flick",
           sub: "Squid Beakon",
@@ -843,7 +843,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Roller_Compact_00.png",
+          image: "./assets/img/weapons/Wst_Roller_Compact_00.png",
           name: "Carbon Roller",
           shotUnit: "flick",
           sub: "Autobomb",
@@ -863,7 +863,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Roller_Compact_01.png",
+          image: "./assets/img/weapons/Wst_Roller_Compact_01.png",
           name: "Carbon Roller Deco",
           unreleased: true,
           shotUnit: "flick",
@@ -884,7 +884,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Roller_Heavy_00.png",
+          image: "./assets/img/weapons/Wst_Roller_Heavy_00.png",
           name: "Dynamo Roller",
           shotUnit: "flick",
           sub: "Ink Mine",
@@ -904,7 +904,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Roller_Heavy_01.png",
+          image: "./assets/img/weapons/Wst_Roller_Heavy_01.png",
           name: "Gold Dynamo Roller",
           unreleased: true,
           shotUnit: "flick",
@@ -925,7 +925,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 6
         },
         {
-          image: "img/weapons/Wst_Roller_Hunter_00.png",
+          image: "./assets/img/weapons/Wst_Roller_Hunter_00.png",
           name: "Flingza Roller",
           shotUnit: "horizontal flick",
           sub: "Splash Wall",
@@ -945,7 +945,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 7
         },
         {
-          image: "img/weapons/Wst_Roller_Hunter_01.png",
+          image: "./assets/img/weapons/Wst_Roller_Hunter_01.png",
           name: "Foil Flingza Roller",
           unreleased: true,
           shotUnit: "horizontal flick",
@@ -972,7 +972,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 3,
       weapons: [
         {
-          image: "img/weapons/Wst_Roller_BrushMini_00.png",
+          image: "./assets/img/weapons/Wst_Roller_BrushMini_00.png",
           name: "Inkbrush",
           shotUnit: "flick",
           sub: "Splat Bomb",
@@ -992,7 +992,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Roller_BrushMini_01.png",
+          image: "./assets/img/weapons/Wst_Roller_BrushMini_01.png",
           name: "Inkbrush Nouveau",
           unreleased: true,
           shotUnit: "flick",
@@ -1013,7 +1013,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Roller_BrushNormal_00.png",
+          image: "./assets/img/weapons/Wst_Roller_BrushNormal_00.png",
           name: "Octobrush",
           shotUnit: "flick",
           sub: "Autobomb",
@@ -1033,7 +1033,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Roller_BrushNormal_H.png",
+          image: "./assets/img/weapons/Wst_Roller_BrushNormal_H.png",
           name: "Herobrush Replica",
           shotUnit: "flick",
           sub: "Autobomb",
@@ -1053,7 +1053,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Roller_BrushNormal_01.png",
+          image: "./assets/img/weapons/Wst_Roller_BrushNormal_01.png",
           name: "Octobrush Nouveau",
           unreleased: true,
           shotUnit: "flick",
@@ -1080,7 +1080,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 4,
       weapons: [
         {
-          image: "img/weapons/Wst_Shooter_BlasterMiddle_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_00.png",
           name: "Blaster",
           shotUnit: "shot",
           sub: "Toxic Mist",
@@ -1100,7 +1100,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterMiddle_H.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_H.png",
           name: "Hero Blaster Replica",
           shotUnit: "shot",
           sub: "Toxic Mist",
@@ -1120,7 +1120,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterMiddle_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_01.png",
           name: "Custom Blaster",
           shotUnit: "shot",
           sub: "Autobomb",
@@ -1140,7 +1140,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLong_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLong_00.png",
           name: "Range Blaster",
           unreleased: true,
           shotUnit: "shot",
@@ -1160,7 +1160,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLong_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLong_01.png",
           name: "Custom Range Blaster",
           unreleased: true,
           shotUnit: "shot",
@@ -1180,7 +1180,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLight_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLight_00.png",
           name: "Rapid Blaster",
           shotUnit: "shot",
           sub: "Ink Mine",
@@ -1200,7 +1200,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLight_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLight_01.png",
           name: "Rapid Blaster Deco",
           unreleased: true,
           shotUnit: "shot",
@@ -1221,7 +1221,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 6
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLightLong_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png",
           name: "Rapid Blaster Pro",
           unreleased: true,
           shotUnit: "shot",
@@ -1242,7 +1242,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 7
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLightLong_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLightLong_01.png",
           name: "Rapid Blaster Pro Deco",
           unreleased: true,
           shotUnit: "shot",
@@ -1263,7 +1263,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 8
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterShort_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterShort_00.png",
           name: "Luna Blaster",
           shotUnit: "shot",
           sub: "Splat Bomb",
@@ -1283,7 +1283,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 9
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterShort_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterShort_01.png",
           name: "Luna Blaster Neo",
           unreleased: true,
           shotUnit: "shot",
@@ -1304,7 +1304,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 10
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLightShort_00.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLightShort_00.png",
           name: "Clash Blaster",
           shotUnit: "shot",
           sub: "Splat Bomb",
@@ -1324,7 +1324,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 11
         },
         {
-          image: "img/weapons/Wst_Shooter_BlasterLightShort_01.png",
+          image: "./assets/img/weapons/Wst_Shooter_BlasterLightShort_01.png",
           name: "Clash Blaster Neo",
           unreleased: true,
           shotUnit: "shot",
@@ -1351,7 +1351,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 5,
       weapons: [
         {
-          image: "img/weapons/Wst_Umbrella_Normal_00.png",
+          image: "./assets/img/weapons/Wst_Umbrella_Normal_00.png",
           name: "Splat Brella",
           shotUnit: "shot",
           sub: "Sprinkler",
@@ -1371,7 +1371,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Umbrella_Normal_H.png",
+          image: "./assets/img/weapons/Wst_Umbrella_Normal_H.png",
           name: "Hero Brella Replica",
           shotUnit: "shot",
           sub: "Sprinkler",
@@ -1391,7 +1391,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Umbrella_Normal_01.png",
+          image: "./assets/img/weapons/Wst_Umbrella_Normal_01.png",
           name: "Sorella Brella",
           unreleased: true,
           shotUnit: "shot",
@@ -1418,7 +1418,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 6,
       weapons: [
         {
-          image: "img/weapons/Wst_Slosher_Strong_00.png",
+          image: "./assets/img/weapons/Wst_Slosher_Strong_00.png",
           name: "Slosher",
           shotUnit: "slosh",
           sub: "Suction Bomb",
@@ -1438,7 +1438,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Slosher_Strong_H.png",
+          image: "./assets/img/weapons/Wst_Slosher_Strong_H.png",
           name: "Hero Slosher Replica",
           sub: "Suction Bomb",
           special: "Tenta Missiles",
@@ -1457,7 +1457,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Slosher_Strong_01.png",
+          image: "./assets/img/weapons/Wst_Slosher_Strong_01.png",
           name: "Slosher Deco",
           unreleased: true,
           shotUnit: "slosh",
@@ -1478,7 +1478,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Slosher_Diffusion_00.png",
+          image: "./assets/img/weapons/Wst_Slosher_Diffusion_00.png",
           name: "Tri-Slosher",
           shotUnit: "slosh",
           sub: "Burst Bomb",
@@ -1498,7 +1498,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Slosher_Diffusion_01.png",
+          image: "./assets/img/weapons/Wst_Slosher_Diffusion_01.png",
           name: "Tri-Slosher Nouveau",
           unreleased: true,
           shotUnit: "slosh",
@@ -1519,7 +1519,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Slosher_Launcher_00.png",
+          image: "./assets/img/weapons/Wst_Slosher_Launcher_00.png",
           name: "Sloshing Machine",
           shotUnit: "slosh",
           sub: "Autobomb",
@@ -1538,7 +1538,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Slosher_Launcher_01.png",
+          image: "./assets/img/weapons/Wst_Slosher_Launcher_01.png",
           name: "Sloshing Machine Neo",
           unreleased: true,
           shotUnit: "slosh",
@@ -1563,7 +1563,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 7,
       weapons: [
         {
-          image: "img/weapons/Wst_Charger_Normal_00.png",
+          image: "./assets/img/weapons/Wst_Charger_Normal_00.png",
           name: "Splat Charger",
           shotUnit: "charge",
           sub: "Splat Bomb",
@@ -1583,7 +1583,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Charger_Normal_H.png",
+          image: "./assets/img/weapons/Wst_Charger_Normal_H.png",
           name: "Hero Charger Replica",
           shotUnit: "charge",
           sub: "Splat Bomb",
@@ -1603,7 +1603,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Charger_Normal_01.png",
+          image: "./assets/img/weapons/Wst_Charger_Normal_01.png",
           name: "Firefin Splat Charger",
           shotUnit: "charge",
           sub: "Splash Wall",
@@ -1623,7 +1623,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Charger_NormalScope_00.png",
+          image: "./assets/img/weapons/Wst_Charger_NormalScope_00.png",
           name: "Splatterscope",
           shotUnit: "charge",
           sub: "Splat Bomb",
@@ -1643,7 +1643,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Charger_NormalScope_01.png",
+          image: "./assets/img/weapons/Wst_Charger_NormalScope_01.png",
           name: "Firefin Splatterscope",
           shotUnit: "charge",
           sub: "Splash Wall",
@@ -1663,7 +1663,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Charger_Quick_00.png",
+          image: "./assets/img/weapons/Wst_Charger_Quick_00.png",
           name: "Classic Squiffer",
           shotUnit: "charge",
           sub: "Point Sensor",
@@ -1683,7 +1683,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Charger_Quick_01.png",
+          image: "./assets/img/weapons/Wst_Charger_Quick_01.png",
           name: "New Squiffer",
           unreleased: true,
           shotUnit: "charge",
@@ -1704,7 +1704,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 6
         },
         {
-          image: "img/weapons/Wst_Charger_Long_00.png",
+          image: "./assets/img/weapons/Wst_Charger_Long_00.png",
           name: "E-liter 4K",
           shotUnit: "charge",
           sub: "Ink Mine",
@@ -1724,7 +1724,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 7
         },
         {
-          image: "img/weapons/Wst_Charger_Long_01.png",
+          image: "./assets/img/weapons/Wst_Charger_Long_01.png",
           name: "Custom E-liter 4K",
           unreleased: true,
           shotUnit: "charge",
@@ -1745,7 +1745,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 8
         },
         {
-          image: "img/weapons/Wst_Charger_LongScope_00.png",
+          image: "./assets/img/weapons/Wst_Charger_LongScope_00.png",
           name: "E-liter 4K Scope",
           shotUnit: "charge",
           sub: "Ink Mine",
@@ -1765,7 +1765,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 9
         },
         {
-          image: "img/weapons/Wst_Charger_LongScope_01.png",
+          image: "./assets/img/weapons/Wst_Charger_LongScope_01.png",
           name: "Custom E-liter 4K Scope",
           unreleased: true,
           shotUnit: "charge",
@@ -1786,7 +1786,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 10
         },
         {
-          image: "img/weapons/Wst_Charger_Keeper_00.png",
+          image: "./assets/img/weapons/Wst_Charger_Keeper_00.png",
           name: "Goo Tuber",
           shotUnit: "charge",
           sub: "Suction Bomb",
@@ -1806,7 +1806,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 11
         },
         {
-          image: "img/weapons/Wst_Charger_Keeper_01.png",
+          image: "./assets/img/weapons/Wst_Charger_Keeper_01.png",
           name: "Custom Goo Tuber",
           unreleased: true,
           shotUnit: "charge",
@@ -1827,7 +1827,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 12
         },
         {
-          image: "img/weapons/Wst_Charger_Light_00.png",
+          image: "./assets/img/weapons/Wst_Charger_Light_00.png",
           name: "Bamboozler 14 Mk I",
           unreleased: true,
           shotUnit: "charge",
@@ -1846,7 +1846,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 13
         },
         {
-          image: "img/weapons/Wst_Charger_Light_01.png",
+          image: "./assets/img/weapons/Wst_Charger_Light_01.png",
           name: "Bamboozler 14 Mk II",
           unreleased: true,
           shotUnit: "charge",
@@ -1871,7 +1871,7 @@ angular.module('splatApp').weapons = function ($scope) {
       id: 8,
       weapons: [
         {
-          image: "img/weapons/Wst_Spinner_Standard_00.png",
+          image: "./assets/img/weapons/Wst_Spinner_Standard_00.png",
           name: "Heavy Splatling",
           shotUnit: "charge",
           sub: "Sprinkler",
@@ -1891,7 +1891,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 0
         },
         {
-          image: "img/weapons/Wst_Spinner_Standard_H.png",
+          image: "./assets/img/weapons/Wst_Spinner_Standard_H.png",
           name: "Hero Splatling Replica",
           shotUnit: "charge",
           sub: "Sprinkler",
@@ -1911,7 +1911,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 1
         },
         {
-          image: "img/weapons/Wst_Spinner_Standard_01.png",
+          image: "./assets/img/weapons/Wst_Spinner_Standard_01.png",
           name: "Heavy Splatling Deco",
           unreleased: true,
           shotUnit: "charge",
@@ -1932,7 +1932,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 2
         },
         {
-          image: "img/weapons/Wst_Spinner_Quick_00.png",
+          image: "./assets/img/weapons/Wst_Spinner_Quick_00.png",
           name: "Mini Splatling",
           shotUnit: "charge",
           sub: "Burst Bomb",
@@ -1952,7 +1952,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 3
         },
         {
-          image: "img/weapons/Wst_Spinner_Quick_01.png",
+          image: "./assets/img/weapons/Wst_Spinner_Quick_01.png",
           name: "Zink Mini Splatling",
           unreleased: true,
           shotUnit: "charge",
@@ -1973,7 +1973,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 4
         },
         {
-          image: "img/weapons/Wst_Spinner_Hyper_00.png",
+          image: "./assets/img/weapons/Wst_Spinner_Hyper_00.png",
           name: "Hydra Splatling",
           unreleased: true,
           shotUnit: "charge",
@@ -1992,7 +1992,7 @@ angular.module('splatApp').weapons = function ($scope) {
           id: 5
         },
         {
-          image: "img/weapons/Wst_Spinner_Hyper_01.png",
+          image: "./assets/img/weapons/Wst_Spinner_Hyper_01.png",
           name: "Custom Hydra Splatling",
           unreleased: true,
           shotUnit: "charge",

@@ -1,7 +1,7 @@
 angular.module('splatApp').hats = function($scope) {
 $scope.hats = [
   {
-    image: "img/gear/Hed_FST000.png",
+    image: "./assets/img/gear/Hed_FST000.png",
     name: "White Headband",
     main: "Ink Recovery Up",
     brand: "SquidForce",
@@ -9,7 +9,7 @@ $scope.hats = [
     id: 0
   },
   {
-    image: "img/gear/Hed_CAP000.png",
+    image: "./assets/img/gear/Hed_CAP000.png",
     name: "Urchins Cap",
     main: "Sub Power Up",
     brand: "Skalop",
@@ -17,7 +17,7 @@ $scope.hats = [
     id: 1
   },
   {
-    image: "img/gear/Hed_CAP001.png",
+    image: "./assets/img/gear/Hed_CAP001.png",
     name: "Lightweight Cap",
     main: "Swim Speed Up",
     brand: "Inkline",
@@ -25,7 +25,7 @@ $scope.hats = [
     id: 2
   },
   {
-    image: "img/gear/Hed_CAP002.png",
+    image: "./assets/img/gear/Hed_CAP002.png",
     name: "Takoroka Mesh",
     main: "Bomb Defense Up",
     brand: "Takoroka",
@@ -33,7 +33,7 @@ $scope.hats = [
     id: 3
   },
   {
-    image: "img/gear/Hed_CAP005.png",
+    image: "./assets/img/gear/Hed_CAP005.png",
     name: "Squidvader Cap",
     main: "Special Charge Up",
     brand: "Skalop",
@@ -41,7 +41,7 @@ $scope.hats = [
     id: 4
   },
   {
-    image: "img/gear/Hed_CAP006.png",
+    image: "./assets/img/gear/Hed_CAP006.png",
     name: "Camo Mesh",
     main: "Swim Speed Up",
     brand: "Firefin",
@@ -49,7 +49,7 @@ $scope.hats = [
     id: 5
   },
   {
-    image: "img/gear/Hed_CAP007.png",
+    image: "./assets/img/gear/Hed_CAP007.png",
     name: "Five-Panel Cap",
     main: "Comeback",
     brand: "Zekko",
@@ -57,7 +57,7 @@ $scope.hats = [
     id: 6
   },
   {
-    image: "img/gear/Hed_CAP009.png",
+    image: "./assets/img/gear/Hed_CAP009.png",
     name: "Backwards Cap",
     main: "Quick Respawn",
     brand: "Zekko",
@@ -65,7 +65,7 @@ $scope.hats = [
     id: 7
   },
   {
-    image: "img/gear/Hed_CAP014.png",
+    image: "./assets/img/gear/Hed_CAP014.png",
     name: "Cycle King Cap",
     main: "Bomb Defense Up",
     brand: "Tentatek",
@@ -73,7 +73,7 @@ $scope.hats = [
     id: 8
   },
   {
-    image: "img/gear/Hed_CAP019.png",
+    image: "./assets/img/gear/Hed_CAP019.png",
     name: "King Flip Mesh",
     main: "Run Speed Up",
     brand: "Enperry",
@@ -81,7 +81,7 @@ $scope.hats = [
     id: 9
   },
   {
-    image: "img/gear/Hed_CAP020.png",
+    image: "./assets/img/gear/Hed_CAP020.png",
     name: "Hickory Work Cap",
     main: "Special Power Up",
     brand: "Krak-On",
@@ -89,7 +89,7 @@ $scope.hats = [
     id: 10
   },
   {
-    image: "img/gear/Hed_CAP023.png",
+    image: "./assets/img/gear/Hed_CAP023.png",
     name: "Jellyvader Cap",
     main: "Ink Saver (Sub)",
     brand: "Skalop",
@@ -97,7 +97,7 @@ $scope.hats = [
     id: 11
   },
   {
-    image: "img/gear/Hed_NCP000.png",
+    image: "./assets/img/gear/Hed_NCP000.png",
     name: "Bobble Hat",
     main: "Quick Super Jump",
     brand: "Splash Mob",
@@ -105,7 +105,7 @@ $scope.hats = [
     id: 12
   },
   {
-    image: "img/gear/Hed_NCP002.png",
+    image: "./assets/img/gear/Hed_NCP002.png",
     name: "Striped Beanie",
     main: "Opening Gambit",
     brand: "Splash Mob",
@@ -113,7 +113,7 @@ $scope.hats = [
     id: 13
   },
   {
-    image: "img/gear/Hed_NCP004.png",
+    image: "./assets/img/gear/Hed_NCP004.png",
     name: "Special Forces Beret",
     main: "Opening Gambit",
     brand: "Forge",
@@ -121,7 +121,7 @@ $scope.hats = [
     id: 14
   },
   {
-    image: "img/gear/Hed_NCP008.png",
+    image: "./assets/img/gear/Hed_NCP008.png",
     name: "Knitted Hat",
     main: "Ink Resistance Up",
     brand: "Firefin",
@@ -129,7 +129,7 @@ $scope.hats = [
     id: 15
   },
   {
-    image: "img/gear/Hed_NCP009.png",
+    image: "./assets/img/gear/Hed_NCP009.png",
     name: "Annaki Beret",
     main: "Ink Resistance Up",
     brand: "Annaki",
@@ -137,7 +137,7 @@ $scope.hats = [
     id: 16
   },
   {
-    image: "img/gear/Hed_EYE000.png",
+    image: "./assets/img/gear/Hed_EYE000.png",
     name: "Retro Specs",
     main: "Quick Respawn",
     brand: "Splash Mob",
@@ -145,7 +145,7 @@ $scope.hats = [
     id: 17
   },
   {
-    image: "img/gear/Hed_EYE002.png",
+    image: "./assets/img/gear/Hed_EYE002.png",
     name: "Pilot Goggles",
     main: "Sub Power Up",
     brand: "Forge",
@@ -153,7 +153,7 @@ $scope.hats = [
     id: 18
   },
   {
-    image: "img/gear/Hed_EYE003.png",
+    image: "./assets/img/gear/Hed_EYE003.png",
     name: "Tinted Shades",
     main: "Last-Ditch Effort",
     brand: "Zekko",
@@ -161,7 +161,7 @@ $scope.hats = [
     id: 19
   },
   {
-    image: "img/gear/Hed_EYE005.png",
+    image: "./assets/img/gear/Hed_EYE005.png",
     name: "Snorkel Mask",
     main: "Ink Saver (Sub)",
     brand: "Forge",
@@ -169,7 +169,7 @@ $scope.hats = [
     id: 20
   },
   {
-    image: "img/gear/Hed_EYE007.png",
+    image: "./assets/img/gear/Hed_EYE007.png",
     name: "Fake Contacts",
     main: "Special Charge Up",
     brand: "Tentatek",
@@ -177,7 +177,7 @@ $scope.hats = [
     id: 21
   },
   {
-    image: "img/gear/Hed_EYE008.png",
+    image: "./assets/img/gear/Hed_EYE008.png",
     name: "18K Aviators",
     main: "Last-Ditch Effort",
     brand: "Rockenberg",
@@ -185,7 +185,7 @@ $scope.hats = [
     id: 22
   },
   {
-    image: "img/gear/Hed_EYE011.png",
+    image: "./assets/img/gear/Hed_EYE011.png",
     name: "Half-Rim Glasses",
     main: "Special Power Up",
     brand: "Splash Mob",
@@ -193,7 +193,7 @@ $scope.hats = [
     id: 23
   },
   {
-    image: "img/gear/Hed_HAT000.png",
+    image: "./assets/img/gear/Hed_HAT000.png",
     name: "Safari Hat",
     main: "Last-Ditch Effort",
     brand: "Forge",
@@ -201,7 +201,7 @@ $scope.hats = [
     id: 24
   },
   {
-    image: "img/gear/Hed_HAT002.png",
+    image: "./assets/img/gear/Hed_HAT002.png",
     name: "Camping Hat",
     main: "Special Power Up",
     brand: "Inkline",
@@ -209,7 +209,7 @@ $scope.hats = [
     id: 25
   },
   {
-    image: "img/gear/Hed_HAT003.png",
+    image: "./assets/img/gear/Hed_HAT003.png",
     name: "Blowfish Bell Hat",
     main: "Ink Recovery Up",
     brand: "Firefin",
@@ -217,7 +217,7 @@ $scope.hats = [
     id: 26
   },
   {
-    image: "img/gear/Hed_HAT004.png",
+    image: "./assets/img/gear/Hed_HAT004.png",
     name: "Bamboo Hat",
     main: "Ink Saver (Main)",
     brand: "Inkline",
@@ -225,7 +225,7 @@ $scope.hats = [
     id: 27
   },
   {
-    image: "img/gear/Hed_HAT005.png",
+    image: "./assets/img/gear/Hed_HAT005.png",
     name: "Straw Boater",
     main: "Quick Super Jump",
     brand: "Skalop",
@@ -233,7 +233,7 @@ $scope.hats = [
     id: 28
   },
   {
-    image: "img/gear/Hed_HAT008.png",
+    image: "./assets/img/gear/Hed_HAT008.png",
     name: "Bucket Hat",
     main: "Special Saver",
     brand: "SquidForce",
@@ -241,7 +241,7 @@ $scope.hats = [
     id: 29
   },
   {
-    image: "img/gear/Hed_HAT009.png",
+    image: "./assets/img/gear/Hed_HAT009.png",
     name: "Patched Hat",
     main: "Cold-Blooded",
     brand: "Skalop",
@@ -249,7 +249,7 @@ $scope.hats = [
     id: 30
   },
   {
-    image: "img/gear/Hed_HDP000.png",
+    image: "./assets/img/gear/Hed_HDP000.png",
     name: "Studio Headphones",
     main: "Ink Saver (Main)",
     brand: "Forge",
@@ -257,7 +257,7 @@ $scope.hats = [
     id: 31
   },
   {
-    image: "img/gear/Hed_HDP002.png",
+    image: "./assets/img/gear/Hed_HDP002.png",
     name: "Noise Cancelers",
     main: "Quick Respawn",
     brand: "Forge",
@@ -265,7 +265,7 @@ $scope.hats = [
     id: 32
   },
   {
-    image: "img/gear/Hed_HDP003.png",
+    image: "./assets/img/gear/Hed_HDP003.png",
     name: "Squidfin Hook Cans",
     main: "Ink Resistance Up",
     brand: "Forge",
@@ -273,7 +273,7 @@ $scope.hats = [
     id: 33
   },
   {
-    image: "img/gear/Hed_VIS001.png",
+    image: "./assets/img/gear/Hed_VIS001.png",
     name: "FishFry Visor",
     main: "Special Charge Up",
     brand: "Firefin",
@@ -281,7 +281,7 @@ $scope.hats = [
     id: 34
   },
   {
-    image: "img/gear/Hed_VIS002.png",
+    image: "./assets/img/gear/Hed_VIS002.png",
     name: "Sun Visor",
     main: "Sub Power Up",
     brand: "Tentatek",
@@ -289,7 +289,7 @@ $scope.hats = [
     id: 35
   },
   {
-    image: "img/gear/Hed_VIS003.png",
+    image: "./assets/img/gear/Hed_VIS003.png",
     name: "Takoroka Visor",
     main: "Quick Super Jump",
     brand: "Takoroka",
@@ -297,7 +297,7 @@ $scope.hats = [
     id: 36
   },
   {
-    image: "img/gear/Hed_MET000.png",
+    image: "./assets/img/gear/Hed_MET000.png",
     name: "Bike Helmet",
     main: "Ink Recovery Up",
     brand: "Skalop",
@@ -305,7 +305,7 @@ $scope.hats = [
     id: 37
   },
   {
-    image: "img/gear/Hed_MET005.png",
+    image: "./assets/img/gear/Hed_MET005.png",
     name: "Visor Skate Helmet",
     main: "Last-Ditch Effort",
     brand: "Skalop",
@@ -313,7 +313,7 @@ $scope.hats = [
     id: 38
   },
   {
-    image: "img/gear/Hed_MET006.png",
+    image: "./assets/img/gear/Hed_MET006.png",
     name: "MTB Helmet",
     main: "Tenacity",
     brand: "Zekko",
@@ -321,7 +321,7 @@ $scope.hats = [
     id: 39
   },
   {
-    image: "img/gear/Hed_MET007.png",
+    image: "./assets/img/gear/Hed_MET007.png",
     name: "Hockey Helmet",
     main: "Cold-Blooded",
     brand: "Forge",
@@ -329,7 +329,7 @@ $scope.hats = [
     id: 40
   },
   {
-    image: "img/gear/Hed_MSK001.png",
+    image: "./assets/img/gear/Hed_MSK001.png",
     name: "Paintball Mask",
     main: "Comeback",
     brand: "Forge",
@@ -337,7 +337,7 @@ $scope.hats = [
     id: 41
   },
   {
-    image: "img/gear/Hed_MSK003.png",
+    image: "./assets/img/gear/Hed_MSK003.png",
     name: "Skull Bandana",
     main: "Special Saver",
     brand: "Forge",
@@ -345,7 +345,7 @@ $scope.hats = [
     id: 42
   },
   {
-    image: "img/gear/Hed_MSK004.png",
+    image: "./assets/img/gear/Hed_MSK004.png",
     name: "Painter's Mask",
     main: "Cold-Blooded",
     brand: "SquidForce",
@@ -353,7 +353,7 @@ $scope.hats = [
     id: 43
   },
   {
-    image: "img/gear/Hed_MSK005.png",
+    image: "./assets/img/gear/Hed_MSK005.png",
     name: "Annaki Mask",
     main: "Opening Gambit",
     brand: "Annaki",
@@ -361,7 +361,7 @@ $scope.hats = [
     id: 44
   },
   {
-    image: "img/gear/Hed_MSK007.png",
+    image: "./assets/img/gear/Hed_MSK007.png",
     name: "Squid Facemask",
     main: "Ink Saver (Main)",
     brand: "SquidForce",
@@ -369,7 +369,7 @@ $scope.hats = [
     id: 45
   },
   {
-    image: "img/gear/Hed_MSK008.png",
+    image: "./assets/img/gear/Hed_MSK008.png",
     name: "Firefin Facemask",
     main: "Run Speed Up",
     brand: "Firefin",
@@ -377,7 +377,7 @@ $scope.hats = [
     id: 46
   },
   {
-    image: "img/gear/Hed_MSK009.png",
+    image: "./assets/img/gear/Hed_MSK009.png",
     name: "King Facemask",
     main: "Ink Saver (Sub)",
     brand: "Enperry",
@@ -385,7 +385,7 @@ $scope.hats = [
     id: 47
   },
   {
-    image: "img/gear/Hed_HBD002.png",
+    image: "./assets/img/gear/Hed_HBD002.png",
     name: "Squash Headband",
     main: "Special Saver",
     brand: "Zink",
@@ -393,7 +393,7 @@ $scope.hats = [
     id: 48
   },
   {
-    image: "img/gear/Hed_HBD003.png",
+    image: "./assets/img/gear/Hed_HBD003.png",
     name: "Tennis Headband",
     main: "Comeback",
     brand: "Tentatek",
@@ -401,7 +401,7 @@ $scope.hats = [
     id: 49
   },
   {
-    image: "img/gear/Hed_HBD005.png",
+    image: "./assets/img/gear/Hed_HBD005.png",
     name: "Soccer Headband",
     main: "Tenacity",
     brand: "Tentatek",
@@ -409,7 +409,7 @@ $scope.hats = [
     id: 50
   },
   {
-    image: "img/gear/Hed_COP100.png",
+    image: "./assets/img/gear/Hed_COP100.png",
     name: "Headlamp Helmet",
     main: "Quick Respawn",
     brand: "Grizzco",
@@ -417,7 +417,7 @@ $scope.hats = [
     id: 51
   },
   {
-    image: "img/gear/Hed_AMB000.png",
+    image: "./assets/img/gear/Hed_AMB000.png",
     name: "Squid Hairclip",
     main: "Swim Speed Up",
     brand: "amiibo",
@@ -425,7 +425,7 @@ $scope.hats = [
     id: 52
   },
   {
-    image: "img/gear/Hed_AMB001.png",
+    image: "./assets/img/gear/Hed_AMB001.png",
     name: "Samurai Helmet",
     main: "Quick Super Jump",
     brand: "amiibo",
@@ -433,7 +433,7 @@ $scope.hats = [
     id: 53
   },
   {
-    image: "img/gear/Hed_AMB002.png",
+    image: "./assets/img/gear/Hed_AMB002.png",
     name: "Power Mask",
     main: "Bomb Defense Up",
     brand: "amiibo",
@@ -441,7 +441,7 @@ $scope.hats = [
     id: 54
   },
   {
-    image: "img/gear/Hed_AMB003.png",
+    image: "./assets/img/gear/Hed_AMB003.png",
     name: "Squid Clip-Ons",
     main: "Opening Gambit",
     brand: "amiibo",
@@ -449,7 +449,7 @@ $scope.hats = [
     id: 55
   },
   {
-    image: "img/gear/Hed_AMB004.png",
+    image: "./assets/img/gear/Hed_AMB004.png",
     name: "Squinja Mask",
     main: "Quick Respawn",
     brand: "amiibo",
@@ -457,7 +457,7 @@ $scope.hats = [
     id: 56
   },
   {
-    image: "img/gear/Hed_AMB005.png",
+    image: "./assets/img/gear/Hed_AMB005.png",
     name: "Power Mask Mk I",
     main: "Ink Resistance Up",
     brand: "amiibo",
@@ -465,7 +465,7 @@ $scope.hats = [
     id: 57
   },
   {
-    image: "img/gear/Hed_MSN000.png",
+    image: "./assets/img/gear/Hed_MSN000.png",
     name: "Hero Headset Replica",
     main: "Run Speed Up",
     brand: "Cuttlegear",
@@ -473,7 +473,7 @@ $scope.hats = [
     id: 58
   },
   {
-    image: "img/gear/Hed_MSN004.png",
+    image: "./assets/img/gear/Hed_MSN004.png",
     name: "Armor Helmet Replica",
     main: "Tenacity",
     brand: "Cuttlegear",
@@ -481,7 +481,7 @@ $scope.hats = [
     id: 59
   },
   {
-    image: "img/gear/Hed_MSN101.png",
+    image: "./assets/img/gear/Hed_MSN101.png",
     name: "Hero Headphones Replica",
     main: "Special Saver",
     brand: "Cuttlegear",

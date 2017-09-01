@@ -120,7 +120,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                                             <img ng-src="{{::getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                                           </span>
                                           <span style="position:absolute; right:0px; bottom:4px;">
-                                            <img ng-if="item.brand!='Grizzco'" src="img/misc/annie.png" style="width:24px;" />
+                                            <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" style="width:24px;" />
                                           </span>
                                           </div>
                                           <div ng-repeat="item in filtered.notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
