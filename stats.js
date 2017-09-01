@@ -7,6 +7,7 @@ function Stat(name, calc, max, unit) {
   this.label = null;
 }
 
+//TODO: clean all this up
 angular.module('splatApp').stats = function ($scope) {
 $scope.stats = {
   'Swim Speed': new Stat('Swim Speed', function(loadout) {
@@ -50,16 +51,13 @@ $scope.stats = {
         var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
         this.desc = speed.toFixed(2) + ' Distance Units/frame';
         this.value = ((speed / 0.96) * 100)
-        this.label = this.value.toFixed(1) + '%';
+        this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
       }, 150, '%'),
     'Run Speed (Firing)': new Stat('Run Speed (Firing)', function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
           this.name = 'Run Speed (Rolling)'
-          this.desc = loadout.weapon.baseSpeed.toFixed(2) + ' Distance Units/frame';
-          this.label = this.value.toFixed(1) + '%';
-          return ((loadout.weapon.baseSpeed / 0.96) * 100).toFixed(1);
         }
         else {
           this.name = 'Run Speed (Firing)'
@@ -68,7 +66,7 @@ $scope.stats = {
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
         this.desc = speed.toFixed(2) + ' Distance Units/frame';
         this.value = ((speed / 0.96) * 100)
-        this.label = this.value.toFixed(1) + '%';
+        this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
       }, 150, '%'),
     'Ink Recovery Speed (Squid)': new Stat('Ink Recovery Speed (Squid)', function(loadout) {
