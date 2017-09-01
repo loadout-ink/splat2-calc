@@ -39,7 +39,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   {{stat}}
                   </div>
                   <div class="col-sm-6 col-xs-9 nopadding">
-                  <uib-progressbar max="100" type="test" value="value" class="statbar mini" />
+                  <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />
                   </div>
                   </div>
                   </div>
@@ -132,7 +132,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                                                               <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                                                             </span>
                                                             <span style="position:absolute;left:10px;top:5px;" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true">
-                                                              <span class="fa fa-5x fa-ban text-danger" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
+                                                              <span class="fa fa-5x fa-ban " ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
                                                             </span>
                                                             </div>
 

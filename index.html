@@ -45,9 +45,9 @@
     <img src="./img/ui/logo.png" />
   </header>
   <div class="container" id="maincontainer">
-    <div class="row match-my-cols">
-      <div class="col-md-6 col-xs-12" id="loadout">
-        <div class="row">
+    <div class="row">
+      <div id="loadout" class="col-md-6 col-xs-12">
+         <div class="row">
           <div class="col-md-12">
             <div class="row">
               <div class="col-sm-6 nopadding">
@@ -57,10 +57,10 @@
                       {{loadout.weapon.name}}
                   </div>
                   <div class="row">
-                    <div class="col-sm-5" align=center>
+                    <div class="col-xs-5" align=center>
                       <img id="weaponicon" fallback-img ng-src="{{loadout.weapon.image}}"/>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-xs-7">
                         <div class="row">
                         <div class="col-xs-4 nopadding">
                         <img fallback-img ng-src="{{getSubByName(loadout.weapon.sub).image}}" class="subspeicon" /><br>
@@ -79,7 +79,6 @@
               </div>
               <div class="col-sm-6 nopadding">
                 <div class="itemcard purplestripes" id="utils">
-
                   <div class="row">
                     <div class="col-xs-4">
                   <span id="copybtn" class="icon-button fa-3x fa fa-clipboard" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"></span>
@@ -108,7 +107,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="row">
-              <div class="col-md-4 col-sm-4 itemcard redstripes">
+              <div class="col-md-4 col-sm-4 nopadding">
+                <div class="itemcard redstripes">
               <div class="row cardheader">
                 <span ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                 Head
@@ -118,7 +118,7 @@
                     <div class="gearWrapper" style="position:relative">
                       <img fallback-img class="gearicon" ng-src="{{loadout.head.equipped.image}}" />
                       <span style="position:absolute;left:20px;top:5px;">
-                        <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
+                        <span class="fa fa-4x fa-ban" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
                       </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
                       <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
@@ -133,7 +133,9 @@
                   <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-4 itemcard tealstripes">
+              </div>
+              <div class="col-md-4 col-sm-4 nopadding">
+                <div class="itemcard tealstripes">
               <div class="row cardheader">
                 <span ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                 Clothes
@@ -143,7 +145,7 @@
                   <div class="gearWrapper" style="position:relative" align="center">
                     <img fallback-img class="gearicon" ng-src="{{loadout.clothes.equipped.image}}" />
                     <span style="position:absolute;left:20px;top:5px;">
-                      <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
+                      <span class="fa fa-4x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
                     </span>
                       <span style="position:absolute; right:0px; bottom:0px;">
                       <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" style="width:24px;" />
@@ -158,7 +160,9 @@
                   <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-4 itemcard orangestripes">
+              </div>
+              <div class="col-md-4 col-sm-4 nopadding">
+                <div class="itemcard orangestripes">
                 <div class="row cardheader">
                   <span ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
                   Shoes
@@ -171,7 +175,7 @@
                           <img src="img/ui/notPossible.png" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)" />
                         </span>
                         <span style="position:absolute;left:20px;top:5px;">
-                          <span class="fa fa-4x fa-ban text-danger" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
+                          <span class="fa fa-4x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
                         </span>
                       </div>
                     </div>
@@ -185,15 +189,17 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
       <div id="abilitybox" ability-box>
         <div class="row">
-          <div class="blackstripes">
+          <div>
             <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
           </div>
         </div>
+        <hr>
         <div class="row">
-          <div class="blackstripes">
+          <div>
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
             <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
@@ -201,20 +207,20 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-xs-12 statbox matched">
+    <div class="col-md-6 col-xs-12 statbox">
       <div class="row">
       <h4 style="font-family:Splatfont">Stats (Hover/touch for details) </h4>
         <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
           <div class="statlabel">
           {{stat.name}}
-          <uib-progressbar type="test" value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar">{{stat.calc(loadout) + stat.unit}}</uib-progressbar>
+          <uib-progressbar type="pink" value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright">{{stat.label}}</span></uib-progressbar>
         </div>
       </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <uib-accordion>
-            <div uib-accordion-group class="panel-stats" is-open="status.open">
+            <div uib-accordion-group ng-click="status.open=!status.open" class="panel-stats" is-open="status.open">
               <uib-accordion-heading>
                 Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
               </uib-accordion-heading>
@@ -235,7 +241,7 @@
                 </tbody>
               </table>
             </div>
-            <div uib-accordion-group class="panel-stats" is-open="status.speOpen">
+            <div uib-accordion-group ng-click="status.speOpen=!status.speOpen" class="panel-stats" is-open="status.speOpen">
               <uib-accordion-heading>
                 Special Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
               </uib-accordion-heading>
