@@ -1521,7 +1521,6 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "img/weapons/Wst_Slosher_Launcher_00.png",
           name: "Sloshing Machine",
-          unreleased: true,
           shotUnit: "slosh",
           sub: "Autobomb",
           special: "Sting Ray",
@@ -1529,6 +1528,7 @@ angular.module('splatApp').weapons = function ($scope) {
           specialCost: 170,
           inkSaver: "Middle",
           speedLevel: "Middle",
+          baseSpeed: 0.72,
           price: 12600,
           stats: {
             "Range": 60,

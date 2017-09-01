@@ -31,6 +31,9 @@ angular
     $scope.loadout.shoes.equipped = $scope.shoes[0];
 
      $scope.$watch('loadout', function() {
+       Object.keys($scope.stats).forEach(function(currentKey) {
+           $scope.stats[currentKey].calc($scope.loadout);
+       });
        history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
      },true);
 

@@ -36,7 +36,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-12" id="minibar-container">
                   <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
                   <div class="col-sm-6 col-xs-3 nopadding minibar-label">
-                  {{stat}}
+                  {{::stat}}
                   </div>
                   <div class="col-sm-6 col-xs-9 nopadding">
                   <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />
@@ -55,7 +55,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   <div class="col-md-12">
                   <div class="row">
                   <div class="picker">
-                  <img ng-repeat="weapon in availableWeapons()" ng-src="{{weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{weapon.name}}" tooltip-append-to-body="true" style="width:80px;height:auto"/>
+                  <img ng-repeat="weapon in availableWeapons()" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{::weapon.name}}" tooltip-append-to-body="true" style="width:80px;height:auto"/>
                   </div>
                   </div>
                   </div>
@@ -74,7 +74,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
         `,
         gearPicker : `<div class="row">
                 <div class="col-md-12">
-                  <div class="itemcard {{background}}" id="dialog">
+                  <div class="itemcard {{::background}}" id="dialog">
                   <div class="row cardheader">
                   Gear Picker
                   </div>
@@ -102,34 +102,34 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
                   </div>
                   <div class="col-md-8" style="text-align:center; padding-left:0px">
                   <div class="picker">
-                  <div ng-click="selectGear(item)"  ng-repeat="item in filterByMain(set,slot.main.name).primary" uib-tooltip="{{item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                  <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
                     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto"/>
                     <span style="position:absolute; left:0px; bottom:0px;">
-                      <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
+                      <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
                     </span>
                     <span style="position:absolute; right:0px; top:4px;">
-                      <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                      <img ng-src="{{::getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                     </span>
                   </div>
-                        <div ng-click="selectGear(item)" ng-repeat="item in filterByMain(set,slot.main.name).secondary" uib-tooltip="{{item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
-                                          <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
+                        <div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                                          <img class="gearicon" ng-src="{{::item.image}}" style="height:80px; width:auto;"/>
                                           <span style="position:absolute; left:0px; bottom:0px;">
-                                            <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
+                                            <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
                                           </span>
                                           <span style="position:absolute; right:0px; top:4px;">
-                                            <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                            <img ng-src="{{::getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                                           </span>
                                           <span style="position:absolute; right:0px; bottom:4px;">
                                             <img ng-if="item.brand!='Grizzco'" src="img/misc/annie.png" style="width:24px;" />
                                           </span>
                                           </div>
-                                          <div ng-repeat="item in filterByMain(set,slot.main.name).notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
-                                                            <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto;"/>
+                                          <div ng-repeat="item in filtered.notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+                                                            <img class="gearicon" ng-src="{{::item.image}}" style="height:80px; width:auto;"/>
                                                             <span style="position:absolute; left:0px; bottom:0px;">
-                                                              <img ng-src="{{brands[item.brand].image}}" style="width:28px; height:auto;"/>
+                                                              <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
                                                             </span>
                                                             <span style="position:absolute; right:0px; top:4px;">
-                                                              <img ng-src="{{getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
+                                                              <img ng-src="{{::getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
                                                             </span>
                                                             <span style="position:absolute;left:10px;top:5px;" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true">
                                                               <span class="fa fa-5x fa-ban " ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
@@ -151,12 +151,32 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
             </div>`,
             whatsNew: `<div class="row">
                     <div class="col-md-12">
-                      <div class="itemcard purplestripes" id="dialog">
+                      <div class="itemcard basic purplestripes" id="dialog">
                       <div class="row cardheader">
                       What's New?
                       </div>
-                      <div class="row">
-                      <span class="splatfont-white">PH</span>
+                      <div class="row basic-content">
+                      PH
+                      <div class="row" style="text-align:center">
+                        <div class="col-xs-12">
+                          <button class="btn" type="button" ng-click="ok()">Got it!</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            `,
+            about: `<div class="row">
+                    <div class="col-md-12">
+                      <div class="itemcard purplestripes" id="dialog">
+                      <div class="row cardheader">
+                      About
+                      </div>
+                      <div class="row basic-content" align=center>
+                      This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as the input and insight of several members of the Inkademy and Splatoon Developers discord servers.
+                      <br><br>Thanks to everyone who gave me help and data!<br><br>
+                      Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>.
                       <div class="row" style="text-align:center">
                         <div class="col-xs-12">
                           <button class="btn" type="button" ng-click="ok()">Got it!</button>
@@ -213,7 +233,22 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       animation: $scope.animationsEnabled,
       template: templates["whatsNew"],
       windowTemplateUrl: 'blankModal.html',
-      controller: 'ChangelogCtrl'
+      controller: 'BasicCtrl'
+    });
+
+    modalInstance.result.then(function(results) {
+
+    }, function() {
+
+    });
+  };
+
+  $scope.openAbout = function() {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["about"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'BasicCtrl'
     });
 
     modalInstance.result.then(function(results) {
@@ -323,6 +358,8 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibMod
   $scope.getSkillByName = getSkillByName
   $scope.brands = brands
   $scope.background = background
+  if(slot.main != null) $scope.filtered = filterByMain(set,slot.main.name)
+  else $scope.filtered = filterByMain(set,null)
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;
@@ -337,8 +374,7 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibMod
   };
 });
 
-
-angular.module('splatApp').controller('ChangelogCtrl', function($scope, $uibModalInstance) {
+angular.module('splatApp').controller('BasicCtrl', function($scope, $uibModalInstance) {
   $scope.ok = function() {
     $uibModalInstance.close();
   };

@@ -1,4 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
+  margin-bottom: 50px;
   background: #222 !important;
   background-image: url("img/ui/bg-primary.jpg") !important;
 }
@@ -69,6 +75,7 @@ body {
   box-shadow: -2px 4px 4px 2px #000;
   background: #222;
   background-image: url("img/ui/zig-zag.png"), url("img/ui/zig-zag.png"), url("img/ui/zig-zag.png");
+  background-size: 80px 80px;
 }
 
 #abilitybox {
@@ -81,13 +88,53 @@ body {
   margin-right: 4px;
 }
 
+.footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-family: "Splatfont";
+  color: #999;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.footer a, .footer a:visited {
+  text-decoration: none !important;
+  color: #bbb !important;
+}
+
+.footer a:hover, .footer a:focus, .footer a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.basic-content {
+  color: #fff;
+  font-family: "Splatfont";
+  font-size: 12pt;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.basic-content a, .basic-content a:visited {
+  text-decoration: none !important;
+  color: #19e1ba !important;
+}
+
+.basic-content a:hover, .basic-content a:focus, .basic-content a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 #statbox {
   padding-top:5px;
   font-family: "Splatfont";
   background: #c9c9c9;
   background-image: url("img/ui/bg-dots.png"), url("img/ui/bg-spots.png");
-  background-attachment:fixed;
+  background-size: 50px 50px, 300px 300px;
   box-shadow: 2px 4px 4px 2px #000;
+    margin-bottom: 100px;
 }
 
 #statbox h3 {
@@ -314,6 +361,8 @@ body {
     overflow-y:scroll;
     background: rgba(0,0,0,0.2);
     background-image: url("img/ui/bg-dots.png");
+    background-size: 50px 50px;
+    background-attachment:local;
     border-bottom: none;
     border-top: none;
   }
@@ -341,6 +390,8 @@ body {
     padding-top:4px;
     padding-bottom:2px;
     background: rgba(20,20,20,0.8);
+    background-image: url("img/ui/bg-dots.png");
+    background-size: 50px 50px;
     font-family: "Paintball";
     font-size: 16pt;
     text-align:center;
@@ -442,9 +493,9 @@ body {
                   border-radius: 5px;
                   background: repeating-linear-gradient(
                     45deg,
-                    #0eed5d,
-                    #0eed5d 30px,
-                    #09cd4e 30px,
-                    #09cd4e 60px
+                    #8ffe19,
+                    #8ffe19 30px,
+                    #5ade09 30px,
+                    #5ade09 60px
                     );
                   }

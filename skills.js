@@ -144,9 +144,12 @@ $scope.getSkillByName = function(name) {
 }
 
 $scope.getSkillById = function(skillid) {
-  return $scope.skills.filter(function(skill) {
+  var results = $scope.skills.filter(function(skill) {
     return skill.id == skillid
   })[0]
+  if(results == undefined) {
+    return null;
+  }
 }
 
 $scope.getExclusiveSkills = function(slot) {

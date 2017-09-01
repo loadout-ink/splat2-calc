@@ -3,6 +3,7 @@ function Stat(name, calc, max, unit) {
   this.calc = calc;
   this.max = max;
   this.unit = unit;
+  this.value = 0;
   this.desc = null;
   this.label = null;
 }
@@ -23,10 +24,10 @@ $scope.stats = {
         speed = speed * 0.9;
       }
       this.desc = (((speed / 2.02) * 100)).toFixed(1) + '% swim speed';
-      this.value = ((speed / 2.02) * 100)
+      this.value = speed
       this.label = speed.toFixed(2) + ' DU/f';
       return speed.toFixed(2);
-    }, 2.43, '%'),
+    }, 2.43),
     'Run Speed': new Stat('Run Speed', function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         var baseSpeed = 0.96;
@@ -41,19 +42,19 @@ $scope.stats = {
         }
         var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
         this.desc = speed.toFixed(2) + ' Distance Units/frame';
-        this.value = ((speed / 0.96) * 100);
+        this.value = speed;
         this.label = speed.toFixed(2) + ' DU/f';
         return speed.toFixed(2);
-      }, 1.44, '%'),
+      }, 1.44),
     'Run Speed (Enemy Ink)': new Stat('Run Speed (Enemy Ink)', function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
         var baseSpeed = 0.32;
         var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
         this.desc = speed.toFixed(2) + ' Distance Units/frame';
-        this.value = ((speed / 0.96) * 100)
+        this.value = speed
         this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
-      }, 150, '%'),
+      }, 1.44),
     'Run Speed (Firing)': new Stat('Run Speed (Firing)', function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
@@ -68,7 +69,7 @@ $scope.stats = {
         this.value = ((speed / 0.96) * 100)
         this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
-      }, 150, '%'),
+      }, 150),
     'Ink Recovery Speed (Squid)': new Stat('Ink Recovery Speed (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
       var seconds = 3 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (600 / 7))
@@ -76,7 +77,7 @@ $scope.stats = {
       this.value = ((3 / seconds) * 100)
       this.label = this.value.toFixed(1) + '%';
       return this.value.toFixed(1);
-    }, 154, '%'),
+    }, 154),
     'Ink Recovery Speed (Kid)': new Stat('Ink Recovery Speed (Kid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
       var seconds = 10 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 50)
@@ -84,7 +85,7 @@ $scope.stats = {
       this.value = ((10 / seconds) * 100);
       this.label = this.value.toFixed(1) + '%';
       return this.value.toFixed(1);
-    }, 251, '%'),
+    }, 251),
     'Ink Consumption (Main)': new Stat('Ink Consumption (Main)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Main)');
       var coeff = (200 / 3)
@@ -93,8 +94,9 @@ $scope.stats = {
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.desc = (reduction*100).toFixed(1) + '% reduction'
       this.label = costPerShot.toFixed(1) + ' ink/' + loadout.weapon.shotUnit;
+      this.value = costPerShot;
       return costPerShot;
-    }, 100, '%'),
+    }, 100),
     'Ink Consumption (Sub)': new Stat('Ink Consumption (Sub)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
       var coeff = (600 / 7)
@@ -102,25 +104,27 @@ $scope.stats = {
       if(sub.inkSaver == 'Low') coeff = 100
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
       var costPerSub = sub.cost * (1 - reduction)
-      this.value = ((1 - reduction) * 100)
+      this.value = costPerSub;
       this.desc = reduction.toFixed(1) + '% reduction';
       this.label = costPerSub.toFixed(1) + ' ink';
       return costPerSub;
-    }, 100, '%'),
+    }, 100),
     'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
       this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
       this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + 'p for special')
       this.label = (chargeSpeed * 100).toFixed(1) + '%';
+      this.value = chargeSpeed;
       return (chargeSpeed * 100).toFixed(1);
-    }, 130, '%'),
+    }, 1.3),
     'Special Saved': new Stat('Special Saved', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
       var loss  = (0.5 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+      this.value = loss;
       this.label = (loss * 100).toFixed(1) + '%';
       return (loss * 100).toFixed(1);
-    }, 100, '%'),
+    }, 1),
 //TODO: clean this up a bit
     'Special Power': new Stat('Special Power', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Power Up');
@@ -129,6 +133,7 @@ $scope.stats = {
       var base = 0;
       var results = 0;
       this.desc = null;
+      this.label = "???";
       this.name = 'Special Power (???)'
       switch(equippedSpecial.name) {
         case 'Suction-Bomb Launcher':
@@ -143,6 +148,7 @@ $scope.stats = {
           this.name = 'Special Power (Duration)'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.label = results.toFixed(2) + 's'
+          this.value = results;
           return results.toFixed(2);
           break;
         case 'Ink Armor':
@@ -153,6 +159,7 @@ $scope.stats = {
           this.name = 'Special Power (Duration)'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.label = results.toFixed(2) + 's';
+          this.value = results;
           return results.toFixed(2);
           break;
         case 'Inkjet':
@@ -164,6 +171,7 @@ $scope.stats = {
           this.name = 'Special Power (Duration)'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.label = results.toFixed(2) + 's';
+          this.value = results;
           return results.toFixed(2);
           break;
         case 'Sting Ray':
@@ -174,6 +182,7 @@ $scope.stats = {
           this.name = 'Special Power (Duration)'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.label = results.toFixed(2) + 's';
+          this.value = results;
           return results.toFixed(2);
           break;
         case 'Baller':
@@ -184,6 +193,7 @@ $scope.stats = {
           this.name = 'Special Power (Baller HP)'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))
           this.label = results.toFixed(2) + ' HP';
+          this.value = results;
           return results.toFixed(1);
           break;
         case 'Tenta Missiles':
@@ -195,6 +205,7 @@ $scope.stats = {
           this.name = 'Special Power (Reticule Size)'
           results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)*100
           this.label = results.toFixed(1) + '%'
+          this.value = results;
           return results.toFixed(1);
           break;
         case 'Splashdown':
@@ -206,26 +217,29 @@ $scope.stats = {
           results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
           this.desc = (base*results).toFixed(1) + ' Distance Units'
           this.label = (results*100).toFixed(1) + '%';
+          this.value = results;
           return (results*100).toFixed(1);
           break;
       }
       return results;
-    }, 10, 's'),
+    }, 10),
 //TODO: get effects for all subs
     'Sub Power (Bomb Range)': new Stat('Sub Power (Bomb Range) *', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Sub Power Up');
       var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
       this.desc = ('No formulas available for some subs. Possibly inaccurate.')
       this.label = (range * 100).toFixed(1) + '%';
+      this.value = range*100;
       return (range * 100).toFixed(1);
-    }, 150, '%'),
+    }, 150),
     'Bomb Damage Taken': new Stat('Bomb Damage Taken *', function(loadout) {
       var defScore = loadout.calcAbilityScore('Bomb Defense Up');
       var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
       this.desc = ('Possibly inaccurate.');
       this.label = (damageTaken * 100).toFixed(1) + '%';
+      this.value = damageTaken*100;
       return (damageTaken * 100).toFixed(1);
-    }, 100, '%'),
+    }, 100),
     'Super Jump Time (Squid)': new Stat('Super Jump Time (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var windup = 71
@@ -237,7 +251,7 @@ $scope.stats = {
       this.value = (windupFrames + mainFrames) / 60
       this.label = this.value.toFixed(2) + 's';
       return ((windupFrames + mainFrames) / 60).toFixed(2);
-    }, 3.65, 's'),
+    }, 3.65),
     'Super Jump Time (Kid)': new Stat('Super Jump Time (Kid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var windup = 92
@@ -249,13 +263,14 @@ $scope.stats = {
       this.value = (windupFrames + mainFrames) / 60
       this.label = this.value.toFixed(2) + 's';
       return ((windupFrames + mainFrames) / 60).toFixed(2);
-    }, 4, 's'),
+    }, 4),
     'Tracking Time': new Stat('Tracking Time', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
       this.label = (8 * (1 - trackReduction)).toFixed(2) + 's';
+      this.value = (8 * (1 - trackReduction))
       return (8 * (1 - trackReduction)).toFixed(2);
-    }, 8, 's')
+    }, 8)
   }
   $scope.getStatByName = function(name) {
     return $scope.stats[name]
@@ -276,6 +291,6 @@ $scope.stats = {
   }
   $scope.getAdjustedSpecialCost = function(loadout) {
     var stat = $scope.getStatByName('Special Charge Speed');
-    return Math.floor(loadout.weapon.specialCost / (stat.calc(loadout)/100))
+    return Math.floor(loadout.weapon.specialCost / (stat.value))
   }
 }

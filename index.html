@@ -31,8 +31,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body>
-  <div ng-app="splatApp" ng-controller="splatController">
+<body ng-app="splatApp" ng-controller="splatController">
+  <div>
       <script type="text/ng-template" id="blankModal.html">
         <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
             <div class="modal-dialog " role="document">
@@ -194,15 +194,15 @@
       <div id="abilitybox" ability-box>
         <div class="row">
           <div>
-            <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
           </div>
         </div>
         <hr>
         <div class="row">
           <div>
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
+            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
           </div>
         </div>
       </div>
@@ -213,16 +213,18 @@
         <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="stat in stats">
           <div class="statlabel">
           {{stat.name}}
-          <uib-progressbar type="pink" value="stat.calc(loadout)" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright">{{stat.label}}</span></uib-progressbar>
+          <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright">{{stat.label}}</span></uib-progressbar>
         </div>
       </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <uib-accordion>
-            <div uib-accordion-group ng-click="status.open=!status.open" class="panel-stats" is-open="status.open">
+            <div uib-accordion-group class="panel-stats" is-open="status.open">
               <uib-accordion-heading>
+                <div>
                 Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                </div>
               </uib-accordion-heading>
               <table class="table table-sm">
                 <tr>
@@ -241,9 +243,11 @@
                 </tbody>
               </table>
             </div>
-            <div uib-accordion-group ng-click="status.speOpen=!status.speOpen" class="panel-stats" is-open="status.speOpen">
+            <div uib-accordion-group class="panel-stats" is-open="status.speOpen">
               <uib-accordion-heading>
+                <div>
                 Special Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
+                </div>
               </uib-accordion-heading>
               <table class="table table-sm">
                 <tr>
@@ -268,6 +272,11 @@
         </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container">
+    <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >about</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | devipotato 2017</span>
+    </div>
+  </footer>
   <div id="draggable-parent"></div>
   </body>
   </html>
