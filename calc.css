@@ -21,6 +21,10 @@ body {
   url(./assets/fonts/ProjectPaintball.woff) format("ttf");
 }
 
+.col-md-6 .gearWrapper {
+  padding-left: 18px;
+}
+
 .equal {
   display: flex;
   display: -webkit-flex;

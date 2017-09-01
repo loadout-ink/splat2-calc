@@ -150,6 +150,7 @@ $scope.getSkillById = function(skillid) {
   if(results == undefined) {
     return null;
   }
+  else return results;
 }
 
 $scope.getExclusiveSkills = function(slot) {
