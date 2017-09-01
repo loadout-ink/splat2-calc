@@ -1,5 +1,6 @@
 body {
   background: #222 !important;
+  background-image: url("img/ui/bg-primary.jpg") !important;
 }
 
 @font-face {
@@ -62,7 +63,7 @@ body {
 
 #loadout {
   background: #222;
-  background-image: url("img/ui/bg-dots.png");
+  background-image: url("img/ui/zig-zag.png"), url("img/ui/zig-zag.png"), url("img/ui/zig-zag.png");
 }
 
 #abilitybox {

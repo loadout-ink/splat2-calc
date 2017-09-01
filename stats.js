@@ -58,6 +58,7 @@ $scope.stats = {
         if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
           this.name = 'Run Speed (Rolling)'
           this.desc = loadout.weapon.baseSpeed.toFixed(2) + ' Distance Units/frame';
+          this.label = this.value.toFixed(1) + '%';
           return ((loadout.weapon.baseSpeed / 0.96) * 100).toFixed(1);
         }
         else {
