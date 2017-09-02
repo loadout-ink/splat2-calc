@@ -23,7 +23,6 @@ $scope.stats = {
       if(loadout.hasAbility('Ninja Squid')) {
         speed = speed * 0.9;
       }
-      this.desc = (((speed / 2.02) * 100)).toFixed(1) + '% swim speed';
       this.value = speed
       this.label = speed.toFixed(2) + ' DU/f';
       return speed.toFixed(2);
@@ -41,7 +40,6 @@ $scope.stats = {
           coeff = (420/9);
         }
         var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
-        this.desc = speed.toFixed(2) + ' Distance Units/frame';
         this.value = speed;
         this.label = speed.toFixed(2) + ' DU/f';
         return speed.toFixed(2);
@@ -50,7 +48,6 @@ $scope.stats = {
         var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
         var baseSpeed = 0.32;
         var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
-        this.desc = speed.toFixed(2) + ' Distance Units/frame';
         this.value = speed
         this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
@@ -65,7 +62,6 @@ $scope.stats = {
         }
         var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
-        this.desc = speed.toFixed(2) + ' Distance Units/frame';
         this.value = ((speed / 0.96) * 100)
         this.label = speed.toFixed(2) + ' DU/f';
         return this.value.toFixed(1);
@@ -264,6 +260,17 @@ $scope.stats = {
       this.label = this.value.toFixed(2) + 's';
       return ((windupFrames + mainFrames) / 60).toFixed(2);
     }, 4),
+    'Quick Respawn Time': new Stat('Quick Respawn Time', function(loadout) {
+      var abilityScore = loadout.calcAbilityScore('Quick Respawn');
+      var death = 30;
+      var splatcam = 360;
+      var spawn = 120;
+      var mod = 1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))/60
+      var spawnFrames = death + (splatcam*mod) + spawn;
+      this.value = spawnFrames/60
+      this.label = (spawnFrames/60).toFixed(2) + 's';
+      return this.value.toFixed(2)
+    }, 8.5),
     'Tracking Time': new Stat('Tracking Time', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40

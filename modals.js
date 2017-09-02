@@ -61,10 +61,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-6" align=left>
     <button class="btn" type="button" ng-click="ok()">OK</button>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-6" align=right>
     <button class="btn" type="button" ng-click="cancel()">Cancel</button>
     </div>
     </div>
@@ -139,10 +139,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-6" align=left>
     <button class="btn" type="button" ng-click="ok()">OK</button>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-6" align=right>
     <button class="btn" type="button" ng-click="cancel()">Cancel</button>
     </div>
     </div>
@@ -173,7 +173,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     About
     </div>
     <div class="row basic-content" align=center>
-    This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as the input and insight of several members of the Inkademy and Splatoon Developers discord servers.
+    Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br>
+    This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as the input and insight of several members of the Inkademy and Splatoon Developers servers on Discord.
     <br><br>Thanks to everyone who gave me help and data!<br><br>
     Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>.
     <div class="row" style="text-align:center">

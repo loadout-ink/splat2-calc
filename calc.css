@@ -22,7 +22,7 @@ body {
 }
 
 .col-md-6 .gearWrapper {
-  padding-left: 18px;
+  margin-left: 18px;
 }
 
 .equal {
@@ -83,6 +83,7 @@ body {
 }
 
 #abilitybox {
+  padding-top:15px;
   text-align:center;
 }
 
@@ -307,6 +308,7 @@ body {
     margin:4px;
     padding-top:0px;
     overflow:hidden;
+    box-shadow: 0px 2px 8px 2px #000;
   }
 
   .itemcard .abilityicon {
