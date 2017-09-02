@@ -32,15 +32,24 @@ body {
 }
 
 .splatheader {
+
+  background-image:  url("assets/img/ui/headerbg.png"), url("assets/img/ui/noise.png"), repeating-linear-gradient(
+    45deg,
+    #222,
+    #222 30px,
+    #444 30px,
+    #444 60px
+    ) !important;
+    background-repeat: repeat-x;
   box-shadow: 0 2px 10px 2px #000;
   z-index:1 !important ;
   background: #222;
   text-align: center;
-  padding:20px;
+  padding:5px;
 }
 
 .splatheader img {
-  height:100px;
+  height:130px;
 }
 
 .notEligible {
@@ -77,7 +86,7 @@ body {
 #loadout {
   padding-top:5px;
   box-shadow: -2px 4px 4px 2px #000;
-  background: #222;
+  background: #555;
   background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
   background-size: 80px 80px;
 }
@@ -197,7 +206,7 @@ body {
   1px 1px 0 #000;
   background: repeating-linear-gradient(
     45deg,
-    #f22d8a,
+      #f22d8a,
     #f22d8a 15px,
     #d11b71 15px,
     #d11b71 30px
