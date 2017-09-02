@@ -5,6 +5,7 @@
   <script src="lib/jquery/jquery.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
   <script src="lib/angular-animate.min.js"></script>
+  <script src="lib/angular-aria.min.js"></script>
   <script src="lib/angular-touch.min.js"></script>
   <script src="lib/jquery-ui-custom/jquery-ui.js"></script>
   <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
@@ -81,10 +82,10 @@
                 <div class="itemcard purplestripes" id="utils">
                   <div class="row">
                     <div class="col-xs-4">
-                  <span id="copybtn" class="icon-button fa-3x fa fa-clipboard" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"></span>
+                  <button class="icon-button copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span id="copybtn" class="fa fa-clipboard"></span>
                 </div>
                   <div class="col-xs-4">
-                  <span class="icon-button fa-3x fa fa-undo" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"></span>
+                  <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
                 </div>
                   <div class="col-xs-4">
                   <span class="icon-button fa-3x fa fa-bomb" ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"></span>
@@ -125,12 +126,12 @@
                     </span>
                     </div>
                   </div>
-                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" style="background-image:url({{loadout.head.getmainIcon()}})"></div></div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[0]" style="background-image:url({{loadout.head.getSubIcon(0)}})"></div></div>
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[1]" style="background-image:url({{loadout.head.getSubIcon(1)}})"></div></div>
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[0]" style="background-image:url({{loadout.head.getSubIcon(0)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[1]" style="background-image:url({{loadout.head.getSubIcon(1)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[2]" style="background-image:url({{loadout.head.getSubIcon(2)}})"></div></div>
                 </div>
               </div>
               </div>
@@ -152,12 +153,12 @@
                     </span>
                   </div>
                 </div>
-                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
+                  <div class="col-md-6 col-xs-6 nopadding" align="center"><div tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main"  contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.clothes.getmainIcon()}})"></div></div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[0]" style="background-image:url({{loadout.clothes.getSubIcon(0)}})"></div></div>
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[1]" style="background-image:url({{loadout.clothes.getSubIcon(1)}})"></div></div>
-                  <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[0]" style="background-image:url({{loadout.clothes.getSubIcon(0)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[1]" style="background-image:url({{loadout.clothes.getSubIcon(1)}})"></div></div>
+                  <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" style="background-image:url({{loadout.clothes.getSubIcon(2)}})"></div></div>
                 </div>
               </div>
               </div>
@@ -179,12 +180,12 @@
                       </span>
                       </div>
                     </div>
-                    <div class="col-md-6 col-xs-6 nopadding" align="center"><div class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.shoes.getmainIcon()}})"></div></div>
+                    <div class="col-md-6 col-xs-6 nopadding" align="center"><div tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" style="background-image:url({{loadout.shoes.getmainIcon()}})"></div></div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})"></div></div>
-                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
-                    <div class="col-xs-4 nopadding" align="center"><div class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
+                    <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" style="background-image:url({{loadout.shoes.getSubIcon(0)}})"></div></div>
+                    <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" style="background-image:url({{loadout.shoes.getSubIcon(1)}})"></div></div>
+                    <div class="col-xs-4 nopadding" align="center"><div tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" style="background-image:url({{loadout.shoes.getSubIcon(2)}})"></div></div>
                   </div>
             </div>
           </div>

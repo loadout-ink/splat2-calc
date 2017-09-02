@@ -102,6 +102,10 @@ body {
   margin-right: 4px;
 }
 
+#abilitybox hr {
+  border-top: 3px dotted rgba(255,255,255,0.6);
+}
+
 .footer {
   position:absolute;
   bottom: 0;
@@ -275,8 +279,20 @@ body {
 
   .icon-button {
     cursor:pointer;
+    background: none;
+    border: none;
     color: #fff;
-    font-size:20pt;
+    padding: 0px;
+    font-size:28pt;
+    outline: none;
+  }
+
+  .icon-button:focus {
+    text-shadow:
+   -1px -1px 0 #f22d8a,
+    1px -1px 0 #f22d8a,
+    -1px 1px 0 #f22d8a,
+     1px 1px 0 #f22d8a;
   }
 
   .fa.green {

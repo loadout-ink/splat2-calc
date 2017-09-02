@@ -1,5 +1,5 @@
 angular
-  .module('splatApp', ['ui.bootstrap', 'ngAnimate'])
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
   .controller('splatController', ['$scope', function splatCtrl($scope, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
