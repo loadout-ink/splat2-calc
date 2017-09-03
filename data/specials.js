@@ -5,7 +5,8 @@ angular.module('splatApp').specials = function ($scope) {
       image: "./assets/img/subspe/Wsp_SuperMissile.png",
       damage: {
         "Direct": 150,
-        "Near": 30
+        "Near": 50,
+        "Far": 30
       }
     },
     {
