@@ -207,6 +207,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .ability-wrapper {
+  margin-top: -10px;
   display:flex;
   justify-content: space-around;
   padding-left: 10px;
@@ -414,7 +415,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .itemcard .gear-wrapper {
   width: 100px;
-  height: 90px;
+  height: 100px;
   background: none;
 }
 
