@@ -1,6 +1,6 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
-  .controller('splatController', ['$scope', function splatCtrl($scope, $uibModal, $log) {
+  .controller('splatController', ['$scope', '$timeout', function splatCtrl($scope, $timeout, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -10,17 +10,14 @@ angular
     angular.module('splatApp').specials($scope);
     angular.module('splatApp').gear($scope);
 
+    angular.module('splatApp').clipboard($scope, $timeout);
     angular.module('splatApp').util($scope);
 
     $scope.loadout = new Loadout();
-    $scope.clipboard = new Clipboard('#copybtn');
     $scope.status = {}
 
     $scope.screenshotMode = false;
 
-    $scope.clipboard.on('error', function(e) {
-      $scope.copyLink();
-    })
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
     }
@@ -75,10 +72,6 @@ angular
 
     $scope.encodedURL = function() {
       return window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout()
-    }
-
-    $scope.copyLink = function() {
-      window.prompt("Sharable URL", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
     }
 
     $scope.randomizeBuild = function() {

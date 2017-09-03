@@ -8,6 +8,27 @@ document.addEventListener('click', function(e) {
   $('body').removeClass('show-focus-outlines');
 });
 
+angular.module('splatApp').clipboard = function($scope, $timeout) {
+    $scope.clipboard = new Clipboard('#copybtn');
+    $scope.showCopy = false;
+    $scope.clipboard.on('success', function(e) {
+      $scope.$apply(function() {
+        $scope.showCopy = true;
+      })
+      $timeout(function() {
+        $scope.showCopy = false;
+      }, 750)
+    })
+
+    $scope.clipboard.on('error', function(e) {
+      $scope.copyLink();
+    })
+
+    $scope.copyLink = function() {
+      window.prompt("Sharable URL", window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout())
+    }
+}
+
 angular.module('splatApp')
 .directive('draggableAbility', function() {
   return {

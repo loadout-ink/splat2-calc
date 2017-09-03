@@ -85,7 +85,7 @@
                 <div class="card purplestripes" id="utils">
                   <div class="row" ng-hide="screenshotMode">
                     <div class="col-xs-3">
-                  <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard"></span>
+                  <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard" uib-tooltip="Copied!" tooltip-placement="bottom" tooltip-trigger="{'none':'none'}" tooltip-is-open="showCopy" tooltip-append-to-body="true"></span>
                 </div>
                   <div class="col-xs-3">
                   <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="Toggle Screenshot Mode" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
