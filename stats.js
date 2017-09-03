@@ -89,7 +89,7 @@ $scope.stats = {
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.desc = (reduction*100).toFixed(1) + '% reduction'
-      this.label = costPerShot.toFixed(1) + ' ink/' + loadout.weapon.shotUnit;
+      this.label = costPerShot.toFixed(2) + '% tank/' + loadout.weapon.shotUnit;
       this.value = costPerShot;
       return costPerShot;
     }, 100),
@@ -102,7 +102,7 @@ $scope.stats = {
       var costPerSub = sub.cost * (1 - reduction)
       this.value = costPerSub;
       this.desc = reduction.toFixed(1) + '% reduction';
-      this.label = costPerSub.toFixed(1) + ' ink';
+      this.label = costPerSub.toFixed(2) + '% tank';
       return costPerSub;
     }, 100),
     'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
@@ -334,7 +334,7 @@ $scope.stats = {
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
       this.label = (8 * (1 - trackReduction)).toFixed(2) + 's';
       this.value = (8 * (1 - trackReduction))
-      this.desc = "Tracking time of Point Sensor/Ink Mine"
+      this.desc = "Point Sensor/Ink Mine duration"
       return (8 * (1 - trackReduction)).toFixed(2);
     }, 8)
   }

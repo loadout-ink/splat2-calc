@@ -26,6 +26,16 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   url(./assets/fonts/ProjectPaintball.woff) format("ttf");
 }
 
+.gearWrapper {
+    width: 64px;
+    height: 64px;
+}
+
+.picker .gearWrapper {
+  width: 80px;
+  height: 80px;
+}
+
 .col-md-6 .gearWrapper {
   margin-left: 18px;
 }
@@ -364,6 +374,9 @@ body:not(.show-focus-outlines) [tabindex]:focus {
     padding-left: 10px;
     padding-right: 10px;
     height:auto;
+  }
+  .basic-content h4 {
+    margin-bottom: 0px !important;
   }
 
   #gearpicker-stats {

@@ -155,7 +155,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     What's New?
     </div>
     <div class="row basic-content">
-    PH
+    <h4>Version 1.0</h4>
+    <ul>
+    <li>Initial release.</li>
+    <li>Some special/sub scaling is still missing, as well as Bomb Defense Up.</li>
+    <li>Some values may be slightly inaccurate. Please leave an issue <a href="http://github.com/DeviPotato/splat2-calc/" target="_blank">on GitHub</a> with sources if you have corrections.</li>
+    </ul>
     <div class="row" style="text-align:center">
     <div class="col-xs-12">
     <button class="btn" type="button" ng-click="ok()">Got it!</button>
@@ -176,6 +181,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br>
     This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord.
     <br><br>Thanks to everyone who gave me help and data!<br><br>
+    Many of the formulas used can be seen on <a href="https://splatoonwiki.org/wiki/User:Heddy/Charts" target="_blank">Heddy's charts</a> on Inkipedia.<br><br>
     Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>.
     <div class="row" style="text-align:center">
     <div class="col-xs-12">
