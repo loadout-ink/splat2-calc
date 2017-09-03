@@ -101,7 +101,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-8" style="text-align:center; padding-left:0px">
     <div class="picker">
-    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
     <img class="gearicon" ng-src="{{item.image}}" style="height:80px; width:auto"/>
     <span style="position:absolute; left:0px; bottom:0px;">
     <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
@@ -110,7 +110,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}" style="width:28px; height:auto; border-radius: 50%; background: rgba(0,0,0,0.8);"/>
     </span>
     </div>
-    <div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+    <div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
     <img class="gearicon" ng-src="{{::item.image}}" style="height:80px; width:auto;"/>
     <span style="position:absolute; left:0px; bottom:0px;">
     <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
@@ -122,7 +122,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" style="width:24px;" />
     </span>
     </div>
-    <div ng-repeat="item in filtered.notEligible" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
+    <div ng-repeat="item in filtered.notEligible track by item.id" class="gearWrapper" style="position:relative; display:inline-block; margin:0px">
     <img class="gearicon" ng-src="{{::item.image}}" style="height:80px; width:auto;"/>
     <span style="position:absolute; left:0px; bottom:0px;">
     <img ng-src="{{::brands[item.brand].image}}" style="width:28px; height:auto;"/>
@@ -174,7 +174,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content" align=center>
     Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br>
-    This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as the input and insight of several members of the Inkademy and Splatoon Developers servers on Discord.
+    This calculator was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord.
     <br><br>Thanks to everyone who gave me help and data!<br><br>
     Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>.
     <div class="row" style="text-align:center">

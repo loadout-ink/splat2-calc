@@ -9,6 +9,11 @@ body {
   background-image: url("assets/img/ui/bg-primary.jpg") !important;
 }
 
+body:not(.show-focus-outlines) button:focus,
+body:not(.show-focus-outlines) [tabindex]:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: "Paintball";
   src: url(./assets/fonts/ProjectPaintball.woff) format("woff"),
@@ -278,21 +283,11 @@ body {
   }
 
   .icon-button {
-    cursor:pointer;
     background: none;
     border: none;
     color: #fff;
     padding: 0px;
     font-size:28pt;
-    outline: none;
-  }
-
-  .icon-button:focus {
-    text-shadow:
-   -1px -1px 0 #f22d8a,
-    1px -1px 0 #f22d8a,
-    -1px 1px 0 #f22d8a,
-     1px 1px 0 #f22d8a;
   }
 
   .fa.green {
@@ -359,7 +354,7 @@ body {
   }
 
   #utils {
-    padding-top:15px;
+    padding-top:10px;
     height: 105px;
     text-align: center;
   }
@@ -459,9 +454,9 @@ body {
       background: repeating-linear-gradient(
         45deg,
         #dbe826,
-        #dbe826 30px,
-        #c4d412 30px,
-        #c4d412 60px
+        #dbe826 20px,
+        #c4d412 20px,
+        #c4d412 40px
         );
       }
 
@@ -469,9 +464,9 @@ body {
         background: repeating-linear-gradient(
           45deg,
           #d63e53,
-          #d63e53 30px,
-          #f0624a 30px,
-          #f0624a 60px
+          #d63e53 20px,
+          #f0624a 20px,
+          #f0624a 40px
           );
         }
 
@@ -479,9 +474,9 @@ body {
           background: repeating-linear-gradient(
             45deg,
             #19e1ba,
-            #19e1ba 30px,
-            #06be8a 30px,
-            #06be8a 60px
+            #19e1ba 20px,
+            #06be8a 20px,
+            #06be8a 40px
             );
           }
 
@@ -489,9 +484,9 @@ body {
             background: repeating-linear-gradient(
               45deg,
               #f07807,
-              #f07807 30px,
-              #d25012 30px,
-              #d25012 60px
+              #f07807 20px,
+              #d25012 20px,
+              #d25012 40px
               );
             }
 
@@ -509,9 +504,9 @@ body {
                 background: repeating-linear-gradient(
                   45deg,
                   #842cd6,
-                  #842cd6 30px,
-                  #6b01bb 30px,
-                  #6b01bb 60px
+                  #842cd6 20px,
+                  #6b01bb 20px,
+                  #6b01bb 40px
                   );
                 }
 

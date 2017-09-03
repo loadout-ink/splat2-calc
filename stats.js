@@ -116,10 +116,20 @@ $scope.stats = {
     }, 1.3),
     'Special Saved': new Stat('Special Saved', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
-      var loss  = (0.5 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
-      this.value = loss;
-      this.label = (loss * 100).toFixed(1) + '%';
-      return (loss * 100).toFixed(1);
+      var baseKept = 0.5;
+      if(loadout.hasAbility('Respawn Punisher')) {
+        abilityScore = 0;
+        baseKept = 0.425;
+        this.value = baseKept;
+        this.label = baseKept*100 + '%';
+        this.desc = 'Special Saver nullified by Respawn Punisher.';
+        return (kept * 100).toFixed(1);
+      }
+      var kept  = (baseKept + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+      this.value = kept;
+      this.label = (kept * 100).toFixed(1) + '%';
+      this.desc = null;
+      return (kept * 100).toFixed(1);
     }, 1),
 //TODO: clean this up a bit
     'Special Power': new Stat('Special Power', function(loadout) {
@@ -207,7 +217,7 @@ $scope.stats = {
         case 'Splashdown':
           coeff = 110;
           base = 110;
-          this.max = 127.4;
+          this.max = 1.274;
           this.unit = '%'
           this.name = 'Special Power (Splash Diameter)'
           results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
@@ -218,23 +228,54 @@ $scope.stats = {
           break;
       }
       return results;
-    }, 10),
+    }, 100),
 //TODO: get effects for all subs
-    'Sub Power (Bomb Range)': new Stat('Sub Power (Bomb Range) *', function(loadout) {
+    'Sub Power': new Stat('Sub Power', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Sub Power Up');
-      var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
-      this.desc = ('No formulas available for some subs. Possibly inaccurate.')
-      this.label = (range * 100).toFixed(1) + '%';
-      this.value = range*100;
+      var equippedSub = $scope.getSubByName(loadout.weapon.sub)
+      this.name = 'Sub Power (???)'
+      this.value = 0;
+      this.label = 'Unavailable'
+      switch(equippedSub.name) {
+        case 'Burst Bomb':
+        case 'Splat Bomb':
+        case 'Suction Bomb':
+        case 'Autobomb':
+        case 'Point Sensor':
+          var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+          this.label = (range * 100).toFixed(1) + '%';
+          this.value = range*100;
+          this.name = 'Sub Power (Bomb Range)';
+          return (range * 100).toFixed(1);
+          break;
+        case 'Curling Bomb':
+          this.name = 'Sub Power (Bomb Speed)';
+          break;
+        case 'Ink Mine':
+          this.name = 'Sub Power (Mine Radius)';
+          break;
+        case 'Splash Wall':
+          this.name = 'Sub Power (Wall HP)';
+          break;
+        case 'Sprinkler':
+          this.name = 'Sub Power (Full-Power Duration)';
+          break;
+        case 'Squid Beakon':
+          this.name = 'Sub Power (Jump Speed to Beakon)';
+          break;
+      }
       return (range * 100).toFixed(1);
     }, 150),
-    'Bomb Damage Taken': new Stat('Bomb Damage Taken *', function(loadout) {
-      var defScore = loadout.calcAbilityScore('Bomb Defense Up');
-      var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
-      this.desc = ('Possibly inaccurate.');
-      this.label = (damageTaken * 100).toFixed(1) + '%';
-      this.value = damageTaken*100;
-      return (damageTaken * 100).toFixed(1);
+    'Bomb Damage Taken': new Stat('Bomb Damage Taken', function(loadout) {
+      // var defScore = loadout.calcAbilityScore('Bomb Defense Up');
+      // var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
+      // this.desc = ('Possibly inaccurate.');
+      // this.label = (damageTaken * 100).toFixed(1) + '%';
+      // this.value = damageTaken*100;
+      // return (damageTaken * 100).toFixed(1);
+      this.label = 'Unavailable';
+      this.value = 0;
+      return 0;
     }, 100),
     'Super Jump Time (Squid)': new Stat('Super Jump Time (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
@@ -262,20 +303,33 @@ $scope.stats = {
     }, 4),
     'Quick Respawn Time': new Stat('Quick Respawn Time', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Respawn');
+      this.name = 'Quick Respawn Time';
       var death = 30;
-      var splatcam = 360;
+      var splatcam = 354;
       var spawn = 120;
+      if(loadout.hasAbility('Respawn Punisher')) {
+        abilityScore = 0;
+        splatcam += 74;
+        var spawnFrames = death + splatcam + spawn;
+        this.value = spawnFrames/60;
+        this.name = 'Respawn Time';
+        this.label = (spawnFrames/60).toFixed(2) + 's';
+        this.desc = 'Quick Respawn nullified by Respawn Punisher.';
+        return this.value.toFixed(2);
+      }
       var mod = 1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))/60
       var spawnFrames = death + (splatcam*mod) + spawn;
       this.value = spawnFrames/60
       this.label = (spawnFrames/60).toFixed(2) + 's';
+      this.desc = "Respawn time when splatted without splatting others."
       return this.value.toFixed(2)
-    }, 8.5),
+    }, 9.6),
     'Tracking Time': new Stat('Tracking Time', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
       var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
       this.label = (8 * (1 - trackReduction)).toFixed(2) + 's';
       this.value = (8 * (1 - trackReduction))
+      this.desc = "Tracking time of Point Sensor/Ink Mine"
       return (8 * (1 - trackReduction)).toFixed(2);
     }, 8)
   }
