@@ -155,7 +155,7 @@ $scope.getSkillById = function(skillid) {
 
 $scope.getExclusiveSkills = function(slot) {
   return $scope.skills.filter(function(skill) {
-    if(skill.exclusive) if(skill.exclusive==slot) return true;
+    if(skill.exclusive) return true;
   })
 }
 

@@ -48,6 +48,7 @@
   <div class="container" id="maincontainer">
     <div class="row">
       <div id="loadout" class="col-md-6 col-xs-12">
+        <div style="margin-right:5px !important">
          <div class="row">
           <div class="col-md-12">
             <div class="row">
@@ -82,7 +83,7 @@
                 <div class="itemcard purplestripes" id="utils">
                   <div class="row">
                     <div class="col-xs-4">
-                  <button class="icon-button copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span id="copybtn" class="fa fa-clipboard"></span>
+                  <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard"></span>
                 </div>
                   <div class="col-xs-4">
                   <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
@@ -192,25 +193,20 @@
         </div>
         </div>
       </div>
-      <div id="abilitybox" ability-box>
-        <div class="row">
-          <div>
+      <div class="row" ability-box id="abilitybox">
             <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
-          </div>
-        </div>
         <hr>
-        <div class="row">
-          <div>
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.head.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.clothes.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
-            <img fallback-img ng-repeat="skill in getExclusiveSkills('loadout.shoes.main')" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
-          </div>
-        </div>
-      </div>
+            <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
     </div>
-    <div class="col-md-6 col-xs-12" id="statbox">
+  </div>
+  </div>
+    <div class="col-md-6 col-xs-12 nopadding">
+      <div style="margin-left:5px !important">
+      <div id="statbox" class="nopadding">
       <div class="row">
-      <h3>Stats</h4>
+        <div class="row cardheader">
+      Stats
+      </div>
         <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }">
           <div class="statlabel">
           {{stat.name}}
@@ -270,8 +266,10 @@
             </uib-accordion>
         </div>
       </div> -->
+    </div>
         </div>
     </div>
+  </div>
   </div>
   <footer class="footer">
     <div class="container">

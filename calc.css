@@ -100,15 +100,17 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #loadout {
   padding-top:5px;
-  box-shadow: -2px 4px 4px 2px #000;
-  background: #555;
-  background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
-  background-size: 80px 80px;
 }
 
 #abilitybox {
+  margin-top:5px;
+  border-radius: 25px;
+  background: #555;
+  background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
+  background-size: 80px 80px;
   padding-top:15px;
   text-align:center;
+  box-shadow: 0px 2px 8px 2px #000;
 }
 
 #abilitybox .abilityicon {
@@ -161,13 +163,22 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 #statbox {
-  padding-top:5px;
+  padding:10px !important;
+  padding-top: 0px !important;
+  overflow-x: hidden;
+  margin-top: 8px;
   font-family: "Splatfont";
   background: #c9c9c9;
   background-image: url("assets/img/ui/bg-dots.png"), url("assets/img/ui/bg-spots.png");
   background-size: 50px 50px, 300px 300px;
-  box-shadow: 2px 4px 4px 2px #000;
-    margin-bottom: 100px;
+  box-shadow: 0px 2px 8px 2px #000;
+  margin-bottom: 100px;
+  padding-bottom: 15px;
+  border-radius: 25px;
+}
+
+#statbox .cardheader {
+  margin-bottom: 5px;
 }
 
 #statbox h3 {
@@ -244,10 +255,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   }
 
   #maincontainer {
-  }
-
-  .abilitybox .col-md-12 {
-    padding: 8px;
   }
 
   .nopadding {
