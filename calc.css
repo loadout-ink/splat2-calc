@@ -238,16 +238,15 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   box-shadow: 0 0 0 1px #000;
 }
 
-.small {
-  width:48px;
-  height:48px;
+.abilityicon.sub {
+  width:40px;
+  height:40px;
 }
 
-.large {
-  width:64px;
-  height:64px;
+.abilityicon.main {
+  width:50px;
+  height:50px;
 }
-
 
 .footer {
   position:absolute;
@@ -396,14 +395,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   color: #ccc !important;
 }
 
-.edit-button {
-  float:right;
-  margin-right:16px;
-  font-size:12pt;
-  padding-top:5px;
-  cursor:pointer;
-}
-
 .card {
   overflow-x:hidden;
   border-radius: 25px;
@@ -549,6 +540,14 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size: 16pt;
   text-align:center;
   color: #fff;
+  position: relative;
+}
+
+.cardheader .icon-button {
+  position: absolute;
+  font-size: 14pt;
+  right: 20px;
+  top: 8px;
 }
 
 .row.match-my-cols {
@@ -563,6 +562,22 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .panel-stats {
   border: 0px !important;
 
+}
+
+.screenshot-filler {
+  position: relative;
+  height: 100% !important;
+}
+
+.screenshot-filler img {
+  height: 80px;
+}
+
+.screenshot-filler span {
+  position: absolute;
+  right: 20px;
+  bottom: -4px;
+  font-size: 10pt;
 }
 
 .panel-stats .panel-heading {

@@ -16,6 +16,8 @@ angular
     $scope.clipboard = new Clipboard('#copybtn');
     $scope.status = {}
 
+    $scope.screenshotMode = false;
+
     $scope.clipboard.on('error', function(e) {
       $scope.copyLink();
     })

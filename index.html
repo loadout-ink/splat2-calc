@@ -55,7 +55,7 @@
               <div class="col-sm-6 nopadding">
                 <div class="card neonstripes" id="weapon">
                   <div class="row cardheader">
-                  <span ng-controller="ModalCtrl" ng-click="openWeaponPicker()" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
+                  <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openWeaponPicker()" ><span class="glyphicon glyphicon-pencil"></span></button>
                       {{loadout.weapon.name}}
                   </div>
                   <div class="row">
@@ -83,23 +83,33 @@
               </div>
               <div class="col-sm-6 nopadding">
                 <div class="card purplestripes" id="utils">
-                  <div class="row">
-                    <div class="col-xs-4">
+                  <div class="row" ng-hide="screenshotMode">
+                    <div class="col-xs-3">
                   <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard"></span>
                 </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-3">
+                  <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="Toggle Screenshot Mode" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
+                </div>
+                  <div class="col-xs-3">
                   <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
                 </div>
-                  <div class="col-xs-4">
-                  <button class="icon-button" ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
+                  <div class="col-xs-3">
+                  <button class="icon-button"ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
                 </div>
                 </div>
-                <div class="row">
+                <div class="row" ng-hide="screenshotMode">
                   <div class="col-xs-12">
                     <span>
                     ver. 1.0 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="What's New?" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                   </span>
                   </div>
+                </div>
+                <div class="row screenshot-filler" ng-show="screenshotMode" ng-click="screenshotMode=!screenshotMode">
+
+                    <img src="assets/img/ui/logo-custom.png" /><br>
+                    <span>
+                      calc.ink
+                    </span>
                 </div>
               </div>
             </div>
@@ -113,7 +123,7 @@
               <div class="col-md-4 col-sm-4 nopadding">
               <div class="card itemcard redstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
+                <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" ><span class="glyphicon glyphicon-pencil"></span></button>
                 Head
               </div>
                 <div class="row">
@@ -131,10 +141,10 @@
                 </div>
                 <div class="row">
                   <div class="ability-wrapper">
-                  <img tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" ng-src="{{loadout.head.getmainIcon()}}" />
-                  <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[0]" ng-src="{{loadout.head.getSubIcon(0)}}" />
-                  <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[1]" ng-src="{{loadout.head.getSubIcon(1)}}" />
-                  <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.head.subs[2]" ng-src="{{loadout.head.getSubIcon(2)}}" />
+                  <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.head.main" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" ng-src="{{loadout.head.getmainIcon()}}" />
+                  <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.head.subs[0]" ng-src="{{loadout.head.getSubIcon(0)}}" />
+                  <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.head.subs[1]" ng-src="{{loadout.head.getSubIcon(1)}}" />
+                  <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.head.subs[2]" ng-src="{{loadout.head.getSubIcon(2)}}" />
                   </div>
                 </div>
               </div>
@@ -142,7 +152,7 @@
               <div class="col-md-4 col-sm-4 nopadding">
                 <div class="card itemcard tealstripes">
               <div class="row cardheader">
-                <span ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
+                <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" ><span class="glyphicon glyphicon-pencil"></span></button>
                 Clothes
               </div>
                 <div class="row">
@@ -160,10 +170,10 @@
                   </div>
                   <div class="row">
                     <div class="ability-wrapper">
-                    <img tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.clothes.main" contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" ng-src="{{loadout.clothes.getmainIcon()}}" />
-                    <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[0]" ng-src="{{loadout.clothes.getSubIcon(0)}}" />
-                    <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[1]" ng-src="{{loadout.clothes.getSubIcon(1)}}" />
-                    <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.clothes.subs[2]" ng-src="{{loadout.clothes.getSubIcon(2)}}" />
+                    <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.clothes.main" contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" ng-src="{{loadout.clothes.getmainIcon()}}" />
+                    <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.clothes.subs[0]" ng-src="{{loadout.clothes.getSubIcon(0)}}" />
+                    <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.clothes.subs[1]" ng-src="{{loadout.clothes.getSubIcon(1)}}" />
+                    <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.clothes.subs[2]" ng-src="{{loadout.clothes.getSubIcon(2)}}" />
                     </div>
                   </div>
               </div>
@@ -171,7 +181,7 @@
               <div class="col-md-4 col-sm-4 nopadding">
                 <div class="card itemcard orangestripes">
                 <div class="row cardheader">
-                  <span ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" class="glyphicon glyphicon-pencil icon-button edit-button "></span>
+                  <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" ><span class="glyphicon glyphicon-pencil"></span></button>
                   Shoes
                 </div>
                   <div class="row">
@@ -189,10 +199,10 @@
                     </div>
                     <div class="row">
                       <div class="ability-wrapper">
-                      <img tabindex="0" class="abilityicon large" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" ng-src="{{loadout.shoes.getmainIcon()}}" />
-                      <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[0]" ng-src="{{loadout.shoes.getSubIcon(0)}}" />
-                      <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[1]" ng-src="{{loadout.shoes.getSubIcon(1)}}" />
-                      <img tabindex="0" class="abilityicon small" draggable-ability ability-slot="loadout.shoes.subs[2]" ng-src="{{loadout.shoes.getSubIcon(2)}}" />
+                      <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.shoes.main" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" ng-src="{{loadout.shoes.getmainIcon()}}" />
+                      <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.shoes.subs[0]" ng-src="{{loadout.shoes.getSubIcon(0)}}" />
+                      <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.shoes.subs[1]" ng-src="{{loadout.shoes.getSubIcon(1)}}" />
+                      <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.shoes.subs[2]" ng-src="{{loadout.shoes.getSubIcon(2)}}" />
                       </div>
                     </div>
             </div>

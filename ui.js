@@ -63,22 +63,22 @@ angular.module('splatApp')
           $(this).removeClass('lightup')
         },
         over: function(event,ui) {
-          if($(this).hasClass('small')) {
-            ui.helper.removeClass('large')
-            ui.helper.addClass('small')
+          if($(this).hasClass('sub')) {
+            ui.helper.removeClass('main')
+            ui.helper.addClass('sub')
           }
-          if($(this).hasClass('large')) {
-            ui.helper.removeClass('small')
-            ui.helper.addClass('large')
+          if($(this).hasClass('main')) {
+            ui.helper.removeClass('sub')
+            ui.helper.addClass('main')
           }
           ui.helper.addClass('lightup')
         },
         out: function(event,ui) {
-          if($(this).hasClass('small')) {
-            ui.helper.removeClass('small')
+          if($(this).hasClass('sub')) {
+            ui.helper.removeClass('sub')
           }
-          if($(this).hasClass('large')) {
-            ui.helper.removeClass('large')
+          if($(this).hasClass('main')) {
+            ui.helper.removeClass('main')
           }
           ui.helper.removeClass('lightup')
         }
