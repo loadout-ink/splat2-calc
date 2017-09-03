@@ -604,7 +604,7 @@ angular.module('splatApp').weapons = function ($scope) {
           sub: "Curling Bomb",
           special: "Inkjet",
           level: 11,
-          specialCost: 170,
+          specialCost: 200,
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "Middle",
