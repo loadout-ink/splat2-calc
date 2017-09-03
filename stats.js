@@ -271,17 +271,6 @@ $scope.stats = {
       }
       return (range * 100).toFixed(1);
     }, 150),
-    'Bomb Damage Taken': new Stat('Bomb Damage Taken', function(loadout) {
-      // var defScore = loadout.calcAbilityScore('Bomb Defense Up');
-      // var damageTaken = (1 - (0.99 * defScore - Math.pow((0.09 * defScore),2)) / 75)
-      // this.desc = ('Possibly inaccurate.');
-      // this.label = (damageTaken * 100).toFixed(1) + '%';
-      // this.value = damageTaken*100;
-      // return (damageTaken * 100).toFixed(1);
-      this.label = 'Unavailable';
-      this.value = 0;
-      return 0;
-    }, 100),
     'Super Jump Time (Squid)': new Stat('Super Jump Time (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var windup = 71
@@ -342,8 +331,24 @@ $scope.stats = {
     return $scope.stats[name]
   }
   $scope.getAdjustedSubSpeDamage = function(sub,loadout) {
-  var stat = $scope.getStatByName('Bomb Damage Taken')
-  var damageReduction = stat.calc(loadout)/100
+  var abilityScore = loadout.calcAbilityScore('Bomb Defense Up');
+  var coeff;
+  switch(sub.name) {
+    case 'Burst Bomb':
+      coeff = 75;
+      break;
+    case 'Splat Bomb':
+    case 'Suction Bomb':
+    case 'Autobomb':
+    case 'Curling Bomb':
+    case 'Ink Mine':
+      coeff = 60;
+      break;
+    default:
+      coeff = (600/7);
+      break;
+  }
+  var damageReduction = (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
     var results = {}
     for(damageValue in sub.damage) {
       var subDamage = sub.damage[damageValue]
