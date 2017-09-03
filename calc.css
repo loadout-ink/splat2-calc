@@ -62,6 +62,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 #weapon {
+  overflow-y:hidden;
   height: 105px;
   padding-left: 10px;
   padding-right: 10px;
@@ -406,6 +407,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .itemcard {
+  overflow-y:hidden;
   height:190px;
 }
 
