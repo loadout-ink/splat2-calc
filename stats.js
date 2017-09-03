@@ -226,6 +226,11 @@ $scope.stats = {
           this.value = results;
           return (results*100).toFixed(1);
           break;
+        case 'Bubble Blower':
+          this.name = 'Special Power (Bubble Radius)';
+          this.value = 0;
+          this.label = 'Unavailable';
+          break;
       }
       return results;
     }, 100),

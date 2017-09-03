@@ -128,7 +128,6 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Shooter_Expert_01.png",
           name: "Forge Splattershot Pro",
-          unreleased: true,
           shotUnit: "shot",
           sub: "Suction Bomb",
           special: "Bubble Blower",
