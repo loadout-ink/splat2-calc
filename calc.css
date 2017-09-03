@@ -1,6 +1,19 @@
+@font-face {
+  font-family: "Paintball";
+  src: url(./assets/fonts/ProjectPaintball.woff) format("woff"),
+  url(./assets/fonts/ProjectPaintball.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "Splatfont";
+  src: url(./assets/fonts/Splatfont2.woff) format("woff"),
+  url(./assets/fonts/ProjectPaintball.woff) format("ttf");
+}
+
 html {
   position: relative;
   min-height: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -14,48 +27,25 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   outline: none;
 }
 
-@font-face {
-  font-family: "Paintball";
-  src: url(./assets/fonts/ProjectPaintball.woff) format("woff"),
-  url(./assets/fonts/ProjectPaintball.ttf) format("ttf");
+.nopadding {
+  padding: 0px !important;
 }
 
-@font-face {
-  font-family: "Splatfont";
-  src: url(./assets/fonts/Splatfont2.woff) format("woff"),
-  url(./assets/fonts/ProjectPaintball.woff) format("ttf");
-}
+.neonstripes { background: repeating-linear-gradient( 45deg, #dbe826, #dbe826 20px, #c4d412 20px, #c4d412 40px ); }
 
-.gearWrapper {
-    width: 64px;
-    height: 64px;
-}
+.redstripes { background: repeating-linear-gradient( 45deg, #d63e53, #d63e53 20px, #f0624a 20px, #f0624a 40px ); }
 
-.picker .gearWrapper {
-  width: 80px;
-  height: 80px;
-}
+.tealstripes { background: repeating-linear-gradient( 45deg, #19e1ba, #19e1ba 20px, #06be8a 20px, #06be8a 40px ); }
 
-.col-md-6 .gearWrapper {
-  margin-left: 18px;
-}
+.orangestripes { background: repeating-linear-gradient( 45deg, #f07807, #f07807 20px, #d25012 20px, #d25012 40px ); }
 
-.equal {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-}
+.blackstripes { background: repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ); }
 
-.splatheader {
+.purplestripes { background: repeating-linear-gradient( 45deg, #842cd6, #842cd6 20px, #6b01bb 20px, #6b01bb 40px ); }
 
-  background-image:  url("assets/img/ui/headerbg.png"), url("assets/img/ui/noise.png"), repeating-linear-gradient(
-    45deg,
-    #222,
-    #222 30px,
-    #444 30px,
-    #444 60px
-    ) !important;
-    background-repeat: repeat-x;
+#splat-header {
+  background-image:  url("assets/img/ui/headerbg.png"), url("assets/img/ui/noise.png"), repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ) !important;
+  background-repeat: repeat-x;
   box-shadow: 0 2px 10px 2px #000;
   z-index:1 !important ;
   background: #222;
@@ -63,12 +53,176 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding:5px;
 }
 
-.splatheader img {
+#splat-header img {
   height:130px;
 }
 
-.notEligible {
-  background: rgba(255,0,0,0.5)
+#loadout {
+  padding-top:5px;
+}
+
+#weapon {
+  height: 105px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#weapon .subspe-bubble {
+  margin-right:10px;
+}
+
+#weapon .col-xs-7 .row {
+  padding-top:8px;
+}
+
+#weapon .col-xs-5 {
+  text-align: center;
+}
+
+#weapon .gear-wrapper{
+  height:66px;
+  width:66px;
+}
+
+ #weapon .gear-wrapper img {
+   max-height:60px;
+   width:auto;
+ }
+
+#abilitybox {
+  background: #555;
+  background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
+  background-size: 80px 80px;
+  padding-top:15px;
+  text-align:center;
+}
+
+#abilitybox .abilityicon {
+  margin-left: 4px;
+  margin-bottom:4px;
+  margin-right: 4px;
+}
+
+#abilitybox hr {
+  border-top: 3px dotted rgba(255,255,255,0.6);
+}
+
+#loadout-gap {
+  margin-right:5px !important;
+}
+
+#stat-gap {
+  margin-left:5px !important;
+}
+
+#statbox {
+  margin-top: 9px;
+  font-family: "Splatfont";
+  background: #c9c9c9;
+  background-image: url("assets/img/ui/bg-dots.png"), url("assets/img/ui/bg-spots.png");
+  background-size: 50px 50px, 300px 300px;
+}
+
+#statbox .cardheader {
+  margin-bottom: 5px;
+}
+
+#statbox h3 {
+  font-family:"Splatfont";
+  margin: 4px !important;
+  margin-left:12px !important;
+}
+
+.gear-wrapper {
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  border-radius: 10px;
+  display:inline-block;
+  position: relative;
+}
+
+.gear-wrapper .gear-icon {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.gear-wrapper .main-icon {
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+
+.gear-wrapper .main-icon img {
+  width:28px;
+  height:auto;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.8);
+}
+
+.gear-wrapper .brand-icon {
+  position:absolute;
+  left:0px;
+  bottom:0px;
+}
+
+.gear-wrapper .brand-icon img {
+  width:28px; height:auto;
+}
+
+.gear-wrapper .annie {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+
+.gear-wrapper .annie img {
+  width:24px;
+  height: auto;
+}
+
+.gear-wrapper .not-possible {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+
+.picker .gear-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #ffffee;
+  background-image: url('assets/img/ui/bg-spots.png');
+  background-size: 80px auto;
+}
+
+.picker .gear-wrapper .gear-icon {
+  height:80px;
+  width:80px;
+}
+
+.ability-wrapper {
+  display:flex;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ability-wrapper .abilityicon {
+  align-self: flex-end;
+}
+
+.ability-wrapper .abilityicon.large {
+  height: 50px; width: 50px;
+}
+
+.ability-wrapper .abilityicon.small {
+  height: 40px; width: 40px;
 }
 
 .abilityicon {
@@ -84,10 +238,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   box-shadow: 0 0 0 1px #000;
 }
 
-.gear .abilityicon.large {
-  margin-top:4px;
-}
-
 .small {
   width:48px;
   height:48px;
@@ -98,30 +248,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   height:64px;
 }
 
-#loadout {
-  padding-top:5px;
-}
-
-#abilitybox {
-  margin-top:5px;
-  border-radius: 25px;
-  background: #555;
-  background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
-  background-size: 80px 80px;
-  padding-top:15px;
-  text-align:center;
-  box-shadow: 0px 2px 8px 2px #000;
-}
-
-#abilitybox .abilityicon {
-  margin-left: 4px;
-  margin-bottom:4px;
-  margin-right: 4px;
-}
-
-#abilitybox hr {
-  border-top: 3px dotted rgba(255,255,255,0.6);
-}
 
 .footer {
   position:absolute;
@@ -152,6 +278,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-right: 20px;
 }
 
+#about {
+  text-align: center;
+}
+
 .basic-content a, .basic-content a:visited {
   text-decoration: none !important;
   color: #19e1ba !important;
@@ -162,30 +292,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   text-decoration: none !important;
 }
 
-#statbox {
-  padding:10px !important;
-  padding-top: 0px !important;
-  overflow-x: hidden;
-  margin-top: 8px;
-  font-family: "Splatfont";
-  background: #c9c9c9;
-  background-image: url("assets/img/ui/bg-dots.png"), url("assets/img/ui/bg-spots.png");
-  background-size: 50px 50px, 300px 300px;
-  box-shadow: 0px 2px 8px 2px #000;
-  margin-bottom: 100px;
-  padding-bottom: 15px;
-  border-radius: 25px;
-}
 
-#statbox .cardheader {
-  margin-bottom: 5px;
-}
-
-#statbox h3 {
-  font-family:"Splatfont";
-  margin: 4px !important;
-  margin-left:12px !important;
-}
 
 .statlabel {
   background: rgba(0,0,0,0.6);
@@ -234,314 +341,231 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
-  background: repeating-linear-gradient(
-    45deg,
-      #f22d8a,
-    #f22d8a 15px,
-    #d11b71 15px,
-    #d11b71 30px
-    );
-  }
+  background: repeating-linear-gradient( 45deg, #f22d8a, #f22d8a 15px, #d11b71 15px, #d11b71 30px );
+}
 
-  .fa-ban {
-    color: #f22d8a;
-  }
+.fa-ban {
+  color: #f22d8a;
+}
 
-  .labelright {
-    position:absolute;
-    right: 0px;
-    text-align: right;
-    padding-right:25px;
-  }
+.labelright {
+  position:absolute;
+  right: 0px;
+  text-align: right;
+  padding-right:25px;
+}
 
-  #maincontainer {
-  }
+.lightup {
+  border: 3px solid #fff;
+}
 
-  .nopadding {
-    padding: 0px !important;
-  }
+.splatfont-white {
+  font-family: "Splatfont";
+  font-size: 16pt;
+  color: #fff;
+}
 
-  .lightup {
-    border: 3px solid #fff;
-  }
+.icon-button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0px;
+  font-size:28pt;
+}
 
-  .gearicon {
-    width:64px;
-    height:64px;
-    margin:auto;
-    display:block;
-  }
+.fa.green {
+  color: #00ff00;
+}
+
+.fa.red {
+  color: #ff0000;
+}
+
+.icon-button:hover {
+  color: #ccc;
+}
+
+.btn {
+  background: #000;
+  font-family:"Splatfont";
+  color: #fff;
+  min-width: 60px;
+}
+
+.btn:hover {
+  color: #ccc !important;
+}
+
+.edit-button {
+  float:right;
+  margin-right:16px;
+  font-size:12pt;
+  padding-top:5px;
+  cursor:pointer;
+}
+
+.card {
+  overflow-x:hidden;
+  border-radius: 25px;
+  padding: 10px;
+  margin:4px;
+  padding-top:0px;
+  box-shadow: 0px 2px 8px 2px #000;
+}
+
+.itemcard {
+  height:190px;
+}
+
+.itemcard .col-xs-12 {
+  text-align: center;
+}
+
+.itemcard .gear-wrapper {
+  width: 100px;
+  height: 90px;
+  background: none;
+}
+
+.itemcard .gear-wrapper .gear-icon {
+  width: 100px;
+}
+
+.itemcard .abilityicon {
+  margin:2px;
+}
+
+.card .col-md-6, .card .col-xs-4, .card .col-md-4 {
+  text-align: center;
+}
 
 
-  .bubble {
-    background: rgba(255,255,255,0.2);
-    border-radius: 10px;
-    border-left: solid 4px rgba(255,255,255,0.4);
-    border-top: solid 4px rgba(255,255,255,0.4);
-    border-right: solid 4px rgba(0,0,0,0.2);
-    border-bottom: solid 4px rgba(0,0,0,0.2);
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
-    margin: 5px;
-    padding:2px;
-  }
+#utils {
+  padding-top:10px;
+  height: 105px;
+  text-align: center;
+  font-family: "Splatfont";
+  font-size: 14pt;
+  color: #fff;
+}
 
-  .bubble.clickable:hover {
-    background: rgba(255,255,255,0.4)
-  }
+#dialog {
+  font-family:"Splatfont";
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:auto;
+}
 
-  .lvl-target {
-    border:solid 2px #fff;
-  }
+#dialog .buttons {
+  padding-top:5px;
+  text-align:center;
+}
 
-  .splatfont-white {
-    font-family: "Splatfont";
-    font-size: 16pt;
-    color: #fff;
-  }
+#maincontainer {
+  margin-bottom: 80px;
+}
 
-  .icon-button {
-    background: none;
-    border: none;
-    color: #fff;
-    padding: 0px;
-    font-size:28pt;
-  }
+#dialog .buttons .button-left {
+  text-align: left;
+}
 
-  .fa.green {
-    color: #00ff00;
-  }
+#dialog .buttons .button-right {
+  text-align: right;
+}
+.basic-content h4 {
+  margin-bottom: 0px !important;
+}
 
-  .fa.red {
-    color: #ff0000;
-  }
+#gearpicker-stats {
+  background: rgba(0,0,0,0.5);
+  padding:0px;
+  border-radius: 5px;
+  font-size:10pt;
+  font-family:"Splatfont";
+  color:#fff;
+}
 
-  .icon-button:hover {
-    color: #ccc;
-  }
+#gearpicker-stats img {
+  width:28px;
+  height:auto;
+}
 
-  .btn {
-    background: #000;
-    font-family:"Splatfont";
-    color: #fff;
-    min-width: 60px;
-  }
+#gearpicker-stats div {
+  height:2.2em;
+  line-height:1em;
+}
 
-  .btn:hover {
-    color: #ccc !important;
-  }
+#minibar-container {
+  background:rgba(0,0,0,0.5);
+  border:3px solid rgba(0,0,0,0);
+  border-radius:6px;
+  margin-top:4px;
+}
 
-  .edit-button {
-    float:right;
-    margin-right:16px;
-    font-size:12pt;
-    padding-top:5px;
-    cursor:pointer;
-  }
+.picker {
+  text-align:center;
+  height:260px;
+  overflow-y:scroll;
+  background: rgba(0,0,0,0.2);
+  background-image: url("assets/img/ui/bg-dots.png");
+  background-size: 50px 50px;
+  background-attachment:local;
+  border-bottom: none;
+  border-top: none;
+}
 
-  .itemcard {
-    height:160px;
-    border-radius: 25px;
-    padding: 10px;
-    margin:4px;
-    padding-top:0px;
-    overflow:hidden;
-    box-shadow: 0px 2px 8px 2px #000;
-  }
-
-  .itemcard .abilityicon {
-    margin:2px;
-  }
-
-  #weapon {
-    height: 105px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  #weapon .subspe-bubble {
-    margin-right:10px;
-  }
-
-  #weapon .col-xs-7 .row {
-    padding-top:8px;
-  }
-  #weaponicon {
-    max-height:60px;
-    width:auto;
-  }
-
-  #utils {
-    padding-top:10px;
-    height: 105px;
-    text-align: center;
-  }
-
-  #dialog {
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height:auto;
-  }
-  .basic-content h4 {
-    margin-bottom: 0px !important;
-  }
-
-  #gearpicker-stats {
-    background: rgba(0,0,0,0.5);
-    padding:0px;
-    border-radius: 5px;
-    font-size:10pt;
-    font-family:"Splatfont";
-    color:#fff;
-  }
-
-  #minibar-container {
-    background:rgba(0,0,0,0.5);
-    border:3px solid rgba(0,0,0,0);
-    border-radius:6px;
-    margin-top:4px;
-  }
-
-  .picker {
-    height:260px;
-    overflow-y:scroll;
-    background: rgba(0,0,0,0.2);
-    background-image: url("assets/img/ui/bg-dots.png");
-    background-size: 50px 50px;
-    background-attachment:local;
-    border-bottom: none;
-    border-top: none;
-  }
-
+@media only screen and (min-width:992px) {
   .picker-right {
-    text-align:center;
+    padding-left:0px !important;
   }
+}
 
-  @media only screen and (min-width:992px) {
-    .picker-right {
-      padding-left:0px !important;
-    }
-  }
+.minibar-label {
+  font-family:"Splatfont";
+  text-align:right;
+  vertical-align: middle;
+  color:#fff;
+  font-size:9pt;
+  padding-right:4px !important
+}
 
-  .minibar-label {
-    font-family:"Splatfont";
-    text-align:right;
-    vertical-align: middle;
-    color:#fff;
-    font-size:9pt;
-    padding-right:4px !important
-  }
+.selected-label {
+  height:3.2em;
+  line-height:1.5em;
+}
 
-  .cardheader {
-    padding-top:4px;
-    padding-bottom:2px;
-    background: rgba(20,20,20,0.8);
-    background-image: url("assets/img/ui/bg-dots.png");
-    background-size: 50px 50px;
-    font-family: "Paintball";
-    font-size: 16pt;
-    text-align:center;
-    color: #fff;
-  }
+.selected-label span {
+  font-size: 14pt;
+}
 
-  html {
-    overflow-y: scroll;
-  }
-  .row.match-my-cols {
-    overflow: hidden;
-  }
+.cardheader {
+  padding-top:4px;
+  padding-bottom:2px;
+  background: rgba(20,20,20,0.8);
+  background-image: url("assets/img/ui/bg-dots.png");
+  background-size: 50px 50px;
+  font-family: "Paintball";
+  font-size: 16pt;
+  text-align:center;
+  color: #fff;
+}
 
-  .matched{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-  }
+.row.match-my-cols {
+  overflow: hidden;
+}
 
-  .loadout {
-    background: #000;
-  }
+.matched{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
 
-  .bgstripes {
-    background: repeating-linear-gradient(
-      45deg,
-      #0eed5d,
-      #0eed5d 30px,
-      #09cd4e 30px,
-      #09cd4e 60px
-      );
-    }
+.panel-stats {
+  border: 0px !important;
 
-    .neonstripes {
-      background: repeating-linear-gradient(
-        45deg,
-        #dbe826,
-        #dbe826 20px,
-        #c4d412 20px,
-        #c4d412 40px
-        );
-      }
+}
 
-      .redstripes {
-        background: repeating-linear-gradient(
-          45deg,
-          #d63e53,
-          #d63e53 20px,
-          #f0624a 20px,
-          #f0624a 40px
-          );
-        }
-
-        .tealstripes {
-          background: repeating-linear-gradient(
-            45deg,
-            #19e1ba,
-            #19e1ba 20px,
-            #06be8a 20px,
-            #06be8a 40px
-            );
-          }
-
-          .orangestripes {
-            background: repeating-linear-gradient(
-              45deg,
-              #f07807,
-              #f07807 20px,
-              #d25012 20px,
-              #d25012 40px
-              );
-            }
-
-            .blackstripes {
-              background: repeating-linear-gradient(
-                45deg,
-                #222,
-                #222 30px,
-                #444 30px,
-                #444 60px
-                );
-              }
-
-              .purplestripes {
-                background: repeating-linear-gradient(
-                  45deg,
-                  #842cd6,
-                  #842cd6 20px,
-                  #6b01bb 20px,
-                  #6b01bb 40px
-                  );
-                }
-
-                .panel-stats {
-                  border: 0px !important;
-
-                }
-
-                .panel-stats .panel-heading {
-                  border-radius: 5px;
-                  background: repeating-linear-gradient(
-                    45deg,
-                    #8ffe19,
-                    #8ffe19 30px,
-                    #5ade09 30px,
-                    #5ade09 60px
-                    );
-                  }
+.panel-stats .panel-heading {
+  border-radius: 5px;
+  background: repeating-linear-gradient( 45deg, #8ffe19, #8ffe19 30px, #5ade09 30px, #5ade09 60px );
+}

@@ -53,7 +53,6 @@ angular
       newLoadout.head.equipped = $scope.getHatById(results.head.gear)
       newLoadout.clothes.equipped = $scope.getClothesById(results.clothes.gear)
       newLoadout.shoes.equipped = $scope.getShoesById(results.shoes.gear)
-      console.log($scope.getSkillById(results.head.main))
       newLoadout.head.main = $scope.getSkillById(results.head.main)
       for(var i=0; i<3; i++) {
         newLoadout.head.subs[i] = $scope.getSkillById(results.head.subs[i])
