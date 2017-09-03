@@ -160,7 +160,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <h4>Version 1.0</h4>
     <ul>
     <li>Initial release.</li>
-    <li>Some special/sub scaling is still missing, as well as Bomb Defense Up.</li>
+    <li>Some special/sub scaling is still missing.</li>
     <li>Some values may be slightly inaccurate. Please leave an issue <a href="http://github.com/DeviPotato/splat2-calc/" target="_blank">on GitHub</a> with sources if you have corrections.</li>
     </ul>
     <div class="row buttons">

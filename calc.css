@@ -219,14 +219,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   align-self: flex-end;
 }
 
-.ability-wrapper .abilityicon.large {
-  height: 50px; width: 50px;
-}
-
-.ability-wrapper .abilityicon.small {
-  height: 40px; width: 40px;
-}
-
 .abilityicon {
   z-index: 2 !important;
   border-radius: 50%;
@@ -250,26 +242,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   height:50px;
 }
 
-.footer {
-  position:absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  font-family: "Splatfont";
-  color: #999;
-  font-size: 12pt;
-  text-align: center;
-}
-
-.footer a, .footer a:visited {
-  text-decoration: none !important;
-  color: #bbb !important;
-}
-
-.footer a:hover, .footer a:focus, .footer a:active {
-  color: #fff !important;
-  text-decoration: none !important;
-}
 
 .basic-content {
   color: #fff;
@@ -292,8 +264,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   color: #fff !important;
   text-decoration: none !important;
 }
-
-
 
 .statlabel {
   background: rgba(0,0,0,0.6);
@@ -553,18 +523,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   top: 8px;
 }
 
-.row.match-my-cols {
-  overflow: hidden;
-}
-
-.matched{
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
-}
-
 .panel-stats {
   border: 0px !important;
-
 }
 
 .screenshot-filler {
@@ -586,4 +546,25 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .panel-stats .panel-heading {
   border-radius: 5px;
   background: repeating-linear-gradient( 45deg, #8ffe19, #8ffe19 30px, #5ade09 30px, #5ade09 60px );
+}
+
+.footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-family: "Splatfont";
+  color: #999;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.footer a, .footer a:visited {
+  text-decoration: none !important;
+  color: #bbb !important;
+}
+
+.footer a:hover, .footer a:focus, .footer a:active {
+  color: #fff !important;
+  text-decoration: none !important;
 }
