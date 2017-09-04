@@ -540,7 +540,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .screenshot-filler img {
-  height: 80px;
+  height: 100%;
 }
 
 .screenshot-filler span {
