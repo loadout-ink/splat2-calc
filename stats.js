@@ -97,7 +97,7 @@ $scope.stats = {
       if(loadout.weapon.inkSaver == 'High') coeff = 60
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
-      this.desc = (reduction*100).toFixed(1) + '% reduction'
+      this.desc = + Math.floor(100/costPerShot) + ' to empty (' + (reduction*100).toFixed(1) + '% reduction)'
       this.label = costPerShot.toFixed(2) + '% tank/' + loadout.weapon.shotUnit;
       this.value = costPerShot;
       return costPerShot;

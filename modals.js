@@ -157,6 +157,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     What's New?
     </div>
     <div class="row basic-content">
+    <div id="changelog"</div>
+    <h4>Version 1.0.3</h4>
+    <ul>
+    <li>Some more value fixes.</li>
+    <li>Ink Consumption (Main) now shows approximate shots per tank in the tooltip.</li>
+    </ul>
     <h4>Version 1.0.2</h4>
     <ul>
     <li>Fixed missing Middle swim speed tier.</li>
@@ -171,6 +177,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <li>Some special/sub scaling is still missing.</li>
     <li>Some values may be slightly inaccurate. Please leave an issue <a href="http://github.com/DeviPotato/splat2-calc/" target="_blank">on GitHub</a> with sources if you have corrections.</li>
     </ul>
+    </div>
     <div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" ng-click="ok()">Got it!</button>

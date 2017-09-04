@@ -259,6 +259,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-right: 20px;
 }
 
+#changelog {
+  height: 230px;
+  overflow-y: scroll;
+}
+
 #about {
   text-align: center;
 }
