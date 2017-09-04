@@ -115,7 +115,7 @@ $scope.stats = {
       return costPerSub;
     }, 100),
     //TODO: This is WRONG! Need more data on SCU!
-    'Special Charge Speed': new Stat('Special Charge Speed *', function(loadout) {
+    'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
       this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
@@ -125,7 +125,7 @@ $scope.stats = {
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
     //TODO: This is WRONG! Need more data on Respawn Punisher!
-    'Special Saved': new Stat('Special Saved', function(loadout) {
+    'Special Saved': new Stat('Special Saved *', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
       var baseKept = 0.5;
       this.name = 'Special Saved';
