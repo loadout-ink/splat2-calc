@@ -157,6 +157,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     What's New?
     </div>
     <div class="row basic-content">
+    <h4>Version 1.0.2</h4>
+    <ul>
+    <li>Fixed missing Middle swim speed tier.</li>
+    </ul>
     <h4>Version 1.0.1</h4>
     <ul>
     <li>Some mobile improvements and fixes for incorrect values.</li>
