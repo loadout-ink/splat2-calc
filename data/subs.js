@@ -70,7 +70,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Sprinkler",
       image: "./assets/img/subspe/Wsb_Sprinkler.png",
-      cost: 90,
+      cost: 80,
       inkSaver: "Normal"
     },
     {
@@ -88,7 +88,7 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Splash Wall",
       image: "./assets/img/subspe/Wsb_Shield.png",
-      cost: 90,
+      cost: 60,
       inkSaver: "Normal"
     }
   ]
