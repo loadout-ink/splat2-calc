@@ -224,6 +224,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .ability-wrapper .abilityicon {
   align-self: flex-end;
+  flex-shrink: 0;
 }
 
 .abilityicon {
