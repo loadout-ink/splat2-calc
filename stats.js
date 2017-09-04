@@ -114,7 +114,8 @@ $scope.stats = {
       this.label = costPerSub.toFixed(2) + '% tank';
       return costPerSub;
     }, 100),
-    'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
+    //TODO: This is WRONG! Need more data on SCU!
+    'Special Charge Speed': new Stat('Special Charge Speed *', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
       this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
@@ -123,21 +124,22 @@ $scope.stats = {
       this.value = chargeSpeed;
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
+    //TODO: This is WRONG! Need more data on Respawn Punisher!
     'Special Saved': new Stat('Special Saved', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
       var baseKept = 0.5;
+      this.name = 'Special Saved';
+      this.desc = null;
+      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60
       if(loadout.hasAbility('Respawn Punisher')) {
-        abilityScore = 0;
         baseKept = 0.425;
-        this.value = baseKept;
-        this.label = baseKept*100 + '%';
-        this.desc = 'Special Saver nullified by Respawn Punisher.';
-        return (kept * 100).toFixed(1);
+        mod *= 0.7;
+        this.name = 'Special Saved *';
+        this.desc = "Effects with Respawn Punisher aren't fully understood.";
       }
-      var kept  = (baseKept + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+      var kept  = baseKept + mod;
       this.value = kept;
       this.label = (kept * 100).toFixed(1) + '%';
-      this.desc = null;
       return (kept * 100).toFixed(1);
     }, 1),
 //TODO: clean this up a bit
@@ -304,27 +306,24 @@ $scope.stats = {
       this.label = this.value.toFixed(2) + 's';
       return ((windupFrames + mainFrames) / 60).toFixed(2);
     }, 4),
+    //TODO: This is WRONG! Need more data on Respawn Punisher!
     'Quick Respawn Time': new Stat('Quick Respawn Time', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Respawn');
       this.name = 'Quick Respawn Time';
+      this.desc = "Respawn time when splatted without splatting others."
       var death = 30;
       var splatcam = 354;
       var spawn = 120;
+      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))/60
       if(loadout.hasAbility('Respawn Punisher')) {
-        abilityScore = 0;
+        this.name = 'Quick Respawn Time *';
+        this.desc = "Effects with Respawn Punisher aren't fully understood.";
+        mod *= 0.5;
         splatcam += 74;
-        var spawnFrames = death + splatcam + spawn;
-        this.value = spawnFrames/60;
-        this.name = 'Respawn Time';
-        this.label = (spawnFrames/60).toFixed(2) + 's';
-        this.desc = 'Quick Respawn nullified by Respawn Punisher.';
-        return this.value.toFixed(2);
       }
-      var mod = 1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))/60
-      var spawnFrames = death + (splatcam*mod) + spawn;
+      var spawnFrames = death + (splatcam*(1-mod)) + spawn;
       this.value = spawnFrames/60
       this.label = (spawnFrames/60).toFixed(2) + 's';
-      this.desc = "Respawn time when splatted without splatting others."
       return this.value.toFixed(2)
     }, 9.6),
     'Tracking Time': new Stat('Tracking Time', function(loadout) {

@@ -131,6 +131,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background-size: 50px 50px, 300px 300px;
 }
 
+#disclaimer {
+  width: 100%;
+  text-align: center;
+}
+
 #statbox .cardheader {
   margin-bottom: 5px;
 }

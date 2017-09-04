@@ -158,6 +158,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.0.4</h4>
+    <ul>
+    <li>Updated Respawn Punisher to be more accurate.</li>
+    <ul>
+    <li>However, the values are EXTREMELY rough estimates due to lack of testing, but are more to give a general idea of the impact RSP has on Special Saver and Quick Respawn.</li>
+    </ul>
+    <li>Added disclaimer for when stats are known to be inaccurate.</li>
+    </ul>
     <h4>Version 1.0.3</h4>
     <ul>
     <li>Some more value fixes.</li>
