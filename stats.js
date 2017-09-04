@@ -19,6 +19,10 @@ $scope.stats = {
         baseSpeed = 1.74;
         coeff = 80;
       }
+      if(loadout.weapon.speedLevel == 'Middle') {
+        baseSpeed = 1.92;
+        coeff = 120;
+      }
       var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
       if(loadout.hasAbility('Ninja Squid')) {
         speed = speed * 0.9;
