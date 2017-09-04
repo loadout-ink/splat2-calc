@@ -114,7 +114,6 @@ $scope.stats = {
       this.label = costPerSub.toFixed(2) + '% tank';
       return costPerSub;
     }, 100),
-    //TODO: This is WRONG! Need more data on SCU!
     'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
@@ -124,17 +123,15 @@ $scope.stats = {
       this.value = chargeSpeed;
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
-    //TODO: This is WRONG! Need more data on Respawn Punisher!
+    //TODO: This is WRONG! Need more data!
     'Special Saved': new Stat('Special Saved *', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
       var baseKept = 0.5;
-      this.name = 'Special Saved';
       this.desc = null;
       var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60
       if(loadout.hasAbility('Respawn Punisher')) {
         baseKept = 0.425;
         mod *= 0.7;
-        this.name = 'Special Saved *';
         this.desc = "Effects with Respawn Punisher aren't fully understood.";
       }
       var kept  = baseKept + mod;
