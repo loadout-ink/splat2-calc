@@ -157,6 +157,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     What's New?
     </div>
     <div class="row basic-content">
+    <h4>Version 1.0.1</h4>
+    <ul>
+    <li>Some mobile improvements.</li>
+    </ul>
     <h4>Version 1.0</h4>
     <ul>
     <li>Initial release.</li>
@@ -184,7 +188,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     This tool was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord.
     <br><br>Thanks to everyone who gave me help and data!<br><br>
     Many of the formulas used can be seen on <a href="https://splatoonwiki.org/wiki/User:Heddy/Charts" target="_blank">Heddy's charts</a> on Inkipedia.<br><br>
-    Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>.
+    Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>. <br>
+    You can also reach me on the project's <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a>.
     <div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" ng-click="ok()">Got it!</button>

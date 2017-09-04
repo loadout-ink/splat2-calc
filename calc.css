@@ -108,6 +108,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   border-top: 3px dotted rgba(255,255,255,0.6);
 }
 
+@media only screen and (max-width:992px) {
+  #loadout-gap, #stat-gap {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
 #loadout-gap {
   margin-right:5px !important;
 }

@@ -56,7 +56,38 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="row">
-                  <div class="col-sm-6 nopadding">
+                <div class="col-sm-6 col-sm-push-6 nopadding">
+                  <div class="card purplestripes" id="utils">
+                    <div class="row" ng-hide="screenshotMode">
+                      <div class="col-xs-3">
+                        <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard" uib-tooltip="Copied!" tooltip-placement="bottom" tooltip-trigger="{'none':'none'}" tooltip-is-open="showCopy" tooltip-append-to-body="true"></span>
+                        </div>
+                        <div class="col-xs-3">
+                          <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="Toggle Screenshot Mode" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
+                        </div>
+                        <div class="col-xs-3">
+                          <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
+                        </div>
+                        <div class="col-xs-3">
+                          <button class="icon-button"ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
+                        </div>
+                      </div>
+                      <div class="row" ng-hide="screenshotMode">
+                        <div class="col-xs-12">
+                          <span>
+                            ver. 1.0 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="What's New?" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row screenshot-filler" ng-show="screenshotMode" ng-click="screenshotMode=!screenshotMode">
+                        <img src="assets/img/ui/logo-custom.png" /><br>
+                        <span>
+                          loadout.ink
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-sm-pull-6 nopadding">
                     <div class="card neonstripes" id="weapon">
                       <div class="row cardheader">
                         <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openWeaponPicker()" ><span class="glyphicon glyphicon-pencil"></span></button>
@@ -85,37 +116,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 nopadding">
-                    <div class="card purplestripes" id="utils">
-                      <div class="row" ng-hide="screenshotMode">
-                        <div class="col-xs-3">
-                          <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="Copy Link" tooltip-append-to-body="true"><span class="fa fa-clipboard" uib-tooltip="Copied!" tooltip-placement="bottom" tooltip-trigger="{'none':'none'}" tooltip-is-open="showCopy" tooltip-append-to-body="true"></span>
-                          </div>
-                          <div class="col-xs-3">
-                            <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="Toggle Screenshot Mode" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
-                          </div>
-                          <div class="col-xs-3">
-                            <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="Clear Abilities" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
-                          </div>
-                          <div class="col-xs-3">
-                            <button class="icon-button"ng-click="resetLoadout()" uib-tooltip="Clear All" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
-                          </div>
-                        </div>
-                        <div class="row" ng-hide="screenshotMode">
-                          <div class="col-xs-12">
-                            <span>
-                              ver. 1.0 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="What's New?" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="row screenshot-filler" ng-show="screenshotMode" ng-click="screenshotMode=!screenshotMode">
-                          <img src="assets/img/ui/logo-custom.png" /><br>
-                          <span>
-                            loadout.ink
-                          </span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -293,7 +293,7 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >about</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | devipotato 2017</span><br>
+          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >about</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> | devipotato 2017</span><br>
           Splatoon and all related copyrights/assets used on this page are the property of Nintendo.
         </div>
       </footer>
