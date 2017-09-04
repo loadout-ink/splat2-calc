@@ -159,7 +159,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="row basic-content">
     <h4>Version 1.0.1</h4>
     <ul>
-    <li>Some mobile improvements.</li>
+    <li>Some mobile improvements and fixes for incorrect values.</li>
     </ul>
     <h4>Version 1.0</h4>
     <ul>
