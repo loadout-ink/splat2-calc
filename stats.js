@@ -11,6 +11,7 @@ function Stat(name, calc, max, unit) {
 //TODO: clean all this up
 angular.module('splatApp').stats = function ($scope) {
 $scope.stats = {
+  //TODO: come up with a better way to convey speed?
   'Swim Speed': new Stat('Swim Speed', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Swim Speed Up');
       var baseSpeed = 2.02;
@@ -29,6 +30,7 @@ $scope.stats = {
       }
       this.value = speed
       this.label = speed.toFixed(2) + ' DU/f';
+      this.desc = "Distance Units/frame";
       return speed.toFixed(2);
     }, 2.43),
     'Run Speed': new Stat('Run Speed', function(loadout) {
@@ -46,6 +48,7 @@ $scope.stats = {
         var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
         this.value = speed;
         this.label = speed.toFixed(2) + ' DU/f';
+        this.desc = "Distance Units/frame";
         return speed.toFixed(2);
       }, 1.44),
     'Run Speed (Enemy Ink)': new Stat('Run Speed (Enemy Ink)', function(loadout) {
@@ -54,6 +57,7 @@ $scope.stats = {
         var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
         this.value = speed
         this.label = speed.toFixed(2) + ' DU/f';
+        this.desc = "Distance Units/frame";
         return this.value.toFixed(1);
       }, 1.44),
     'Run Speed (Firing)': new Stat('Run Speed (Firing)', function(loadout) {
@@ -68,6 +72,7 @@ $scope.stats = {
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
         this.value = ((speed / 0.96) * 100)
         this.label = speed.toFixed(2) + ' DU/f';
+        this.desc = "Distance Units/frame";
         return this.value.toFixed(1);
       }, 150),
     'Ink Recovery Speed (Squid)': new Stat('Ink Recovery Speed (Squid)', function(loadout) {
