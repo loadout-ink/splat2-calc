@@ -8,7 +8,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card neonstripes" id="dialog">
     <div class="row cardheader">
-    Weapon Picker
+    {{'UI_WEAPON_PICKER' | translate}}
     </div>
     <div class="row">
     <div class="col-md-4">
@@ -64,10 +64,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">OK</button>
+    <button class="btn" type="button" ng-click="ok()">{{'UI_OK' | translate}}</button>
     </div>
     <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn" type="button" ng-click="cancel()">{{'UI_CANCEL' | translate}}</button>
     </div>
     </div>
     </div>
@@ -77,7 +77,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card {{::background}}" id="dialog">
     <div class="row cardheader">
-    Gear Picker
+    {{'UI_GEAR_PICKER' | translate}}
     </div>
     <div class="row">
     <div class="col-md-4">
@@ -142,10 +142,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">OK</button>
+    <button class="btn" type="button" ng-click="ok()">{{'UI_OK' | translate}}</button>
     </div>
     <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn" type="button" ng-click="cancel()">{{'UI_CANCEL' | translate}}</button>
     </div>
     </div>
     </div>
@@ -154,7 +154,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card basic purplestripes" id="dialog">
     <div class="row cardheader">
-    What's New?
+    {{"UI_CHANGELOG" | translate}}
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
@@ -192,7 +192,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">Got it!</button>
+    <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>
     </div>
     </div>
     </div>
@@ -204,18 +204,13 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
-    About
+    {{"UI_ABOUT" | translate}}
     </div>
     <div class="row basic-content" id="about">
-    Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br>
-    This tool was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord.
-    <br><br>Thanks to everyone who gave me help and data!<br><br>
-    Many of the formulas used can be seen on <a href="https://splatoonwiki.org/wiki/User:Heddy/Charts" target="_blank">Heddy's charts</a> on Inkipedia.<br><br>
-    Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>. <br>
-    You can also reach me on the project's <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a>.
+    <p translate="{{'UI_ABOUT_CONTENT'|translate}}"></p>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">Got it!</button>
+    <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>
     </div>
     </div>
     </div>

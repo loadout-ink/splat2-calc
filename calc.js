@@ -1,5 +1,5 @@
 angular
-  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
   .controller('splatController', ['$scope', '$timeout', function splatCtrl($scope, $timeout, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
@@ -101,3 +101,8 @@ angular
     }
 
   }])
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider
+      .translations('en', en_strings)
+      .preferredLanguage('en')
+}]);

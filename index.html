@@ -11,8 +11,11 @@
   <script src="lib/angular-touch.min.js"></script>
   <script src="lib/jquery-ui-custom/jquery-ui.js"></script>
   <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="lib/angular-translate.min.js"></script>
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+  <script src="locale/en-us.js"></script>
 
   <script src="./calc.js"></script>
   <script src="./util.js"></script>
@@ -124,7 +127,7 @@
                       <div class="card itemcard redstripes">
                         <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          Head
+                          {{'HAT_SLOT' | translate}}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding">
@@ -153,7 +156,7 @@
                       <div class="card itemcard tealstripes">
                         <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          Clothes
+                          {{'CLOTHES_SLOT' | translate}}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
@@ -182,7 +185,7 @@
                       <div class="card itemcard orangestripes">
                         <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          Shoes
+                          {{'SHOES_SLOT' | translate}}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
@@ -222,15 +225,15 @@
               <div id="statbox" class="card">
                 <div class="row">
                   <div class="row cardheader">
-                    Stats
+                    {{'STATS_HEADER' | translate}}
                   </div>
                   <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }">
                     <div class="statlabel">
-                      {{stat.name}}
-                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright">{{stat.label}}</span></uib-progressbar>
+                      {{stat.name | translate}}
+                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
                     </div>
                   </div>
-                  <div id="disclaimer">* Stat is inaccurate due to lack of data.</div>
+                  <div id="disclaimer">* {{'INACCURATE_DISCLAIMER' | translate}}</div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
@@ -238,15 +241,15 @@
                       <div uib-accordion-group class="panel-stats" is-open="status.open">
                         <uib-accordion-heading>
                           <div>
-                            Bomb Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            {{'BOMB_HEADER' | translate}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                           </div>
                         </uib-accordion-heading>
                         <table class="table table-sm">
                           <tr>
-                            <th>Bomb</th>
-                            <th>Direct</th>
-                            <th>Near</th>
-                            <th>Far</th>
+                            <th>{{'BOMB_TABLE_BOMB' | translate}}</th>
+                            <th>{{'TABLE_DIRECT' | translate}}</th>
+                            <th>{{'TABLE_NEAR' | translate}}</th>
+                            <th>{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="sub in getDamagingSubs()">
@@ -261,15 +264,15 @@
                       <div uib-accordion-group class="panel-stats" is-open="status.speOpen">
                         <uib-accordion-heading>
                           <div>
-                            Special Damage <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
+                            {{'SPECIAL_HEADER' | translate}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
                           </div>
                         </uib-accordion-heading>
                         <table class="table table-sm">
                           <tr>
-                            <th>Special</th>
-                            <th>Hit</th>
-                            <th>Near</th>
-                            <th>Far</th>
+                            <th>{{'SPECIAL_TABLE_SPECIAL' | translate}}</th>
+                            <th>{{'TABLE_HIT' | translate}}</th>
+                            <th>{{'TABLE_NEAR' | translate}}</th>
+                            <th>{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="special in getDamagingSpecials()">
@@ -291,8 +294,8 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >about</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> | devipotato 2017</span><br>
-          Splatoon and all related copyrights/assets used on this page are the property of Nintendo.
+          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >{{'FOOTER_ABOUT' | translate}}</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> | devipotato 2017</span><br>
+          {{'FOOTER_COPYRIGHT' | translate}}
         </div>
       </footer>
       <div id="draggable-parent"></div>
