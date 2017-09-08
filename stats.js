@@ -178,19 +178,9 @@ $scope.stats = {
           break;
         case 'Inkjet':
         case 'Ink Storm':
+        case 'Sting Ray':
           coeff = 120;
           base = 480;
-          this.max = 10;
-          this.unit = 's'
-          this.name = 'Special Power (Duration)'
-          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
-          this.label = results.toFixed(2) + 's';
-          this.value = results;
-          return results.toFixed(2);
-          break;
-        case 'Sting Ray':
-          coeff = 90;
-          base = 450;
           this.max = 10;
           this.unit = 's'
           this.name = 'Special Power (Duration)'

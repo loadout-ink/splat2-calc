@@ -64,13 +64,13 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Squid Beakon",
       image: "./assets/img/subspe/Wsb_Flag.png",
-      cost: 90,
+      cost: 75,
       inkSaver: "Normal"
     },
     {
       name: "Sprinkler",
       image: "./assets/img/subspe/Wsb_Sprinkler.png",
-      cost: 80,
+      cost: 70,
       inkSaver: "Normal"
     },
     {

@@ -15,7 +15,7 @@ angular.module('splatApp').specials = function ($scope) {
       damage: {
         "Direct": 50,
         "Near": 180,
-        "Far": 30
+        "Far": 55
       }
     },
     {
@@ -24,7 +24,7 @@ angular.module('splatApp').specials = function ($scope) {
       damage: {
         "Direct": 180,
         "Near": 70,
-        "Far": 40
+        "Far": 55
       }
     },
     {
@@ -49,7 +49,7 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Sting Ray",
       image: "./assets/img/subspe/Wsp_WaterCutter.png",
-      duration: 7.5
+      duration: 8
     },
     {
       name: "Ink Storm",
