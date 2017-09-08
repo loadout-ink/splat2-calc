@@ -299,7 +299,7 @@ $scope.stats = {
     'Quick Respawn Time': new Stat('STAT_QUICK_RESPAWN', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Respawn');
       this.name = 'STAT_QUICK_RESPAWN';
-      this.localizedDesc = { desc: 'Respawn time when splatted without splatting others.' };
+      this.localizedDesc = { desc: 'DESC_QUICK_RESPAWN' };
       var death = 30;
       var splatcam = 354;
       var spawn = 120;

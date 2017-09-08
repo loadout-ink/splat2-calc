@@ -70,6 +70,7 @@ var en_strings = {
   "DESC_SUB_COST": "{{reduction}}% reduction",
   "DESC_SPECIAL_COST": "{{value}}p for special",
   "DESC_DISTANCE": "{{value}} Distance Units",
+  "DESC_QUICK_RESPAWN": "Respawn time when splatted without splatting others.",
 
   "UNIT_DISTANCE_UNITS_PER_FRAME": "Distance Units/frame",
 
