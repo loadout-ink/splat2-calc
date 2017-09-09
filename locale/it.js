@@ -10,7 +10,7 @@
 //// You can call them something different, but make sure it can be abbreviated as a unit!
 //// (Distance Units/frame -> DU/f)
 
-var en_strings = {
+var it_strings = {
   // Gear section
   "HAT_SLOT": "Head",
   "CLOTHES_SLOT": "Clothes",
