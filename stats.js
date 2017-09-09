@@ -117,8 +117,8 @@ $scope.stats = {
     'Special Charge Speed': new Stat('Special Charge Speed', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
-      this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
-      this.desc = (Math.floor(loadout.weapon.specialCost / chargeSpeed) + 'p for special')
+      this.value = Math.round(loadout.weapon.specialCost / chargeSpeed)
+      this.desc = (Math.round(loadout.weapon.specialCost / chargeSpeed) + 'p for special')
       this.label = (chargeSpeed * 100).toFixed(1) + '%';
       this.value = chargeSpeed;
       return (chargeSpeed * 100).toFixed(1);
@@ -190,8 +190,8 @@ $scope.stats = {
           return results.toFixed(2);
           break;
         case 'Baller':
-          coeff = 30;
-          base = 300;
+          coeff = 60;
+          base = 400;
           this.max = 600;
           this.unit = ' HP'
           this.name = 'Special Power (Baller HP)'

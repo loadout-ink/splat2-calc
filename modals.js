@@ -150,6 +150,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     </div>`,
+    //TODO: split this into its own file
     whatsNew: `<div class="row">
     <div class="col-md-12">
     <div class="card basic purplestripes" id="dialog">
@@ -158,6 +159,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.0.6</h4>
+    <ul>
+    <li>Updated Special Charge Up scaling to round instead of floor.</li>
+    <li>Updated Baller scaling to go from 400HP to 600HP.</li>
+    </ul>
     <h4>Version 1.0.5</h4>
     <ul>
     <li>Updated values for game version 1.3.0. Official patch notes can be found <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/27028/p/897" target="_blank">here</a>.</li>
