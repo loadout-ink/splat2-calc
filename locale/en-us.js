@@ -16,6 +16,8 @@ var en_strings = {
   "FOOTER_ABOUT": "about",
 
   "UNAVAILABLE": "Unavailable",
+  "KID_FORM": "Kid",
+  "SQUID_FORM": "Squid",
 
   "UI_WEAPON_PICKER": "Weapon Picker",
   "UI_GEAR_PICKER": "Gear Picker",
@@ -24,6 +26,11 @@ var en_strings = {
   "UI_OK": "OK",
   "UI_CANCEL": "Cancel",
   "UI_CONFIRM_CASUAL": "Got it!",
+
+  "UI_COPY_LINK": "Copy Link",
+  "UI_SCREENSHOT_MODE": "Toggle Screenshot Mode",
+  "UI_CLEAR_ABILITIES": "Clear Abilities",
+  "UI_CLEAR_ALL": "Clear All",
 
   "STAT_SWIM_SPEED": "Swim Speed",
   "STAT_RUN_SPEED": "Run Speed",
@@ -73,6 +80,27 @@ var en_strings = {
   "DESC_QUICK_RESPAWN": "Respawn time when splatted without splatting others.",
 
   "UNIT_DISTANCE_UNITS_PER_FRAME": "Distance Units/frame",
+
+  "SHOT_UNIT_SHOT": "shot",
+  "SHOT_UNIT_SHOT_PLURAL": "shots",
+  "SHOT_UNIT_FLICK": "flick",
+  "SHOT_UNIT_FLICK_PLURAL": "flicks",
+  "SHOT_UNIT_FLICK_HORIZ": "horizontal flick",
+  "SHOT_UNIT_FLICK_HORIZ_PLURAL": "horizontal flicks",
+  "SHOT_UNIT_FLICK_VERT": "vertical flick",
+  "SHOT_UNIT_FLICK_VERT_PLURAL": "vertical flicks",
+  "SHOT_UNIT_SLOSHER": "slosh",
+  "SHOT_UNIT_SLOSHER_PLURAL": "sloshes",
+  "SHOT_UNIT_CHARGER": "full charge",
+  "SHOT_UNIT_CHARGER_PLURAL": "full charges",
+
+  "INK_BREAKDOWN_SHOTS_AFTER_SUB": "{{unit}} after sub: {{value}}",
+  "INK_BREAKDOWN_TOTAL_SHOTS": "{{value}} to empty",
+  "INK_BREAKDOWN_INK_PER_SHOT": "{{value}}/{{unit}}",
+  "INK_BREAKDOWN_INK_PER_SECOND": "{{value}}/second",
+  "INK_BREAKDOWN_RECOVERY": "Full Recovery Time",
+
+  "HEADER_WITH_ABILITY": "{{ability}} Stats",
 
   "UI_ABOUT_CONTENT": `Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br>
   This tool was developed using info and assets datamined by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord.

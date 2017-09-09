@@ -104,5 +104,6 @@ angular
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider
       .translations('en', en_strings)
-      .preferredLanguage('en')
+      .translations('jp', jp_strings)
+      .preferredLanguage('jp')
 }]);
