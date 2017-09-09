@@ -16,6 +16,10 @@ var jp_strings = {
   "FOOTER_ABOUT": "お問い合わせ",
 
   "UNAVAILABLE": "表示不可",
+  "UNRELEASED": "Unreleased",
+
+  "KID_FORM": "Kid",
+  "SQUID_FORM": "Squid",
 
   "UI_WEAPON_PICKER": "ぶき選択",
   "UI_GEAR_PICKER": "ギア選択",
@@ -24,6 +28,14 @@ var jp_strings = {
   "UI_OK": "OK",
   "UI_CANCEL": "キャンセル",
   "UI_CONFIRM_CASUAL": "了解～",
+
+  "UI_COPY_LINK": "Copy Link",
+  "UI_SCREENSHOT_MODE": "Toggle Screenshot Mode",
+  "UI_CLEAR_ABILITIES": "Clear Abilities",
+  "UI_CLEAR_ALL": "Clear All",
+
+  "UI_NONSTANDARD_SPLATNET": "Non-standard. Only on SplatNet",
+  "UI_NOT_POSSIBLE": "Not possible with current main",
 
   "STAT_SWIM_SPEED": "イカダッシュ速度",
   "STAT_RUN_SPEED": "ヒト移動速度",
@@ -73,6 +85,63 @@ var jp_strings = {
   "DESC_QUICK_RESPAWN": "相手を一人も倒せないまま連続でやられてしまったときの復活時間",
 
   "UNIT_DISTANCE_UNITS_PER_FRAME": "距離単位/フレーム",
+
+  "SHOT_UNIT_SHOT": "shot",
+  "SHOT_UNIT_SHOT_PLURAL": "shots",
+  "SHOT_UNIT_FLICK": "flick",
+  "SHOT_UNIT_FLICK_PLURAL": "flicks",
+  "SHOT_UNIT_FLICK_HORIZ": "horizontal flick",
+  "SHOT_UNIT_FLICK_HORIZ_PLURAL": "horizontal flicks",
+  "SHOT_UNIT_FLICK_VERT": "vertical flick",
+  "SHOT_UNIT_FLICK_VERT_PLURAL": "vertical flicks",
+  "SHOT_UNIT_SLOSHER": "slosh",
+  "SHOT_UNIT_SLOSHER_PLURAL": "sloshes",
+  "SHOT_UNIT_CHARGER": "full charge",
+  "SHOT_UNIT_CHARGER_PLURAL": "full charges",
+
+  // Future feature - ink breakdown
+  //// Combined with SHOT_UNIT strings
+  "INK_BREAKDOWN_SHOTS_AFTER_SUB": "{{unitPlural}} after sub: {{value}}",
+  "INK_BREAKDOWN_TOTAL_SHOTS": "{{value}} to empty",
+  "INK_BREAKDOWN_INK_PER_SHOT": "{{value}}/{{unit}}",
+  "INK_BREAKDOWN_INK_PER_SECOND": "{{value}}/second",
+  "INK_BREAKDOWN_RECOVERY": "Full Recovery Time",
+
+  // Future feature - Comeback/Tenacity/etc
+  "HEADER_WITH_ABILITY": "{{ability}} Stats",
+
+  // Future feature - a few explanations
+  "UI_DISTANCE_EXPLANATION": "Distance Units per Frame is a measurement of speed in-game.",
+  "UI_DISTANCE_EQUIVALENT": "Each line in the testing area is 50 Distance Units apart.",
+  "UI_FRAMES_EXPLANATION": "One second is 60 frames.",
+
+  // Future feature - options
+  "UI_OPTIONS": "Options",
+  "UI_ENABLE_UNRELEASED": "Enable Unreleased Weapons",
+  "UI_UNRELEASED_DISCLAIMER": "Stats for unreleased weapons may not be accurate.",
+  "UI_UNRELEASED_WEAPONS": "Unreleased Weapons",
+
+  // Future feature - gear tabs
+  "UI_SPLATNET_GEAR": "SplatNet Gear",
+  "UI_STANDARD_GEAR": "Standard Gear",
+  "UI_UNRELEASED_GEAR": "Unreleased Gear",
+  
+  // Future feature - set saving
+  "UI_LOADOUT": "Loadout",
+  "UI_SAVE_LOADOUT": "Save Loadout",
+  "UI_LOAD_LOADOUT": "Load Loadout",
+  "UI_SAVE": "Save",
+  "UI_LOAD": "Load",
+  "UI_NAME": "Name",
+  "UI_ENTER_NAME": "Enter a name for this loadout:",
+  "UI_ERROR_NAME_TOO_LONG": "Name must be shorter than 20 characters.",
+  "UI_ERROR_DUPLICATE_NAME": "You already have a loadout with this name.",
+  "UI_ERROR_INVALID_NAME": "Please pick a different name.",
+  "UI_DELETE_LOADOUT": "Delete Loadout",
+  "UI_DELETE": "Delete",
+  "UI_VERIFY": "Are you sure?",
+  "UI_SAVED_LOADOUTS": "Saved Loadouts",
+  "UI_DELETE_ALL": "Delete All Loadouts",
 
   "UI_ABOUT_CONTENT": `主にAngularJS 1.6.5とBootstrap 3で作られています。<br><br>
   このツールは<a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>さんや、InkademyとSplatoon DevelopersのDiscordの皆さんから教えていただいた情報と資産を基にして開発された。
