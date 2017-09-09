@@ -35,7 +35,7 @@ var jp_strings = {
   "UI_CLEAR_ALL": "Clear All",
 
   "UI_NONSTANDARD_SPLATNET": "Non-standard. Only on SplatNet",
-  "UI_NOT_POSSIBLE": "Not possible with current main",
+  "UI_NOT_POSSIBLE": "Not possible with selected main",
 
   "STAT_SWIM_SPEED": "イカダッシュ速度",
   "STAT_RUN_SPEED": "ヒト移動速度",
@@ -125,7 +125,7 @@ var jp_strings = {
   "UI_SPLATNET_GEAR": "SplatNet Gear",
   "UI_STANDARD_GEAR": "Standard Gear",
   "UI_UNRELEASED_GEAR": "Unreleased Gear",
-  
+
   // Future feature - set saving
   "UI_LOADOUT": "Loadout",
   "UI_SAVE_LOADOUT": "Save Loadout",

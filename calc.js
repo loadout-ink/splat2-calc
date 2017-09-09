@@ -105,5 +105,5 @@ angular
     $translateProvider
       .translations('en', en_strings)
       .translations('jp', jp_strings)
-      .preferredLanguage('jp')
+      .preferredLanguage('en')
 }]);

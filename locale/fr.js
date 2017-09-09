@@ -56,7 +56,7 @@ var fr_strings = {
   "UI_CLEAR_ALL": "Clear All",
   // Tooltips for special icons
   "UI_NONSTANDARD_SPLATNET": "Non-standard. Only on SplatNet",
-  "UI_NOT_POSSIBLE": "Not possible with current main",
+  "UI_NOT_POSSIBLE": "Not possible with selected main",
 
   // Stats - these appear over the stat bars.
   // If there is an asterisk (*), leave it in after the stat name.

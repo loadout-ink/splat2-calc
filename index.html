@@ -80,7 +80,7 @@
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
                           <span>
-                            ver. 1.0.5 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="What's New?" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                            ver. 1.0.5 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{'UI_CHANGELOG' | translate}}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                           </span>
                         </div>
                       </div>
@@ -136,10 +136,10 @@
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.head.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
+                                <span class="fa fa-5x fa-ban" uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>
@@ -165,10 +165,10 @@
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.clothes.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
+                                <span class="fa fa-5x fa-ban " uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>
@@ -194,10 +194,10 @@
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.shoes.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban " uib-tooltip="Not possible with selected main" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
+                                <span class="fa fa-5x fa-ban " uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?loadout.shoes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="Non-standard. Only on SplatNet" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?loadout.shoes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>

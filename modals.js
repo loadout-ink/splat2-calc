@@ -121,7 +121,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="annie">
-    <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" />
+    <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}"/>
     </span>
     </div><!--
     --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
