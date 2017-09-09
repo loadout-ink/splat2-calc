@@ -8,7 +8,7 @@ function Stat(name, calc, max) {
 }
 
 //TODO: clean all this up
-angular.module('splatApp').stats = function ($scope) {
+angular.module('splatApp').stats = function ($scope, $translate) {
 $scope.stats = {
   //TODO: come up with a better way to convey speed?
   'Swim Speed': new Stat('STAT_SWIM_SPEED', function(loadout) {
@@ -97,7 +97,7 @@ $scope.stats = {
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.localizedDesc = { totalShots: Math.floor(100/costPerShot), reduction: (reduction*100).toFixed(1), desc: 'DESC_MAIN_COST' };
-      this.localizedLabel = { value: costPerShot.toFixed(1), unit: loadout.weapon.shotUnit, label: 'LABEL_MAIN_COST' };
+      this.localizedLabel = { value: costPerShot.toFixed(1), unit: $translate.instant(loadout.weapon.shotUnit), label: 'LABEL_MAIN_COST' };
       this.value = costPerShot;
       return costPerShot;
     }, 100),

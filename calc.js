@@ -1,10 +1,10 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
-  .controller('splatController', ['$scope', '$timeout', function splatCtrl($scope, $timeout, $uibModal, $log) {
+  .controller('splatController', ['$scope', '$timeout', '$translate', function splatCtrl($scope, $timeout, $translate, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
-    angular.module('splatApp').stats($scope);
+    angular.module('splatApp').stats($scope, $translate);
     angular.module('splatApp').weapons($scope);
     angular.module('splatApp').subs($scope);
     angular.module('splatApp').specials($scope);
@@ -108,5 +108,5 @@ angular
       .translations('fr', fr_strings)
       .translations('es', es_strings)
       .translations('it', it_strings)
-      .preferredLanguage('en')
+      .preferredLanguage('jp')
 }]);

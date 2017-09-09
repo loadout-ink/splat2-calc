@@ -121,7 +121,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="annie">
-    <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}"/>
+    <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}"/>
     </span>
     </div><!--
     --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
@@ -132,7 +132,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <span class="main-icon">
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
-    <span class="not-possible" uib-tooltip="Not possible with selected main" tooltip-append-to-body="true">
+    <span class="not-possible" uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true">
     <span class="fa fa-5x fa-ban " ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
     </span>
     </div>
