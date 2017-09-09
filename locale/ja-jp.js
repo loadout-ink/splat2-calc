@@ -1,4 +1,4 @@
-var en_strings = {
+var jp_strings = {
   "HAT_SLOT": "アタマ",
   "CLOTHES_SLOT": "フク",
   "SHOES_SLOT": "クツ",
