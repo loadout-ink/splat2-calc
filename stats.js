@@ -2,7 +2,6 @@ function Stat(name, calc, max) {
   this.name = name;
   this.calc = calc;
   this.max = max;
-  this.unit = unit;
   this.value = 0;
   this.localizedDesc = { desc: null };
   this.localizedLabel = { label: null };
@@ -71,7 +70,7 @@ $scope.stats = {
         var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
         this.value = ((speed / 0.96) * 100)
-        this.localizedLabel = { value: this.value.toFixed(2), label: 'LABEL_DISTANCE_PER_FRAME' };
+        this.localizedLabel = { value: speed.toFixed(2), label: 'LABEL_DISTANCE_PER_FRAME' };
         this.localizedDesc = { desc: 'UNIT_DISTANCE_UNITS_PER_FRAME' };
         return this.value.toFixed(1);
       }, 150),
@@ -98,7 +97,7 @@ $scope.stats = {
       var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.localizedDesc = { totalShots: Math.floor(100/costPerShot), reduction: (reduction*100).toFixed(1), desc: 'DESC_MAIN_COST' };
-      this.localizedLabel = { value: this.value.toFixed(1), unit: loadout.weapon.shotUnit, label: 'LABEL_MAIN_COST' };
+      this.localizedLabel = { value: costPerShot.toFixed(1), unit: loadout.weapon.shotUnit, label: 'LABEL_MAIN_COST' };
       this.value = costPerShot;
       return costPerShot;
     }, 100),
@@ -120,7 +119,7 @@ $scope.stats = {
       this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
       this.localizedDesc = { value: Math.floor(loadout.weapon.specialCost / chargeSpeed), desc: 'DESC_SPECIAL_COST' };
       this.value = chargeSpeed;
-      this.localizedLabel = { value: this.value.toFixed(1), label: 'LABEL_PERCENT' };
+      this.localizedLabel = { value: (this.value*100).toFixed(1), label: 'LABEL_PERCENT' };
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
     //TODO: This is WRONG! Need more data!
@@ -136,7 +135,7 @@ $scope.stats = {
       }
       var kept  = baseKept + mod;
       this.value = kept;
-      this.localizedLabel = { value: this.value.toFixed(1), label: 'LABEL_PERCENT' };
+      this.localizedLabel = { value: (this.value*100).toFixed(1), label: 'LABEL_PERCENT' };
       return (kept * 100).toFixed(1);
     }, 1),
 //TODO: clean this up a bit
@@ -157,7 +156,6 @@ $scope.stats = {
           coeff = 90;
           base = 360;
           this.max = 8.1;
-          this.unit = 's'
           this.name = 'STAT_SPECIAL_POWER_DURATION'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.value = results;
@@ -168,7 +166,6 @@ $scope.stats = {
           coeff = 60;
           base = 360;
           this.max = 9;
-          this.unit = 's'
           this.name = 'STAT_SPECIAL_POWER_DURATION'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.value = results;
@@ -181,7 +178,6 @@ $scope.stats = {
           coeff = 120;
           base = 480;
           this.max = 10;
-          this.unit = 's'
           this.name = 'STAT_SPECIAL_POWER_DURATION'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
           this.value = results;
@@ -192,7 +188,6 @@ $scope.stats = {
           coeff = 30;
           base = 300;
           this.max = 600;
-          this.unit = ' HP'
           this.name = 'STAT_SPECIAL_POWER_BALLER'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))
           this.value = results;
@@ -203,7 +198,6 @@ $scope.stats = {
           coeff = 45;
           base = 4.8;
           this.max = 8;
-          this.unit = '%'
           this.max = '166'
           this.name = 'STAT_SPECIAL_POWER_TENTA'
           results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)*100
@@ -215,7 +209,6 @@ $scope.stats = {
           coeff = 110;
           base = 110;
           this.max = 1.274;
-          this.unit = '%'
           this.name = 'STAT_SPECIAL_POWER_SPLASHDOWN'
           results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
           this.localizedDesc = { value: (base*results).toFixed(1), desc: 'DESC_DISTANCE' };
