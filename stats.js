@@ -1,10 +1,11 @@
-function Stat(name, calc, max, unit) {
+function Stat(name, calc, max) {
   this.name = name;
   this.calc = calc;
   this.max = max;
   this.unit = unit;
   this.value = 0;
   this.localizedDesc = { desc: null };
+  this.localizedLabel = { label: null };
 }
 
 //TODO: clean all this up
