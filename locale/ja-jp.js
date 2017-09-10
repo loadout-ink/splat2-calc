@@ -86,17 +86,17 @@ var jp_strings = {
 
   "UNIT_DISTANCE_UNITS_PER_FRAME": "DU/f = Distance Unit Per Frame(1フレームに移動できる距離単位)で、試し撃ちラインが50D",
 
-  "SHOT_UNIT_SHOT": "発",
+  "SHOT_UNIT_SHOT": "一発",
   "SHOT_UNIT_SHOT_PLURAL": "発",
-  "SHOT_UNIT_FLICK": "振り",
+  "SHOT_UNIT_FLICK": "一振り",
   "SHOT_UNIT_FLICK_PLURAL": "振り",
-  "SHOT_UNIT_FLICK_HORIZ": "横振り",
+  "SHOT_UNIT_FLICK_HORIZ": "一横振り",
   "SHOT_UNIT_FLICK_HORIZ_PLURAL": "横振り",
-  "SHOT_UNIT_FLICK_VERT": "縦振り",
+  "SHOT_UNIT_FLICK_VERT": "一縦振り",
   "SHOT_UNIT_FLICK_VERT_PLURAL": "縦振り",
-  "SHOT_UNIT_SLOSHER": "撃",
+  "SHOT_UNIT_SLOSHER": "一撃",
   "SHOT_UNIT_SLOSHER_PLURAL": "撃",
-  "SHOT_UNIT_CHARGER": "フルチャージ",
+  "SHOT_UNIT_CHARGER": "一フルチャージ",
   "SHOT_UNIT_CHARGER_PLURAL": "フルチャージ",
 
   // Future feature - ink breakdown
