@@ -239,9 +239,9 @@
                     {{'STATS_HEADER' | translate}}
                   </div>
                   <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }">
-                    <div class="statlabel">
+                    <div class="statlabel" ng-class="{'jp': (currentLanguage == 'jp')}">
                       {{stat.name | translate}}
-                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
+                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright" ng-class="{'jp': (currentLanguage == 'jp')}">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
                     </div>
                   </div>
                   <div id="disclaimer">* {{'INACCURATE_DISCLAIMER' | translate}}</div>

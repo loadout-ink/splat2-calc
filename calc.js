@@ -1,6 +1,6 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
-  .controller('splatController', ['$scope', '$timeout', '$translate', '$locale', function splatCtrl($scope, $timeout, $translate, $locale, $uibModal, $log) {
+  .controller('splatController', ['$scope', '$rootScope', '$timeout', '$translate', '$locale', function splatCtrl($scope, $rootScope, $timeout, $translate, $locale, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -104,10 +104,10 @@ angular
       }
     }
 
-    $scope.currentLanguage = $translate.use();
+    $rootScope.currentLanguage = $translate.use();
 
     $scope.changeLanguage = function(langKey) {
-      $scope.currentLanguage = (langKey);
+      $rootScope.currentLanguage = (langKey);
       $translate.use(langKey);
       $scope.refreshStats();
     }

@@ -207,7 +207,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     {{"UI_ABOUT" | translate}}
     </div>
     <div class="row basic-content" id="about">
-    <p translate="{{'UI_ABOUT_CONTENT'|translate}}"></p>
+    <p translate="{{'UI_ABOUT_CONTENT'|translate}}" ng-class="{'jp': (currentLanguage == 'jp')}"></p>
     <div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>
