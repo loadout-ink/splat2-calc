@@ -1432,6 +1432,15 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Roller_BrushMini_00.png",
           name: "Inkbrush",
+        localizedName: {
+            "ja_JP": "パブロ",
+            "en_US": "Inkbrush",
+            "en_GB": "Inkbrush",
+            "es_ES": "Pincel",
+            "es_MX": "Pincel",
+            "fr_FR": "Épinceau",
+            "fr_CA": "Épinceau"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Splat Bomb",
           special: "Splashdown",
@@ -1452,6 +1461,15 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Roller_BrushMini_01.png",
           name: "Inkbrush Nouveau",
+        localizedName: {
+            "ja_JP": "パブロ・ヒュー",
+            "en_US": "Inkbrush Nouveau",
+            "en_GB": "Inkbrush Nouveau",
+            "es_ES": "Pincel maestro",
+            "es_MX": "Pincel maestro",
+            "fr_FR": "Épinceau nuancé",
+            "fr_CA": "Épinceau nuancé"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Ink Mine",
@@ -1473,6 +1491,15 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_00.png",
           name: "Octobrush",
+        localizedName: {
+            "ja_JP": "ホクサイ",
+            "en_US": "Octobrush",
+            "en_GB": "Octobrush",
+            "es_ES": "Brocha",
+            "es_MX": "Pincel caligrafía",
+            "fr_FR": "Épinceau brosse",
+            "fr_CA": "Épinceau brosse"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Autobomb",
           special: "Inkjet",
@@ -1493,6 +1520,15 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_H.png",
           name: "Herobrush Replica",
+        localizedName: {
+            "ja_JP": "ヒーローブラシ レプリカ",
+            "en_US": "Herobrush Replica",
+            "en_GB": "Herobrush Replica",
+            "es_ES": "Herobrush Replica",
+            "es_MX": "Herobrush Replica",
+            "fr_FR": "Herobrush Replica",
+            "fr_CA": "Herobrush Replica"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Autobomb",
           special: "Inkjet",
@@ -1513,6 +1549,15 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_01.png",
           name: "Octobrush Nouveau",
+        localizedName: {
+            "ja_JP": "ホクサイ・ヒュー",
+            "en_US": "Octobrush Nouveau",
+            "en_GB": "Octobrush Nouveau",
+            "es_ES": "Brocha maestra",
+            "es_MX": "Pincel caligrafía maestro",
+            "fr_FR": "Épinceau brosse nuancé",
+            "fr_CA": "Épinceau brosse nuancé"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Squid Beakon",
