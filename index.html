@@ -281,13 +281,13 @@
                         <table class="table table-sm">
                           <tr>
                             <th>{{'SPECIAL_TABLE_SPECIAL' | translate}}</th>
-                            <th>{{'TABLE_HIT' | translate}}</th>
-                            <th>{{'TABLE_NEAR' | translate}}</th>
-                            <th>{{'TABLE_FAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_HIT' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_NEAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="special in getDamagingSpecials()">
-                              <td>{{special.name}}</td>
+                              <td>{{special.localizedName[currentLanguage]}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Direct"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Near"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Far"]}}</td>
