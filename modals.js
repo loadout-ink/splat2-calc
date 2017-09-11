@@ -22,7 +22,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="row">
     <div class="col-xs-4 nopadding">
-    <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{selectedWeapon.sub}}" tooltip-append-to-body="true"  class="subspeicon" />
+    <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{getSubByName(selectedWeapon.sub).localizedName[currentLanguage]}}" tooltip-append-to-body="true"  class="subspeicon" />
     </div>
     <div class="col-xs-8 nopadding">
     <div class="subspe-bubble">
@@ -89,7 +89,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="selected-label" class="selected-label">
     <span>{{selectedGear.name}}</span></div>
     <div id="gearpicker-stats">
-    <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{selectedGear.main}}<br>
+    <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName[currentLanguage]}}<br>
     <img ng-src="{{brands[selectedGear.brand].image}}"/> {{selectedGear.brand}}<br>
     <div>
     <span ng-if="brands[selectedGear.brand].common">
@@ -245,6 +245,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
         },
         getSpecialByName: function() {
           return $scope.getSpecialByName
+        },
+        currentLanguage: function() {
+          return $scope.currentLanguage
         }
       }
     });
@@ -327,6 +330,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
           else {
             return 'neonstripes'
           }
+        },
+        currentLanguage: function() {
+          return $scope.currentLanguage
         }
       }
     });
@@ -342,10 +348,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
   };
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon) {
+angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, currentLanguage) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
+  $scope.currentLanguage = currentLanguage;
 
   $scope.switchSet = function() {
     $scope.selectedWeapon = this.availableWeapons()[0];
@@ -381,7 +388,7 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName) {
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, currentLanguage) {
   $scope.slot = slot
   $scope.set = set
   $scope.filterByMain = filterByMain
@@ -389,6 +396,8 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibMod
   $scope.getSkillByName = getSkillByName
   $scope.brands = brands
   $scope.background = background
+  $scope.currentLanguage = currentLanguage
+
   if(slot.main != null) $scope.filtered = filterByMain(set,slot.main.name)
   else $scope.filtered = filterByMain(set,null)
 

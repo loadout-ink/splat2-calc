@@ -225,9 +225,9 @@
                 </div>
               </div>
               <div class="row card" ability-box id="abilitybox">
-                <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName[currentLanguage]}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
                 <hr>
-                <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{::skill.name}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName[currentLanguage]}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
               </div>
             </div>
           </div>
