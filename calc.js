@@ -1,6 +1,6 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
-  .controller('splatController', ['$scope', '$timeout', '$translate', function splatCtrl($scope, $timeout, $translate, $uibModal, $log) {
+  .controller('splatController', ['$scope', '$timeout', '$translate', '$locale', function splatCtrl($scope, $timeout, $translate, $locale, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -32,10 +32,14 @@ angular
     $scope.loadout.clothes.equipped = $scope.clothes[0];
     $scope.loadout.shoes.equipped = $scope.shoes[0];
 
+    $scope.refreshStats = function() {
+      Object.keys($scope.stats).forEach(function(currentKey) {
+          $scope.stats[currentKey].calc($scope.loadout);
+      });
+    }
+
      $scope.$watch('loadout', function() {
-       Object.keys($scope.stats).forEach(function(currentKey) {
-           $scope.stats[currentKey].calc($scope.loadout);
-       });
+       $scope.refreshStats();
        history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
      },true);
 
@@ -100,7 +104,20 @@ angular
       }
     }
 
+    $scope.currentLanguage = $translate.use();
+
+    $scope.changeLanguage = function(langKey) {
+      $scope.currentLanguage = (langKey);
+      $translate.use(langKey);
+      $scope.refreshStats();
+    }
+
+    $scope.languages = {
+      'en': 'English',
+      'jp': '日本語'
+    }
   }])
+
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider
       .translations('en', en_strings)
@@ -108,5 +125,5 @@ angular
       .translations('fr', fr_strings)
       .translations('es', es_strings)
       .translations('it', it_strings)
-      .preferredLanguage('jp')
+      .preferredLanguage('en')
 }]);

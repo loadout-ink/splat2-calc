@@ -7,7 +7,7 @@
 @font-face {
   font-family: "Splatfont";
   src: url(./assets/fonts/Splatfont2.woff) format("woff"),
-  url(./assets/fonts/ProjectPaintball.woff) format("ttf");
+  url(./assets/fonts/Splatfont2.woff);
 }
 
 html {
@@ -51,6 +51,22 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background: #222;
   text-align: center;
   padding:5px;
+  position: relative;
+}
+
+#language-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#language-button {
+  background: rgba(0,0,0,0);
+  font-family: "Splatfont";
+  font-size: 12pt;
+  color: #fff;
+  border: 0;
+  padding: 10px;
 }
 
 #splat-header img {
