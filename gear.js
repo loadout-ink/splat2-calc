@@ -6,10 +6,10 @@ angular.module('splatApp').gear = function($scope) {
   $scope.brands = {
     "SquidForce" : {
       localizedName: {
-        en: "SquidForce",
-        jp: "バトロイカ",
-        es: "Kalamas",
-        fr: "Kalamarus Rex"
+        en_US: "SquidForce",
+        ja_JP: "バトロイカ",
+        es_ES: "Kalamas",
+        fr_FR: "Kalamarus Rex"
       },
       image: "assets/img/brands/B00.png",
       common: "Ink Resistance Up",
@@ -17,10 +17,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Zink" : {
       localizedName: {
-        en: "Zink",
-        jp: "アイロニック",
-        es: "Tintaz",
-        fr: "Leviathus"
+        en_US: "Zink",
+        ja_JP: "アイロニック",
+        es_ES: "Tintaz",
+        fr_FR: "Leviathus"
       },
       image: "assets/img/brands/B01.png",
       common: "Quick Super Jump",
@@ -28,10 +28,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Krak-On" : {
       localizedName: {
-        en: "Krak-On",
-        jp: "クラーゲス",
-        es: "Meddux",
-        fr: "Krakers"
+        en_US: "Krak-On",
+        ja_JP: "クラーゲス",
+        es_ES: "Meddux",
+        fr_FR: "Krakers"
       },
       image: "assets/img/brands/B02.png",
       common: "Swim Speed Up",
@@ -39,10 +39,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Rockenberg" : {
       localizedName: {
-        en: "Rockenberg",
-        jp: "ロッケンベルグ",
-        es: "Rockenberg",
-        fr: "Iormungand"
+        en_US: "Rockenberg",
+        ja_JP: "ロッケンベルグ",
+        es_ES: "Rockenberg",
+        fr_FR: "Iormungand"
       },
       image: "assets/img/brands/B03.png",
       common: "Run Speed Up",
@@ -50,10 +50,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Zekko" : {
       localizedName: {
-        en: "Zekko",
-        jp: "エゾッコ",
-        es: "Ezko",
-        fr: "Ezko"
+        en_US: "Zekko",
+        ja_JP: "エゾッコ",
+        es_ES: "Ezko",
+        fr_FR: "Ezko"
       },
       image: "assets/img/brands/B04.png",
       common: "Special Saver",
@@ -61,10 +61,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Forge" : {
       localizedName: {
-        en: "Forge",
-        jp: "フォーリマ",
-        es: "Forima",
-        fr: "Focus"
+        en_US: "Forge",
+        ja_JP: "フォーリマ",
+        es_ES: "Forima",
+        fr_FR: "Focus"
       },
       image: "assets/img/brands/B05.png",
       common: "Special Power Up",
@@ -72,10 +72,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Firefin" : {
       localizedName: {
-        en: "Firefin",
-        jp: "ホッコリー",
-        es: "Chokkor",
-        fr: "Friture"
+        en_US: "Firefin",
+        ja_JP: "ホッコリー",
+        es_ES: "Chokkor",
+        fr_FR: "Friture"
       },
       image: "assets/img/brands/B06.png",
       common: "Ink Saver (Sub)",
@@ -83,10 +83,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Skalop" : {
       localizedName: {
-        en: "Skalop",
-        jp: "ホタックス",
-        es: "Skalop",
-        fr: "Jack"
+        en_US: "Skalop",
+        ja_JP: "ホタックス",
+        es_ES: "Skalop",
+        fr_FR: "Jack"
       },
       image: "assets/img/brands/B07.png",
       common: "Quick Respawn",
@@ -94,10 +94,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Splash Mob" : {
       localizedName: {
-        en: "Splash Mob",
-        jp: "ジモン",
-        es: "Jimmon",
-        fr: "Gédéon"
+        en_US: "Splash Mob",
+        ja_JP: "ジモン",
+        es_ES: "Jimmon",
+        fr_FR: "Gédéon"
       },
       image: "assets/img/brands/B08.png",
       common: "Ink Saver (Main)",
@@ -105,10 +105,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Inkline" : {
       localizedName: {
-        en: "Inkline",
-        jp: "シグレニ",
-        es: "Moluskia",
-        fr: "Abysma"
+        en_US: "Inkline",
+        ja_JP: "シグレニ",
+        es_ES: "Moluskia",
+        fr_FR: "Abysma"
       },
       image: "assets/img/brands/B09.png",
       common: "Bomb Defense Up",
@@ -116,10 +116,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Tentatek" : {
       localizedName: {
-        en: "Tentatek",
-        jp: "アロメ",
-        es: "Arome",
-        fr: "OculR"
+        en_US: "Tentatek",
+        ja_JP: "アロメ",
+        es_ES: "Arome",
+        fr_FR: "OculR"
       },
       image: "assets/img/brands/B10.png",
       common: "Ink Recovery Up",
@@ -127,10 +127,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Takoroka" : {
       localizedName: {
-        en: "Takoroka",
-        jp: "ヤコ",
-        es: "Sepioca",
-        fr: "Cubic"
+        en_US: "Takoroka",
+        ja_JP: "ヤコ",
+        es_ES: "Sepioca",
+        fr_FR: "Cubic"
       },
       image: "assets/img/brands/B11.png",
       common: "Special Charge Up",
@@ -138,10 +138,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Annaki" : {
       localizedName: {
-        en: "Annaki",
-        jp: "アナアキ",
-        es: "Annak",
-        fr: "Aroz"
+        en_US: "Annaki",
+        ja_JP: "アナアキ",
+        es_ES: "Annak",
+        fr_FR: "Aroz"
       },
       image: "assets/img/brands/B15.png",
       common: "Cold-Blooded",
@@ -149,10 +149,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Enperry" : {
       localizedName: {
-        en: "Enperry",
-        jp: "エンペリー",
-        es: "Krakien",
-        fr: "DUX"
+        en_US: "Enperry",
+        ja_JP: "エンペリー",
+        es_ES: "Krakien",
+        fr_FR: "DUX"
       },
       image: "assets/img/brands/B16.png",
       common: "Sub Power Up",
@@ -160,10 +160,10 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Toni Kensa" : {
       localizedName: {
-        en: "Toni Kensa",
-        jp: "タタキケンサキ",
-        es: "Tonken",
-        fr: "Thony K"
+        en_US: "Toni Kensa",
+        ja_JP: "タタキケンサキ",
+        es_ES: "Tonken",
+        fr_FR: "Thony K"
       },
       image: "assets/img/brands/B17.png",
       common: "Cold-Blooded",
@@ -171,28 +171,28 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Grizzco" : {
       localizedName: {
-        en: "Grizzco",
-        jp: "クマサン商会",
-        es: "Don Oso, S.A.",
-        fr: "M. Ours SA"
+        en_US: "Grizzco",
+        ja_JP: "クマサン商会",
+        es_ES: "Don Oso, S.A.",
+        fr_FR: "M. Ours SA"
       },
       image: "assets/img/brands/B97.png"
     },
     "Cuttlegear" : {
       localizedName: {
-        en: "Cuttlegear",
-        jp: "アタリメイド",
-        es: "Obvius",
-        fr: "Macalamar"
+        en_US: "Cuttlegear",
+        ja_JP: "アタリメイド",
+        es_ES: "Obvius",
+        fr_FR: "Macalamar"
       },
       image: "assets/img/brands/B98.png"
     },
     "amiibo" : {
       localizedName: {
-        en: "amiibo",
-        jp: "amiibo",
-        es: "amiibo",
-        fr: "amiibo"
+        en_US: "amiibo",
+        ja_JP: "amiibo",
+        es_ES: "amiibo",
+        fr_FR: "amiibo"
       },
       image: "assets/img/brands/B99.png"
     }

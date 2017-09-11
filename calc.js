@@ -113,17 +113,17 @@ angular
     }
 
     $scope.languages = {
-      'en': 'English',
-      'jp': '日本語'
+      'en_US': 'English',
+      'ja_JP': '日本語'
     }
   }])
 
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider
-      .translations('en', en_strings)
-      .translations('jp', jp_strings)
-      .translations('fr', fr_strings)
-      .translations('es', es_strings)
+      .translations('en_US', en_strings)
+      .translations('ja_JP', jp_strings)
+      .translations('fr_FR', fr_strings)
+      .translations('es_ES', es_strings)
       .translations('it', it_strings)
-      .preferredLanguage('en')
+      .preferredLanguage('en_US')
 }]);

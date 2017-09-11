@@ -3,10 +3,10 @@ $scope.skills = [
   {
     name:"Ink Saver (Main)",
     localizedName: {
-      en: "Ink Saver (Main)",
-      jp: "インク効率アップ（メイン）",
-      es: "Tintahorro (ppal.)",
-      fr: "Encrémenteur (pr.)"
+      en_US: "Ink Saver (Main)",
+      ja_JP: "インク効率アップ（メイン）",
+      es_ES: "Tintahorro (ppal.)",
+      fr_FR: "Encrémenteur (pr.)"
     },
     image:"./assets/img/skills/MainInk_Save.png",
     id: 1
@@ -14,10 +14,10 @@ $scope.skills = [
   {
     name:"Ink Saver (Sub)",
     localizedName: {
-      en: "Ink Saver (Sub)",
-      jp: "インク効率アップ（サブ）",
-      es: "Tintahorro (sec.)",
-      fr: "Encrémenteur (sec.)"
+      en_US: "Ink Saver (Sub)",
+      ja_JP: "インク効率アップ（サブ）",
+      es_ES: "Tintahorro (sec.)",
+      fr_FR: "Encrémenteur (sec.)"
     },
     image:"./assets/img/skills/SubInk_Save.png",
     id: 2
@@ -25,10 +25,10 @@ $scope.skills = [
   {
     name:"Ink Recovery Up",
     localizedName: {
-      en: "Ink Recovery Up",
-      jp: "インク回復力アップ",
-      es: "Recarga rápida",
-      fr: "Levée d'encre"
+      en_US: "Ink Recovery Up",
+      ja_JP: "インク回復力アップ",
+      es_ES: "Recarga rápida",
+      fr_FR: "Levée d'encre"
     },
     image:"./assets/img/skills/InkRecovery_Up.png",
     id: 3
@@ -36,10 +36,10 @@ $scope.skills = [
   {
     name:"Run Speed Up",
     localizedName: {
-      en: "Run Speed Up",
-      jp: "ヒト移動速度アップ",
-      es: "Supercarrera",
-      fr: "Course à pied"
+      en_US: "Run Speed Up",
+      ja_JP: "ヒト移動速度アップ",
+      es_ES: "Supercarrera",
+      fr_FR: "Course à pied"
     },
     image:"./assets/img/skills/HumanMove_Up.png",
     id: 4
@@ -47,10 +47,10 @@ $scope.skills = [
   {
     name:"Swim Speed Up",
     localizedName: {
-      en: "Swim Speed Up",
-      jp: "イカダッシュ速度アップ",
-      es: "Superbuceo",
-      fr: "Turbo-calamar"
+      en_US: "Swim Speed Up",
+      ja_JP: "イカダッシュ速度アップ",
+      es_ES: "Superbuceo",
+      fr_FR: "Turbo-calamar"
     },
     image:"./assets/img/skills/SquidMove_Up.png",
     id: 5
@@ -58,10 +58,10 @@ $scope.skills = [
   {
     name:"Quick Super Jump",
     localizedName: {
-      en: "Quick Super Jump",
-      jp: "スーパージャンプ時間短縮",
-      es: "Supersalto rápido",
-      fr: "Aérodynamisme"
+      en_US: "Quick Super Jump",
+      ja_JP: "スーパージャンプ時間短縮",
+      es_ES: "Supersalto rápido",
+      fr_FR: "Aérodynamisme"
     },
     image:"./assets/img/skills/JumpTime_Save.png",
     id: 6
@@ -69,10 +69,10 @@ $scope.skills = [
   {
     name:"Ink Resistance Up",
     localizedName: {
-      en: "Ink Resistance Up",
-      jp: "相手インク影響軽減",
-      es: "Impermeabilidad",
-      fr: "Pieds au sec"
+      en_US: "Ink Resistance Up",
+      ja_JP: "相手インク影響軽減",
+      es_ES: "Impermeabilidad",
+      fr_FR: "Pieds au sec"
     },
     image:"./assets/img/skills/OpInkEffect_Reduction.png",
     id: 7
@@ -80,10 +80,10 @@ $scope.skills = [
   {
     name:"Bomb Defense Up",
     localizedName: {
-      en: "Bomb Defense Up",
-      jp: "爆風ダメージ軽減",
-      es: "Resistencia explosiva",
-      fr: "Filtre à explosions"
+      en_US: "Bomb Defense Up",
+      ja_JP: "爆風ダメージ軽減",
+      es_ES: "Resistencia explosiva",
+      fr_FR: "Filtre à explosions"
     },
     image:"./assets/img/skills/BombDamage_Reduction.png",
     id: 8
@@ -91,10 +91,10 @@ $scope.skills = [
   {
     name:"Cold-Blooded",
     localizedName: {
-      en: "Cold-Blooded",
-      jp: "マーキング時間短縮",
-      es: "Invisibilidad",
-      fr: "Furtivité"
+      en_US: "Cold-Blooded",
+      ja_JP: "マーキング時間短縮",
+      es_ES: "Invisibilidad",
+      fr_FR: "Furtivité"
     },
     image:"./assets/img/skills/MarkingTime_Reduction.png",
     id: 9
@@ -102,10 +102,10 @@ $scope.skills = [
   {
     name:"Quick Respawn",
     localizedName: {
-      en: "Quick Respawn",
-      jp: "復活時間短縮",
-      es: "Retorno exprés",
-      fr: "Sans temps morts"
+      en_US: "Quick Respawn",
+      ja_JP: "復活時間短縮",
+      es_ES: "Retorno exprés",
+      fr_FR: "Sans temps morts"
     },
     image:"./assets/img/skills/RespawnTime_Save.png",
     id: 10
@@ -113,10 +113,10 @@ $scope.skills = [
   {
     name:"Special Charge Up",
     localizedName: {
-      en: "Special Charge Up",
-      jp: "スペシャル増加量アップ",
-      es: "Recarga especial",
-      fr: "Jauge spéciale +"
+      en_US: "Special Charge Up",
+      ja_JP: "スペシャル増加量アップ",
+      es_ES: "Recarga especial",
+      fr_FR: "Jauge spéciale +"
     },
     image:"./assets/img/skills/SpecialIncrease_Up.png",
     id: 11
@@ -124,10 +124,10 @@ $scope.skills = [
   {
     name:"Special Saver",
     localizedName: {
-      en: "Special Saver",
-      jp: "スペシャル減少量ダウン",
-      es: "Reducción especial",
-      fr: "Baisse spéciale -"
+      en_US: "Special Saver",
+      ja_JP: "スペシャル減少量ダウン",
+      es_ES: "Reducción especial",
+      fr_FR: "Baisse spéciale -"
     },
     image:"./assets/img/skills/RespawnSpecialGauge_Save.png",
     id: 12
@@ -135,10 +135,10 @@ $scope.skills = [
   {
     name:"Special Power Up",
     localizedName: {
-      en: "Special Power Up",
-      jp: "スペシャル性能アップ",
-      es: "Superarma especial",
-      fr: "Arme spéciale +"
+      en_US: "Special Power Up",
+      ja_JP: "スペシャル性能アップ",
+      es_ES: "Superarma especial",
+      fr_FR: "Arme spéciale +"
     },
     image:"./assets/img/skills/SpecialTime_Up.png",
     id: 13
@@ -146,10 +146,10 @@ $scope.skills = [
   {
     name:"Sub Power Up",
     localizedName: {
-      en: "Sub Power Up",
-      jp: "サブ性能アップ",
-      es: "Superarma secundaria",
-      fr: "Arme secondaire +"
+      en_US: "Sub Power Up",
+      ja_JP: "サブ性能アップ",
+      es_ES: "Superarma secundaria",
+      fr_FR: "Arme secondaire +"
     },
     image:"./assets/img/skills/BombDistance_Up.png",
     id: 14
@@ -157,10 +157,10 @@ $scope.skills = [
   {
     name:"Opening Gambit",
     localizedName: {
-      en: "Opening Gambit",
-      jp: "スタートダッシュ",
-      es: "Acelerón de salida",
-      fr: "Chapeaux de roue"
+      en_US: "Opening Gambit",
+      ja_JP: "スタートダッシュ",
+      es_ES: "Acelerón de salida",
+      fr_FR: "Chapeaux de roue"
     },
     image:"./assets/img/skills/StartAllUp.png",
     exclusive:"loadout.head.main",
@@ -169,10 +169,10 @@ $scope.skills = [
   {
     name:"Last-Ditch Effort",
     localizedName: {
-      en: "Last-Ditch Effort",
-      jp: "ラストスパート",
-      es: "Sprint Final",
-      fr: "Ultime sursaut"
+      en_US: "Last-Ditch Effort",
+      ja_JP: "ラストスパート",
+      es_ES: "Sprint Final",
+      fr_FR: "Ultime sursaut"
     },
     image:"./assets/img/skills/EndAllUp.png",
     exclusive:"loadout.head.main",
@@ -181,10 +181,10 @@ $scope.skills = [
   {
     name:"Comeback",
     localizedName: {
-      en: "Comeback",
-      jp: "カムバック",
-      es: "Remontada",
-      fr: "Come-back"
+      en_US: "Comeback",
+      ja_JP: "カムバック",
+      es_ES: "Remontada",
+      fr_FR: "Come-back"
     },
     image:"./assets/img/skills/ComeBack.png",
     exclusive:"loadout.head.main",
@@ -193,10 +193,10 @@ $scope.skills = [
   {
     name:"Tenacity",
     localizedName: {
-      en: "Tenacity",
-      jp: "逆境強化",
-      es: "Ventaja",
-      fr: "Justice"
+      en_US: "Tenacity",
+      ja_JP: "逆境強化",
+      es_ES: "Ventaja",
+      fr_FR: "Justice"
     },
     image:"./assets/img/skills/MinorityUp.png",
     exclusive:"loadout.head.main",
@@ -205,10 +205,10 @@ $scope.skills = [
   {
     name:"Thermal Ink",
     localizedName: {
-      en: "Thermal Ink",
-      jp: "サーマルインク",
-      es: "Señuelo",
-      fr: "Encre thermique"
+      en_US: "Thermal Ink",
+      ja_JP: "サーマルインク",
+      es_ES: "Señuelo",
+      fr_FR: "Encre thermique"
     },
     image:"./assets/img/skills/ThermalInk.png",
     exclusive:"loadout.clothes.main",
@@ -217,10 +217,10 @@ $scope.skills = [
   {
     name:"Ninja Squid",
     localizedName: {
-      en: "Ninja Squid",
-      jp: "イカニンジャ",
-      es: "Ninjalamar",
-      fr: "Ninjalamar"
+      en_US: "Ninja Squid",
+      ja_JP: "イカニンジャ",
+      es_ES: "Ninjalamar",
+      fr_FR: "Ninjalamar"
     },
     image:"./assets/img/skills/SquidMoveSpatter_Reduction.png",
     exclusive:"loadout.clothes.main",
@@ -229,10 +229,10 @@ $scope.skills = [
   {
     name:"Haunt",
     localizedName: {
-      en: "Haunt",
-      jp: "リベンジ",
-      es: "Represalia",
-      fr: "Revanche"
+      en_US: "Haunt",
+      ja_JP: "リベンジ",
+      es_ES: "Represalia",
+      fr_FR: "Revanche"
     },
     image:"./assets/img/skills/DeathMarking.png",
     exclusive:"loadout.clothes.main",
@@ -241,10 +241,10 @@ $scope.skills = [
   {
     name:"Respawn Punisher",
     localizedName: {
-      en: "Respawn Punisher",
-      jp: "復活ペナルティアップ",
-      es: "Castigo póstumo",
-      fr: "Retour perdant"
+      en_US: "Respawn Punisher",
+      ja_JP: "復活ペナルティアップ",
+      es_ES: "Castigo póstumo",
+      fr_FR: "Retour perdant"
     },
     image:"./assets/img/skills/Exorcist.png",
     exclusive:"loadout.clothes.main",
@@ -253,10 +253,10 @@ $scope.skills = [
   {
     name:"Drop Roller",
     localizedName: {
-      en: "Ninja Squid",
-      jp: "受け身術",
-      es: "Amortiguador",
-      fr: "Super roulade"
+      en_US: "Ninja Squid",
+      ja_JP: "受け身術",
+      es_ES: "Amortiguador",
+      fr_FR: "Super roulade"
     },
     image:"./assets/img/skills/SomersaultLanding.png",
     exclusive:"loadout.shoes.main",
@@ -265,10 +265,10 @@ $scope.skills = [
   {
     name:"Stealth Jump",
     localizedName: {
-      en: "Stealth Jump",
-      jp: "ステルスジャンプ",
-      es: "Supersalto invisible",
-      fr: "Réception réussie"
+      en_US: "Stealth Jump",
+      ja_JP: "ステルスジャンプ",
+      es_ES: "Supersalto invisible",
+      fr_FR: "Réception réussie"
     },
     image:"./assets/img/skills/SuperJumpSign_Hide.png",
     exclusive:"loadout.shoes.main",
@@ -277,10 +277,10 @@ $scope.skills = [
   {
     name:"Object Shredder",
     localizedName: {
-      en: "Object Shredder",
-      jp: "対物攻撃力アップ",
-      es: "Demolición",
-      fr: "Démolition"
+      en_US: "Object Shredder",
+      ja_JP: "対物攻撃力アップ",
+      es_ES: "Demolición",
+      fr_FR: "Démolition"
     },
     image:"./assets/img/skills/ObjectEffect_Up.png",
     exclusive:"loadout.shoes.main",
