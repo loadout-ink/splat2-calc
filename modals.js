@@ -18,7 +18,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-12 col-sm-6">
     <div class="selected-label">
-    <span>{{selectedWeapon.name}}</span></div>
+    <span>{{selectedWeapon.localizedName[currentLanguage]}}</span></div>
     <div class="col-md-12">
     <div class="row">
     <div class="col-xs-4 nopadding">
@@ -48,14 +48,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-8 picker-right">
     <div class="row">
     <div class="col-md-12">
-    <select class="form-control dropdown-toggle" data-ng-options="x.type for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+    <select class="form-control dropdown-toggle" data-ng-options="x.localizedName[currentLanguage] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
     </div>
     </div>
     <div class="col-md-12">
     <div class="row">
     <div class="picker">
     <div class="gear-wrapper" ng-repeat="weapon in availableWeapons()">
-    <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{::weapon.name}}" tooltip-append-to-body="true"/>
+    <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{weapon.localizedName[currentLanguage]}}" tooltip-append-to-body="true"/>
     </div>
     </div>
     </div>
@@ -207,7 +207,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     {{"UI_ABOUT" | translate}}
     </div>
     <div class="row basic-content" id="about">
-    <p translate="{{'UI_ABOUT_CONTENT'|translate}}" ng-class="{'jp': (currentLanguage == 'jp')}"></p>
+    <p translate="{{'UI_ABOUT_CONTENT'|translate}}" ng-class="{'jp': (currentLanguage == 'ja_JP')}"></p>
     <div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>

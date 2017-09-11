@@ -100,9 +100,9 @@
                   </div>
                   <div class="col-sm-6 col-sm-pull-6 nopadding">
                     <div class="card neonstripes" id="weapon">
-                      <div class="row cardheader">
+                      <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                         <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openWeaponPicker()" ><span class="glyphicon glyphicon-pencil"></span></button>
-                        {{loadout.weapon.name}}
+                        {{loadout.weapon.localizedName[currentLanguage]}}
                       </div>
                       <div class="row">
                         <div class="col-xs-5">
@@ -136,7 +136,7 @@
                   <div class="row">
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard redstripes">
-                        <div class="row cardheader">
+                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" ><span class="glyphicon glyphicon-pencil"></span></button>
                           {{'HAT_SLOT' | translate}}
                         </div>
@@ -165,7 +165,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard tealstripes">
-                        <div class="row cardheader">
+                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" ><span class="glyphicon glyphicon-pencil"></span></button>
                           {{'CLOTHES_SLOT' | translate}}
                         </div>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard orangestripes">
-                        <div class="row cardheader">
+                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" ><span class="glyphicon glyphicon-pencil"></span></button>
                           {{'SHOES_SLOT' | translate}}
                         </div>
@@ -235,13 +235,13 @@
             <div id="stat-gap">
               <div id="statbox" class="card">
                 <div class="row">
-                  <div class="row cardheader">
+                  <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                     {{'STATS_HEADER' | translate}}
                   </div>
                   <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }">
-                    <div class="statlabel" ng-class="{'jp': (currentLanguage == 'jp')}">
+                    <div class="statlabel" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
                       {{stat.name | translate}}
-                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright" ng-class="{'jp': (currentLanguage == 'jp')}">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
+                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright" ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
                     </div>
                   </div>
                   <div id="disclaimer">* {{'INACCURATE_DISCLAIMER' | translate}}</div>
@@ -258,9 +258,9 @@
                         <table class="table table-sm">
                           <tr>
                             <th>{{'BOMB_TABLE_BOMB' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_DIRECT' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_NEAR' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_FAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_DIRECT' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_NEAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="sub in getDamagingSubs()">
@@ -281,9 +281,9 @@
                         <table class="table table-sm">
                           <tr>
                             <th>{{'SPECIAL_TABLE_SPECIAL' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_HIT' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_NEAR' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_FAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_HIT' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_NEAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="special in getDamagingSpecials()">

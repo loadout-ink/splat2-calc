@@ -75,6 +75,16 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   text-justify: inter-ideograph !important;
 }
 
+.statlabel.jp {
+  font-size: 10pt;
+}
+
+.cardheader.jp {
+  font-family: Splatfont !important;
+  text-align: center !important;
+  font-size: 14pt;
+}
+
 #splat-header img {
   height:130px;
 }
