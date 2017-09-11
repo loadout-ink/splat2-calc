@@ -87,7 +87,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-12 col-sm-6">
     <div class="selected-label" class="selected-label">
-    <span>{{selectedGear.name}}</span></div>
+    <span>{{selectedGear.localizedName[currentLanguage]}}</span></div>
     <div id="gearpicker-stats">
     <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName[currentLanguage]}}<br>
     <img ng-src="{{brands[selectedGear.brand].image}}"/> {{brands[selectedGear.brand].localizedName[currentLanguage]}}<br>
@@ -103,7 +103,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-8 picker-right">
     <div class="picker">
-    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gear-wrapper">
+    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{item.localizedName[currentLanguage]}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -112,7 +112,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     </div><!--
-    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.name}}" tooltip-append-to-body="true" class="gear-wrapper">
+    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{item.localizedName[currentLanguage]}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
