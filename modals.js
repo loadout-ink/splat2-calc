@@ -26,7 +26,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-xs-8 nopadding">
     <div class="subspe-bubble">
-    <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{selectedWeapon.special}}" tooltip-append-to-body="true" class="subspeicon" />
+    <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{getSpecialByName(selectedWeapon.special).localizedName[currentLanguage]}}" tooltip-append-to-body="true" class="subspeicon" />
     {{selectedWeapon.specialCost}}p
     </div>
     </div>
