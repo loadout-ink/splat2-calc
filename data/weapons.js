@@ -36,9 +36,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 0,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 0
         },
@@ -66,9 +66,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 1900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 1
         },
@@ -95,9 +95,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 900,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 2
         },
@@ -124,9 +124,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 1500,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 3
         },
@@ -153,9 +153,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 2100,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 4
         },
@@ -182,9 +182,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 13800,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 60
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 60
           },
           id: 5
         },
@@ -211,9 +211,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 20800,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 60
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 60
           },
           id: 6
         },
@@ -240,9 +240,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 4900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 90,
-            "Damage": 10
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 90,
+            "SHELDON_DAMAGE": 10
           },
           id: 7
         },
@@ -269,9 +269,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 16900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 90,
-            "Damage": 10
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 90,
+            "SHELDON_DAMAGE": 10
           },
           id: 8
         },
@@ -298,9 +298,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 7100,
           stats: {
-            "Range": 50,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 9
         },
@@ -328,9 +328,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 8800,
           stats: {
-            "Range": 50,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 10
         },
@@ -357,9 +357,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 9700,
           stats: {
-            "Range": 12,
-            "Fire Rate": 75,
-            "Damage": 52
+            "SHELDON_RANGE": 12,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 52
           },
           id: 11
         },
@@ -387,9 +387,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12200,
           stats: {
-            "Range": 12,
-            "Fire Rate": 75,
-            "Damage": 52
+            "SHELDON_RANGE": 12,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 52
           },
           id: 12
         },
@@ -416,9 +416,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 11200,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 13
         },
@@ -446,9 +446,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 16800,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 14
         },
@@ -475,9 +475,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 9500,
           stats: {
-            "Range": 50,
-            "Fire Rate": 25,
-            "Damage": 75
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 25,
+            "SHELDON_DAMAGE": 75
           },
           id: 15
         },
@@ -505,9 +505,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 12700,
           stats: {
-            "Range": 50,
-            "Fire Rate": 25,
-            "Damage": 75
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 25,
+            "SHELDON_DAMAGE": 75
           },
           id: 16
         },
@@ -534,9 +534,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 12600,
           stats: {
-            "Range": 70,
-            "Fire Rate": 10,
-            "Damage": 75
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_DAMAGE": 75
           },
           id: 17
         },
@@ -564,9 +564,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 16200,
           stats: {
-            "Range": 70,
-            "Fire Rate": 10,
-            "Damage": 75
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_DAMAGE": 75
           },
           id: 18
         },
@@ -593,9 +593,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 11300,
           stats: {
-            "Range": 82,
-            "Fire Rate": 30,
-            "Damage": 35
+            "SHELDON_RANGE": 82,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 35
           },
           id: 19
         },
@@ -623,9 +623,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 15900,
           stats: {
-            "Range": 82,
-            "Fire Rate": 30,
-            "Damage": 35
+            "SHELDON_RANGE": 82,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 35
           },
           id: 20
         },
@@ -652,9 +652,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 10400,
           stats: {
-            "Range": 62,
-            "Fire Rate": 65,
-            "Damage": 25
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_DAMAGE": 25
           },
           id: 21
         },
@@ -682,9 +682,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12500,
           stats: {
-            "Range": 62,
-            "Fire Rate": 65,
-            "Damage": 25
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_DAMAGE": 25
           },
           id: 22
         },
@@ -711,9 +711,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 17200,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 58
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 58
           },
           id: 23
         },
@@ -741,9 +741,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 18400,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 58
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 58
           },
           id: 24
         },
@@ -769,9 +769,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 9400,
           stats: {
-            "Range": 70,
-            "Fire Rate": 45,
-            "Damage": 52
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 45,
+            "SHELDON_DAMAGE": 52
           },
           id: 25
         },
@@ -797,9 +797,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 10900,
           stats: {
-            "Range": 70,
-            "Fire Rate": 45,
-            "Damage": 52
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 45,
+            "SHELDON_DAMAGE": 52
           },
           id: 26
         }
@@ -841,9 +841,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 2400,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 0
         },
@@ -870,9 +870,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 3100,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 1
         },
@@ -899,9 +899,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 9000,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 2
         },
@@ -928,9 +928,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 9800,
           stats: {
-            "Range": 70,
-            "Mobility": 60,
-            "Damage": 22
+            "SHELDON_RANGE": 70,
+            "SHELDON_MOBILITY": 60,
+            "SHELDON_DAMAGE": 22
           },
           id: 3
         },
@@ -958,9 +958,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12900,
           stats: {
-            "Range": 70,
-            "Mobility": 60,
-            "Damage": 22
+            "SHELDON_RANGE": 70,
+            "SHELDON_MOBILITY": 60,
+            "SHELDON_DAMAGE": 22
           },
           id: 4
         },
@@ -987,9 +987,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 14700,
           stats: {
-            "Range": 24,
-            "Mobility": 80,
-            "Damage": 47
+            "SHELDON_RANGE": 24,
+            "SHELDON_MOBILITY": 80,
+            "SHELDON_DAMAGE": 47
           },
           id: 5
         },
@@ -1017,9 +1017,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 17500,
           stats: {
-            "Range": 24,
-            "Mobility": 80,
-            "Damage": 47
+            "SHELDON_RANGE": 24,
+            "SHELDON_MOBILITY": 80,
+            "SHELDON_DAMAGE": 47
           },
           id: 6
         },
@@ -1045,9 +1045,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 10700,
           stats: {
-            "Range": 50,
-            "Mobility": 90,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_MOBILITY": 90,
+            "SHELDON_DAMAGE": 22
           },
           id: 7
         },
@@ -1073,9 +1073,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 13300,
           stats: {
-            "Range": 50,
-            "Mobility": 90,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_MOBILITY": 90,
+            "SHELDON_DAMAGE": 22
           },
           id: 8
         },
@@ -1101,9 +1101,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 11800,
           stats: {
-            "Range": 56,
-            "Mobility": 35,
-            "Damage": 76
+            "SHELDON_RANGE": 56,
+            "SHELDON_MOBILITY": 35,
+            "SHELDON_DAMAGE": 76
           },
           id: 9
         },
@@ -1129,9 +1129,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 13700,
           stats: {
-            "Range": 56,
-            "Mobility": 35,
-            "Damage": 76
+            "SHELDON_RANGE": 56,
+            "SHELDON_MOBILITY": 35,
+            "SHELDON_DAMAGE": 76
           },
           id: 10
         }
@@ -1173,9 +1173,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 1800,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 0
         },
@@ -1202,9 +1202,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 2300,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 1
         },
@@ -1231,9 +1231,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 9200,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 2
         },
@@ -1260,9 +1260,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.28,
           price: 6200,
           stats: {
-            "Range": 20,
-            "Ink Speed": 63,
-            "Handling": 65
+            "SHELDON_RANGE": 20,
+            "SHELDON_INK_SPEED": 63,
+            "SHELDON_HANDLING": 65
           },
           id: 3
         },
@@ -1290,9 +1290,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.28,
           price: 8500,
           stats: {
-            "Range": 20,
-            "Ink Speed": 63,
-            "Handling": 65
+            "SHELDON_RANGE": 20,
+            "SHELDON_INK_SPEED": 63,
+            "SHELDON_HANDLING": 65
           },
           id: 4
         },
@@ -1319,9 +1319,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.88,
           price: 24500,
           stats: {
-            "Range": 76,
-            "Ink Speed": 25,
-            "Handling": 20
+            "SHELDON_RANGE": 76,
+            "SHELDON_INK_SPEED": 25,
+            "SHELDON_HANDLING": 20
           },
           id: 5
         },
@@ -1349,9 +1349,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.88,
           price: 29000,
           stats: {
-            "Range": 76,
-            "Ink Speed": 25,
-            "Handling": 20
+            "SHELDON_RANGE": 76,
+            "SHELDON_INK_SPEED": 25,
+            "SHELDON_HANDLING": 20
           },
           id: 6
         },
@@ -1378,9 +1378,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 15700,
           stats: {
-            "Range": 55,
-            "Ink Speed": 45,
-            "Handling": 45
+            "SHELDON_RANGE": 55,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 45
           },
           id: 7
         },
@@ -1408,9 +1408,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 21300,
           stats: {
-            "Range": 55,
-            "Ink Speed": 45,
-            "Handling": 45
+            "SHELDON_RANGE": 55,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 45
           },
           id: 8
         }
@@ -1443,9 +1443,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.92,
           price: 2600,
           stats: {
-            "Range": 5,
-            "Ink Speed": 100,
-            "Handling": 100
+            "SHELDON_RANGE": 5,
+            "SHELDON_INK_SPEED": 100,
+            "SHELDON_HANDLING": 100
           },
           id: 0
         },
@@ -1464,9 +1464,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.92,
           price: 7000,
           stats: {
-            "Range": 5,
-            "Ink Speed": 100,
-            "Handling": 100
+            "SHELDON_RANGE": 5,
+            "SHELDON_INK_SPEED": 100,
+            "SHELDON_HANDLING": 100
           },
           id: 1
         },
@@ -1484,9 +1484,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 8200,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 2
         },
@@ -1504,9 +1504,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 9400,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 3
         },
@@ -1525,9 +1525,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 9900,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 4
         }
@@ -1569,9 +1569,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 3000,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 0
         },
@@ -1598,9 +1598,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 3800,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 1
         },
@@ -1627,9 +1627,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 15300,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 2
         },
@@ -1656,9 +1656,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 9300,
           stats: {
-            "Range": 56,
-            "Fire Rate": 10,
-            "Impact": 70
+            "SHELDON_RANGE": 56,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_IMPACT": 70
           },
           id: 3
         },
@@ -1685,9 +1685,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 11400,
           stats: {
-            "Range": 56,
-            "Fire Rate": 10,
-            "Impact": 70
+            "SHELDON_RANGE": 56,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_IMPACT": 70
           },
           id: 4
         },
@@ -1714,9 +1714,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 9800,
           stats: {
-            "Range": 62,
-            "Fire Rate": 40,
-            "Impact": 35
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 40,
+            "SHELDON_IMPACT": 35
           },
           id: 5
         },
@@ -1744,9 +1744,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 11500,
           stats: {
-            "Range": 62,
-            "Fire Rate": 40,
-            "Impact": 35
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 40,
+            "SHELDON_IMPACT": 35
           },
           id: 6
         },
@@ -1774,9 +1774,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 12800,
           stats: {
-            "Range": 72,
-            "Fire Rate": 30,
-            "Impact": 35
+            "SHELDON_RANGE": 72,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 35
           },
           id: 7
         },
@@ -1804,9 +1804,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 14000,
           stats: {
-            "Range": 72,
-            "Fire Rate": 30,
-            "Impact": 35
+            "SHELDON_RANGE": 72,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 35
           },
           id: 8
         },
@@ -1833,9 +1833,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 12100,
           stats: {
-            "Range": 9,
-            "Fire Rate": 30,
-            "Impact": 70
+            "SHELDON_RANGE": 9,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 70
           },
           id: 9
         },
@@ -1863,9 +1863,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 13600,
           stats: {
-            "Range": 9,
-            "Fire Rate": 30,
-            "Impact": 70
+            "SHELDON_RANGE": 9,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 70
           },
           id: 10
         },
@@ -1892,9 +1892,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 18200,
           stats: {
-            "Range": 21,
-            "Fire Rate": 65,
-            "Impact": 20
+            "SHELDON_RANGE": 21,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_IMPACT": 20
           },
           id: 11
         },
@@ -1922,9 +1922,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 20500,
           stats: {
-            "Range": 21,
-            "Fire Rate": 65,
-            "Impact": 20
+            "SHELDON_RANGE": 21,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_IMPACT": 20
           },
           id: 12
         }
@@ -1966,9 +1966,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 8300,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 0
         },
@@ -1995,9 +1995,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 9000,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 1
         },
@@ -2025,9 +2025,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 12000,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 2
         }
@@ -2069,9 +2069,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 2500,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 0
         },
@@ -2097,9 +2097,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 3100,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 1
         },
@@ -2127,9 +2127,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 8000,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 2
         },
@@ -2156,9 +2156,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 10200,
           stats: {
-            "Range": 39,
-            "Damage": 80,
-            "Handling": 70
+            "SHELDON_RANGE": 39,
+            "SHELDON_DAMAGE": 80,
+            "SHELDON_HANDLING": 70
           },
           id: 3
         },
@@ -2186,9 +2186,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 11700,
           stats: {
-            "Range": 39,
-            "Damage": 80,
-            "Handling": 70
+            "SHELDON_RANGE": 39,
+            "SHELDON_DAMAGE": 80,
+            "SHELDON_HANDLING": 70
           },
           id: 4
         },
@@ -2215,9 +2215,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12600,
           stats: {
-            "Range": 60,
-            "Damage": 90,
-            "Handling": 40
+            "SHELDON_RANGE": 60,
+            "SHELDON_DAMAGE": 90,
+            "SHELDON_HANDLING": 40
           },
           id: 5
         },
@@ -2244,9 +2244,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 19800,
           stats: {
-            "Range": 60,
-            "Damage": 90,
-            "Handling": 40
+            "SHELDON_RANGE": 60,
+            "SHELDON_DAMAGE": 90,
+            "SHELDON_HANDLING": 40
           },
           id: 6
         }
@@ -2288,9 +2288,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 2200,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 0
         },
@@ -2317,9 +2317,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 2700,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 1
         },
@@ -2346,9 +2346,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 10600,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 2
         },
@@ -2375,9 +2375,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 11400,
           stats: {
-            "Range": 91,
-            "Charge Speed": 50,
-            "Mobility": 30
+            "SHELDON_RANGE": 91,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 30
           },
           id: 3
         },
@@ -2404,9 +2404,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 13900,
           stats: {
-            "Range": 91,
-            "Charge Speed": 50,
-            "Mobility": 30
+            "SHELDON_RANGE": 91,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 30
           },
           id: 4
         },
@@ -2433,9 +2433,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 8900,
           stats: {
-            "Range": 75,
-            "Charge Speed": 70,
-            "Mobility": 60
+            "SHELDON_RANGE": 75,
+            "SHELDON_CHARGE_SPEED": 70,
+            "SHELDON_MOBILITY": 60
           },
           id: 5
         },
@@ -2463,9 +2463,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 11000,
           stats: {
-            "Range": 75,
-            "Charge Speed": 70,
-            "Mobility": 60
+            "SHELDON_RANGE": 75,
+            "SHELDON_CHARGE_SPEED": 70,
+            "SHELDON_MOBILITY": 60
           },
           id: 6
         },
@@ -2492,9 +2492,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 13900,
           stats: {
-            "Range": 96,
-            "Charge Speed": 20,
-            "Mobility": 15
+            "SHELDON_RANGE": 96,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 15
           },
           id: 7
         },
@@ -2522,9 +2522,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 17300,
           stats: {
-            "Range": 96,
-            "Charge Speed": 20,
-            "Mobility": 15
+            "SHELDON_RANGE": 96,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 15
           },
           id: 8
         },
@@ -2551,9 +2551,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 23200,
           stats: {
-            "Range": 100,
-            "Charge Speed": 20,
-            "Mobility": 5
+            "SHELDON_RANGE": 100,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 5
           },
           id: 9
         },
@@ -2581,9 +2581,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 29900,
           stats: {
-            "Range": 100,
-            "Charge Speed": 20,
-            "Mobility": 5
+            "SHELDON_RANGE": 100,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 5
           },
           id: 10
         },
@@ -2610,9 +2610,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 13400,
           stats: {
-            "Range": 78,
-            "Charge Speed": 30,
-            "Mobility": 70
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 30,
+            "SHELDON_MOBILITY": 70
           },
           id: 11
         },
@@ -2640,9 +2640,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 19300,
           stats: {
-            "Range": 78,
-            "Charge Speed": 30,
-            "Mobility": 70
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 30,
+            "SHELDON_MOBILITY": 70
           },
           id: 12
         },
@@ -2668,9 +2668,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "High",
           price: 9500,
           stats: {
-            "Range": 78,
-            "Charge Speed": 90,
-            "Mobility": 80
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 90,
+            "SHELDON_MOBILITY": 80
           },
           id: 13
         },
@@ -2696,9 +2696,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "High",
           price: 10500,
           stats: {
-            "Range": 78,
-            "Charge Speed": 90,
-            "Mobility": 80
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 90,
+            "SHELDON_MOBILITY": 80
           },
           id: 14
         }
@@ -2740,9 +2740,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 7800,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 0
         },
@@ -2769,9 +2769,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 8600,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 1
         },
@@ -2799,9 +2799,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 9600,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 2
         },
@@ -2828,9 +2828,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.7,
           price: 12300,
           stats: {
-            "Range": 62,
-            "Charge Speed": 80,
-            "Mobility": 90
+            "SHELDON_RANGE": 62,
+            "SHELDON_CHARGE_SPEED": 80,
+            "SHELDON_MOBILITY": 90
           },
           id: 3
         },
@@ -2858,9 +2858,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.7,
           price: 15400,
           stats: {
-            "Range": 62,
-            "Charge Speed": 80,
-            "Mobility": 90
+            "SHELDON_RANGE": 62,
+            "SHELDON_CHARGE_SPEED": 80,
+            "SHELDON_MOBILITY": 90
           },
           id: 4
         },
@@ -2886,9 +2886,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Low",
           price: 18500,
           stats: {
-            "Range": 85,
-            "Charge Speed": 10,
-            "Mobility": 20
+            "SHELDON_RANGE": 85,
+            "SHELDON_CHARGE_SPEED": 10,
+            "SHELDON_MOBILITY": 20
           },
           id: 5
         },
@@ -2914,9 +2914,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Low",
           price: 33300,
           stats: {
-            "Range": 85,
-            "Charge Speed": 10,
-            "Mobility": 20
+            "SHELDON_RANGE": 85,
+            "SHELDON_CHARGE_SPEED": 10,
+            "SHELDON_MOBILITY": 20
           },
           id: 6
         }

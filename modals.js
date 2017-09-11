@@ -35,7 +35,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12" id="minibar-container">
     <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
     <div class="col-sm-6 col-xs-3 nopadding minibar-label">
-    {{::stat}}
+    {{stat | translate}}
     </div>
     <div class="col-sm-6 col-xs-9 nopadding">
     <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />

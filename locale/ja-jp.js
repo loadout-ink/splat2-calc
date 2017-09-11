@@ -143,6 +143,16 @@ var jp_strings = {
   "UI_SAVED_LOADOUTS": "保存された揃え",
   "UI_DELETE_ALL": "揃えを全部削除",
 
+  "SHELDON_RANGE": "射程",
+  "SHELDON_FIRE_RATE": "連射力",
+  "SHELDON_CHARGE_SPEED": "チャージ速度",
+  "SHELDON_DURABILITY": "耐久力",
+  "SHELDON_IMPACT": "爆発力",
+  "SHELDON_MOBILITY": "機動性",
+  "SHELDON_INK_SPEED": "塗り進み速度",
+  "SHELDON_DAMAGE": "攻撃力",
+  "SHELDON_HANDLING": "軽さ",
+
   "UI_ABOUT_CONTENT": `主にAngularJS 1.6.5とBootstrap 3で作られています。<br><br>
   このツールは<a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>さんや、InkademyとSplatoon DevelopersのDiscordの皆さんから教えていただいた情報と資産を基にして開発された。
   <br><br>データの収集や応援をしてくれた皆様に感謝を申し上げます。<br><br>
