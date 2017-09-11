@@ -105,9 +105,17 @@ angular
     }
 
     $rootScope.currentLanguage = $translate.use();
+    if(typeof(Storage) !== 'undefined') {
+      if(localStorage.getItem('chosenLanguage') !== null) {
+         $rootScope.currentLanguage = localStorage.getItem('chosenLanguage');
+         $translate.use($rootScope.currentLanguage)
+      }
+    }
+
 
     $scope.changeLanguage = function(langKey) {
       $rootScope.currentLanguage = (langKey);
+      if(typeof(Storage) !== 'undefined') localStorage.setItem('chosenLanguage', langKey)
       $translate.use(langKey);
       $scope.refreshStats();
     }
