@@ -90,7 +90,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <span>{{selectedGear.name}}</span></div>
     <div id="gearpicker-stats">
     <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName[currentLanguage]}}<br>
-    <img ng-src="{{brands[selectedGear.brand].image}}"/> {{selectedGear.brand}}<br>
+    <img ng-src="{{brands[selectedGear.brand].image}}"/> {{brands[selectedGear.brand].localizedName[currentLanguage]}}<br>
     <div>
     <span ng-if="brands[selectedGear.brand].common">
     <span class="fa green fa-arrow-up"></span><img ng-src="{{getSkillByName(brands[selectedGear.brand].common).image}}"/>
