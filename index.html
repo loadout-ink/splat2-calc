@@ -258,13 +258,13 @@
                         <table class="table table-sm">
                           <tr>
                             <th>{{'BOMB_TABLE_BOMB' | translate}}</th>
-                            <th>{{'TABLE_DIRECT' | translate}}</th>
-                            <th>{{'TABLE_NEAR' | translate}}</th>
-                            <th>{{'TABLE_FAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_DIRECT' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_NEAR' | translate}}</th>
+                            <th ng-class="{'jp': (currentLanguage == 'jp')}">{{'TABLE_FAR' | translate}}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="sub in getDamagingSubs()">
-                              <td>{{sub.name}}</td>
+                              <td>{{sub.localizedName[currentLanguage]}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Direct"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Near"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Far"]}}</td>
