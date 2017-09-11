@@ -27,7 +27,6 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Shooter_First_01.png",
           name: "Custom Splattershot Jr.",
-          unreleased: true,
           shotUnit: "shot",
           sub: "Autobomb",
           special: "Ink Storm",
