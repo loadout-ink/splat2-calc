@@ -70,7 +70,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .jp {
-  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
   text-align: justify !important;
   text-justify: inter-ideograph !important;
 }
@@ -554,6 +554,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .cardheader {
+  height: 36px;
   padding-top:4px;
   padding-bottom:2px;
   background: rgba(20,20,20,0.8);
