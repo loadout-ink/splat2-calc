@@ -58,23 +58,27 @@ $scope.stats = {
         this.value = speed
         this.label = speed.toFixed(2) + ' DU/f';
         this.desc = "Distance Units/frame";
-        return this.value.toFixed(1);
+        return this.value.toFixed(2);
       }, 1.44),
     'Run Speed (Firing)': new Stat('Run Speed (Firing)', function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
           this.name = 'Run Speed (Rolling)'
+          var speed = loadout.weapon.baseSpeed;
+          this.value = speed;
+          this.label = speed.toFixed(2) + ' DU/f';
+          return speed.toFixed(2);
         }
         else {
           this.name = 'Run Speed (Firing)'
         }
         var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
-        this.value = ((speed / 0.96) * 100)
+        this.value = speed
         this.label = speed.toFixed(2) + ' DU/f';
         this.desc = "Distance Units/frame";
         return this.value.toFixed(1);
-      }, 150),
+      }, 1.44),
     'Ink Recovery Speed (Squid)': new Stat('Ink Recovery Speed (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
       var seconds = 3 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (600 / 7))
