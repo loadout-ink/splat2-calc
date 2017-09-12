@@ -220,7 +220,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .ability-wrapper {
-  margin-top: -10px;
+  position:relative;
+  top: -10px;
   display:flex;
   justify-content: space-around;
   padding-left: 10px;
