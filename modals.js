@@ -159,6 +159,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.0.7</h4>
+    <ul>
+    <li>Fixed Run Speed Up incorrectly increasing the roll speed of rollers.</li>
+    </ul>
     <h4>Version 1.0.6</h4>
     <ul>
     <li>Updated Special Charge Up scaling to round instead of floor.</li>
