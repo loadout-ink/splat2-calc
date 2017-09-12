@@ -122,7 +122,8 @@ angular
 
     $scope.languages = {
       'en_US': 'English',
-      'ja_JP': '日本語'
+      'ja_JP': '日本語',
+      'fr_FR': 'Français'
     }
   }])
 
