@@ -63,18 +63,22 @@ $scope.stats = {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
           this.name = 'STAT_RUN_SPEED_ROLLING'
+          var speed = loadout.weapon.baseSpeed;
+          this.value = speed;
+          this.localizedLabel = { value: this.value.toFixed(2), label: 'LABEL_DISTANCE_PER_FRAME' };
+          return speed.toFixed(2);
         }
         else {
           this.name = 'STAT_RUN_SPEED_FIRING'
         }
         var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
-        this.value = ((speed / 0.96) * 100)
+        this.value = speed
         this.localizedLabel = { value: speed.toFixed(2), label: 'LABEL_DISTANCE_PER_FRAME' };
         this.localizedDesc = { desc: 'UNIT_DISTANCE_UNITS_PER_FRAME' };
         return this.value.toFixed(1);
-      }, 150),
-    'Ink Recovery Speed (Squid)': new Stat('STAT_RECOVERY_SQUID', function(loadout) {
+      }, 1.44),
+    'Ink Recovery Speed (Squid)': new Stat('Ink Recovery Speed (Squid)', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
       var seconds = 3 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (600 / 7))
       this.localizedDesc = { value: seconds.toFixed(2), desc: 'DESC_RECOVERY_TIME' };
@@ -116,9 +120,8 @@ $scope.stats = {
     'Special Charge Speed': new Stat('STAT_SPECIAL_CHARGE', function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
-      this.value = Math.floor(loadout.weapon.specialCost / chargeSpeed)
-      this.localizedDesc = { value: Math.floor(loadout.weapon.specialCost / chargeSpeed), desc: 'DESC_SPECIAL_COST' };
       this.value = chargeSpeed;
+      this.localizedDesc = { value: Math.floor(loadout.weapon.specialCost / chargeSpeed), desc: 'DESC_SPECIAL_COST' };
       this.localizedLabel = { value: (this.value*100).toFixed(1), label: 'LABEL_PERCENT' };
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
@@ -185,8 +188,8 @@ $scope.stats = {
           return results.toFixed(2);
           break;
         case 'Baller':
-          coeff = 30;
-          base = 300;
+          coeff = 60;
+          base = 400;
           this.max = 600;
           this.name = 'STAT_SPECIAL_POWER_BALLER'
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))

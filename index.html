@@ -4,6 +4,8 @@
   <title>loadout.ink - Gear Planner for Splatoon 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
 
   <script src="lib/jquery/jquery.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
@@ -16,35 +18,37 @@
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
+
   <script src="locale/en-us.js"></script>
   <script src="locale/ja-jp.js"></script>
   <script src="locale/fr.js"></script>
   <script src="locale/es.js"></script>
   <script src="locale/it.js"></script>
 
-  <script src="./calc.js"></script>
-  <script src="./util.js"></script>
-  <script src="./loadout.js"></script>
-  <script src="./encode.js"></script>
-  <link rel="stylesheet" href="./calc.css">
-  <script src="./data/skills.js"></script>
-  <script src="./data/weapons.js"></script>
-  <script src="./data/subs.js"></script>
-  <script src="./data/specials.js"></script>
-  <script src="./data/hats.js"></script>
-  <script src="./data/clothes.js"></script>
-  <script src="./data/shoes.js"></script>
-  <script src="./gear.js"></script>
-  <script src="./stats.js"></script>
-  <script src="./ui.js"></script>
-  <script src="./modals.js"></script>
+  <script src="./calc.js?1.0.6"></script>
+  <script src="./util.js?1.0.6"></script>
+  <script src="./loadout.js?1.0.6"></script>
+  <script src="./encode.js?1.0.6"></script>
+  <link rel="stylesheet" href="./calc.css?1.0.6-1">
+  <script src="./data/skills.js?1.0.6"></script>
+  <script src="./data/weapons.js?1.0.6"></script>
+  <script src="./data/subs.js?1.0.6"></script>
+  <script src="./data/specials.js?1.0.6"></script>
+  <script src="./data/hats.js?1.0.6"></script>
+  <script src="./data/clothes.js?1.0.6"></script>
+  <script src="./data/shoes.js?1.0.6"></script>
+  <script src="./gear.js?1.0.6"></script>
+  <script src="./stats.js?1.0.7"></script>
+  <script src="./ui.js?1.0.6"></script>
+  <script src="./modals.js?1.0.7"></script>
+
   <script src="https://use.fontawesome.com/c7118d472c.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link rel="icon" href="assets/img/misc/favicon.png">
 </head>
-<body ng-app="splatApp" ng-controller="splatController">
+<body ng-cloak ng-app="splatApp" ng-controller="splatController">
   <div>
     <script type="text/ng-template" id="blankModal.html">
       <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
@@ -89,7 +93,7 @@
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
                           <span>
-                            ver. 1.0.5 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{'UI_CHANGELOG' | translate}}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                            ver. 1.0.7 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{'UI_CHANGELOG' | translate}}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                           </span>
                         </div>
                       </div>
