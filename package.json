@@ -1,0 +1,32 @@
+{
+  "name": "loadout.ink",
+  "version": "1.1.0",
+  "description": "Gear planner and stat calculator tool for Splatoon 2.",
+  "main": "index.html",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "q": "^1.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-translator": "^0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeviPotato/splat2-calc.git"
+  },
+  "author": "DeviPotato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeviPotato/splat2-calc/issues"
+  },
+  "homepage": "https://github.com/DeviPotato/splat2-calc#readme"
+}

@@ -1,7 +1,7 @@
 angular.module('splatApp').shoes = function($scope) {
   $scope.shoes = [
   {
-    image: "./assets/img/gear/Shs_FST000.png",
+    image: "../common/assets/img/gear/Shs_FST000.png",
     name: "Cream Basics",
     localizedName: {
       "ja_JP": "キャンバス ホワイト",
@@ -18,7 +18,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 0
   },
   {
-    image: "./assets/img/gear/Shs_SLO003.png",
+    image: "../common/assets/img/gear/Shs_SLO003.png",
     name: "White Seahorses",
     localizedName: {
       "ja_JP": "シーホース ホワイト",
@@ -35,7 +35,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 1
   },
   {
-    image: "./assets/img/gear/Shs_SLO008.png",
+    image: "../common/assets/img/gear/Shs_SLO008.png",
     name: "Strapping Whites",
     localizedName: {
       "ja_JP": "ベリベリホワイト",
@@ -52,7 +52,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 2
   },
   {
-    image: "./assets/img/gear/Shs_SLO009.png",
+    image: "../common/assets/img/gear/Shs_SLO009.png",
     name: "Strapping Reds",
     localizedName: {
       "ja_JP": "ベリベリレッド",
@@ -69,7 +69,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 3
   },
   {
-    image: "./assets/img/gear/Shs_SLO011.png",
+    image: "../common/assets/img/gear/Shs_SLO011.png",
     name: "LE Soccer Shoes",
     localizedName: {
       "ja_JP": "レアスパイカ",
@@ -86,7 +86,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 4
   },
   {
-    image: "./assets/img/gear/Shs_SLO012.png",
+    image: "../common/assets/img/gear/Shs_SLO012.png",
     name: "Sunny Climbing Shoes",
     localizedName: {
       "ja_JP": "ボルダーシューズ タイノエ",
@@ -103,7 +103,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 5
   },
   {
-    image: "./assets/img/gear/Shs_SLO013.png",
+    image: "../common/assets/img/gear/Shs_SLO013.png",
     name: "Birch Climbing Shoes",
     localizedName: {
       "ja_JP": "ボルダーシューズ ハザクラ",
@@ -120,7 +120,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 6
   },
   {
-    image: "./assets/img/gear/Shs_SHI000.png",
+    image: "../common/assets/img/gear/Shs_SHI000.png",
     name: "Red Hi-Horses",
     localizedName: {
       "ja_JP": "シーホースHi レッド",
@@ -137,7 +137,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 7
   },
   {
-    image: "./assets/img/gear/Shs_SHI003.png",
+    image: "../common/assets/img/gear/Shs_SHI003.png",
     name: "Purple Hi-Horses",
     localizedName: {
       "ja_JP": "シーホースHi パープル",
@@ -154,7 +154,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 8
   },
   {
-    image: "./assets/img/gear/Shs_SHI004.png",
+    image: "../common/assets/img/gear/Shs_SHI004.png",
     name: "Hunter Hi-Tops",
     localizedName: {
       "ja_JP": "キャンバスHi モロヘイヤ",
@@ -171,7 +171,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 9
   },
   {
-    image: "./assets/img/gear/Shs_SHI006.png",
+    image: "../common/assets/img/gear/Shs_SHI006.png",
     name: "Gold Hi-Horses",
     localizedName: {
       "ja_JP": "シーホースHi ゴールド",
@@ -188,7 +188,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 10
   },
   {
-    image: "./assets/img/gear/Shs_SHI009.png",
+    image: "../common/assets/img/gear/Shs_SHI009.png",
     name: "Mawcasins",
     localizedName: {
       "ja_JP": "ジョーズモカシン",
@@ -205,7 +205,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 11
   },
   {
-    image: "./assets/img/gear/Shs_SHI011.png",
+    image: "../common/assets/img/gear/Shs_SHI011.png",
     name: "Mint Dakroniks",
     localizedName: {
       "ja_JP": "デカロニックミント",
@@ -222,7 +222,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 12
   },
   {
-    image: "./assets/img/gear/Shs_SHI012.png",
+    image: "../common/assets/img/gear/Shs_SHI012.png",
     name: "Black Dakroniks",
     localizedName: {
       "ja_JP": "デカロニックブラック",
@@ -239,7 +239,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 13
   },
   {
-    image: "./assets/img/gear/Shs_SHI013.png",
+    image: "../common/assets/img/gear/Shs_SHI013.png",
     name: "Piranha Moccasins",
     localizedName: {
       "ja_JP": "ピラニアモカシン",
@@ -256,7 +256,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 14
   },
   {
-    image: "./assets/img/gear/Shs_SHI014.png",
+    image: "../common/assets/img/gear/Shs_SHI014.png",
     name: "White Norimaki 750s",
     localizedName: {
       "ja_JP": "ノリマキ750 ホワイト",
@@ -273,7 +273,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 15
   },
   {
-    image: "./assets/img/gear/Shs_SHI015.png",
+    image: "../common/assets/img/gear/Shs_SHI015.png",
     name: "Black Norimaki 750s",
     localizedName: {
       "ja_JP": "ノリマキ750 ブラック",
@@ -290,7 +290,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 16
   },
   {
-    image: "./assets/img/gear/Shs_SHI016.png",
+    image: "../common/assets/img/gear/Shs_SHI016.png",
     name: "Sunset Orca Hi-Tops",
     localizedName: {
       "ja_JP": "オルカHiサンセット",
@@ -307,7 +307,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 17
   },
   {
-    image: "./assets/img/gear/Shs_SHI017.png",
+    image: "../common/assets/img/gear/Shs_SHI017.png",
     name: "Red & Black Squidkid IV",
     localizedName: {
       "ja_JP": "エギング4 アカクロ",
@@ -324,7 +324,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 18
   },
   {
-    image: "./assets/img/gear/Shs_SHI018.png",
+    image: "../common/assets/img/gear/Shs_SHI018.png",
     name: "Blue & Black Squidkid IV",
     localizedName: {
       "ja_JP": "エギング4 アオクロ",
@@ -341,7 +341,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 19
   },
   {
-    image: "./assets/img/gear/Shs_SHI019.png",
+    image: "../common/assets/img/gear/Shs_SHI019.png",
     name: "Gray Sea-Slug Hi-Tops",
     localizedName: {
       "ja_JP": "ウミウシタウンHi グレー",
@@ -358,7 +358,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 20
   },
   {
-    image: "./assets/img/gear/Shs_SHI020.png",
+    image: "../common/assets/img/gear/Shs_SHI020.png",
     name: "Orca Hi-Tops",
     localizedName: {
       "ja_JP": "オルカHi",
@@ -375,7 +375,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 21
   },
   {
-    image: "./assets/img/gear/Shs_SHT000.png",
+    image: "../common/assets/img/gear/Shs_SHT000.png",
     name: "Pink Trainers",
     localizedName: {
       "ja_JP": "ピンクビーンズ",
@@ -392,7 +392,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 22
   },
   {
-    image: "./assets/img/gear/Shs_SHT001.png",
+    image: "../common/assets/img/gear/Shs_SHT001.png",
     name: "Orange Arrows",
     localizedName: {
       "ja_JP": "オレンジアローズ",
@@ -409,7 +409,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 23
   },
   {
-    image: "./assets/img/gear/Shs_SHT002.png",
+    image: "../common/assets/img/gear/Shs_SHT002.png",
     name: "Neon Sea Slugs",
     localizedName: {
       "ja_JP": "ウミウシイエロー",
@@ -426,7 +426,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 24
   },
   {
-    image: "./assets/img/gear/Shs_SHT007.png",
+    image: "../common/assets/img/gear/Shs_SHT007.png",
     name: "Purple Sea Slugs",
     localizedName: {
       "ja_JP": "ウミウシパープル",
@@ -443,7 +443,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 25
   },
   {
-    image: "./assets/img/gear/Shs_SHT008.png",
+    image: "../common/assets/img/gear/Shs_SHT008.png",
     name: "Crazy Arrows",
     localizedName: {
       "ja_JP": "クレイジーアローズ",
@@ -460,7 +460,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 26
   },
   {
-    image: "./assets/img/gear/Shs_SHT009.png",
+    image: "../common/assets/img/gear/Shs_SHT009.png",
     name: "Black Trainers",
     localizedName: {
       "ja_JP": "ブラックビーンズ",
@@ -477,7 +477,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 27
   },
   {
-    image: "./assets/img/gear/Shs_SHT011.png",
+    image: "../common/assets/img/gear/Shs_SHT011.png",
     name: "Canary Trainers",
     localizedName: {
       "ja_JP": "カナリアビーンズ",
@@ -494,7 +494,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 28
   },
   {
-    image: "./assets/img/gear/Shs_SHT012.png",
+    image: "../common/assets/img/gear/Shs_SHT012.png",
     name: "Yellow-Mesh Sneakers",
     localizedName: {
       "ja_JP": "アロメッシュイエロー",
@@ -511,7 +511,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 29
   },
   {
-    image: "./assets/img/gear/Shs_SHT013.png",
+    image: "../common/assets/img/gear/Shs_SHT013.png",
     name: "Arrow Pull-Ons",
     localizedName: {
       "ja_JP": "アローズ タタキベッチュー",
@@ -528,7 +528,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 30
   },
   {
-    image: "./assets/img/gear/Shs_SHT014.png",
+    image: "../common/assets/img/gear/Shs_SHT014.png",
     name: "Red-Mesh Sneakers",
     localizedName: {
       "ja_JP": "アロメッシュバーミリオン",
@@ -545,7 +545,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 31
   },
   {
-    image: "./assets/img/gear/Shs_SDL000.png",
+    image: "../common/assets/img/gear/Shs_SDL000.png",
     name: "Oyster Clogs",
     localizedName: {
       "ja_JP": "オイスタークロッグ",
@@ -562,7 +562,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 32
   },
   {
-    image: "./assets/img/gear/Shs_SDL001.png",
+    image: "../common/assets/img/gear/Shs_SDL001.png",
     name: "Choco Clogs",
     localizedName: {
       "ja_JP": "チョコクロッグ",
@@ -579,7 +579,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 33
   },
   {
-    image: "./assets/img/gear/Shs_CFS000.png",
+    image: "../common/assets/img/gear/Shs_CFS000.png",
     name: "Blueberry Casuals",
     localizedName: {
       "ja_JP": "ブルーベリーコンフォート",
@@ -596,7 +596,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 34
   },
   {
-    image: "./assets/img/gear/Shs_CFS001.png",
+    image: "../common/assets/img/gear/Shs_CFS001.png",
     name: "Plum Casuals",
     localizedName: {
       "ja_JP": "アケビコンフォート",
@@ -613,7 +613,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 35
   },
   {
-    image: "./assets/img/gear/Shs_SDL003.png",
+    image: "../common/assets/img/gear/Shs_SDL003.png",
     name: "Neon Delta Straps",
     localizedName: {
       "ja_JP": "デルタストラップ ネオン",
@@ -630,7 +630,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 36
   },
   {
-    image: "./assets/img/gear/Shs_SDL004.png",
+    image: "../common/assets/img/gear/Shs_SDL004.png",
     name: "Black Flip-Flops",
     localizedName: {
       "ja_JP": "BBサンダル",
@@ -647,7 +647,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 37
   },
   {
-    image: "./assets/img/gear/Shs_SDL005.png",
+    image: "../common/assets/img/gear/Shs_SDL005.png",
     name: "Snow Delta Straps",
     localizedName: {
       "ja_JP": "デルタストラップ スノー",
@@ -664,7 +664,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 38
   },
   {
-    image: "./assets/img/gear/Shs_TRS000.png",
+    image: "../common/assets/img/gear/Shs_TRS000.png",
     name: "Trail Boots",
     localizedName: {
       "ja_JP": "トレッキングライト",
@@ -681,7 +681,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 39
   },
   {
-    image: "./assets/img/gear/Shs_TRS002.png",
+    image: "../common/assets/img/gear/Shs_TRS002.png",
     name: "Pro Trail Boots",
     localizedName: {
       "ja_JP": "トレッキングプロ",
@@ -698,7 +698,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 40
   },
   {
-    image: "./assets/img/gear/Shs_BOT000.png",
+    image: "../common/assets/img/gear/Shs_BOT000.png",
     name: "Moto Boots",
     localizedName: {
       "ja_JP": "モトクロスブーツ",
@@ -715,7 +715,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 41
   },
   {
-    image: "./assets/img/gear/Shs_BOT003.png",
+    image: "../common/assets/img/gear/Shs_BOT003.png",
     name: "Blue Moto Boots",
     localizedName: {
       "ja_JP": "モトクロス ソリッドブルー",
@@ -732,7 +732,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 42
   },
   {
-    image: "./assets/img/gear/Shs_BOT005.png",
+    image: "../common/assets/img/gear/Shs_BOT005.png",
     name: "Acerola Rain Boots",
     localizedName: {
       "ja_JP": "レイニーアセロラ",
@@ -749,7 +749,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 43
   },
   {
-    image: "./assets/img/gear/Shs_BOT006.png",
+    image: "../common/assets/img/gear/Shs_BOT006.png",
     name: "Punk Whites",
     localizedName: {
       "ja_JP": "ロッキンホワイト",
@@ -766,7 +766,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 44
   },
   {
-    image: "./assets/img/gear/Shs_BOT012.png",
+    image: "../common/assets/img/gear/Shs_BOT012.png",
     name: "Hunting Boots",
     localizedName: {
       "ja_JP": "ハンティングブーツ",
@@ -783,7 +783,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 45
   },
   {
-    image: "./assets/img/gear/Shs_BOT013.png",
+    image: "../common/assets/img/gear/Shs_BOT013.png",
     name: "Punk Blacks",
     localizedName: {
       "ja_JP": "ロッキンブラック",
@@ -800,7 +800,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 46
   },
   {
-    image: "./assets/img/gear/Shs_SLP000.png",
+    image: "../common/assets/img/gear/Shs_SLP000.png",
     name: "Blue Slip-Ons",
     localizedName: {
       "ja_JP": "スリッポン ブルー",
@@ -817,7 +817,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 47
   },
   {
-    image: "./assets/img/gear/Shs_LTS000.png",
+    image: "../common/assets/img/gear/Shs_LTS000.png",
     name: "White Kicks",
     localizedName: {
       "ja_JP": "ラバーソール ホワイト",
@@ -834,7 +834,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 48
   },
   {
-    image: "./assets/img/gear/Shs_LTS001.png",
+    image: "../common/assets/img/gear/Shs_LTS001.png",
     name: "Cherry Kicks",
     localizedName: {
       "ja_JP": "ラバーソール チェリー",
@@ -851,7 +851,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 49
   },
   {
-    image: "./assets/img/gear/Shs_LTS004.png",
+    image: "../common/assets/img/gear/Shs_LTS004.png",
     name: "Roasted Brogues",
     localizedName: {
       "ja_JP": "イカヤキチップ",
@@ -868,7 +868,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 50
   },
   {
-    image: "./assets/img/gear/Shs_LTS005.png",
+    image: "../common/assets/img/gear/Shs_LTS005.png",
     name: "Kid Clams",
     localizedName: {
       "ja_JP": "イカボウズキャメル",
@@ -885,7 +885,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 51
   },
   {
-    image: "./assets/img/gear/Shs_LTS006.png",
+    image: "../common/assets/img/gear/Shs_LTS006.png",
     name: "Smoky Wingtips",
     localizedName: {
       "ja_JP": "スモークチップ",
@@ -902,7 +902,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 52
   },
   {
-    image: "./assets/img/gear/Shs_AMB000.png",
+    image: "../common/assets/img/gear/Shs_AMB000.png",
     name: "School Shoes",
     localizedName: {
       "ja_JP": "スクールローファー",
@@ -919,7 +919,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 53
   },
   {
-    image: "./assets/img/gear/Shs_AMB001.png",
+    image: "../common/assets/img/gear/Shs_AMB001.png",
     name: "Samurai Shoes",
     localizedName: {
       "ja_JP": "サムライシューズ",
@@ -936,7 +936,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 54
   },
   {
-    image: "./assets/img/gear/Shs_AMB002.png",
+    image: "../common/assets/img/gear/Shs_AMB002.png",
     name: "Power Boots",
     localizedName: {
       "ja_JP": "パワードレッグス",
@@ -953,7 +953,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 55
   },
   {
-    image: "./assets/img/gear/Shs_AMB003.png",
+    image: "../common/assets/img/gear/Shs_AMB003.png",
     name: "Fringed Loafers",
     localizedName: {
       "ja_JP": "キルトローファー",
@@ -970,7 +970,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 56
   },
   {
-    image: "./assets/img/gear/Shs_AMB004.png",
+    image: "../common/assets/img/gear/Shs_AMB004.png",
     name: "Squinja Boots",
     localizedName: {
       "ja_JP": "シノビアシ",
@@ -987,7 +987,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 57
   },
   {
-    image: "./assets/img/gear/Shs_AMB005.png",
+    image: "../common/assets/img/gear/Shs_AMB005.png",
     name: "Power Boots Mk I",
     localizedName: {
       "ja_JP": "パワードレッグス オリジン",
@@ -1004,7 +1004,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 58
   },
   {
-    image: "./assets/img/gear/Shs_MSN000.png",
+    image: "../common/assets/img/gear/Shs_MSN000.png",
     name: "Hero Runner Replicas",
     localizedName: {
       "ja_JP": "ヒーローキックス レプリカ",
@@ -1021,7 +1021,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 59
   },
   {
-    image: "./assets/img/gear/Shs_MSN004.png",
+    image: "../common/assets/img/gear/Shs_MSN004.png",
     name: "Armor Boot Replicas",
     localizedName: {
       "ja_JP": "アーマーブーツ レプリカ",
@@ -1038,7 +1038,7 @@ angular.module('splatApp').shoes = function($scope) {
     id: 60
   },
   {
-    image: "./assets/img/gear/Shs_MSN101.png",
+    image: "../common/assets/img/gear/Shs_MSN101.png",
     name: "Hero Snowboots Replicas",
     localizedName: {
       "ja_JP": "ヒーローバインダー レプリカ",

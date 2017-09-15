@@ -8,7 +8,7 @@ $scope.skills = [
       es_ES: "Tintahorro (ppal.)",
       fr_FR: "Encrémenteur (pr.)"
     },
-    image:"./assets/img/skills/MainInk_Save.png",
+    image:"../common/assets/img/skills/MainInk_Save.png",
     id: 1
   },
   {
@@ -19,7 +19,7 @@ $scope.skills = [
       es_ES: "Tintahorro (sec.)",
       fr_FR: "Encrémenteur (sec.)"
     },
-    image:"./assets/img/skills/SubInk_Save.png",
+    image:"../common/assets/img/skills/SubInk_Save.png",
     id: 2
   },
   {
@@ -30,7 +30,7 @@ $scope.skills = [
       es_ES: "Recarga rápida",
       fr_FR: "Levée d'encre"
     },
-    image:"./assets/img/skills/InkRecovery_Up.png",
+    image:"../common/assets/img/skills/InkRecovery_Up.png",
     id: 3
   },
   {
@@ -41,7 +41,7 @@ $scope.skills = [
       es_ES: "Supercarrera",
       fr_FR: "Course à pied"
     },
-    image:"./assets/img/skills/HumanMove_Up.png",
+    image:"../common/assets/img/skills/HumanMove_Up.png",
     id: 4
   },
   {
@@ -52,7 +52,7 @@ $scope.skills = [
       es_ES: "Superbuceo",
       fr_FR: "Turbo-calamar"
     },
-    image:"./assets/img/skills/SquidMove_Up.png",
+    image:"../common/assets/img/skills/SquidMove_Up.png",
     id: 5
   },
   {
@@ -63,7 +63,7 @@ $scope.skills = [
       es_ES: "Supersalto rápido",
       fr_FR: "Aérodynamisme"
     },
-    image:"./assets/img/skills/JumpTime_Save.png",
+    image:"../common/assets/img/skills/JumpTime_Save.png",
     id: 6
   },
   {
@@ -74,7 +74,7 @@ $scope.skills = [
       es_ES: "Impermeabilidad",
       fr_FR: "Pieds au sec"
     },
-    image:"./assets/img/skills/OpInkEffect_Reduction.png",
+    image:"../common/assets/img/skills/OpInkEffect_Reduction.png",
     id: 7
   },
   {
@@ -85,7 +85,7 @@ $scope.skills = [
       es_ES: "Resistencia explosiva",
       fr_FR: "Filtre à explosions"
     },
-    image:"./assets/img/skills/BombDamage_Reduction.png",
+    image:"../common/assets/img/skills/BombDamage_Reduction.png",
     id: 8
   },
   {
@@ -96,7 +96,7 @@ $scope.skills = [
       es_ES: "Invisibilidad",
       fr_FR: "Furtivité"
     },
-    image:"./assets/img/skills/MarkingTime_Reduction.png",
+    image:"../common/assets/img/skills/MarkingTime_Reduction.png",
     id: 9
   },
   {
@@ -107,7 +107,7 @@ $scope.skills = [
       es_ES: "Retorno exprés",
       fr_FR: "Sans temps morts"
     },
-    image:"./assets/img/skills/RespawnTime_Save.png",
+    image:"../common/assets/img/skills/RespawnTime_Save.png",
     id: 10
   },
   {
@@ -118,7 +118,7 @@ $scope.skills = [
       es_ES: "Recarga especial",
       fr_FR: "Jauge spéciale +"
     },
-    image:"./assets/img/skills/SpecialIncrease_Up.png",
+    image:"../common/assets/img/skills/SpecialIncrease_Up.png",
     id: 11
   },
   {
@@ -129,7 +129,7 @@ $scope.skills = [
       es_ES: "Reducción especial",
       fr_FR: "Baisse spéciale -"
     },
-    image:"./assets/img/skills/RespawnSpecialGauge_Save.png",
+    image:"../common/assets/img/skills/RespawnSpecialGauge_Save.png",
     id: 12
   },
   {
@@ -140,7 +140,7 @@ $scope.skills = [
       es_ES: "Superarma especial",
       fr_FR: "Arme spéciale +"
     },
-    image:"./assets/img/skills/SpecialTime_Up.png",
+    image:"../common/assets/img/skills/SpecialTime_Up.png",
     id: 13
   },
   {
@@ -151,7 +151,7 @@ $scope.skills = [
       es_ES: "Superarma secundaria",
       fr_FR: "Arme secondaire +"
     },
-    image:"./assets/img/skills/BombDistance_Up.png",
+    image:"../common/assets/img/skills/BombDistance_Up.png",
     id: 14
   },
   {
@@ -162,7 +162,7 @@ $scope.skills = [
       es_ES: "Acelerón de salida",
       fr_FR: "Chapeaux de roue"
     },
-    image:"./assets/img/skills/StartAllUp.png",
+    image:"../common/assets/img/skills/StartAllUp.png",
     exclusive:"loadout.head.main",
     id: 15
   },
@@ -174,7 +174,7 @@ $scope.skills = [
       es_ES: "Sprint Final",
       fr_FR: "Ultime sursaut"
     },
-    image:"./assets/img/skills/EndAllUp.png",
+    image:"../common/assets/img/skills/EndAllUp.png",
     exclusive:"loadout.head.main",
     id: 16
   },
@@ -186,7 +186,7 @@ $scope.skills = [
       es_ES: "Remontada",
       fr_FR: "Come-back"
     },
-    image:"./assets/img/skills/ComeBack.png",
+    image:"../common/assets/img/skills/ComeBack.png",
     exclusive:"loadout.head.main",
     id: 17
   },
@@ -198,7 +198,7 @@ $scope.skills = [
       es_ES: "Ventaja",
       fr_FR: "Justice"
     },
-    image:"./assets/img/skills/MinorityUp.png",
+    image:"../common/assets/img/skills/MinorityUp.png",
     exclusive:"loadout.head.main",
     id: 18
   },
@@ -210,7 +210,7 @@ $scope.skills = [
       es_ES: "Señuelo",
       fr_FR: "Encre thermique"
     },
-    image:"./assets/img/skills/ThermalInk.png",
+    image:"../common/assets/img/skills/ThermalInk.png",
     exclusive:"loadout.clothes.main",
     id: 19
   },
@@ -222,7 +222,7 @@ $scope.skills = [
       es_ES: "Ninjalamar",
       fr_FR: "Ninjalamar"
     },
-    image:"./assets/img/skills/SquidMoveSpatter_Reduction.png",
+    image:"../common/assets/img/skills/SquidMoveSpatter_Reduction.png",
     exclusive:"loadout.clothes.main",
     id: 20
   },
@@ -234,7 +234,7 @@ $scope.skills = [
       es_ES: "Represalia",
       fr_FR: "Revanche"
     },
-    image:"./assets/img/skills/DeathMarking.png",
+    image:"../common/assets/img/skills/DeathMarking.png",
     exclusive:"loadout.clothes.main",
     id: 21
   },
@@ -246,7 +246,7 @@ $scope.skills = [
       es_ES: "Castigo póstumo",
       fr_FR: "Retour perdant"
     },
-    image:"./assets/img/skills/Exorcist.png",
+    image:"../common/assets/img/skills/Exorcist.png",
     exclusive:"loadout.clothes.main",
     id: 22
   },
@@ -258,7 +258,7 @@ $scope.skills = [
       es_ES: "Amortiguador",
       fr_FR: "Super roulade"
     },
-    image:"./assets/img/skills/SomersaultLanding.png",
+    image:"../common/assets/img/skills/SomersaultLanding.png",
     exclusive:"loadout.shoes.main",
     id: 23
   },
@@ -270,7 +270,7 @@ $scope.skills = [
       es_ES: "Supersalto invisible",
       fr_FR: "Réception réussie"
     },
-    image:"./assets/img/skills/SuperJumpSign_Hide.png",
+    image:"../common/assets/img/skills/SuperJumpSign_Hide.png",
     exclusive:"loadout.shoes.main",
     id: 24
   },
@@ -282,7 +282,7 @@ $scope.skills = [
       es_ES: "Demolición",
       fr_FR: "Démolition"
     },
-    image:"./assets/img/skills/ObjectEffect_Up.png",
+    image:"../common/assets/img/skills/ObjectEffect_Up.png",
     exclusive:"loadout.shoes.main",
     id: 25
   }

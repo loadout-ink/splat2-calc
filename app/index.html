@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ LANG | translate }}">
 <head>
   <title>loadout.ink - Gear Planner for Splatoon 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,13 +17,6 @@
   <script src="lib/angular-translate.min.js"></script>
   <link rel="stylesheet" href="lib/jquery-ui-custom/jquery-ui.css">
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-
-
-  <script src="locale/en-us.js"></script>
-  <script src="locale/ja-jp.js"></script>
-  <script src="locale/fr.js"></script>
-  <script src="locale/es.js"></script>
-  <script src="locale/it.js"></script>
 
   <script src="./calc.js?1.0.6"></script>
   <script src="./util.js?1.0.6"></script>
@@ -46,7 +39,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link rel="icon" href="assets/img/misc/favicon.png">
+  <link rel="icon" href="../common/assets/img/misc/favicon.png">
 </head>
 <body ng-cloak ng-app="splatApp" ng-controller="splatController">
   <div>
@@ -59,11 +52,11 @@
     </script>
 
     <header class="hero-unit" id="splat-header">
-      <img src="./assets/img/ui/logo-custom.png" />
+      <img src="./../common/assets/img/ui/logo-custom.png" />
       <div id="language-picker" uib-dropdown is-open="status.langOpen">
-        <button id="language-button" uib-dropdown-toggle><span class="fa fa-globe"></span> {{languages[currentLanguage]}}</button>
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-globe"></span> {{::languages['{{ LANG_FULL | translate }}']}}</button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
-          <li role="menuitem" ng-repeat="(key, value) in languages"><a ng-click="changeLanguage(key)">{{value}}</a></li>
+          <li role="menuitem" ng-repeat="(key, value) in languages"><a href="../{{::key}}/">{{value}}</a></li>
         </ul>
       </div>
     </header>
@@ -78,35 +71,35 @@
                   <div class="card purplestripes" id="utils">
                     <div class="row" ng-hide="screenshotMode">
                       <div class="col-xs-3">
-                        <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="{{'UI_COPY_LINK' | translate}}" tooltip-append-to-body="true"><span class="fa fa-clipboard" uib-tooltip="Copied!" tooltip-placement="bottom" tooltip-trigger="{'none':'none'}" tooltip-is-open="showCopy" tooltip-append-to-body="true"></span>
+                        <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="{{ UI_COPY_LINK | translate }}" tooltip-append-to-body="true"><span class="fa fa-clipboard" uib-tooltip="Copied!" tooltip-placement="bottom" tooltip-trigger="{'none':'none'}" tooltip-is-open="showCopy" tooltip-append-to-body="true"></span>
                         </div>
                         <div class="col-xs-3">
-                          <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="{{'UI_SCREENSHOT_MODE' | translate}}" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
+                          <button class="icon-button"ng-click="screenshotMode=!screenshotMode" uib-tooltip="{{ UI_SCREENSHOT_MODE | translate }}" tooltip-append-to-body="true"><span class="fa fa-window-maximize"></span></button>
                         </div>
                         <div class="col-xs-3">
-                          <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="{{'UI_CLEAR_ABILITIES' | translate}}" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
+                          <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="{{ UI_CLEAR_ABILITIES | translate }}" tooltip-append-to-body="true"><span class="fa fa-undo"></span></button>
                         </div>
                         <div class="col-xs-3">
-                          <button class="icon-button"ng-click="resetLoadout()" uib-tooltip="{{'UI_CLEAR_ALL' | translate}}" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
+                          <button class="icon-button"ng-click="resetLoadout()" uib-tooltip="{{ UI_CLEAR_ALL | translate }}" tooltip-append-to-body="true"><span class="fa fa-bomb"></span></button>
                         </div>
                       </div>
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
                           <span>
-                            ver. 1.0.7 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{'UI_CHANGELOG' | translate}}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                            ver. 1.0.7 <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                           </span>
                         </div>
                       </div>
                       <div class="row screenshot-filler" ng-show="screenshotMode" ng-click="screenshotMode=!screenshotMode">
-                        <img src="assets/img/ui/logo-custom.png" />
+                        <img src="../common/assets/img/ui/logo-custom.png" />
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6 col-sm-pull-6 nopadding">
                     <div class="card neonstripes" id="weapon">
-                      <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
+                      <div class="row cardheader">
                         <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openWeaponPicker()" ><span class="glyphicon glyphicon-pencil"></span></button>
-                        {{loadout.weapon.localizedName[currentLanguage]}}
+                        {{loadout.weapon.localizedName['{{ LANG_FULL | translate }}']}}
                       </div>
                       <div class="row">
                         <div class="col-xs-5">
@@ -140,19 +133,19 @@
                   <div class="row">
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard redstripes">
-                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
+                        <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(hats,loadout.head.equipped,'head')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          {{'HAT_SLOT' | translate}}
+                          {{ HAT_SLOT | translate }}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding">
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.head.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban" uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
+                                <span class="fa fa-5x fa-ban" uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.head.main?loadout.head.equipped.main!=loadout.head.main.name?isPossibleMain(loadout.head.equipped,loadout.head.main.name)?loadout.head.equipped.brand!='Grizzco'?true:falsee:false:false:false" src="../common/assets/img/misc/annie.png" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>
@@ -169,19 +162,19 @@
                     </div>
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard tealstripes">
-                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
+                        <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(clothes,loadout.clothes.equipped,'clothes')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          {{'CLOTHES_SLOT' | translate}}
+                          {{ CLOTHES_SLOT | translate }}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.clothes.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban " uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
+                                <span class="fa fa-5x fa-ban " uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.clothes.main?loadout.clothes.equipped.main!=loadout.clothes.main.name?isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)?loadout.clothes.equipped.brand!='Grizzco'?true:false:false:false:false" src="../common/assets/img/misc/annie.png" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>
@@ -198,19 +191,19 @@
                     </div>
                     <div class="col-md-4 col-sm-4 nopadding">
                       <div class="card itemcard orangestripes">
-                        <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
+                        <div class="row cardheader">
                           <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openGearPicker(shoes,loadout.shoes.equipped,'shoes')" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          {{'SHOES_SLOT' | translate}}
+                          {{ SHOES_SLOT | translate }}
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
                             <div class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.shoes.equipped.image}}" />
                               <span class="not-possible">
-                                <span class="fa fa-5x fa-ban " uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
+                                <span class="fa fa-5x fa-ban " uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
                               </span>
                               <span class="annie">
-                                <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?loadout.shoes.equipped.brand!='Grizzco'?true:false:false:false:false" src="assets/img/misc/annie.png" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}" tooltip-append-to-body="true" />
+                                <img ng-if="loadout.shoes.main?loadout.shoes.equipped.main!=loadout.shoes.main.name?isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)?loadout.shoes.equipped.brand!='Grizzco'?true:false:false:false:false" src="../common/assets/img/misc/annie.png" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}" tooltip-append-to-body="true" />
                               </span>
                             </div>
                           </div>
@@ -229,9 +222,9 @@
                 </div>
               </div>
               <div class="row card" ability-box id="abilitybox">
-                <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName[currentLanguage]}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
                 <hr>
-                <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName[currentLanguage]}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
               </div>
             </div>
           </div>
@@ -239,16 +232,16 @@
             <div id="stat-gap">
               <div id="statbox" class="card">
                 <div class="row">
-                  <div class="row cardheader" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
-                    {{'STATS_HEADER' | translate}}
+                  <div class="row cardheader">
+                    {{ STATS_HEADER | translate }}
                   </div>
                   <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }">
-                    <div class="statlabel" ng-class="{'jp': (currentLanguage == 'ja_JP')}">
-                      {{stat.name | translate}}
-                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.localizedDesc.desc | translate:stat.localizedDesc}}" class="statbar"><span class="labelright" ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{stat.localizedLabel.label | translate:stat.localizedLabel}}</span></uib-progressbar>
+                    <div class="statlabel">
+                      {{stat.name}}
+                      <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright">{{stat.label}}</span></uib-progressbar>
                     </div>
                   </div>
-                  <div id="disclaimer">* {{'INACCURATE_DISCLAIMER' | translate}}</div>
+                  <div id="disclaimer">* {{ INACCURATE_DISCLAIMER | translate }}</div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
@@ -256,19 +249,19 @@
                       <div uib-accordion-group class="panel-stats" is-open="status.open">
                         <uib-accordion-heading>
                           <div>
-                            {{'BOMB_HEADER' | translate}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            {{ BOMB_HEADER | translate }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                           </div>
                         </uib-accordion-heading>
                         <table class="table table-sm">
                           <tr>
-                            <th>{{'BOMB_TABLE_BOMB' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_DIRECT' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_NEAR' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_FAR' | translate}}</th>
+                            <th>{{ BOMB_TABLE_BOMB | translate }}</th>
+                            <th class="readable">{{ TABLE_DIRECT | translate }}</th>
+                            <th class="readable">{{ TABLE_NEAR | translate }}</th>
+                            <th class="readable">{{ TABLE_FAR | translate }}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="sub in getDamagingSubs()">
-                              <td>{{sub.localizedName[currentLanguage]}}</td>
+                              <td>{{sub.localizedName['{{ LANG_FULL | translate }}']}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Direct"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Near"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(sub,loadout)["Far"]}}</td>
@@ -279,19 +272,19 @@
                       <div uib-accordion-group class="panel-stats" is-open="status.speOpen">
                         <uib-accordion-heading>
                           <div>
-                            {{'SPECIAL_HEADER' | translate}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
+                            {{ SPECIAL_HEADER | translate }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.speOpen, 'glyphicon-chevron-right': !status.speOpen}"></i>
                           </div>
                         </uib-accordion-heading>
                         <table class="table table-sm">
                           <tr>
-                            <th>{{'SPECIAL_TABLE_SPECIAL' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_HIT' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_NEAR' | translate}}</th>
-                            <th ng-class="{'jp': (currentLanguage == 'ja_JP')}">{{'TABLE_FAR' | translate}}</th>
+                            <th>{{ SPECIAL_TABLE_SPECIAL | translate }}</th>
+                            <th class="readable">{{ TABLE_HIT | translate }}</th>
+                            <th class="readable">{{ TABLE_NEAR | translate }}</th>
+                            <th class="readable">{{ TABLE_FAR | translate }}</th>
                           </tr>
                           <tbody>
                             <tr ng-repeat="special in getDamagingSpecials()">
-                              <td>{{special.localizedName[currentLanguage]}}</td>
+                              <td>{{special.localizedName['{{ LANG_FULL | translate }}']}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Direct"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Near"]}}</td>
                               <td>{{getAdjustedSubSpeDamage(special,loadout)["Far"]}}</td>
@@ -309,8 +302,8 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >{{'FOOTER_ABOUT' | translate}}</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> | devipotato 2017</span><br>
-          {{'FOOTER_COPYRIGHT' | translate}}
+          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >{{ FOOTER_ABOUT | translate }}</a> | <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> | devipotato 2017</span><br>
+          {{ FOOTER_COPYRIGHT | translate }}
         </div>
       </footer>
       <div id="draggable-parent"></div>

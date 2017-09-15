@@ -8,7 +8,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Bomba básica",
         fr_FR: "Bombe splash"
       },
-      image: "./assets/img/subspe/Wsb_Bomb_Splash.png",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
       cost: 70,
       inkSaver: "Normal",
       damage: {
@@ -24,7 +24,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Bomba rápida",
         fr_FR: "Bombe ballon"
       },
-      image: "./assets/img/subspe/Wsb_Bomb_Quick.png",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Quick.png",
       cost: 40,
       inkSaver: "Low",
       damage: {
@@ -41,7 +41,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Bomba ventosa",
         fr_FR: "Bombe gluante"
       },
-      image: "./assets/img/subspe/Wsb_Bomb_Suction.png",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
       cost: 70,
       inkSaver: "Normal",
       damage: {
@@ -57,7 +57,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Autobomb",
         fr_FR: "Bombe robot"
       },
-      image: "./assets/img/subspe/Wsb_Bomb_Robo.png",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
       cost: 70,
       inkSaver: "Low",
       damage: {
@@ -73,7 +73,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Bomba deslizante",
         fr_FR: "Bombe curling"
       },
-      image: "./assets/img/subspe/Wsb_Bomb_Curling.png",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
       inkSaver: "Normal",
       damage: {
@@ -89,7 +89,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Bomba Trampa",
         fr_FR: "Mine"
       },
-      image: "./assets/img/subspe/Wsb_TimerTrap.png",
+      image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
       cost: 60,
       inkSaver: "Normal",
       damage: {
@@ -105,7 +105,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Squid Beakon",
         fr_FR: "Balise de saut"
       },
-      image: "./assets/img/subspe/Wsb_Flag.png",
+      image: "../common/assets/img/subspe/Wsb_Flag.png",
       cost: 75,
       inkSaver: "Normal"
     },
@@ -117,7 +117,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Aspersor",
         fr_FR: "Fontaine"
       },
-      image: "./assets/img/subspe/Wsb_Sprinkler.png",
+      image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
       cost: 70,
       inkSaver: "Normal"
     },
@@ -129,7 +129,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Toxic Mist",
         fr_FR: "Bombe ballon"
       },
-      image: "./assets/img/subspe/Wsb_PoisonFog.png",
+      image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
       cost: 70,
       inkSaver: "Normal"
     },
@@ -141,7 +141,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Rastreador",
         fr_FR: "Détecteur"
       },
-      image: "./assets/img/subspe/Wsb_PointSensor.png",
+      image: "../common/assets/img/subspe/Wsb_PointSensor.png",
       cost: 60,
       inkSaver: "Normal"
     },
@@ -153,7 +153,7 @@ angular.module('splatApp').subs = function ($scope) {
         es_ES: "Splash Wall",
         fr_FR: "Mur d'encre"
       },
-      image: "./assets/img/subspe/Wsb_Shield.png",
+      image: "../common/assets/img/subspe/Wsb_Shield.png",
       cost: 60,
       inkSaver: "Normal"
     }

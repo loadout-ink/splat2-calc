@@ -1,7 +1,7 @@
 angular.module('splatApp').hats = function($scope) {
 $scope.hats = [
   {
-    image: "./assets/img/gear/Hed_FST000.png",
+    image: "../common/assets/img/gear/Hed_FST000.png",
     name: "White Headband",
     localizedName: {
       "ja_JP": "ヘッドバンド ホワイト",
@@ -18,7 +18,7 @@ $scope.hats = [
     id: 0
   },
   {
-    image: "./assets/img/gear/Hed_CAP000.png",
+    image: "../common/assets/img/gear/Hed_CAP000.png",
     name: "Urchins Cap",
     localizedName: {
       "ja_JP": "ウーニーズBBキャップ",
@@ -35,7 +35,7 @@ $scope.hats = [
     id: 1
   },
   {
-    image: "./assets/img/gear/Hed_CAP001.png",
+    image: "../common/assets/img/gear/Hed_CAP001.png",
     name: "Lightweight Cap",
     localizedName: {
       "ja_JP": "キャンプキャップ",
@@ -52,7 +52,7 @@ $scope.hats = [
     id: 2
   },
   {
-    image: "./assets/img/gear/Hed_CAP002.png",
+    image: "../common/assets/img/gear/Hed_CAP002.png",
     name: "Takoroka Mesh",
     localizedName: {
       "ja_JP": "ヤコメッシュ",
@@ -69,7 +69,7 @@ $scope.hats = [
     id: 3
   },
   {
-    image: "./assets/img/gear/Hed_CAP005.png",
+    image: "../common/assets/img/gear/Hed_CAP005.png",
     name: "Squidvader Cap",
     localizedName: {
       "ja_JP": "イカベーダーキャップ",
@@ -86,7 +86,7 @@ $scope.hats = [
     id: 4
   },
   {
-    image: "./assets/img/gear/Hed_CAP006.png",
+    image: "../common/assets/img/gear/Hed_CAP006.png",
     name: "Camo Mesh",
     localizedName: {
       "ja_JP": "カモメッシュ",
@@ -103,7 +103,7 @@ $scope.hats = [
     id: 5
   },
   {
-    image: "./assets/img/gear/Hed_CAP007.png",
+    image: "../common/assets/img/gear/Hed_CAP007.png",
     name: "Five-Panel Cap",
     localizedName: {
       "ja_JP": "5パネルキャップ",
@@ -120,7 +120,7 @@ $scope.hats = [
     id: 6
   },
   {
-    image: "./assets/img/gear/Hed_CAP009.png",
+    image: "../common/assets/img/gear/Hed_CAP009.png",
     name: "Backwards Cap",
     localizedName: {
       "ja_JP": "バックワードキャップ",
@@ -137,7 +137,7 @@ $scope.hats = [
     id: 7
   },
   {
-    image: "./assets/img/gear/Hed_CAP014.png",
+    image: "../common/assets/img/gear/Hed_CAP014.png",
     name: "Cycle King Cap",
     localizedName: {
       "ja_JP": "チャリキング帽",
@@ -154,7 +154,7 @@ $scope.hats = [
     id: 8
   },
   {
-    image: "./assets/img/gear/Hed_CAP019.png",
+    image: "../common/assets/img/gear/Hed_CAP019.png",
     name: "King Flip Mesh",
     localizedName: {
       "ja_JP": "キングフリップメッシュ",
@@ -171,7 +171,7 @@ $scope.hats = [
     id: 9
   },
   {
-    image: "./assets/img/gear/Hed_CAP020.png",
+    image: "../common/assets/img/gear/Hed_CAP020.png",
     name: "Hickory Work Cap",
     localizedName: {
       "ja_JP": "ヒッコリーワークキャップ",
@@ -188,7 +188,7 @@ $scope.hats = [
     id: 10
   },
   {
-    image: "./assets/img/gear/Hed_CAP023.png",
+    image: "../common/assets/img/gear/Hed_CAP023.png",
     name: "Jellyvader Cap",
     localizedName: {
       "ja_JP": "クラゲーダーキャップ",
@@ -205,7 +205,7 @@ $scope.hats = [
     id: 11
   },
   {
-    image: "./assets/img/gear/Hed_NCP000.png",
+    image: "../common/assets/img/gear/Hed_NCP000.png",
     name: "Bobble Hat",
     localizedName: {
       "ja_JP": "ボンボンニット",
@@ -222,7 +222,7 @@ $scope.hats = [
     id: 12
   },
   {
-    image: "./assets/img/gear/Hed_NCP002.png",
+    image: "../common/assets/img/gear/Hed_NCP002.png",
     name: "Striped Beanie",
     localizedName: {
       "ja_JP": "ボーダービーニー",
@@ -239,7 +239,7 @@ $scope.hats = [
     id: 13
   },
   {
-    image: "./assets/img/gear/Hed_NCP004.png",
+    image: "../common/assets/img/gear/Hed_NCP004.png",
     name: "Special Forces Beret",
     localizedName: {
       "ja_JP": "モンゴウベレー",
@@ -256,7 +256,7 @@ $scope.hats = [
     id: 14
   },
   {
-    image: "./assets/img/gear/Hed_NCP008.png",
+    image: "../common/assets/img/gear/Hed_NCP008.png",
     name: "Knitted Hat",
     localizedName: {
       "ja_JP": "リブニット",
@@ -273,7 +273,7 @@ $scope.hats = [
     id: 15
   },
   {
-    image: "./assets/img/gear/Hed_NCP009.png",
+    image: "../common/assets/img/gear/Hed_NCP009.png",
     name: "Annaki Beret",
     localizedName: {
       "ja_JP": "アナアキアンピンベレー",
@@ -290,7 +290,7 @@ $scope.hats = [
     id: 16
   },
   {
-    image: "./assets/img/gear/Hed_EYE000.png",
+    image: "../common/assets/img/gear/Hed_EYE000.png",
     name: "Retro Specs",
     localizedName: {
       "ja_JP": "クロブチ レトロ",
@@ -307,7 +307,7 @@ $scope.hats = [
     id: 17
   },
   {
-    image: "./assets/img/gear/Hed_EYE002.png",
+    image: "../common/assets/img/gear/Hed_EYE002.png",
     name: "Pilot Goggles",
     localizedName: {
       "ja_JP": "パイロットゴーグル",
@@ -324,7 +324,7 @@ $scope.hats = [
     id: 18
   },
   {
-    image: "./assets/img/gear/Hed_EYE003.png",
+    image: "../common/assets/img/gear/Hed_EYE003.png",
     name: "Tinted Shades",
     localizedName: {
       "ja_JP": "イロメガネ",
@@ -341,7 +341,7 @@ $scope.hats = [
     id: 19
   },
   {
-    image: "./assets/img/gear/Hed_EYE005.png",
+    image: "../common/assets/img/gear/Hed_EYE005.png",
     name: "Snorkel Mask",
     localizedName: {
       "ja_JP": "ダイバーゴーグル",
@@ -358,7 +358,7 @@ $scope.hats = [
     id: 20
   },
   {
-    image: "./assets/img/gear/Hed_EYE007.png",
+    image: "../common/assets/img/gear/Hed_EYE007.png",
     name: "Fake Contacts",
     localizedName: {
       "ja_JP": "ダテコンタクト",
@@ -375,7 +375,7 @@ $scope.hats = [
     id: 21
   },
   {
-    image: "./assets/img/gear/Hed_EYE008.png",
+    image: "../common/assets/img/gear/Hed_EYE008.png",
     name: "18K Aviators",
     localizedName: {
       "ja_JP": "タレサン18K",
@@ -392,7 +392,7 @@ $scope.hats = [
     id: 22
   },
   {
-    image: "./assets/img/gear/Hed_EYE011.png",
+    image: "../common/assets/img/gear/Hed_EYE011.png",
     name: "Half-Rim Glasses",
     localizedName: {
       "ja_JP": "セルブロウ",
@@ -409,7 +409,7 @@ $scope.hats = [
     id: 23
   },
   {
-    image: "./assets/img/gear/Hed_HAT000.png",
+    image: "../common/assets/img/gear/Hed_HAT000.png",
     name: "Safari Hat",
     localizedName: {
       "ja_JP": "ロブスターブーニー",
@@ -426,7 +426,7 @@ $scope.hats = [
     id: 24
   },
   {
-    image: "./assets/img/gear/Hed_HAT002.png",
+    image: "../common/assets/img/gear/Hed_HAT002.png",
     name: "Camping Hat",
     localizedName: {
       "ja_JP": "キャンプハット",
@@ -443,7 +443,7 @@ $scope.hats = [
     id: 25
   },
   {
-    image: "./assets/img/gear/Hed_HAT003.png",
+    image: "../common/assets/img/gear/Hed_HAT003.png",
     name: "Blowfish Bell Hat",
     localizedName: {
       "ja_JP": "フグベルハット",
@@ -460,7 +460,7 @@ $scope.hats = [
     id: 26
   },
   {
-    image: "./assets/img/gear/Hed_HAT004.png",
+    image: "../common/assets/img/gear/Hed_HAT004.png",
     name: "Bamboo Hat",
     localizedName: {
       "ja_JP": "スゲ",
@@ -477,7 +477,7 @@ $scope.hats = [
     id: 27
   },
   {
-    image: "./assets/img/gear/Hed_HAT005.png",
+    image: "../common/assets/img/gear/Hed_HAT005.png",
     name: "Straw Boater",
     localizedName: {
       "ja_JP": "イカンカン",
@@ -494,7 +494,7 @@ $scope.hats = [
     id: 28
   },
   {
-    image: "./assets/img/gear/Hed_HAT008.png",
+    image: "../common/assets/img/gear/Hed_HAT008.png",
     name: "Bucket Hat",
     localizedName: {
       "ja_JP": "イカバケット",
@@ -511,7 +511,7 @@ $scope.hats = [
     id: 29
   },
   {
-    image: "./assets/img/gear/Hed_HAT009.png",
+    image: "../common/assets/img/gear/Hed_HAT009.png",
     name: "Patched Hat",
     localizedName: {
       "ja_JP": "パッチハット",
@@ -528,7 +528,7 @@ $scope.hats = [
     id: 30
   },
   {
-    image: "./assets/img/gear/Hed_HDP000.png",
+    image: "../common/assets/img/gear/Hed_HDP000.png",
     name: "Studio Headphones",
     localizedName: {
       "ja_JP": "スタジオヘッドホン",
@@ -545,7 +545,7 @@ $scope.hats = [
     id: 31
   },
   {
-    image: "./assets/img/gear/Hed_HDP002.png",
+    image: "../common/assets/img/gear/Hed_HDP002.png",
     name: "Noise Cancelers",
     localizedName: {
       "ja_JP": "イヤーマフ",
@@ -562,7 +562,7 @@ $scope.hats = [
     id: 32
   },
   {
-    image: "./assets/img/gear/Hed_HDP003.png",
+    image: "../common/assets/img/gear/Hed_HDP003.png",
     name: "Squidfin Hook Cans",
     localizedName: {
       "ja_JP": "エンペラフックHDP",
@@ -579,7 +579,7 @@ $scope.hats = [
     id: 33
   },
   {
-    image: "./assets/img/gear/Hed_VIS001.png",
+    image: "../common/assets/img/gear/Hed_VIS001.png",
     name: "FishFry Visor",
     localizedName: {
       "ja_JP": "ヤキフグ サンバイザー",
@@ -596,7 +596,7 @@ $scope.hats = [
     id: 34
   },
   {
-    image: "./assets/img/gear/Hed_VIS002.png",
+    image: "../common/assets/img/gear/Hed_VIS002.png",
     name: "Sun Visor",
     localizedName: {
       "ja_JP": "サンサンサンバイザー",
@@ -613,7 +613,7 @@ $scope.hats = [
     id: 35
   },
   {
-    image: "./assets/img/gear/Hed_VIS003.png",
+    image: "../common/assets/img/gear/Hed_VIS003.png",
     name: "Takoroka Visor",
     localizedName: {
       "ja_JP": "ヤコバイザー",
@@ -630,7 +630,7 @@ $scope.hats = [
     id: 36
   },
   {
-    image: "./assets/img/gear/Hed_MET000.png",
+    image: "../common/assets/img/gear/Hed_MET000.png",
     name: "Bike Helmet",
     localizedName: {
       "ja_JP": "サイクルメット",
@@ -647,7 +647,7 @@ $scope.hats = [
     id: 37
   },
   {
-    image: "./assets/img/gear/Hed_MET005.png",
+    image: "../common/assets/img/gear/Hed_MET005.png",
     name: "Visor Skate Helmet",
     localizedName: {
       "ja_JP": "バイザーメット",
@@ -664,7 +664,7 @@ $scope.hats = [
     id: 38
   },
   {
-    image: "./assets/img/gear/Hed_MET006.png",
+    image: "../common/assets/img/gear/Hed_MET006.png",
     name: "MTB Helmet",
     localizedName: {
       "ja_JP": "ロゴヅクシMTBメット",
@@ -681,7 +681,7 @@ $scope.hats = [
     id: 39
   },
   {
-    image: "./assets/img/gear/Hed_MET007.png",
+    image: "../common/assets/img/gear/Hed_MET007.png",
     name: "Hockey Helmet",
     localizedName: {
       "ja_JP": "イカロスHKメット",
@@ -698,7 +698,7 @@ $scope.hats = [
     id: 40
   },
   {
-    image: "./assets/img/gear/Hed_MSK001.png",
+    image: "../common/assets/img/gear/Hed_MSK001.png",
     name: "Paintball Mask",
     localizedName: {
       "ja_JP": "フェイスゴーグル",
@@ -715,7 +715,7 @@ $scope.hats = [
     id: 41
   },
   {
-    image: "./assets/img/gear/Hed_MSK003.png",
+    image: "../common/assets/img/gear/Hed_MSK003.png",
     name: "Skull Bandana",
     localizedName: {
       "ja_JP": "イカスカルマスク",
@@ -732,7 +732,7 @@ $scope.hats = [
     id: 42
   },
   {
-    image: "./assets/img/gear/Hed_MSK004.png",
+    image: "../common/assets/img/gear/Hed_MSK004.png",
     name: "Painter's Mask",
     localizedName: {
       "ja_JP": "ペインターマスク",
@@ -749,7 +749,7 @@ $scope.hats = [
     id: 43
   },
   {
-    image: "./assets/img/gear/Hed_MSK005.png",
+    image: "../common/assets/img/gear/Hed_MSK005.png",
     name: "Annaki Mask",
     localizedName: {
       "ja_JP": "アナアキマスク",
@@ -766,7 +766,7 @@ $scope.hats = [
     id: 44
   },
   {
-    image: "./assets/img/gear/Hed_MSK007.png",
+    image: "../common/assets/img/gear/Hed_MSK007.png",
     name: "Squid Facemask",
     localizedName: {
       "ja_JP": "イカバッテンガード",
@@ -783,7 +783,7 @@ $scope.hats = [
     id: 45
   },
   {
-    image: "./assets/img/gear/Hed_MSK008.png",
+    image: "../common/assets/img/gear/Hed_MSK008.png",
     name: "Firefin Facemask",
     localizedName: {
       "ja_JP": "マスクドホッコリー",
@@ -800,7 +800,7 @@ $scope.hats = [
     id: 46
   },
   {
-    image: "./assets/img/gear/Hed_MSK009.png",
+    image: "../common/assets/img/gear/Hed_MSK009.png",
     name: "King Facemask",
     localizedName: {
       "ja_JP": "キングオブマスク",
@@ -817,7 +817,7 @@ $scope.hats = [
     id: 47
   },
   {
-    image: "./assets/img/gear/Hed_HBD002.png",
+    image: "../common/assets/img/gear/Hed_HBD002.png",
     name: "Squash Headband",
     localizedName: {
       "ja_JP": "スカッシュバンド",
@@ -834,7 +834,7 @@ $scope.hats = [
     id: 48
   },
   {
-    image: "./assets/img/gear/Hed_HBD003.png",
+    image: "../common/assets/img/gear/Hed_HBD003.png",
     name: "Tennis Headband",
     localizedName: {
       "ja_JP": "テニスバンド",
@@ -851,7 +851,7 @@ $scope.hats = [
     id: 49
   },
   {
-    image: "./assets/img/gear/Hed_HBD005.png",
+    image: "../common/assets/img/gear/Hed_HBD005.png",
     name: "Soccer Headband",
     localizedName: {
       "ja_JP": "サッカーバンド",
@@ -868,7 +868,7 @@ $scope.hats = [
     id: 50
   },
   {
-    image: "./assets/img/gear/Hed_COP100.png",
+    image: "../common/assets/img/gear/Hed_COP100.png",
     name: "Headlamp Helmet",
     localizedName: {
       "ja_JP": "ヘッドライトヘルム",
@@ -885,7 +885,7 @@ $scope.hats = [
     id: 51
   },
   {
-    image: "./assets/img/gear/Hed_AMB000.png",
+    image: "../common/assets/img/gear/Hed_AMB000.png",
     name: "Squid Hairclip",
     localizedName: {
       "ja_JP": "イカパッチン",
@@ -902,7 +902,7 @@ $scope.hats = [
     id: 52
   },
   {
-    image: "./assets/img/gear/Hed_AMB001.png",
+    image: "../common/assets/img/gear/Hed_AMB001.png",
     name: "Samurai Helmet",
     localizedName: {
       "ja_JP": "サムライヘルメット",
@@ -919,7 +919,7 @@ $scope.hats = [
     id: 53
   },
   {
-    image: "./assets/img/gear/Hed_AMB002.png",
+    image: "../common/assets/img/gear/Hed_AMB002.png",
     name: "Power Mask",
     localizedName: {
       "ja_JP": "パワードマスク",
@@ -936,7 +936,7 @@ $scope.hats = [
     id: 54
   },
   {
-    image: "./assets/img/gear/Hed_AMB003.png",
+    image: "../common/assets/img/gear/Hed_AMB003.png",
     name: "Squid Clip-Ons",
     localizedName: {
       "ja_JP": "イカクリップ",
@@ -953,7 +953,7 @@ $scope.hats = [
     id: 55
   },
   {
-    image: "./assets/img/gear/Hed_AMB004.png",
+    image: "../common/assets/img/gear/Hed_AMB004.png",
     name: "Squinja Mask",
     localizedName: {
       "ja_JP": "イカカゲマスク",
@@ -970,7 +970,7 @@ $scope.hats = [
     id: 56
   },
   {
-    image: "./assets/img/gear/Hed_AMB005.png",
+    image: "../common/assets/img/gear/Hed_AMB005.png",
     name: "Power Mask Mk I",
     localizedName: {
       "ja_JP": "パワードマスク オリジン",
@@ -987,7 +987,7 @@ $scope.hats = [
     id: 57
   },
   {
-    image: "./assets/img/gear/Hed_MSN000.png",
+    image: "../common/assets/img/gear/Hed_MSN000.png",
     name: "Hero Headset Replica",
     localizedName: {
       "ja_JP": "ヒーローヘッズ レプリカ",
@@ -1004,7 +1004,7 @@ $scope.hats = [
     id: 58
   },
   {
-    image: "./assets/img/gear/Hed_MSN004.png",
+    image: "../common/assets/img/gear/Hed_MSN004.png",
     name: "Armor Helmet Replica",
     localizedName: {
       "ja_JP": "アーマーメット レプリカ",
@@ -1021,7 +1021,7 @@ $scope.hats = [
     id: 59
   },
   {
-    image: "./assets/img/gear/Hed_MSN101.png",
+    image: "../common/assets/img/gear/Hed_MSN101.png",
     name: "Hero Headphones Replica",
     localizedName: {
       "en_US": "Hero Headphones Replica",

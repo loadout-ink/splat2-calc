@@ -11,7 +11,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Kalamas",
         fr_FR: "Kalamarus Rex"
       },
-      image: "assets/img/brands/B00.png",
+      image: "../common/assets/img/brands/B00.png",
       common: "Ink Resistance Up",
       uncommon: "Ink Saver (Main)"
     },
@@ -22,7 +22,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Tintaz",
         fr_FR: "Leviathus"
       },
-      image: "assets/img/brands/B01.png",
+      image: "../common/assets/img/brands/B01.png",
       common: "Quick Super Jump",
       uncommon: "Quick Respawn"
     },
@@ -33,7 +33,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Meddux",
         fr_FR: "Krakers"
       },
-      image: "assets/img/brands/B02.png",
+      image: "../common/assets/img/brands/B02.png",
       common: "Swim Speed Up",
       uncommon: "Bomb Defense Up"
     },
@@ -44,7 +44,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Rockenberg",
         fr_FR: "Iormungand"
       },
-      image: "assets/img/brands/B03.png",
+      image: "../common/assets/img/brands/B03.png",
       common: "Run Speed Up",
       uncommon: "Swim Speed Up"
     },
@@ -55,7 +55,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Ezko",
         fr_FR: "Ezko"
       },
-      image: "assets/img/brands/B04.png",
+      image: "../common/assets/img/brands/B04.png",
       common: "Special Saver",
       uncommon: "Special Charge Up"
     },
@@ -66,7 +66,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Forima",
         fr_FR: "Focus"
       },
-      image: "assets/img/brands/B05.png",
+      image: "../common/assets/img/brands/B05.png",
       common: "Special Power Up",
       uncommon: "Ink Saver (Sub)"
     },
@@ -77,7 +77,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Chokkor",
         fr_FR: "Friture"
       },
-      image: "assets/img/brands/B06.png",
+      image: "../common/assets/img/brands/B06.png",
       common: "Ink Saver (Sub)",
       uncommon: "Ink Recovery Up"
     },
@@ -88,7 +88,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Skalop",
         fr_FR: "Jack"
       },
-      image: "assets/img/brands/B07.png",
+      image: "../common/assets/img/brands/B07.png",
       common: "Quick Respawn",
       uncommon: "Special Saver"
     },
@@ -99,7 +99,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Jimmon",
         fr_FR: "Gédéon"
       },
-      image: "assets/img/brands/B08.png",
+      image: "../common/assets/img/brands/B08.png",
       common: "Ink Saver (Main)",
       uncommon: "Run Speed Up"
     },
@@ -110,7 +110,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Moluskia",
         fr_FR: "Abysma"
       },
-      image: "assets/img/brands/B09.png",
+      image: "../common/assets/img/brands/B09.png",
       common: "Bomb Defense Up",
       uncommon: "Cold-Blooded"
     },
@@ -121,7 +121,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Arome",
         fr_FR: "OculR"
       },
-      image: "assets/img/brands/B10.png",
+      image: "../common/assets/img/brands/B10.png",
       common: "Ink Recovery Up",
       uncommon: "Quick Super Jump"
     },
@@ -132,7 +132,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Sepioca",
         fr_FR: "Cubic"
       },
-      image: "assets/img/brands/B11.png",
+      image: "../common/assets/img/brands/B11.png",
       common: "Special Charge Up",
       uncommon: "Special Power Up"
     },
@@ -143,7 +143,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Annak",
         fr_FR: "Aroz"
       },
-      image: "assets/img/brands/B15.png",
+      image: "../common/assets/img/brands/B15.png",
       common: "Cold-Blooded",
       uncommon: "Special Saver"
     },
@@ -154,7 +154,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Krakien",
         fr_FR: "DUX"
       },
-      image: "assets/img/brands/B16.png",
+      image: "../common/assets/img/brands/B16.png",
       common: "Sub Power Up",
       uncommon: "Ink Resistance Up"
     },
@@ -165,7 +165,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Tonken",
         fr_FR: "Thony K"
       },
-      image: "assets/img/brands/B17.png",
+      image: "../common/assets/img/brands/B17.png",
       common: "Cold-Blooded",
       uncommon: "Sub Power Up"
     },
@@ -176,7 +176,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Don Oso, S.A.",
         fr_FR: "M. Ours SA"
       },
-      image: "assets/img/brands/B97.png"
+      image: "../common/assets/img/brands/B97.png"
     },
     "Cuttlegear" : {
       localizedName: {
@@ -185,7 +185,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "Obvius",
         fr_FR: "Macalamar"
       },
-      image: "assets/img/brands/B98.png"
+      image: "../common/assets/img/brands/B98.png"
     },
     "amiibo" : {
       localizedName: {
@@ -194,7 +194,7 @@ angular.module('splatApp').gear = function($scope) {
         es_ES: "amiibo",
         fr_FR: "amiibo"
       },
-      image: "assets/img/brands/B99.png"
+      image: "../common/assets/img/brands/B99.png"
     }
   }
 

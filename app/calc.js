@@ -128,11 +128,11 @@ angular
   }])
 
   .config(['$translateProvider', function($translateProvider) {
-    $translateProvider
-      .translations('en_US', en_strings)
-      .translations('ja_JP', jp_strings)
-      .translations('fr_FR', fr_strings)
-      .translations('es_ES', es_strings)
-      .translations('it', it_strings)
-      .preferredLanguage('en_US')
+    // $translateProvider
+    //   .translations('en-us', en_strings)
+    //   .translations('ja-jp', jp_strings)
+    //   .translations('fr-fr', fr_strings)
+    //   .translations('es-es', es_strings)
+    //   .translations('it', it_strings)
+    //   .preferredLanguage('en-us')
 }]);
