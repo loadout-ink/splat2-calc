@@ -121,9 +121,9 @@ angular
     }
 
     $scope.languages = {
-      'en_US': 'English',
-      'ja_JP': '日本語',
-      'fr_FR': 'Français'
+      'en': 'English',
+      'ja': '日本語',
+      'fr': 'Français'
     }
   }])
 

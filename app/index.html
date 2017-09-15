@@ -54,7 +54,7 @@
     <header class="hero-unit" id="splat-header">
       <img src="./../common/assets/img/ui/logo-custom.png" />
       <div id="language-picker" uib-dropdown is-open="status.langOpen">
-        <button id="language-button" uib-dropdown-toggle><span class="fa fa-globe"></span> {{::languages['{{ LANG_FULL | translate }}']}}</button>
+        <button id="language-button" uib-dropdown-toggle><span class="fa fa-globe"></span> {{::languages['{{ LANG | translate }}']}}</button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
           <li role="menuitem" ng-repeat="(key, value) in languages"><a href="../{{::key}}/">{{value}}</a></li>
         </ul>

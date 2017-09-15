@@ -544,13 +544,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .cardheader {
   height: 36px;
-  padding-top:4px;
+  padding-top:5px;
   padding-bottom:2px;
   background: rgba(20,20,20,0.8);
   background-image: url("../common/assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
   font-family: "Paintball";
-  font-size: 16pt;
+  font-size: 14pt;
   text-align:center;
   color: #fff;
   position: relative;
