@@ -7,7 +7,7 @@
 @font-face {
   font-family: "Splatfont";
   src: url(./assets/fonts/Splatfont2.woff) format("woff"),
-  url(./assets/fonts/ProjectPaintball.woff) format("ttf");
+  url(./assets/fonts/Splatfont2.woff);
 }
 
 html {
@@ -51,6 +51,38 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background: #222;
   text-align: center;
   padding:5px;
+  position: relative;
+}
+
+#language-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#language-button {
+  background: rgba(0,0,0,0);
+  font-family: "Splatfont";
+  font-size: 12pt;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+}
+
+.jp {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
+}
+
+.statlabel.jp {
+  font-size: 10pt;
+}
+
+.cardheader.jp {
+  font-family: Splatfont !important;
+  text-align: center !important;
+  font-size: 14pt;
 }
 
 #splat-header img {
@@ -522,6 +554,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .cardheader {
+  height: 36px;
   padding-top:4px;
   padding-bottom:2px;
   background: rgba(20,20,20,0.8);

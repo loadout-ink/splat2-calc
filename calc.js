@@ -1,6 +1,6 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
-  .controller('splatController', ['$scope', '$timeout', '$translate', function splatCtrl($scope, $timeout, $translate, $uibModal, $log) {
+  .controller('splatController', ['$scope', '$rootScope', '$timeout', '$translate', '$locale', function splatCtrl($scope, $rootScope, $timeout, $translate, $locale, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -32,10 +32,14 @@ angular
     $scope.loadout.clothes.equipped = $scope.clothes[0];
     $scope.loadout.shoes.equipped = $scope.shoes[0];
 
+    $scope.refreshStats = function() {
+      Object.keys($scope.stats).forEach(function(currentKey) {
+          $scope.stats[currentKey].calc($scope.loadout);
+      });
+    }
+
      $scope.$watch('loadout', function() {
-       Object.keys($scope.stats).forEach(function(currentKey) {
-           $scope.stats[currentKey].calc($scope.loadout);
-       });
+       $scope.refreshStats();
        history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
      },true);
 
@@ -100,13 +104,35 @@ angular
       }
     }
 
+    $rootScope.currentLanguage = $translate.use();
+    if(typeof(Storage) !== 'undefined') {
+      if(localStorage.getItem('chosenLanguage') !== null) {
+         $rootScope.currentLanguage = localStorage.getItem('chosenLanguage');
+         $translate.use($rootScope.currentLanguage)
+      }
+    }
+
+
+    $scope.changeLanguage = function(langKey) {
+      $rootScope.currentLanguage = (langKey);
+      if(typeof(Storage) !== 'undefined') localStorage.setItem('chosenLanguage', langKey)
+      $translate.use(langKey);
+      $scope.refreshStats();
+    }
+
+    $scope.languages = {
+      'en_US': 'English',
+      'ja_JP': '日本語',
+      'fr_FR': 'Français'
+    }
   }])
+
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider
-      .translations('en', en_strings)
-      .translations('jp', jp_strings)
-      .translations('fr', fr_strings)
-      .translations('es', es_strings)
+      .translations('en_US', en_strings)
+      .translations('ja_JP', jp_strings)
+      .translations('fr_FR', fr_strings)
+      .translations('es_ES', es_strings)
       .translations('it', it_strings)
-      .preferredLanguage('jp')
+      .preferredLanguage('en_US')
 }]);

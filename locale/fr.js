@@ -168,6 +168,16 @@ var fr_strings = {
   "UI_SAVED_LOADOUTS": "Loadouts sauvés",
   "UI_DELETE_ALL": "Supprimer tous les Loadouts",
 
+  "SHELDON_RANGE": "Portée",
+  "SHELDON_FIRE_RATE": "Cadence",
+  "SHELDON_CHARGE_SPEED": "Vitesse de charge",
+  "SHELDON_DURABILITY": "Résistance",
+  "SHELDON_IMPACT": "Explosion",
+  "SHELDON_MOBILITY": "Mobilité",
+  "SHELDON_INK_SPEED": "Vitesse d'encrage",
+  "SHELDON_DAMAGE": "Dégâts",
+  "SHELDON_HANDLING": "Légèreté",
+
   // This goes in the "about" popup.
   /// Leave the HTML tags alone.
   "UI_ABOUT_CONTENT": `Construit principalement avec AngularJS 1.6.5 et Bootstrap 3.<br><br>

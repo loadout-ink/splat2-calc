@@ -2,11 +2,29 @@ angular.module('splatApp').weapons = function ($scope) {
   $scope.weaponSets = [
     {
       type: "Shooters",
+      localizedName: {
+            "ja_JP": "シューター",
+            "en_US": "Shooters",
+            "en_GB": "Shooters",
+            "es_ES": "Lanzatintas",
+            "es_MX": "Rociadors",
+            "fr_FR": "Lanceur",
+            "fr_CA": "Lanceur"
+          },
       id: 0,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Shooter_First_00.png",
           name: "Splattershot Jr.",
+          localizedName: {
+            "ja_JP": "わかばシューター",
+            "en_US": "Splattershot Jr.",
+            "en_GB": "Splattershot Jr.",
+            "es_ES": "Splattershot Jr.",
+            "es_MX": "Splattershot Jr.",
+            "fr_FR": "Liquidateur Jr.",
+            "fr_CA": "Liquéficateur ultra"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
           special: "Ink Armor",
@@ -18,15 +36,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 0,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_First_01.png",
           name: "Custom Splattershot Jr.",
+          localizedName: {
+            "ja_JP": "もみじシューター",
+            "en_US": "Custom Splattershot Jr.",
+            "en_GB": "Custom Splattershot Jr.",
+            "es_ES": "Lanzatintas novato B",
+            "es_MX": "Rociador básico adaptado",
+            "fr_FR": "Liquidateur Sr.",
+            "fr_CA": "Liquéficateur ultra modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Autobomb",
@@ -39,15 +66,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 1900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Normal_00.png",
           name: "Splattershot",
+          localizedName: {
+            "ja_JP": "スプラシューター",
+            "en_US": "Splattershot",
+            "en_GB": "Splattershot",
+            "es_ES": "Lanzatintas",
+            "es_MX": "Rociador",
+            "fr_FR": "Liquidateur",
+            "fr_CA": "Liquéficateur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
           special: "Splashdown",
@@ -59,15 +95,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 900,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Normal_H.png",
           name: "Hero Shot Replica",
+          localizedName: {
+    "ja_JP": "ヒーローシューター レプリカ",
+    "en_US": "Hero Shot Replica",
+    "en_GB": "Hero Shot Replica",
+    "es_ES": "Pistola de Élite (réplica)",
+    "es_MX": "Rociador de élite réplica",
+    "fr_FR": "Lanceur héroïque (réplique)",
+    "fr_CA": "Liquéfi. héroïque (rép.)"
+},
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
           special: "Splashdown",
@@ -79,15 +124,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 1500,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Normal_01.png",
           name: "Tentatek Splattershot",
+          localizedName: {
+    "ja_JP": "スプラシューターコラボ",
+    "en_US": "Tentatek Splattershot",
+    "en_GB": "Tentatek Splattershot",
+    "es_ES": "Lanzatintas B",
+    "es_MX": "Rociador Tentáctica",
+    "fr_FR": "Liquidateur griffé",
+    "fr_CA": "Liquéficateur Tentatek"
+},
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
           special: "Inkjet",
@@ -99,15 +153,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 2100,
           stats: {
-            "Range": 50,
-            "Fire Rate": 60,
-            "Damage": 45
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 60,
+            "SHELDON_DAMAGE": 45
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Expert_00.png",
           name: "Splattershot Pro",
+        localizedName: {
+            "ja_JP": "プライムシューター",
+            "en_US": "Splattershot Pro",
+            "en_GB": "Splattershot Pro",
+            "es_ES": "Lanzatintas plus",
+            "es_MX": "Lanzatintas plus",
+            "fr_FR": "Liquidateur pro",
+            "fr_CA": "Liquéficateur pro"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Point Sensor",
           special: "Ink Storm",
@@ -119,15 +182,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 13800,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 60
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 60
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Expert_01.png",
           name: "Forge Splattershot Pro",
+        localizedName: {
+            "ja_JP": "プライムシューターコラボ",
+            "en_US": "Forge Splattershot Pro",
+            "en_GB": "Forge Splattershot Pro",
+            "es_ES": "Lanzatintas plus B",
+            "es_MX": "Rociador Forima",
+            "fr_FR": "Liquidateur pro griffé",
+            "fr_CA": "Liquéficateur pro Fosia"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Suction Bomb",
           special: "Bubble Blower",
@@ -139,15 +211,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 20800,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 60
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 60
           },
           id: 6
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Blaze_00.png",
           name: "Aerospray MG",
+        localizedName: {
+            "ja_JP": "プロモデラーMG",
+            "en_US": "Aerospray MG",
+            "en_GB": "Aerospray MG",
+            "es_ES": "Aerospray MG",
+            "es_MX": "Aerospray MG",
+            "fr_FR": "Aérogun",
+            "fr_CA": "Pouche-pouche"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Suction Bomb",
           special: "Curling-Bomb Launcher",
@@ -159,15 +240,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 4900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 90,
-            "Damage": 10
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 90,
+            "SHELDON_DAMAGE": 10
           },
           id: 7
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Blaze_01.png",
           name: "Aerospray RG",
+        localizedName: {
+            "ja_JP": "プロモデラーRG",
+            "en_US": "Aerospray RG",
+            "en_GB": "Aerospray RG",
+            "es_ES": "Aerospray RG",
+            "es_MX": "Aerospray RG",
+            "fr_FR": "Aérogun premium",
+            "fr_CA": "Pouche-pouche premium"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
           special: "Baller",
@@ -179,15 +269,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 16900,
           stats: {
-            "Range": 35,
-            "Fire Rate": 90,
-            "Damage": 10
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 90,
+            "SHELDON_DAMAGE": 10
           },
           id: 8
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_QuickMiddle_00.png",
           name: "N-ZAP '85",
+        localizedName: {
+            "ja_JP": "N-ZAP85",
+            "en_US": "N-ZAP '85",
+            "en_GB": "N-ZAP '85",
+            "es_ES": "N-ZAP '85",
+            "es_MX": "N-ZAP '85",
+            "fr_FR": "N-ZAP 85",
+            "fr_CA": "N-ZAP 85"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Suction Bomb",
           special: "Ink Armor",
@@ -199,15 +298,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 7100,
           stats: {
-            "Range": 50,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 9
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_QuickMiddle_01.png",
           name: "N-ZAP '89",
+        localizedName: {
+            "ja_JP": "N-ZAP89",
+            "en_US": "N-ZAP '89",
+            "en_GB": "N-ZAP '89",
+            "es_ES": "N-ZAP '89",
+            "es_MX": "N-ZAP '89",
+            "fr_FR": "N-ZAP 89",
+            "fr_CA": "N-ZAP 89"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Autobomb",
@@ -220,15 +328,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 8800,
           stats: {
-            "Range": 50,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 10
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Short_00.png",
           name: "Sploosh-o-matic",
+        localizedName: {
+            "ja_JP": "ボールドマーカー",
+            "en_US": "Sploosh-o-matic",
+            "en_GB": "Sploosh-o-matic",
+            "es_ES": "Marcador",
+            "es_MX": "Marcador grueso",
+            "fr_FR": "Marqueur lourd",
+            "fr_CA": "Marqueur lourd"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Curling Bomb",
           special: "Splashdown",
@@ -240,15 +357,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 9700,
           stats: {
-            "Range": 12,
-            "Fire Rate": 75,
-            "Damage": 52
+            "SHELDON_RANGE": 12,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 52
           },
           id: 11
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Short_01.png",
           name: "Neo Sploosh-o-matic",
+        localizedName: {
+            "ja_JP": "ボールドマーカーネオ",
+            "en_US": "Neo Sploosh-o-matic",
+            "en_GB": "Neo Sploosh-o-matic",
+            "es_ES": "Marcador neo",
+            "es_MX": "Marcador grueso neo",
+            "fr_FR": "Marqueur lourd Néo",
+            "fr_CA": "Marqueur lourd néo"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Squid Beakon",
@@ -261,15 +387,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12200,
           stats: {
-            "Range": 12,
-            "Fire Rate": 75,
-            "Damage": 52
+            "SHELDON_RANGE": 12,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 52
           },
           id: 12
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Precision_00.png",
           name: "Splash-o-matic",
+        localizedName: {
+            "ja_JP": "シャープマーカー",
+            "en_US": "Splash-o-matic",
+            "en_GB": "Splash-o-matic",
+            "es_ES": "Marcador fino",
+            "es_MX": "Plumón",
+            "fr_FR": "Marqueur léger",
+            "fr_CA": "Marqueur léger"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
           special: "Inkjet",
@@ -281,15 +416,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 11200,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 13
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Precision_01.png",
           name: "Neo Splash-o-matic",
+        localizedName: {
+            "ja_JP": "シャープマーカーネオ",
+            "en_US": "Neo Splash-o-matic",
+            "en_GB": "Neo Splash-o-matic",
+            "es_ES": "Marcador fino neo",
+            "es_MX": "Plumón neo",
+            "fr_FR": "Marqueur léger Néo",
+            "fr_CA": "Marqueur léger néo"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
@@ -302,15 +446,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 16800,
           stats: {
-            "Range": 35,
-            "Fire Rate": 75,
-            "Damage": 22
+            "SHELDON_RANGE": 35,
+            "SHELDON_FIRE_RATE": 75,
+            "SHELDON_DAMAGE": 22
           },
           id: 14
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Gravity_00.png",
           name: ".52 Gal",
+        localizedName: {
+            "ja_JP": ".52ガロン",
+            "en_US": ".52 Gal",
+            "en_GB": ".52 Gal",
+            "es_ES": "Salpicadora 2000",
+            "es_MX": "Salpicadora 2000",
+            "fr_FR": "Calibre 2000",
+            "fr_CA": "Calibre 2000"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Point Sensor",
           special: "Baller",
@@ -322,15 +475,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 9500,
           stats: {
-            "Range": 50,
-            "Fire Rate": 25,
-            "Damage": 75
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 25,
+            "SHELDON_DAMAGE": 75
           },
           id: 15
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Gravity_01.png",
           name: ".52 Gal Deco",
+        localizedName: {
+            "ja_JP": ".52ガロンデコ",
+            "en_US": ".52 Gal Deco",
+            "en_GB": ".52 Gal Deco",
+            "es_ES": "Salpicadora 2000 DX",
+            "es_MX": "Salpicadora 2000 chic",
+            "fr_FR": "Calibre 2000 chic",
+            "fr_CA": "Calibre 2000 chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Curling Bomb",
@@ -343,15 +505,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 12700,
           stats: {
-            "Range": 50,
-            "Fire Rate": 25,
-            "Damage": 75
+            "SHELDON_RANGE": 50,
+            "SHELDON_FIRE_RATE": 25,
+            "SHELDON_DAMAGE": 75
           },
           id: 16
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Heavy_00.png",
           name: ".96 Gal",
+        localizedName: {
+            "ja_JP": ".96ガロン",
+            "en_US": ".96 Gal",
+            "en_GB": ".96 Gal",
+            "es_ES": "Salpicadora 3000",
+            "es_MX": "Salpicadora 3000",
+            "fr_FR": "Calibre 3000",
+            "fr_CA": "Calibre 3000"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
           special: "Ink Armor",
@@ -363,15 +534,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 12600,
           stats: {
-            "Range": 70,
-            "Fire Rate": 10,
-            "Damage": 75
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_DAMAGE": 75
           },
           id: 17
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Heavy_01.png",
           name: ".96 Gal Deco",
+        localizedName: {
+            "ja_JP": ".96ガロンデコ",
+            "en_US": ".96 Gal Deco",
+            "en_GB": ".96 Gal Deco",
+            "es_ES": "Salpicadora 3000 DX",
+            "es_MX": "Salpicadora 3000 chic",
+            "fr_FR": "Calibre 3000 chic",
+            "fr_CA": "Calibre 3000 chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splash Wall",
@@ -384,15 +564,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 16200,
           stats: {
-            "Range": 70,
-            "Fire Rate": 10,
-            "Damage": 75
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_DAMAGE": 75
           },
           id: 18
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Long_00.png",
           name: "Jet Squelcher",
+        localizedName: {
+            "ja_JP": "ジェットスイーパー",
+            "en_US": "Jet Squelcher",
+            "en_GB": "Jet Squelcher",
+            "es_ES": "Jet Squelcher",
+            "es_MX": "Jet Squelcher",
+            "fr_FR": "Nettoyeur XL",
+            "fr_CA": "Méganettoyeur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
           special: "Tenta Missiles",
@@ -404,15 +593,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 11300,
           stats: {
-            "Range": 82,
-            "Fire Rate": 30,
-            "Damage": 35
+            "SHELDON_RANGE": 82,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 35
           },
           id: 19
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Long_01.png",
           name: "Custom Jet Squelcher",
+        localizedName: {
+            "ja_JP": "ジェットスイーパーカスタム",
+            "en_US": "Custom Jet Squelcher",
+            "en_GB": "Custom Jet Squelcher",
+            "es_ES": "Megabarredora SP",
+            "es_MX": "Megasoplador adaptado",
+            "fr_FR": "Nettoyeur XL modifié",
+            "fr_CA": "Méganettoyeur modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
@@ -425,15 +623,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 15900,
           stats: {
-            "Range": 82,
-            "Fire Rate": 30,
-            "Damage": 35
+            "SHELDON_RANGE": 82,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 35
           },
           id: 20
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_TripleQuick_00.png",
           name: "L-3 Nozzlenose",
+        localizedName: {
+            "ja_JP": "L3リールガン",
+            "en_US": "L-3 Nozzlenose",
+            "en_GB": "L-3 Nozzlenose",
+            "es_ES": "Tintambor ligero",
+            "es_MX": "Manguera ligera",
+            "fr_FR": "Arroseur léger",
+            "fr_CA": "Arroseur léger"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Curling Bomb",
           special: "Baller",
@@ -445,15 +652,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 10400,
           stats: {
-            "Range": 62,
-            "Fire Rate": 65,
-            "Damage": 25
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_DAMAGE": 25
           },
           id: 21
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_TripleQuick_01.png",
           name: "L-3 Nozzlenose D",
+        localizedName: {
+            "ja_JP": "L3リールガンD",
+            "en_US": "L-3 Nozzlenose D",
+            "en_GB": "L-3 Nozzlenose D",
+            "es_ES": "Tintambor ligero D",
+            "es_MX": "Manguera ligera D",
+            "fr_FR": "Arroseur léger Cétacé",
+            "fr_CA": "Arroseur léger requin"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
@@ -466,15 +682,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12500,
           stats: {
-            "Range": 62,
-            "Fire Rate": 65,
-            "Damage": 25
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_DAMAGE": 25
           },
           id: 22
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_TripleMiddle_00.png",
           name: "H-3 Nozzlenose",
+        localizedName: {
+            "ja_JP": "H3リールガン",
+            "en_US": "H-3 Nozzlenose",
+            "en_GB": "H-3 Nozzlenose",
+            "es_ES": "Tintambor pesado",
+            "es_MX": "Manguera pesada",
+            "fr_FR": "Arroseur lourd",
+            "fr_CA": "Arroseur lourd"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Point Sensor",
           special: "Tenta Missiles",
@@ -486,15 +711,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 17200,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 58
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 58
           },
           id: 23
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_TripleMiddle_01.png",
           name: "H-3 Nozzlenose D",
+        localizedName: {
+            "ja_JP": "H3リールガンD",
+            "en_US": "H-3 Nozzlenose D",
+            "en_GB": "H-3 Nozzlenose D",
+            "es_ES": "Tintambor pesado D",
+            "es_MX": "Manguera pesada D",
+            "fr_FR": "Arroseur lourd Cétacé",
+            "fr_CA": "Arroseur lourd requin"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
@@ -507,15 +741,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 18400,
           stats: {
-            "Range": 70,
-            "Fire Rate": 30,
-            "Damage": 58
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_DAMAGE": 58
           },
           id: 24
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Flash_00.png",
           name: "Squeezer",
+        localizedName: {
+            "ja_JP": "Squeezer",
+            "en_US": "Squeezer",
+            "en_GB": "Squeezer",
+            "es_ES": "Squeezer",
+            "es_MX": "Squeezer",
+            "fr_FR": "Squeezer",
+            "fr_CA": "Squeezer"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splash Wall",
@@ -526,15 +769,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 9400,
           stats: {
-            "Range": 70,
-            "Fire Rate": 45,
-            "Damage": 52
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 45,
+            "SHELDON_DAMAGE": 52
           },
           id: 25
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_Flash_01.png",
           name: "Foil Squeezer",
+        localizedName: {
+            "ja_JP": "Foil Squeezer",
+            "en_US": "Foil Squeezer",
+            "en_GB": "Foil Squeezer",
+            "es_ES": "Foil Squeezer",
+            "es_MX": "Foil Squeezer",
+            "fr_FR": "Foil Squeezer",
+            "fr_CA": "Foil Squeezer"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
@@ -545,9 +797,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 10900,
           stats: {
-            "Range": 70,
-            "Fire Rate": 45,
-            "Damage": 52
+            "SHELDON_RANGE": 70,
+            "SHELDON_FIRE_RATE": 45,
+            "SHELDON_DAMAGE": 52
           },
           id: 26
         }
@@ -555,11 +807,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Dualies",
+      localizedName: {
+                "ja_JP": "マニューバー",
+                "en_US": "Dualies",
+                "en_GB": "Dualies",
+                "es_ES": "Dualies",
+                "es_MX": "Dualies",
+                "fr_FR": "Dualies",
+                "fr_CA": "Dualies"
+            },
       id: 1,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Twins_Normal_00.png",
           name: "Splat Dualies",
+        localizedName: {
+            "ja_JP": "スプラマニューバー",
+            "en_US": "Splat Dualies",
+            "en_GB": "Splat Dualies",
+            "es_ES": "Dual diffusor",
+            "es_MX": "Dual diffusor",
+            "fr_FR": "Double encreur",
+            "fr_CA": "Double encreur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
           special: "Tenta Missiles",
@@ -571,15 +841,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 2400,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Normal_H.png",
           name: "Hero Dualie Replicas",
+        localizedName: {
+            "ja_JP": "ヒーローマニューバー レプリカ",
+            "en_US": "Hero Dualie Replicas",
+            "en_GB": "Hero Dualie Replicas",
+            "es_ES": "Hero Dualie Replicas",
+            "es_MX": "Hero Dualie Replicas",
+            "fr_FR": "Hero Dualie Replicas",
+            "fr_CA": "Hero Dualie Replicas"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
           special: "Tenta Missiles",
@@ -591,15 +870,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 3100,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Normal_01.png",
           name: "Enperry Splat Dualies",
+        localizedName: {
+            "ja_JP": "スプラマニューバーコラボ",
+            "en_US": "Enperry Splat Dualies",
+            "en_GB": "Enperry Splat Dualies",
+            "es_ES": "Enperry Splat Dualies",
+            "es_MX": "Enperry Splat Dualies",
+            "fr_FR": "Double encreur griffé",
+            "fr_CA": "Double encreur DUX"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Curling Bomb",
           special: "Inkjet",
@@ -611,15 +899,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 9000,
           stats: {
-            "Range": 39,
-            "Mobility": 70,
-            "Damage": 22
+            "SHELDON_RANGE": 39,
+            "SHELDON_MOBILITY": 70,
+            "SHELDON_DAMAGE": 22
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Dual_00.png",
           name: "Dualie Squelchers",
+        localizedName: {
+            "ja_JP": "デュアルスイーパー",
+            "en_US": "Dualie Squelchers",
+            "en_GB": "Dualie Squelchers",
+            "es_ES": "Barredora dual",
+            "es_MX": "Barredora dual",
+            "fr_FR": "Double nettoyeur",
+            "fr_CA": "Double nettoyeur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Point Sensor",
           special: "Tenta Missiles",
@@ -631,15 +928,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 9800,
           stats: {
-            "Range": 70,
-            "Mobility": 60,
-            "Damage": 22
+            "SHELDON_RANGE": 70,
+            "SHELDON_MOBILITY": 60,
+            "SHELDON_DAMAGE": 22
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Dual_01.png",
           name: "Custom Dualie Squelchers",
+        localizedName: {
+            "ja_JP": "Custom Dualie Squelchers",
+            "en_US": "Custom Dualie Squelchers",
+            "en_GB": "Custom Dualie Squelchers",
+            "es_ES": "Custom Dualie Squelchers",
+            "es_MX": "Custom Dualie Squelchers",
+            "fr_FR": "Custom Dualie Squelchers",
+            "fr_CA": "Custom Dualie Squelchers"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
@@ -652,15 +958,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12900,
           stats: {
-            "Range": 70,
-            "Mobility": 60,
-            "Damage": 22
+            "SHELDON_RANGE": 70,
+            "SHELDON_MOBILITY": 60,
+            "SHELDON_DAMAGE": 22
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Short_00.png",
           name: "Dapple Dualies",
+        localizedName: {
+            "ja_JP": "スパッタリー",
+            "en_US": "Dapple Dualies",
+            "en_GB": "Dapple Dualies",
+            "es_ES": "Dapple Dualies",
+            "es_MX": "Dapple Dualies",
+            "fr_FR": "Double moucheteur",
+            "fr_CA": "Double moucheteur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Squid Beakon",
           special: "Suction-Bomb Launcher",
@@ -672,15 +987,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 14700,
           stats: {
-            "Range": 24,
-            "Mobility": 80,
-            "Damage": 47
+            "SHELDON_RANGE": 24,
+            "SHELDON_MOBILITY": 80,
+            "SHELDON_DAMAGE": 47
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Short_01.png",
           name: "Dapple Dualies Nouveau",
+        localizedName: {
+            "ja_JP": "Dapple Dualies Nouveau",
+            "en_US": "Dapple Dualies Nouveau",
+            "en_GB": "Dapple Dualies Nouveau",
+            "es_ES": "Dapple Dualies Nouveau",
+            "es_MX": "Dapple Dualies Nouveau",
+            "fr_FR": "Dapple Dualies Nouveau",
+            "fr_CA": "Dapple Dualies Nouveau"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
@@ -693,15 +1017,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.8,
           price: 17500,
           stats: {
-            "Range": 24,
-            "Mobility": 80,
-            "Damage": 47
+            "SHELDON_RANGE": 24,
+            "SHELDON_MOBILITY": 80,
+            "SHELDON_DAMAGE": 47
           },
           id: 6
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Stepper_00.png",
           name: "Dark Tetra Dualies",
+        localizedName: {
+            "ja_JP": "Dark Tetra Dualies",
+            "en_US": "Dark Tetra Dualies",
+            "en_GB": "Dark Tetra Dualies",
+            "es_ES": "Dark Tetra Dualies",
+            "es_MX": "Dark Tetra Dualies",
+            "fr_FR": "Dark Tetra Dualies",
+            "fr_CA": "Dark Tetra Dualies"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Autobomb",
@@ -712,15 +1045,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 10700,
           stats: {
-            "Range": 50,
-            "Mobility": 90,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_MOBILITY": 90,
+            "SHELDON_DAMAGE": 22
           },
           id: 7
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Stepper_01.png",
           name: "Light Tetra Dualies",
+        localizedName: {
+            "ja_JP": "Light Tetra Dualies",
+            "en_US": "Light Tetra Dualies",
+            "en_GB": "Light Tetra Dualies",
+            "es_ES": "Light Tetra Dualies",
+            "es_MX": "Light Tetra Dualies",
+            "fr_FR": "Light Tetra Dualies",
+            "fr_CA": "Light Tetra Dualies"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
@@ -731,15 +1073,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 13300,
           stats: {
-            "Range": 50,
-            "Mobility": 90,
-            "Damage": 22
+            "SHELDON_RANGE": 50,
+            "SHELDON_MOBILITY": 90,
+            "SHELDON_DAMAGE": 22
           },
           id: 8
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Gallon_00.png",
           name: "Glooga Dualies",
+        localizedName: {
+            "ja_JP": "Glooga Dualies",
+            "en_US": "Glooga Dualies",
+            "en_GB": "Glooga Dualies",
+            "es_ES": "Glooga Dualies",
+            "es_MX": "Glooga Dualies",
+            "fr_FR": "Glooga Dualies",
+            "fr_CA": "Glooga Dualies"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Ink Mine",
@@ -750,15 +1101,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 11800,
           stats: {
-            "Range": 56,
-            "Mobility": 35,
-            "Damage": 76
+            "SHELDON_RANGE": 56,
+            "SHELDON_MOBILITY": 35,
+            "SHELDON_DAMAGE": 76
           },
           id: 9
         },
         {
           image: "./assets/img/weapons/Wst_Twins_Gallon_01.png",
           name: "Glooga Dualies Deco",
+        localizedName: {
+            "ja_JP": "Glooga Dualies Deco",
+            "en_US": "Glooga Dualies Deco",
+            "en_GB": "Glooga Dualies Deco",
+            "es_ES": "Glooga Dualies Deco",
+            "es_MX": "Glooga Dualies Deco",
+            "fr_FR": "Glooga Dualies Deco",
+            "fr_CA": "Glooga Dualies Deco"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splash Wall",
@@ -769,9 +1129,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 13700,
           stats: {
-            "Range": 56,
-            "Mobility": 35,
-            "Damage": 76
+            "SHELDON_RANGE": 56,
+            "SHELDON_MOBILITY": 35,
+            "SHELDON_DAMAGE": 76
           },
           id: 10
         }
@@ -779,11 +1139,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Rollers",
+            localizedName: {
+                "ja_JP": "ローラー",
+                "en_US": "Rollers",
+                "en_GB": "Rollers",
+                "es_ES": "Rodillos",
+                "es_MX": "Rodillos",
+                "fr_FR": "Rouleau",
+                "fr_CA": "Rouleau"
+            },
       id: 2,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Roller_Normal_00.png",
           name: "Splat Roller",
+        localizedName: {
+            "ja_JP": "スプラローラー",
+            "en_US": "Splat Roller",
+            "en_GB": "Splat Roller",
+            "es_ES": "Rodillo básico",
+            "es_MX": "Rodillo básico",
+            "fr_FR": "Rouleau",
+            "fr_CA": "Rouleau"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Curling Bomb",
           special: "Splashdown",
@@ -795,15 +1173,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 1800,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Normal_H.png",
           name: "Hero Roller Replica",
+        localizedName: {
+            "ja_JP": "ヒーローローラー レプリカ",
+            "en_US": "Hero Roller Replica",
+            "en_GB": "Hero Roller Replica",
+            "es_ES": "Rodillo de élite (réplica)",
+            "es_MX": "Rodillo de élite réplica",
+            "fr_FR": "Rouleau héroïque (réplique)",
+            "fr_CA": "Rouleau héroïque (rép.)"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Curling Bomb",
           special: "Splashdown",
@@ -815,15 +1202,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 2300,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Normal_01.png",
           name: "Krak-On Splat Roller",
+        localizedName: {
+            "ja_JP": "スプラローラーコラボ",
+            "en_US": "Krak-On Splat Roller",
+            "en_GB": "Krak-On Splat Roller",
+            "es_ES": "Rodillo básico B",
+            "es_MX": "Rodillo básico Meddux",
+            "fr_FR": "Rouleau griffé",
+            "fr_CA": "Rouleau Krakeurs"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Squid Beakon",
           special: "Baller",
@@ -835,15 +1231,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 9200,
           stats: {
-            "Range": 48,
-            "Ink Speed": 45,
-            "Handling": 55
+            "SHELDON_RANGE": 48,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 55
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Compact_00.png",
           name: "Carbon Roller",
+        localizedName: {
+            "ja_JP": "カーボンローラー",
+            "en_US": "Carbon Roller",
+            "en_GB": "Carbon Roller",
+            "es_ES": "Rodillo de carbono",
+            "es_MX": "Rodillo de carbono",
+            "fr_FR": "Rouleau carbone",
+            "fr_CA": "Rouleau carbone"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Autobomb",
           special: "Ink Storm",
@@ -855,15 +1260,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.28,
           price: 6200,
           stats: {
-            "Range": 20,
-            "Ink Speed": 63,
-            "Handling": 65
+            "SHELDON_RANGE": 20,
+            "SHELDON_INK_SPEED": 63,
+            "SHELDON_HANDLING": 65
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Compact_01.png",
           name: "Carbon Roller Deco",
+        localizedName: {
+            "ja_JP": "カーボンローラーデコ",
+            "en_US": "Carbon Roller Deco",
+            "en_GB": "Carbon Roller Deco",
+            "es_ES": "Rodillo de carbono DX",
+            "es_MX": "Rodillo de carbono chic",
+            "fr_FR": "Rouleau carbone chic",
+            "fr_CA": "Rouleau carbone chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Sprinkler",
@@ -876,15 +1290,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.28,
           price: 8500,
           stats: {
-            "Range": 20,
-            "Ink Speed": 63,
-            "Handling": 65
+            "SHELDON_RANGE": 20,
+            "SHELDON_INK_SPEED": 63,
+            "SHELDON_HANDLING": 65
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Heavy_00.png",
           name: "Dynamo Roller",
+        localizedName: {
+            "ja_JP": "ダイナモローラー",
+            "en_US": "Dynamo Roller",
+            "en_GB": "Dynamo Roller",
+            "es_ES": "Dinamorrodillo",
+            "es_MX": "Rodillo Pro",
+            "fr_FR": "Dynamo-rouleau",
+            "fr_CA": "Dynamo-rouleau"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Ink Mine",
           special: "Sting Ray",
@@ -896,15 +1319,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.88,
           price: 24500,
           stats: {
-            "Range": 76,
-            "Ink Speed": 25,
-            "Handling": 20
+            "SHELDON_RANGE": 76,
+            "SHELDON_INK_SPEED": 25,
+            "SHELDON_HANDLING": 20
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Heavy_01.png",
           name: "Gold Dynamo Roller",
+        localizedName: {
+            "ja_JP": "ダイナモローラーテスラ",
+            "en_US": "Gold Dynamo Roller",
+            "en_GB": "Gold Dynamo Roller",
+            "es_ES": "Dinamorrodillo T",
+            "es_MX": "Rodillo Pro dorado",
+            "fr_FR": "Dynamo-rouleau tesla",
+            "fr_CA": "Dynamo-rouleau pro"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Toxic Mist",
@@ -917,15 +1349,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.88,
           price: 29000,
           stats: {
-            "Range": 76,
-            "Ink Speed": 25,
-            "Handling": 20
+            "SHELDON_RANGE": 76,
+            "SHELDON_INK_SPEED": 25,
+            "SHELDON_HANDLING": 20
           },
           id: 6
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Hunter_00.png",
           name: "Flingza Roller",
+        localizedName: {
+            "ja_JP": "ヴァリアブルローラー",
+            "en_US": "Flingza Roller",
+            "en_GB": "Flingza Roller",
+            "es_ES": "Flingza Roller",
+            "es_MX": "Flingza Roller",
+            "fr_FR": "Flexi-rouleau",
+            "fr_CA": "Flexi-rouleau"
+        },
           shotUnit: "SHOT_UNIT_FLICK_HORIZ",
           sub: "Splash Wall",
           special: "Splat-Bomb Launcher",
@@ -937,15 +1378,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 15700,
           stats: {
-            "Range": 55,
-            "Ink Speed": 45,
-            "Handling": 45
+            "SHELDON_RANGE": 55,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 45
           },
           id: 7
         },
         {
           image: "./assets/img/weapons/Wst_Roller_Hunter_01.png",
           name: "Foil Flingza Roller",
+        localizedName: {
+            "ja_JP": "Foil Flingza Roller",
+            "en_US": "Foil Flingza Roller",
+            "en_GB": "Foil Flingza Roller",
+            "es_ES": "Foil Flingza Roller",
+            "es_MX": "Foil Flingza Roller",
+            "fr_FR": "Foil Flingza Roller",
+            "fr_CA": "Foil Flingza Roller"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK_HORIZ",
           sub: "Suction Bomb",
@@ -958,9 +1408,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.08,
           price: 21300,
           stats: {
-            "Range": 55,
-            "Ink Speed": 45,
-            "Handling": 45
+            "SHELDON_RANGE": 55,
+            "SHELDON_INK_SPEED": 45,
+            "SHELDON_HANDLING": 45
           },
           id: 8
         }
@@ -968,11 +1418,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Brushes",
+            localizedName: {
+                "ja_JP": "フデ",
+                "en_US": "Brushes",
+                "en_GB": "Brushes",
+                "es_ES": "Brochas",
+                "es_MX": "Brochas",
+                "fr_FR": "Épinceau",
+                "fr_CA": "Épinceau"
+            },
       id: 3,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Roller_BrushMini_00.png",
           name: "Inkbrush",
+        localizedName: {
+            "ja_JP": "パブロ",
+            "en_US": "Inkbrush",
+            "en_GB": "Inkbrush",
+            "es_ES": "Pincel",
+            "es_MX": "Pincel",
+            "fr_FR": "Épinceau",
+            "fr_CA": "Épinceau"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Splat Bomb",
           special: "Splashdown",
@@ -984,15 +1452,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.92,
           price: 2600,
           stats: {
-            "Range": 5,
-            "Ink Speed": 100,
-            "Handling": 100
+            "SHELDON_RANGE": 5,
+            "SHELDON_INK_SPEED": 100,
+            "SHELDON_HANDLING": 100
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Roller_BrushMini_01.png",
           name: "Inkbrush Nouveau",
+        localizedName: {
+            "ja_JP": "パブロ・ヒュー",
+            "en_US": "Inkbrush Nouveau",
+            "en_GB": "Inkbrush Nouveau",
+            "es_ES": "Pincel maestro",
+            "es_MX": "Pincel maestro",
+            "fr_FR": "Épinceau nuancé",
+            "fr_CA": "Épinceau nuancé"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Ink Mine",
@@ -1005,15 +1482,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.92,
           price: 7000,
           stats: {
-            "Range": 5,
-            "Ink Speed": 100,
-            "Handling": 100
+            "SHELDON_RANGE": 5,
+            "SHELDON_INK_SPEED": 100,
+            "SHELDON_HANDLING": 100
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_00.png",
           name: "Octobrush",
+        localizedName: {
+            "ja_JP": "ホクサイ",
+            "en_US": "Octobrush",
+            "en_GB": "Octobrush",
+            "es_ES": "Brocha",
+            "es_MX": "Pincel caligrafía",
+            "fr_FR": "Épinceau brosse",
+            "fr_CA": "Épinceau brosse"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Autobomb",
           special: "Inkjet",
@@ -1025,15 +1511,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 8200,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_H.png",
           name: "Herobrush Replica",
+        localizedName: {
+            "ja_JP": "ヒーローブラシ レプリカ",
+            "en_US": "Herobrush Replica",
+            "en_GB": "Herobrush Replica",
+            "es_ES": "Herobrush Replica",
+            "es_MX": "Herobrush Replica",
+            "fr_FR": "Herobrush Replica",
+            "fr_CA": "Herobrush Replica"
+        },
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Autobomb",
           special: "Inkjet",
@@ -1045,15 +1540,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 9400,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Roller_BrushNormal_01.png",
           name: "Octobrush Nouveau",
+        localizedName: {
+            "ja_JP": "ホクサイ・ヒュー",
+            "en_US": "Octobrush Nouveau",
+            "en_GB": "Octobrush Nouveau",
+            "es_ES": "Brocha maestra",
+            "es_MX": "Pincel caligrafía maestro",
+            "fr_FR": "Épinceau brosse nuancé",
+            "fr_CA": "Épinceau brosse nuancé"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_FLICK",
           sub: "Squid Beakon",
@@ -1066,9 +1570,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 1.68,
           price: 9900,
           stats: {
-            "Range": 23,
-            "Ink Speed": 80,
-            "Handling": 85
+            "SHELDON_RANGE": 23,
+            "SHELDON_INK_SPEED": 80,
+            "SHELDON_HANDLING": 85
           },
           id: 4
         }
@@ -1076,11 +1580,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Blasters",
+            localizedName: {
+                "ja_JP": "ブラスター",
+                "en_US": "Blasters",
+                "en_GB": "Blasters",
+                "es_ES": "Devastadors",
+                "es_MX": "Devastadors",
+                "fr_FR": "Éclablaster",
+                "fr_CA": "Éclablaster"
+            },
       id: 4,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_00.png",
           name: "Blaster",
+        localizedName: {
+            "ja_JP": "ホットブラスター",
+            "en_US": "Blaster",
+            "en_GB": "Blaster",
+            "es_ES": "Devastador",
+            "es_MX": "Devastador",
+            "fr_FR": "Éclablaster",
+            "fr_CA": "Éclablasteur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
           special: "Splashdown",
@@ -1092,15 +1614,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 3000,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_H.png",
           name: "Hero Blaster Replica",
+        localizedName: {
+            "ja_JP": "ヒーローブラスター レプリカ",
+            "en_US": "Hero Blaster Replica",
+            "en_GB": "Hero Blaster Replica",
+            "es_ES": "Hero Blaster Replica",
+            "es_MX": "Hero Blaster Replica",
+            "fr_FR": "Hero Blaster Replica",
+            "fr_CA": "Hero Blaster Replica"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
           special: "Splashdown",
@@ -1112,15 +1643,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 3800,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterMiddle_01.png",
           name: "Custom Blaster",
+        localizedName: {
+            "ja_JP": "ホットブラスターカスタム",
+            "en_US": "Custom Blaster",
+            "en_GB": "Custom Blaster",
+            "es_ES": "Devastador SP",
+            "es_MX": "Lanzamotas adaptado",
+            "fr_FR": "Éclablaster modifié",
+            "fr_CA": "Éclablasteur modifié"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Autobomb",
           special: "Inkjet",
@@ -1132,15 +1672,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 15300,
           stats: {
-            "Range": 27,
-            "Fire Rate": 20,
-            "Impact": 70
+            "SHELDON_RANGE": 27,
+            "SHELDON_FIRE_RATE": 20,
+            "SHELDON_IMPACT": 70
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLong_00.png",
           name: "Range Blaster",
+        localizedName: {
+            "ja_JP": "ロングブラスター",
+            "en_US": "Range Blaster",
+            "en_GB": "Range Blaster",
+            "es_ES": "Teledevastador",
+            "es_MX": "Telelanzamotas",
+            "fr_FR": "Éclablaster XL",
+            "fr_CA": "Éclablasteur LP"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Suction Bomb",
@@ -1152,15 +1701,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 9300,
           stats: {
-            "Range": 56,
-            "Fire Rate": 10,
-            "Impact": 70
+            "SHELDON_RANGE": 56,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_IMPACT": 70
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLong_01.png",
           name: "Custom Range Blaster",
+        localizedName: {
+            "ja_JP": "ロングブラスターカスタム",
+            "en_US": "Custom Range Blaster",
+            "en_GB": "Custom Range Blaster",
+            "es_ES": "Teledevastador SP",
+            "es_MX": "Telelanzamotas adaptado",
+            "fr_FR": "Éclablaster XL griffé",
+            "fr_CA": "Éclablasteur LP modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Burst Bomb",
@@ -1172,15 +1730,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.45,
           price: 11400,
           stats: {
-            "Range": 56,
-            "Fire Rate": 10,
-            "Impact": 70
+            "SHELDON_RANGE": 56,
+            "SHELDON_FIRE_RATE": 10,
+            "SHELDON_IMPACT": 70
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLight_00.png",
           name: "Rapid Blaster",
+        localizedName: {
+            "ja_JP": "ラピッドブラスター",
+            "en_US": "Rapid Blaster",
+            "en_GB": "Rapid Blaster",
+            "es_ES": "Devastador exprés",
+            "es_MX": "Turbolanzamotas",
+            "fr_FR": "Turboblaster",
+            "fr_CA": "Turboblasteur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Ink Mine",
           special: "Splat-Bomb Launcher",
@@ -1192,15 +1759,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 9800,
           stats: {
-            "Range": 62,
-            "Fire Rate": 40,
-            "Impact": 35
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 40,
+            "SHELDON_IMPACT": 35
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLight_01.png",
           name: "Rapid Blaster Deco",
+        localizedName: {
+            "ja_JP": "ラピッドブラスターデコ",
+            "en_US": "Rapid Blaster Deco",
+            "en_GB": "Rapid Blaster Deco",
+            "es_ES": "Devastador exprés DX",
+            "es_MX": "Turbolanzamotas chic",
+            "fr_FR": "Turboblaster chic",
+            "fr_CA": "Turboblasteur chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Suction Bomb",
@@ -1213,15 +1789,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 11500,
           stats: {
-            "Range": 62,
-            "Fire Rate": 40,
-            "Impact": 35
+            "SHELDON_RANGE": 62,
+            "SHELDON_FIRE_RATE": 40,
+            "SHELDON_IMPACT": 35
           },
           id: 6
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png",
           name: "Rapid Blaster Pro",
+        localizedName: {
+            "ja_JP": "Rブラスターエリート",
+            "en_US": "Rapid Blaster Pro",
+            "en_GB": "Rapid Blaster Pro",
+            "es_ES": "Superdevastador",
+            "es_MX": "Turbolanzamotas Pro",
+            "fr_FR": "Turboblaster pro",
+            "fr_CA": "Turboblasteur pro"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
@@ -1234,15 +1819,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 12800,
           stats: {
-            "Range": 72,
-            "Fire Rate": 30,
-            "Impact": 35
+            "SHELDON_RANGE": 72,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 35
           },
           id: 7
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLightLong_01.png",
           name: "Rapid Blaster Pro Deco",
+        localizedName: {
+            "ja_JP": "Rブラスターエリートデコ",
+            "en_US": "Rapid Blaster Pro Deco",
+            "en_GB": "Rapid Blaster Pro Deco",
+            "es_ES": "Superdevastador DX",
+            "es_MX": "Turbolanzamotas Pro chic",
+            "fr_FR": "Turboblaster pro chic",
+            "fr_CA": "Turboblasteur pro chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Curling Bomb",
@@ -1255,15 +1849,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.55,
           price: 14000,
           stats: {
-            "Range": 72,
-            "Fire Rate": 30,
-            "Impact": 35
+            "SHELDON_RANGE": 72,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 35
           },
           id: 8
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterShort_00.png",
           name: "Luna Blaster",
+        localizedName: {
+            "ja_JP": "ノヴァブラスター",
+            "en_US": "Luna Blaster",
+            "en_GB": "Luna Blaster",
+            "es_ES": "Ultradevastador",
+            "es_MX": "Lanzamotas Nova",
+            "fr_FR": "Proxiblaster",
+            "fr_CA": "Proxiblasteur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
           special: "Baller",
@@ -1275,15 +1878,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 12100,
           stats: {
-            "Range": 9,
-            "Fire Rate": 30,
-            "Impact": 70
+            "SHELDON_RANGE": 9,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 70
           },
           id: 9
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterShort_01.png",
           name: "Luna Blaster Neo",
+        localizedName: {
+            "ja_JP": "ノヴァブラスターネオ",
+            "en_US": "Luna Blaster Neo",
+            "en_GB": "Luna Blaster Neo",
+            "es_ES": "Ultradevastador neo",
+            "es_MX": "Lanzamotas Nova neo",
+            "fr_FR": "Proxiblaster Néo",
+            "fr_CA": "Proxiblasteur néo"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Ink Mine",
@@ -1296,15 +1908,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.5,
           price: 13600,
           stats: {
-            "Range": 9,
-            "Fire Rate": 30,
-            "Impact": 70
+            "SHELDON_RANGE": 9,
+            "SHELDON_FIRE_RATE": 30,
+            "SHELDON_IMPACT": 70
           },
           id: 10
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLightShort_00.png",
           name: "Clash Blaster",
+        localizedName: {
+            "ja_JP": "クラッシュブラスター",
+            "en_US": "Clash Blaster",
+            "en_GB": "Clash Blaster",
+            "es_ES": "Clash Blaster",
+            "es_MX": "Clash Blaster",
+            "fr_FR": "Rafablaster",
+            "fr_CA": "Rafalblasteur"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Splat Bomb",
           special: "Sting Ray",
@@ -1316,15 +1937,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 18200,
           stats: {
-            "Range": 21,
-            "Fire Rate": 65,
-            "Impact": 20
+            "SHELDON_RANGE": 21,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_IMPACT": 20
           },
           id: 11
         },
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLightShort_01.png",
           name: "Clash Blaster Neo",
+        localizedName: {
+            "ja_JP": "Clash Blaster Neo",
+            "en_US": "Clash Blaster Neo",
+            "en_GB": "Clash Blaster Neo",
+            "es_ES": "Clash Blaster Neo",
+            "es_MX": "Clash Blaster Neo",
+            "fr_FR": "Clash Blaster Neo",
+            "fr_CA": "Clash Blaster Neo"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
@@ -1337,9 +1967,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 20500,
           stats: {
-            "Range": 21,
-            "Fire Rate": 65,
-            "Impact": 20
+            "SHELDON_RANGE": 21,
+            "SHELDON_FIRE_RATE": 65,
+            "SHELDON_IMPACT": 20
           },
           id: 12
         }
@@ -1347,11 +1977,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Brellas",
+            localizedName: {
+                "ja_JP": "シェルター",
+                "en_US": "Brellas",
+                "en_GB": "Brellas",
+                "es_ES": "Brellas",
+                "es_MX": "Brellas",
+                "fr_FR": "Brellas",
+                "fr_CA": "Brellas"
+            },
       id: 5,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Umbrella_Normal_00.png",
           name: "Splat Brella",
+        localizedName: {
+            "ja_JP": "パラシェルター",
+            "en_US": "Splat Brella",
+            "en_GB": "Splat Brella",
+            "es_ES": "Paratintas",
+            "es_MX": "Paratintas",
+            "fr_FR": "Splat Brella",
+            "fr_CA": "Splat Brella"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
           special: "Ink Storm",
@@ -1363,15 +2011,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 8300,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Umbrella_Normal_H.png",
           name: "Hero Brella Replica",
+        localizedName: {
+            "ja_JP": "ヒーローシェルター レプリカ",
+            "en_US": "Hero Brella Replica",
+            "en_GB": "Hero Brella Replica",
+            "es_ES": "Hero Brella Replica",
+            "es_MX": "Hero Brella Replica",
+            "fr_FR": "Hero Brella Replica",
+            "fr_CA": "Hero Brella Replica"
+        },
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Sprinkler",
           special: "Ink Storm",
@@ -1383,15 +2040,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 9000,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Umbrella_Normal_01.png",
           name: "Sorella Brella",
+        localizedName: {
+            "ja_JP": "Sorella Brella",
+            "en_US": "Sorella Brella",
+            "en_GB": "Sorella Brella",
+            "es_ES": "Sorella Brella",
+            "es_MX": "Sorella Brella",
+            "fr_FR": "Sorella Brella",
+            "fr_CA": "Sorella Brella"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SHOT",
           sub: "Toxic Mist",
@@ -1404,9 +2070,9 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.65,
           price: 12000,
           stats: {
-            "Range": 43,
-            "Durability": 60,
-            "Damage": 65
+            "SHELDON_RANGE": 43,
+            "SHELDON_DURABILITY": 60,
+            "SHELDON_DAMAGE": 65
           },
           id: 2
         }
@@ -1414,11 +2080,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Sloshers",
+            localizedName: {
+                "ja_JP": "スロッシャー",
+                "en_US": "Sloshers",
+                "en_GB": "Sloshers",
+                "es_ES": "Derramatics",
+                "es_MX": "Derramatics",
+                "fr_FR": "Seauceur",
+                "fr_CA": "Seauceur"
+            },
       id: 6,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Slosher_Strong_00.png",
           name: "Slosher",
+            localizedName: {
+                "ja_JP": "スロッシャー",
+                "en_US": "Sloshers",
+                "en_GB": "Sloshers",
+                "es_ES": "Derramatics",
+                "es_MX": "Derramatics",
+                "fr_FR": "Seauceur",
+                "fr_CA": "Seauceur"
+        },
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Suction Bomb",
           special: "Tenta Missiles",
@@ -1430,15 +2114,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 2500,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Strong_H.png",
           name: "Hero Slosher Replica",
+        localizedName: {
+            "ja_JP": "ヒーロースロッシャー レプリカ",
+            "en_US": "Hero Slosher Replica",
+            "en_GB": "Hero Slosher Replica",
+            "es_ES": "Hero Slosher Replica",
+            "es_MX": "Hero Slosher Replica",
+            "fr_FR": "Hero Slosher Replica",
+            "fr_CA": "Hero Slosher Replica"
+        },
           sub: "Suction Bomb",
           special: "Tenta Missiles",
           level: 5,
@@ -1449,15 +2142,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 3100,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Strong_01.png",
           name: "Slosher Deco",
+        localizedName: {
+            "ja_JP": "バケットスロッシャーデコ",
+            "en_US": "Slosher Deco",
+            "en_GB": "Slosher Deco",
+            "es_ES": "Derramatic DX",
+            "es_MX": "Derramatic chic",
+            "fr_FR": "Seauceur chic",
+            "fr_CA": "Seauceur chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Sprinkler",
@@ -1470,15 +2172,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.4,
           price: 8000,
           stats: {
-            "Range": 58,
-            "Damage": 85,
-            "Handling": 50
+            "SHELDON_RANGE": 58,
+            "SHELDON_DAMAGE": 85,
+            "SHELDON_HANDLING": 50
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Diffusion_00.png",
           name: "Tri-Slosher",
+        localizedName: {
+            "ja_JP": "ヒッセン",
+            "en_US": "Tri-Slosher",
+            "en_GB": "Tri-Slosher",
+            "es_ES": "Derramatic triple",
+            "es_MX": "Derramatic triple",
+            "fr_FR": "Dépoteur",
+            "fr_CA": "Seauceur trio"
+        },
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Burst Bomb",
           special: "Ink Armor",
@@ -1490,15 +2201,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 10200,
           stats: {
-            "Range": 39,
-            "Damage": 80,
-            "Handling": 70
+            "SHELDON_RANGE": 39,
+            "SHELDON_DAMAGE": 80,
+            "SHELDON_HANDLING": 70
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Diffusion_01.png",
           name: "Tri-Slosher Nouveau",
+        localizedName: {
+            "ja_JP": "ヒッセン・ヒュー",
+            "en_US": "Tri-Slosher Nouveau",
+            "en_GB": "Tri-Slosher Nouveau",
+            "es_ES": "Derramatic triple maestro",
+            "es_MX": "Derramatic triple maestro",
+            "fr_FR": "Dépoteur nuancé",
+            "fr_CA": "Seauceur nuancé"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Splat Bomb",
@@ -1511,15 +2231,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.6,
           price: 11700,
           stats: {
-            "Range": 39,
-            "Damage": 80,
-            "Handling": 70
+            "SHELDON_RANGE": 39,
+            "SHELDON_DAMAGE": 80,
+            "SHELDON_HANDLING": 70
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Launcher_00.png",
           name: "Sloshing Machine",
+        localizedName: {
+            "ja_JP": "スクリュースロッシャー",
+            "en_US": "Sloshing Machine",
+            "en_GB": "Sloshing Machine",
+            "es_ES": "Derramatic centrífugo",
+            "es_MX": "Derramatic centrífugo",
+            "fr_FR": "Encrifugeur",
+            "fr_CA": "Encrifugeur"
+        },
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Autobomb",
           special: "Sting Ray",
@@ -1531,15 +2260,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.72,
           price: 12600,
           stats: {
-            "Range": 60,
-            "Damage": 90,
-            "Handling": 40
+            "SHELDON_RANGE": 60,
+            "SHELDON_DAMAGE": 90,
+            "SHELDON_HANDLING": 40
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Slosher_Launcher_01.png",
           name: "Sloshing Machine Neo",
+        localizedName: {
+            "ja_JP": "スクリュースロッシャーネオ",
+            "en_US": "Sloshing Machine Neo",
+            "en_GB": "Sloshing Machine Neo",
+            "es_ES": "Derramatic centrífugo neo",
+            "es_MX": "Derramatic centrífugo neo",
+            "fr_FR": "Encrifugeur Néo",
+            "fr_CA": "Encrifugeur néo"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_SLOSHER",
           sub: "Point Sensor",
@@ -1551,9 +2289,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Middle",
           price: 19800,
           stats: {
-            "Range": 60,
-            "Damage": 90,
-            "Handling": 40
+            "SHELDON_RANGE": 60,
+            "SHELDON_DAMAGE": 90,
+            "SHELDON_HANDLING": 40
           },
           id: 6
         }
@@ -1561,11 +2299,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Chargers",
+            localizedName: {
+                "ja_JP": "チャージャー",
+                "en_US": "Chargers",
+                "en_GB": "Chargers",
+                "es_ES": "Cargatintas",
+                "es_MX": "Cargatintas",
+                "fr_FR": "Fusil",
+                "fr_CA": "Fusil"
+        },
       id: 7,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Charger_Normal_00.png",
           name: "Splat Charger",
+        localizedName: {
+            "ja_JP": "スプラチャージャー",
+            "en_US": "Splat Charger",
+            "en_GB": "Splat Charger",
+            "es_ES": "Cargatintas",
+            "es_MX": "Cargatintas",
+            "fr_FR": "Concentraceur",
+            "fr_CA": "Concentraceur"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splat Bomb",
           special: "Sting Ray",
@@ -1577,15 +2333,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 2200,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Normal_H.png",
           name: "Hero Charger Replica",
+        localizedName: {
+            "ja_JP": "ヒーローチャージャー レプリカ",
+            "en_US": "Hero Charger Replica",
+            "en_GB": "Hero Charger Replica",
+            "es_ES": "Cargatintas de élite (réplica)",
+            "es_MX": "Cargatintas de élite réplica",
+            "fr_FR": "Conc. héroïque (réplique)",
+            "fr_CA": "Conc. héroïque (rép.)"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splat Bomb",
           special: "Sting Ray",
@@ -1597,15 +2362,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 2700,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Normal_01.png",
           name: "Firefin Splat Charger",
+        localizedName: {
+            "ja_JP": "スプラチャージャーコラボ",
+            "en_US": "Firefin Splat Charger",
+            "en_GB": "Firefin Splat Charger",
+            "es_ES": "Firefin Splat Charger",
+            "es_MX": "Firefin Splat Charger",
+            "fr_FR": "Firefin Splat Charger",
+            "fr_CA": "Firefin Splat Charger"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splash Wall",
           special: "Suction-Bomb Launcher",
@@ -1617,15 +2391,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 10600,
           stats: {
-            "Range": 88,
-            "Charge Speed": 50,
-            "Mobility": 40
+            "SHELDON_RANGE": 88,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 40
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Charger_NormalScope_00.png",
           name: "Splatterscope",
+        localizedName: {
+            "ja_JP": "スプラスコープ",
+            "en_US": "Splatterscope",
+            "en_GB": "Splatterscope",
+            "es_ES": "Cargatintas con mira",
+            "es_MX": "Cargatintas con mira",
+            "fr_FR": "Concentraceur zoom",
+            "fr_CA": "Concentraceur zoom"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splat Bomb",
           special: "Sting Ray",
@@ -1637,15 +2420,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 11400,
           stats: {
-            "Range": 91,
-            "Charge Speed": 50,
-            "Mobility": 30
+            "SHELDON_RANGE": 91,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 30
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Charger_NormalScope_01.png",
           name: "Firefin Splatterscope",
+        localizedName: {
+            "ja_JP": "スプラスコープコラボ",
+            "en_US": "Firefin Splatterscope",
+            "en_GB": "Firefin Splatterscope",
+            "es_ES": "Firefin Splatterscope",
+            "es_MX": "Firefin Splatterscope",
+            "fr_FR": "Firefin Splatterscope",
+            "fr_CA": "Firefin Splatterscope"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splash Wall",
           special: "Suction-Bomb Launcher",
@@ -1657,15 +2449,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.2,
           price: 13900,
           stats: {
-            "Range": 91,
-            "Charge Speed": 50,
-            "Mobility": 30
+            "SHELDON_RANGE": 91,
+            "SHELDON_CHARGE_SPEED": 50,
+            "SHELDON_MOBILITY": 30
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Quick_00.png",
           name: "Classic Squiffer",
+        localizedName: {
+            "ja_JP": "スクイックリンα",
+            "en_US": "Classic Squiffer",
+            "en_GB": "Classic Squiffer",
+            "es_ES": "Kalarrapid α",
+            "es_MX": "Delineador X",
+            "fr_FR": "Décap'express Alpha",
+            "fr_CA": "Lignizateur alpha"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Point Sensor",
           special: "Ink Armor",
@@ -1677,15 +2478,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 8900,
           stats: {
-            "Range": 75,
-            "Charge Speed": 70,
-            "Mobility": 60
+            "SHELDON_RANGE": 75,
+            "SHELDON_CHARGE_SPEED": 70,
+            "SHELDON_MOBILITY": 60
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Quick_01.png",
           name: "New Squiffer",
+        localizedName: {
+            "ja_JP": "スクイックリンβ",
+            "en_US": "New Squiffer",
+            "en_GB": "New Squiffer",
+            "es_ES": "Kalarrapid β",
+            "es_MX": "Delineador X",
+            "fr_FR": "Décap'express Bêta",
+            "fr_CA": "Lignizateur bêta"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Autobomb",
@@ -1698,15 +2508,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 11000,
           stats: {
-            "Range": 75,
-            "Charge Speed": 70,
-            "Mobility": 60
+            "SHELDON_RANGE": 75,
+            "SHELDON_CHARGE_SPEED": 70,
+            "SHELDON_MOBILITY": 60
           },
           id: 6
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Long_00.png",
           name: "E-liter 4K",
+        localizedName: {
+            "ja_JP": "リッター4K",
+            "en_US": "E-liter 4K",
+            "en_GB": "E-liter 4K",
+            "es_ES": "Entintador 4K",
+            "es_MX": "Entintador 4K",
+            "fr_FR": "Extraceur +",
+            "fr_CA": "X-traceur +"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Ink Mine",
           special: "Ink Storm",
@@ -1718,15 +2537,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 13900,
           stats: {
-            "Range": 96,
-            "Charge Speed": 20,
-            "Mobility": 15
+            "SHELDON_RANGE": 96,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 15
           },
           id: 7
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Long_01.png",
           name: "Custom E-liter 4K",
+        localizedName: {
+            "ja_JP": "リッター4Kカスタム",
+            "en_US": "Custom E-liter 4K",
+            "en_GB": "Custom E-Litre 4K",
+            "es_ES": "Entintador 4K SP",
+            "es_MX": "Entintador 4K adaptado",
+            "fr_FR": "Extraceur + modifié",
+            "fr_CA": "X-traceur + modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Squid Beakon",
@@ -1739,15 +2567,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 17300,
           stats: {
-            "Range": 96,
-            "Charge Speed": 20,
-            "Mobility": 15
+            "SHELDON_RANGE": 96,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 15
           },
           id: 8
         },
         {
           image: "./assets/img/weapons/Wst_Charger_LongScope_00.png",
           name: "E-liter 4K Scope",
+        localizedName: {
+            "ja_JP": "4Kスコープ",
+            "en_US": "E-liter 4K Scope",
+            "en_GB": "E-Litre 4K Scope",
+            "es_ES": "Telentintador 4K",
+            "es_MX": "Telentintador 4K",
+            "fr_FR": "Extraceur + zoom",
+            "fr_CA": "X-traceur + zoom"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Ink Mine",
           special: "Ink Storm",
@@ -1759,15 +2596,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 23200,
           stats: {
-            "Range": 100,
-            "Charge Speed": 20,
-            "Mobility": 5
+            "SHELDON_RANGE": 100,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 5
           },
           id: 9
         },
         {
           image: "./assets/img/weapons/Wst_Charger_LongScope_01.png",
           name: "Custom E-liter 4K Scope",
+        localizedName: {
+            "ja_JP": "4Kスコープカスタム",
+            "en_US": "Custom E-liter 4K Scope",
+            "en_GB": "Custom E-Litre 4K Scope",
+            "es_ES": "Telentintador 4K SP",
+            "es_MX": "Telentintador 4K adaptado",
+            "fr_FR": "Extraceur + zoom modifié",
+            "fr_CA": "X-traceur + modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Squid Beakon",
@@ -1780,15 +2626,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.15,
           price: 29900,
           stats: {
-            "Range": 100,
-            "Charge Speed": 20,
-            "Mobility": 5
+            "SHELDON_RANGE": 100,
+            "SHELDON_CHARGE_SPEED": 20,
+            "SHELDON_MOBILITY": 5
           },
           id: 10
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Keeper_00.png",
           name: "Goo Tuber",
+        localizedName: {
+            "ja_JP": "ソイチューバー",
+            "en_US": "Goo Tuber",
+            "en_GB": "Goo Tuber",
+            "es_ES": "Goo Tuber",
+            "es_MX": "Goo Tuber",
+            "fr_FR": "Détubeur",
+            "fr_CA": "Détubeur"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Suction Bomb",
           special: "Splashdown",
@@ -1800,15 +2655,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 13400,
           stats: {
-            "Range": 78,
-            "Charge Speed": 30,
-            "Mobility": 70
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 30,
+            "SHELDON_MOBILITY": 70
           },
           id: 11
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Keeper_01.png",
           name: "Custom Goo Tuber",
+        localizedName: {
+            "ja_JP": "Custom Goo Tuber",
+            "en_US": "Custom Goo Tuber",
+            "en_GB": "Custom Goo Tuber",
+            "es_ES": "Custom Goo Tuber",
+            "es_MX": "Custom Goo Tuber",
+            "fr_FR": "Custom Goo Tuber",
+            "fr_CA": "Custom Goo Tuber"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Curling Bomb",
@@ -1821,15 +2685,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.3,
           price: 19300,
           stats: {
-            "Range": 78,
-            "Charge Speed": 30,
-            "Mobility": 70
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 30,
+            "SHELDON_MOBILITY": 70
           },
           id: 12
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Light_00.png",
           name: "Bamboozler 14 Mk I",
+        localizedName: {
+            "ja_JP": "14式竹筒銃・甲",
+            "en_US": "Bamboozler 14 Mk I",
+            "en_GB": "Bamboozler 14 Mk I",
+            "es_ES": "Bambufusil 14-I",
+            "es_MX": "Bamzuka 14-I",
+            "fr_FR": "Bimbamboum Mk I",
+            "fr_CA": "Bimbamboum Mk I"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Curling Bomb",
@@ -1840,15 +2713,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "High",
           price: 9500,
           stats: {
-            "Range": 78,
-            "Charge Speed": 90,
-            "Mobility": 80
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 90,
+            "SHELDON_MOBILITY": 80
           },
           id: 13
         },
         {
           image: "./assets/img/weapons/Wst_Charger_Light_01.png",
           name: "Bamboozler 14 Mk II",
+        localizedName: {
+            "ja_JP": "14式竹筒銃・乙",
+            "en_US": "Bamboozler 14 Mk II",
+            "en_GB": "Bamboozler 14 Mk II",
+            "es_ES": "Bambufusil 14-II",
+            "es_MX": "Bamzuka 14-II",
+            "fr_FR": "Bimbamboum Mk II",
+            "fr_CA": "Bimbamboum Mk II"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Toxic Mist",
@@ -1859,9 +2741,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "High",
           price: 10500,
           stats: {
-            "Range": 78,
-            "Charge Speed": 90,
-            "Mobility": 80
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 90,
+            "SHELDON_MOBILITY": 80
           },
           id: 14
         }
@@ -1869,11 +2751,29 @@ angular.module('splatApp').weapons = function ($scope) {
     },
     {
       type: "Splatlings",
+            localizedName: {
+                "ja_JP": "スピナー",
+                "en_US": "Splatlings",
+                "en_GB": "Splatlings",
+                "es_ES": "Tintralladoras",
+                "es_MX": "Garabateadors",
+                "fr_FR": "Badigeonneur",
+                "fr_CA": "Badigeonneur"
+            },
       id: 8,
       weapons: [
         {
           image: "./assets/img/weapons/Wst_Spinner_Standard_00.png",
           name: "Heavy Splatling",
+        localizedName: {
+            "ja_JP": "バレルスピナー",
+            "en_US": "Heavy Splatling",
+            "en_GB": "Heavy Splatling",
+            "es_ES": "Tintralladora",
+            "es_MX": "Garabateador Pro",
+            "fr_FR": "Badigeonneur",
+            "fr_CA": "Badigeonneur"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Sprinkler",
           special: "Sting Ray",
@@ -1885,15 +2785,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 7800,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 0
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Standard_H.png",
           name: "Hero Splatling Replica",
+        localizedName: {
+            "ja_JP": "ヒーロースピナー レプリカ",
+            "en_US": "Hero Splatling Replica",
+            "en_GB": "Hero Splatling Replica",
+            "es_ES": "Hero Splatling Replica",
+            "es_MX": "Hero Splatling Replica",
+            "fr_FR": "Hero Splatling Replica",
+            "fr_CA": "Hero Splatling Replica"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Sprinkler",
           special: "Sting Ray",
@@ -1905,15 +2814,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 8600,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 1
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Standard_01.png",
           name: "Heavy Splatling Deco",
+        localizedName: {
+            "ja_JP": "バレルスピナーデコ",
+            "en_US": "Heavy Splatling Deco",
+            "en_GB": "Heavy Splatling Deco",
+            "es_ES": "Tintralladora DX",
+            "es_MX": "Garabateador Pro chic",
+            "fr_FR": "Badigeonneur chic",
+            "fr_CA": "Badigeonneur chic"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Splash Wall",
@@ -1926,15 +2844,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.64,
           price: 9600,
           stats: {
-            "Range": 78,
-            "Charge Speed": 38,
-            "Mobility": 50
+            "SHELDON_RANGE": 78,
+            "SHELDON_CHARGE_SPEED": 38,
+            "SHELDON_MOBILITY": 50
           },
           id: 2
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Quick_00.png",
           name: "Mini Splatling",
+        localizedName: {
+            "ja_JP": "スプラスピナー",
+            "en_US": "Mini Splatling",
+            "en_GB": "Mini Splatling",
+            "es_ES": "Tintralladora ligera",
+            "es_MX": "Garabateador",
+            "fr_FR": "Badigeonneur XS",
+            "fr_CA": "Badigeonneur XP"
+        },
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Burst Bomb",
           special: "Tenta Missiles",
@@ -1946,15 +2873,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.7,
           price: 12300,
           stats: {
-            "Range": 62,
-            "Charge Speed": 80,
-            "Mobility": 90
+            "SHELDON_RANGE": 62,
+            "SHELDON_CHARGE_SPEED": 80,
+            "SHELDON_MOBILITY": 90
           },
           id: 3
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Quick_01.png",
           name: "Zink Mini Splatling",
+        localizedName: {
+            "ja_JP": "スプラスピナーコラボ",
+            "en_US": "Zink Mini Splatling",
+            "en_GB": "Zink Mini Splatling",
+            "es_ES": "Tintralladora ligera B",
+            "es_MX": "Garabateador Tintaz",
+            "fr_FR": "Badigeonneur XS griffé",
+            "fr_CA": "Badigeonneur XP Leviathus"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Curling Bomb",
@@ -1967,15 +2903,24 @@ angular.module('splatApp').weapons = function ($scope) {
           baseSpeed: 0.7,
           price: 15400,
           stats: {
-            "Range": 62,
-            "Charge Speed": 80,
-            "Mobility": 90
+            "SHELDON_RANGE": 62,
+            "SHELDON_CHARGE_SPEED": 80,
+            "SHELDON_MOBILITY": 90
           },
           id: 4
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Hyper_00.png",
           name: "Hydra Splatling",
+        localizedName: {
+            "ja_JP": "ハイドラント",
+            "en_US": "Hydra Splatling",
+            "en_GB": "Hydra Splatling",
+            "es_ES": "Extintador",
+            "es_MX": "Garabateador HD",
+            "fr_FR": "Exteinteur",
+            "fr_CA": "Exteinteur"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Autobomb",
@@ -1986,15 +2931,24 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Low",
           price: 18500,
           stats: {
-            "Range": 85,
-            "Charge Speed": 10,
-            "Mobility": 20
+            "SHELDON_RANGE": 85,
+            "SHELDON_CHARGE_SPEED": 10,
+            "SHELDON_MOBILITY": 20
           },
           id: 5
         },
         {
           image: "./assets/img/weapons/Wst_Spinner_Hyper_01.png",
           name: "Custom Hydra Splatling",
+        localizedName: {
+            "ja_JP": "ハイドラントカスタム",
+            "en_US": "Custom Hydra Splatling",
+            "en_GB": "Custom Hydra Splatling",
+            "es_ES": "Extintador SP",
+            "es_MX": "Garabateador HD adaptado",
+            "fr_FR": "Exteinteur modifié",
+            "fr_CA": "Exteinteur modifié"
+        },
           unreleased: true,
           shotUnit: "SHOT_UNIT_CHARGER",
           sub: "Ink Mine",
@@ -2005,9 +2959,9 @@ angular.module('splatApp').weapons = function ($scope) {
           speedLevel: "Low",
           price: 33300,
           stats: {
-            "Range": 85,
-            "Charge Speed": 10,
-            "Mobility": 20
+            "SHELDON_RANGE": 85,
+            "SHELDON_CHARGE_SPEED": 10,
+            "SHELDON_MOBILITY": 20
           },
           id: 6
         }
