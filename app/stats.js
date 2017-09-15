@@ -8,7 +8,7 @@ function Stat(name, calc, max) {
 }
 
 //TODO: clean all this up
-angular.module('splatApp').stats = function ($scope, $translate) {
+angular.module('splatApp').stats = function ($scope) {
 $scope.stats = {
   //TODO: come up with a better way to convey speed?
   'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {

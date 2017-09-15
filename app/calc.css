@@ -7,7 +7,6 @@
 
 @font-face {
   font-family: "Splatfont";
-  /*src: url(../common/assets/fonts/Splatoon2.woff) format("woff")*/
   src: url(../common/assets/fonts/Splatfont2.woff) format("woff"),
   url(../common/assets/fonts/Splatfont2.woff);
 }

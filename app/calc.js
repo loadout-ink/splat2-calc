@@ -1,6 +1,6 @@
 angular
-  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'pascalprecht.translate'])
-  .controller('splatController', ['$scope', '$rootScope', '$timeout', '$translate', '$locale', function splatCtrl($scope, $rootScope, $timeout, $translate, $locale, $uibModal, $log) {
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
+  .controller('splatController', ['$scope', '$rootScope', '$timeout', '$locale', function splatCtrl($scope, $rootScope, $timeout, $translate, $locale, $uibModal, $log) {
     $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
     $scope.dummy = $scope.placeholder[0];
     angular.module('splatApp').skills($scope);
@@ -104,35 +104,9 @@ angular
       }
     }
 
-    $rootScope.currentLanguage = $translate.use();
-    if(typeof(Storage) !== 'undefined') {
-      if(localStorage.getItem('chosenLanguage') !== null) {
-         $rootScope.currentLanguage = localStorage.getItem('chosenLanguage');
-         $translate.use($rootScope.currentLanguage)
-      }
-    }
-
-
-    $scope.changeLanguage = function(langKey) {
-      $rootScope.currentLanguage = (langKey);
-      if(typeof(Storage) !== 'undefined') localStorage.setItem('chosenLanguage', langKey)
-      $translate.use(langKey);
-      $scope.refreshStats();
-    }
-
     $scope.languages = {
       'en': 'English',
       'ja': '日本語',
       'fr': 'Français'
     }
   }])
-
-  .config(['$translateProvider', function($translateProvider) {
-    // $translateProvider
-    //   .translations('en-us', en_strings)
-    //   .translations('ja-jp', jp_strings)
-    //   .translations('fr-fr', fr_strings)
-    //   .translations('es-es', es_strings)
-    //   .translations('it', it_strings)
-    //   .preferredLanguage('en-us')
-}]);
