@@ -5,12 +5,13 @@ gulp.task('dist', function() {
   gulp.src(['app/*','app/**'])
     .pipe(gulp.dest('dist/en_US'))
     .pipe(gulp.dest('dist/ja_JP'))
+    .pipe(gulp.dest('dist/fr_FR'))
   gulp.src(['common/*', 'common/**'])
     .pipe(gulp.dest('dist/common'))
 })
 
-gulp.task('translate', function() {
-  var translations = ['en_US', 'ja_JP'];
+gulp.task('localize', function() {
+  var translations = ['en_US', 'ja_JP', 'fr_FR'];
   var options = {
     localeDirectory: 'locale/',
     localeExt: '.json'
@@ -33,6 +34,6 @@ gulp.task('translate', function() {
           console.error(arguments);
         })
       )
-      .pipe(gulp.dest('dist/' + translation + '/data'));    
+      .pipe(gulp.dest('dist/' + translation + '/data'));
   });
 });
