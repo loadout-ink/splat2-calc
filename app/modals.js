@@ -8,7 +8,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card neonstripes" id="dialog">
     <div class="row cardheader">
-    {{'UI_WEAPON_PICKER' | translate}}
+    {{ UI_WEAPON_PICKER | translate }}
     </div>
     <div class="row">
     <div class="col-md-4">
@@ -18,15 +18,15 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-12 col-sm-6">
     <div class="selected-label">
-    <span>{{selectedWeapon.localizedName[$root.currentLanguage]}}</span></div>
+    <span>{{selectedWeapon.localizedName['{{ LANG_FULL | translate }}']}}</span></div>
     <div class="col-md-12">
     <div class="row">
     <div class="col-xs-4 nopadding">
-    <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{getSubByName(selectedWeapon.sub).localizedName[$root.currentLanguage]}}" tooltip-append-to-body="true"  class="subspeicon" />
+    <img ng-src="{{getSubIcon(selectedWeapon.sub)}}" uib-tooltip="{{getSubByName(selectedWeapon.sub).localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"  class="subspeicon" />
     </div>
     <div class="col-xs-8 nopadding">
     <div class="subspe-bubble">
-    <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{getSpecialByName(selectedWeapon.special).localizedName[$root.currentLanguage]}}" tooltip-append-to-body="true" class="subspeicon" />
+    <img ng-src="{{getSpecialIcon(selectedWeapon.special)}}" uib-tooltip="{{getSpecialByName(selectedWeapon.special).localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="subspeicon" />
     {{selectedWeapon.specialCost}}p
     </div>
     </div>
@@ -34,8 +34,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-12" id="minibar-container">
     <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
-    <div class="col-sm-6 col-xs-3 nopadding minibar-label">
-    {{stat | translate}}
+    <div class="col-sm-6 col-xs-3 nopadding minibar-label readable">
+    {{stat}}
     </div>
     <div class="col-sm-6 col-xs-9 nopadding">
     <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />
@@ -48,14 +48,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-8 picker-right">
     <div class="row">
     <div class="col-md-12">
-    <select class="form-control dropdown-toggle" data-ng-options="x.localizedName[$root.currentLanguage] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+    <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
     </div>
     </div>
     <div class="col-md-12">
     <div class="row">
     <div class="picker">
     <div class="gear-wrapper" ng-repeat="weapon in availableWeapons()">
-    <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{weapon.localizedName[$root.currentLanguage]}}" tooltip-append-to-body="true"/>
+    <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{::weapon.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"/>
     </div>
     </div>
     </div>
@@ -64,10 +64,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{'UI_OK' | translate}}</button>
+    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
     </div>
     <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">{{'UI_CANCEL' | translate}}</button>
+    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
     </div>
     </div>
     </div>
@@ -77,7 +77,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card {{::background}}" id="dialog">
     <div class="row cardheader">
-    {{'UI_GEAR_PICKER' | translate}}
+    {{ UI_GEAR_PICKER | translate }}
     </div>
     <div class="row">
     <div class="col-md-4">
@@ -87,10 +87,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-12 col-sm-6">
     <div class="selected-label" class="selected-label">
-    <span>{{selectedGear.localizedName[$root.currentLanguage]}}</span></div>
+    <span>{{selectedGear.localizedName['{{ LANG_FULL | translate }}']}}</span></div>
     <div id="gearpicker-stats">
-    <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName[$root.currentLanguage]}}<br>
-    <img ng-src="{{brands[selectedGear.brand].image}}"/> {{brands[selectedGear.brand].localizedName[$root.currentLanguage]}}<br>
+    <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName['{{ LANG_FULL | translate }}']}}<br>
+    <img ng-src="{{brands[selectedGear.brand].image}}"/> {{brands[selectedGear.brand].localizedName['{{ LANG_FULL | translate }}']}}<br>
     <div>
     <span ng-if="brands[selectedGear.brand].common">
     <span class="fa green fa-arrow-up"></span><img ng-src="{{getSkillByName(brands[selectedGear.brand].common).image}}"/>
@@ -103,7 +103,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="col-md-8 picker-right">
     <div class="picker">
-    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{item.localizedName[$root.currentLanguage]}}" tooltip-append-to-body="true" class="gear-wrapper">
+    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -112,7 +112,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     </div><!--
-    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{item.localizedName[$root.currentLanguage]}}" tooltip-append-to-body="true" class="gear-wrapper">
+    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -121,7 +121,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="annie">
-    <img ng-if="item.brand!='Grizzco'" src="assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{'UI_NONSTANDARD_SPLATNET' | translate}}"/>
+    <img ng-if="item.brand!='Grizzco'" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
     </span>
     </div><!--
     --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
@@ -132,7 +132,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <span class="main-icon">
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
-    <span class="not-possible" uib-tooltip="{{'UI_NOT_POSSIBLE' | translate}}" tooltip-append-to-body="true">
+    <span class="not-possible" uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true">
     <span class="fa fa-5x fa-ban " ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
     </span>
     </div>
@@ -142,22 +142,36 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{'UI_OK' | translate}}</button>
+    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
     </div>
     <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">{{'UI_CANCEL' | translate}}</button>
+    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
     </div>
     </div>
     </div>
     </div>`,
+    //TODO: split this into its own file
     whatsNew: `<div class="row">
     <div class="col-md-12">
     <div class="card basic purplestripes" id="dialog">
     <div class="row cardheader">
-    {{"UI_CHANGELOG" | translate}}
+    {{ UI_CHANGELOG | translate }}
     </div>
-    <div class="row basic-content" lang="en">
-    <div id="changelog">
+    <div class="row basic-content">
+    <div id="changelog"</div>
+    <h4>Version 1.1.0</h4>
+    <ul>
+    <li>loadout.ink is now available in English, Japanese, and French. Translation errors can be reported via GitHub or Twitter.</li>
+    </ul>
+    <h4>Version 1.0.7</h4>
+    <ul>
+    <li>Fixed Run Speed Up incorrectly increasing the roll speed of rollers.</li>
+    </ul>
+    <h4>Version 1.0.6</h4>
+    <ul>
+    <li>Updated Special Charge Up scaling to round instead of floor.</li>
+    <li>Updated Baller scaling to go from 400HP to 600HP.</li>
+    </ul>
     <h4>Version 1.0.5</h4>
     <ul>
     <li>Updated values for game version 1.3.0. Official patch notes can be found <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/27028/p/897" target="_blank">here</a>.</li>
@@ -192,7 +206,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>
+    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
     </div>
     </div>
     </div>
@@ -204,13 +218,13 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
-    {{"UI_ABOUT" | translate}}
+    {{ UI_ABOUT | translate }}
     </div>
-    <div class="row basic-content" id="about">
-    <p translate="{{'UI_ABOUT_CONTENT'|translate}}" ng-class="{'jp': ($root.currentLanguage == 'ja_JP')}"></p>
+    <div class="row basic-content readable" id="about">
+    <p>{{ UI_ABOUT_CONTENT |translate}}</p>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{'UI_CONFIRM_CASUAL' | translate}}</button>
+    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
     </div>
     </div>
     </div>

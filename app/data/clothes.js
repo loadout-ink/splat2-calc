@@ -1,7 +1,7 @@
 angular.module('splatApp').clothes = function($scope) {
   $scope.clothes = [
   {
-    image: "./assets/img/gear/Clt_FST001.png",
+    image: "../common/assets/img/gear/Clt_FST001.png",
     name: "Basic Tee",
     localizedName: {
       "ja_JP": "わかばイカＴ",
@@ -18,7 +18,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 0
   },
   {
-    image: "./assets/img/gear/Clt_TES000.png",
+    image: "../common/assets/img/gear/Clt_TES000.png",
     name: "White Tee",
     localizedName: {
       "ja_JP": "イカホワイト",
@@ -35,7 +35,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 1
   },
   {
-    image: "./assets/img/gear/Clt_TES001.png",
+    image: "../common/assets/img/gear/Clt_TES001.png",
     name: "Black Squideye",
     localizedName: {
       "ja_JP": "イカノメＴ ブラック",
@@ -52,7 +52,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 2
   },
   {
-    image: "./assets/img/gear/Clt_TES006.png",
+    image: "../common/assets/img/gear/Clt_TES006.png",
     name: "Black Tee",
     localizedName: {
       "ja_JP": "イカブラック",
@@ -69,7 +69,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 3
   },
   {
-    image: "./assets/img/gear/Clt_TES007.png",
+    image: "../common/assets/img/gear/Clt_TES007.png",
     name: "Sunny-Day Tee",
     localizedName: {
       "ja_JP": "サニーオレンジＴ",
@@ -86,7 +86,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 4
   },
   {
-    image: "./assets/img/gear/Clt_TES010.png",
+    image: "../common/assets/img/gear/Clt_TES010.png",
     name: "Fugu Tee",
     localizedName: {
       "ja_JP": "マルフグＴ",
@@ -103,7 +103,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 5
   },
   {
-    image: "./assets/img/gear/Clt_TES011.png",
+    image: "../common/assets/img/gear/Clt_TES011.png",
     name: "Mint Tee",
     localizedName: {
       "ja_JP": "ミントＴ",
@@ -120,7 +120,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 6
   },
   {
-    image: "./assets/img/gear/Clt_TES013.png",
+    image: "../common/assets/img/gear/Clt_TES013.png",
     name: "Red Vector Tee",
     localizedName: {
       "ja_JP": "ベクトルパターン レッド",
@@ -137,7 +137,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 7
   },
   {
-    image: "./assets/img/gear/Clt_TES015.png",
+    image: "../common/assets/img/gear/Clt_TES015.png",
     name: "Blue Peaks Tee",
     localizedName: {
       "ja_JP": "ヤマビコＴ ブルー",
@@ -154,7 +154,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 8
   },
   {
-    image: "./assets/img/gear/Clt_TES019.png",
+    image: "../common/assets/img/gear/Clt_TES019.png",
     name: "Sailor-Stripe Tee",
     localizedName: {
       "ja_JP": "マリンボーダー",
@@ -171,7 +171,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 9
   },
   {
-    image: "./assets/img/gear/Clt_TES020.png",
+    image: "../common/assets/img/gear/Clt_TES020.png",
     name: "White 8-Bit FishFry",
     localizedName: {
       "ja_JP": "ヤキフグ8bit ホワイト",
@@ -188,7 +188,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 10
   },
   {
-    image: "./assets/img/gear/Clt_TES022.png",
+    image: "../common/assets/img/gear/Clt_TES022.png",
     name: "White Anchor Tee",
     localizedName: {
       "ja_JP": "ガチホワイト",
@@ -205,7 +205,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 11
   },
   {
-    image: "./assets/img/gear/Clt_TES030.png",
+    image: "../common/assets/img/gear/Clt_TES030.png",
     name: "Black V-Neck Tee",
     localizedName: {
       "ja_JP": "イカブラックV",
@@ -222,7 +222,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 12
   },
   {
-    image: "./assets/img/gear/Clt_TES031.png",
+    image: "../common/assets/img/gear/Clt_TES031.png",
     name: "White Deca Logo Tee",
     localizedName: {
       "ja_JP": "デカロゴＴ シロ",
@@ -239,7 +239,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 13
   },
   {
-    image: "./assets/img/gear/Clt_TES032.png",
+    image: "../common/assets/img/gear/Clt_TES032.png",
     name: "Half-Sleeve Sweater",
     localizedName: {
       "ja_JP": "スウェットT ゴブ",
@@ -256,7 +256,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 14
   },
   {
-    image: "./assets/img/gear/Clt_TES033.png",
+    image: "../common/assets/img/gear/Clt_TES033.png",
     name: "King Jersey",
     localizedName: {
       "ja_JP": "キングHKシャツ",
@@ -273,7 +273,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 15
   },
   {
-    image: "./assets/img/gear/Clt_TES034.png",
+    image: "../common/assets/img/gear/Clt_TES034.png",
     name: "Gray 8-Bit FishFry",
     localizedName: {
       "ja_JP": "ヤキフグ8bit グレー",
@@ -290,7 +290,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 16
   },
   {
-    image: "./assets/img/gear/Clt_TES035.png",
+    image: "../common/assets/img/gear/Clt_TES035.png",
     name: "White V-Neck Tee",
     localizedName: {
       "ja_JP": "イカホワイトV",
@@ -307,7 +307,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 17
   },
   {
-    image: "./assets/img/gear/Clt_TES036.png",
+    image: "../common/assets/img/gear/Clt_TES036.png",
     name: "White Urchin Rock Tee",
     localizedName: {
       "ja_JP": "ガンガゼロックT シロ",
@@ -324,7 +324,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 18
   },
   {
-    image: "./assets/img/gear/Clt_TES037.png",
+    image: "../common/assets/img/gear/Clt_TES037.png",
     name: "Black Urchin Rock Tee",
     localizedName: {
       "ja_JP": "ガンガゼロックT クロ",
@@ -341,7 +341,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 19
   },
   {
-    image: "./assets/img/gear/Clt_TES038.png",
+    image: "../common/assets/img/gear/Clt_TES038.png",
     name: "Wet Floor Band Tee",
     localizedName: {
       "ja_JP": "バンドT WETFLOOR",
@@ -358,7 +358,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 20
   },
   {
-    image: "./assets/img/gear/Clt_TES039.png",
+    image: "../common/assets/img/gear/Clt_TES039.png",
     name: "Squid Squad Band Tee",
     localizedName: {
       "ja_JP": "バンドT SQUIDSQUAD",
@@ -375,7 +375,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 21
   },
   {
-    image: "./assets/img/gear/Clt_TES040.png",
+    image: "../common/assets/img/gear/Clt_TES040.png",
     name: "Navy Deca Logo Tee",
     localizedName: {
       "ja_JP": "デカロゴT ノーコン",
@@ -392,7 +392,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 22
   },
   {
-    image: "./assets/img/gear/Clt_TES041.png",
+    image: "../common/assets/img/gear/Clt_TES041.png",
     name: "Mister Shrug Tee",
     localizedName: {
       "ja_JP": "ミスターシュラッグT",
@@ -409,7 +409,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 23
   },
   {
-    image: "./assets/img/gear/Clt_TES042.png",
+    image: "../common/assets/img/gear/Clt_TES042.png",
     name: "Chirpy Chips Band Tee",
     localizedName: {
       "ja_JP": "バンドT ABXY",
@@ -426,7 +426,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 24
   },
   {
-    image: "./assets/img/gear/Clt_TES043.png",
+    image: "../common/assets/img/gear/Clt_TES043.png",
     name: "Hightide Era Band Tee",
     localizedName: {
       "ja_JP": "バンドT HIGHTIDEERA",
@@ -443,7 +443,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 25
   },
   {
-    image: "./assets/img/gear/Clt_TES044.png",
+    image: "../common/assets/img/gear/Clt_TES044.png",
     name: "Red V-Neck Limited Tee",
     localizedName: {
       "ja_JP": "イカレッドV コラボ",
@@ -460,7 +460,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 26
   },
   {
-    image: "./assets/img/gear/Clt_TES045.png",
+    image: "../common/assets/img/gear/Clt_TES045.png",
     name: "Green V-Neck Limited Tee",
     localizedName: {
       "ja_JP": "イカグリーンV コラボ",
@@ -477,7 +477,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 27
   },
   {
-    image: "./assets/img/gear/Clt_TEL001.png",
+    image: "../common/assets/img/gear/Clt_TEL001.png",
     name: "Black LS",
     localizedName: {
       "ja_JP": "バニーポップ ブラック",
@@ -494,7 +494,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 28
   },
   {
-    image: "./assets/img/gear/Clt_TEL002.png",
+    image: "../common/assets/img/gear/Clt_TEL002.png",
     name: "Purple Camo LS",
     localizedName: {
       "ja_JP": "カモフラパープル",
@@ -511,7 +511,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 29
   },
   {
-    image: "./assets/img/gear/Clt_TEL003.png",
+    image: "../common/assets/img/gear/Clt_TEL003.png",
     name: "Navy Striped LS",
     localizedName: {
       "ja_JP": "ボーダーネイビー",
@@ -528,7 +528,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 30
   },
   {
-    image: "./assets/img/gear/Clt_TEL004.png",
+    image: "../common/assets/img/gear/Clt_TEL004.png",
     name: "Zekko Baseball LS",
     localizedName: {
       "ja_JP": "エゾッコラグラン",
@@ -545,7 +545,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 31
   },
   {
-    image: "./assets/img/gear/Clt_TEL007.png",
+    image: "../common/assets/img/gear/Clt_TEL007.png",
     name: "White Baseball LS",
     localizedName: {
       "ja_JP": "ハラシロラグラン",
@@ -562,7 +562,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 32
   },
   {
-    image: "./assets/img/gear/Clt_TEL013.png",
+    image: "../common/assets/img/gear/Clt_TEL013.png",
     name: "Pink Easy-Stripe Shirt",
     localizedName: {
       "ja_JP": "ゆとりボーダー ピンク",
@@ -579,7 +579,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 33
   },
   {
-    image: "./assets/img/gear/Clt_TEL014.png",
+    image: "../common/assets/img/gear/Clt_TEL014.png",
     name: "Inkopolis Squaps Jersey",
     localizedName: {
       "ja_JP": "トビウォーズHKユニ",
@@ -596,7 +596,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 34
   },
   {
-    image: "./assets/img/gear/Clt_TEL015.png",
+    image: "../common/assets/img/gear/Clt_TEL015.png",
     name: "Annaki Drive Tee",
     localizedName: {
       "ja_JP": "アナアキロンT ドライブ",
@@ -613,7 +613,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 35
   },
   {
-    image: "./assets/img/gear/Clt_TEL016.png",
+    image: "../common/assets/img/gear/Clt_TEL016.png",
     name: "Lime Easy-Stripe Shirt",
     localizedName: {
       "ja_JP": "ゆとりボーダー ライム",
@@ -630,7 +630,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 36
   },
   {
-    image: "./assets/img/gear/Clt_TEL017.png",
+    image: "../common/assets/img/gear/Clt_TEL017.png",
     name: "Annaki Evolution Tee",
     localizedName: {
       "ja_JP": "アナアキロンT イボルブ",
@@ -647,7 +647,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 37
   },
   {
-    image: "./assets/img/gear/Clt_TLY001.png",
+    image: "../common/assets/img/gear/Clt_TLY001.png",
     name: "Yellow Layered LS",
     localizedName: {
       "ja_JP": "マスタードガサネ",
@@ -664,7 +664,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 38
   },
   {
-    image: "./assets/img/gear/Clt_TLY004.png",
+    image: "../common/assets/img/gear/Clt_TLY004.png",
     name: "Zink Layered LS",
     localizedName: {
       "ja_JP": "アイロニックレイヤード",
@@ -681,7 +681,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 39
   },
   {
-    image: "./assets/img/gear/Clt_TLY005.png",
+    image: "../common/assets/img/gear/Clt_TLY005.png",
     name: "Layered Anchor LS",
     localizedName: {
       "ja_JP": "ガチガサネ",
@@ -698,7 +698,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 40
   },
   {
-    image: "./assets/img/gear/Clt_TLY006.png",
+    image: "../common/assets/img/gear/Clt_TLY006.png",
     name: "Choco Layered LS",
     localizedName: {
       "ja_JP": "チョコガサネ",
@@ -715,7 +715,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 41
   },
   {
-    image: "./assets/img/gear/Clt_TLY008.png",
+    image: "../common/assets/img/gear/Clt_TLY008.png",
     name: "Layered Vector LS",
     localizedName: {
       "ja_JP": "ベクトルラインガサネ",
@@ -732,7 +732,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 42
   },
   {
-    image: "./assets/img/gear/Clt_TLY009.png",
+    image: "../common/assets/img/gear/Clt_TLY009.png",
     name: "Green Tee",
     localizedName: {
       "ja_JP": "グリーンＴ",
@@ -749,7 +749,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 43
   },
   {
-    image: "./assets/img/gear/Clt_TLY010.png",
+    image: "../common/assets/img/gear/Clt_TLY010.png",
     name: "Red Tentatek Tee",
     localizedName: {
       "ja_JP": "アロメテックT レッド",
@@ -766,7 +766,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 44
   },
   {
-    image: "./assets/img/gear/Clt_TLY011.png",
+    image: "../common/assets/img/gear/Clt_TLY011.png",
     name: "Blue Tentatek Tee",
     localizedName: {
       "ja_JP": "アロメテックT ブルー",
@@ -783,7 +783,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 45
   },
   {
-    image: "./assets/img/gear/Clt_PLO000.png",
+    image: "../common/assets/img/gear/Clt_PLO000.png",
     name: "Shrimp-Pink Polo",
     localizedName: {
       "ja_JP": "さくらエビポロ",
@@ -800,7 +800,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 46
   },
   {
-    image: "./assets/img/gear/Clt_PLO006.png",
+    image: "../common/assets/img/gear/Clt_PLO006.png",
     name: "Cycle King Jersey",
     localizedName: {
       "ja_JP": "チャリキングジャージ",
@@ -817,7 +817,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 47
   },
   {
-    image: "./assets/img/gear/Clt_PLO007.png",
+    image: "../common/assets/img/gear/Clt_PLO007.png",
     name: "Slipstream United",
     localizedName: {
       "ja_JP": "FCカラスミ",
@@ -834,7 +834,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 48
   },
   {
-    image: "./assets/img/gear/Clt_PLO008.png",
+    image: "../common/assets/img/gear/Clt_PLO008.png",
     name: "FC Albacore",
     localizedName: {
       "ja_JP": "アオサドーレ",
@@ -851,7 +851,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 49
   },
   {
-    image: "./assets/img/gear/Clt_JKT002.png",
+    image: "../common/assets/img/gear/Clt_JKT002.png",
     name: "Berry Ski Jacket",
     localizedName: {
       "ja_JP": "マウンテンベリー",
@@ -868,7 +868,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 50
   },
   {
-    image: "./assets/img/gear/Clt_JKT003.png",
+    image: "../common/assets/img/gear/Clt_JKT003.png",
     name: "Varsity Jacket",
     localizedName: {
       "ja_JP": "スタジャンロゴマシ",
@@ -885,7 +885,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 51
   },
   {
-    image: "./assets/img/gear/Clt_JKT006.png",
+    image: "../common/assets/img/gear/Clt_JKT006.png",
     name: "Black Inky Rider",
     localizedName: {
       "ja_JP": "イカライダーBLACK",
@@ -902,7 +902,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 52
   },
   {
-    image: "./assets/img/gear/Clt_JKT007.png",
+    image: "../common/assets/img/gear/Clt_JKT007.png",
     name: "White Inky Rider",
     localizedName: {
       "ja_JP": "イカライダーWHITE",
@@ -919,7 +919,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 53
   },
   {
-    image: "./assets/img/gear/Clt_JKT012.png",
+    image: "../common/assets/img/gear/Clt_JKT012.png",
     name: "Blue Sailor Suit",
     localizedName: {
       "ja_JP": "イカセーラー ブルー",
@@ -936,7 +936,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 54
   },
   {
-    image: "./assets/img/gear/Clt_JKT014.png",
+    image: "../common/assets/img/gear/Clt_JKT014.png",
     name: "Squid Satin Jacket",
     localizedName: {
       "ja_JP": "イカスカジャン",
@@ -953,7 +953,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 55
   },
   {
-    image: "./assets/img/gear/Clt_JKT017.png",
+    image: "../common/assets/img/gear/Clt_JKT017.png",
     name: "Chilly Mountain Coat",
     localizedName: {
       "ja_JP": "マウンテンフローズン",
@@ -970,7 +970,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 56
   },
   {
-    image: "./assets/img/gear/Clt_JKT018.png",
+    image: "../common/assets/img/gear/Clt_JKT018.png",
     name: "Takoroka Windcrusher",
     localizedName: {
       "ja_JP": "ヤコナイロンレトロ",
@@ -987,7 +987,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 57
   },
   {
-    image: "./assets/img/gear/Clt_JKT019.png",
+    image: "../common/assets/img/gear/Clt_JKT019.png",
     name: "Matcha Down Jacket",
     localizedName: {
       "ja_JP": "マッチャ ライトダウン",
@@ -1004,7 +1004,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 58
   },
   {
-    image: "./assets/img/gear/Clt_JKT020.png",
+    image: "../common/assets/img/gear/Clt_JKT020.png",
     name: "FA-01 Jacket",
     localizedName: {
       "ja_JP": "FA-01オモテ",
@@ -1021,7 +1021,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 59
   },
   {
-    image: "./assets/img/gear/Clt_JKT021.png",
+    image: "../common/assets/img/gear/Clt_JKT021.png",
     name: "FA-01 Reversed",
     localizedName: {
       "ja_JP": "FA-01ウラ",
@@ -1038,7 +1038,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 60
   },
   {
-    image: "./assets/img/gear/Clt_JKT022.png",
+    image: "../common/assets/img/gear/Clt_JKT022.png",
     name: "Pullover Coat",
     localizedName: {
       "ja_JP": "プルオーバーコート",
@@ -1055,7 +1055,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 61
   },
   {
-    image: "./assets/img/gear/Clt_JKT024.png",
+    image: "../common/assets/img/gear/Clt_JKT024.png",
     name: "Birded Corduroy Jacket",
     localizedName: {
       "ja_JP": "トリスカベッチン",
@@ -1072,7 +1072,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 62
   },
   {
-    image: "./assets/img/gear/Clt_JKT026.png",
+    image: "../common/assets/img/gear/Clt_JKT026.png",
     name: "Zekko Redleaf Coat",
     localizedName: {
       "ja_JP": "エゾッココーチ アカネ",
@@ -1089,7 +1089,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 63
   },
   {
-    image: "./assets/img/gear/Clt_JKT027.png",
+    image: "../common/assets/img/gear/Clt_JKT027.png",
     name: "Eggplant Mountain Coat",
     localizedName: {
       "ja_JP": "マウンテンノリタマゴ",
@@ -1106,7 +1106,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 64
   },
   {
-    image: "./assets/img/gear/Clt_JKT028.png",
+    image: "../common/assets/img/gear/Clt_JKT028.png",
     name: "Zekko Jade Coat",
     localizedName: {
       "ja_JP": "エゾッココーチ モエギ",
@@ -1123,7 +1123,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 65
   },
   {
-    image: "./assets/img/gear/Clt_JKT030.png",
+    image: "../common/assets/img/gear/Clt_JKT030.png",
     name: "Brown FA-11 Bomber",
     localizedName: {
       "ja_JP": "FA-11オモテ カスタム",
@@ -1140,7 +1140,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 66
   },
   {
-    image: "./assets/img/gear/Clt_JKT031.png",
+    image: "../common/assets/img/gear/Clt_JKT031.png",
     name: "Gray FA-11 Bomber",
     localizedName: {
       "ja_JP": "FA-11ウラ カスタム",
@@ -1157,7 +1157,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 67
   },
   {
-    image: "./assets/img/gear/Clt_TNK001.png",
+    image: "../common/assets/img/gear/Clt_TNK001.png",
     name: "B-ball Jersey (Away)",
     localizedName: {
       "ja_JP": "バスケジャージ アウェイ",
@@ -1174,7 +1174,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 68
   },
   {
-    image: "./assets/img/gear/Clt_TNK003.png",
+    image: "../common/assets/img/gear/Clt_TNK003.png",
     name: "White King Tank",
     localizedName: {
       "ja_JP": "キングタンク ホワイト",
@@ -1191,7 +1191,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 69
   },
   {
-    image: "./assets/img/gear/Clt_TNK004.png",
+    image: "../common/assets/img/gear/Clt_TNK004.png",
     name: "Slash King Tank",
     localizedName: {
       "ja_JP": "キングタンク スラッシュ",
@@ -1208,7 +1208,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 70
   },
   {
-    image: "./assets/img/gear/Clt_TNK005.png",
+    image: "../common/assets/img/gear/Clt_TNK005.png",
     name: "Navy King Tank",
     localizedName: {
       "ja_JP": "キングタンク マリン",
@@ -1225,7 +1225,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 71
   },
   {
-    image: "./assets/img/gear/Clt_SWT002.png",
+    image: "../common/assets/img/gear/Clt_SWT002.png",
     name: "Retro Sweat",
     localizedName: {
       "ja_JP": "レトロジャッジ",
@@ -1242,7 +1242,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 72
   },
   {
-    image: "./assets/img/gear/Clt_SWT005.png",
+    image: "../common/assets/img/gear/Clt_SWT005.png",
     name: "Reel Sweat",
     localizedName: {
       "ja_JP": "リールロールスウェット",
@@ -1259,7 +1259,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 73
   },
   {
-    image: "./assets/img/gear/Clt_SWT006.png",
+    image: "../common/assets/img/gear/Clt_SWT006.png",
     name: "Anchor Sweat",
     localizedName: {
       "ja_JP": "イカリスウェット",
@@ -1276,7 +1276,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 74
   },
   {
-    image: "./assets/img/gear/Clt_SWT007.png",
+    image: "../common/assets/img/gear/Clt_SWT007.png",
     name: "Negative Longcuff Sweater",
     localizedName: {
       "ja_JP": "ドロップスウェット ネガ",
@@ -1293,7 +1293,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 75
   },
   {
-    image: "./assets/img/gear/Clt_SWT008.png",
+    image: "../common/assets/img/gear/Clt_SWT008.png",
     name: "Short Knit Layers",
     localizedName: {
       "ja_JP": "ショートニットカサネ",
@@ -1310,7 +1310,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 76
   },
   {
-    image: "./assets/img/gear/Clt_SWT009.png",
+    image: "../common/assets/img/gear/Clt_SWT009.png",
     name: "Positive Longcuff Sweater",
     localizedName: {
       "ja_JP": "ドロップスウェット ポジ",
@@ -1327,7 +1327,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 77
   },
   {
-    image: "./assets/img/gear/Clt_SHT002.png",
+    image: "../common/assets/img/gear/Clt_SHT002.png",
     name: "Green-Check Shirt",
     localizedName: {
       "ja_JP": "ギンガムチェック ミドリ",
@@ -1344,7 +1344,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 78
   },
   {
-    image: "./assets/img/gear/Clt_SHT004.png",
+    image: "../common/assets/img/gear/Clt_SHT004.png",
     name: "Urchins Jersey",
     localizedName: {
       "ja_JP": "ウーニーズBBシャツ",
@@ -1361,7 +1361,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 79
   },
   {
-    image: "./assets/img/gear/Clt_SHT007.png",
+    image: "../common/assets/img/gear/Clt_SHT007.png",
     name: "Baby-Jelly Shirt",
     localizedName: {
       "ja_JP": "ベイビークラゲシャツ",
@@ -1378,7 +1378,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 80
   },
   {
-    image: "./assets/img/gear/Clt_SHT010.png",
+    image: "../common/assets/img/gear/Clt_SHT010.png",
     name: "Vintage Check Shirt",
     localizedName: {
       "ja_JP": "ヴィンテージチェック",
@@ -1395,7 +1395,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 81
   },
   {
-    image: "./assets/img/gear/Clt_SHT012.png",
+    image: "../common/assets/img/gear/Clt_SHT012.png",
     name: "Logo Aloha Shirt",
     localizedName: {
       "ja_JP": "ロゴマシマシアロハ",
@@ -1412,7 +1412,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 82
   },
   {
-    image: "./assets/img/gear/Clt_SHT015.png",
+    image: "../common/assets/img/gear/Clt_SHT015.png",
     name: "Shirt & Tie",
     localizedName: {
       "ja_JP": "タイシャツ",
@@ -1429,7 +1429,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 83
   },
   {
-    image: "./assets/img/gear/Clt_SHT017.png",
+    image: "../common/assets/img/gear/Clt_SHT017.png",
     name: "Hula Punk Shirt",
     localizedName: {
       "ja_JP": "ピーターパンクシャツ",
@@ -1446,7 +1446,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 84
   },
   {
-    image: "./assets/img/gear/Clt_SHT018.png",
+    image: "../common/assets/img/gear/Clt_SHT018.png",
     name: "Octobowler Shirt",
     localizedName: {
       "ja_JP": "タコボウラーシャツ",
@@ -1463,7 +1463,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 85
   },
   {
-    image: "./assets/img/gear/Clt_SHT019.png",
+    image: "../common/assets/img/gear/Clt_SHT019.png",
     name: "Inkfall Shirt",
     localizedName: {
       "ja_JP": "スミカケシャツ",
@@ -1480,7 +1480,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 86
   },
   {
-    image: "./assets/img/gear/Clt_SHT020.png",
+    image: "../common/assets/img/gear/Clt_SHT020.png",
     name: "Crimson Parashooter",
     localizedName: {
       "ja_JP": "パラシューター ザクロ",
@@ -1497,7 +1497,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 87
   },
   {
-    image: "./assets/img/gear/Clt_SHT021.png",
+    image: "../common/assets/img/gear/Clt_SHT021.png",
     name: "Baby-Jelly Shirt & Tie",
     localizedName: {
       "ja_JP": "タイツキベイビークラゲ",
@@ -1514,7 +1514,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 88
   },
   {
-    image: "./assets/img/gear/Clt_SHT022.png",
+    image: "../common/assets/img/gear/Clt_SHT022.png",
     name: "Prune Parashooter",
     localizedName: {
       "ja_JP": "パラシューター プルーン",
@@ -1531,7 +1531,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 89
   },
   {
-    image: "./assets/img/gear/Clt_VST002.png",
+    image: "../common/assets/img/gear/Clt_VST002.png",
     name: "Dark Urban Vest",
     localizedName: {
       "ja_JP": "アーバンベスト ナイト",
@@ -1548,7 +1548,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 90
   },
   {
-    image: "./assets/img/gear/Clt_VST003.png",
+    image: "../common/assets/img/gear/Clt_VST003.png",
     name: "Yellow Urban Vest",
     localizedName: {
       "ja_JP": "アーバンベスト イエロー",
@@ -1565,7 +1565,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 91
   },
   {
-    image: "./assets/img/gear/Clt_PRK000.png",
+    image: "../common/assets/img/gear/Clt_PRK000.png",
     name: "Camo Zip Hoodie",
     localizedName: {
       "ja_JP": "ジップアップ カモ",
@@ -1582,7 +1582,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 92
   },
   {
-    image: "./assets/img/gear/Clt_PRK002.png",
+    image: "../common/assets/img/gear/Clt_PRK002.png",
     name: "Zekko Hoodie",
     localizedName: {
       "ja_JP": "エゾッコパーカー アズキ",
@@ -1599,7 +1599,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 93
   },
   {
-    image: "./assets/img/gear/Clt_PRK004.png",
+    image: "../common/assets/img/gear/Clt_PRK004.png",
     name: "Shirt with Blue Hoodie",
     localizedName: {
       "ja_JP": "シャツノゾキブルー",
@@ -1616,7 +1616,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 94
   },
   {
-    image: "./assets/img/gear/Clt_PRK005.png",
+    image: "../common/assets/img/gear/Clt_PRK005.png",
     name: "Grape Hoodie",
     localizedName: {
       "ja_JP": "キングパーカー グレープ",
@@ -1633,7 +1633,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 95
   },
   {
-    image: "./assets/img/gear/Clt_PRK006.png",
+    image: "../common/assets/img/gear/Clt_PRK006.png",
     name: "Gray Hoodie",
     localizedName: {
       "ja_JP": "ホタパーカー グレー",
@@ -1650,7 +1650,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 96
   },
   {
-    image: "./assets/img/gear/Clt_COP100.png",
+    image: "../common/assets/img/gear/Clt_COP100.png",
     name: "Squiddor Polo",
     localizedName: {
       "ja_JP": "イカテンくんポロ",
@@ -1667,7 +1667,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 97
   },
   {
-    image: "./assets/img/gear/Clt_COP101.png",
+    image: "../common/assets/img/gear/Clt_COP101.png",
     name: "Anchor Life Vest",
     localizedName: {
       "ja_JP": "アンカーベスト",
@@ -1684,7 +1684,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 98
   },
   {
-    image: "./assets/img/gear/Clt_COP102.png",
+    image: "../common/assets/img/gear/Clt_COP102.png",
     name: "Juice Parka",
     localizedName: {
       "ja_JP": "フューエルブルゾン",
@@ -1701,7 +1701,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 99
   },
   {
-    image: "./assets/img/gear/Clt_AMB000.png",
+    image: "../common/assets/img/gear/Clt_AMB000.png",
     name: "School Uniform",
     localizedName: {
       "ja_JP": "スクールブレザー",
@@ -1718,7 +1718,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 100
   },
   {
-    image: "./assets/img/gear/Clt_AMB001.png",
+    image: "../common/assets/img/gear/Clt_AMB001.png",
     name: "Samurai Jacket",
     localizedName: {
       "ja_JP": "サムライジャケット",
@@ -1735,7 +1735,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 101
   },
   {
-    image: "./assets/img/gear/Clt_AMB002.png",
+    image: "../common/assets/img/gear/Clt_AMB002.png",
     name: "Power Armor",
     localizedName: {
       "ja_JP": "パワードスーツ",
@@ -1752,7 +1752,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 102
   },
   {
-    image: "./assets/img/gear/Clt_AMB003.png",
+    image: "../common/assets/img/gear/Clt_AMB003.png",
     name: "School Cardigan",
     localizedName: {
       "ja_JP": "スクールカーデ",
@@ -1769,7 +1769,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 103
   },
   {
-    image: "./assets/img/gear/Clt_AMB004.png",
+    image: "../common/assets/img/gear/Clt_AMB004.png",
     name: "Squinja Suit",
     localizedName: {
       "ja_JP": "ニンジャスーツ",
@@ -1786,7 +1786,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 104
   },
   {
-    image: "./assets/img/gear/Clt_AMB005.png",
+    image: "../common/assets/img/gear/Clt_AMB005.png",
     name: "Power Armor Mk I",
     localizedName: {
       "ja_JP": "パワードスーツ オリジン",
@@ -1803,7 +1803,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 105
   },
   {
-    image: "./assets/img/gear/Clt_MSN000.png",
+    image: "../common/assets/img/gear/Clt_MSN000.png",
     name: "Hero Jacket Replica",
     localizedName: {
       "ja_JP": "フェスＴ",
@@ -1820,7 +1820,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 106
   },
   {
-    image: "./assets/img/gear/Clt_MSN004.png",
+    image: "../common/assets/img/gear/Clt_MSN004.png",
     name: "Armor Jacket Replica",
     localizedName: {
       "ja_JP": "ヒーロージャケット レプリカ",
@@ -1837,7 +1837,7 @@ angular.module('splatApp').clothes = function($scope) {
     id: 107
   },
   {
-    image: "./assets/img/gear/Clt_MSN101.png",
+    image: "../common/assets/img/gear/Clt_MSN101.png",
     name: "Hero Hoodie Replica",
     localizedName: {
       "ja_JP": "アーマージャケット レプリカ",

@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Paintball";
-  src: url(./assets/fonts/ProjectPaintball.woff) format("woff"),
-  url(./assets/fonts/ProjectPaintball.ttf) format("ttf");
+  font-family: "Splat1";
+  src: url(../common/assets/fonts/Splatfont.woff) format("woff"),
+  url(../common/assets/fonts/Splatfont.ttf)
 }
 
 @font-face {
-  font-family: "Splatfont";
-  src: url(./assets/fonts/Splatfont2.woff) format("woff"),
-  url(./assets/fonts/Splatfont2.woff);
+  font-family: "Splat2";
+  src: url(../common/assets/fonts/Splatfont2.woff) format("woff"),
+  url(../common/assets/fonts/Splatfont2.ttf)
 }
 
 html {
@@ -19,7 +19,7 @@ html {
 body {
   margin-bottom: 50px;
   background: #222 !important;
-  background-image: url("assets/img/ui/bg-primary.jpg") !important;
+  background-image: url("../common/assets/img/ui/bg-primary.jpg") !important;
 }
 
 body:not(.show-focus-outlines) button:focus,
@@ -30,6 +30,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .nopadding {
   padding: 0px !important;
 }
+
 
 .neonstripes { background: repeating-linear-gradient( 45deg, #dbe826, #dbe826 20px, #c4d412 20px, #c4d412 40px ); }
 
@@ -44,7 +45,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .purplestripes { background: repeating-linear-gradient( 45deg, #842cd6, #842cd6 20px, #6b01bb 20px, #6b01bb 40px ); }
 
 #splat-header {
-  background-image:  url("assets/img/ui/headerbg.png"), url("assets/img/ui/noise.png"), repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ) !important;
+  background-image:  url("../common/assets/img/ui/headerbg.png"), url("../common/assets/img/ui/noise.png"), repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ) !important;
   background-repeat: repeat-x;
   box-shadow: 0 2px 10px 2px #000;
   z-index:1 !important ;
@@ -62,28 +63,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #language-button {
   background: rgba(0,0,0,0);
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 12pt;
   color: #fff;
   border: 0;
   padding: 10px;
 }
 
-.jp {
-  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
-  text-align: justify !important;
-  text-justify: inter-ideograph !important;
-}
-
-.statlabel.jp {
-  font-size: 10pt;
-}
-
-.cardheader.jp {
-  font-family: Splatfont !important;
-  text-align: center !important;
-  font-size: 14pt;
-}
 
 #splat-header img {
   height:130px;
@@ -124,7 +110,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #abilitybox {
   background: #555;
-  background-image: url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png"), url("assets/img/ui/zig-zag.png");
+  background-image: url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png");
   background-size: 80px 80px;
   padding-top:15px;
   text-align:center;
@@ -157,9 +143,9 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #statbox {
   margin-top: 9px;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   background: #c9c9c9;
-  background-image: url("assets/img/ui/bg-dots.png"), url("assets/img/ui/bg-spots.png");
+  background-image: url("../common/assets/img/ui/bg-dots.png"), url("../common/assets/img/ui/bg-spots.png");
   background-size: 50px 50px, 300px 300px;
 }
 
@@ -173,9 +159,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 #statbox h3 {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   margin: 4px !important;
   margin-left:12px !important;
+}
+
+.menuitem a {
+  cursor:pointer;
 }
 
 .gear-wrapper {
@@ -242,7 +232,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: #ffffee;
-  background-image: url('assets/img/ui/bg-spots.png');
+  background-image: url('../common/assets/img/ui/bg-spots.png');
   background-size: 80px auto;
 }
 
@@ -252,7 +242,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .ability-wrapper {
-  margin-top: -10px;
+  position:relative;
+  top: -10px;
   display:flex;
   justify-content: space-around;
   padding-left: 10px;
@@ -290,7 +281,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .basic-content {
   color: #fff;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 12pt;
   padding-left: 20px;
   padding-right: 20px;
@@ -317,7 +308,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .statlabel {
   background: rgba(0,0,0,0.6);
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   display:block;
   border-radius:10px;
   padding: 5px;
@@ -337,12 +328,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   border-radius: 5px;
   text-align:left;
   font-size:12pt;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color:#fff;
 }
 
 .statbar {
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   color:black;
   margin:0px !important;
   background: #000 !important;
@@ -380,8 +371,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   border: 3px solid #fff;
 }
 
-.splatfont-white {
-  font-family: "Splatfont";
+.Splat2-white {
+  font-family: "Splat2", sans-serif;
   font-size: 16pt;
   color: #fff;
 }
@@ -408,7 +399,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .btn {
   background: #000;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color: #fff;
   min-width: 60px;
 }
@@ -458,13 +449,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-top:10px;
   height: 105px;
   text-align: center;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 14pt;
   color: #fff;
 }
 
 #dialog {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   border: none;
   padding-left: 10px;
   padding-right: 10px;
@@ -496,7 +487,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding:0px;
   border-radius: 5px;
   font-size:10pt;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color:#fff;
 }
 
@@ -522,7 +513,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   height:260px;
   overflow-y:scroll;
   background: rgba(0,0,0,0.2);
-  background-image: url("assets/img/ui/bg-dots.png");
+  background-image: url("../common/assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
   background-attachment:local;
   border-bottom: none;
@@ -536,7 +527,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .minibar-label {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   text-align:right;
   vertical-align: middle;
   color:#fff;
@@ -555,13 +546,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .cardheader {
   height: 36px;
-  padding-top:4px;
+  padding-top:5px;
   padding-bottom:2px;
   background: rgba(20,20,20,0.8);
-  background-image: url("assets/img/ui/bg-dots.png");
+  background-image: url("../common/assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
-  font-family: "Paintball";
-  font-size: 16pt;
+  font-family: "Splat1", sans-serif;
+  font-size: 14pt;
   text-align:center;
   color: #fff;
   position: relative;
@@ -572,6 +563,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size: 14pt;
   right: 20px;
   top: 8px;
+}
+
+#weapon .cardheader:lang(ja) {
+  font-weight: 50;
 }
 
 .panel-stats {
@@ -599,12 +594,21 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background: repeating-linear-gradient( 45deg, #8ffe19, #8ffe19 30px, #5ade09 30px, #5ade09 60px );
 }
 
+.readable:lang(ja) {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Yu Gothic, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; !important;
+}
+
+#about:lang(ja) {
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
+}
+
 .footer {
   position:absolute;
   bottom: 0;
   width: 100%;
   height: 50px;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   color: #999;
   font-size: 12pt;
   text-align: center;

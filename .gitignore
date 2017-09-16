@@ -1,2 +1,6 @@
 node_modules/
 .DS_Store
+dist/
+gulpfile_dist.js
+redirect.html
+splash.css

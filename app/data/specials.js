@@ -8,7 +8,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Lanzamisiles",
         fr_FR: "Multi-missile"
       },
-      image: "./assets/img/subspe/Wsp_SuperMissile.png",
+      image: "../common/assets/img/subspe/Wsp_SuperMissile.png",
       damage: {
         "Direct": 150,
         "Near": 50,
@@ -23,7 +23,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Baller",
         fr_FR: "Chromo-sphère"
       },
-      image: "./assets/img/subspe/Wsp_AquaBall.png",
+      image: "../common/assets/img/subspe/Wsp_AquaBall.png",
       damage: {
         "Direct": 50,
         "Near": 180,
@@ -38,7 +38,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Salto explosivo",
         fr_FR: "Choc chromatique"
       },
-      image: "./assets/img/subspe/Wsp_SuperLanding.png",
+      image: "../common/assets/img/subspe/Wsp_SuperLanding.png",
       damage: {
         "Direct": 180,
         "Near": 70,
@@ -53,7 +53,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bubble Blower",
         fr_FR: "Lance-bulles"
       },
-      image: "./assets/img/subspe/Wsp_SuperBubble.png"
+      image: "../common/assets/img/subspe/Wsp_SuperBubble.png"
     },
     {
       name: "Ink Armor",
@@ -63,7 +63,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Ink Armor",
         fr_FR: "Armure d'encre"
       },
-      image: "./assets/img/subspe/Wsp_SuperArmor.png",
+      image: "../common/assets/img/subspe/Wsp_SuperArmor.png",
       duration: 8
     },
     {
@@ -74,7 +74,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Propulsor",
         fr_FR: "Chromo-jet"
       },
-      image: "./assets/img/subspe/Wsp_Jetpack.png",
+      image: "../common/assets/img/subspe/Wsp_Jetpack.png",
       duration: 8,
       damage: {
         "Direct": 120,
@@ -90,7 +90,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Rayo tintódico",
         fr_FR: "Pigmalance"
       },
-      image: "./assets/img/subspe/Wsp_WaterCutter.png",
+      image: "../common/assets/img/subspe/Wsp_WaterCutter.png",
       duration: 8
     },
     {
@@ -101,7 +101,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Atormentador",
         fr_FR: "Pluie d'encre"
       },
-      image: "./assets/img/subspe/Wsp_RainCloud.png",
+      image: "../common/assets/img/subspe/Wsp_RainCloud.png",
       duration: 8
     },
     {
@@ -112,7 +112,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bombardeos",
         fr_FR: "Lanceur de bombes"
       },
-      image: "./assets/img/subspe/Wsp_LauncherSuction.png",
+      image: "../common/assets/img/subspe/Wsp_LauncherSuction.png",
       duration: 6
     },
     {
@@ -123,7 +123,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bombardeos",
         fr_FR: "Lanceur de bombes"
       },
-      image: "./assets/img/subspe/Wsp_LauncherRobo.png",
+      image: "../common/assets/img/subspe/Wsp_LauncherRobo.png",
       duration: 6
     },
     {
@@ -134,7 +134,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bombardeos",
         fr_FR: "Lanceur de bombes"
       },
-      image: "./assets/img/subspe/Wsp_LauncherSplash.png",
+      image: "../common/assets/img/subspe/Wsp_LauncherSplash.png",
       duration: 6
     },
     {
@@ -145,7 +145,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bombardeos",
         fr_FR: "Lanceur de bombes"
       },
-      image: "./assets/img/subspe/Wsp_LauncherQuick.png",
+      image: "../common/assets/img/subspe/Wsp_LauncherQuick.png",
       duration: 6
     },
     {
@@ -156,7 +156,7 @@ angular.module('splatApp').specials = function ($scope) {
         es_ES: "Bombardeos",
         fr_FR: "Lanceur de bombes"
       },
-      image: "./assets/img/subspe/Wsp_LauncherCurling.png",
+      image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",
       duration: 6
     }
   ]
