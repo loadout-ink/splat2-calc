@@ -1,14 +1,13 @@
 @font-face {
-  font-family: "Paintball";
-  src: url(../common/assets/fonts/Splatfont.ttf)
-  /*src: url(../common/assets/fonts/ProjectPaintball.woff) format("woff"),
-  url(../common/assets/fonts/ProjectPaintball.ttf) format("ttf");*/
+  font-family: "Splat1";
+  src: url(../common/assets/fonts/Splatfont.woff) format("woff"),
+  url(../common/assets/fonts/Splatfont.ttf)
 }
 
 @font-face {
-  font-family: "Splatfont";
+  font-family: "Splat2";
   src: url(../common/assets/fonts/Splatfont2.woff) format("woff"),
-  url(../common/assets/fonts/Splatfont2.woff);
+  url(../common/assets/fonts/Splatfont2.ttf)
 }
 
 html {
@@ -64,7 +63,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #language-button {
   background: rgba(0,0,0,0);
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 12pt;
   color: #fff;
   border: 0;
@@ -144,7 +143,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #statbox {
   margin-top: 9px;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   background: #c9c9c9;
   background-image: url("../common/assets/img/ui/bg-dots.png"), url("../common/assets/img/ui/bg-spots.png");
   background-size: 50px 50px, 300px 300px;
@@ -160,7 +159,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 #statbox h3 {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   margin: 4px !important;
   margin-left:12px !important;
 }
@@ -278,7 +277,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .basic-content {
   color: #fff;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 12pt;
   padding-left: 20px;
   padding-right: 20px;
@@ -305,7 +304,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .statlabel {
   background: rgba(0,0,0,0.6);
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   display:block;
   border-radius:10px;
   padding: 5px;
@@ -325,12 +324,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   border-radius: 5px;
   text-align:left;
   font-size:12pt;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color:#fff;
 }
 
 .statbar {
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   color:black;
   margin:0px !important;
   background: #000 !important;
@@ -368,8 +367,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   border: 3px solid #fff;
 }
 
-.splatfont-white {
-  font-family: "Splatfont";
+.Splat2-white {
+  font-family: "Splat2", sans-serif;
   font-size: 16pt;
   color: #fff;
 }
@@ -396,7 +395,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .btn {
   background: #000;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color: #fff;
   min-width: 60px;
 }
@@ -446,13 +445,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-top:10px;
   height: 105px;
   text-align: center;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   font-size: 14pt;
   color: #fff;
 }
 
 #dialog {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   border: none;
   padding-left: 10px;
   padding-right: 10px;
@@ -484,7 +483,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding:0px;
   border-radius: 5px;
   font-size:10pt;
-  font-family:"Splatfont";
+  font-family:"Splat2";
   color:#fff;
 }
 
@@ -524,7 +523,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .minibar-label {
-  font-family:"Splatfont";
+  font-family:"Splat2";
   text-align:right;
   vertical-align: middle;
   color:#fff;
@@ -548,7 +547,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background: rgba(20,20,20,0.8);
   background-image: url("../common/assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
-  font-family: "Paintball";
+  font-family: "Splat1", sans-serif;
   font-size: 14pt;
   text-align:center;
   color: #fff;
@@ -592,7 +591,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .readable:lang(ja) {
-  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Yu Gothic, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; !important;
+}
+
+#about:lang(ja) {
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
 }
 
 .footer {
@@ -600,7 +604,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   bottom: 0;
   width: 100%;
   height: 50px;
-  font-family: "Splatfont";
+  font-family: "Splat2", sans-serif;
   color: #999;
   font-size: 12pt;
   text-align: center;
