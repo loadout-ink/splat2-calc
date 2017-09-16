@@ -16,5 +16,12 @@ String.prototype.format = function(scope) {
 };
 
 angular.module('splatApp').util = function($scope) {
-
+  $scope.redirect = function(lang) {
+    var URL = "http://dev.loadout.ink/" + lang + "/"
+    if(window.location.hash) URL += window.location.hash;
+    if (typeof(Storage) !== "undefined") {
+      localStorage.selectedLang = lang;
+    }
+    window.location = URL;
+  }
 }

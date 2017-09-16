@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ LANG | translate }}">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>loadout.ink - Gear Planner for Splatoon 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
   <meta name="robots" content="index, follow">
 
@@ -55,7 +55,7 @@
       <div id="language-picker" uib-dropdown is-open="status.langOpen">
         <button id="language-button" uib-dropdown-toggle><span class="fa fa-globe"></span> {{::languages['{{ LANG | translate }}']}}</button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu" uib-dropdown-menu>
-          <li role="menuitem" ng-repeat="(key, value) in languages"><a href="../{{::key}}/">{{value}}</a></li>
+          <li role="menuitem" class="menuitem" ng-repeat="(key, value) in languages"><a ng-click="redirect(key)">{{value}}</a></li>
         </ul>
       </div>
     </header>

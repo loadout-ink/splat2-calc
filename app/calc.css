@@ -164,6 +164,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   margin-left:12px !important;
 }
 
+.menuitem a {
+  cursor:pointer;
+}
+
 .gear-wrapper {
   width: 70px;
   height: 70px;

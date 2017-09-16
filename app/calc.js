@@ -75,7 +75,7 @@ angular
     }
 
     $scope.encodedURL = function() {
-      return window.location.protocol +"//"+ window.location.hostname + window.location.pathname + "#" + $scope.encodeLoadout()
+      return window.location.protocol +"//"+ window.location.hostname + "#" + $scope.encodeLoadout()
     }
 
     $scope.randomizeBuild = function() {
