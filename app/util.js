@@ -7,13 +7,12 @@ function filter_available(item) {
 }
 
 String.prototype.format = function(scope) {
-    reg = new RegExp("{([^{}]+)}", "g");
-    var m;
-    var s = this;
-    while ((m = reg.exec(s)) !== null) {
-        s = s.replace(m[0], scope[m[1]]);
-    }
-    return s;
+    eval(Object.keys(scope).map(
+        function(x) { return "var " + x + "=scope." + x
+    }).join(";"));
+    return this.replace(/{(.+?)}/g, function($0, $1) {
+        return eval($1);
+    })
 };
 
 angular.module('splatApp').util = function($scope) {
