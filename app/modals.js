@@ -216,7 +216,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="row cardheader">
     {{ UI_ABOUT | translate }}
     </div>
-    <div class="row basic-content" id="about">
+    <div class="row basic-content readable" id="about">
     <p>{{ UI_ABOUT_CONTENT |translate}}</p>
     <div class="row buttons">
     <div class="col-xs-12">
