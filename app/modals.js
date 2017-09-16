@@ -159,6 +159,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.0</h4>
+    <ul>
+    <li>loadout.ink is now available in English, Japanese, and French. Translation errors can be reported via GitHub or Twitter.</li>
+    </ul>
     <h4>Version 1.0.7</h4>
     <ul>
     <li>Fixed Run Speed Up incorrectly increasing the roll speed of rollers.</li>
