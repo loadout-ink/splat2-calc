@@ -385,6 +385,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size:28pt;
 }
 
+#copybtn .fa-check {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
 .fa.green {
   color: #00ff00;
 }

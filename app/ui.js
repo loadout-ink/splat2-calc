@@ -17,7 +17,7 @@ angular.module('splatApp').clipboard = function($scope, $timeout) {
       })
       $timeout(function() {
         $scope.showCopy = false;
-      }, 750)
+      }, 500)
     })
 
     $scope.clipboard.on('error', function(e) {
