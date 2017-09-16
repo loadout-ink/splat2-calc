@@ -1,16 +1,16 @@
 var gulp = require('gulp');
 var translate = require('gulp-translator');
 
-gulp.task('dist', function() {
+gulp.task('prep', function() {
   gulp.src(['app/*','app/**'])
     .pipe(gulp.dest('dist/en_US'))
     .pipe(gulp.dest('dist/ja_JP'))
     .pipe(gulp.dest('dist/fr_FR'))
-  gulp.src(['common/*', 'common/**'])
+  return gulp.src(['common/*', 'common/**'])
     .pipe(gulp.dest('dist/common'))
 })
 
-gulp.task('localize', function() {
+gulp.task('localize', ['prep'], function() {
   var translations = ['en_US', 'ja_JP', 'fr_FR'];
   var options = {
     localeDirectory: 'locale/',
@@ -37,3 +37,5 @@ gulp.task('localize', function() {
       .pipe(gulp.dest('dist/' + translation + '/data'));
   });
 });
+
+gulp.task('default', ['prep', 'localize'])

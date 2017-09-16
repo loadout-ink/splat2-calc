@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 dist/
+gulpfile_dist.js
