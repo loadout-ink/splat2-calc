@@ -248,23 +248,23 @@ $scope.stats = {
           break;
         case 'Curling Bomb':
           this.name = "{{ STAT_SUB_POWER_CURLING | translate }}";
-          this.label = { label: 'UNAVAILABLE' };
+          this.label = "{{ UNAVAILABLE | translate }}";
           break;
         case 'Ink Mine':
           this.name = "{{ STAT_SUB_POWER_MINE | translate }}";
-          this.label = { label: 'UNAVAILABLE' };
+          this.label = "{{ UNAVAILABLE | translate }}";
           break;
         case 'Splash Wall':
           this.name = "{{ STAT_SUB_POWER_WALL | translate }}";
-          this.label = { label: 'UNAVAILABLE' };
+          this.label = "{{ UNAVAILABLE | translate }}";
           break;
         case 'Sprinkler':
           this.name = "{{ STAT_SUB_POWER_SPRINKLER | translate }}";
-          this.label = { label: 'UNAVAILABLE' };
+          this.label = "{{ UNAVAILABLE | translate }}";
           break;
         case 'Squid Beakon':
           this.name = "{{ STAT_SUB_POWER_BEAKON | translate }}";
-          this.label = { label: 'UNAVAILABLE' };
+          this.label = "{{ UNAVAILABLE | translate }}";
           break;
       }
       return (range * 100).toFixed(1);
