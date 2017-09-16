@@ -1913,7 +1913,6 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Spinner_Standard_01.png",
           name: "Heavy Splatling Deco",
-          unreleased: true,
           shotUnit: "charge",
           sub: "Splash Wall",
           special: "Bubble Blower",
