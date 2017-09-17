@@ -159,6 +159,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.0.8</h4>
+    <ul>
+    <li>Fixed incorrect Special cost for Splat Dualies/Hero Dualies.</li>
+    <li>Fixed incorrect firing run speed for Heavy Splatling & variants.</li>
+    </ul>
     <h4>Version 1.0.7</h4>
     <ul>
     <li>Fixed Run Speed Up incorrectly increasing the roll speed of rollers.</li>
