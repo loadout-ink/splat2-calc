@@ -6,12 +6,13 @@ gulp.task('prep', function() {
     .pipe(gulp.dest('dist/en_US'))
     .pipe(gulp.dest('dist/ja_JP'))
     .pipe(gulp.dest('dist/fr_FR'))
+    .pipe(gulp.dest('dist/fr_CA'))
   return gulp.src(['common/*', 'common/**'])
     .pipe(gulp.dest('dist/common'))
 })
 
 gulp.task('localize', ['prep'], function() {
-  var translations = ['en_US', 'ja_JP', 'fr_FR'];
+  var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA'];
   var options = {
     localeDirectory: 'locale/',
     localeExt: '.json'
