@@ -3,10 +3,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Tenta Missiles",
       localizedName: {
-        en_US: "Tenta Missiles",
-        ja_JP: "マルチミサイル",
-        es_ES: "Lanzamisiles",
-        fr_FR: "Multi-missile"
+        "ja_JP": "マルチミサイル",
+        "en_US": "Tenta Missiles",
+        "en_GB": "Tenta Missiles",
+        "es_ES": "Lanzamisiles",
+        "es_MX": "Lanzamisiles",
+        "fr_FR": "Multi-missile",
+        "fr_CA": "Multi-missile",
+        "de_DE": "Schwarmraketen"
       },
       image: "../common/assets/img/subspe/Wsp_SuperMissile.png",
       damage: {
@@ -18,10 +22,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Baller",
       localizedName: {
-        en_US: "Baller",
-        ja_JP: "イカスフィア",
-        es_ES: "Baller",
-        fr_FR: "Chromo-sphère"
+        "ja_JP": "イカスフィア",
+        "en_US": "Baller",
+        "en_GB": "Baller",
+        "es_ES": "Esfera tintera",
+        "es_MX": "Esfera tintera",
+        "fr_FR": "Chromo-sphère",
+        "fr_CA": "Chromo-sphère",
+        "de_DE": "Sepisphäre"
       },
       image: "../common/assets/img/subspe/Wsp_AquaBall.png",
       damage: {
@@ -33,10 +41,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Splashdown",
       localizedName: {
-        en_US: "Splashdown",
-        ja_JP: "スーパーチャクチ",
-        es_ES: "Salto explosivo",
-        fr_FR: "Choc chromatique"
+        "ja_JP": "スーパーチャクチ",
+        "en_US": "Splashdown",
+        "en_GB": "Splashdown",
+        "es_ES": "Salto explosivo",
+        "es_MX": "Salto explosivo",
+        "fr_FR": "Choc chromatique",
+        "fr_CA": "Choc chromatique",
+        "de_DE": "Tintenschock"
       },
       image: "../common/assets/img/subspe/Wsp_SuperLanding.png",
       damage: {
@@ -48,20 +60,28 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Bubble Blower",
       localizedName: {
-        en_US: "Bubble Blower",
-        ja_JP: "バブルランチャー",
-        es_ES: "Bubble Blower",
-        fr_FR: "Lance-bulles"
+        "ja_JP": "バブルランチャー",
+        "en_US": "Bubble Blower",
+        "en_GB": "Bubble Blower",
+        "es_ES": "Lanzapompas",
+        "es_MX": "Lanzaburbujas",
+        "fr_FR": "Lance-bulles",
+        "fr_CA": "Lance-bulles",
+        "de_DE": "Blubberwerfer"
       },
       image: "../common/assets/img/subspe/Wsp_SuperBubble.png"
     },
     {
       name: "Ink Armor",
       localizedName: {
-        en_US: "Ink Armor",
-        ja_JP: "インクアーマー",
-        es_ES: "Ink Armor",
-        fr_FR: "Armure d'encre"
+        "ja_JP": "インクアーマー",
+        "en_US": "Ink Armor",
+        "en_GB": "Ink Armor",
+        "es_ES": "Membrana",
+        "es_MX": "Membrana",
+        "fr_FR": "Armure d'encre",
+        "fr_CA": "Armure d'encre",
+        "de_DE": "Tintenrüstung"
       },
       image: "../common/assets/img/subspe/Wsp_SuperArmor.png",
       duration: 8
@@ -85,10 +105,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Sting Ray",
       localizedName: {
-        en_US: "Sting Ray",
-        ja_JP: "ハイパープレッサー",
-        es_ES: "Rayo tintódico",
-        fr_FR: "Pigmalance"
+        "ja_JP": "ハイパープレッサー",
+        "en_US": "Sting Ray",
+        "en_GB": "Sting Ray",
+        "es_ES": "Rayo tintódico",
+        "es_MX": "Rayo tintódico",
+        "fr_FR": "Pigmalance",
+        "fr_CA": "Pigmalance",
+        "de_DE": "Magistraal"
       },
       image: "../common/assets/img/subspe/Wsp_WaterCutter.png",
       duration: 8
@@ -96,10 +120,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Ink Storm",
       localizedName: {
-        en_US: "Ink Storm",
-        ja_JP: "アメフラシ",
-        es_ES: "Atormentador",
-        fr_FR: "Pluie d'encre"
+        "ja_JP": "アメフラシ",
+        "en_US": "Ink Storm",
+        "en_GB": "Ink Storm",
+        "es_ES": "Atormentador",
+        "es_MX": "Atormentador",
+        "fr_FR": "Pluie d'encre",
+        "fr_CA": "Pluie d'encre",
+        "de_DE": "Tintenschauer"
       },
       image: "../common/assets/img/subspe/Wsp_RainCloud.png",
       duration: 8
@@ -107,10 +135,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Suction-Bomb Launcher",
       localizedName: {
-        en_US: "Suction-Bomb Launcher",
-        ja_JP: "ボムピッチャー",
-        es_ES: "Bombardeos",
-        fr_FR: "Lanceur de bombes"
+        "ja_JP": "ボムピッチャー",
+        "en_US": "Suction-Bomb Launcher",
+        "en_GB": "Suction-Bomb Launcher",
+        "es_ES": "Bombardeos",
+        "es_MX": "Bombardeos",
+        "fr_FR": "Lanceur de bombes",
+        "fr_CA": "Lanceur de bombes",
+        "de_DE": "Bomb Launcher"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherSuction.png",
       duration: 6
@@ -118,10 +150,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Autobomb Launcher",
       localizedName: {
-        en_US: "Autobomb Launcher",
-        ja_JP: "ボムピッチャー",
-        es_ES: "Bombardeos",
-        fr_FR: "Lanceur de bombes"
+        "ja_JP": "ボムピッチャー",
+        "en_US": "Autobomb Launcher",
+        "en_GB": "Autobomb Launcher",
+        "es_ES": "Bombardeos",
+        "es_MX": "Bombardeos",
+        "fr_FR": "Lanceur de bombes",
+        "fr_CA": "Lanceur de bombes",
+        "de_DE": "Bomb Launcher"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherRobo.png",
       duration: 6
@@ -129,10 +165,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Splat-Bomb Launcher",
       localizedName: {
-        en_US: "Splat-Bomb Launcher",
-        ja_JP: "ボムピッチャー",
-        es_ES: "Bombardeos",
-        fr_FR: "Lanceur de bombes"
+        "ja_JP": "ボムピッチャー",
+        "en_US": "Splat-Bomb Launcher",
+        "en_GB": "Splat-Bomb Launcher",
+        "es_ES": "Bombardeos",
+        "es_MX": "Bombardeos",
+        "fr_FR": "Lanceur de bombes",
+        "fr_CA": "Lanceur de bombes",
+        "de_DE": "Bomb Launcher"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherSplash.png",
       duration: 6
@@ -140,10 +180,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Burst-Bomb Launcher",
       localizedName: {
-        en_US: "Burst-Bomb Launcher",
-        ja_JP: "ボムピッチャー",
-        es_ES: "Bombardeos",
-        fr_FR: "Lanceur de bombes"
+        "ja_JP": "ボムピッチャー",
+        "en_US": "Burst-bomb Launcher",
+        "en_GB": "Burst-bomb Launcher",
+        "es_ES": "Bombardeos",
+        "es_MX": "Bombardeos",
+        "fr_FR": "Lanceur de bombes",
+        "fr_CA": "Lanceur de bombes",
+        "de_DE": "Bomb Launcher"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherQuick.png",
       duration: 6
@@ -151,10 +195,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Curling-Bomb Launcher",
       localizedName: {
-        en_US: "Curling-Bomb Launcher",
-        ja_JP: "ボムピッチャー",
-        es_ES: "Bombardeos",
-        fr_FR: "Lanceur de bombes"
+        "ja_JP": "ボムピッチャー",
+        "en_US": "Curling-bomb Launcher",
+        "en_GB": "Curling-bomb Launcher",
+        "es_ES": "Bombardeos",
+        "es_MX": "Bombardeos",
+        "fr_FR": "Lanceur de bombes",
+        "fr_CA": "Lanceur de bombes",
+        "de_DE": "Bomb Launcher"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",
       duration: 6
@@ -162,9 +210,9 @@ angular.module('splatApp').specials = function ($scope) {
   ]
 
   $scope.getSpecialByName = function(name) {
-      return $scope.specials.filter(function(special) {
-        return special.name == name;
-      })[0]
+    return $scope.specials.filter(function(special) {
+      return special.name == name;
+    })[0]
   }
 
   $scope.getDamagingSpecials = function() {

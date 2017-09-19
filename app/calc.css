@@ -571,8 +571,9 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   top: 8px;
 }
 
-#weapon .cardheader:lang(ja) {
-  font-weight: 50;
+#weapon .cardheader:lang(fr) {
+  font-size: 12pt;
+  padding-top: 6px;
 }
 
 .panel-stats {

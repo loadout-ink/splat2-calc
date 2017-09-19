@@ -3,10 +3,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Splat Bomb",
       localizedName: {
-        en_US: "Splat Bomb",
-        ja_JP: "スプラッシュボム",
-        es_ES: "Bomba básica",
-        fr_FR: "Bombe splash"
+        "ja_JP": "スプラッシュボム",
+        "en_US": "Splat Bomb",
+        "en_GB": "Splat Bomb",
+        "es_ES": "Bomba básica",
+        "es_MX": "Bomba básica",
+        "fr_FR": "Bombe splash",
+        "fr_CA": "Bombe splash",
+        "de_DE": "Klecksbombe"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
       cost: 70,
@@ -19,10 +23,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Burst Bomb",
       localizedName: {
-        en_US: "Burst Bomb",
-        ja_JP: "クイックボム",
-        es_ES: "Bomba rápida",
-        fr_FR: "Bombe ballon"
+        "ja_JP": "クイックボム",
+        "en_US": "Burst Bomb",
+        "en_GB": "Burst Bomb",
+        "es_ES": "Bomba rápida",
+        "es_MX": "Bomba rápida",
+        "fr_FR": "Bombe ballon",
+        "fr_CA": "Bombe ballon",
+        "de_DE": "Insta-Bombe"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Quick.png",
       cost: 40,
@@ -36,10 +44,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Suction Bomb",
       localizedName: {
-        en_US: "Suction Bomb",
-        ja_JP: "キューバンボム",
-        es_ES: "Bomba ventosa",
-        fr_FR: "Bombe gluante"
+        "ja_JP": "キューバンボム",
+        "en_US": "Suction Bomb",
+        "en_GB": "Suction Bomb",
+        "es_ES": "Bomba ventosa",
+        "es_MX": "Bomba ventosa",
+        "fr_FR": "Bombe gluante",
+        "fr_CA": "Bombe gluante",
+        "de_DE": "Haftbombe"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
       cost: 70,
@@ -52,10 +64,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Autobomb",
       localizedName: {
-        en_US: "Autobomb",
-        ja_JP: "ロボットボム",
-        es_ES: "Autobomb",
-        fr_FR: "Bombe robot"
+        "ja_JP": "ロボットボム",
+        "en_US": "Autobomb",
+        "en_GB": "Autobomb",
+        "es_ES": "Robobomba",
+        "es_MX": "Robobomba",
+        "fr_FR": "Bombe robot",
+        "fr_CA": "Bombe robot",
+        "de_DE": "Robo-Bombe"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
       cost: 70,
@@ -68,10 +84,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Curling Bomb",
       localizedName: {
-        en_US: "Curling Bomb",
-        ja_JP: "カーリングボム",
-        es_ES: "Bomba deslizante",
-        fr_FR: "Bombe curling"
+        "ja_JP": "カーリングボム",
+        "en_US": "Curling Bomb",
+        "en_GB": "Curling Bomb",
+        "es_ES": "Bomba deslizante",
+        "es_MX": "Bomba deslizante",
+        "fr_FR": "Bombe curling",
+        "fr_CA": "Bombe curling",
+        "de_DE": "Curling-Bombe"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
@@ -84,10 +104,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Ink Mine",
       localizedName: {
-        en_US: "Ink Mine",
-        ja_JP: "トラップ",
-        es_ES: "Bomba Trampa",
-        fr_FR: "Mine"
+        "ja_JP": "トラップ",
+        "en_US": "Ink Mine",
+        "en_GB": "Ink Mine",
+        "es_ES": "Bomba Trampa",
+        "es_MX": "Bomba Trampa",
+        "fr_FR": "Mine",
+        "fr_CA": "Mine",
+        "de_DE": "Tintenmine"
       },
       image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
       cost: 60,
@@ -100,10 +124,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Squid Beakon",
       localizedName: {
-        en_US: "Squid Beakon",
-        ja_JP: "ジャンプビーコン",
-        es_ES: "Squid Beakon",
-        fr_FR: "Balise de saut"
+        "ja_JP": "ジャンプビーコン",
+        "en_US": "Squid Beakon",
+        "en_GB": "Squid Beakon",
+        "es_ES": "Baliza transportadora",
+        "es_MX": "Baliza",
+        "fr_FR": "Balise de saut",
+        "fr_CA": "Balise de saut",
+        "de_DE": "Sprungboje"
       },
       image: "../common/assets/img/subspe/Wsb_Flag.png",
       cost: 75,
@@ -112,10 +140,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Sprinkler",
       localizedName: {
-        en_US: "Sprinkler",
-        ja_JP: "スプリンクラー",
-        es_ES: "Aspersor",
-        fr_FR: "Fontaine"
+        "ja_JP": "スプリンクラー",
+        "en_US": "Sprinkler",
+        "en_GB": "Sprinkler",
+        "es_ES": "Aspersor",
+        "es_MX": "Aspersor",
+        "fr_FR": "Fontaine",
+        "fr_CA": "Fontaine",
+        "de_DE": "Sprinkler"
       },
       image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
       cost: 70,
@@ -124,10 +156,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Toxic Mist",
       localizedName: {
-        en_US: "Toxic Mist",
-        ja_JP: "ポイズンミスト",
-        es_ES: "Toxic Mist",
-        fr_FR: "Bombe ballon"
+        "ja_JP": "ポイズンミスト",
+        "en_US": "Toxic Mist",
+        "en_GB": "Toxic Mist",
+        "es_ES": "Nebulizador",
+        "es_MX": "Nebulizador",
+        "fr_FR": "Brume toxique",
+        "fr_CA": "Brume toxique",
+        "de_DE": "Sepitox-Nebel"
       },
       image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
       cost: 70,
@@ -136,10 +172,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Point Sensor",
       localizedName: {
-        en_US: "Point Sensor",
-        ja_JP: "ポイントセンサー",
-        es_ES: "Rastreador",
-        fr_FR: "Détecteur"
+        "ja_JP": "ポイントセンサー",
+        "en_US": "Point Sensor",
+        "en_GB": "Point Sensor",
+        "es_ES": "Rastreador",
+        "es_MX": "Rastreador",
+        "fr_FR": "Détecteur",
+        "fr_CA": "Détecteur",
+        "de_DE": "Detektor"
       },
       image: "../common/assets/img/subspe/Wsb_PointSensor.png",
       cost: 60,
@@ -148,10 +188,14 @@ angular.module('splatApp').subs = function ($scope) {
     {
       name: "Splash Wall",
       localizedName: {
-        en_US: "Splash Wall",
-        ja_JP: "スプラッシュシールド",
-        es_ES: "Splash Wall",
-        fr_FR: "Mur d'encre"
+        "ja_JP": "スプラッシュシールド",
+        "en_US": "Splash Wall",
+        "en_GB": "Splash Wall",
+        "es_ES": "Telón de Tinta",
+        "es_MX": "Barricada",
+        "fr_FR": "Mur d'encre",
+        "fr_CA": "Mur d'encre",
+        "de_DE": "Tintenwall"
       },
       image: "../common/assets/img/subspe/Wsb_Shield.png",
       cost: 60,
@@ -160,9 +204,9 @@ angular.module('splatApp').subs = function ($scope) {
   ]
 
   $scope.getSubByName = function(name) {
-      return $scope.subs.filter(function(sub) {
-        return sub.name == name;
-      })[0]
+    return $scope.subs.filter(function(sub) {
+      return sub.name == name;
+    })[0]
   }
 
   $scope.getDamagingSubs = function() {
