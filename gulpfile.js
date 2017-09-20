@@ -8,12 +8,13 @@ gulp.task('prep', function() {
     .pipe(gulp.dest('dist/fr_FR'))
     .pipe(gulp.dest('dist/fr_CA'))
     .pipe(gulp.dest('dist/es_ES'))
+    .pipe(gulp.dest('dist/es_MX'))
   return gulp.src(['common/*', 'common/**'])
     .pipe(gulp.dest('dist/common'))
 })
 
 gulp.task('localize', ['prep'], function() {
-  var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES'];
+  var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX'];
   var options = {
     localeDirectory: 'locale/',
     localeExt: '.json'
