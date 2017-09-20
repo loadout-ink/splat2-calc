@@ -108,6 +108,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
    width:auto;
  }
 
+ #weapon .cardheader {
+   font-size: 12pt;
+   padding-top: 6px;
+ }
+
 #abilitybox {
   background: #555;
   background-image: url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png");
@@ -315,6 +320,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-bottom:8px;
   margin-bottom: 5px;
   color: #fff;
+}
+
+.statlabel:lang(es) {
+  font-size: 10pt
 }
 
 .subspeicon {
@@ -571,10 +580,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   top: 8px;
 }
 
-#weapon .cardheader:lang(fr) {
-  font-size: 12pt;
-  padding-top: 6px;
-}
+
 
 .panel-stats {
   border: 0px !important;

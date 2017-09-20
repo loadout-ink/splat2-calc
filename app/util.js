@@ -10,7 +10,8 @@ var language_map = {
   "en_US": "en",
   "fr_FR": "fr",
   "ja_JP": "ja",
-  "fr_CA": "ca"
+  "fr_CA": "ca",
+  "es_ES": "es"
 }
 
 String.prototype.format = function(scope) {
@@ -22,7 +23,7 @@ String.prototype.format = function(scope) {
     })
 };
 
-angular.module('splatApp').util = function($scope) {
+angular.module('splatApp').util = function($scope, $sce) {
   // this only works when each language is moved to a directory setup like above (ie in distribution on loadout.ink)
   $scope.redirect = function(lang) {
     var dir = language_map[lang]
@@ -33,4 +34,8 @@ angular.module('splatApp').util = function($scope) {
     }
     window.location = URL;
   }
+
+  $scope.renderHtml = function(html_code) {
+    return $sce.trustAsHtml(html_code);
+  };
 }

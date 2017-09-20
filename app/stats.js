@@ -195,7 +195,7 @@ $scope.stats = {
           this.name = "{{ STAT_SPECIAL_POWER_BALLER | translate }}"
           results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))
           this.value = results;
-          this.label = { value: this.value.toFixed(2), label: 'LABEL_HP' };
+          this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
           return results.toFixed(1);
           break;
         case 'Tenta Missiles':

@@ -107,7 +107,14 @@ angular
     $scope.languages = {
       'en_US': 'English',
       'ja_JP': '日本語',
+      'es_ES': 'Español (ES)',
+      'es_MX': 'Español (MX)',
       'fr_FR': 'Français (FR)',
       'fr_CA': 'Français (CA)'
     }
   }])
+  .filter("trust", ['$sce', function($sce) {
+    return function(htmlCode){
+      return $sce.trustAsHtml(htmlCode);
+    }
+  }]);
