@@ -6,10 +6,14 @@ angular.module('splatApp').gear = function($scope) {
   $scope.brands = {
     "SquidForce" : {
       localizedName: {
-        en_US: "SquidForce",
-        ja_JP: "バトロイカ",
-        es_ES: "Kalamas",
-        fr_FR: "Kalamarus Rex"
+        "ja_JP": "バトロイカ",
+        "en_US": "SquidForce",
+        "en_GB": "SquidForce",
+        "es_ES": "Kalamas",
+        "es_MX": "Kalamas",
+        "fr_FR": "Kalamarus Rex",
+        "fr_CA": "Kalamarus",
+        "de_DE": "TintactiX"
       },
       image: "../common/assets/img/brands/B00.png",
       common: "Ink Resistance Up",
@@ -17,10 +21,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Zink" : {
       localizedName: {
-        en_US: "Zink",
-        ja_JP: "アイロニック",
-        es_ES: "Tintaz",
-        fr_FR: "Leviathus"
+        "ja_JP": "アイロニック",
+        "en_US": "Zink",
+        "en_GB": "Zink",
+        "es_ES": "Tintaz",
+        "es_MX": "Tintaz",
+        "fr_FR": "Leviathus",
+        "fr_FR": "Leviathus",
+        "de_DE": "Sagitron"
       },
       image: "../common/assets/img/brands/B01.png",
       common: "Quick Super Jump",
@@ -28,10 +36,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Krak-On" : {
       localizedName: {
-        en_US: "Krak-On",
-        ja_JP: "クラーゲス",
-        es_ES: "Meddux",
-        fr_FR: "Krakers"
+        "ja_JP": "クラーゲス",
+        "en_US": "Krak-On",
+        "en_GB": "Krak-On",
+        "es_ES": "Meddux",
+        "es_MX": "Meddux",
+        "fr_FR": "Krakers",
+        "fr_CA": "Krakeurs",
+        "de_DE": "Medusa"
       },
       image: "../common/assets/img/brands/B02.png",
       common: "Swim Speed Up",
@@ -39,10 +51,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Rockenberg" : {
       localizedName: {
-        en_US: "Rockenberg",
-        ja_JP: "ロッケンベルグ",
-        es_ES: "Rockenberg",
-        fr_FR: "Iormungand"
+        "ja_JP": "ロッケンベルグ",
+        "en_US": "Rockenberg",
+        "en_GB": "Rockenberg",
+        "es_ES": "Rockenberg",
+        "es_MX": "Rockenberg",
+        "fr_FR": "Iormungand",
+        "fr_CA": "Iormungand",
+        "de_DE": "Rockberg"
       },
       image: "../common/assets/img/brands/B03.png",
       common: "Run Speed Up",
@@ -50,10 +66,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Zekko" : {
       localizedName: {
-        en_US: "Zekko",
-        ja_JP: "エゾッコ",
-        es_ES: "Ezko",
-        fr_FR: "Ezko"
+        "ja_JP": "エゾッコ",
+        "en_US": "Zekko",
+        "en_GB": "Zekko",
+        "es_ES": "Ezko",
+        "es_MX": "Zekko",
+        "fr_FR": "Ezko",
+        "fr_CA": "Ezko",
+        "de_DE": "Zekko"
       },
       image: "../common/assets/img/brands/B04.png",
       common: "Special Saver",
@@ -61,10 +81,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Forge" : {
       localizedName: {
-        en_US: "Forge",
-        ja_JP: "フォーリマ",
-        es_ES: "Forima",
-        fr_FR: "Focus"
+        "ja_JP": "フォーリマ",
+        "en_US": "Forge",
+        "en_GB": "Forge",
+        "es_ES": "Forima",
+        "es_MX": "Forima",
+        "fr_FR": "Focus",
+        "fr_CA": "Fosia",
+        "de_DE": "Focus"
       },
       image: "../common/assets/img/brands/B05.png",
       common: "Special Power Up",
@@ -72,10 +96,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Firefin" : {
       localizedName: {
-        en_US: "Firefin",
-        ja_JP: "ホッコリー",
-        es_ES: "Chokkor",
-        fr_FR: "Friture"
+        "ja_JP": "ホッコリー",
+        "en_US": "Firefin",
+        "en_GB": "Firefin",
+        "es_ES": "Chokkor",
+        "es_MX": "Shachi",
+        "fr_FR": "Friture",
+        "fr_CA": "Arki",
+        "de_DE": "Rilax"
       },
       image: "../common/assets/img/brands/B06.png",
       common: "Ink Saver (Sub)",
@@ -83,10 +111,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Skalop" : {
       localizedName: {
-        en_US: "Skalop",
-        ja_JP: "ホタックス",
-        es_ES: "Skalop",
-        fr_FR: "Jack"
+        "ja_JP": "ホタックス",
+        "en_US": "Skalop",
+        "en_GB": "Skalop",
+        "es_ES": "Skalop",
+        "es_MX": "Skalop",
+        "fr_FR": "Jack",
+        "fr_CA": "P. Tonk",
+        "de_DE": "Jakomu"
       },
       image: "../common/assets/img/brands/B07.png",
       common: "Quick Respawn",
@@ -94,10 +126,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Splash Mob" : {
       localizedName: {
-        en_US: "Splash Mob",
-        ja_JP: "ジモン",
-        es_ES: "Jimmon",
-        fr_FR: "Gédéon"
+        "ja_JP": "ジモン",
+        "en_US": "Splash Mob",
+        "en_GB": "Splash Mob",
+        "es_ES": "Jimmon",
+        "es_MX": "Tinta comunal",
+        "fr_FR": "Gédéon",
+        "fr_CA": "Fréma",
+        "de_DE": "Gian"
       },
       image: "../common/assets/img/brands/B08.png",
       common: "Ink Saver (Main)",
@@ -105,10 +141,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Inkline" : {
       localizedName: {
-        en_US: "Inkline",
-        ja_JP: "シグレニ",
-        es_ES: "Moluskia",
-        fr_FR: "Abysma"
+        "ja_JP": "シグレニ",
+        "en_US": "Inkline",
+        "en_GB": "Inkline",
+        "es_ES": "Moluskia",
+        "es_MX": "Moluskia",
+        "fr_FR": "Abysma",
+        "fr_FR": "Abysma",
+        "de_DE": "Alpomar"
       },
       image: "../common/assets/img/brands/B09.png",
       common: "Bomb Defense Up",
@@ -116,10 +156,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Tentatek" : {
       localizedName: {
-        en_US: "Tentatek",
-        ja_JP: "アロメ",
-        es_ES: "Arome",
-        fr_FR: "OculR"
+        "ja_JP": "アロメ",
+        "en_US": "Tentatek",
+        "en_GB": "Tentatek",
+        "es_ES": "Arome",
+        "es_MX": "Tentáctica",
+        "fr_FR": "OculR",
+        "fr_CA": "Tentatek",
+        "de_DE": "Tentatek"
       },
       image: "../common/assets/img/brands/B10.png",
       common: "Ink Recovery Up",
@@ -127,10 +171,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Takoroka" : {
       localizedName: {
-        en_US: "Takoroka",
-        ja_JP: "ヤコ",
-        es_ES: "Sepioca",
-        fr_FR: "Cubic"
+        "ja_JP": "ヤコ",
+        "en_US": "Takoroka",
+        "en_GB": "Takoroka",
+        "es_ES": "Sepioca",
+        "es_MX": "Pulpicka",
+        "fr_FR": "Cubic",
+        "fr_CA": "Pionic",
+        "de_DE": "Kalamati"
       },
       image: "../common/assets/img/brands/B11.png",
       common: "Special Charge Up",
@@ -138,10 +186,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Annaki" : {
       localizedName: {
-        en_US: "Annaki",
-        ja_JP: "アナアキ",
-        es_ES: "Annak",
-        fr_FR: "Aroz"
+        "ja_JP": "アナアキ",
+        "en_US": "Annaki",
+        "en_GB": "Annaki",
+        "es_ES": "Annak",
+        "es_MX": "Annak",
+        "fr_FR": "Aroz",
+        "fr_CA": "Aroz",
+        "de_DE": "Annaki"
       },
       image: "../common/assets/img/brands/B15.png",
       common: "Cold-Blooded",
@@ -149,10 +201,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Enperry" : {
       localizedName: {
-        en_US: "Enperry",
-        ja_JP: "エンペリー",
-        es_ES: "Krakien",
-        fr_FR: "DUX"
+        "ja_JP": "エンペリー",
+        "en_US": "Enperry",
+        "en_GB": "Enperry",
+        "es_ES": "Krakien",
+        "es_MX": "Emperi",
+        "fr_FR": "DUX",
+        "fr_CA": "DUX",
+        "de_DE": "Enperry"
       },
       image: "../common/assets/img/brands/B16.png",
       common: "Sub Power Up",
@@ -160,10 +216,14 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Toni Kensa" : {
       localizedName: {
-        en_US: "Toni Kensa",
-        ja_JP: "タタキケンサキ",
-        es_ES: "Tonken",
-        fr_FR: "Thony K"
+        "ja_JP": "タタキケンサキ",
+        "en_US": "Toni Kensa",
+        "en_GB": "Toni Kensa",
+        "es_ES": "Tonken",
+        "es_MX": "Tonken",
+        "fr_FR": "Thony K",
+        "fr_CA": "Thony K",
+        "de_DE": "Toni Kensa"
       },
       image: "../common/assets/img/brands/B17.png",
       common: "Cold-Blooded",
@@ -171,28 +231,40 @@ angular.module('splatApp').gear = function($scope) {
     },
     "Grizzco" : {
       localizedName: {
-        en_US: "Grizzco",
-        ja_JP: "クマサン商会",
-        es_ES: "Don Oso, S.A.",
-        fr_FR: "M. Ours SA"
+        "ja_JP": "クマサン商会",
+        "en_US": "Grizzco",
+        "en_GB": "Grizzco",
+        "es_ES": "Don Oso, S.A.",
+        "es_MX": "Don Oso, S.A.",
+        "fr_FR": "M. Ours SA",
+        "fr_CA": "M. Ours SA",
+        "de_DE": "Bär GmbH"
       },
       image: "../common/assets/img/brands/B97.png"
     },
     "Cuttlegear" : {
       localizedName: {
-        en_US: "Cuttlegear",
-        ja_JP: "アタリメイド",
-        es_ES: "Obvius",
-        fr_FR: "Macalamar"
+        "ja_JP": "アタリメイド",
+        "en_US": "Cuttlegear",
+        "en_GB": "Cuttlegear",
+        "es_ES": "Obvius",
+        "es_MX": "Sepichón",
+        "fr_FR": "Macalamar",
+        "fr_CA": "Radmaré",
+        "de_DE": "Kuttelkorps"
       },
       image: "../common/assets/img/brands/B98.png"
     },
     "amiibo" : {
       localizedName: {
-        en_US: "amiibo",
-        ja_JP: "amiibo",
-        es_ES: "amiibo",
-        fr_FR: "amiibo"
+        "ja_JP": "amiibo",
+        "en_US": "amiibo",
+        "en_GB": "amiibo",
+        "es_ES": "amiibo",
+        "es_MX": "amiibo",
+        "fr_FR": "amiibo",
+        "fr_CA": "amiibo",
+        "de_DE": "amiibo"
       },
       image: "../common/assets/img/brands/B99.png"
     }
