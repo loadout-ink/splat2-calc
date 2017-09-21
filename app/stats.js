@@ -232,7 +232,7 @@ $scope.stats = {
     'Sub Power': new Stat("{{ STAT_SUB_POWER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Sub Power Up');
       var equippedSub = $scope.getSubByName(loadout.weapon.sub)
-      this.name = "{{ Sub Power (???) | translate }}"
+      this.name = "{{ STAT_SUB_POWER_RANGE | translate }}"
       this.value = 0;
       switch(equippedSub.name) {
         case 'Burst Bomb':
@@ -240,6 +240,7 @@ $scope.stats = {
         case 'Suction Bomb':
         case 'Autobomb':
         case 'Point Sensor':
+        case 'Toxic Mist':
           var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
           this.value = range*100;
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
