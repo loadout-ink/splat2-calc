@@ -89,10 +89,14 @@ angular.module('splatApp').specials = function ($scope) {
     {
       name: "Inkjet",
       localizedName: {
-        en_US: "Inkjet",
-        ja_JP: "ジェットパック",
-        es_ES: "Propulsor",
-        fr_FR: "Chromo-jet"
+        "ja_JP": "ジェットパック",
+        "en_US": "Inkjet",
+        "en_GB": "Inkjet",
+        "es_ES": "Propulsor",
+        "es_MX": "Propulsor",
+        "fr_FR": "Chromo-jet",
+        "fr_CA": "Chromo-jet",
+        "de_DE": "Tintendüser"
       },
       image: "../common/assets/img/subspe/Wsp_Jetpack.png",
       duration: 8,
