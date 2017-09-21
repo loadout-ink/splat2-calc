@@ -10,9 +10,9 @@ var language_map = {
   "en_US": "en",
   "fr_FR": "fr",
   "ja_JP": "ja",
-  "fr_CA": "ca",
+  "fr_CA": "fr-ca",
   "es_ES": "es",
-  "es_MX": "mx"
+  "es_MX": "es-mx"
 }
 
 String.prototype.format = function(scope) {
