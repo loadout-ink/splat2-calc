@@ -11,7 +11,8 @@ var language_map = {
   "fr_FR": "fr",
   "ja_JP": "ja",
   "fr_CA": "ca",
-  "es_ES": "es"
+  "es_ES": "es",
+  "es_MX": "mx"
 }
 
 String.prototype.format = function(scope) {

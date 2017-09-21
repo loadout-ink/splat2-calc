@@ -43,9 +43,9 @@
 
   "STAT_SWIM_SPEED": "Velocidad de buceo",
   "STAT_RUN_SPEED": "Velocidad de carrera",
-  "STAT_RUN_SPEED_RESIST": "Velocidad de desplazamiento (Tinta enemiga)",
-  "STAT_RUN_SPEED_FIRING": "Velocidad de desplazamiento (Disparando)",
-  "STAT_RUN_SPEED_ROLLING": "Velocidad de desplazamiento (Arrollando)",
+  "STAT_RUN_SPEED_RESIST": "Velocidad de carrera (Tinta enemiga)",
+  "STAT_RUN_SPEED_FIRING": "Velocidad de carrera (Disparando)",
+  "STAT_RUN_SPEED_ROLLING": "Velocidad de carrera (Arrollando)",
   "STAT_RECOVERY_SQUID": "Recarga Rápida (Calamar)",
   "STAT_RECOVERY_KID": "Recarga Rápida (Inkling)",
   "STAT_SAVER_MAIN": "Tintahorro principal",
