@@ -98,6 +98,9 @@
                     <div class="card neonstripes" id="weapon">
                       <div class="row cardheader">
                         <button class="icon-button" ng-hide="screenshotMode" ng-controller="ModalCtrl" ng-click="openWeaponPicker()" ><span class="glyphicon glyphicon-pencil"></span></button>
+                        {{ WEAPON_SLOT | translate }}
+                      </div>
+                      <div class="row nopadding" id="weapon-name">
                         {{loadout.weapon.localizedName['{{ LANG_FULL | translate }}']}}
                       </div>
                       <div class="row">
@@ -118,7 +121,6 @@
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </div>
                     </div>

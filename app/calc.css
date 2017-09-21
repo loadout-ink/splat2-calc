@@ -81,17 +81,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #weapon {
   overflow-y:hidden;
-  height: 105px;
+  height: 115px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #weapon .subspe-bubble {
   margin-right:10px;
-}
-
-#weapon .col-xs-7 .row {
-  padding-top:8px;
 }
 
 #weapon .col-xs-5 {
@@ -101,6 +97,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 #weapon .gear-wrapper{
   height:66px;
   width:66px;
+  position: relative;
+  top: -10px;
 }
 
  #weapon .gear-wrapper img {
@@ -108,9 +106,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
    width:auto;
  }
 
- #weapon .cardheader {
+ #weapon-name {
+   font-family: "Splat2";
+   text-align: center;
    font-size: 12pt;
-   padding-top: 6px;
  }
 
 #abilitybox {
@@ -320,10 +319,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-bottom:8px;
   margin-bottom: 5px;
   color: #fff;
+  font-size: 10pt
 }
 
-.statlabel:lang(es) {
-  font-size: 10pt
+.statlabel:lang(jp) {
+  font-size: 12pt
 }
 
 .subspeicon {
@@ -462,7 +462,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #utils {
   padding-top:10px;
-  height: 105px;
+  height: 115px;
   text-align: center;
   font-family: "Splat2", sans-serif;
   font-size: 14pt;
