@@ -127,7 +127,7 @@ $scope.hats = [
       "en_US": "Backwards Cap",
       "en_GB": "Backwards Cap",
       "es_ES": "Gorra invertida",
-      "es_MX": "Gorra vuelta",
+      "es_MX": "Gorra invertida",
       "fr_FR": "Casquette à l'envers",
       "fr_CA": "Casquette à l'envers"
     },
@@ -178,7 +178,7 @@ $scope.hats = [
       "en_US": "Hickory Work Cap",
       "en_GB": "Hickory Work Cap",
       "es_ES": "Gorra de trabajo",
-      "es_MX": "Gorra de trabajo",
+      "es_MX": "Gorra obrera",
       "fr_FR": "Casquette rayée",
       "fr_CA": "Casquette rayée"
     },
@@ -197,7 +197,7 @@ $scope.hats = [
       "es_ES": "Gorra medusianos",
       "es_MX": "Gorra medusianos",
       "fr_FR": "Casquette Sea Invader v.2",
-      "fr_CA": "Casquette Sea Invader v.2"
+      "fr_CA": "Casquette Squidvader"
     },
     main: "Ink Saver (Sub)",
     brand: "Skalop",
@@ -365,7 +365,7 @@ $scope.hats = [
       "en_US": "Fake Contacts",
       "en_GB": "Fake Contacts",
       "es_ES": "Lentillas sin graduación",
-      "es_MX": "Lentes de contacto sin graduación",
+      "es_MX": "Lentes de contacto",
       "fr_FR": "Lentilles sans correction",
       "fr_CA": "Faux verres correcteurs"
     },
@@ -399,7 +399,7 @@ $scope.hats = [
       "en_US": "Half-Rim Glasses",
       "en_GB": "Half-Rim Glasses",
       "es_ES": "Gafas gruesas",
-      "es_MX": "Gafas gruesas",
+      "es_MX": "Gafas montura gruesa",
       "fr_FR": "Lunettes demi-cerclées",
       "fr_CA": "Lunettes demi-cerclées"
     },
@@ -501,9 +501,9 @@ $scope.hats = [
       "en_US": "Bucket Hat",
       "en_GB": "Bucket Hat",
       "es_ES": "Gorro de pesca",
-      "es_MX": "Gorro de pesca",
+      "es_MX": "Gorro impermeable",
       "fr_FR": "Bob",
-      "fr_CA": "Bob"
+      "fr_CA": "Chapeau en toile"
     },
     main: "Special Saver",
     brand: "SquidForce",
@@ -739,7 +739,7 @@ $scope.hats = [
       "en_US": "Painter's Mask",
       "en_GB": "Painter's Mask",
       "es_ES": "Máscara industrial",
-      "es_MX": "Máscara industrial",
+      "es_MX": "Máscara de pintor",
       "fr_FR": "Masque de peinture",
       "fr_CA": "Masque de peinture"
     },
@@ -756,7 +756,7 @@ $scope.hats = [
       "en_US": "Annaki Mask",
       "en_GB": "Annaki Mask",
       "es_ES": "Mascarilla Annak",
-      "es_MX": "Mascarilla Annak",
+      "es_MX": "Tapabocas negra y roja",
       "fr_FR": "Masque Aroz",
       "fr_CA": "Masque Aroz"
     },
@@ -773,7 +773,7 @@ $scope.hats = [
       "en_US": "Squid Facemask",
       "en_GB": "Squid Facemask",
       "es_ES": "Mascarilla calamar",
-      "es_MX": "Mascarilla calamar",
+      "es_MX": "Tapabocas calamar",
       "fr_FR": "Masque Kalamarus Rex",
       "fr_CA": "Masque Kalamarus Rex"
     },
@@ -807,7 +807,7 @@ $scope.hats = [
       "en_US": "King Facemask",
       "en_GB": "King Facemask",
       "es_ES": "Mascarilla Theutik",
-      "es_MX": "Mascarilla Theutik",
+      "es_MX": "Tapabocas Theutik",
       "fr_FR": "Masque DUX",
       "fr_CA": "Masque DUX"
     },
@@ -945,7 +945,7 @@ $scope.hats = [
       "es_ES": "Pendientes calamar",
       "es_MX": "Pendientes calamar",
       "fr_FR": "Boucles d'oreilles seiche",
-      "fr_CA": "Boucles d'oreilles seiche"
+      "fr_CA": "Boucles d'oreilles clip calmar"
     },
     main: "Opening Gambit",
     brand: "amiibo",
@@ -1028,7 +1028,7 @@ $scope.hats = [
       "en_GB": "Hero Headphones Replica",
       "ja_JP": "ヒーローレシーバー レプリカ",
       "es_ES": "Receptor de élite (réplica)",
-      "es_MX": "Receptor de élite (réplica)",
+      "es_MX": "Receptor de élite réplica",
       "fr_FR": "Casque audio héroïque (rép.)",
       "fr_CA": "Casque audio héroïque (rép.)"
     },

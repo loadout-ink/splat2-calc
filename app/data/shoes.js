@@ -229,7 +229,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Black Dakroniks",
       "en_GB": "Black Dakroniks",
       "es_ES": "Hipocampo-B blanca y negra",
-      "es_MX": "Hipocampo-B blanca y negra",
+      "es_MX": "Dakronik negros",
       "fr_FR": "Baskets montantes noires",
       "fr_CA": "Baskets montantes noires"
     },
@@ -246,7 +246,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Piranha Moccasins",
       "en_GB": "Piranha Moccasins",
       "es_ES": "Mocasín piraña",
-      "es_MX": "Mocasín piraña",
+      "es_MX": "Pirañas",
       "fr_FR": "Mocassins piranha",
       "fr_CA": "Mocassins piranha"
     },
@@ -263,9 +263,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "White Norimaki 750s",
       "en_GB": "White Norimaki 750s",
       "es_ES": "Deportiva futurista blanca",
-      "es_MX": "Deportiva futurista blanca",
+      "es_MX": "Norimaki 750 blancos",
       "fr_FR": "Tennis high-tech blanches",
-      "fr_CA": "Tennis high-tech blanches"
+      "fr_CA": "Norimaki 750 blanches"
     },
     main: "Swim Speed Up",
     brand: "Tentatek",
@@ -280,9 +280,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Black Norimaki 750s",
       "en_GB": "Black Norimaki 750s",
       "es_ES": "Deportiva futurista negra",
-      "es_MX": "Deportiva futurista negra",
+      "es_MX": "Norimaki 750 negros",
       "fr_FR": "Tennis high-tech noires",
-      "fr_CA": "Tennis high-tech noires"
+      "fr_CA": "Norimaki 750 noires"
     },
     main: "Special Charge Up",
     brand: "Tentatek",
@@ -299,7 +299,7 @@ angular.module('splatApp').shoes = function($scope) {
       "es_ES": "Deportiva orca soleada",
       "es_MX": "Deportiva orca soleada",
       "fr_FR": "Orques crépuscule",
-      "fr_CA": "Orques crépuscule"
+      "fr_CA": "Espadrilles hautes crépuscule"
     },
     main: "Drop Roller",
     brand: "Takoroka",
@@ -348,7 +348,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Gray Sea-Slug Hi-Tops",
       "en_GB": "Gray Sea-Slug Hi-Tops",
       "es_ES": "Zapatilla alta gris",
-      "es_MX": "Zapatilla alta gris",
+      "es_MX": "Tenis bota grises",
       "fr_FR": "Anguilles montantes grises",
       "fr_CA": "Anguilles montantes grises"
     },
@@ -365,7 +365,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Orca Hi-Tops",
       "en_GB": "Orca Hi-Tops",
       "es_ES": "Deportiva orca",
-      "es_MX": "Deportiva orca",
+      "es_MX": "Tenis orca",
       "fr_FR": "Orques classiques",
       "fr_CA": "Orques classiques"
     },
@@ -484,9 +484,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Canary Trainers",
       "en_GB": "Canary Trainers",
       "es_ES": "Deportiva selva",
-      "es_MX": "Deportiva selva",
+      "es_MX": "Deportivos amarillos",
       "fr_FR": "Baskets canari",
-      "fr_CA": "Baskets canari"
+      "fr_CA": "Espadrilles canari"
     },
     main: "Quick Super Jump",
     brand: "Tentatek",
@@ -503,7 +503,7 @@ angular.module('splatApp').shoes = function($scope) {
       "es_ES": "Deportiva de malla amarilla",
       "es_MX": "Deportiva de malla amarilla",
       "fr_FR": "Baskets filet jaune",
-      "fr_CA": "Baskets filet jaune"
+      "fr_CA": "Espadrilles filet jaune"
     },
     main: "Cold-Blooded",
     brand: "Tentatek",
@@ -518,9 +518,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Arrow Pull-Ons",
       "en_GB": "Arrow Pull-Ons",
       "es_ES": "Velcro elegante",
-      "es_MX": "Velcro elegante",
+      "es_MX": "Tenis sin cordones",
       "fr_FR": "Flèches unies",
-      "fr_CA": "Flèches unies"
+      "fr_CA": "Espadrilles sans lacet"
     },
     main: "Drop Roller",
     brand: "Toni Kensa",
@@ -535,9 +535,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Red-Mesh Sneakers",
       "en_GB": "Red-Mesh Sneakers",
       "es_ES": "Deportiva de malla naranja",
-      "es_MX": "Deportiva de malla naranja",
+      "es_MX": "Tenis transpirables naranjas",
       "fr_FR": "Baskets filet orange",
-      "fr_CA": "Baskets filet orange"
+      "fr_CA": "Espadrilles filet orange"
     },
     main: "Special Power Up",
     brand: "Tentatek",
@@ -637,9 +637,9 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Black Flip-Flops",
       "en_GB": "Black Flip-Flops",
       "es_ES": "Chancla negra",
-      "es_MX": "Chancla negra",
+      "es_MX": "Chanclas negras",
       "fr_FR": "Tongs noires",
-      "fr_CA": "Tongs noires"
+      "fr_CA": "Sandales de plage"
     },
     main: "Object Shredder",
     brand: "Zekko",
@@ -654,7 +654,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Snow Delta Straps",
       "en_GB": "Snow Delta Straps",
       "es_ES": "Sandalia delta nieve",
-      "es_MX": "Sandalia delta nieve",
+      "es_MX": "Sandalias delta nieve",
       "fr_FR": "Sandales poudreuse",
       "fr_CA": "Sandales poudreuse"
     },
@@ -773,7 +773,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Hunting Boots",
       "en_GB": "Hunting Boots",
       "es_ES": "Bota impermeable",
-      "es_MX": "Bota impermeable",
+      "es_MX": "Botas impermeables",
       "fr_FR": "Bottes de chasse",
       "fr_CA": "Bottes de chasse"
     },
@@ -790,7 +790,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Punk Blacks",
       "en_GB": "Punk Blacks",
       "es_ES": "Bota clásica negra",
-      "es_MX": "Bota clásica negra",
+      "es_MX": "Botas negras",
       "fr_FR": "Bottines punk noires",
       "fr_CA": "Bottines punk noires"
     },
@@ -894,7 +894,7 @@ angular.module('splatApp').shoes = function($scope) {
       "es_ES": "Zapato elegante",
       "es_MX": "Zapato elegante",
       "fr_FR": "Richelieu fumés",
-      "fr_CA": "Richelieu fumés"
+      "fr_CA": "Chaussures fumées"
     },
     main: "Object Shredder",
     brand: "Rockenberg",
@@ -1045,7 +1045,7 @@ angular.module('splatApp').shoes = function($scope) {
       "en_US": "Hero Snowboots Replicas",
       "en_GB": "Hero Snowboots Replicas",
       "es_ES": "Bota de élite (réplica)",
-      "es_MX": "Bota de élite (réplica)",
+      "es_MX": "Botas de élite réplica",
       "fr_FR": "Bottes héroïques (répliques)",
       "fr_CA": "Bottes héroïques (répliques)"
     },
