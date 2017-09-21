@@ -1,8 +1,22 @@
 var gulp = require('gulp');
 var translate = require('gulp-translator');
+var cachebust = require('gulp-cache-bust');
 
-gulp.task('prep', function() {
-  gulp.src(['app/*','app/**'])
+gulp.task('stage', function() {
+  return gulp.src(['app/*','app/**'])
+    .pipe(gulp.dest('dist/staging'))
+})
+
+gulp.task('bust', ['stage'], function() {
+  return gulp.src('dist/staging/index.html')
+    .pipe(cachebust({
+      type: 'MD5'
+    }))
+    .pipe(gulp.dest('dist/staging'))
+})
+
+gulp.task('localize_prep', ['bust'], function() {
+  gulp.src(['dist/staging/*','dist/staging/**'])
     .pipe(gulp.dest('dist/en_US'))
     .pipe(gulp.dest('dist/ja_JP'))
     .pipe(gulp.dest('dist/fr_FR'))
@@ -13,7 +27,7 @@ gulp.task('prep', function() {
     .pipe(gulp.dest('dist/common'))
 })
 
-gulp.task('localize', ['prep'], function() {
+gulp.task('localize', ['localize_prep'], function() {
   var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX'];
   var options = {
     localeDirectory: 'locale/',
@@ -41,4 +55,4 @@ gulp.task('localize', ['prep'], function() {
   });
 });
 
-gulp.task('default', ['prep', 'localize'])
+gulp.task('default', ['stage', 'bust', 'localize_prep', 'localize'])
