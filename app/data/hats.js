@@ -25,9 +25,9 @@ $scope.hats = [
       "en_US": "Urchins Cap",
       "en_GB": "Urchins Cap",
       "es_ES": "Gorra béisbol",
-      "es_MX": "Gorra béisbol",
+      "es_MX": "Gorra de Erizos",
       "fr_FR": "Casquette baseball",
-      "fr_CA": "Casquette baseball"
+      "fr_CA": "Casquette d'oursins"
     },
     main: "Sub Power Up",
     brand: "Skalop",
@@ -42,7 +42,7 @@ $scope.hats = [
       "en_US": "Lightweight Cap",
       "en_GB": "Lightweight Cap",
       "es_ES": "Gorra futurista",
-      "es_MX": "Gorra futurista",
+      "es_MX": "Gorra ligera",
       "fr_FR": "Casquette légère",
       "fr_CA": "Casquette légère"
     },
@@ -59,9 +59,9 @@ $scope.hats = [
       "en_US": "Takoroka Mesh",
       "en_GB": "Takoroka Mesh",
       "es_ES": "Gorra malla Sepioca",
-      "es_MX": "Gorra malla Sepioca",
+      "es_MX": "Gorra Pulpioka",
       "fr_FR": "Casquette filet Cubic",
-      "fr_CA": "Casquette filet Cubic"
+      "fr_CA": "Casquette filet Pionic"
     },
     main: "Bomb Defense Up",
     brand: "Takoroka",
@@ -76,7 +76,7 @@ $scope.hats = [
       "en_US": "Squidvader Cap",
       "en_GB": "Squidvader Cap",
       "es_ES": "Gorra calamarciano",
-      "es_MX": "Gorra calamarciano",
+      "es_MX": "Gorra calalienígena",
       "fr_FR": "Casquette Sea Invader",
       "fr_CA": "Casquette Sea Invader"
     },
@@ -93,7 +93,7 @@ $scope.hats = [
       "en_US": "Camo Mesh",
       "en_GB": "Camo Mesh",
       "es_ES": "Gorra camuflaje",
-      "es_MX": "Gorra camuflaje",
+      "es_MX": "Gorra camuflada",
       "fr_FR": "Casquette filet camouflage",
       "fr_CA": "Casquette filet camouflage"
     },
@@ -110,7 +110,7 @@ $scope.hats = [
       "en_US": "Five-Panel Cap",
       "en_GB": "Five-Panel Cap",
       "es_ES": "Gorra parches",
-      "es_MX": "Gorra parches",
+      "es_MX": "Gorra de parches",
       "fr_FR": "Casquette multi-face",
       "fr_CA": "Casquette multi-face"
     },
@@ -126,7 +126,7 @@ $scope.hats = [
       "ja_JP": "バックワードキャップ",
       "en_US": "Backwards Cap",
       "en_GB": "Backwards Cap",
-      "es_ES": "Gorra vuelta",
+      "es_ES": "Gorra invertida",
       "es_MX": "Gorra vuelta",
       "fr_FR": "Casquette à l'envers",
       "fr_CA": "Casquette à l'envers"
@@ -214,7 +214,7 @@ $scope.hats = [
       "es_ES": "Gorro con borla",
       "es_MX": "Gorro con borla",
       "fr_FR": "Bonnet à pompon",
-      "fr_CA": "Bonnet à pompon"
+      "fr_CA": "Tuque à pompon"
     },
     main: "Quick Super Jump",
     brand: "Splash Mob",
@@ -229,9 +229,9 @@ $scope.hats = [
       "en_US": "Striped Beanie",
       "en_GB": "Striped Beanie",
       "es_ES": "Gorro a rayas",
-      "es_MX": "Gorro a rayas",
+      "es_MX": "Gorrito rayado",
       "fr_FR": "Bonnet à rayures",
-      "fr_CA": "Bonnet à rayures"
+      "fr_CA": "Tuque à rayures"
     },
     main: "Opening Gambit",
     brand: "Splash Mob",
@@ -297,7 +297,7 @@ $scope.hats = [
       "en_US": "Retro Specs",
       "en_GB": "Retro Specs",
       "es_ES": "Retrogafas",
-      "es_MX": "Retrogafas",
+      "es_MX": "Gafas retro",
       "fr_FR": "Lunettes rétro",
       "fr_CA": "Lunettes rétro"
     },
@@ -314,7 +314,7 @@ $scope.hats = [
       "en_US": "Pilot Goggles",
       "en_GB": "Pilot Goggles",
       "es_ES": "Gafas de piloto",
-      "es_MX": "Gafas de piloto",
+      "es_MX": "Gafas de aviador",
       "fr_FR": "Lunettes d'aviateur",
       "fr_CA": "Lunettes d'aviateur"
     },
@@ -333,7 +333,7 @@ $scope.hats = [
       "es_ES": "Gafas tintadas",
       "es_MX": "Gafas tintadas",
       "fr_FR": "Lunettes colorées",
-      "fr_CA": "Lunettes colorées"
+      "fr_CA": "Lunettes teintées"
     },
     main: "Last-Ditch Effort",
     brand: "Zekko",
@@ -365,9 +365,9 @@ $scope.hats = [
       "en_US": "Fake Contacts",
       "en_GB": "Fake Contacts",
       "es_ES": "Lentillas sin graduación",
-      "es_MX": "Lentillas sin graduación",
+      "es_MX": "Lentes de contacto sin graduación",
       "fr_FR": "Lentilles sans correction",
-      "fr_CA": "Lentilles sans correction"
+      "fr_CA": "Faux verres correcteurs"
     },
     main: "Special Charge Up",
     brand: "Tentatek",
@@ -382,9 +382,9 @@ $scope.hats = [
       "en_US": "18K Aviators",
       "en_GB": "18K Aviators",
       "es_ES": "Gafas aviador oro",
-      "es_MX": "Gafas aviador oro",
+      "es_MX": "Gafas aviador retro",
       "fr_FR": "Lunettes de soleil 18 carats",
-      "fr_CA": "Lunettes de soleil 18 carats"
+      "fr_CA": "Lunettes de soleil 18 ct"
     },
     main: "Last-Ditch Effort",
     brand: "Rockenberg",
@@ -416,7 +416,7 @@ $scope.hats = [
       "en_US": "Safari Hat",
       "en_GB": "Safari Hat",
       "es_ES": "Sombrero camuflaje",
-      "es_MX": "Sombrero camuflaje",
+      "es_MX": "Sombrero buscatesoros",
       "fr_FR": "Chapeau de brousse",
       "fr_CA": "Chapeau de brousse"
     },
@@ -450,9 +450,9 @@ $scope.hats = [
       "en_US": "Blowfish Bell Hat",
       "en_GB": "Blowfish Bell Hat",
       "es_ES": "Sombrero de campana",
-      "es_MX": "Sombrero de campana",
+      "es_MX": "Sombrero cloché",
       "fr_FR": "Cloche Friture",
-      "fr_CA": "Cloche Friture"
+      "fr_CA": "Cloche Arki"
     },
     main: "Ink Recovery Up",
     brand: "Firefin",
@@ -484,7 +484,7 @@ $scope.hats = [
       "en_US": "Straw Boater",
       "en_GB": "Straw Boater",
       "es_ES": "Sombrero de paja",
-      "es_MX": "Sombrero de paja",
+      "es_MX": "Canotier",
       "fr_FR": "Canotier",
       "fr_CA": "Canotier"
     },
@@ -552,7 +552,7 @@ $scope.hats = [
       "en_US": "Noise Cancelers",
       "en_GB": "Noise Cancelers",
       "es_ES": "Cascos antirruido",
-      "es_MX": "Cascos antirruido",
+      "es_MX": "Auriculares antirruido",
       "fr_FR": "Casque DJ",
       "fr_CA": "Casque DJ"
     },
@@ -586,9 +586,9 @@ $scope.hats = [
       "en_US": "FishFry Visor",
       "en_GB": "FishFry Visor",
       "es_ES": "Visera de marca",
-      "es_MX": "Visera de marca",
+      "es_MX": "Visera Sofrito",
       "fr_FR": "Visière Friture",
-      "fr_CA": "Visière Friture"
+      "fr_CA": "Visière Arki"
     },
     main: "Special Charge Up",
     brand: "Firefin",
@@ -605,7 +605,7 @@ $scope.hats = [
       "es_ES": "Visera transparente",
       "es_MX": "Visera transparente",
       "fr_FR": "Visière bronzette",
-      "fr_CA": "Visière bronzette"
+      "fr_CA": "Visière orange"
     },
     main: "Sub Power Up",
     brand: "Tentatek",
@@ -637,8 +637,8 @@ $scope.hats = [
       "en_US": "Bike Helmet",
       "en_GB": "Bike Helmet",
       "es_ES": "Casco ciclista",
-      "es_MX": "Casco ciclista",
-      "fr_FR": "Casque de cycliste",
+      "es_MX": "Casco de ciclista",
+      "fr_FR": "Casque de vélo",
       "fr_CA": "Casque de cycliste"
     },
     main: "Ink Recovery Up",
@@ -654,9 +654,9 @@ $scope.hats = [
       "en_US": "Visor Skate Helmet",
       "en_GB": "Visor Skate Helmet",
       "es_ES": "Casco skate con visera",
-      "es_MX": "Casco skate con visera",
+      "es_MX": "Casco de patinador + visera",
       "fr_FR": "Casque de skate pro",
-      "fr_CA": "Casque de skate pro"
+      "fr_CA": "Casque de planchiste pro"
     },
     main: "Last-Ditch Effort",
     brand: "Skalop",
@@ -705,9 +705,9 @@ $scope.hats = [
       "en_US": "Paintball Mask",
       "en_GB": "Paintball Mask",
       "es_ES": "Máscara protectora",
-      "es_MX": "Máscara protectora",
+      "es_MX": "Visor de paintball",
       "fr_FR": "Masque motocross",
-      "fr_CA": "Masque motocross"
+      "fr_CA": "Masque protecteur"
     },
     main: "Comeback",
     brand: "Forge",
@@ -722,7 +722,7 @@ $scope.hats = [
       "en_US": "Skull Bandana",
       "en_GB": "Skull Bandana",
       "es_ES": "Pañuelo calavera",
-      "es_MX": "Pañuelo calavera",
+      "es_MX": "Pañuelo colmillos",
       "fr_FR": "Bandana crâne",
       "fr_CA": "Bandana crâne"
     },
@@ -824,7 +824,7 @@ $scope.hats = [
       "en_US": "Squash Headband",
       "en_GB": "Squash Headband",
       "es_ES": "Cinta squash",
-      "es_MX": "Cinta squash",
+      "es_MX": "Cinta de squash",
       "fr_FR": "Bandeau de squash",
       "fr_CA": "Bandeau de squash"
     },
@@ -841,7 +841,7 @@ $scope.hats = [
       "en_US": "Tennis Headband",
       "en_GB": "Tennis Headband",
       "es_ES": "Cinta tenis",
-      "es_MX": "Cinta tenis",
+      "es_MX": "Cinta de tenis",
       "fr_FR": "Bandeau de tennis",
       "fr_CA": "Bandeau de tennis"
     },
@@ -858,7 +858,7 @@ $scope.hats = [
       "en_US": "Soccer Headband",
       "en_GB": "Soccer Headband",
       "es_ES": "Cinta fútbol",
-      "es_MX": "Cinta fútbol",
+      "es_MX": "Cinta futbolista",
       "fr_FR": "Bandeau de foot",
       "fr_CA": "Bandeau de foot"
     },
@@ -892,9 +892,9 @@ $scope.hats = [
       "en_US": "Squid Hairclip",
       "en_GB": "Squid Hairclip",
       "es_ES": "Horquilla calamar",
-      "es_MX": "Horquilla calamar",
+      "es_MX": "Pasador de calamar",
       "fr_FR": "Barrette seiche",
-      "fr_CA": "Barrette seiche"
+      "fr_CA": "Barrette calmar"
     },
     main: "Swim Speed Up",
     brand: "amiibo",
@@ -909,7 +909,7 @@ $scope.hats = [
       "en_US": "Samurai Helmet",
       "en_GB": "Samurai Helmet",
       "es_ES": "Casco samurái",
-      "es_MX": "Casco samurái",
+      "es_MX": "Casco de samurái",
       "fr_FR": "Casque de samouraï",
       "fr_CA": "Casque de samouraï"
     },
@@ -926,9 +926,9 @@ $scope.hats = [
       "en_US": "Power Mask",
       "en_GB": "Power Mask",
       "es_ES": "Tecnomáscara",
-      "es_MX": "Tecnomáscara",
+      "es_MX": "Máscara futurista",
       "fr_FR": "Casque méca",
-      "fr_CA": "Casque méca"
+      "fr_CA": "Casque futuriste"
     },
     main: "Bomb Defense Up",
     brand: "amiibo",
@@ -994,9 +994,9 @@ $scope.hats = [
       "en_US": "Hero Headset Replica",
       "en_GB": "Hero Headset Replica",
       "es_ES": "Auriculares de élite (réplica)",
-      "es_MX": "Auriculares de élite (réplica)",
+      "es_MX": "Auriculares de élite réplica",
       "fr_FR": "Casque héroïque (réplique)",
-      "fr_CA": "Casque héroïque (réplique)"
+      "fr_CA": "Casque héroïque (rép.)"
     },
     main: "Run Speed Up",
     brand: "Cuttlegear",
@@ -1011,9 +1011,9 @@ $scope.hats = [
       "en_US": "Armor Helmet Replica",
       "en_GB": "Armor Helmet Replica",
       "es_ES": "Casco reforzado (réplica)",
-      "es_MX": "Casco reforzado (réplica)",
+      "es_MX": "Casco armadura réplica",
       "fr_FR": "Casque encrifugé (réplique)",
-      "fr_CA": "Casque encrifugé (réplique)"
+      "fr_CA": "Casque encrifugé (rép.)"
     },
     main: "Tenacity",
     brand: "Cuttlegear",
