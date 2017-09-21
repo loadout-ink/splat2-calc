@@ -99,7 +99,7 @@ angular.module('splatApp').skills = function ($scope) {
         "es_ES": "Impermeabilidad",
         "es_MX": "Impermeabilidad",
         "fr_FR": "Pieds au sec",
-        "fr_CA": "Pieds au sec",
+        "fr_CA": "Imperméabilité",
         "de_DE": "Tintentoleranz +"
       },
       image:"../common/assets/img/skills/OpInkEffect_Reduction.png",
@@ -142,7 +142,7 @@ angular.module('splatApp').skills = function ($scope) {
         "en_US": "Quick Respawn",
         "en_GB": "Quick Respawn",
         "es_ES": "Retorno exprés",
-        "es_MX": "Retorno exprés",
+        "es_MX": "Regeneración rapida",
         "fr_FR": "Sans temps morts",
         "fr_CA": "Sans temps mort",
         "de_DE": "Schnelle Rückkehr"
@@ -267,7 +267,7 @@ angular.module('splatApp').skills = function ($scope) {
         "es_ES": "Ventaja",
         "es_MX": "Tenacidad",
         "fr_FR": "Ténacité",
-        "fr_CA": "Justice",
+        "fr_CA": "Ténacité",
         "de_DE": "Zähigkeit"
       },
       image:"../common/assets/img/skills/MinorityUp.png",
@@ -315,7 +315,7 @@ angular.module('splatApp').skills = function ($scope) {
         "es_ES": "Represalia",
         "es_MX": "Resentimiento",
         "fr_FR": "Revanche",
-        "fr_FR": "Revanche",
+        "fr_FR": "Vengeance",
         "de_DE": "Vertgeltung"
       },
       image:"../common/assets/img/skills/DeathMarking.png",

@@ -7,7 +7,7 @@ angular.module('splatApp').subs = function ($scope) {
         "en_US": "Splat Bomb",
         "en_GB": "Splat Bomb",
         "es_ES": "Bomba básica",
-        "es_MX": "Bomba básica",
+        "es_MX": "Plasbomba",
         "fr_FR": "Bombe splash",
         "fr_CA": "Bombe splash",
         "de_DE": "Klecksbombe"
@@ -27,7 +27,7 @@ angular.module('splatApp').subs = function ($scope) {
         "en_US": "Burst Bomb",
         "en_GB": "Burst Bomb",
         "es_ES": "Bomba rápida",
-        "es_MX": "Bomba rápida",
+        "es_MX": "Globo entintado",
         "fr_FR": "Bombe ballon",
         "fr_CA": "Bombe ballon",
         "de_DE": "Insta-Bombe"
@@ -48,7 +48,7 @@ angular.module('splatApp').subs = function ($scope) {
         "en_US": "Suction Bomb",
         "en_GB": "Suction Bomb",
         "es_ES": "Bomba ventosa",
-        "es_MX": "Bomba ventosa",
+        "es_MX": "Bomba pegajosa",
         "fr_FR": "Bombe gluante",
         "fr_CA": "Bombe gluante",
         "de_DE": "Haftbombe"
@@ -108,9 +108,9 @@ angular.module('splatApp').subs = function ($scope) {
         "en_US": "Ink Mine",
         "en_GB": "Ink Mine",
         "es_ES": "Bomba Trampa",
-        "es_MX": "Bomba Trampa",
+        "es_MX": "Mina de tinta",
         "fr_FR": "Mine",
-        "fr_CA": "Mine",
+        "fr_CA": "Mine d'encre",
         "de_DE": "Tintenmine"
       },
       image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
@@ -146,7 +146,7 @@ angular.module('splatApp').subs = function ($scope) {
         "es_ES": "Aspersor",
         "es_MX": "Aspersor",
         "fr_FR": "Fontaine",
-        "fr_CA": "Fontaine",
+        "fr_CA": "Gicleur",
         "de_DE": "Sprinkler"
       },
       image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
