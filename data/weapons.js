@@ -236,7 +236,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
-          baseSpeed: 0.72,
+          baseSpeed: 0.80,
           price: 9700,
           stats: {
             "Range": 12,
@@ -257,7 +257,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 0.8,
           speedLevel: "High",
-          baseSpeed: 0.72,
+          baseSpeed: 0.80,
           price: 12200,
           stats: {
             "Range": 12,
@@ -1221,7 +1221,6 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "./assets/img/weapons/Wst_Shooter_BlasterLightLong_00.png",
           name: "Rapid Blaster Pro",
-          unreleased: true,
           shotUnit: "shot",
           sub: "Toxic Mist",
           special: "Ink Storm",

@@ -249,9 +249,11 @@ $scope.stats = {
         case 'Suction Bomb':
         case 'Autobomb':
         case 'Point Sensor':
+        case 'Toxic Mist':
           var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
           this.label = (range * 100).toFixed(1) + '%';
           this.value = range*100;
+          this.max = 150;
           this.name = 'Sub Power (Bomb Range)';
           return (range * 100).toFixed(1);
           break;
@@ -263,6 +265,10 @@ $scope.stats = {
           break;
         case 'Splash Wall':
           this.name = 'Sub Power (Wall HP)';
+          var HP = 800 * (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (240/7))
+          this.label = (HP.toFixed(2) + " HP")
+          this.value = HP
+          this.max = 1500;
           break;
         case 'Sprinkler':
           this.name = 'Sub Power (Full-Power Duration)';
