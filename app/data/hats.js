@@ -620,9 +620,9 @@ $scope.hats = [
       "en_US": "Takoroka Visor",
       "en_GB": "Takoroka Visor",
       "es_ES": "Visera Sepioca",
-      "es_MX": "Visera Sepioca",
+      "es_MX": "Visera Pulpicka",
       "fr_FR": "Visière Cubic",
-      "fr_CA": "Visière Cubic"
+      "fr_CA": "Visière Pionic"
     },
     main: "Quick Super Jump",
     brand: "Takoroka",
@@ -790,9 +790,9 @@ $scope.hats = [
       "en_US": "Firefin Facemask",
       "en_GB": "Firefin Facemask",
       "es_ES": "Mascarilla Chokkor",
-      "es_MX": "Mascarilla Chokkor",
+      "es_MX": "Tapabocas Shachi",
       "fr_FR": "Masque Friture",
-      "fr_CA": "Masque Friture"
+      "fr_CA": "Masque Arki"
     },
     main: "Run Speed Up",
     brand: "Firefin",
@@ -860,7 +860,7 @@ $scope.hats = [
       "es_ES": "Cinta fútbol",
       "es_MX": "Cinta futbolista",
       "fr_FR": "Bandeau de foot",
-      "fr_CA": "Bandeau de foot"
+      "fr_CA": "Bandeau de soccer"
     },
     main: "Tenacity",
     brand: "Tentatek",

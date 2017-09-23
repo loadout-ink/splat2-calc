@@ -415,7 +415,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_US": "Splash-o-matic",
             "en_GB": "Splash-o-matic",
             "es_ES": "Marcador fino",
-            "es_MX": "Marcador fino",
+            "es_MX": "Plumón fino",
             "fr_FR": "Marqueur léger",
             "fr_CA": "Marqueur léger",
             "de_DE": "Fein-Disperser"
@@ -2017,10 +2017,10 @@ angular.module('splatApp').weapons = function ($scope) {
             "ja_JP": "Clash Blaster Neo",
             "en_US": "Clash Blaster Neo",
             "en_GB": "Clash Blaster Neo",
-            "es_ES": "Clash Blaster Neo",
-            "es_MX": "Clash Blaster Neo",
-            "fr_FR": "Clash Blaster Neo",
-            "fr_CA": "Clash Blaster Neo"
+            "es_ES": "Turbodevastador neo",
+            "es_MX": "Hiperlanzamotas neo",
+            "fr_FR": "Rafablaster Néo",
+            "fr_CA": "Rafalblasteur Néo"
           },
           unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
