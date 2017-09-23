@@ -12,6 +12,8 @@
 
 var it_strings = {
   // Gear section
+  // These should match the equipment screen in-game
+  "WEAPON_SLOT": "Weapon",
   "HAT_SLOT": "Head",
   "CLOTHES_SLOT": "Clothes",
   "SHOES_SLOT": "Shoes",
@@ -34,7 +36,10 @@ var it_strings = {
   "FOOTER_ABOUT": "about",
 
   // Misc. Strings
+
+  // For stats that do not work yet
   "UNAVAILABLE": "Unavailable",
+  // For weapons and gear that are not available yet
   "UNRELEASED": "Unreleased",
   //// Will be used in tables - keep these short
   "KID_FORM": "Kid",
@@ -167,6 +172,16 @@ var it_strings = {
   "UI_VERIFY": "Are you sure?",
   "UI_SAVED_LOADOUTS": "Saved Loadouts",
   "UI_DELETE_ALL": "Delete All Loadouts",
+
+  // For Google and other search engines
+  //// This will appear when loadout.ink appears in search results.
+  //// Please write a short description for loadout.ink. It should be two to three sentences.
+  "PAGE_DESCRIPTION": "Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.",
+
+  // Page Title
+  //// This will appear in the browser's title for the webpage, and on search results.
+  //// It should start with "loadout.ink" and then an even shorter description than the one above.
+  "PAGE_TITLE": "loadout.ink - Gear Planner/Stat Calculator for Splatoon 2",
 
   // This goes in the "about" popup.
   /// Leave the HTML tags alone.
