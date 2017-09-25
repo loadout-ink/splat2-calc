@@ -1,37 +1,29 @@
 var gulp = require('gulp');
 var translate = require('gulp-translator');
 var cachebust = require('gulp-cache-bust');
+var del = require('del');
 
-var localized_dirs = [
-  'dist/en_US/',
-  'dist/ja_JP/',
-  'dist/fr_FR/',
-  'dist/fr_CA/',
-  'dist/es_ES/',
-  'dist/es_MX/'
-]
+var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX'];
 
-gulp.task('stage', function() {
-  gulp.src(['common/*','common/**'])
-    .pipe(gulp.dest('dist/common'))
-  return gulp.src(['app/*','app/**'])
-    .pipe(gulp.dest('dist/staging'))
+gulp.task('clean', function() {
+  return del([
+    'dist/**/*'
+  ])
 })
 
-gulp.task('localize_prep', ['stage'], function() {
-  gulp.src(['dist/staging/*','dist/staging/**'])
-    .pipe(gulp.dest('dist/en_US'))
-    .pipe(gulp.dest('dist/ja_JP'))
-    .pipe(gulp.dest('dist/fr_FR'))
-    .pipe(gulp.dest('dist/fr_CA'))
-    .pipe(gulp.dest('dist/es_ES'))
-    .pipe(gulp.dest('dist/es_MX'))
+
+gulp.task('prep', ['clean'], function() {
+  gulp.src(['common/*','common/**'])
+    .pipe(gulp.dest('dist/common'))
+  translations.forEach(function(lang) {
+    gulp.src(['app/*','app/**'])
+      .pipe(gulp.dest('dist/' + lang))
+  })
   return gulp.src(['common/*', 'common/**'])
     .pipe(gulp.dest('dist/common'))
 })
 
-gulp.task('localize', ['localize_prep'], function() {
-  var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX'];
+gulp.task('localize', ['prep'], function() {
   var options = {
     localeDirectory: 'locale/',
     localeExt: '.json'
@@ -39,7 +31,7 @@ gulp.task('localize', ['localize_prep'], function() {
 
   translations.forEach(function(translation){
     options.lang = translation;
-    gulp.src(['app/index.html', 'app/modals.js', 'app/stats.js'])
+    gulp.src(['app/*.html', 'app/*.js'])
       .pipe(
         translate(options)
         .on('error', function(){
@@ -60,13 +52,13 @@ gulp.task('localize', ['localize_prep'], function() {
 
 
 gulp.task('bust', function() {
-  return localized_dirs.forEach(function(dir) {
-  gulp.src(dir + 'index.html')
+  return translations.forEach(function(lang) {
+  gulp.src('dist/' + lang + '/index.html')
     .pipe(cachebust({
       type: 'MD5'
     }))
-      .pipe(gulp.dest(dir))
+      .pipe(gulp.dest('dist/' + lang))
   })
 })
 
-gulp.task('default', ['stage', 'localize_prep', 'localize'])
+gulp.task('default', ['clean', 'prep', 'localize'])
