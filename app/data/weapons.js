@@ -57,7 +57,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Liquéficateur ultra modifié",
             "de_DE": "Junior-Kleckser Plus"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Autobomb",
           special: "Ink Storm",
@@ -1870,7 +1869,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Turboblasteur pro",
             "de_DE": "Rapid Blaster Pro"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Toxic Mist",
           special: "Ink Storm",
@@ -2877,7 +2875,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
-          baseSpeed: 0.64,
+          baseSpeed: 0.66,
           price: 7800,
           stats: {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -2907,7 +2905,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
-          baseSpeed: 0.64,
+          baseSpeed: 0.66,
           price: 8600,
           stats: {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -2929,7 +2927,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Badigeonneur chic",
             "de_DE": "Splatling Deko"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
           sub: "Splash Wall",
           special: "Bubble Blower",
@@ -2938,7 +2935,7 @@ angular.module('splatApp').weapons = function ($scope) {
           inkSaver: "Middle",
           inkPerShot: 22.5,
           speedLevel: "Middle",
-          baseSpeed: 0.64,
+          baseSpeed: 0.66,
           price: 9600,
           stats: {
             "{{ SHELDON_RANGE | translate }}": 78,

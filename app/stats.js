@@ -245,6 +245,7 @@ $scope.stats = {
           this.value = range*100;
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
+          this.max = 150;
           return (range * 100).toFixed(1);
           break;
         case 'Curling Bomb':
@@ -258,6 +259,10 @@ $scope.stats = {
         case 'Splash Wall':
           this.name = "{{ STAT_SUB_POWER_WALL | translate }}";
           this.label = "{{ UNAVAILABLE | translate }}";
+          var HP = 800 * (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (240/7))
+          this.value = HP;
+          this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
+          this.max = 1500;
           break;
         case 'Sprinkler':
           this.name = "{{ STAT_SUB_POWER_SPRINKLER | translate }}";
