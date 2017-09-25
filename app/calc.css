@@ -461,7 +461,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 
 #utils {
-  padding-top:10px;
+  padding-top:15px;
   height: 115px;
   text-align: center;
   font-family: "Splat2", sans-serif;

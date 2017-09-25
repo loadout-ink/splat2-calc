@@ -173,7 +173,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_US": "Splattershot Pro",
             "en_GB": "Splattershot Pro",
             "es_ES": "Lanzatintas plus",
-            "es_MX": "Lanzatintas plus",
+            "es_MX": "Rociador Pro",
             "fr_FR": "Liquidateur pro",
             "fr_CA": "Liquéficateur pro",
             "de_DE": "Profi-Kleckser"
@@ -1639,9 +1639,9 @@ angular.module('splatApp').weapons = function ($scope) {
         "en_US": "Blasters",
         "en_GB": "Blasters",
         "es_ES": "Devastadors",
-        "es_MX": "Devastadors",
+        "es_MX": "Lanzamotas",
         "fr_FR": "Éclablaster",
-        "fr_CA": "Éclablaster",
+        "fr_CA": "Éclablasteur",
         "de_DE": "Blasters"
       },
       id: 4,
