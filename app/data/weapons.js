@@ -838,10 +838,10 @@ angular.module('splatApp').weapons = function ($scope) {
         "ja_JP": "マニューバー",
         "en_US": "Dualies",
         "en_GB": "Dualies",
-        "es_ES": "Dualies",
-        "es_MX": "Dualies",
-        "fr_FR": "Dualies",
-        "fr_CA": "Dualies"
+        "es_ES": "Clase Dual",
+        "es_MX": "Clase Dual",
+        "fr_FR": "Armes doubles",
+        "fr_CA": "Armes doubles"
       },
       id: 1,
       weapons: [
@@ -852,8 +852,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "ja_JP": "スプラマニューバー",
             "en_US": "Splat Dualies",
             "en_GB": "Splat Dualies",
-            "es_ES": "Dual diffusor",
-            "es_MX": "Dual diffusor",
+            "es_ES": "Difusor dual",
+            "es_MX": "Difusor dual",
             "fr_FR": "Double encreur",
             "fr_CA": "Double encreur",
             "de_DE": "Klecks-Doppler"
@@ -2046,10 +2046,10 @@ angular.module('splatApp').weapons = function ($scope) {
         "ja_JP": "シェルター",
         "en_US": "Brellas",
         "en_GB": "Brellas",
-        "es_ES": "Brellas",
-        "es_MX": "Brellas",
-        "fr_FR": "Brellas",
-        "fr_CA": "Brellas"
+        "es_ES": "Paratintas",
+        "es_MX": "Paratintas",
+        "fr_FR": "Para-encre",
+        "fr_CA": "Para-encre"
       },
       id: 5,
       weapons: [
@@ -2062,8 +2062,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Splat Brella",
             "es_ES": "Paratintas",
             "es_MX": "Paratintas",
-            "fr_FR": "Splat Brella",
-            "fr_CA": "Splat Brella",
+            "fr_FR": "Para-encre",
+            "fr_CA": "Para-encre",
             "de_DE": "Parapluviator"
           },
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
@@ -2455,8 +2455,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Firefin Splat Charger",
             "es_ES": "Cargatintas Chokkor",
             "es_MX": "Cargatintas Shachi",
-            "fr_FR": "Firefin Splat Charger",
-            "fr_CA": "Firefin Splat Charger",
+            "fr_FR": "Concentraceur griffé",
+            "fr_CA": "Concentraceur Arki",
             "de_DE": "Rilax-Klecks-Konzentrator"
           },
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
@@ -2515,8 +2515,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_GB": "Firefin Splatterscope",
             "es_ES": "Cargatintas con mira Chokkor",
             "es_MX": "Telecargatintas Shachi",
-            "fr_FR": "Firefin Splatterscope",
-            "fr_CA": "Firefin Splatterscope",
+            "fr_FR": "Concentraceur zoom griffé",
+            "fr_CA": "Concentraceur zoom Arki",
             "de_DE": "Rilax-Ziel-Konzentrator"
           },
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
