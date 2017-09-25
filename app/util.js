@@ -7,7 +7,7 @@ function filter_available(item) {
 }
 
 var language_map = {
-  "en_US": "en",
+  "en_US": "en-us",
   "fr_FR": "fr",
   "ja_JP": "ja",
   "fr_CA": "fr-ca",
