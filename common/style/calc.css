@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Splat1";
-  src: url(../common/assets/fonts/Splatfont.woff) format("woff"),
-  url(../common/assets/fonts/Splatfont.ttf)
+  src: url(../assets/fonts/Splatfont.woff) format("woff"),
+  url(../assets/fonts/Splatfont.ttf)
 }
 
 @font-face {
   font-family: "Splat2";
-  src: url(../common/assets/fonts/Splatfont2.woff) format("woff"),
-  url(../common/assets/fonts/Splatfont2.ttf)
+  src: url(../assets/fonts/Splatfont2.woff) format("woff"),
+  url(../assets/fonts/Splatfont2.ttf)
 }
 
 html {
@@ -19,7 +19,7 @@ html {
 body {
   margin-bottom: 50px;
   background: #222 !important;
-  background-image: url("../common/assets/img/ui/bg-primary.jpg") !important;
+  background-image: url("../assets/img/ui/bg-primary.jpg") !important;
 }
 
 body:not(.show-focus-outlines) button:focus,
@@ -45,7 +45,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .purplestripes { background: repeating-linear-gradient( 45deg, #842cd6, #842cd6 20px, #6b01bb 20px, #6b01bb 40px ); }
 
 #splat-header {
-  background-image:  url("../common/assets/img/ui/headerbg.png"), url("../common/assets/img/ui/noise.png"), repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ) !important;
+  background-image:  url("../assets/img/ui/headerbg.png"), url("../assets/img/ui/noise.png"), repeating-linear-gradient( 45deg, #222, #222 30px, #444 30px, #444 60px ) !important;
   background-repeat: repeat-x;
   box-shadow: 0 2px 10px 2px #000;
   z-index:1 !important ;
@@ -114,7 +114,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #abilitybox {
   background: #555;
-  background-image: url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png"), url("../common/assets/img/ui/zig-zag.png");
+  background-image: url("../assets/img/ui/zig-zag.png"), url("../assets/img/ui/zig-zag.png"), url("../assets/img/ui/zig-zag.png");
   background-size: 80px 80px;
   padding-top:15px;
   text-align:center;
@@ -149,7 +149,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   margin-top: 9px;
   font-family: "Splat2", sans-serif;
   background: #c9c9c9;
-  background-image: url("../common/assets/img/ui/bg-dots.png"), url("../common/assets/img/ui/bg-spots.png");
+  background-image: url("../assets/img/ui/bg-dots.png"), url("../assets/img/ui/bg-spots.png");
   background-size: 50px 50px, 300px 300px;
 }
 
@@ -236,7 +236,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: #ffffee;
-  background-image: url('../common/assets/img/ui/bg-spots.png');
+  background-image: url('../assets/img/ui/bg-spots.png');
   background-size: 80px auto;
 }
 
@@ -528,7 +528,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   height:260px;
   overflow-y:scroll;
   background: rgba(0,0,0,0.2);
-  background-image: url("../common/assets/img/ui/bg-dots.png");
+  background-image: url("../assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
   background-attachment:local;
   border-bottom: none;
@@ -564,7 +564,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-top:5px;
   padding-bottom:2px;
   background: rgba(20,20,20,0.8);
-  background-image: url("../common/assets/img/ui/bg-dots.png");
+  background-image: url("../assets/img/ui/bg-dots.png");
   background-size: 50px 50px;
   font-family: "Splat1", sans-serif;
   font-size: 14pt;
