@@ -1,0 +1,194 @@
+// TRANSLATION INSTRUCTIONS
+// * Don't translate locale variables - just their values
+//// (i.e. "HAT_SLOT": "<translation here>")
+// * Don't translate comments (like these)
+// * Don't translate variables (double bracket words) within phrases ("{{value}} HP")
+//// Move the variable to where it makes sense in the translation.
+// * Try not to make things much longer than necessary
+// * Use in-game terms where possible
+// * "Distance Units"/"Distance Units per Frame" should always be translated the same way
+//// You can call them something different, but make sure it can be abbreviated as a unit!
+//// (Distance Units/frame -> DU/f)
+
+var it_strings = {
+  // Gear section
+  // These should match the equipment screen in-game
+  "WEAPON_SLOT": "Arma",
+  "HAT_SLOT": "Accessorio",
+  "CLOTHES_SLOT": "Vestito",
+  "SHOES_SLOT": "Scarpe",
+
+  // Stats section
+  "STATS_HEADER": "Statistiche",
+  "INACCURATE_DISCLAIMER": "Le statistiche potrebbero non essere precise a causa della mancanza di dati.",
+  "BOMB_HEADER": "Danno da bombe",
+  // Will be used in tables - keep these short
+  "BOMB_TABLE_BOMB": "Bomba",
+  "TABLE_DIRECT": "In pieno",
+  "TABLE_NEAR": "Vicino",
+  "TABLE_FAR": "Lontano",
+  "TABLE_HIT": "Colpito",
+  "SPECIAL_HEADER": "Danno da Speciale",
+  "SPECIAL_TABLE_SPECIAL": "Speciale",
+
+  // Footer
+  "FOOTER_COPYRIGHT": "Splatoon e tutti i materiali/copyright in questa pagina sono proprietà di Nintendo.",
+  "FOOTER_ABOUT": "Informazioni",
+
+  // Misc. Strings
+
+  // For stats that do not work yet
+  "UNAVAILABLE": "Non funzionante",
+  // For weapons and gear that are not available yet
+  "UNRELEASED": "Non disponibile",
+  //// Will be used in tables - keep these short
+  "KID_FORM": "Ragazzo",
+  "SQUID_FORM": "Calamaro",
+
+  // Popup headers/buttons
+  "UI_WEAPON_PICKER": "Scegli l’arma",
+  "UI_GEAR_PICKER": "Scegli l’abbigliamento",
+  "UI_ABOUT": "Informazioni",
+  "UI_CHANGELOG": "Cosa c’è di nuovo?",
+  "UI_OK": "OK",
+  "UI_CANCEL": "Annulla",
+  "UI_CONFIRM_CASUAL": "Capito!",
+
+  // Tooltips for utility buttons
+  "UI_COPY_LINK": "Copia link",
+  "UI_SCREENSHOT_MODE": "Modalità screenshot",
+  "UI_CLEAR_ABILITIES": "Azzera abilità",
+  "UI_CLEAR_ALL": "Azzera tutto",
+  // Tooltips for special icons
+  "UI_NONSTANDARD_SPLATNET": "Non-standard. Solo su SplatNet",
+  "UI_NOT_POSSIBLE": "Non utilizzabile con l’attuale principale",
+
+  // Stats - these appear over the stat bars.
+  // If there is an asterisk (*), leave it in after the stat name.
+  "STAT_SWIM_SPEED": "Velocità in nuoto",
+  "STAT_RUN_SPEED": "Velcità di corsa",
+  "STAT_RUN_SPEED_RESIST": "Vel. Corsa (Inchiostro nemico)",
+  "STAT_RUN_SPEED_FIRING": "Vel. Corsa (Sparando)",
+  "STAT_RUN_SPEED_ROLLING": "Corsa (Rotolando)",
+  "STAT_RECOVERY_SQUID": "Vel. recupero inchiostro (Calamaro)",
+  "STAT_RECOVERY_KID": "Vel. recupero inchiostro (Ragazzo)",
+  "STAT_SAVER_MAIN": "Consumo inchiostro (Principale)",
+  "STAT_SAVER_SUB": "Consumo inchiostro (Secondaria)",
+  "STAT_SPECIAL_CHARGE": "Vel. caricamento speciale",
+  "STAT_SPECIAL_SAVER": "Risparmio speciale *",
+  "STAT_SPECIAL_POWER": "Potere speciale",
+  "STAT_SPECIAL_POWER_UNKNOWN": "Potere speciale (???)",
+  "STAT_SPECIAL_POWER_DURATION": "Potere speciale (Durata)",
+  "STAT_SPECIAL_POWER_BALLER": "Potere speciale (Resistenza Cromosfera)",
+  "STAT_SPECIAL_POWER_TENTA": "Potere speciale (Dimensione reticolo)",
+  "STAT_SPECIAL_POWER_SPLASHDOWN": "Potere speciale (Diametro splash)",
+  "STAT_SPECIAL_POWER_BUBBLE": "Potere speciale (Raggio delle bolle)",
+  "STAT_SUB_POWER": "Potere secondario",
+  "STAT_SUB_POWER_RANGE": "Potere secondario (Area della bomba)",
+  "STAT_SUB_POWER_CURLING": "Potere secondario (Velocità della bomba)",
+  "STAT_SUB_POWER_MINE": "Potere secondario (Raggio della mina)",
+  "STAT_SUB_POWER_WALL": "Potere secondario (Resistenza del muro)",
+  "STAT_SUB_POWER_SPRINKLER": "Potere secondario (Durata a piena potenza)",
+  "STAT_SUB_POWER_BEAKON": "Potere secondario (Velocità di salto al trasportatore)",
+  "STAT_JUMP_SQUID": "Tempo super salto (Calamaro)",
+  "STAT_JUMP_KID": "Tempo super salto (Ragazzo)",
+  "STAT_QUICK_RESPAWN": "Tempo rientro rapido",
+  "STAT_QUICK_RESPAWN_PUNISHER": "Tempo rientro rapido *",
+  "STAT_TRACKING_TIME": "Tempo di rilevamento",
+
+  // Labels that go on the stat bars themselves. Keep these SHORT!
+  "LABEL_DISTANCE_PER_FRAME": "{{value}} UD/f",
+  "LABEL_PERCENT": "{{value}}%",
+  // LABEL_MAIN_COST is combined with "SHOT_UNIT" values below
+  "LABEL_MAIN_COST": "{{value}}% tanica/{{unit}}",
+  "LABEL_SUB_COST": "{{value}}% tanica",
+  "LABEL_TIME": "{{value}}s",
+  "LABEL_HP": "{{value}} HP",
+
+  // Tooltips for stats
+  "DESC_PUNISHER_DISCLAIMER": "Gli effetti del Castigo non sono ancora completamente chiari.",
+  "DESC_TRACKING": "Point Sensor/Ink Mine duration",
+  "DESC_RECOVERY_TIME": "{{value}}s da vuoto a pieno",
+  "DESC_MAIN_COST": "Vuoto in {{totalShots}} ({{reduction}}% riduzione)",
+  "DESC_SUB_COST": "{{reduction}}% riduzione",
+  "DESC_SPECIAL_COST": "{{value}}p per la speciale",
+  "DESC_DISTANCE": "{{value}} Unità Distanza",
+  "DESC_QUICK_RESPAWN": "Tempo di rientro quando splattato senza splattare nessuno.",
+  "UNIT_DISTANCE_UNITS_PER_FRAME": "Unità Distanza/Frame",
+
+  // The "unit" weapons fire in
+  // Used in phrases like "200 shots to empty"
+  "SHOT_UNIT_SHOT": "colpo",
+  "SHOT_UNIT_SHOT_PLURAL": "colpi",
+  "SHOT_UNIT_FLICK": "spruzzo",
+  "SHOT_UNIT_FLICK_PLURAL": "spruzzi",
+  "SHOT_UNIT_FLICK_HORIZ": "spruzzo orizzontale",
+  "SHOT_UNIT_FLICK_HORIZ_PLURAL": "Spruzzi orizzontali",
+  "SHOT_UNIT_FLICK_VERT": "spruzzo verticale",
+  "SHOT_UNIT_FLICK_VERT_PLURAL": "Spruzzi verticali",
+  "SHOT_UNIT_SLOSHER": "Secchiata",
+  "SHOT_UNIT_SLOSHER_PLURAL": "Secchiate",
+  "SHOT_UNIT_CHARGER": "Carica completa",
+  "SHOT_UNIT_CHARGER_PLURAL": "Cariche complete",
+
+  // Future feature - ink breakdown
+  //// Combined with SHOT_UNIT
+  "INK_BREAKDOWN_SHOTS_AFTER_SUB": "{{unitPlural}} dopo la secondaria: {{value}}",
+  "INK_BREAKDOWN_TOTAL_SHOTS": "Vuoto in {{value}}",
+  "INK_BREAKDOWN_INK_PER_SHOT": "{{value}}/{{unit}}",
+  "INK_BREAKDOWN_INK_PER_SECOND": "{{value}}/secondo",
+  "INK_BREAKDOWN_RECOVERY": "Tempo di recupero completo",
+
+  // Future feature - Comeback/Tenacity/
+  "HEADER_WITH_ABILITY": "Statistiche {{ability}}",
+
+  // Future feature - a few explanations
+  "UI_DISTANCE_EXPLANATION": "Unità Distanza per Frame è un’unità di misura del gioco.",
+  "UI_DISTANCE_EQUIVALENT": "Ogni linea nell’area di prova sono 50 Unità Distanza.",
+  "UI_FRAMES_EXPLANATION": "In un secondo ci sono 60 frame.",
+
+  // Future feature - options
+  "UI_OPTIONS": "Options",
+  "UI_ENABLE_UNRELEASED": "Abilità armi non disponibili",
+  "UI_UNRELEASED_DISCLAIMER": "Le statistiche delle armi non disponibili potrebbero non essere accurate.",
+  "UI_UNRELEASED_WEAPONS": "Armi non disponibili",
+  // Future feature - gear tabs
+  "UI_SPLATNET_GEAR": "Abbigliamento SplatNet",
+  "UI_STANDARD_GEAR": "Abbigliamento standard",
+  "UI_UNRELEASED_GEAR": "Abbigliamento non disponibile",
+  // Future feature - set saving
+  "UI_LOADOUT": "Loadout",
+  "UI_SAVE_LOADOUT": "Salva Loadout",
+  "UI_LOAD_LOADOUT": "Carica Loadout",
+  "UI_SAVE": "Salva",
+  "UI_LOAD": "Carica",
+  "UI_NAME": "Nome",
+  "UI_ENTER_NAME": "Inserisci un nome per questo Loadout:",
+  "UI_ERROR_NAME_TOO_LONG": "Il nome non dovrebbe superare i 20 caratteri.",
+  "UI_ERROR_DUPLICATE_NAME": "Hai già un Loadout con questo nome.",
+  "UI_ERROR_INVALID_NAME": "Scegli un altro nome.",
+  "UI_DELETE_LOADOUT": "Cancella Loadout",
+  "UI_DELETE": "Cancella",
+  "UI_VERIFY": "Sei proprio sicuro?",
+  "UI_SAVED_LOADOUTS": "Loadout salvati",
+  "UI_DELETE_ALL": "Cancella tutti i Loadouts",
+
+  // For Google and other search engines
+  //// This will appear when loadout.ink appears in search results.
+  //// Please write a short description for loadout.ink. It should be two to three sentences.
+  "PAGE_DESCRIPTION": "Configuratore abbigliamento e calcolatore statistiche per Splatoon 2. Crea combinazioni di abbigliamento e controlla le statistiche.",
+
+  // Page Title
+  //// This will appear in the browser's title for the webpage, and on search results.
+  //// It should start with "loadout.ink" and then an even shorter description than the one above.
+  "PAGE_TITLE": "loadout.ink - Configuratore abbigliamento e calcolatore statistiche per Splatoon 2",
+
+  // This goes in the "about" popup.
+  /// Leave the HTML tags alone.
+  "UI_ABOUT_CONTENT": `Realizzato principalmente con Angular 1.6.5 e Bootstrap 3.<br><br>
+  Questo strumento è stato sviluppato usando dati e asset recuperati da <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>, e con il contributo delle informazioni fornite da diversi membri della Inkademy e trovate sui server Discord degli sviluppatori id Splatoon.
+  <br><br>Grazie a tutti quelli che mi hanno aiutato e fornito dati!<br><br>
+  Molte delle formule usate si possono approfondire su <a href="https://splatoonwiki.org/wiki/User:Heddy/Charts" target="_blank">Heddy’s charts</a> on Inkipedia.<br><br>
+  Per richieste funzionalità, segnalazione di bug e suggerimenti, aprire una issue del progetto <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">GitHub</a>. <br>
+  Potete anche raggiungermi sull’account <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a> del progetto.`
+}
