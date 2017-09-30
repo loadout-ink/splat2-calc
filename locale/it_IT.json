@@ -123,13 +123,13 @@ var it_strings = {
   "SHOT_UNIT_FLICK": "spruzzo",
   "SHOT_UNIT_FLICK_PLURAL": "spruzzi",
   "SHOT_UNIT_FLICK_HORIZ": "spruzzo orizzontale",
-  "SHOT_UNIT_FLICK_HORIZ_PLURAL": "Spruzzi orizzontali",
+  "SHOT_UNIT_FLICK_HORIZ_PLURAL": "spruzzi orizzontali",
   "SHOT_UNIT_FLICK_VERT": "spruzzo verticale",
-  "SHOT_UNIT_FLICK_VERT_PLURAL": "Spruzzi verticali",
-  "SHOT_UNIT_SLOSHER": "Secchiata",
-  "SHOT_UNIT_SLOSHER_PLURAL": "Secchiate",
-  "SHOT_UNIT_CHARGER": "Carica completa",
-  "SHOT_UNIT_CHARGER_PLURAL": "Cariche complete",
+  "SHOT_UNIT_FLICK_VERT_PLURAL": "spruzzi verticali",
+  "SHOT_UNIT_SLOSHER": "secchiata",
+  "SHOT_UNIT_SLOSHER_PLURAL": "secchiate",
+  "SHOT_UNIT_CHARGER": "carica completa",
+  "SHOT_UNIT_CHARGER_PLURAL": "cariche complete",
 
   // Future feature - ink breakdown
   //// Combined with SHOT_UNIT
