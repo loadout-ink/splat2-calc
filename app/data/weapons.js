@@ -61,7 +61,7 @@ angular.module('splatApp').weapons = function ($scope) {
           sub: "Autobomb",
           special: "Ink Storm",
           level: 4,
-          specialCost: 180,
+          specialCost: 190,
           inkSaver: "Middle",
           inkPerShot: 0.5,
           speedLevel: "High",
