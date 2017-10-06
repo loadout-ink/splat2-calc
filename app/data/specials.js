@@ -11,7 +11,7 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Multi-missile",
         "fr_CA": "Multi-missile",
         "de_DE": "Schwarmraketen",
-        "zh_HK": "マルチミサイル (飛弾)"
+        "zh_HK": "マルチミサイル (導弾)"
       },
       image: "../common/assets/img/subspe/Wsp_SuperMissile.png",
       damage: {
