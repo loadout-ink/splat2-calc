@@ -2209,6 +2209,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Seauceur héroïque (rép.)",
             "de_DE": "Helden-Schwapper Replik"
           },
+          shotUnit: "{{ SHOT_UNIT_SLOSHER | translate }}",
           sub: "Suction Bomb",
           special: "Tenta Missiles",
           level: 5,
