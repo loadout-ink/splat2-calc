@@ -10,7 +10,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Plasbomba",
         "fr_FR": "Bombe splash",
         "fr_CA": "Bombe splash",
-        "de_DE": "Klecksbombe"
+        "de_DE": "Klecksbombe",
+        "zh_HK": "スプラッシュボム (三角形)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
       cost: 70,
@@ -30,7 +31,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Globo entintado",
         "fr_FR": "Bombe ballon",
         "fr_CA": "Bombe ballon",
-        "de_DE": "Insta-Bombe"
+        "de_DE": "Insta-Bombe",
+        "zh_HK": "クイックボム (水袋)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Quick.png",
       cost: 40,
@@ -51,7 +53,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Bomba pegajosa",
         "fr_FR": "Bombe gluante",
         "fr_CA": "Bombe gluante",
-        "de_DE": "Haftbombe"
+        "de_DE": "Haftbombe",
+        "zh_HK": "キューバンボム (吸盤)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
       cost: 70,
@@ -71,7 +74,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Robobomba",
         "fr_FR": "Bombe robot",
         "fr_CA": "Bombe robot",
-        "de_DE": "Robo-Bombe"
+        "de_DE": "Robo-Bombe",
+        "zh_HK": "ロボットボム (自走式)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
       cost: 70,
@@ -91,7 +95,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Bomba deslizante",
         "fr_FR": "Bombe curling",
         "fr_CA": "Bombe curling",
-        "de_DE": "Curling-Bombe"
+        "de_DE": "Curling-Bombe",
+        "zh_HK": "カーリングボム (吸塵機)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
@@ -111,7 +116,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Mina de tinta",
         "fr_FR": "Mine",
         "fr_CA": "Mine d'encre",
-        "de_DE": "Tintenmine"
+        "de_DE": "Tintenmine",
+        "zh_HK": "トラップ (地雷)"
       },
       image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
       cost: 60,
@@ -131,7 +137,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Baliza",
         "fr_FR": "Balise de saut",
         "fr_CA": "Balise de saut",
-        "de_DE": "Sprungboje"
+        "de_DE": "Sprungboje",
+        "zh_HK": "ジャンプビーコン (雷達標志)"
       },
       image: "../common/assets/img/subspe/Wsb_Flag.png",
       cost: 75,
@@ -147,7 +154,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Aspersor",
         "fr_FR": "Fontaine",
         "fr_CA": "Gicleur",
-        "de_DE": "Sprinkler"
+        "de_DE": "Sprinkler",
+        "zh_HK": "ジャンプビーコン (淋花器)"
       },
       image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
       cost: 70,
@@ -163,7 +171,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Nebulizador",
         "fr_FR": "Brume toxique",
         "fr_CA": "Brume toxique",
-        "de_DE": "Sepitox-Nebel"
+        "de_DE": "Sepitox-Nebel",
+        "zh_HK": "ポイズンミスト (毒霧)"
       },
       image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
       cost: 70,
@@ -179,7 +188,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Rastreador",
         "fr_FR": "Détecteur",
         "fr_CA": "Détecteur",
-        "de_DE": "Detektor"
+        "de_DE": "Detektor",
+        "zh_HK": "ポイントセンサー (追跡器)"
       },
       image: "../common/assets/img/subspe/Wsb_PointSensor.png",
       cost: 60,
@@ -195,7 +205,8 @@ angular.module('splatApp').subs = function ($scope) {
         "es_MX": "Barricada",
         "fr_FR": "Mur d'encre",
         "fr_CA": "Mur d'encre",
-        "de_DE": "Tintenwall"
+        "de_DE": "Tintenwall",
+        "zh_HK": "スプラッシュシールド (水簾)"
       },
       image: "../common/assets/img/subspe/Wsb_Shield.png",
       cost: 60,

@@ -10,7 +10,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Rociadors",
         "fr_FR": "Lanceur",
         "fr_CA": "Lanceur",
-        "de_DE": "Shooters"
+        "de_DE": "Shooters",
+        "zh_HK": "シューター (普通槍)"
       },
       id: 0,
       weapons: [
@@ -841,7 +842,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_ES": "Clase Dual",
         "es_MX": "Clase Dual",
         "fr_FR": "Armes doubles",
-        "fr_CA": "Armes doubles"
+        "fr_CA": "Armes doubles",
+        "zh_HK": "マニューバー (双槍)"
       },
       id: 1,
       weapons: [
@@ -1185,7 +1187,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Rodillos",
         "fr_FR": "Rouleau",
         "fr_CA": "Rouleau",
-        "de_DE": "Rollers"
+        "de_DE": "Rollers",
+        "zh_HK": "ローラー (Roller/掃)"
       },
       id: 2,
       weapons: [
@@ -1473,7 +1476,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Brochas",
         "fr_FR": "Épinceau",
         "fr_CA": "Épinceau",
-        "de_DE": "Brushes"
+        "de_DE": "Brushes",
+        "zh_HK": "フデ (毛筆)"
       },
       id: 3,
       weapons: [
@@ -1641,7 +1645,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Lanzamotas",
         "fr_FR": "Éclablaster",
         "fr_CA": "Éclablasteur",
-        "de_DE": "Blasters"
+        "de_DE": "Blasters",
+        "zh_HK": "ブラスター (波波槍)"
       },
       id: 4,
       weapons: [
@@ -2049,7 +2054,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_ES": "Paratintas",
         "es_MX": "Paratintas",
         "fr_FR": "Para-encre",
-        "fr_CA": "Para-encre"
+        "fr_CA": "Para-encre",
+        "zh_HK": "シェルター (遮)"
       },
       id: 5,
       weapons: [
@@ -2155,7 +2161,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Derramatics",
         "fr_FR": "Seauceur",
         "fr_CA": "Seauceur",
-        "de_DE": "Sloshers"
+        "de_DE": "Sloshers",
+        "zh_HK": "スロッシャー (水桶)",
       },
       id: 6,
       weapons: [
@@ -2382,7 +2389,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Cargatintas",
         "fr_FR": "Fusil",
         "fr_CA": "Fusil",
-        "de_DE": "Chargers"
+        "de_DE": "Chargers",
+        "zh_HK": "チャージャー (狙撃槍)"
       },
       id: 7,
       weapons: [
@@ -2850,7 +2858,8 @@ angular.module('splatApp').weapons = function ($scope) {
         "es_MX": "Garabateadors",
         "fr_FR": "Badigeonneur",
         "fr_CA": "Badigeonneur",
-        "de_DE": "Splatlings"
+        "de_DE": "Splatlings",
+        "zh_HK": "スピナー (機関槍)"
       },
       id: 8,
       weapons: [
