@@ -150,6 +150,6 @@
   "SHELDON_DAMAGE": "攻撃力",
   "SHELDON_HANDLING": "操控性",
 
-  "UI_ABOUT_CONTENT": "呢個Page主要利用咗AngularJS 1.6.5和Bootstrap 3<br><br>裏面嘅數據和素材係來自<a href='https://twitter.com/LeanYoshi' target='_blank'>Lean</a>，以及Inkademy和Discord上的Splatoon Developers的各位。<br>譯註: 因為字體限制，部份翻譯內容為了使用了日本漢字而作出用字取捨。<br><br>多謝大家嘅支持和幫助！<br><br>以上很多公式都可以喺Inkipedia嘅<a href='https://splatoonwiki.org/wiki/User:Heddy/Charts' target='_blank'>Heddy's charts</a>搵到。<br><br>如果有任何功能建議、問題，可以喺<a href='https://github.com/DeviPotato/splat2-calc' target='_blank'>GitHub</a>上提出。<br>你亦可以喺<a href='https://twitter.com/loadout_ink' target='_blank'>呢個twitter</a>聯絡到我。"
+  "UI_ABOUT_CONTENT": "呢個Page主要利用咗AngularJS 1.6.5和Bootstrap 3<br><br>裏面嘅數據和素材係來自<a href='https://twitter.com/LeanYoshi' target='_blank'>Lean</a>，以及Inkademy和Discord上的Splatoon Developers的各位。<br>譯註: 因為字體限制，部份翻譯內容為了使用了日本漢字而作出用字取捨，如冰壺-氷球、追踪-追跡、炸彈-爆弾、幀-格等。<br><br>多謝大家嘅支持和幫助！<br><br>以上很多公式都可以喺Inkipedia嘅<a href='https://splatoonwiki.org/wiki/User:Heddy/Charts' target='_blank'>Heddy's charts</a>搵到。<br><br>如果有任何功能建議、問題，可以喺<a href='https://github.com/DeviPotato/splat2-calc' target='_blank'>GitHub</a>上提出。<br>你亦可以喺<a href='https://twitter.com/loadout_ink' target='_blank'>呢個twitter</a>聯絡到我。"
 
 }

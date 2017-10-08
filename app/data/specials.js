@@ -219,7 +219,7 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lanceur de bombes",
         "fr_CA": "Lance-bombes",
         "de_DE": "Bomb Launcher",
-        "zh_HK": "ボムピッチャー (吸塵機連射)"
+        "zh_HK": "ボムピッチャー (氷球連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",
       duration: 6

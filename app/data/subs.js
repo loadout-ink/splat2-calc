@@ -96,7 +96,7 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe curling",
         "fr_CA": "Bombe curling",
         "de_DE": "Curling-Bombe",
-        "zh_HK": "カーリングボム (吸塵機)"
+        "zh_HK": "カーリングボム (氷球)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
