@@ -2793,7 +2793,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Bimbamboum Mk I",
             "de_DE": "Bamboozler 14 Mk I"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
           sub: "Curling Bomb",
           special: "Tenta Missiles",
