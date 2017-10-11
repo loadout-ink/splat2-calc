@@ -1814,7 +1814,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 13,
           specialCost: 210,
           inkSaver: "Middle",
-          inkPerShot: 7,
+          inkPerShot: 8,
           speedLevel: "Middle",
           baseSpeed: 0.55,
           price: 9800,
@@ -1845,7 +1845,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 16,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 7,
+          inkPerShot: 8,
           speedLevel: "Middle",
           baseSpeed: 0.55,
           price: 11500,
@@ -1875,7 +1875,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 22,
           specialCost: 170,
           inkSaver: "Middle",
-          inkPerShot: 7,
+          inkPerShot: 10,
           speedLevel: "Middle",
           baseSpeed: 0.55,
           price: 12800,
@@ -1906,7 +1906,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 24,
           specialCost: 180,
           inkSaver: "Middle",
-          inkPerShot: 7,
+          inkPerShot: 10,
           speedLevel: "Middle",
           baseSpeed: 0.55,
           price: 14000,
@@ -1936,7 +1936,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 19,
           specialCost: 180,
           inkSaver: "High",
-          inkPerShot: 9,
+          inkPerShot: 6,
           speedLevel: "Middle",
           baseSpeed: 0.5,
           price: 12100,
@@ -1967,7 +1967,7 @@ angular.module('splatApp').weapons = function ($scope) {
           level: 24,
           specialCost: 180,
           inkSaver: "High",
-          inkPerShot: 9,
+          inkPerShot: 6,
           speedLevel: "Middle",
           baseSpeed: 0.5,
           price: 13600,
@@ -2142,6 +2142,33 @@ angular.module('splatApp').weapons = function ($scope) {
             "{{ SHELDON_DAMAGE | translate }}": 65
           },
           id: 2
+        },
+        {
+          image: "../common/assets/img/weapons/Wst_Umbrella_Large_00.png",
+          name: "Tenta Brella",
+          localizedName: {
+            "ja_JP": "キャンピングシェルター",
+            "en_US": "Tenta Brella",
+            "en_GB": "Tenta Brella",
+            "es_ES": "Paratintas maxi",
+            "es_MX": "Paratintas forestal",
+            "fr_FR": "Para-encre XL",
+            "fr_CA": "Méga para-encre"
+          },
+          shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
+          sub: "Squid Beakon",
+          special: "Bubble Blower",
+          level: 23,
+          specialCost: 180,
+          inkSaver: "High",
+          speedLevel: "Middle",
+          price: 14200,
+          stats: {
+            "{{ SHELDON_RANGE | translate }}": 62,
+            "{{ SHELDON_DURABILITY | translate }}": 85,
+            "{{ SHELDON_DAMAGE | translate }}": 85
+          },
+          id: 3
         }
       ]
     },

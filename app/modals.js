@@ -14,7 +14,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-4">
     <div class="row">
     <div class="col-md-12 col-sm-6">
-    <img fallback-img ng-src="{{selectedWeapon.image}}" />
+    <img id="weapon-picker-selected" fallback-img ng-src="{{selectedWeapon.image}}" />
     </div>
     <div class="col-md-12 col-sm-6">
     <div class="selected-label">
@@ -162,8 +162,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <h4>Version 1.1.1</h4>
     <ul>
     <li>Updated most stats and weapons for 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>
-    <li>Splatfest Tee has been added.</li>
-    <li>Fixed a visual bug due to missing Run Speed (Firing) and Ink Consumption (Main) for the Bamboozler. Data will be added for this weapon soon.</li>
+    <li>Splatfest Tee and Tenta Brella been added.</li>
+    <li>Fixed a visual bug due to missing Run Speed (Firing) and Ink Consumption (Main) for the Bamboozler.</li>
+    <li>Data is incomplete for the Tenta Brella and the Bamboozler weapons. Firing speed and ink consumption will be added soon.</li>
     </ul>
     <h4>Version 1.1.0</h4>
     <ul>

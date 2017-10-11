@@ -181,6 +181,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   position: relative;
 }
 
+#weapon-picker-selected {
+  width: 128px;
+  height: 128px;
+}
+
 .gear-wrapper .gear-icon {
   position:absolute;
   left: 50%;
