@@ -5,6 +5,9 @@ function Stat(name, calc, max) {
   this.value = 0;
   this.desc = null;
   this.label = { label: null };
+  this.calcMod = function(abilityScore) {
+    return (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))
+  }
 }
 
 //TODO: clean all this up
@@ -23,7 +26,7 @@ $scope.stats = {
         baseSpeed = 1.92;
         coeff = 120;
       }
-      var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
+      var speed = baseSpeed * (1 + this.calcMod(abilityScore)/coeff);
       if(loadout.hasAbility('Ninja Squid')) {
         speed = speed * 0.9;
       }
@@ -44,7 +47,7 @@ $scope.stats = {
           baseSpeed = 0.88;
           coeff = (420/9);
         }
-        var speed = baseSpeed * (1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/coeff);
+        var speed = baseSpeed * (1 + this.calcMod(abilityScore)/coeff);
         this.value = speed;
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)})
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
@@ -71,7 +74,7 @@ $scope.stats = {
         else {
           this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
         }
-        var weaponRSU = 1 + (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))/120.452
+        var weaponRSU = 1 + this.calcMod(abilityScore)/120.452
         var speed = loadout.weapon.baseSpeed * (weaponRSU);
         this.value = speed
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
@@ -80,7 +83,7 @@ $scope.stats = {
       }, 1.44),
     'Ink Recovery Speed (Squid)': new Stat("{{ STAT_RECOVERY_SQUID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var seconds = 3 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (600 / 7))
+      var seconds = 3 * (1 - this.calcMod(abilityScore) / (600 / 7))
       this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: seconds.toFixed(2)})
       this.value = ((3 / seconds) * 100)
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
@@ -88,7 +91,7 @@ $scope.stats = {
     }, 154),
     'Ink Recovery Speed (Kid)': new Stat("{{ STAT_RECOVERY_KID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var seconds = 10 * (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 50)
+      var seconds = 10 * (1 - this.calcMod(abilityScore) / 50)
       this.value = ((10 / seconds) * 100);
       this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: seconds.toFixed(2)})
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
@@ -97,8 +100,13 @@ $scope.stats = {
     'Ink Consumption (Main)': new Stat("{{ STAT_SAVER_MAIN | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Main)');
       var coeff = (200 / 3)
-      if(loadout.weapon.inkSaver == 'High') coeff = 60
-      var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
+      var reduction =  this.calcMod(abilityScore) / coeff
+      var mod = this.calcMod(abilityScore)
+      if(loadout.weapon.inkSaver == 'High') {
+        reduction = Math.abs(Math.pow(mod,2)/4500 - (7*mod)/300)
+      } else {
+        reduction = mod / coeff
+      }
       var costPerShot = loadout.weapon.inkPerShot * (1 - reduction)
       this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (reduction*100).toFixed(1)})
       this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: costPerShot.toFixed(1), unit: loadout.weapon.shotUnit})
@@ -110,7 +118,7 @@ $scope.stats = {
       var coeff = (600 / 7)
       var sub = $scope.getSubByName(loadout.weapon.sub)
       if(sub.inkSaver == 'Low') coeff = 100
-      var reduction =  (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff
+      var reduction =  this.calcMod(abilityScore) / coeff
       var costPerSub = sub.cost * (1 - reduction)
       this.value = costPerSub;
       this.localizedDesc = { reduction: reduction.toFixed(1), desc: 'DESC_SUB_COST' };
@@ -120,24 +128,23 @@ $scope.stats = {
     }, 100),
     'Special Charge Speed': new Stat("{{ STAT_SPECIAL_CHARGE | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
-      var chargeSpeed = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 100)
+      var chargeSpeed = (1 + this.calcMod(abilityScore) / 100)
       this.value = chargeSpeed;
       this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.floor(loadout.weapon.specialCost / chargeSpeed)})
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
-    //TODO: This is WRONG! Need more data!
     'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
-      var baseKept = 0.5;
+      var baseKept = 1;
       this.localizedDesc = { desc: null };
-      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60
+      var y = this.calcMod(abilityScore)
+      var mod = (1/4500) * Math.pow(y,2) - (7/300)*y + 0.5
       if(loadout.hasAbility('Respawn Punisher')) {
-        baseKept = 0.425;
-        mod *= 0.7;
+        baseKept -= .225;
         this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
       }
-      var kept  = baseKept + mod;
+      var kept  = baseKept - mod;
       this.value = kept;
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (kept * 100).toFixed(1);
@@ -161,7 +168,7 @@ $scope.stats = {
           base = 360;
           this.max = 8.1;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
           this.value = results;
           this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
           return results.toFixed(2);
@@ -171,7 +178,7 @@ $scope.stats = {
           base = 360;
           this.max = 9;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
           this.value = results;
           this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
           return results.toFixed(2);
@@ -183,7 +190,7 @@ $scope.stats = {
           base = 480;
           this.max = 10;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))/60
+          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
           this.value = results;
           this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
           return results.toFixed(2);
@@ -193,7 +200,7 @@ $scope.stats = {
           base = 400;
           this.max = 600;
           this.name = "{{ STAT_SPECIAL_POWER_BALLER | translate }}"
-          results = (base * (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff))
+          results = (base * (1 +this.calcMod(abilityScore) / coeff))
           this.value = results;
           this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
           return results.toFixed(1);
@@ -204,7 +211,7 @@ $scope.stats = {
           this.max = 8;
           this.max = '166'
           this.name = "{{ STAT_SPECIAL_POWER_TENTA | translate }}"
-          results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)*100
+          results = (1 +this.calcMod(abilityScore) / coeff)*100
           this.value = results;
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
           return results.toFixed(1);
@@ -214,7 +221,7 @@ $scope.stats = {
           base = 110;
           this.max = 1.274;
           this.name = "{{ STAT_SPECIAL_POWER_SPLASHDOWN | translate }}"
-          results = (1 +(0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)*100
+          results = (1 +this.calcMod(abilityScore) / coeff)*100
           this.desc = "{{ DESC_DISTANCE | translate }}".format({value: (base*results).toFixed(1)})
           this.value = results;
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
@@ -241,7 +248,7 @@ $scope.stats = {
         case 'Autobomb':
         case 'Point Sensor':
         case 'Toxic Mist':
-          var range = (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 60)
+          var range = (1 + this.calcMod(abilityScore) / 60)
           this.value = range*100;
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
@@ -259,7 +266,7 @@ $scope.stats = {
         case 'Splash Wall':
           this.name = "{{ STAT_SUB_POWER_WALL | translate }}";
           this.label = "{{ UNAVAILABLE | translate }}";
-          var HP = 800 * (1 + (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / (240/7))
+          var HP = 800 * (1 + this.calcMod(abilityScore) / (240/7))
           this.value = HP;
           this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
           this.max = 1500;
@@ -277,22 +284,20 @@ $scope.stats = {
     }, 150),
     'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
-      var windup = 71
       var airtime = 108
       var action = 30
-      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))
-      var windupFrames = 10 +(windup * (1 - mod/45))
-      var mainFrames = action + (airtime * (1 - mod/78))
-      this.value = (windupFrames + mainFrames) / 60
+      var mod = this.calcMod(abilityScore)
+      var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 218
+      this.value = (totalFrames) / 60
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-      return ((windupFrames + mainFrames) / 60).toFixed(2);
+      return ((totalFrames) / 60).toFixed(2);
     }, 3.65),
     'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var windup = 92
       var airtime = 108
       var action = 30
-      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))
+      var mod = this.calcMod(abilityScore)
       var windupFrames = 10 +(windup * (1 - mod/45))
       var mainFrames = action + (airtime * (1 - mod/78))
       this.value = (windupFrames + mainFrames) / 60
@@ -307,7 +312,7 @@ $scope.stats = {
       var death = 30;
       var splatcam = 354;
       var spawn = 120;
-      var mod = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2))/60
+      var mod = this.calcMod(abilityScore)/60
       if(loadout.hasAbility('Respawn Punisher')) {
         this.name = "{{ STAT_QUICK_RESPAWN_PUNISHER | translate }}";
         this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
@@ -319,9 +324,9 @@ $scope.stats = {
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       return this.value.toFixed(2)
     }, 9.6),
-    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }}", function(loadout) {
+    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
-      var trackReduction = (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / 40
+      var trackReduction = this.calcMod(abilityScore) / 40
       this.value = (8 * (1 - trackReduction))
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       this.desc = "{{ DESC_TRACKING | translate }}";
@@ -349,7 +354,7 @@ $scope.stats = {
       coeff = (600/7);
       break;
   }
-  var damageReduction = (1 - (0.99 * abilityScore - Math.pow((0.09 * abilityScore),2)) / coeff)
+  var damageReduction = (1 - (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2)) / coeff)
     var results = {}
     for(damageValue in sub.damage) {
       var subDamage = sub.damage[damageValue]
