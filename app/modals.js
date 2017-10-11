@@ -161,8 +161,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div id="changelog"</div>
     <h4>Version 1.1.1</h4>
     <ul>
-    <li>Updated most stats and weapons for 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>
-    <li>Splatfest Tee and Tenta Brella been added.</li>
+    <li>Updated most stats and weapons for game version 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>
+    <li>Splatfest Tee and Tenta Brella have been added.</li>
     <li>Fixed a visual bug due to missing Run Speed (Firing) and Ink Consumption (Main) for the Bamboozler.</li>
     <li>Data is incomplete for the Tenta Brella and the Bamboozler weapons. Firing speed and ink consumption will be added soon.</li>
     </ul>
