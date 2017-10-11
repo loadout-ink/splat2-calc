@@ -51,7 +51,7 @@
   "STAT_SAVER_MAIN": "メインウェポンの消費インク量",
   "STAT_SAVER_SUB": "サブウェポンの消費インク量",
   "STAT_SPECIAL_CHARGE": "スペシャルゲージの増加量",
-  "STAT_SPECIAL_SAVER": "復活後のスペシャルゲージの残り *",
+  "STAT_SPECIAL_SAVER": "復活後のスペシャルゲージの残り",
   "STAT_SPECIAL_POWER": "スペシャル性能",
   "STAT_SPECIAL_POWER_UNKNOWN": "スペシャル性能<br>(???)",
   "STAT_SPECIAL_POWER_DURATION": "スペシャル性能<br>(時間)",
@@ -69,7 +69,7 @@
   "STAT_JUMP_SQUID": "スーパージャンプの時間 (イカ)",
   "STAT_JUMP_KID": "スーパージャンプの時間 (ヒト)",
   "STAT_QUICK_RESPAWN": "復活時間",
-  "STAT_QUICK_RESPAWN_PUNISHER": "復活時間 *",
+  "STAT_QUICK_RESPAWN_PUNISHER": "復活時間",
   "STAT_TRACKING_TIME": "マーキング時間",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",

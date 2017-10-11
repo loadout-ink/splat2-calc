@@ -51,7 +51,7 @@
   "STAT_SAVER_MAIN": "Consommation d'encre (Principal)",
   "STAT_SAVER_SUB": "Consommation d'encre (Secondaire)",
   "STAT_SPECIAL_CHARGE": "Vitesse de charge du spécial",
-  "STAT_SPECIAL_SAVER": "Special sauvé *",
+  "STAT_SPECIAL_SAVER": "Special sauvé",
   "STAT_SPECIAL_POWER": "Arme spéciale",
   "STAT_SPECIAL_POWER_UNKNOWN": "Arme spéciale<br>(???)",
   "STAT_SPECIAL_POWER_DURATION": "Arme spéciale<br>(Durée)",
@@ -69,7 +69,7 @@
   "STAT_JUMP_SQUID": "Temps de super saut (Calamar)",
   "STAT_JUMP_KID": "Temps de super saut (Enfant)",
   "STAT_QUICK_RESPAWN": "Temps de réapparition",
-  "STAT_QUICK_RESPAWN_PUNISHER": "Temps de réapparition *",
+  "STAT_QUICK_RESPAWN_PUNISHER": "Temps de réapparition",
   "STAT_TRACKING_TIME": "Temps de détection",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",

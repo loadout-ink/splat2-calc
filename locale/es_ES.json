@@ -51,7 +51,7 @@
   "STAT_SAVER_MAIN": "Tintahorro principal",
   "STAT_SAVER_SUB": "Tintahorro secundario",
   "STAT_SPECIAL_CHARGE": "Recarga especial",
-  "STAT_SPECIAL_SAVER": "Reducción Especial *",
+  "STAT_SPECIAL_SAVER": "Reducción Especial",
   "STAT_SPECIAL_POWER": "Superarma Especial",
   "STAT_SPECIAL_POWER_UNKNOWN": "Superarma especial<br>(???)",
   "STAT_SPECIAL_POWER_DURATION": "Superarma especial<br>(Duración)",
@@ -69,7 +69,7 @@
   "STAT_JUMP_SQUID": "Supersalto Rápido (Calamar)",
   "STAT_JUMP_KID": "Supersalto rápido (Inkling)",
   "STAT_QUICK_RESPAWN": "Retorno exprés",
-  "STAT_QUICK_RESPAWN_PUNISHER": "Tiempo de reaparición (Castigo Póstumo) *",
+  "STAT_QUICK_RESPAWN_PUNISHER": "Tiempo de reaparición (Castigo Póstumo)",
   "STAT_TRACKING_TIME": "Tiempo de rastreo",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} UD/f",

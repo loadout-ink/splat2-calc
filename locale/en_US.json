@@ -51,7 +51,7 @@
   "STAT_SAVER_MAIN": "Ink Consumption (Main)",
   "STAT_SAVER_SUB": "Ink Consumption (Sub)",
   "STAT_SPECIAL_CHARGE": "Special Charge Speed",
-  "STAT_SPECIAL_SAVER": "Special Saved *",
+  "STAT_SPECIAL_SAVER": "Special Saved",
   "STAT_SPECIAL_POWER": "Special Power",
   "STAT_SPECIAL_POWER_UNKNOWN": "Special Power<br>(???)",
   "STAT_SPECIAL_POWER_DURATION": "Special Power<br>(Duration)",
@@ -69,7 +69,7 @@
   "STAT_JUMP_SQUID": "Super Jump Time (Squid)",
   "STAT_JUMP_KID": "Super Jump Time (Kid)",
   "STAT_QUICK_RESPAWN": "Quick Respawn Time",
-  "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time *",
+  "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time",
   "STAT_TRACKING_TIME": "Tracking Time",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",
