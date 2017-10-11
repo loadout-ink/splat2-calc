@@ -63,6 +63,7 @@ angular.module('splatApp')
           })
         },
         accept: function(draggable) {
+          if(attrs.containsFixed=="true") return false;
           if(draggable.is('[ability-menu]')) {
             var draggableSkill = scope.$eval(draggable.attr('skill'))
             if(draggableSkill.exclusive) {
@@ -118,7 +119,9 @@ angular.module('splatApp')
     link: function(scope,elm,attrs) {
       var options = {
         accept: function(draggable) {
-          if(draggable.is('[ability-slot]')) return true;
+          if(draggable.attr('skill')) {
+            if(draggable.is('[ability-slot]') && draggable.attr('skill').name != 'Ability Doubler') return true;
+          }
         },
         drop: function(event,ui) {
           scope.$apply(function() {

@@ -30,17 +30,20 @@ function Gear() {
       if(this.subs[i] != null) if(this.subs[i].name == skill) return true;
     }
   }
-  this.calcAbilityScore = function(skill) {
+  this.calcAbilityScore = function(skill, mod) {
     var total = 0;
     if(this.main != null) if(this.main.name == skill) total += 10;
     for(var i = 0; i < this.subs.length; i++) {
-      if(this.subs[i] != null) if(this.subs[i].name == skill) total +=3;
+      var value = 3;
+      if(this.main != null) if(this.main.name == 'Ability Doubler') value = 6;
+      if(this.subs[i] != null) if(this.subs[i].name == skill) total += value;
     }
     return total;
   }
   this.clearAll = function() {
-    this.main = null;
     this.subs = [null,null,null];
+    if(this.equipped.fixed) return;
+    this.main = null;
   }
 
 }

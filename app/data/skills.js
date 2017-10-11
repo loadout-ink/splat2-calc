@@ -385,6 +385,22 @@ angular.module('splatApp').skills = function ($scope) {
       image:"../common/assets/img/skills/ObjectEffect_Up.png",
       exclusive:"loadout.shoes.main",
       id: 25
+    },
+    {
+      name: "Ability Doubler",
+      localizedName: {
+        "ja_JP": "追加ギアパワー倍化",
+        "en_US": "Ability Doubler",
+        "en_GB": "Ability Doubler",
+        "es_ES": "Duplicador",
+        "es_MX": "Duplicador",
+        "fr_FR": "Bonus ×2",
+        "fr_FR": "Bonus ×2",
+        "de_DE": "Effektdoppelung"
+      },
+      image:"../common/assets/img/skills/ExSkillDouble.png",
+      exclusive:"hidden",
+      id: 26
     }
   ]
   $scope.getSkillByName = function(name) {
@@ -405,7 +421,7 @@ angular.module('splatApp').skills = function ($scope) {
 
   $scope.getExclusiveSkills = function(slot) {
     return $scope.skills.filter(function(skill) {
-      if(skill.exclusive) return true;
+      if(skill.exclusive && skill.exclusive != 'hidden') return true;
     })
   }
 

@@ -1852,6 +1852,24 @@ angular.module('splatApp').clothes = function($scope) {
     brand: "Cuttlegear",
     stars: 2,
     id: 108
+  },
+  {
+    image: "../common/assets/img/gear/Clt_HAP001.png",
+    name: "Splatfest Tee",
+    localizedName: {
+      "ja_JP": "フェスＴ",
+      "en_US": "Splatfest Tee",
+      "en_GB": "Splatfest Tee",
+      "es_ES": "Camiseta festiva",
+      "es_MX": "Camiseta festiva",
+      "fr_FR": "T-shirt festif",
+      "fr_CA": "T-shirt festif"
+    },
+    main: "Ability Doubler",
+    brand: "SquidForce",
+    fixed: true,
+    stars: 3,
+    id: 109
   }
 ]
   }
