@@ -294,8 +294,6 @@ $scope.stats = {
     }, 150),
     'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
-      var airtime = 108
-      var action = 30
       var mod = this.calcMod(abilityScore)
       var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 218
       this.value = (totalFrames) / 60
@@ -304,15 +302,11 @@ $scope.stats = {
     }, 3.65),
     'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
-      var windup = 92
-      var airtime = 108
-      var action = 30
       var mod = this.calcMod(abilityScore)
-      var windupFrames = 10 +(windup * (1 - mod/45))
-      var mainFrames = action + (airtime * (1 - mod/78))
-      this.value = (windupFrames + mainFrames) / 60
+      var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 239
+      this.value = totalFrames / 60
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-      return ((windupFrames + mainFrames) / 60).toFixed(2);
+      return (totalFrames / 60).toFixed(2);
     }, 4),
     //TODO: This is WRONG! Need more data on Respawn Punisher!
     'Quick Respawn Time': new Stat("{{ STAT_QUICK_RESPAWN | translate }}", function(loadout) {
