@@ -79,6 +79,11 @@ $scope.stats = {
         this.value = speed
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+        if(isNaN(this.value)) {
+          this.value = 0;
+          this.label = "{{ UNAVAILABLE | translate}}";
+          this.desc = null;
+        }
         return this.value.toFixed(1);
       }, 1.44),
     'Ink Recovery Speed (Squid)': new Stat("{{ STAT_RECOVERY_SQUID | translate }}", function(loadout) {
@@ -111,7 +116,12 @@ $scope.stats = {
       this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (reduction*100).toFixed(1)})
       this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: costPerShot.toFixed(1), unit: loadout.weapon.shotUnit})
       this.value = costPerShot;
-      return costPerShot;
+      if(isNaN(this.value)) {
+        this.value = 0;
+        this.label = "{{ UNAVAILABLE | translate}}";
+        this.desc = null;
+      }
+      return this.value;
     }, 100),
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');

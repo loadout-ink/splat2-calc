@@ -2800,8 +2800,6 @@ angular.module('splatApp').weapons = function ($scope) {
           specialCost: 180,
           inkSaver: "Middle",
           speedLevel: "High",
-          // TODO: WRONG. guessed to fix bug
-          baseSpeed: 0.3,
           price: 9500,
           stats: {
             "{{ SHELDON_RANGE | translate }}": 78,
