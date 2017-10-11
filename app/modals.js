@@ -159,6 +159,12 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.1</h4>
+    <ul>
+    <li>Updated most stats and weapons for 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>
+    <li>Splatfest Tee has been added.</li>
+    <li>Fixed a visual bug due to missing Run Speed (Firing) and Ink Consumption (Main) for the Bamboozler. Data will be added for this weapon soon.</li>
+    </ul>
     <h4>Version 1.1.0</h4>
     <ul>
     <li>loadout.ink is now available in English, Japanese, Spanish, and French. Translation errors can be reported via GitHub or Twitter.</li>
