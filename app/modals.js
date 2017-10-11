@@ -121,7 +121,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="annie">
-    <img ng-if="item.brand!='Grizzco'" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
+    <img ng-if="item.brand != 'Grizzco'?item.name != 'Splatfest Tee'?true:false:false" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
     </span>
     </div><!--
     --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
@@ -355,6 +355,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       }
     });
     modalInstance.result.then(function(results) {
+      $scope.equip(results.selected, slot)
       eval("$scope.loadout." + slot + ".equipped = results.selected")
       if(eval("$scope.loadout." + slot + ".main") == null) {
         eval(("$scope.loadout." + slot + ".main = $scope.getSkillByName('" + results.selected.main + "')"))

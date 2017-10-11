@@ -108,7 +108,9 @@ angular.module('splatApp')
       elm.droppable(options)
       elm.click(function() {
         scope.$apply(function() {
-          scope.bind = null;
+          if(scope.bind.name != "Ability Doubler") {
+            scope.bind = null;
+          }
         })
       })
     }

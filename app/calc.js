@@ -104,6 +104,14 @@ angular
       }
     }
 
+    $scope.equip = function(item,slot) {
+      console.log(eval("$scope.loadout." + slot + ".equipped.name") == "Splatfest Tee")
+      if(eval("$scope.loadout." + slot + ".main") == null || eval("$scope.loadout." + slot + ".equipped.name") == "Splatfest Tee" || item.name == "Splatfest Tee") {
+        eval(("$scope.loadout." + slot + ".main = $scope.getSkillByName('" + item.main + "')"))
+      }
+      eval("$scope.loadout." + slot + ".equipped = item")
+    }
+
     $scope.languages = {
       'en_US': 'English',
       'ja_JP': '日本語',
