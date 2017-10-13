@@ -104,11 +104,13 @@ $scope.stats = {
     }, 251),
     'Ink Consumption (Main)': new Stat("{{ STAT_SAVER_MAIN | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Main)');
+      this.name = "{{ STAT_SAVER_MAIN | translate }}"
       var coeff = (200 / 3)
       var reduction =  this.calcMod(abilityScore) / coeff
       var mod = this.calcMod(abilityScore)
       if(loadout.weapon.inkSaver == 'High') {
         reduction = Math.abs(Math.pow(mod,2)/4500 - (7*mod)/300)
+        this.name = "{{ STAT_SAVER_MAIN | translate }} *"
       } else {
         reduction = mod / coeff
       }
@@ -292,7 +294,7 @@ $scope.stats = {
       }
       return (range * 100).toFixed(1);
     }, 150),
-    'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }}", function(loadout) {
+    'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var mod = this.calcMod(abilityScore)
       var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 218
@@ -300,7 +302,7 @@ $scope.stats = {
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       return ((totalFrames) / 60).toFixed(2);
     }, 3.65),
-    'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }}", function(loadout) {
+    'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var mod = this.calcMod(abilityScore)
       var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 239
