@@ -2,14 +2,15 @@
  * Encoding allows to encode a set of gears and abilities into a single string and vice-versa. 
  * 
  * The encoded string is composed of 25 hexadecimal characters (from 0 to 9 and from A to F).
- * The first digit must be zero.
+ * The first digit is the version number of the encoding mechanism and is 0 at the moment.
+ * This will allow to change the encoding method in the future while ensuring backward compatibility.
  * 
  * Format: 
  * 
  * 0 0 XX XXXXXXX XXXXXXX XXXXXXX
  * ^ ^ ^  ^       ^       ^
  * | | |  |       |       |
- * Must be zero   |       |
+ * Version number |       |
  *   | |  |       |       |
  *   Weapon set   |       |
  *     |  |       |       |
