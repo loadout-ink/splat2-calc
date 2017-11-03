@@ -630,9 +630,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "es_MX": "Megasoplador adaptado",
             "fr_FR": "Nettoyeur XL modifié",
             "fr_CA": "Méganettoyeur modifié",
-            "de_DE": "Custom Jet Squelcher"
+            "de_DE": "Platscher SE"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Burst Bomb",
           special: "Sting Ray",
@@ -1348,7 +1347,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_US": "Dynamo Roller",
             "en_GB": "Dynamo Roller",
             "es_ES": "Dinamorrodillo",
-            "es_MX": "Dinamorrodillo",
+            "es_MX": "Rodillo Pro",
             "fr_FR": "Dynamo-rouleau",
             "fr_CA": "Dynamo-rouleau",
             "de_DE": "Dynaroller"
@@ -1378,17 +1377,16 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_US": "Gold Dynamo Roller",
             "en_GB": "Gold Dynamo Roller",
             "es_ES": "Dinamorrodillo T",
-            "es_MX": "Dinamorrodillo T",
+            "es_MX": "Rodillo Pro dorado",
             "fr_FR": "Dynamo-rouleau tesla",
             "fr_CA": "Dynamo-rouleau pro",
-            "de_DE": "Gold Dynamo Roller" // TODO
+            "de_DE": "Dynaroller Tesla" // TODO
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_FLICK | translate }}",
           sub: "Toxic Mist",
           special: "Ink Armor",
           level: 25,
-          specialCost: 180,
+          specialCost: 200,
           inkSaver: "High",
           inkPerShot: 18,
           speedLevel: "Low",
@@ -1746,9 +1744,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "es_MX": "Telelanzamotas",
             "fr_FR": "Éclablaster XL",
             "fr_CA": "Éclablasteur LP",
-            "de_DE": "Range Blaster" // TODO
+            "de_DE": "Fern-Blaster"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Suction Bomb",
           special: "Ink Storm",
