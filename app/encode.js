@@ -1,3 +1,61 @@
+/*
+ * Encoding allows to encode a set of gears and abilities into a single string and vice-versa. 
+ * 
+ * The encoded string is composed of 25 hexadecimal characters (from 0 to 9 and from A to F).
+ * The first digit is the version number of the encoding mechanism and is 0 at the moment.
+ * This will allow to change the encoding method in the future while ensuring backward compatibility.
+ * 
+ * Format: 
+ * 
+ * 0 0 XX XXXXXXX XXXXXXX XXXXXXX
+ * ^ ^ ^  ^       ^       ^
+ * | | |  |       |       |
+ * Version number |       |
+ *   | |  |       |       |
+ *   Weapon set   |       |
+ *     |  |       |       |
+ *     Weapon ID  |       |
+ *        |       |       |
+ *        Encoded Hat     |
+ *                |       |
+ *                Encoded Clothes
+ *                        |
+ *                        Encoded Shoes
+ * 
+ * Example:
+ * 0 0 00 241084e 0000000 07c8000
+ * 
+ * Gears (hats, clothes, shoes) are all encoded the same way. 
+ * The value is made of 7 hexadecimal characters.
+ * 
+ * Format: 
+ * 
+ * XX XXXXX
+ * ^  ^
+ * |  |
+ * Gear id
+ *    |
+ *    Abilities
+ * 
+ * Example: 
+ * 07c8000
+ * 
+ * 
+ * Abilities format: 
+ * XXXXX hex to binary 
+ * XXXXX XXXXX XXXXX XXXXX (there is a trick here: hexa to binaries are then groupped by 5 digits)
+ * ^    ^    ^    ^
+ * |    |    |    |
+ * Main |    |    |
+ *      Sub 1|    |
+ *           Sub 2|
+ *                Sub 3
+ * 
+ * Example:
+ * c8000 => 11001 00000 00000 00000
+ * 
+ */
+
 function encode(selectedSetId,loadout) {
     var hexString = '0' // version number
     hexString += selectedSetId
