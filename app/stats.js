@@ -142,7 +142,7 @@ $scope.stats = {
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
       var chargeSpeed = (1 + this.calcMod(abilityScore) / 100)
       this.value = chargeSpeed;
-      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.floor(loadout.weapon.specialCost / chargeSpeed)})
+      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.round(loadout.weapon.specialCost / chargeSpeed)})
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
