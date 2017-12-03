@@ -159,6 +159,13 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.2</h4>
+    <ul>
+    <li>Updated values for balance changes in game version 2.0.0.</li>
+    <li>Fixed an incorrect subweapon on Gold Dynamo Roller.</li>
+    <li>Added recently released weapons.</li>
+    <li>The new gear added in 2.0.0 is coming soon.</li>
+    </ul>
     <h4>Version 1.1.1</h4>
     <ul>
     <li>Updated most stats and weapons for game version 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>
