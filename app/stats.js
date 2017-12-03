@@ -146,17 +146,15 @@ $scope.stats = {
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (chargeSpeed * 100).toFixed(1);
     }, 1.3),
-    'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }} *", function(loadout) {
+    'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Saver');
-      var baseKept = 1;
       this.localizedDesc = { desc: null };
       var y = this.calcMod(abilityScore)
-      var mod = (1/4500) * Math.pow(y,2) - (7/300)*y + 0.5
+      var kept = (1/4500) * Math.pow(y,2) + (1/100)*y + 0.5
       if(loadout.hasAbility('Respawn Punisher')) {
-        baseKept -= .225;
+        kept -= .225;
         this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
       }
-      var kept  = baseKept - mod;
       this.value = kept;
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (kept * 100).toFixed(1);
