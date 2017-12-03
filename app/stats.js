@@ -127,10 +127,22 @@ $scope.stats = {
     }, 100),
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
+      this.name = "{{ STAT_SAVER_SUB | translate }}"
       var coeff = (600 / 7)
       var sub = $scope.getSubByName(loadout.weapon.sub)
       if(sub.inkSaver == 'Low') coeff = 100
       var reduction =  this.calcMod(abilityScore) / coeff
+      // TODO: Hacky 2.0 balance fix. Possibly inaccurate.
+      switch(sub.name) {
+        case 'Burst Bomb':
+          reduction *= 0.66
+          this.name = "{{ STAT_SAVER_SUB | translate }} *"
+          break
+        case 'Toxic Mist':
+          reduction *= 0.86
+          this.name = "{{ STAT_SAVER_SUB | translate }} *"
+          break
+      }
       var costPerSub = sub.cost * (1 - reduction)
       this.value = costPerSub;
       this.localizedDesc = { reduction: reduction.toFixed(1), desc: 'DESC_SUB_COST' };
