@@ -166,7 +166,7 @@ angular.module('splatApp').subs = function ($scope) {
         "de_DE": "Sepitox-Nebel"
       },
       image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
-      cost: 70,
+      cost: 60,
       inkSaver: "Normal"
     },
     {

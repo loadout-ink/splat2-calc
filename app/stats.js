@@ -135,7 +135,7 @@ $scope.stats = {
       // TODO: Hacky 2.0 balance fix. Possibly inaccurate.
       switch(sub.name) {
         case 'Burst Bomb':
-          reduction *= 0.66
+          reduction *= (2/3)
           this.name = "{{ STAT_SAVER_SUB | translate }} *"
           break
         case 'Toxic Mist':
@@ -210,6 +210,7 @@ $scope.stats = {
         case 'Sting Ray':
           coeff = 120;
           base = 480;
+          if(equippedSpecial.name == 'Sting Ray') base = 465
           this.max = 10;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
           results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
