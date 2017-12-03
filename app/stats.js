@@ -210,6 +210,7 @@ $scope.stats = {
         case 'Sting Ray':
           coeff = 120;
           base = 480;
+          if(equippedSpecial.name == 'Sting Ray') base = 465
           this.max = 10;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
           results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
