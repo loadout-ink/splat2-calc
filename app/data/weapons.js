@@ -1118,16 +1118,15 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Twins_Gallon_00.png",
           name: "Glooga Dualies",
           localizedName: {
-            "ja_JP": "Glooga Dualies",
+            "ja_JP": "ケルビン525",
             "en_US": "Glooga Dualies",
             "en_GB": "Glooga Dualies",
-            "es_ES": "Glooga Dualies",
-            "es_MX": "Glooga Dualies",
-            "fr_FR": "Glooga Dualies",
-            "fr_CA": "Glooga Dualies",
-            "de_DE": "Glooga Dualies"
+            "es_ES": "Fundidora 525 dual",
+            "es_MX": "Fundidora 525 dual",
+            "fr_FR": "Double Kelvin 525",
+            "fr_CA": "Double Kelvin 525",
+            "de_DE": "Kelvin 525"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Ink Mine",
           special: "Inkjet",
@@ -1380,10 +1379,10 @@ angular.module('splatApp').weapons = function ($scope) {
             "es_MX": "Rodillo Pro dorado",
             "fr_FR": "Dynamo-rouleau tesla",
             "fr_CA": "Dynamo-rouleau pro",
-            "de_DE": "Dynaroller Tesla" // TODO
+            "de_DE": "Dynaroller Tesla"
           },
           shotUnit: "{{ SHOT_UNIT_FLICK | translate }}",
-          sub: "Toxic Mist",
+          sub: "Splat Bomb",
           special: "Ink Armor",
           level: 25,
           specialCost: 200,
@@ -1433,15 +1432,15 @@ angular.module('splatApp').weapons = function ($scope) {
           image: "../common/assets/img/weapons/Wst_Roller_Hunter_01.png",
           name: "Foil Flingza Roller",
           localizedName: {
-            "ja_JP": "Foil Flingza Roller",
+            "ja_JP": "ヴァリアブルローラーフォイル",
             "en_US": "Foil Flingza Roller",
             "en_GB": "Foil Flingza Roller",
-            "es_ES": "Foil Flingza Roller",
-            "es_MX": "Foil Flingza Roller",
-            "fr_FR": "Foil Flingza Roller",
-            "fr_CA": "Foil Flingza Roller"
+            "es_ES": "Rodillo versátil B",
+            "es_MX": "Rodillo versátil Foil",
+            "fr_FR": "Flexi-rouleau alu",
+            "fr_CA": "Flexi-rouleau aluminium",
+            "de_DE": "Flex-Roller Fol"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_FLICK_HORIZ | translate }}",
           sub: "Suction Bomb",
           special: "Tenta Missiles",
@@ -1516,9 +1515,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "es_MX": "Pincel maestro",
             "fr_FR": "Épinceau nuancé",
             "fr_CA": "Épinceau nuancé",
-            "de_DE": "Inkbrush Nouveau" // TODO
+            "de_DE": "Quasto Fresco"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_FLICK | translate }}",
           sub: "Ink Mine",
           special: "Baller",
@@ -3040,12 +3038,11 @@ angular.module('splatApp').weapons = function ($scope) {
             "es_MX": "Garabateador HD",
             "fr_FR": "Exteinteur",
             "fr_CA": "Exteinteur",
-            "de_DE": "Hydra Splatling" //TODO
+            "de_DE": "Hydrant"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
           sub: "Autobomb",
-          special: "Ink Armor",
+          special: "Splashdown",
           level: 27,
           specialCost: 190,
           inkSaver: "High",
