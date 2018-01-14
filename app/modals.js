@@ -63,11 +63,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row buttons">
-    <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
-    </div>
-    <div class="col-xs-6 button-right">
+    <div class="col-xs-6 col-md-4 col-md-offset-2">
     <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    </div>
+    <div class="col-xs-6 col-md-4">
+    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
     </div>
     </div>
     </div>
@@ -141,11 +141,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row buttons">
-    <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
-    </div>
-    <div class="col-xs-6 button-right">
+    <div class="col-xs-6 col-md-4 col-md-offset-2">
     <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    </div>
+    <div class="col-xs-6 col-md-4">
+    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
     </div>
     </div>
     </div>
