@@ -128,3 +128,73 @@
   filter: blur(8px) brightness(0.8);
   transform: scale(1.025, 1.015);
 }
+
+/* Top of headers */
+.cardheader {
+  height: 36px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+  background: rgb(20, 20, 20);
+  /*background-image: url("../assets/img/ui/bg-dots.png");*/
+  background-size: 50px 50px;
+  font-family: "Splat1", sans-serif;
+  font-size: 14pt;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.modal-body .cardheader:before {
+  content: "";
+  background-image: url(../assets/img/ui/cardboard-header.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 140px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  margin: auto;
+  z-index: 0;
+}
+
+.cardheader .icon-button {
+  position: absolute;
+  font-size: 14pt;
+  right: 20px;
+  top: 8px;
+}
+
+/* Center align on larger screens */
+@media screen and (min-height: 550px) and (min-width: 550px) {
+  .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50vh;
+  }
+}
+
+/* When opening a modal, mimick Splatoon 2's elastic animation */
+.modal.in .modal-dialog > div {
+  animation: modal-elastic 0.3s ease-in;
+}
+
+@keyframes modal-elastic {
+  0% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

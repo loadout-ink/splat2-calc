@@ -534,29 +534,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size: 14pt;
 }
 
-.cardheader {
-  height: 36px;
-  padding-top:5px;
-  padding-bottom:2px;
-  background: rgba(20,20,20,0.8);
-  background-image: url("../assets/img/ui/bg-dots.png");
-  background-size: 50px 50px;
-  font-family: "Splat1", sans-serif;
-  font-size: 14pt;
-  text-align:center;
-  color: #fff;
-  position: relative;
-}
-
-.cardheader .icon-button {
-  position: absolute;
-  font-size: 14pt;
-  right: 20px;
-  top: 8px;
-}
-
-
-
 .panel-stats {
   border: 0px !important;
 }
