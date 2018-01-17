@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="83.675186"
+   height="66.41761"
+   viewBox="0 0 83.675189 66.417614"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="button-slide.svg">
+  <title
+     id="title4253">Splatoony Button (Leak Piece)</title>
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4203"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4330"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4326"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4322"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4318"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4314"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4310"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4306"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4302"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4298"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4279"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4275"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4271"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4235"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4231"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4209"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4169"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4178"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4156"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4156-3"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4178-7"
+       is_visible="true" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter4760">
+      <feFlood
+         flood-opacity="0.25098"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4762" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4764" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur4766" />
+      <feOffset
+         dx="2"
+         dy="2"
+         result="offset"
+         id="feOffset4768" />
+      <feComposite
+         in="offset"
+         in2="offset"
+         operator="atop"
+         result="composite2"
+         id="feComposite4770" />
+    </filter>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4169-3"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4169-3-7"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4209-3"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="63.225593"
+     inkscape:cy="58.315989"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Splatoony Button (Leak Piece)</dc:title>
+        <dc:date>January 2018</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Luke Horwell</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>MIT</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:description>A graphical piece for when a button is pressed. The ink &quot;leaks&quot; just a little.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-210.518,-117.98458)">
+    <path
+       style="fill:#63e76f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 213.43635,121.57105 c -3.59993,6.62054 -3.88913,14.94014 -0.75761,21.79467 0.76015,1.66387 1.71723,3.25377 2.97675,4.58038 1.25952,1.32662 2.8356,2.3833 4.59939,2.86843 1.59573,0.43891 3.29164,0.39996 4.92425,0.12874 1.63261,-0.27123 3.21765,-0.76826 4.80374,-1.24082 1.58608,-0.47255 3.18857,-0.92391 4.83419,-1.09966 1.64563,-0.17575 3.34935,-0.0649 4.88326,0.55646 1.81704,0.73605 3.31005,2.16619 4.29315,3.86234 0.9612,1.65837 1.45536,3.55638 1.6531,5.46295 0.19774,1.90657 0.10904,3.83096 -0.032,5.74256 -0.28205,3.82321 -0.76025,7.76276 0.39919,11.41682 1.07038,3.3734 3.58337,6.28967 6.81853,7.72469 2.91867,1.29463 6.33979,1.35753 9.34391,0.27588 3.4419,-1.23928 6.33485,-4.00764 7.57615,-7.44881 0.83277,-2.30863 0.9279,-4.81686 0.82266,-7.26884 -0.10523,-2.45198 -0.4017,-4.90012 -0.31759,-7.35291 0.0684,-1.99337 0.39436,-3.99543 1.16067,-5.83689 0.76631,-1.84146 1.99207,-3.51944 3.63756,-4.64663 1.24244,-0.85109 2.68717,-1.36862 4.15535,-1.70396 1.46817,-0.33535 2.96949,-0.49631 4.46298,-0.68999 1.49348,-0.19368 2.9907,-0.42255 4.42314,-0.88743 1.43244,-0.46488 2.80701,-1.17807 3.87858,-2.23625 1.21116,-1.19603 1.99347,-2.81768 2.17573,-4.51008 0.18226,-1.69239 -0.23683,-3.44342 -1.16557,-4.86991 l 0.75761,-10.20764 -0.75761,-8.00057 -79.54952,0.82764 0.25254,4.13823 -0.25254,-1.3794 z"
+       id="path4201"
+       inkscape:path-effect="#path-effect4203"
+       inkscape:original-d="m 213.43635,121.57105 c 0,0 -3.45098,15.04277 -0.75761,21.79467 1.31219,3.28948 4.24448,6.24773 7.57614,7.44881 6.11973,2.20619 13.27835,-3.72538 19.44544,-1.65528 1.82488,0.61256 3.43233,2.14059 4.29315,3.86234 3.38558,6.77161 -0.97052,15.66735 2.0203,22.62233 1.3568,3.15516 3.70906,6.26623 6.81853,7.72469 2.82109,1.3232 6.44298,1.41342 9.34391,0.27588 3.29711,-1.2929 6.15083,-4.20675 7.57615,-7.44881 1.96272,-4.46443 -0.61566,-9.87545 0.50507,-14.62175 0.88318,-3.74028 1.93031,-7.92525 4.79823,-10.48352 4.42696,-3.94899 13.18328,-0.91013 16.92005,-5.51763 1.98087,-2.44245 1.01016,-9.37999 1.01016,-9.37999 l 0.75761,-10.20764 -0.75761,-8.00057 -79.54952,0.82764 0.25254,4.13823 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssssscccccc" />
+  </g>
+</svg>

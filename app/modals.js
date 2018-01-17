@@ -64,10 +64,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 col-md-4 col-md-offset-2">
-    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="cancel()"><span>{{ UI_CANCEL | translate }}</span></button>
     </div>
     <div class="col-xs-6 col-md-4">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_OK | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -142,10 +142,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-6 col-md-4 col-md-offset-2">
-    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="cancel()"><span>{{ UI_CANCEL | translate }}</span></button>
     </div>
     <div class="col-xs-6 col-md-4">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_OK | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -223,7 +223,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -241,7 +241,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <p>{{ UI_ABOUT_CONTENT |translate}}</p>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -447,3 +447,7 @@ angular.module('splatApp').controller('BasicCtrl', function($scope, $uibModalIns
     $uibModalInstance.dismiss('cancel');
   };
 });
+
+function animateButton(self) {
+    $(self).addClass("active");
+}

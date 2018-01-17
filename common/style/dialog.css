@@ -41,10 +41,48 @@
   color: white;
 }
 
+.btn span {
+  transition: transform 0.2s;
+  display: block;
+}
+
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn.active {
   color: white;
   animation: btn-focus 0.1s normal forwards linear;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  outline: none !important;
+}
+
+.btn.active {
+  overflow: visible;
+}
+
+.btn.active span {
+  transform: skewY(8deg) translateY(4px);
+}
+
+.btn.active:after {
+  content: '';
+  width: 84px;
+  height: 66px;
+  position: absolute;
+  background-image: url(../assets/img/ui/button-slide.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: btn-active 0.1s ease-in-out;
 }
 
 /* Animations */
@@ -68,6 +106,16 @@
     filter: none;
     background-image: url(../assets/img/ui/button-active.svg);
     font-size: 0.8em;
+  }
+}
+
+@keyframes btn-active {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
   }
 }
 
