@@ -17,7 +17,6 @@ html {
 }
 
 body {
-  margin-bottom: 50px;
   background: #222 !important;
   background-image: url("../assets/img/ui/bg-primary.jpg") !important;
   overflow: hidden;
@@ -593,8 +592,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .footer {
-  position:absolute;
-  bottom: 0;
   width: 100%;
   height: 50px;
   font-family: "Splat2", sans-serif;
