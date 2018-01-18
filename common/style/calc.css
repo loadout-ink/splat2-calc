@@ -623,3 +623,19 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background-color: transparent;
   z-index: 100;
 }
+
+.dropdown-menu {
+  background: black;
+  border-radius: 20px;
+}
+
+.dropdown-menu > li > a {
+  font-family: "Splat2", sans-serif;
+  color: white;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background: #484848;
+  color: white;
+}
