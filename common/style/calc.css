@@ -81,7 +81,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #weapon {
   overflow-y:hidden;
-  height: 115px;
+  height: 125px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -428,7 +428,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .itemcard {
   overflow-y:hidden;
-  height:190px;
+  height: 200px;
 }
 
 .itemcard .col-xs-12 {
@@ -456,12 +456,21 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #utils {
   padding-top:15px;
-  height: 115px;
+  height: 125px;
   text-align: center;
   font-family: "Splat2", sans-serif;
   font-size: 14pt;
   color: #fff;
   overflow: hidden;
+}
+
+#utils span > span {
+  font-size: 1em;
+}
+
+#utils .version {
+  position: relative;
+  top: 10px;
 }
 
 #maincontainer {
