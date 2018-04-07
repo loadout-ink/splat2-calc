@@ -159,6 +159,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.4</h4>
+    <ul>
+    <li>Updated for game balance changes through version 2.3.3.</li>
+    <li>Added Clash Blaster Neo & Undercover Brella.</li>
+    </ul>
     <h4>Version 1.1.3</h4>
     <ul>
     <li>Updated released weapons as of 4/6/18.</li>
