@@ -159,6 +159,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.3</h4>
+    <ul>
+    <li>Updated released weapons as of 4/6/18.</li>
+    </ul>
     <h4>Version 1.1.2</h4>
     <ul>
     <li>Updated values for balance changes in game version 2.0.0.</li>
