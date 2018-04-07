@@ -159,6 +159,10 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.2</h4>
+    <ul>
+    <li>Updated released weapons as of 4/6/2018 (game version 2.3.2).</li>
+    </ul>
     <h4>Version 1.1.1</h4>
     <ul>
     <li>Updated most stats and weapons for game version 1.4.0. Cold-Blooded is still outdated and will be fixed soon.</li>

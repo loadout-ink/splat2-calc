@@ -748,7 +748,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Arroseur lourd requin",
             "de_DE": "H-3 Nozzlenose D"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Suction Bomb",
           special: "Ink Armor",
@@ -2109,9 +2108,8 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_FR": "Sorella Brella",
             "fr_CA": "Sorella Brella"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
-          sub: "Toxic Mist",
+          sub: "Autobomb",
           special: "Splat-Bomb Launcher",
           level: 15,
           specialCost: 180,
@@ -2992,7 +2990,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_CA": "Badigeonneur XP Leviathus",
             "de_DE": "Zink Mini Splatling" //TODO
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
           sub: "Curling Bomb",
           special: "Ink Storm",
