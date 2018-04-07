@@ -1994,8 +1994,8 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "../common/assets/img/weapons/Wst_Shooter_BlasterLightShort_01.png",
           name: "Clash Blaster Neo",
-          localizedName: { // TODO
-            "ja_JP": "Clash Blaster Neo",
+          localizedName: { 
+            "ja_JP": "クラッシュブラスターネオ",
             "en_US": "Clash Blaster Neo",
             "en_GB": "Clash Blaster Neo",
             "es_ES": "Turbodevastador neo",
@@ -2099,14 +2099,14 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "../common/assets/img/weapons/Wst_Umbrella_Normal_01.png",
           name: "Sorella Brella",
-          localizedName: { // TODO
-            "ja_JP": "Sorella Brella",
+          localizedName: {
+            "ja_JP": "パラシェルターソレーラ",
             "en_US": "Sorella Brella",
             "en_GB": "Sorella Brella",
-            "es_ES": "Sorella Brella",
-            "es_MX": "Sorella Brella",
-            "fr_FR": "Sorella Brella",
-            "fr_CA": "Sorella Brella"
+            "es_ES": "Paratintas B",
+            "es_MX": "Paratintas B",
+            "fr_FR": "Para-encre Sorella",
+            "fr_CA": "Para-encre Sorella"
           },
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Autobomb",
@@ -2732,7 +2732,7 @@ angular.module('splatApp').weapons = function ($scope) {
             "en_US": "Goo Tuber",
             "en_GB": "Goo Tuber",
             "es_ES": "Tubofusil",
-            "es_MX": "Tubofusil",
+            "es_MX": "Entintubo",
             "fr_FR": "Détubeur",
             "fr_CA": "Détubeur",
             "de_DE": "T-Tuber"
@@ -2757,14 +2757,14 @@ angular.module('splatApp').weapons = function ($scope) {
         {
           image: "../common/assets/img/weapons/Wst_Charger_Keeper_01.png",
           name: "Custom Goo Tuber",
-          localizedName: { // TODO
-            "ja_JP": "Custom Goo Tuber",
+          localizedName: { 
+            "ja_JP": "ソイチューバーカスタム",
             "en_US": "Custom Goo Tuber",
             "en_GB": "Custom Goo Tuber",
-            "es_ES": "Custom Goo Tuber",
-            "es_MX": "Custom Goo Tuber",
-            "fr_FR": "Custom Goo Tuber",
-            "fr_CA": "Custom Goo Tuber",
+            "es_ES": "Tubofusil SP",
+            "es_MX": "Entintubo adaptado",
+            "fr_FR": "Détubeur modifié",
+            "fr_CA": "Détubeur modifié",
             "de_DE": "Custom Goo Tuber"
           },
           shotUnit: "{{ SHOT_UNIT_CHARGER | translate }}",
