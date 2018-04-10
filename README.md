@@ -20,4 +20,6 @@ Running locally requires being built with Gulp.
 
 To ease development, you can use the `gulp serve` command 
 to build the project, start a webserver, and rebuild the project whenever
-a file changes in the project. 
+a file changes in the project.
+
+The webserver runs at localhost:8080 by default.
