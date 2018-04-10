@@ -1,0 +1,200 @@
+/*
+ * Splatoon 2 UI Dialog/Buttons
+ *
+ * Licensed under MIT.
+ *
+ * (C) 2018 Luke Horwell <code@horwell.me>
+ */
+
+#dialog {
+  font-family: "Splat2";
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+}
+
+#dialog .buttons {
+  padding-top: 5px;
+  text-align: center;
+  height: 50px;
+}
+
+.btn {
+  background: url(../assets/img/ui/button.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 160px;
+  height: 90px;
+  position: absolute;
+  bottom: -90px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1.1em;
+  font-family: "Splat2";
+  min-width: 60px;
+  color: white;
+}
+
+.btn span {
+  transition: transform 0.2s;
+  display: block;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active {
+  color: white;
+  animation: btn-focus 0.1s normal forwards linear;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  outline: none !important;
+}
+
+.btn.active {
+  overflow: visible;
+}
+
+.btn.active span {
+  transform: skewY(8deg) translateY(4px);
+}
+
+.btn.active:after {
+  content: '';
+  width: 84px;
+  height: 66px;
+  position: absolute;
+  background-image: url(../assets/img/ui/button-slide.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: btn-active 0.1s ease-in-out;
+}
+
+/* Animations */
+@keyframes btn-focus {
+  0% {
+    transform: scale(1.75);
+    opacity: 0.5;
+  }
+
+  90% {
+    background-image: url(../assets/img/ui/button-hover.svg);
+  }
+
+  99% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: none;
+    background-image: url(../assets/img/ui/button-active.svg);
+    font-size: 0.8em;
+  }
+}
+
+@keyframes btn-active {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Background blur when modal is open */
+#main {
+  transition: filter 0.25s, transform 0.25s;
+}
+
+.modal-backdrop ~ #main {
+  filter: blur(8px) brightness(0.8);
+  transform: scale(1.025, 1.015);
+}
+
+/* Top of headers */
+.cardheader {
+  height: 36px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+  background: rgb(20, 20, 20);
+  /*background-image: url("../assets/img/ui/bg-dots.png");*/
+  background-size: 50px 50px;
+  font-family: "Splat1", sans-serif;
+  font-size: 14pt;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.modal-body .cardheader:before {
+  content: "";
+  background-image: url(../assets/img/ui/cardboard-header.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 140px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  margin: auto;
+  z-index: 0;
+}
+
+.cardheader .icon-button {
+  position: absolute;
+  font-size: 14pt;
+  right: 20px;
+  top: 8px;
+}
+
+/* Center align on larger screens */
+@media screen and (min-height: 550px) and (min-width: 550px) {
+  .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50vh;
+  }
+}
+
+/* When opening a modal, mimick Splatoon 2's elastic animation */
+.modal.in .modal-dialog > div {
+  animation: modal-elastic 0.3s ease-in;
+}
+
+@keyframes modal-elastic {
+  0% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

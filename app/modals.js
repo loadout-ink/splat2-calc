@@ -1,4 +1,6 @@
-angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $log) {
+var modalCloseDelay = 200;
+
+angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $log, $timeout) {
   $scope.animationsEnabled = true;
 
 
@@ -63,11 +65,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row buttons">
-    <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
+    <div class="col-xs-6 col-md-4 col-md-offset-2">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="cancel()"><span>{{ UI_CANCEL | translate }}</span></button>
     </div>
-    <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    <div class="col-xs-6 col-md-4">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_OK | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -141,11 +143,11 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="row buttons">
-    <div class="col-xs-6 button-left">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_OK | translate }}</button>
+    <div class="col-xs-6 col-md-4 col-md-offset-2">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="cancel()"><span>{{ UI_CANCEL | translate }}</span></button>
     </div>
-    <div class="col-xs-6 button-right">
-    <button class="btn" type="button" ng-click="cancel()">{{ UI_CANCEL | translate }}</button>
+    <div class="col-xs-6 col-md-4">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_OK | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -239,7 +241,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -257,7 +259,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <p>{{ UI_ABOUT_CONTENT |translate}}</p>
     <div class="row buttons">
     <div class="col-xs-12">
-    <button class="btn" type="button" ng-click="ok()">{{ UI_CONFIRM_CASUAL | translate }}</button>
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
     </div>
     </div>
     </div>
@@ -390,7 +392,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
   };
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon) {
+angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
@@ -420,16 +422,21 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
   }
 
   $scope.ok = function() {
-    $uibModalInstance.close({'set' : this.selectedSet, 'weapon': this.selectedWeapon});
+    var scope = this;
+    $timeout(function() {
+      $uibModalInstance.close({'set' : scope.selectedSet, 'weapon': scope.selectedWeapon});
+    }, modalCloseDelay);
   };
 
   $scope.cancel = function() {
-    $uibModalInstance.dismiss('cancel');
+    $timeout(function() {
+      $uibModalInstance.dismiss('cancel');
+    }, modalCloseDelay);
   };
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName) {
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
   $scope.slot = slot
   $scope.set = set
   $scope.filterByMain = filterByMain
@@ -446,20 +453,36 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibMod
   }
 
   $scope.ok = function() {
-    $uibModalInstance.close({selected : this.selectedGear});
+    var scope = this;
+    $timeout(function() {
+      $uibModalInstance.close({selected : scope.selectedGear});
+    }, modalCloseDelay);
   };
 
   $scope.cancel = function() {
-    $uibModalInstance.dismiss('cancel');
+    $timeout(function() {
+      $uibModalInstance.dismiss('cancel');
+    }, modalCloseDelay);
   };
 });
 
-angular.module('splatApp').controller('BasicCtrl', function($scope, $uibModalInstance) {
+angular.module('splatApp').controller('BasicCtrl', function($scope, $uibModalInstance, $timeout) {
   $scope.ok = function() {
-    $uibModalInstance.close();
+    $timeout(function() {
+      $uibModalInstance.close();
+    }, modalCloseDelay);
   };
 
   $scope.cancel = function() {
-    $uibModalInstance.dismiss('cancel');
+    $timeout(function() {
+      $uibModalInstance.dismiss('cancel');
+    }, modalCloseDelay);
   };
 });
+
+function animateButton(self) {
+    $(self).addClass("active");
+    setTimeout(function() {
+      $(".modal-backdrop").remove();
+    }, modalCloseDelay);
+}

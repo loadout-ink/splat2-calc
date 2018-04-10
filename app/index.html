@@ -14,6 +14,7 @@
   <script src="../common/lib/angular-touch.min.js"></script>
   <script src="../common/lib/jquery-ui-custom/jquery-ui.js"></script>
   <script src="../common/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="../common/lib/jquery-ui-custom/jquery-ui.css">
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
@@ -32,16 +33,18 @@
   <script src="./stats.js"></script>
   <script src="./ui.js"></script>
   <script src="./modals.js"></script>
-  <link rel="stylesheet" href="../common/style/calc.css">
 
   <script src="https://use.fontawesome.com/c7118d472c.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link rel="icon" href="../common/assets/img/misc/favicon.png">
+
+  <link rel="stylesheet" href="../common/style/calc.css">
+  <link rel="stylesheet" href="../common/style/dialog.css">
 </head>
 <body ng-cloak ng-app="splatApp" ng-controller="splatController">
-  <div>
+  <div id="main">
     <script type="text/ng-template" id="blankModal.html">
       <div class="modal" ng-style="{'z-index': 1050 + index*10, display: 'block'}">
         <div class="modal-dialog " role="document">
@@ -49,7 +52,6 @@
         </div>
       </div>
     </script>
-
     <header class="hero-unit" id="splat-header">
       <img src="./../common/assets/img/ui/logo-custom.png" />
       <div id="language-picker" uib-dropdown is-open="status.langOpen">
@@ -308,5 +310,6 @@
         </div>
       </footer>
       <div id="draggable-parent"></div>
-    </body>
-    </html>
+  </div>
+</body>
+</html>

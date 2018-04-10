@@ -17,9 +17,9 @@ html {
 }
 
 body {
-  margin-bottom: 50px;
   background: #222 !important;
   background-image: url("../assets/img/ui/bg-primary.jpg") !important;
+  overflow: hidden;
 }
 
 body:not(.show-focus-outlines) button:focus,
@@ -81,7 +81,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #weapon {
   overflow-y:hidden;
-  height: 115px;
+  height: 125px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -417,17 +417,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   color: #ccc;
 }
 
-.btn {
-  background: #000;
-  font-family:"Splat2";
-  color: #fff;
-  min-width: 60px;
-}
-
-.btn:hover {
-  color: #ccc !important;
-}
-
 .card {
   overflow-x:hidden;
   border-radius: 25px;
@@ -439,7 +428,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .itemcard {
   overflow-y:hidden;
-  height:190px;
+  height: 200px;
 }
 
 .itemcard .col-xs-12 {
@@ -467,37 +456,27 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 #utils {
   padding-top:15px;
-  height: 115px;
+  height: 125px;
   text-align: center;
   font-family: "Splat2", sans-serif;
   font-size: 14pt;
   color: #fff;
+  overflow: hidden;
 }
 
-#dialog {
-  font-family:"Splat2";
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height:auto;
+#utils span > span {
+  font-size: 1em;
 }
 
-#dialog .buttons {
-  padding-top:5px;
-  text-align:center;
+#utils .version {
+  position: relative;
+  top: 10px;
 }
 
 #maincontainer {
   margin-bottom: 80px;
 }
 
-#dialog .buttons .button-left {
-  text-align: left;
-}
-
-#dialog .buttons .button-right {
-  text-align: right;
-}
 .basic-content h4 {
   margin-bottom: 0px !important;
 }
@@ -564,29 +543,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size: 14pt;
 }
 
-.cardheader {
-  height: 36px;
-  padding-top:5px;
-  padding-bottom:2px;
-  background: rgba(20,20,20,0.8);
-  background-image: url("../assets/img/ui/bg-dots.png");
-  background-size: 50px 50px;
-  font-family: "Splat1", sans-serif;
-  font-size: 14pt;
-  text-align:center;
-  color: #fff;
-  position: relative;
-}
-
-.cardheader .icon-button {
-  position: absolute;
-  font-size: 14pt;
-  right: 20px;
-  top: 8px;
-}
-
-
-
 .panel-stats {
   border: 0px !important;
 }
@@ -622,8 +578,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .footer {
-  position:absolute;
-  bottom: 0;
   width: 100%;
   height: 50px;
   font-family: "Splat2", sans-serif;
@@ -640,4 +594,48 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 .footer a:hover, .footer a:focus, .footer a:active {
   color: #fff !important;
   text-decoration: none !important;
+}
+
+/* Custom scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+  z-index: 100;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 100;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+  z-index: 100;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+  z-index: 100;
+}
+
+.dropdown-menu {
+  background: black;
+  border-radius: 20px;
+}
+
+.dropdown-menu > li > a {
+  font-family: "Splat2", sans-serif;
+  color: white;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background: #484848;
+  color: white;
 }

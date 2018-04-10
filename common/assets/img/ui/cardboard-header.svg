@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="116.5647"
+   height="89.594315"
+   viewBox="0 0 116.5647 89.594316"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="cardboard-header.svg">
+  <title
+     id="title4529">Card Header</title>
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4149"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4149-3"
+       is_visible="true" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter4517">
+      <feFlood
+         flood-opacity="0.686275"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4519" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4521" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur4523" />
+      <feOffset
+         dx="1"
+         dy="2.5"
+         result="offset"
+         id="feOffset4525" />
+      <feComposite
+         in="offset"
+         in2="offset"
+         operator="atop"
+         result="composite2"
+         id="feComposite4527" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="66.74075"
+     inkscape:cy="47.013096"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="px">
+    <sodipodi:guide
+       position="75.434562,-0.034696956"
+       orientation="0,1"
+       id="guide4144" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Card Header</dc:title>
+        <dc:date>January 20118</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Luke Horwell</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>MIT</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:description>A cardboard header that looks an awful lot like the one seen in Splatoon 2's UI.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-358.26796,-505.51372)">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4517)"
+       d="m 415.42756,550.61533 c -0.17121,-1.4479 -0.97339,-2.81 -2.1566,-3.66191 -1.1832,-0.85191 -2.72941,-1.18064 -4.15685,-0.88378 -1.08318,0.22527 -2.07664,0.79056 -2.91278,1.51506 -0.83615,0.7245 -1.52405,1.60516 -2.13799,2.52555 -1.62431,2.4351 -2.75255,5.15904 -4.05212,7.78186 -1.29957,2.62282 -2.82015,5.20906 -5.03925,7.11789 -1.69973,1.46208 -3.77453,2.47976 -5.96599,2.95331 -2.19146,0.47355 -4.49515,0.40445 -6.66091,-0.17539 -3.55192,-0.95095 -6.65583,-3.24996 -8.95911,-6.11621 -2.30327,-2.86625 -3.85009,-6.27898 -4.93049,-9.79369 -2.71693,-8.83861 -2.53724,-18.54216 0.50507,-27.27412 1.15145,-3.22704 3.17931,-6.13658 5.80838,-8.33376 2.72325,-2.27589 6.08473,-3.77971 9.59645,-4.29315 l 49.24494,-0.75761 c 3.63799,1.43004 6.94563,3.69316 9.59645,6.56599 2.89014,3.1322 4.9922,6.98598 6.06091,11.11168 l -33.84011,21.71828 z"
+       id="path4147"
+       inkscape:path-effect="#path-effect4149"
+       inkscape:original-d="m 415.42756,550.61533 c -1.04078,-2.37519 -3.72107,-4.61144 -6.31345,-4.54569 -2.15535,0.0547 -3.62593,2.42247 -5.05077,4.04061 -3.84495,4.36658 -4.35525,11.52044 -9.09137,14.89975 -3.50815,2.50313 -8.53372,4.1265 -12.6269,2.77792 -6.68637,-2.20297 -11.4783,-9.2958 -13.8896,-15.9099 -3.11448,-8.54292 0.50507,-27.27412 0.50507,-27.27412 0,0 3.19988,-6.17479 5.80838,-8.33376 2.69961,-2.23438 9.59645,-4.29315 9.59645,-4.29315 l 49.24494,-0.75761 c 0,0 6.99718,3.69084 9.59645,6.56599 2.82939,3.1297 6.06091,11.11168 6.06091,11.11168 3.84882,154.40978 -35.36229,88.88759 -33.84011,21.71828 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssscsccscc" />
+    <path
+       style="fill:#141414;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 410.12425,595.108 5.3033,-44.49267 c -0.17121,-1.4479 -0.97339,-2.81 -2.1566,-3.66191 -1.1832,-0.85191 -2.72941,-1.18064 -4.15685,-0.88378 -1.08318,0.22527 -2.07664,0.79056 -2.91278,1.51506 -0.83615,0.7245 -1.52405,1.60516 -2.13799,2.52555 -1.62431,2.4351 -2.75255,5.15904 -4.05212,7.78186 -1.29957,2.62282 -2.82015,5.20906 -5.03925,7.11789 -1.69973,1.46208 -3.77453,2.47976 -5.96599,2.95331 -2.19146,0.47355 -4.49515,0.40445 -6.66091,-0.17539 -3.55192,-0.95095 -6.65583,-3.24996 -8.95911,-6.11621 -2.30327,-2.86625 -3.85009,-6.27898 -4.93049,-9.79369 -2.71693,-8.83861 -2.53724,-18.54216 0.50507,-27.27412 1.15145,-3.22704 3.17931,-6.13658 5.80838,-8.33376 2.72325,-2.27589 6.08473,-3.77971 9.59645,-4.29315 l 49.24494,-0.75761 c 3.68538,1.32947 7.0222,3.61256 9.59645,6.56599 2.78794,3.1986 4.53165,7.15378 6.06091,11.11168 l 25.565,66.16499 -64.70841,0.046 0,-4e-5 z"
+       id="path4147-6"
+       inkscape:path-effect="#path-effect4149-3"
+       inkscape:original-d="m 410.12425,595.108 c 0,0 5.13013,-29.54087 5.3033,-44.49267 -1.04078,-2.37519 -3.72107,-4.61144 -6.31345,-4.54569 -2.15535,0.0547 -3.62593,2.42247 -5.05077,4.04061 -3.84495,4.36658 -4.35525,11.52044 -9.09137,14.89975 -3.50815,2.50313 -8.53372,4.1265 -12.6269,2.77792 -6.68637,-2.20297 -11.4783,-9.2958 -13.8896,-15.9099 -3.11448,-8.54292 0.50507,-27.27412 0.50507,-27.27412 0,0 3.19988,-6.17479 5.80838,-8.33376 2.69961,-2.23438 9.59645,-4.29315 9.59645,-4.29315 l 49.24494,-0.75761 c 0,0 6.99718,3.69084 9.59645,6.56599 2.82939,3.1297 6.06091,11.11168 6.06091,11.11168 l 25.565,66.16499 c 0,0 -337.20819,-1.51565 -64.70841,0.046 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccssssscsccsccc" />
+  </g>
+</svg>
