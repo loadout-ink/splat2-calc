@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var translate = require('gulp-translator');
 var cachebust = require('gulp-cache-bust');
+var connect = require('gulp-connect');
 var del = require('del');
 
 var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX', 'it_IT', 'zh_HK'];
@@ -60,5 +61,18 @@ gulp.task('bust', function() {
       .pipe(gulp.dest('dist/' + lang))
   })
 })
+
+gulp.task('webserver', function() {
+  connect.server({
+      root: 'dist'
+  })
+});
+
+gulp.task('watch', function() {
+  const watchedPaths = ['app/**', 'common/**', 'locale/**'];
+  gulp.watch(watchedPaths, '', ['prep', 'localize']);
+});
+
+gulp.task('serve', ['default', 'webserver', 'watch']);
 
 gulp.task('default', ['clean', 'prep', 'localize'])

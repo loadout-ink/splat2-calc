@@ -16,6 +16,7 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cache-bust": "^1.1.0",
+    "gulp-connect": "^5.0.0",
     "gulp-translator": "^0.2.0"
   },
   "scripts": {

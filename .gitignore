@@ -5,5 +5,6 @@ gulpfile_dist.js
 redirect.html
 maintenance.html
 splash.css
+.idea/
 
 package-lock\.json
