@@ -1544,7 +1544,7 @@ angular.module('splatApp').weapons = function ($scope) {
           sub: "Autobomb",
           special: "Inkjet",
           level: 10,
-          specialCost: 180,
+          specialCost: 170,
           inkSaver: "Middle",
           inkPerShot: 3.2,
           speedLevel: "Middle",
@@ -2005,7 +2005,6 @@ angular.module('splatApp').weapons = function ($scope) {
             "fr_FR": "Rafablaster Néo",
             "fr_CA": "Rafalblasteur Néo"
           },
-          unreleased: true,
           shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
           sub: "Curling Bomb",
           special: "Tenta Missiles",
@@ -2153,6 +2152,33 @@ angular.module('splatApp').weapons = function ($scope) {
             "{{ SHELDON_DAMAGE | translate }}": 85
           },
           id: 3
+        },
+        {
+          image: "../common/assets/img/weapons/Wst_Umbrella_Undercover_00.png",
+          name: "Undercover Brella",
+          localizedName: {
+            "ja_JP": "スパイガジェット",
+            "en_US": "Undercover Brella",
+            "en_GB": "Undercover Brella",
+            "es_ES": "Paratintas clásico",
+            "es_MX": "Paratintas clásico",
+            "fr_FR": "Para-encre espion",
+            "fr_CA": "Para-encre espion"
+          },
+          shotUnit: "{{ SHOT_UNIT_SHOT | translate }}",
+          sub: "Ink Mine",
+          special: "Splashdown",
+          level: 13,
+          specialCost: 160,
+          inkSaver: "Middle",
+          speedLevel: "High",
+          price: 9100,
+          stats: {
+            "{{ SHELDON_RANGE | translate }}": 50,
+            "{{ SHELDON_DURABILITY | translate }}": 25,
+            "{{ SHELDON_DAMAGE | translate }}": 30
+          },
+          id: 4
         }
       ]
     },

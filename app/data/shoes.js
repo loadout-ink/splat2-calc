@@ -1,1058 +1,2230 @@
 angular.module('splatApp').shoes = function($scope) {
-  $scope.shoes = [
+  $scope.shoes =[
   {
-    image: "../common/assets/img/gear/Shs_FST000.png",
-    name: "Cream Basics",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_FST000.png",
+    "name": "Cream Basics",
+    "localizedName": {
       "ja_JP": "キャンバス ホワイト",
       "en_US": "Cream Basics",
       "en_GB": "Cream Basics",
       "es_ES": "Bamba crema",
       "es_MX": "Tenis crema",
       "fr_FR": "Tennis crème",
-      "fr_CA": "Espadrilles crème"
+      "fr_CA": "Espadrilles crème",
+      "de_DE": "Weiße Leinenschuhe",
+      "nl_NL": "Crèmekleurige sneakers",
+      "ru_RU": "Светлые полукеды"
     },
-    main: "Special Saver",
-    brand: "Krak-On",
-    stars: 1,
-    id: 0
+    "main": "Special Saver",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 0,
+    "splatnet": 1
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO003.png",
-    name: "White Seahorses",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO000.png",
+    "name": "Blue Lo-Tops",
+    "localizedName": {
+      "ja_JP": "グリッチョ ブルー",
+      "en_US": "Blue Lo-Tops",
+      "en_GB": "Blue Lo-Tops",
+      "es_ES": "Tenis azul",
+      "es_MX": "Tenis azules",
+      "fr_FR": "Tennis bleues",
+      "fr_CA": "Espadrilles bleues",
+      "de_DE": "Blaue Low-Tops",
+      "nl_NL": "Blauwe Lo-Tops",
+      "ru_RU": "Синие сникеры"
+    },
+    "main": "Bomb Defense Up",
+    "brand": "Zekko",
+    "stars": 1,
+    "splatnet": 1000,
+    "id": 106
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO003.png",
+    "name": "White Seahorses",
+    "localizedName": {
       "ja_JP": "シーホース ホワイト",
       "en_US": "White Seahorses",
       "en_GB": "White Seahorses",
       "es_ES": "Hipocampo blanca",
       "es_MX": "Hipocampo blancos",
       "fr_FR": "Hippo blanches",
-      "fr_CA": "Hippo blanches"
+      "fr_CA": "Hippo blanches",
+      "de_DE": "Weiße Low-Top-Sneaker",
+      "nl_NL": "Witte sneakers",
+      "ru_RU": "Белые кроссы"
     },
-    main: "Ink Recovery Up",
-    brand: "Zink",
-    stars: 1,
-    id: 1
+    "main": "Ink Recovery Up",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 1,
+    "splatnet": 1003
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO008.png",
-    name: "Strapping Whites",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO005.png",
+    "name": "Black Seahorses",
+    "localizedName": {
+      "ja_JP": "シーホース ブラックレザー",
+      "en_US": "Black Seahorses",
+      "en_GB": "Black Seahorses",
+      "es_ES": "Hipocampo negra",
+      "es_MX": "Hipocampo negros",
+      "fr_FR": "Hippo noires",
+      "fr_CA": "Hippo noires",
+      "de_DE": "Schwarze Low-Top-Sneaker",
+      "nl_NL": "Zwarte sneakers",
+      "ru_RU": "Черные кроссы"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Zink",
+    "stars": 2,
+    "splatnet": 1005,
+    "id": 107
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO006.png",
+    "name": "Clownfish Basics",
+    "localizedName": {
+      "ja_JP": "キャンバス クマノミ",
+      "en_US": "Clownfish Basics",
+      "en_GB": "Clownfish Basics",
+      "es_ES": "Bamba pez payaso",
+      "es_MX": "Tenis pez payaso",
+      "fr_FR": "Tennis poisson-clown",
+      "fr_CA": "Espadrilles poisson-clown",
+      "de_DE": "Clownfisch-Leinenschuhe",
+      "nl_NL": "Anemoonvissneakers",
+      "ru_RU": "Клоунские полукеды"
+    },
+    "main": "Special Charge Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "splatnet": 1006,
+    "id": 108
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO008.png",
+    "name": "Strapping Whites",
+    "localizedName": {
       "ja_JP": "ベリベリホワイト",
       "en_US": "Strapping Whites",
       "en_GB": "Strapping Whites",
       "es_ES": "Bamba ultrablanca",
       "es_MX": "Tenis ultrablancos",
       "fr_FR": "Baskets à scratch blanches",
-      "fr_CA": "Espadrilles blanches"
+      "fr_CA": "Espadrilles blanches",
+      "de_DE": "Ultraweiße Klettsneaker",
+      "nl_NL": "Witte klittebandschoenen",
+      "ru_RU": "Белые сникеры"
     },
-    main: "Ink Saver (Sub)",
-    brand: "Splash Mob",
-    stars: 3,
-    id: 2
+    "main": "Ink Saver (Sub)",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 2,
+    "splatnet": 1008
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO009.png",
-    name: "Strapping Reds",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO009.png",
+    "name": "Strapping Reds",
+    "localizedName": {
       "ja_JP": "ベリベリレッド",
       "en_US": "Strapping Reds",
       "en_GB": "Strapping Reds",
       "es_ES": "Bamba ultrarroja",
       "es_MX": "Tenis ultrarrojos",
       "fr_FR": "Baskets à scratch rouges",
-      "fr_CA": "Espadrilles rouges"
+      "fr_CA": "Espadrilles rouges",
+      "de_DE": "Ultrarote Klettsneaker",
+      "nl_NL": "Rode klittebandschoenen",
+      "ru_RU": "Красные сникеры"
     },
-    main: "Ink Resistance Up",
-    brand: "Splash Mob",
-    stars: 1,
-    id: 3
+    "main": "Ink Resistance Up",
+    "brand": "Splash Mob",
+    "stars": 1,
+    "id": 3,
+    "splatnet": 1009
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO011.png",
-    name: "LE Soccer Shoes",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO010.png",
+    "name": "Soccer Shoes",
+    "localizedName": {
+      "ja_JP": "ユデスパイカ",
+      "en_US": "Soccer Shoes",
+      "en_GB": "Soccer Shoes",
+      "es_ES": "Bota de tacos",
+      "es_MX": "Tacos",
+      "fr_FR": "Chaussures à crampons",
+      "fr_CA": "Souliers de soccer",
+      "de_DE": "Stollenschuhe",
+      "nl_NL": "Voetbalschoenen",
+      "ru_RU": "Бутсы"
+    },
+    "main": "Bomb Defense Up",
+    "brand": "Takoroka",
+    "stars": 3,
+    "splatnet": 1010,
+    "id": 109
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO011.png",
+    "name": "LE Soccer Shoes",
+    "localizedName": {
       "ja_JP": "レアスパイカ",
       "en_US": "LE Soccer Shoes",
-      "en_GB": "LE Football Studs",
+      "en_GB": "LE Soccer Shoes",
       "es_ES": "Bota de tacos extra",
       "es_MX": "Tacos primera división",
       "fr_FR": "Chaussures à crampons DX",
-      "fr_CA": "Souliers de soccer DX"
+      "fr_CA": "Souliers de soccer DX",
+      "de_DE": "Deluxe-Stollenschuhe",
+      "nl_NL": "Speciale editie voetbalschoenen",
+      "ru_RU": "Раритетные бутсы"
     },
-    main: "Ink Resistance Up",
-    brand: "Takoroka",
-    stars: 3,
-    id: 4
+    "main": "Ink Resistance Up",
+    "brand": "Takoroka",
+    "stars": 3,
+    "id": 4,
+    "splatnet": 1011
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO012.png",
-    name: "Sunny Climbing Shoes",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO012.png",
+    "name": "Sunny Climbing Shoes",
+    "localizedName": {
       "ja_JP": "ボルダーシューズ タイノエ",
       "en_US": "Sunny Climbing Shoes",
       "en_GB": "Sunny Climbing Shoes",
       "es_ES": "Tenis escalada solar",
       "es_MX": "Tenis escalada solar",
       "fr_FR": "Souliers d'escalade été",
-      "fr_CA": "Souliers d'escalade été"
+      "fr_CA": "Souliers d'escalade été",
+      "de_DE": "Sonnen-Kletterschuhe",
+      "nl_NL": "Gele klimschoenen",
+      "ru_RU": "Ботинки альпиниста"
     },
-    main: "Special Saver",
-    brand: "Inkline",
-    stars: 2,
-    id: 5
+    "main": "Special Saver",
+    "brand": "Inkline",
+    "stars": 2,
+    "id": 5,
+    "splatnet": 1012
   },
   {
-    image: "../common/assets/img/gear/Shs_SLO013.png",
-    name: "Birch Climbing Shoes",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO013.png",
+    "name": "Birch Climbing Shoes",
+    "localizedName": {
       "ja_JP": "ボルダーシューズ ハザクラ",
       "en_US": "Birch Climbing Shoes",
       "en_GB": "Birch Climbing Shoes",
       "es_ES": "Tenis escalada natura",
       "es_MX": "Tenis escalada natura",
       "fr_FR": "Souliers d'escalade printemps",
-      "fr_CA": "Souliers d'escalade printemps"
+      "fr_CA": "Souliers d'escalade printemps",
+      "de_DE": "Pfirsich-Kletterschuhe",
+      "nl_NL": "Groene klimschoenen",
+      "ru_RU": "Ботинки альпиниста-бис"
     },
-    main: "Special Charge Up",
-    brand: "Inkline",
-    stars: 1,
-    id: 6
+    "main": "Special Charge Up",
+    "brand": "Inkline",
+    "stars": 1,
+    "id": 6,
+    "splatnet": 1013
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI000.png",
-    name: "Red Hi-Horses",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLO014.png",
+    "name": "Green Laceups",
+    "localizedName": {
+      "ja_JP": "ヒモヒモグリーン",
+      "en_US": "Green Laceups",
+      "en_GB": "Green Laceups",
+      "es_ES": "Bamba encaje verde",
+      "es_MX": "Bamba encaje verde",
+      "fr_FR": "Tennis vertes",
+      "fr_CA": "Tennis vertes",
+      "de_DE": "Grüne Schnürschuhe",
+      "nl_NL": "Groene Lace-Ups",
+      "ru_RU": "Зеленые кеды со шнурками"
+    },
+    "main": "Cold-Blooded",
+    "brand": "Splash Mob",
+    "stars": 1,
+    "splatnet": 1014,
+    "id": 110
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO015.png",
+    "name": "White Laceless Dakroniks",
+    "localizedName": {
+      "ja_JP": "デカロノーレース ホワイト",
+      "en_US": "White Laceless Dakroniks",
+      "en_GB": "White Laceless Dakroniks",
+      "es_ES": "Hipocampo-B simple blanca",
+      "es_MX": "Hipocampo-B simple blanca",
+      "fr_FR": "Baskets sans lacets blanches",
+      "fr_CA": "Baskets sans lacets blanches",
+      "de_DE": "Weiße Schnürlos-Dakroniks",
+      "nl_NL": "Witte veterloze Dakroniks",
+      "ru_RU": "Белые кеды без шнурков"
+    },
+    "main": "Run Speed Up",
+    "brand": "Zink",
+    "stars": 2,
+    "splatnet": 1015,
+    "id": 111
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLO016.png",
+    "name": "Blue Laceless Dakroniks",
+    "localizedName": {
+      "ja_JP": "デカロノーレース ブルー",
+      "en_US": "Blue Laceless Dakroniks",
+      "en_GB": "Blue Laceless Dakroniks",
+      "es_ES": "Hipocampo-B simple azul",
+      "es_MX": "Hipocampo-B simple azul",
+      "fr_FR": "Baskets sans lacets bleues",
+      "fr_CA": "Baskets sans lacets bleues",
+      "de_DE": "Blaue Schnürlos-Dakroniks",
+      "nl_NL": "Blauwe veterloze Dakroniks",
+      "ru_RU": "Синие кеды без шнурков"
+    },
+    "main": "Stealth Jump",
+    "brand": "Zink",
+    "stars": 1,
+    "splatnet": 1016,
+    "id": 112
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI000.png",
+    "name": "Red Hi-Horses",
+    "localizedName": {
       "ja_JP": "シーホースHi レッド",
       "en_US": "Red Hi-Horses",
       "en_GB": "Red Hi-Horses",
       "es_ES": "Hipocampo-A roja",
       "es_MX": "Tenis bota rojos",
       "fr_FR": "Hippo montantes rouges",
-      "fr_CA": "Hippo hautes rouges"
+      "fr_CA": "Hippo hautes rouges",
+      "de_DE": "Rote High-Top-Sneaker",
+      "nl_NL": "Rode hoge sneakers",
+      "ru_RU": "Красные блинг-кеды"
     },
-    main: "Ink Saver (Main)",
-    brand: "Zink",
-    stars: 1,
-    id: 7
+    "main": "Ink Saver (Main)",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 7,
+    "splatnet": 2000
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI003.png",
-    name: "Purple Hi-Horses",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI001.png",
+    "name": "Zombie Hi-Horses",
+    "localizedName": {
+      "ja_JP": "シーホースHi ゾンビ",
+      "en_US": "Zombie Hi-Horses",
+      "en_GB": "Zombie Hi-Horses",
+      "es_ES": "Hipocampo-A zombi",
+      "es_MX": "Tenis bota zombi",
+      "fr_FR": "Hippo montantes zombi",
+      "fr_CA": "Hippo hautes zombi",
+      "de_DE": "Zombie-High-Top-Sneaker",
+      "nl_NL": "Hoge zombiesneakers",
+      "ru_RU": "Блинг-кеды «Зомби»"
+    },
+    "main": "Special Charge Up",
+    "brand": "Zink",
+    "stars": 1,
+    "splatnet": 2001,
+    "id": 113
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI003.png",
+    "name": "Purple Hi-Horses",
+    "localizedName": {
       "ja_JP": "シーホースHi パープル",
       "en_US": "Purple Hi-Horses",
       "en_GB": "Purple Hi-Horses",
       "es_ES": "Hipocampo-A morada",
       "es_MX": "Tenis bota morados",
       "fr_FR": "Hippo montantes violettes",
-      "fr_CA": "Hippo hautes mauves"
+      "fr_CA": "Hippo hautes mauves",
+      "de_DE": "Lila High-Top-Sneaker",
+      "nl_NL": "Paarse Hi-Tops",
+      "ru_RU": "Лиловые блинг-кеды"
     },
-    main: "Special Power Up",
-    brand: "Zink",
-    stars: 1,
-    id: 8
+    "main": "Special Power Up",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 8,
+    "splatnet": 2003
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI004.png",
-    name: "Hunter Hi-Tops",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI004.png",
+    "name": "Hunter Hi-Tops",
+    "localizedName": {
       "ja_JP": "キャンバスHi モロヘイヤ",
       "en_US": "Hunter Hi-Tops",
       "en_GB": "Hunter Hi-Tops",
       "es_ES": "Bamba alta oliva",
       "es_MX": "Tenis bota olivo",
       "fr_FR": "Tennis montantes algue",
-      "fr_CA": "Espadrilles hautes algue"
+      "fr_CA": "Espadrilles hautes algue",
+      "de_DE": "Tannengrüne Leinen-High-Tops",
+      "nl_NL": "Groene Hi-Tops",
+      "ru_RU": "Кеды «Охотник»"
     },
-    main: "Ink Recovery Up",
-    brand: "Krak-On",
-    stars: 1,
-    id: 9
+    "main": "Ink Recovery Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 9,
+    "splatnet": 2004
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI006.png",
-    name: "Gold Hi-Horses",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI005.png",
+    "name": "Red Hi-Tops",
+    "localizedName": {
+      "ja_JP": "キャンバスHi トマト",
+      "en_US": "Red Hi-Tops",
+      "en_GB": "Red Hi-Tops",
+      "es_ES": "Bamba alta roja",
+      "es_MX": "Tenis bota rojos",
+      "fr_FR": "Tennis montantes rouges",
+      "fr_CA": "Tennis montantes rouges",
+      "de_DE": "Rote Leinen-High-Tops",
+      "nl_NL": "Rode Hi-Tops",
+      "ru_RU": "Красные кеды"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Krak-On",
+    "stars": 2,
+    "splatnet": 2005,
+    "id": 114
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI006.png",
+    "name": "Gold Hi-Horses",
+    "localizedName": {
       "ja_JP": "シーホースHi ゴールド",
       "en_US": "Gold Hi-Horses",
       "en_GB": "Gold Hi-Horses",
       "es_ES": "Hipocampo-A oro",
       "es_MX": "Tenis bota oro",
       "fr_FR": "Hippo montantes or",
-      "fr_CA": "Hippo hautes or"
+      "fr_CA": "Hippo hautes or",
+      "de_DE": "Goldene High-Top-Sneaker",
+      "nl_NL": "Gouden Hi-Tops",
+      "ru_RU": "Золотистые блинг-кеды"
     },
-    main: "Run Speed Up",
-    brand: "Zink",
-    stars: 3,
-    id: 10
+    "main": "Run Speed Up",
+    "brand": "Zink",
+    "stars": 3,
+    "id": 10,
+    "splatnet": 2006
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI009.png",
-    name: "Mawcasins",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI008.png",
+    "name": "Shark Moccasins",
+    "localizedName": {
+      "ja_JP": "シャークモカシン",
+      "en_US": "Shark Moccasins",
+      "en_GB": "Shark Moccasins",
+      "es_ES": "Mocasín caimán",
+      "es_MX": "Caimanes",
+      "fr_FR": "Mocassins squale",
+      "fr_CA": "Mocassins requin",
+      "de_DE": "Hai-Schnürer",
+      "nl_NL": "Krokodillenmocassins",
+      "ru_RU": "Мокасины «Челюсти»"
+    },
+    "main": "Sub Power Up",
+    "brand": "Splash Mob",
+    "stars": 1,
+    "splatnet": 2008,
+    "id": 115
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI009.png",
+    "name": "Mawcasins",
+    "localizedName": {
       "ja_JP": "ジョーズモカシン",
       "en_US": "Mawcasins",
       "en_GB": "Mawcasins",
       "es_ES": "Mocasín escualo",
       "es_MX": "Tiburones",
       "fr_FR": "Mocassins carnassier",
-      "fr_CA": "Mocassins carnassier"
+      "fr_CA": "Mocassins carnassier",
+      "de_DE": "Karnivor-Schnürer",
+      "nl_NL": "Haaienmocassins",
+      "ru_RU": "Мокасины «Зубастики»"
     },
-    main: "Ink Recovery Up",
-    brand: "Splash Mob",
-    stars: 2,
-    id: 11
+    "main": "Ink Recovery Up",
+    "brand": "Splash Mob",
+    "stars": 2,
+    "id": 11,
+    "splatnet": 2009
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI011.png",
-    name: "Mint Dakroniks",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI011.png",
+    "name": "Mint Dakroniks",
+    "localizedName": {
       "ja_JP": "デカロニックミント",
       "en_US": "Mint Dakroniks",
       "en_GB": "Mint Dakroniks",
       "es_ES": "Hipocampo-B celeste",
       "es_MX": "Hipocampo-B celeste",
       "fr_FR": "Baskets montantes azur",
-      "fr_CA": "Baskets montantes azur"
+      "fr_CA": "Baskets montantes azur",
+      "de_DE": "Türkise Dakroniks",
+      "nl_NL": "Hemelsblauwe Dakroniks",
+      "ru_RU": "Бирюзовые кросс-кеды"
     },
-    main: "Drop Roller",
-    brand: "Zink",
-    stars: 1,
-    id: 12
+    "main": "Drop Roller",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 12,
+    "splatnet": 2011
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI012.png",
-    name: "Black Dakroniks",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI012.png",
+    "name": "Black Dakroniks",
+    "localizedName": {
       "ja_JP": "デカロニックブラック",
       "en_US": "Black Dakroniks",
       "en_GB": "Black Dakroniks",
       "es_ES": "Hipocampo-B blanca y negra",
       "es_MX": "Dakronik negros",
       "fr_FR": "Baskets montantes noires",
-      "fr_CA": "Baskets montantes noires"
+      "fr_CA": "Baskets montantes noires",
+      "de_DE": "Schwarze Dakroniks",
+      "nl_NL": "Zwarte Dakroniks",
+      "ru_RU": "Черные кросс-кеды"
     },
-    main: "Cold-Blooded",
-    brand: "Zink",
-    stars: 2,
-    id: 13
+    "main": "Cold-Blooded",
+    "brand": "Zink",
+    "stars": 2,
+    "id": 13,
+    "splatnet": 2012
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI013.png",
-    name: "Piranha Moccasins",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI013.png",
+    "name": "Piranha Moccasins",
+    "localizedName": {
       "ja_JP": "ピラニアモカシン",
       "en_US": "Piranha Moccasins",
       "en_GB": "Piranha Moccasins",
       "es_ES": "Mocasín piraña",
       "es_MX": "Pirañas",
       "fr_FR": "Mocassins piranha",
-      "fr_CA": "Mocassins piranha"
+      "fr_CA": "Mocassins piranha",
+      "de_DE": "Piranha-Schnürer",
+      "nl_NL": "Piranhamocassins",
+      "ru_RU": "Мокасины «Пираньи»"
     },
-    main: "Stealth Jump",
-    brand: "Splash Mob",
-    stars: 3,
-    id: 14
+    "main": "Stealth Jump",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 14,
+    "splatnet": 2013
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI014.png",
-    name: "White Norimaki 750s",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI014.png",
+    "name": "White Norimaki 750s",
+    "localizedName": {
       "ja_JP": "ノリマキ750 ホワイト",
       "en_US": "White Norimaki 750s",
       "en_GB": "White Norimaki 750s",
       "es_ES": "Deportiva futurista blanca",
       "es_MX": "Norimaki 750 blancos",
       "fr_FR": "Tennis high-tech blanches",
-      "fr_CA": "Norimaki 750 blanches"
+      "fr_CA": "Norimaki 750 blanches",
+      "de_DE": "Weiße Norimaki 750s",
+      "nl_NL": "Witte Norimaki 750s",
+      "ru_RU": "Белые сушитапки 750с"
     },
-    main: "Swim Speed Up",
-    brand: "Tentatek",
-    stars: 2,
-    id: 15
+    "main": "Swim Speed Up",
+    "brand": "Tentatek",
+    "stars": 2,
+    "id": 15,
+    "splatnet": 2014
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI015.png",
-    name: "Black Norimaki 750s",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI015.png",
+    "name": "Black Norimaki 750s",
+    "localizedName": {
       "ja_JP": "ノリマキ750 ブラック",
       "en_US": "Black Norimaki 750s",
       "en_GB": "Black Norimaki 750s",
       "es_ES": "Deportiva futurista negra",
       "es_MX": "Norimaki 750 negros",
       "fr_FR": "Tennis high-tech noires",
-      "fr_CA": "Norimaki 750 noires"
+      "fr_CA": "Norimaki 750 noires",
+      "de_DE": "Schwarze Norimaki 750s",
+      "nl_NL": "Zwarte Norimaki 750s",
+      "ru_RU": "Черные сушитапки 750с"
     },
-    main: "Special Charge Up",
-    brand: "Tentatek",
-    stars: 3,
-    id: 16
+    "main": "Special Charge Up",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 16,
+    "splatnet": 2015
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI016.png",
-    name: "Sunset Orca Hi-Tops",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI016.png",
+    "name": "Sunset Orca Hi-Tops",
+    "localizedName": {
       "ja_JP": "オルカHiサンセット",
       "en_US": "Sunset Orca Hi-Tops",
       "en_GB": "Sunset Orca Hi-Tops",
       "es_ES": "Deportiva orca soleada",
       "es_MX": "Deportiva orca soleada",
       "fr_FR": "Orques crépuscule",
-      "fr_CA": "Espadrilles hautes crépuscule"
+      "fr_CA": "Espadrilles hautes crépuscule",
+      "de_DE": "Sonnenorca-High-Tops",
+      "nl_NL": "Gele orka-sneakers",
+      "ru_RU": "Оранжевые «Косатки»"
     },
-    main: "Drop Roller",
-    brand: "Takoroka",
-    stars: 2,
-    id: 17
+    "main": "Drop Roller",
+    "brand": "Takoroka",
+    "stars": 2,
+    "id": 17,
+    "splatnet": 2016
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI017.png",
-    name: "Red & Black Squidkid IV",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI017.png",
+    "name": "Red & Black Squidkid IV",
+    "localizedName": {
       "ja_JP": "エギング4 アカクロ",
       "en_US": "Red & Black Squidkid IV",
       "en_GB": "Red & Black Squidkid IV",
       "es_ES": "Calamark roja y negra",
       "es_MX": "Calamark roja y negra",
       "fr_FR": "Egings IV rouges et noires",
-      "fr_CA": "Egings IV rouges et noires"
+      "fr_CA": "Egings IV rouges et noires",
+      "de_DE": "Rot-schwarze Squidkids IV",
+      "nl_NL": "Rode Squidkid IV",
+      "ru_RU": "Красно-черные шузы"
     },
-    main: "Special Charge Up",
-    brand: "Enperry",
-    stars: 3,
-    id: 18
+    "main": "Special Charge Up",
+    "brand": "Enperry",
+    "stars": 3,
+    "id": 18,
+    "splatnet": 2017
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI018.png",
-    name: "Blue & Black Squidkid IV",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI018.png",
+    "name": "Blue & Black Squidkid IV",
+    "localizedName": {
       "ja_JP": "エギング4 アオクロ",
       "en_US": "Blue & Black Squidkid IV",
       "en_GB": "Blue & Black Squidkid IV",
       "es_ES": "Calamark azul y negra",
       "es_MX": "Calamark azul y negra",
       "fr_FR": "Egings IV bleues et noires",
-      "fr_CA": "Egings IV bleues et noires"
+      "fr_CA": "Egings IV bleues et noires",
+      "de_DE": "Blau-schwarze Squidkids IV",
+      "nl_NL": "Blauwe Squidkid IV",
+      "ru_RU": "Сине-черные шузы"
     },
-    main: "Quick Super Jump",
-    brand: "Enperry",
-    stars: 3,
-    id: 19
+    "main": "Quick Super Jump",
+    "brand": "Enperry",
+    "stars": 3,
+    "id": 19,
+    "splatnet": 2018
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI019.png",
-    name: "Gray Sea-Slug Hi-Tops",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI019.png",
+    "name": "Gray Sea-Slug Hi-Tops",
+    "localizedName": {
       "ja_JP": "ウミウシタウンHi グレー",
       "en_US": "Gray Sea-Slug Hi-Tops",
       "en_GB": "Gray Sea-Slug Hi-Tops",
       "es_ES": "Zapatilla alta gris",
       "es_MX": "Tenis bota grises",
       "fr_FR": "Anguilles montantes grises",
-      "fr_CA": "Anguilles montantes grises"
+      "fr_CA": "Anguilles montantes grises",
+      "de_DE": "Graue High-Tops",
+      "nl_NL": "Grijze hoge sneakers",
+      "ru_RU": "Серые высокие кроссы"
     },
-    main: "Bomb Defense Up",
-    brand: "Tentatek",
-    stars: 3,
-    id: 20
+    "main": "Bomb Defense Up",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 20,
+    "splatnet": 2019
   },
   {
-    image: "../common/assets/img/gear/Shs_SHI020.png",
-    name: "Orca Hi-Tops",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI020.png",
+    "name": "Orca Hi-Tops",
+    "localizedName": {
       "ja_JP": "オルカHi",
       "en_US": "Orca Hi-Tops",
       "en_GB": "Orca Hi-Tops",
       "es_ES": "Deportiva orca",
       "es_MX": "Tenis orca",
       "fr_FR": "Orques classiques",
-      "fr_CA": "Orques classiques"
+      "fr_CA": "Orques classiques",
+      "de_DE": "Orca-High-Tops",
+      "nl_NL": "Orka-sneakers",
+      "ru_RU": "«Косатки»"
     },
-    main: "Special Saver",
-    brand: "Takoroka",
-    stars: 2,
-    id: 21
+    "main": "Special Saver",
+    "brand": "Takoroka",
+    "stars": 2,
+    "id": 21,
+    "splatnet": 2020
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT000.png",
-    name: "Pink Trainers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHI022.png",
+    "name": "Navy Enperrials",
+    "localizedName": {
+      "ja_JP": "エンペリアルNV",
+      "en_US": "Navy Enperrials",
+      "en_GB": "Navy Enperrials",
+      "es_ES": "Botín Krakien marino",
+      "es_MX": "Botín Krakien marino",
+      "fr_FR": "Bottillons marine DUX",
+      "fr_CA": "Bottillons marine DUX",
+      "de_DE": "Marine-Enperrial-Stiefel",
+      "nl_NL": "Blauwe Enperrial-laarzen",
+      "ru_RU": "Ботинки «Адмирал»"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2022,
+    "id": 116
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI023.png",
+    "name": "Amber Sea Slug Hi-Tops",
+    "localizedName": {
+      "ja_JP": "ウミウシタウンHi アンバー",
+      "en_US": "Amber Sea Slug Hi-Tops",
+      "en_GB": "Amber Sea Slug Hi-Tops",
+      "es_ES": "Zapatilla alta ámbar",
+      "es_MX": "Zapatilla alta ámbar",
+      "fr_FR": "Anguilles montantes ambre",
+      "fr_CA": "Anguilles montantes ambre",
+      "de_DE": "Bernstein-High-Tops",
+      "nl_NL": "Bruine hoge sneakers",
+      "ru_RU": "Кроссы «Янтарь»"
+    },
+    "main": "Drop Roller",
+    "brand": "Tentatek",
+    "stars": 3,
+    "splatnet": 2023,
+    "id": 117
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI024.png",
+    "name": "Yellow Iromaki 750s",
+    "localizedName": {
+      "ja_JP": "イロマキ750 イエロー",
+      "en_US": "Yellow Iromaki 750s",
+      "en_GB": "Yellow Iromaki 750s",
+      "es_ES": "Deportiva futurista amarilla",
+      "es_MX": "Deportiva futurista amarilla",
+      "fr_FR": "Tennis high-tech jaunes",
+      "fr_CA": "Tennis high-tech jaunes",
+      "de_DE": "Gelbe Iromaki 750",
+      "nl_NL": "Gele Iromaki 750",
+      "ru_RU": "Желтые сушитапки 750с"
+    },
+    "main": "Special Saver",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2024,
+    "id": 118
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI027.png",
+    "name": "Sun & Shade Squidkid IV",
+    "localizedName": {
+      "ja_JP": "エギング4 キイコン",
+      "en_US": "Sun & Shade Squidkid IV",
+      "en_GB": "Sun & Shade Squidkid IV",
+      "es_ES": "Calamark amarilla y azul",
+      "es_MX": "Deportiva violeta",
+      "fr_FR": "Egings IV marine et jaunes",
+      "fr_CA": "Egings IV marine et jaunes",
+      "de_DE": "Gelb-blaue Squidkids IV",
+      "nl_NL": "Geel-blauwe Squidkid IV",
+      "ru_RU": "Сине-желтые шузы"
+    },
+    "main": "Cold-Blooded",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2027,
+    "id": 119
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI028.png",
+    "name": "Orca Woven Hi-Tops",
+    "localizedName": {
+      "ja_JP": "オルカHiウーブン",
+      "en_US": "Orca Woven Hi-Tops",
+      "en_GB": "Orca Woven Hi-Tops",
+      "es_ES": "Deportiva orca zigzag",
+      "es_MX": "Deportiva orca zigzag",
+      "fr_FR": "Orques tissées",
+      "fr_CA": "Orques tissées",
+      "de_DE": "Webe-Orca-High-Tops",
+      "nl_NL": "Geweven orka-sneakers",
+      "ru_RU": "Высокие кроссы с узором"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Takoroka",
+    "stars": 2,
+    "splatnet": 2028,
+    "id": 120
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI029.png",
+    "name": "Green Iromaki 750s",
+    "localizedName": {
+      "ja_JP": "イロマキ750 グリーン",
+      "en_US": "Green Iromaki 750s",
+      "en_GB": "Green Iromaki 750s",
+      "es_ES": "Deportiva futurista verde",
+      "es_MX": "Deportiva futurista verde",
+      "fr_FR": "Tennis high-tech vertes",
+      "fr_CA": "Tennis high-tech vertes",
+      "de_DE": "Grüne Iromaki 750",
+      "nl_NL": "Groene Iromaki 750",
+      "ru_RU": "Зеленые сушитапки 750с"
+    },
+    "main": "Special Power Up",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2029,
+    "id": 121
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI030.png",
+    "name": "Purple Iromaki 750s",
+    "localizedName": {
+      "ja_JP": "イロマキ750 パープル",
+      "en_US": "Purple Iromaki 750s",
+      "en_GB": "Purple Iromaki 750s",
+      "es_ES": "Deportiva futurista lila",
+      "es_MX": "Deportiva futurista lila",
+      "fr_FR": "Tennis high-tech violettes",
+      "fr_CA": "Tennis high-tech violettes",
+      "de_DE": "Lila Iromaki 750",
+      "nl_NL": "Paarse Iromaki 750",
+      "ru_RU": "Фиолетовые сушитапки 750с"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2030,
+    "id": 122
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI031.png",
+    "name": "Red Iromaki 750s",
+    "localizedName": {
+      "ja_JP": "イロマキ750 レッド",
+      "en_US": "Red Iromaki 750s",
+      "en_GB": "Red Iromaki 750s",
+      "es_ES": "Deportiva futurista roja",
+      "es_MX": "Deportiva futurista roja",
+      "fr_FR": "Tennis high-tech rouges",
+      "fr_CA": "Tennis high-tech rouges",
+      "de_DE": "Rote Iromaki 750",
+      "nl_NL": "Rode Iromaki 750",
+      "ru_RU": "Бордовые сушитапки 750с"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2031,
+    "id": 123
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHI037.png",
+    "name": "Sesame Salt 270s",
+    "localizedName": {
+      "ja_JP": "ゴマシオ270",
+      "en_US": "Sesame Salt 270s",
+      "en_GB": "Sesame Salt 270s",
+      "es_ES": "Deportiva sal y sésamo 270",
+      "es_MX": "Deportiva sal y sésamo 270",
+      "fr_FR": "Tennis high-tech Gomashio 270",
+      "fr_CA": "Tennis high-tech Gomashio 270",
+      "de_DE": "Gomashio 270",
+      "nl_NL": "Sesam & Zout 270",
+      "ru_RU": "«Сезам и соль» 270"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Tentatek",
+    "stars": 2,
+    "splatnet": 2037,
+    "id": 124
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT000.png",
+    "name": "Pink Trainers",
+    "localizedName": {
       "ja_JP": "ピンクビーンズ",
       "en_US": "Pink Trainers",
       "en_GB": "Pink Trainers",
       "es_ES": "Deportiva rosa",
       "es_MX": "Deportivos rosas",
       "fr_FR": "Baskets roses",
-      "fr_CA": "Espadrilles roses"
+      "fr_CA": "Espadrilles roses",
+      "de_DE": "Pinke Turnschuhe",
+      "nl_NL": "Roze sportschoenen",
+      "ru_RU": "Розовые кроссовки"
     },
-    main: "Sub Power Up",
-    brand: "Tentatek",
-    stars: 1,
-    id: 22
+    "main": "Sub Power Up",
+    "brand": "Tentatek",
+    "stars": 1,
+    "id": 22,
+    "splatnet": 3000
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT001.png",
-    name: "Orange Arrows",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT001.png",
+    "name": "Orange Arrows",
+    "localizedName": {
       "ja_JP": "オレンジアローズ",
       "en_US": "Orange Arrows",
       "en_GB": "Orange Arrows",
       "es_ES": "Velcro naranja",
       "es_MX": "Velcro naranja",
       "fr_FR": "Flèches orange",
-      "fr_CA": "Flèches orange"
+      "fr_CA": "Flèches orange",
+      "de_DE": "Orange Pfeilschuhe",
+      "nl_NL": "Oranje pijlsneakers",
+      "ru_RU": "Оранжевые «Стрелы»"
     },
-    main: "Ink Saver (Main)",
-    brand: "Takoroka",
-    stars: 1,
-    id: 23
+    "main": "Ink Saver (Main)",
+    "brand": "Takoroka",
+    "stars": 1,
+    "id": 23,
+    "splatnet": 3001
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT002.png",
-    name: "Neon Sea Slugs",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT002.png",
+    "name": "Neon Sea Slugs",
+    "localizedName": {
       "ja_JP": "ウミウシイエロー",
       "en_US": "Neon Sea Slugs",
       "en_GB": "Neon Sea Slugs",
       "es_ES": "Zapatilla verde neón",
       "es_MX": "Anguilas verde neón",
       "fr_FR": "Anguilles vert fluo",
-      "fr_CA": "Anguilles vert fluo"
+      "fr_CA": "Anguilles vert fluo",
+      "de_DE": "Neongrüne Laufschuhe",
+      "nl_NL": "Neongroene sportschoenen",
+      "ru_RU": "Лаймовые кроссовки"
     },
-    main: "Ink Resistance Up",
-    brand: "Tentatek",
-    stars: 1,
-    id: 24
+    "main": "Ink Resistance Up",
+    "brand": "Tentatek",
+    "stars": 1,
+    "id": 24,
+    "splatnet": 3002
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT007.png",
-    name: "Purple Sea Slugs",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT003.png",
+    "name": "White Arrows",
+    "localizedName": {
+      "ja_JP": "ホワイトアローズ",
+      "en_US": "White Arrows",
+      "en_GB": "White Arrows",
+      "es_ES": "Velcro blanca",
+      "es_MX": "Velcro blancos",
+      "fr_FR": "Flèches blanches",
+      "fr_CA": "Flèches blanches",
+      "de_DE": "Weiße Pfeilschuhe",
+      "nl_NL": "Witte pijlsneakers",
+      "ru_RU": "Белые «Стрелы»"
+    },
+    "main": "Special Power Up",
+    "brand": "Takoroka",
+    "stars": 2,
+    "splatnet": 3003,
+    "id": 125
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT004.png",
+    "name": "Cyan Trainers",
+    "localizedName": {
+      "ja_JP": "シアンビーンズ",
+      "en_US": "Cyan Trainers",
+      "en_GB": "Cyan Trainers",
+      "es_ES": "Deportiva celeste",
+      "es_MX": "Deportivos cian",
+      "fr_FR": "Baskets turquoise",
+      "fr_CA": "Espadrilles turquoise",
+      "de_DE": "Türkise Turnschuhe",
+      "nl_NL": "Turquoise sportschoenen",
+      "ru_RU": "Бирюзовые кроссовки"
+    },
+    "main": "Stealth Jump",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 3004,
+    "id": 126
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT006.png",
+    "name": "Red Sea Slugs",
+    "localizedName": {
+      "ja_JP": "ウミウシ レッド",
+      "en_US": "Red Sea Slugs",
+      "en_GB": "Red Sea Slugs",
+      "es_ES": "Zapatilla roja",
+      "es_MX": "Anguilas rojos",
+      "fr_FR": "Anguilles rouges",
+      "fr_CA": "Anguilles rouges",
+      "de_DE": "Rote Laufschuhe",
+      "nl_NL": "Rode sportschoenen",
+      "ru_RU": "Красные кроссовки"
+    },
+    "main": "Special Saver",
+    "brand": "Tentatek",
+    "stars": 3,
+    "splatnet": 3006,
+    "id": 127
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT007.png",
+    "name": "Purple Sea Slugs",
+    "localizedName": {
       "ja_JP": "ウミウシパープル",
       "en_US": "Purple Sea Slugs",
       "en_GB": "Purple Sea Slugs",
       "es_ES": "Zapatilla morada",
       "es_MX": "Anguilas morados",
       "fr_FR": "Anguilles violettes",
-      "fr_CA": "Anguilles violettes"
+      "fr_CA": "Anguilles violettes",
+      "de_DE": "Lila Laufschuhe",
+      "nl_NL": "Paarse sportschoenen",
+      "ru_RU": "Лиловые кроссовки"
     },
-    main: "Run Speed Up",
-    brand: "Tentatek",
-    stars: 2,
-    id: 25
+    "main": "Run Speed Up",
+    "brand": "Tentatek",
+    "stars": 2,
+    "id": 25,
+    "splatnet": 3007
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT008.png",
-    name: "Crazy Arrows",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT008.png",
+    "name": "Crazy Arrows",
+    "localizedName": {
       "ja_JP": "クレイジーアローズ",
       "en_US": "Crazy Arrows",
       "en_GB": "Crazy Arrows",
       "es_ES": "Velcro multicolor",
       "es_MX": "Velcro multicolor",
       "fr_FR": "Flèches délirium",
-      "fr_CA": "Flèches en folie"
+      "fr_CA": "Flèches en folie",
+      "de_DE": "Bunte Pfeilschuhe",
+      "nl_NL": "Felgekleurde pijlsneakers",
+      "ru_RU": "Кроссовки «Психо»"
     },
-    main: "Stealth Jump",
-    brand: "Takoroka",
-    stars: 2,
-    id: 26
+    "main": "Stealth Jump",
+    "brand": "Takoroka",
+    "stars": 2,
+    "id": 26,
+    "splatnet": 3008
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT009.png",
-    name: "Black Trainers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT009.png",
+    "name": "Black Trainers",
+    "localizedName": {
       "ja_JP": "ブラックビーンズ",
       "en_US": "Black Trainers",
       "en_GB": "Black Trainers",
       "es_ES": "Deportiva negra",
       "es_MX": "Deportivos negros",
       "fr_FR": "Baskets noires",
-      "fr_CA": "Espadrilles noires"
+      "fr_CA": "Espadrilles noires",
+      "de_DE": "Schwarze Turnschuhe",
+      "nl_NL": "Zwarte sportschoenen",
+      "ru_RU": "Черные кроссовки"
     },
-    main: "Quick Respawn",
-    brand: "Tentatek",
-    stars: 1,
-    id: 27
+    "main": "Quick Respawn",
+    "brand": "Tentatek",
+    "stars": 1,
+    "id": 27,
+    "splatnet": 3009
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT011.png",
-    name: "Canary Trainers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT010.png",
+    "name": "Violet Trainers",
+    "localizedName": {
+      "ja_JP": "スミレビーンズ",
+      "en_US": "Violet Trainers",
+      "en_GB": "Violet Trainers",
+      "es_ES": "Deportiva violeta",
+      "es_MX": "Deportiva violeta",
+      "fr_FR": "Baskets violettes",
+      "fr_CA": "Baskets violettes",
+      "de_DE": "Violette Turnschuhe",
+      "nl_NL": "Violette sportschoenen",
+      "ru_RU": "Фиолетовые кроссовки"
+    },
+    "main": "Object Shredder",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 3010,
+    "id": 128
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT011.png",
+    "name": "Canary Trainers",
+    "localizedName": {
       "ja_JP": "カナリアビーンズ",
       "en_US": "Canary Trainers",
       "en_GB": "Canary Trainers",
       "es_ES": "Deportiva selva",
       "es_MX": "Deportivos amarillos",
       "fr_FR": "Baskets canari",
-      "fr_CA": "Espadrilles canari"
+      "fr_CA": "Espadrilles canari",
+      "de_DE": "Kanarien-Turnschuhe",
+      "nl_NL": "Kanariesneakers",
+      "ru_RU": "Кроссовки «Канарейки»"
     },
-    main: "Quick Super Jump",
-    brand: "Tentatek",
-    stars: 1,
-    id: 28
+    "main": "Quick Super Jump",
+    "brand": "Tentatek",
+    "stars": 1,
+    "id": 28,
+    "splatnet": 3011
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT012.png",
-    name: "Yellow-Mesh Sneakers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT012.png",
+    "name": "Yellow-Mesh Sneakers",
+    "localizedName": {
       "ja_JP": "アロメッシュイエロー",
       "en_US": "Yellow-Mesh Sneakers",
       "en_GB": "Yellow-Mesh Sneakers",
       "es_ES": "Deportiva de malla amarilla",
       "es_MX": "Deportiva de malla amarilla",
       "fr_FR": "Baskets filet jaune",
-      "fr_CA": "Espadrilles filet jaune"
+      "fr_CA": "Espadrilles filet jaune",
+      "de_DE": "Gelbe Netzsneaker",
+      "nl_NL": "Gele gaassneakers",
+      "ru_RU": "Желтые кроссы «Сеть»"
     },
-    main: "Cold-Blooded",
-    brand: "Tentatek",
-    stars: 1,
-    id: 29
+    "main": "Cold-Blooded",
+    "brand": "Tentatek",
+    "stars": 1,
+    "id": 29,
+    "splatnet": 3012
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT013.png",
-    name: "Arrow Pull-Ons",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT013.png",
+    "name": "Arrow Pull-Ons",
+    "localizedName": {
       "ja_JP": "アローズ タタキベッチュー",
       "en_US": "Arrow Pull-Ons",
       "en_GB": "Arrow Pull-Ons",
       "es_ES": "Velcro elegante",
       "es_MX": "Tenis sin cordones",
       "fr_FR": "Flèches unies",
-      "fr_CA": "Espadrilles sans lacet"
+      "fr_CA": "Espadrilles sans lacet",
+      "de_DE": "Pfeil-Pull-ons",
+      "nl_NL": "Pijlenlaarsjes",
+      "ru_RU": "Кроссовки без шнуровки"
     },
-    main: "Drop Roller",
-    brand: "Toni Kensa",
-    stars: 3,
-    id: 30
+    "main": "Drop Roller",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "id": 30,
+    "splatnet": 3013
   },
   {
-    image: "../common/assets/img/gear/Shs_SHT014.png",
-    name: "Red-Mesh Sneakers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT014.png",
+    "name": "Red-Mesh Sneakers",
+    "localizedName": {
       "ja_JP": "アロメッシュバーミリオン",
       "en_US": "Red-Mesh Sneakers",
       "en_GB": "Red-Mesh Sneakers",
       "es_ES": "Deportiva de malla naranja",
       "es_MX": "Tenis transpirables naranjas",
       "fr_FR": "Baskets filet orange",
-      "fr_CA": "Espadrilles filet orange"
+      "fr_CA": "Espadrilles filet orange",
+      "de_DE": "Orange Netzsneaker",
+      "nl_NL": "Oranje gaassneakers",
+      "ru_RU": "Рыжие кроссы «Сеть»"
     },
-    main: "Special Power Up",
-    brand: "Tentatek",
-    stars: 2,
-    id: 31
+    "main": "Special Power Up",
+    "brand": "Tentatek",
+    "stars": 2,
+    "id": 31,
+    "splatnet": 3014
   },
   {
-    image: "../common/assets/img/gear/Shs_SDL000.png",
-    name: "Oyster Clogs",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SHT016.png",
+    "name": "N-Pacer Ag",
+    "localizedName": {
+      "ja_JP": "エンペーサーAg",
+      "en_US": "N-Pacer Ag",
+      "en_GB": "N-Pacer Ag",
+      "es_ES": "Zapakrakien plata",
+      "es_MX": "Zapakrakien plata",
+      "fr_FR": "Baskets DUX Argent",
+      "fr_CA": "Baskets DUX Argent",
+      "de_DE": "N-Pacer Ag",
+      "nl_NL": "N-Pacer Ag",
+      "ru_RU": "Кроссы «VIP» (серебристые)"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Enperry",
+    "stars": 2,
+    "splatnet": 3016,
+    "id": 129
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT017.png",
+    "name": "N-Pacer Au",
+    "localizedName": {
+      "ja_JP": "エンペーサーAu",
+      "en_US": "N-Pacer Au",
+      "en_GB": "N-Pacer Au",
+      "es_ES": "Zapakrakien oro",
+      "es_MX": "Zapakrakien oro",
+      "fr_FR": "Baskets DUX Or",
+      "fr_CA": "Baskets DUX Or",
+      "de_DE": "N-Pacer Au",
+      "nl_NL": "N-Pacer Au",
+      "ru_RU": "Кроссы «VIP» (золотые)"
+    },
+    "main": "Quick Respawn",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 3017,
+    "id": 130
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SHT018.png",
+    "name": "Sea Slug Volt 95s",
+    "localizedName": {
+      "ja_JP": "ウミウシボルト95",
+      "en_US": "Sea Slug Volt 95s",
+      "en_GB": "Sea Slug Volt 95s",
+      "es_ES": "Zapatilla Volt 95",
+      "es_MX": "Zapatilla Volt 95",
+      "fr_FR": "Anguilles Volt 95",
+      "fr_CA": "Anguilles Volt 95",
+      "de_DE": "Laufschuhe Volt 95",
+      "nl_NL": "Volt 95-sportschoenen",
+      "ru_RU": "Кроссовки «Вольт 95»"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Tentatek",
+    "stars": 2,
+    "splatnet": 3018,
+    "id": 131
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SDL000.png",
+    "name": "Oyster Clogs",
+    "localizedName": {
       "ja_JP": "オイスタークロッグ",
       "en_US": "Oyster Clogs",
       "en_GB": "Oyster Clogs",
       "es_ES": "Zueco gris",
       "es_MX": "Zuecos grises",
       "fr_FR": "Sabots huître",
-      "fr_CA": "Sabots huître"
+      "fr_CA": "Sabots huître",
+      "de_DE": "Austerngraue Clogs",
+      "nl_NL": "Grijze klompen",
+      "ru_RU": "Серые клоги"
     },
-    main: "Run Speed Up",
-    brand: "Krak-On",
-    stars: 1,
-    id: 32
+    "main": "Run Speed Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 32,
+    "splatnet": 4000
   },
   {
-    image: "../common/assets/img/gear/Shs_SDL001.png",
-    name: "Choco Clogs",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SDL001.png",
+    "name": "Choco Clogs",
+    "localizedName": {
       "ja_JP": "チョコクロッグ",
       "en_US": "Choco Clogs",
       "en_GB": "Choco Clogs",
       "es_ES": "Zueco chocolate",
       "es_MX": "Zuecos chocolate",
       "fr_FR": "Sabots chocolat",
-      "fr_CA": "Sabots chocolat"
+      "fr_CA": "Sabots chocolat",
+      "de_DE": "Schokobraune Clogs",
+      "nl_NL": "Bruine klompen",
+      "ru_RU": "Коричневые клоги"
     },
-    main: "Quick Respawn",
-    brand: "Krak-On",
-    stars: 2,
-    id: 33
+    "main": "Quick Respawn",
+    "brand": "Krak-On",
+    "stars": 2,
+    "id": 33,
+    "splatnet": 4001
   },
   {
-    image: "../common/assets/img/gear/Shs_CFS000.png",
-    name: "Blueberry Casuals",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_CFS000.png",
+    "name": "Blueberry Casuals",
+    "localizedName": {
       "ja_JP": "ブルーベリーコンフォート",
       "en_US": "Blueberry Casuals",
       "en_GB": "Blueberry Casuals",
       "es_ES": "Zapato azul",
       "es_MX": "Zapatos azules",
       "fr_FR": "Chaussures myrtille",
-      "fr_CA": "Chaussures bleuets"
+      "fr_CA": "Chaussures bleuets",
+      "de_DE": "Blaue Halbschuhe",
+      "nl_NL": "Blauwe veterschoenen",
+      "ru_RU": "Синие полуботинки"
     },
-    main: "Ink Saver (Sub)",
-    brand: "Krak-On",
-    stars: 1,
-    id: 34
+    "main": "Ink Saver (Sub)",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 34,
+    "splatnet": 4002
   },
   {
-    image: "../common/assets/img/gear/Shs_CFS001.png",
-    name: "Plum Casuals",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_CFS001.png",
+    "name": "Plum Casuals",
+    "localizedName": {
       "ja_JP": "アケビコンフォート",
       "en_US": "Plum Casuals",
       "en_GB": "Plum Casuals",
       "es_ES": "Zapato morado",
       "es_MX": "Zapatos púrpura",
       "fr_FR": "Chaussures prune",
-      "fr_CA": "Chaussures prune"
+      "fr_CA": "Chaussures prune",
+      "de_DE": "Lila Halbschuhe",
+      "nl_NL": "Paarse veterschoenen",
+      "ru_RU": "Лиловые полуботинки"
     },
-    main: "Object Shredder",
-    brand: "Krak-On",
-    stars: 2,
-    id: 35
+    "main": "Object Shredder",
+    "brand": "Krak-On",
+    "stars": 2,
+    "id": 35,
+    "splatnet": 4003
   },
   {
-    image: "../common/assets/img/gear/Shs_SDL003.png",
-    name: "Neon Delta Straps",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SDL003.png",
+    "name": "Neon Delta Straps",
+    "localizedName": {
       "ja_JP": "デルタストラップ ネオン",
       "en_US": "Neon Delta Straps",
       "en_GB": "Neon Delta Straps",
       "es_ES": "Sandalia delta neón",
       "es_MX": "Sandalia delta neón",
       "fr_FR": "Sandales fluo",
-      "fr_CA": "Sandales fluo"
+      "fr_CA": "Sandales fluo",
+      "de_DE": "Neon-Delta-Sandalen",
+      "nl_NL": "Neon sandalen",
+      "ru_RU": "Неоновые сандалии"
     },
-    main: "Sub Power Up",
-    brand: "Inkline",
-    stars: 2,
-    id: 36
+    "main": "Sub Power Up",
+    "brand": "Inkline",
+    "stars": 2,
+    "id": 36,
+    "splatnet": 4007
   },
   {
-    image: "../common/assets/img/gear/Shs_SDL004.png",
-    name: "Black Flip-Flops",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SDL004.png",
+    "name": "Black Flip-Flops",
+    "localizedName": {
       "ja_JP": "BBサンダル",
       "en_US": "Black Flip-Flops",
       "en_GB": "Black Flip-Flops",
       "es_ES": "Chancla negra",
       "es_MX": "Chanclas negras",
       "fr_FR": "Tongs noires",
-      "fr_CA": "Sandales de plage"
+      "fr_CA": "Sandales de plage",
+      "de_DE": "Schwarze Strandsandalen",
+      "nl_NL": "Zwarte teenslippers",
+      "ru_RU": "Черные шлепки"
     },
-    main: "Object Shredder",
-    brand: "Zekko",
-    stars: 1,
-    id: 37
+    "main": "Object Shredder",
+    "brand": "Zekko",
+    "stars": 1,
+    "id": 37,
+    "splatnet": 4008
   },
   {
-    image: "../common/assets/img/gear/Shs_SDL005.png",
-    name: "Snow Delta Straps",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SDL005.png",
+    "name": "Snow Delta Straps",
+    "localizedName": {
       "ja_JP": "デルタストラップ スノー",
       "en_US": "Snow Delta Straps",
       "en_GB": "Snow Delta Straps",
       "es_ES": "Sandalia delta nieve",
       "es_MX": "Sandalias delta nieve",
       "fr_FR": "Sandales poudreuse",
-      "fr_CA": "Sandales poudreuse"
+      "fr_CA": "Sandales poudreuse",
+      "de_DE": "Polarweiße Delta-Sandalen",
+      "nl_NL": "Sneeuwwitte sandalen",
+      "ru_RU": "Снежные сандалии"
     },
-    main: "Swim Speed Up",
-    brand: "Inkline",
-    stars: 3,
-    id: 38
+    "main": "Swim Speed Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 38,
+    "splatnet": 4009
   },
   {
-    image: "../common/assets/img/gear/Shs_TRS000.png",
-    name: "Trail Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SDL006.png",
+    "name": "Luminous Delta Straps",
+    "localizedName": {
+      "ja_JP": "デルタストラップ ルミナス",
+      "en_US": "Luminous Delta Straps",
+      "en_GB": "Luminous Delta Straps",
+      "es_ES": "Sandalia delta luminosa",
+      "es_MX": "Sandalia delta luminosa",
+      "fr_FR": "Sandales chaussettes fluo",
+      "fr_CA": "Sandales chaussettes fluo",
+      "de_DE": "Signal-Delta-Sandalen",
+      "nl_NL": "Roetzwarte sandalen",
+      "ru_RU": "Горные сандалии"
+    },
+    "main": "Cold-Blooded",
+    "brand": "Inkline",
+    "stars": 2,
+    "splatnet": 4010,
+    "id": 132
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SDL007.png",
+    "name": "Red FishFry Sandals",
+    "localizedName": {
+      "ja_JP": "ヤキフグシャワサン アカ",
+      "en_US": "Red FishFry Sandals",
+      "en_GB": "Red FishFry Sandals",
+      "es_ES": "Chancla roja",
+      "es_MX": "Chancla roja",
+      "fr_FR": "Claquettes rouges Friture",
+      "fr_CA": "Claquettes rouges Friture",
+      "de_DE": "Rote Schlappen",
+      "nl_NL": "Rode badslippers",
+      "ru_RU": "Шлепки «Фугасик»"
+    },
+    "main": "Object Shredder",
+    "brand": "Firefin",
+    "stars": 2,
+    "splatnet": 4011,
+    "id": 133
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_TRS000.png",
+    "name": "Trail Boots",
+    "localizedName": {
       "ja_JP": "トレッキングライト",
       "en_US": "Trail Boots",
       "en_GB": "Trail Boots",
       "es_ES": "Bota montaña",
       "es_MX": "Botas de montaña",
       "fr_FR": "Chaussures rando",
-      "fr_CA": "Bottes de rando"
+      "fr_CA": "Bottes de rando",
+      "de_DE": "Wanderstiefel",
+      "nl_NL": "Wandelschoenen",
+      "ru_RU": "Горные ботинки"
     },
-    main: "Ink Recovery Up",
-    brand: "Inkline",
-    stars: 3,
-    id: 39
+    "main": "Ink Recovery Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 39,
+    "splatnet": 5000
   },
   {
-    image: "../common/assets/img/gear/Shs_TRS002.png",
-    name: "Pro Trail Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_TRS002.png",
+    "name": "Pro Trail Boots",
+    "localizedName": {
       "ja_JP": "トレッキングプロ",
       "en_US": "Pro Trail Boots",
       "en_GB": "Pro Trail Boots",
       "es_ES": "Bota montaña pro",
       "es_MX": "Botas de montaña pro",
       "fr_FR": "Chaussures rando pro",
-      "fr_CA": "Bottes rando pro"
+      "fr_CA": "Bottes rando pro",
+      "de_DE": "Profi-Wanderstiefel",
+      "nl_NL": "Professionele wandelschoenen",
+      "ru_RU": "Горные ботинки ПРО"
     },
-    main: "Ink Resistance Up",
-    brand: "Inkline",
-    stars: 3,
-    id: 40
+    "main": "Ink Resistance Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 40,
+    "splatnet": 5002
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT000.png",
-    name: "Moto Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT000.png",
+    "name": "Moto Boots",
+    "localizedName": {
       "ja_JP": "モトクロスブーツ",
       "en_US": "Moto Boots",
       "en_GB": "Moto Boots",
       "es_ES": "Bota motorista",
       "es_MX": "Botas de motociclista",
       "fr_FR": "Bottes de moto",
-      "fr_CA": "Bottes de moto"
+      "fr_CA": "Bottes de moto",
+      "de_DE": "Biker-Stiefel",
+      "nl_NL": "Motorlaarzen",
+      "ru_RU": "Мотоботинки"
     },
-    main: "Quick Respawn",
-    brand: "Rockenberg",
-    stars: 2,
-    id: 41
+    "main": "Quick Respawn",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "id": 41,
+    "splatnet": 6000
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT003.png",
-    name: "Blue Moto Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT001.png",
+    "name": "Tan Work Boots",
+    "localizedName": {
+      "ja_JP": "ヌバックブーツ イエロー",
+      "en_US": "Tan Work Boots",
+      "en_GB": "Tan Work Boots",
+      "es_ES": "Bota piel marrón",
+      "es_MX": "Botas de trabajo marrones",
+      "fr_FR": "Bottes sécurité nubuck",
+      "fr_CA": "Bottes sécurité beige",
+      "de_DE": "Arbeitsstiefel",
+      "nl_NL": "Bruine werkschoenen",
+      "ru_RU": "Бежевые рабочие боты"
+    },
+    "main": "Sub Power Up",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 6001,
+    "id": 134
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT003.png",
+    "name": "Blue Moto Boots",
+    "localizedName": {
       "ja_JP": "モトクロス ソリッドブルー",
       "en_US": "Blue Moto Boots",
       "en_GB": "Blue Moto Boots",
       "es_ES": "Bota motorista azul",
       "es_MX": "Botas de motociclista azules",
       "fr_FR": "Bottes de moto bleues",
-      "fr_CA": "Bottes de moto bleues"
+      "fr_CA": "Bottes de moto bleues",
+      "de_DE": "Blaue Biker-Stiefel",
+      "nl_NL": "Blauwe moterlaarzen",
+      "ru_RU": "Синие мотоботинки"
     },
-    main: "Ink Resistance Up",
-    brand: "Rockenberg",
-    stars: 3,
-    id: 42
+    "main": "Ink Resistance Up",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "id": 42,
+    "splatnet": 6003
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT005.png",
-    name: "Acerola Rain Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT004.png",
+    "name": "Green Rain Boots",
+    "localizedName": {
+      "ja_JP": "レイニーモスグリーン",
+      "en_US": "Green Rain Boots",
+      "en_GB": "Green Rain Boots",
+      "es_ES": "Bota de agua verde",
+      "es_MX": "Botas de lluvia verdes",
+      "fr_FR": "Bottes de pluie vertes",
+      "fr_CA": "Bottes de pluie vertes",
+      "de_DE": "Moosgrüne Gummistiefel",
+      "nl_NL": "Groene regenlaarzen",
+      "ru_RU": "Зеленые сапоги"
+    },
+    "main": "Stealth Jump",
+    "brand": "Inkline",
+    "stars": 2,
+    "splatnet": 6004,
+    "id": 135
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT005.png",
+    "name": "Acerola Rain Boots",
+    "localizedName": {
       "ja_JP": "レイニーアセロラ",
       "en_US": "Acerola Rain Boots",
       "en_GB": "Acerola Rain Boots",
       "es_ES": "Bota de agua roja",
       "es_MX": "Botas de lluvia rojas",
       "fr_FR": "Bottes de pluie cerise",
-      "fr_CA": "Bottes de pluie cerise"
+      "fr_CA": "Bottes de pluie cerise",
+      "de_DE": "Kirschrote Gummistiefel",
+      "nl_NL": "Rode regenlaarzen",
+      "ru_RU": "Вишневые сапоги"
     },
-    main: "Run Speed Up",
-    brand: "Inkline",
-    stars: 1,
-    id: 43
+    "main": "Run Speed Up",
+    "brand": "Inkline",
+    "stars": 1,
+    "id": 43,
+    "splatnet": 6005
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT006.png",
-    name: "Punk Whites",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT006.png",
+    "name": "Punk Whites",
+    "localizedName": {
       "ja_JP": "ロッキンホワイト",
       "en_US": "Punk Whites",
       "en_GB": "Punk Whites",
       "es_ES": "Bota clásica blanca",
       "es_MX": "Botas roqueras",
       "fr_FR": "Bottines punk blanches",
-      "fr_CA": "Bottines punk blanches"
+      "fr_CA": "Bottines punk blanches",
+      "de_DE": "Weiße Punkstiefel",
+      "nl_NL": "Witte punkschoenen",
+      "ru_RU": "Белые берцы"
     },
-    main: "Special Charge Up",
-    brand: "Rockenberg",
-    stars: 2,
-    id: 44
+    "main": "Special Charge Up",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "id": 44,
+    "splatnet": 6006
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT012.png",
-    name: "Hunting Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT007.png",
+    "name": "Punk Cherries",
+    "localizedName": {
+      "ja_JP": "ロッキンチェリー",
+      "en_US": "Punk Cherries",
+      "en_GB": "Punk Cherries",
+      "es_ES": "Bota clásica roja",
+      "es_MX": "Botas cerezo",
+      "fr_FR": "Bottines punk grenat",
+      "fr_CA": "Bottines punk rouges",
+      "de_DE": "Rotbraune Punkstiefel",
+      "nl_NL": "Rode punkschoenen",
+      "ru_RU": "Вишневые берцы"
+    },
+    "main": "Bomb Defense Up",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 6007,
+    "id": 136
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT009.png",
+    "name": "Bubble Rain Boots",
+    "localizedName": {
+      "ja_JP": "レイニーシャボン",
+      "en_US": "Bubble Rain Boots",
+      "en_GB": "Bubble Rain Boots",
+      "es_ES": "Bota de lluvia",
+      "es_MX": "Botas de lluvia burbujas",
+      "fr_FR": "Bottines de pluie bulles",
+      "fr_CA": "Bottes de pluie bulles",
+      "de_DE": "Gummistiefeletten",
+      "nl_NL": "Gestipte regenlaarzen",
+      "ru_RU": "Резиновые полуботинки"
+    },
+    "main": "Drop Roller",
+    "brand": "Inkline",
+    "stars": 1,
+    "splatnet": 6009,
+    "id": 137
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT010.png",
+    "name": "Snowy Down Boots",
+    "localizedName": {
+      "ja_JP": "ミルキーダウンブーツ",
+      "en_US": "Snowy Down Boots",
+      "en_GB": "Snowy Down Boots",
+      "es_ES": "Bota de nieve",
+      "es_MX": "Botas árcticas",
+      "fr_FR": "Après-skis poudreuse",
+      "fr_CA": "Après-skis poudreuse",
+      "de_DE": "Weiße Daunenstiefel",
+      "nl_NL": "Sneeuwlaarzen",
+      "ru_RU": "Белые пуховые сапоги"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Tentatek",
+    "stars": 3,
+    "splatnet": 6010,
+    "id": 138
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT012.png",
+    "name": "Hunting Boots",
+    "localizedName": {
       "ja_JP": "ハンティングブーツ",
       "en_US": "Hunting Boots",
       "en_GB": "Hunting Boots",
       "es_ES": "Bota impermeable",
       "es_MX": "Botas impermeables",
       "fr_FR": "Bottes de chasse",
-      "fr_CA": "Bottes de chasse"
+      "fr_CA": "Bottes de chasse",
+      "de_DE": "Jagdstiefel",
+      "nl_NL": "Jachtlaarzen",
+      "ru_RU": "Болотные ботинки"
     },
-    main: "Bomb Defense Up",
-    brand: "Splash Mob",
-    stars: 3,
-    id: 45
+    "main": "Bomb Defense Up",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 45,
+    "splatnet": 6012
   },
   {
-    image: "../common/assets/img/gear/Shs_BOT013.png",
-    name: "Punk Blacks",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT013.png",
+    "name": "Punk Blacks",
+    "localizedName": {
       "ja_JP": "ロッキンブラック",
       "en_US": "Punk Blacks",
       "en_GB": "Punk Blacks",
       "es_ES": "Bota clásica negra",
       "es_MX": "Botas negras",
       "fr_FR": "Bottines punk noires",
-      "fr_CA": "Bottines punk noires"
+      "fr_CA": "Bottines punk noires",
+      "de_DE": "Schwarze Punkstiefel",
+      "nl_NL": "Zwarte punkschoenen",
+      "ru_RU": "Черные берцы"
     },
-    main: "Cold-Blooded",
-    brand: "Rockenberg",
-    stars: 3,
-    id: 46
+    "main": "Cold-Blooded",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "id": 46,
+    "splatnet": 6013
   },
   {
-    image: "../common/assets/img/gear/Shs_SLP000.png",
-    name: "Blue Slip-Ons",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_BOT014.png",
+    "name": "Deepsea Leather Boots",
+    "localizedName": {
+      "ja_JP": "シンカイレザーブーツ",
+      "en_US": "Deepsea Leather Boots",
+      "en_GB": "Deepsea Leather Boots",
+      "es_ES": "Bota alta marina",
+      "es_MX": "Bota alta marina",
+      "fr_FR": "Bottines océaniques",
+      "fr_CA": "Bottines océaniques",
+      "de_DE": "Tiefsee-Lederstiefel",
+      "nl_NL": "Diepzeeblauwe laarzen",
+      "ru_RU": "Темно-синие берцы"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 6014,
+    "id": 139
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_BOT015.png",
+    "name": "Moist Ghillie Boots",
+    "localizedName": {
+      "ja_JP": "モイストギリーブーツ",
+      "en_US": "Moist Ghillie Boots",
+      "en_GB": "Moist Ghillie Boots",
+      "es_ES": "Bota alga",
+      "es_MX": "Bota alga",
+      "fr_FR": "Bottines camouf'algue",
+      "fr_CA": "Bottines camouf'algue",
+      "de_DE": "Algen-Tarnstiefel",
+      "nl_NL": "Algenlaarzen",
+      "ru_RU": "Маскботы «Дно»"
+    },
+    "main": "Object Shredder",
+    "brand": "Forge",
+    "stars": 3,
+    "splatnet": 6015,
+    "id": 140
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLP000.png",
+    "name": "Blue Slip-Ons",
+    "localizedName": {
       "ja_JP": "スリッポン ブルー",
       "en_US": "Blue Slip-Ons",
       "en_GB": "Blue Slip-Ons",
       "es_ES": "Playera azul",
       "es_MX": "Mocasines azules",
       "fr_FR": "Mocassins bleus",
-      "fr_CA": "Mocassins bleus"
+      "fr_CA": "Mocassins bleus",
+      "de_DE": "Blaue Slip-ons",
+      "nl_NL": "Blauwe instappers",
+      "ru_RU": "Синие слипоны"
     },
-    main: "Sub Power Up",
-    brand: "Krak-On",
-    stars: 1,
-    id: 47
+    "main": "Sub Power Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 47,
+    "splatnet": 7000
   },
   {
-    image: "../common/assets/img/gear/Shs_LTS000.png",
-    name: "White Kicks",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_SLP001.png",
+    "name": "Red Slip-Ons",
+    "localizedName": {
+      "ja_JP": "スリッポン レッド",
+      "en_US": "Red Slip-Ons",
+      "en_GB": "Red Slip-Ons",
+      "es_ES": "Playera roja",
+      "es_MX": "Mocasines rojos",
+      "fr_FR": "Mocassins rouges",
+      "fr_CA": "Mocassins rouges",
+      "de_DE": "Rote Slip-ons",
+      "nl_NL": "Rode instappers",
+      "ru_RU": "Красные слипоны"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Krak-On",
+    "stars": 1,
+    "splatnet": 7001,
+    "id": 141
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLP002.png",
+    "name": "Squid-Stitch Slip-Ons",
+    "localizedName": {
+      "ja_JP": "スリッポン チドリ",
+      "en_US": "Squid-Stitch Slip-Ons",
+      "en_GB": "Squid-Stitch Slip-Ons",
+      "es_ES": "Playera bicolor",
+      "es_MX": "Mocasines bicolor",
+      "fr_FR": "Mocassins pied-de-poulpe",
+      "fr_CA": "Mocassins pied-de-poulpe",
+      "de_DE": "Pfeil-Slip-ons",
+      "nl_NL": "Instappers met patroon",
+      "ru_RU": "Слипоны со стрелками"
+    },
+    "main": "Bomb Defense Up",
+    "brand": "Krak-On",
+    "stars": 2,
+    "splatnet": 7002,
+    "id": 142
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_SLP003.png",
+    "name": "Polka-dot Slip-Ons",
+    "localizedName": {
+      "ja_JP": "スリッポン ポルカ",
+      "en_US": "Polka-dot Slip-Ons",
+      "en_GB": "Polka-dot Slip-Ons",
+      "es_ES": "Playera lunares",
+      "es_MX": "Playera lunares",
+      "fr_FR": "Mocassins à pois",
+      "fr_CA": "Mocassins à pois",
+      "de_DE": "Punkt-Slip-ons",
+      "nl_NL": "Instappers met stippen",
+      "ru_RU": "Слипоны в горошек"
+    },
+    "main": "Drop Roller",
+    "brand": "Krak-On",
+    "stars": 2,
+    "splatnet": 7003,
+    "id": 143
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_LTS000.png",
+    "name": "White Kicks",
+    "localizedName": {
       "ja_JP": "ラバーソール ホワイト",
       "en_US": "White Kicks",
       "en_GB": "White Kicks",
       "es_ES": "Suela extra blanca",
       "es_MX": "Suela extra blanca",
       "fr_FR": "Compensées blanches",
-      "fr_CA": "Compensées blanches"
+      "fr_CA": "Compensées blanches",
+      "de_DE": "Weiße Plateau-Sneaker",
+      "nl_NL": "Witte plateauschoenen",
+      "ru_RU": "Белые платформы"
     },
-    main: "Swim Speed Up",
-    brand: "Rockenberg",
-    stars: 1,
-    id: 48
+    "main": "Swim Speed Up",
+    "brand": "Rockenberg",
+    "stars": 1,
+    "id": 48,
+    "splatnet": 8000
   },
   {
-    image: "../common/assets/img/gear/Shs_LTS001.png",
-    name: "Cherry Kicks",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_LTS001.png",
+    "name": "Cherry Kicks",
+    "localizedName": {
       "ja_JP": "ラバーソール チェリー",
       "en_US": "Cherry Kicks",
       "en_GB": "Cherry Kicks",
       "es_ES": "Suela extra rosa",
       "es_MX": "Suela extra rosa",
       "fr_FR": "Compensées roses",
-      "fr_CA": "Compensées roses"
+      "fr_CA": "Compensées roses",
+      "de_DE": "Kirsch-Plateau-Sneaker",
+      "nl_NL": "Rode plateauschoenen",
+      "ru_RU": "Розовые платформы"
     },
-    main: "Stealth Jump",
-    brand: "Rockenberg",
-    stars: 2,
-    id: 49
+    "main": "Stealth Jump",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "id": 49,
+    "splatnet": 8001
   },
   {
-    image: "../common/assets/img/gear/Shs_LTS004.png",
-    name: "Roasted Brogues",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_LTS002.png",
+    "name": "Turquoise Kicks",
+    "localizedName": {
+      "ja_JP": "ラバーソール ターコイズ",
+      "en_US": "Turquoise Kicks",
+      "en_GB": "Turquoise Kicks",
+      "es_ES": "Suela extra turquesa",
+      "es_MX": "Suela extra turquesa",
+      "fr_FR": "Compensées turquoise",
+      "fr_CA": "Compensées turquoise",
+      "de_DE": "Türkise Plateau-Sneaker",
+      "nl_NL": "Turquoise plateauschoenen",
+      "ru_RU": "Бирюзовые платформы"
+    },
+    "main": "Special Charge Up",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 8002,
+    "id": 144
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_LTS003.png",
+    "name": "Squink Wingtips",
+    "localizedName": {
+      "ja_JP": "イカスミチップ",
+      "en_US": "Squink Wingtips",
+      "en_GB": "Squink Wingtips",
+      "es_ES": "Zapato clásico",
+      "es_MX": "Zapatos brogue",
+      "fr_FR": "Richelieu encre-de-seiche",
+      "fr_CA": "Chaussures sépia",
+      "de_DE": "Sepibrogues",
+      "nl_NL": "Lakschoenen",
+      "ru_RU": "Элегантные броги"
+    },
+    "main": "Quick Respawn",
+    "brand": "Rockenberg",
+    "stars": 1,
+    "splatnet": 8003,
+    "id": 145
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_LTS004.png",
+    "name": "Roasted Brogues",
+    "localizedName": {
       "ja_JP": "イカヤキチップ",
       "en_US": "Roasted Brogues",
       "en_GB": "Roasted Brogues",
       "es_ES": "Zapato formal",
       "es_MX": "Zapatos brogue tostados",
       "fr_FR": "Richelieu classiques",
-      "fr_CA": "Chaussures classiques"
+      "fr_CA": "Chaussures classiques",
+      "de_DE": "Unibrogues",
+      "nl_NL": "Klassieke schoenen",
+      "ru_RU": "Классические броги"
     },
-    main: "Bomb Defense Up",
-    brand: "Rockenberg",
-    stars: 1,
-    id: 50
+    "main": "Bomb Defense Up",
+    "brand": "Rockenberg",
+    "stars": 1,
+    "id": 50,
+    "splatnet": 8004
   },
   {
-    image: "../common/assets/img/gear/Shs_LTS005.png",
-    name: "Kid Clams",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_LTS005.png",
+    "name": "Kid Clams",
+    "localizedName": {
       "ja_JP": "イカボウズキャメル",
       "en_US": "Kid Clams",
       "en_GB": "Kid Clams",
       "es_ES": "Zapato doble hebilla",
       "es_MX": "Zapato doble hebilla",
       "fr_FR": "Chaussures double boucle",
-      "fr_CA": "Chaussures double boucle"
+      "fr_CA": "Chaussures double boucle",
+      "de_DE": "Doppelschnallen-Schuh",
+      "nl_NL": "Gespenschoenen",
+      "ru_RU": "Броги с двумя пряжками"
     },
-    main: "Special Power Up",
-    brand: "Rockenberg",
-    stars: 3,
-    id: 51
+    "main": "Special Power Up",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "id": 51,
+    "splatnet": 8005
   },
   {
-    image: "../common/assets/img/gear/Shs_LTS006.png",
-    name: "Smoky Wingtips",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_LTS006.png",
+    "name": "Smoky Wingtips",
+    "localizedName": {
       "ja_JP": "スモークチップ",
       "en_US": "Smoky Wingtips",
       "en_GB": "Smoky Wingtips",
       "es_ES": "Zapato elegante",
       "es_MX": "Zapato elegante",
       "fr_FR": "Richelieu fumés",
-      "fr_CA": "Chaussures fumées"
+      "fr_CA": "Chaussures fumées",
+      "de_DE": "Smoky Brogues",
+      "nl_NL": "Elegante veterschoenen",
+      "ru_RU": "Дымчатые броги"
     },
-    main: "Object Shredder",
-    brand: "Rockenberg",
-    stars: 3,
-    id: 52
+    "main": "Object Shredder",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "id": 52,
+    "splatnet": 8006
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB000.png",
-    name: "School Shoes",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_LTS007.png",
+    "name": "Navy Red-Soled Wingtips",
+    "localizedName": {
+      "ja_JP": "ネイビーチップ レッドソール",
+      "en_US": "Navy Red-Soled Wingtips",
+      "en_GB": "Navy Red-Soled Wingtips",
+      "es_ES": "Zapato rojo y azul",
+      "es_MX": "Zapato rojo y azul",
+      "fr_FR": "Richelieu semelle rouge",
+      "fr_CA": "Richelieu semelle rouge",
+      "de_DE": "Rotsohlen-Brogues",
+      "nl_NL": "Brogues met rode zool",
+      "ru_RU": "Броги с красной подошвой"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 8007,
+    "id": 146
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_LTS008.png",
+    "name": "Gray Yellow-Soled Wingtips",
+    "localizedName": {
+      "ja_JP": "グレーチップ イエローソール",
+      "en_US": "Gray Yellow-Soled Wingtips",
+      "en_GB": "Gray Yellow-Soled Wingtips",
+      "es_ES": "Zapato gris y amarillo",
+      "es_MX": "Zapato gris y amarillo",
+      "fr_FR": "Richelieu semelle jaune",
+      "fr_CA": "Richelieu semelle jaune",
+      "de_DE": "Gelbsohlen-Brogues",
+      "nl_NL": "Brogues met gele zool",
+      "ru_RU": "Броги с желтой подошвой"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 8008,
+    "id": 147
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_LTS010.png",
+    "name": "Annaki Habaneros",
+    "localizedName": {
+      "ja_JP": "アナアキラバー ハバネロ",
+      "en_US": "Annaki Habaneros",
+      "en_GB": "Annaki Habaneros",
+      "es_ES": "Suela extra Annak",
+      "es_MX": "Suela extra Annak",
+      "fr_FR": "Compensées carmin Aroz",
+      "fr_CA": "Compensées carmin Aroz",
+      "de_DE": "Habanero-Annaki-Schuhe",
+      "nl_NL": "Annaki-mocassins",
+      "ru_RU": "Красные платформы"
+    },
+    "main": "Sub Power Up",
+    "brand": "Annaki",
+    "stars": 3,
+    "splatnet": 8010,
+    "id": 148
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_COP101.png",
+    "name": "Angry Rain Boots",
+    "localizedName": {
+      "ja_JP": "マッドラバー",
+      "en_US": "Angry Rain Boots",
+      "en_GB": "Angry Rain Boots",
+      "es_ES": "Bota marejada",
+      "es_MX": "Botas enojonas",
+      "fr_FR": "Bottes en caoutchouc",
+      "fr_CA": "Bottes de pluie noires",
+      "de_DE": "Arbeitsgummistiefel",
+      "nl_NL": "Rubberlaarzen",
+      "ru_RU": "Рабочие сапоги"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "splatnet": 21001,
+    "id": 149
+  },
+  {
+    "image": "../common/assets/img/gear/Shs_AMB000.png",
+    "name": "School Shoes",
+    "localizedName": {
       "ja_JP": "スクールローファー",
       "en_US": "School Shoes",
       "en_GB": "School Shoes",
       "es_ES": "Mocasín escolar",
       "es_MX": "Zapatos escolares",
       "fr_FR": "Mocassins scolaires",
-      "fr_CA": "Mocassins scolaires"
+      "fr_CA": "Mocassins scolaires",
+      "de_DE": "Schuluniform-Schuhe",
+      "nl_NL": "Schoolschoenen",
+      "ru_RU": "Школьные ботинки"
     },
-    main: "Ink Saver (Sub)",
-    brand: "amiibo",
-    stars: 2,
-    id: 53
+    "main": "Ink Saver (Sub)",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 53,
+    "splatnet": 25000
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB001.png",
-    name: "Samurai Shoes",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_AMB001.png",
+    "name": "Samurai Shoes",
+    "localizedName": {
       "ja_JP": "サムライシューズ",
       "en_US": "Samurai Shoes",
       "en_GB": "Samurai Shoes",
       "es_ES": "Sandalia samurái",
       "es_MX": "Sandalias samurái",
       "fr_FR": "Bottes de samouraï",
-      "fr_CA": "Sandales de samouraï"
+      "fr_CA": "Sandales de samouraï",
+      "de_DE": "Samurai-Schuhe",
+      "nl_NL": "Samoeraischoenen",
+      "ru_RU": "Самурайские сандалии"
     },
-    main: "Special Power Up",
-    brand: "amiibo",
-    stars: 2,
-    id: 54
+    "main": "Special Power Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 54,
+    "splatnet": 25001
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB002.png",
-    name: "Power Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_AMB002.png",
+    "name": "Power Boots",
+    "localizedName": {
       "ja_JP": "パワードレッグス",
       "en_US": "Power Boots",
       "en_GB": "Power Boots",
       "es_ES": "Tecnobota",
       "es_MX": "Tecnobotas",
       "fr_FR": "Bottes méca",
-      "fr_CA": "Bottes technos"
+      "fr_CA": "Bottes technos",
+      "de_DE": "Exo-Stiefel",
+      "nl_NL": "Hightechschoenen",
+      "ru_RU": "Силовые боты"
     },
-    main: "Ink Saver (Main)",
-    brand: "amiibo",
-    stars: 2,
-    id: 55
+    "main": "Ink Saver (Main)",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 55,
+    "splatnet": 25002
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB003.png",
-    name: "Fringed Loafers",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_AMB003.png",
+    "name": "Fringed Loafers",
+    "localizedName": {
       "ja_JP": "キルトローファー",
       "en_US": "Fringed Loafers",
       "en_GB": "Fringed Loafers",
       "es_ES": "Zapato escolar",
       "es_MX": "Zapato escolar",
       "fr_FR": "Mocassins à franges",
-      "fr_CA": "Mocassins à franges"
+      "fr_CA": "Mocassins à franges",
+      "de_DE": "Stulpen-Loafer",
+      "nl_NL": "Loafers met franje",
+      "ru_RU": "Лоферы с бахромой"
     },
-    main: "Cold-Blooded",
-    brand: "amiibo",
-    stars: 2,
-    id: 56
+    "main": "Cold-Blooded",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 56,
+    "splatnet": 25003
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB004.png",
-    name: "Squinja Boots",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_AMB004.png",
+    "name": "Squinja Boots",
+    "localizedName": {
       "ja_JP": "シノビアシ",
       "en_US": "Squinja Boots",
       "en_GB": "Squinja Boots",
       "es_ES": "Bota ninja",
       "es_MX": "Bota ninja",
       "fr_FR": "Bottes de ninja",
-      "fr_CA": "Bottes de ninja"
+      "fr_CA": "Bottes de ninja",
+      "de_DE": "Ninja-Stiefel",
+      "nl_NL": "Ninjalaarzen",
+      "ru_RU": "Таби ниндзялинга"
     },
-    main: "Swim Speed Up",
-    brand: "amiibo",
-    stars: 2,
-    id: 57
+    "main": "Swim Speed Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 57,
+    "splatnet": 25004
   },
   {
-    image: "../common/assets/img/gear/Shs_AMB005.png",
-    name: "Power Boots Mk I",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_AMB005.png",
+    "name": "Power Boots Mk I",
+    "localizedName": {
       "ja_JP": "パワードレッグス オリジン",
       "en_US": "Power Boots Mk I",
       "en_GB": "Power Boots Mk I",
       "es_ES": "Prototipo de tecnobota",
       "es_MX": "Prototipo de tecnobota",
       "fr_FR": "Bottes méca Mk I",
-      "fr_CA": "Bottes méca Mk I"
+      "fr_CA": "Bottes méca Mk I",
+      "de_DE": "Exo-Prototypenstiefel",
+      "nl_NL": "Hightechschoenen (prototype)",
+      "ru_RU": "Силовые боты М-1"
     },
-    main: "Bomb Defense Up",
-    brand: "amiibo",
-    stars: 2,
-    id: 58
+    "main": "Bomb Defense Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 58,
+    "splatnet": 25005
   },
   {
-    image: "../common/assets/img/gear/Shs_MSN000.png",
-    name: "Hero Runner Replicas",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_MSN000.png",
+    "name": "Hero Runner Replicas",
+    "localizedName": {
       "ja_JP": "ヒーローキックス レプリカ",
       "en_US": "Hero Runner Replicas",
       "en_GB": "Hero Runner Replicas",
       "es_ES": "Deportiva de élite (réplica)",
       "es_MX": "Deportivos de élite réplica",
       "fr_FR": "Baskets héroïques (répliques)",
-      "fr_CA": "Espadrilles héroïques (rép.)"
+      "fr_CA": "Espadrilles héroïques (rép.)",
+      "de_DE": "Heldenschuhe Replik",
+      "nl_NL": "Heldenschoenen (replica)",
+      "ru_RU": "Кроссы-004 (клон)"
     },
-    main: "Quick Super Jump",
-    brand: "Cuttlegear",
-    stars: 2,
-    id: 59
+    "main": "Quick Super Jump",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 59,
+    "splatnet": 27000
   },
   {
-    image: "../common/assets/img/gear/Shs_MSN004.png",
-    name: "Armor Boot Replicas",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_MSN004.png",
+    "name": "Armor Boot Replicas",
+    "localizedName": {
       "ja_JP": "アーマーブーツ レプリカ",
       "en_US": "Armor Boot Replicas",
       "en_GB": "Armor Boot Replicas",
       "es_ES": "Bota reforzada (réplica)",
       "es_MX": "Botas armadura réplica",
       "fr_FR": "Bottes encrifugées (répliques)",
-      "fr_CA": "Bottes encrifugées (rép.)"
+      "fr_CA": "Bottes encrifugées (rép.)",
+      "de_DE": "Rüstungsstiefel Replik",
+      "nl_NL": "Pantserschoenen (replica)",
+      "ru_RU": "Бронеботы-004 (клон)"
     },
-    main: "Ink Saver (Main)",
-    brand: "Cuttlegear",
-    stars: 2,
-    id: 60
+    "main": "Ink Saver (Main)",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 60,
+    "splatnet": 27004
   },
   {
-    image: "../common/assets/img/gear/Shs_MSN101.png",
-    name: "Hero Snowboots Replicas",
-    localizedName: {
+    "image": "../common/assets/img/gear/Shs_MSN101.png",
+    "name": "Hero Snowboots Replicas",
+    "localizedName": {
       "ja_JP": "ヒーローバインダー レプリカ",
       "en_US": "Hero Snowboots Replicas",
       "en_GB": "Hero Snowboots Replicas",
       "es_ES": "Bota de élite (réplica)",
       "es_MX": "Botas de élite réplica",
       "fr_FR": "Bottes héroïques (répliques)",
-      "fr_CA": "Bottes héroïques (répliques)"
+      "fr_CA": "Bottes héroïques (répliques)",
+      "de_DE": "Helden-Boots Replik",
+      "nl_NL": "Heldenlaarzen (replica)",
+      "ru_RU": "Зимние боты-004 (клон)"
     },
-    main: "Ink Saver (Sub)",
-    brand: "Cuttlegear",
-    stars: 2,
-    id: 61
+    "main": "Ink Saver (Sub)",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 61,
+    "splatnet": 27101
   }
 ]
 }
