@@ -13,7 +13,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Kleckser",
       "it_IT": "Armi a ripetizione",
       "nl_NL": "Spetter",
-      "ru_RU": "Armi a ripetizione"
+      "ru_RU": "Armi a ripetizione",
+      "zh_HK": "シューター (普通槍)"
     },
     "id": 0,
     "weapons": [
@@ -923,7 +924,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Dopplerklasse",
       "it_IT": "Armi \"duplo\"",
       "nl_NL": "Dubbelknaller",
-      "ru_RU": "Двойной класс"
+      "ru_RU": "Двойной класс",
+      "zh_HK": "マニューバー (双槍)"
     },
     "id": 1,
     "weapons": [
@@ -1294,7 +1296,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Roller",
       "it_IT": "Rullo",
       "nl_NL": "Roller",
-      "ru_RU": "ролик"
+      "ru_RU": "ролик",
+      "zh_HK": "ローラー (Roller/掃)"
     },
     "id": 2,
     "weapons": [
@@ -1610,7 +1613,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Pinsel",
       "it_IT": "Pennello",
       "nl_NL": "Inktkwast",
-      "ru_RU": "Кисть"
+      "ru_RU": "Кисть",
+      "zh_HK": "フデ (毛筆)"
     },
     "id": 3,
     "weapons": [
@@ -1796,7 +1800,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Blaster",
       "it_IT": "Blaster",
       "nl_NL": "Klodderblaster",
-      "ru_RU": "Бластер"
+      "ru_RU": "Бластер",
+      "zh_HK": "ブラスター (波波槍)"
     },
     "id": 4,
     "weapons": [
@@ -2242,7 +2247,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Regenschirm",
       "it_IT": "Sparasole",
       "nl_NL": "Plenzer",
-      "ru_RU": "Сплат-зонт"
+      "ru_RU": "Сплат-зонт",
+      "zh_HK": "シェルター (遮)"
     },
     "id": 5,
     "weapons": [
@@ -2361,7 +2367,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Schwapper",
       "it_IT": "Secchiostro",
       "nl_NL": "Morser",
-      "ru_RU": "Ведроган"
+      "ru_RU": "Ведроган",
+      "zh_HK": "スロッシャー (水桶)"
     },
     "id": 6,
     "weapons": [
@@ -2609,7 +2616,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Klecks-Konzentrator",
       "it_IT": "Splatter a carica",
       "nl_NL": "Bloplader",
-      "ru_RU": "Сплатган"
+      "ru_RU": "Сплатган",
+      "zh_HK": "チャージャー (狙撃槍)"
     },
     "id": 7,
     "weapons": [
@@ -3113,7 +3121,8 @@ angular.module('splatApp').weapons = function ($scope) {
       "de_DE": "Splatling",
       "it_IT": "Splatting",
       "nl_NL": "Spetling",
-      "ru_RU": "Брызгомет"
+      "ru_RU": "Брызгомет",
+      "zh_HK": "スピナー (機関槍)"
     },
     "id": 8,
     "weapons": [

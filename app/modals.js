@@ -50,7 +50,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="col-md-8 picker-right">
     <div class="row">
     <div class="col-md-12">
-    <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+    <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_SELECTOR | translate }}' || '{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
     </div>
     </div>
     <div class="col-md-12">
