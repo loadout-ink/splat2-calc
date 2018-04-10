@@ -61,7 +61,7 @@
   "STAT_SPECIAL_POWER_SPLASHDOWN": "Potere speciale (Diametro splash)",
   "STAT_SPECIAL_POWER_BUBBLE": "Potere speciale (Raggio delle bolle)",
   "STAT_SUB_POWER": "Potere secondario",
-  "STAT_SUB_POWER_RANGE": "Potere secondario (Area della bomba)",
+  "STAT_SUB_POWER_RANGE": "Potere secondario (Gittata della bomba)",
   "STAT_SUB_POWER_CURLING": "Potere secondario (Velocità della bomba)",
   "STAT_SUB_POWER_MINE": "Potere secondario (Raggio della mina)",
   "STAT_SUB_POWER_WALL": "Potere secondario (Resistenza del muro)",
@@ -81,7 +81,7 @@
   "LABEL_HP": "{value} HP",
 
   "DESC_PUNISHER_DISCLAIMER": "Gli effetti del Castigo non sono ancora completamente chiari.",
-  "DESC_TRACKING": "Point Sensor/Ink Mine duration",
+  "DESC_TRACKING": "Durata del rilevamento",
   "DESC_RECOVERY_TIME": "{value}s da vuoto a pieno",
   "DESC_MAIN_COST": "Vuoto in {totalShots} ({reduction}% riduzione)",
   "DESC_SUB_COST": "{reduction}% riduzione",
