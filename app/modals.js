@@ -174,6 +174,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <ul>
     <li>Some localizations for Spanish (Mexico) and French (Canada) may be incorrect. Please report these on <a href="https://github.com/DeviPotato/splat2-calc/" target="_blank">GitHub</a> or <a href="https://twitter.com/loadout_ink" target="_blank">Twitter.</a></li>
     </ul>
+    <li>Grizzco gear no longer has a default ability.</li>
     </ul>
     <h4>Version 1.1.4</h4>
     <ul>
