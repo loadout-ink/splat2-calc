@@ -3,7 +3,7 @@ var translate = require('gulp-translator');
 var cachebust = require('gulp-cache-bust');
 var del = require('del');
 
-var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX'];
+var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX', 'it_IT'];
 
 gulp.task('clean', function() {
   return del([

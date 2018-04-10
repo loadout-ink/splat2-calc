@@ -118,7 +118,8 @@ angular
       'es_ES': 'Español (ES)',
       'es_MX': 'Español (MX)',
       'fr_FR': 'Français (FR)',
-      'fr_CA': 'Français (CA)'
+      'fr_CA': 'Français (CA)',
+      'it_IT': 'Italiano'
     }
   }])
   .filter("trust", ['$sce', function($sce) {
