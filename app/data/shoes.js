@@ -13,7 +13,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles crème",
       "de_DE": "Weiße Leinenschuhe",
       "nl_NL": "Crèmekleurige sneakers",
-      "ru_RU": "Светлые полукеды"
+      "ru_RU": "Светлые полукеды",
+      "it_IT": "Classiche crema"
     },
     "main": "Special Saver",
     "brand": "Krak-On",
@@ -34,7 +35,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles bleues",
       "de_DE": "Blaue Low-Tops",
       "nl_NL": "Blauwe Lo-Tops",
-      "ru_RU": "Синие сникеры"
+      "ru_RU": "Синие сникеры",
+      "it_IT": "Basse blu"
     },
     "main": "Bomb Defense Up",
     "brand": "Zekko",
@@ -55,7 +57,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo blanches",
       "de_DE": "Weiße Low-Top-Sneaker",
       "nl_NL": "Witte sneakers",
-      "ru_RU": "Белые кроссы"
+      "ru_RU": "Белые кроссы",
+      "it_IT": "Runner bianche"
     },
     "main": "Ink Recovery Up",
     "brand": "Zink",
@@ -76,7 +79,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo noires",
       "de_DE": "Schwarze Low-Top-Sneaker",
       "nl_NL": "Zwarte sneakers",
-      "ru_RU": "Черные кроссы"
+      "ru_RU": "Черные кроссы",
+      "it_IT": "Runner bianconere"
     },
     "main": "Swim Speed Up",
     "brand": "Zink",
@@ -97,7 +101,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles poisson-clown",
       "de_DE": "Clownfisch-Leinenschuhe",
       "nl_NL": "Anemoonvissneakers",
-      "ru_RU": "Клоунские полукеды"
+      "ru_RU": "Клоунские полукеды",
+      "it_IT": "Clownfish classiche"
     },
     "main": "Special Charge Up",
     "brand": "Krak-On",
@@ -118,7 +123,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles blanches",
       "de_DE": "Ultraweiße Klettsneaker",
       "nl_NL": "Witte klittebandschoenen",
-      "ru_RU": "Белые сникеры"
+      "ru_RU": "Белые сникеры",
+      "it_IT": "Ultrabianche a strappo"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Splash Mob",
@@ -139,7 +145,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles rouges",
       "de_DE": "Ultrarote Klettsneaker",
       "nl_NL": "Rode klittebandschoenen",
-      "ru_RU": "Красные сникеры"
+      "ru_RU": "Красные сникеры",
+      "it_IT": "Ultrarosse a strappo"
     },
     "main": "Ink Resistance Up",
     "brand": "Splash Mob",
@@ -160,7 +167,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Souliers de soccer",
       "de_DE": "Stollenschuhe",
       "nl_NL": "Voetbalschoenen",
-      "ru_RU": "Бутсы"
+      "ru_RU": "Бутсы",
+      "it_IT": "Scarpe da calcio"
     },
     "main": "Bomb Defense Up",
     "brand": "Takoroka",
@@ -181,7 +189,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Souliers de soccer DX",
       "de_DE": "Deluxe-Stollenschuhe",
       "nl_NL": "Speciale editie voetbalschoenen",
-      "ru_RU": "Раритетные бутсы"
+      "ru_RU": "Раритетные бутсы",
+      "it_IT": "Scarpe da calcio deluxe"
     },
     "main": "Ink Resistance Up",
     "brand": "Takoroka",
@@ -202,7 +211,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Souliers d'escalade été",
       "de_DE": "Sonnen-Kletterschuhe",
       "nl_NL": "Gele klimschoenen",
-      "ru_RU": "Ботинки альпиниста"
+      "ru_RU": "Ботинки альпиниста",
+      "it_IT": "Da arrampicata fluo"
     },
     "main": "Special Saver",
     "brand": "Inkline",
@@ -223,7 +233,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Souliers d'escalade printemps",
       "de_DE": "Pfirsich-Kletterschuhe",
       "nl_NL": "Groene klimschoenen",
-      "ru_RU": "Ботинки альпиниста-бис"
+      "ru_RU": "Ботинки альпиниста-бис",
+      "it_IT": "Da arrampicata pastello"
     },
     "main": "Special Charge Up",
     "brand": "Inkline",
@@ -244,7 +255,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis vertes",
       "de_DE": "Grüne Schnürschuhe",
       "nl_NL": "Groene Lace-Ups",
-      "ru_RU": "Зеленые кеды со шнурками"
+      "ru_RU": "Зеленые кеды со шнурками",
+      "it_IT": "Verdi a stringhe"
     },
     "main": "Cold-Blooded",
     "brand": "Splash Mob",
@@ -265,7 +277,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets sans lacets blanches",
       "de_DE": "Weiße Schnürlos-Dakroniks",
       "nl_NL": "Witte veterloze Dakroniks",
-      "ru_RU": "Белые кеды без шнурков"
+      "ru_RU": "Белые кеды без шнурков",
+      "it_IT": "Dakroniks senza lacci bianche"
     },
     "main": "Run Speed Up",
     "brand": "Zink",
@@ -286,7 +299,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets sans lacets bleues",
       "de_DE": "Blaue Schnürlos-Dakroniks",
       "nl_NL": "Blauwe veterloze Dakroniks",
-      "ru_RU": "Синие кеды без шнурков"
+      "ru_RU": "Синие кеды без шнурков",
+      "it_IT": "Dakroniks senza lacci blu"
     },
     "main": "Stealth Jump",
     "brand": "Zink",
@@ -307,7 +321,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo hautes rouges",
       "de_DE": "Rote High-Top-Sneaker",
       "nl_NL": "Rode hoge sneakers",
-      "ru_RU": "Красные блинг-кеды"
+      "ru_RU": "Красные блинг-кеды",
+      "it_IT": "Alte biancorosse"
     },
     "main": "Ink Saver (Main)",
     "brand": "Zink",
@@ -328,7 +343,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo hautes zombi",
       "de_DE": "Zombie-High-Top-Sneaker",
       "nl_NL": "Hoge zombiesneakers",
-      "ru_RU": "Блинг-кеды «Зомби»"
+      "ru_RU": "Блинг-кеды «Зомби»",
+      "it_IT": "Alte zombie"
     },
     "main": "Special Charge Up",
     "brand": "Zink",
@@ -349,7 +365,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo hautes mauves",
       "de_DE": "Lila High-Top-Sneaker",
       "nl_NL": "Paarse Hi-Tops",
-      "ru_RU": "Лиловые блинг-кеды"
+      "ru_RU": "Лиловые блинг-кеды",
+      "it_IT": "Alte gialloviola"
     },
     "main": "Special Power Up",
     "brand": "Zink",
@@ -370,7 +387,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles hautes algue",
       "de_DE": "Tannengrüne Leinen-High-Tops",
       "nl_NL": "Groene Hi-Tops",
-      "ru_RU": "Кеды «Охотник»"
+      "ru_RU": "Кеды «Охотник»",
+      "it_IT": "Sneaker verde scuro"
     },
     "main": "Ink Recovery Up",
     "brand": "Krak-On",
@@ -391,7 +409,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis montantes rouges",
       "de_DE": "Rote Leinen-High-Tops",
       "nl_NL": "Rode Hi-Tops",
-      "ru_RU": "Красные кеды"
+      "ru_RU": "Красные кеды",
+      "it_IT": "Sneaker rosse"
     },
     "main": "Ink Resistance Up",
     "brand": "Krak-On",
@@ -412,7 +431,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Hippo hautes or",
       "de_DE": "Goldene High-Top-Sneaker",
       "nl_NL": "Gouden Hi-Tops",
-      "ru_RU": "Золотистые блинг-кеды"
+      "ru_RU": "Золотистые блинг-кеды",
+      "it_IT": "Alte dorate"
     },
     "main": "Run Speed Up",
     "brand": "Zink",
@@ -433,7 +453,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins requin",
       "de_DE": "Hai-Schnürer",
       "nl_NL": "Krokodillenmocassins",
-      "ru_RU": "Мокасины «Челюсти»"
+      "ru_RU": "Мокасины «Челюсти»",
+      "it_IT": "Scarpe aggressive"
     },
     "main": "Sub Power Up",
     "brand": "Splash Mob",
@@ -454,7 +475,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins carnassier",
       "de_DE": "Karnivor-Schnürer",
       "nl_NL": "Haaienmocassins",
-      "ru_RU": "Мокасины «Зубастики»"
+      "ru_RU": "Мокасины «Зубастики»",
+      "it_IT": "Scarpe squalo"
     },
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
@@ -475,7 +497,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets montantes azur",
       "de_DE": "Türkise Dakroniks",
       "nl_NL": "Hemelsblauwe Dakroniks",
-      "ru_RU": "Бирюзовые кросс-кеды"
+      "ru_RU": "Бирюзовые кросс-кеды",
+      "it_IT": "Dakroniks menta"
     },
     "main": "Drop Roller",
     "brand": "Zink",
@@ -496,7 +519,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets montantes noires",
       "de_DE": "Schwarze Dakroniks",
       "nl_NL": "Zwarte Dakroniks",
-      "ru_RU": "Черные кросс-кеды"
+      "ru_RU": "Черные кросс-кеды",
+      "it_IT": "Dakroniks nere"
     },
     "main": "Cold-Blooded",
     "brand": "Zink",
@@ -517,7 +541,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins piranha",
       "de_DE": "Piranha-Schnürer",
       "nl_NL": "Piranhamocassins",
-      "ru_RU": "Мокасины «Пираньи»"
+      "ru_RU": "Мокасины «Пираньи»",
+      "it_IT": "Scarpe piranha"
     },
     "main": "Stealth Jump",
     "brand": "Splash Mob",
@@ -538,7 +563,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Norimaki 750 blanches",
       "de_DE": "Weiße Norimaki 750s",
       "nl_NL": "Witte Norimaki 750s",
-      "ru_RU": "Белые сушитапки 750с"
+      "ru_RU": "Белые сушитапки 750с",
+      "it_IT": "Slip-on bianche"
     },
     "main": "Swim Speed Up",
     "brand": "Tentatek",
@@ -559,7 +585,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Norimaki 750 noires",
       "de_DE": "Schwarze Norimaki 750s",
       "nl_NL": "Zwarte Norimaki 750s",
-      "ru_RU": "Черные сушитапки 750с"
+      "ru_RU": "Черные сушитапки 750с",
+      "it_IT": "Slip-on nere"
     },
     "main": "Special Charge Up",
     "brand": "Tentatek",
@@ -580,7 +607,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles hautes crépuscule",
       "de_DE": "Sonnenorca-High-Tops",
       "nl_NL": "Gele orka-sneakers",
-      "ru_RU": "Оранжевые «Косатки»"
+      "ru_RU": "Оранжевые «Косатки»",
+      "it_IT": "Sneaker orca tramonto"
     },
     "main": "Drop Roller",
     "brand": "Takoroka",
@@ -601,7 +629,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Egings IV rouges et noires",
       "de_DE": "Rot-schwarze Squidkids IV",
       "nl_NL": "Rode Squidkid IV",
-      "ru_RU": "Красно-черные шузы"
+      "ru_RU": "Красно-черные шузы",
+      "it_IT": "Mitilik rosse e nere"
     },
     "main": "Special Charge Up",
     "brand": "Enperry",
@@ -622,7 +651,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Egings IV bleues et noires",
       "de_DE": "Blau-schwarze Squidkids IV",
       "nl_NL": "Blauwe Squidkid IV",
-      "ru_RU": "Сине-черные шузы"
+      "ru_RU": "Сине-черные шузы",
+      "it_IT": "Mitilik blu e nere"
     },
     "main": "Quick Super Jump",
     "brand": "Enperry",
@@ -643,7 +673,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles montantes grises",
       "de_DE": "Graue High-Tops",
       "nl_NL": "Grijze hoge sneakers",
-      "ru_RU": "Серые высокие кроссы"
+      "ru_RU": "Серые высокие кроссы",
+      "it_IT": "Swimmer alte grigie"
     },
     "main": "Bomb Defense Up",
     "brand": "Tentatek",
@@ -664,7 +695,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Orques classiques",
       "de_DE": "Orca-High-Tops",
       "nl_NL": "Orka-sneakers",
-      "ru_RU": "«Косатки»"
+      "ru_RU": "«Косатки»",
+      "it_IT": "Sneaker orca"
     },
     "main": "Special Saver",
     "brand": "Takoroka",
@@ -685,7 +717,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottillons marine DUX",
       "de_DE": "Marine-Enperrial-Stiefel",
       "nl_NL": "Blauwe Enperrial-laarzen",
-      "ru_RU": "Ботинки «Адмирал»"
+      "ru_RU": "Ботинки «Адмирал»",
+      "it_IT": "Stivaletti Imperial nautici"
     },
     "main": "Ink Saver (Main)",
     "brand": "Enperry",
@@ -706,7 +739,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles montantes ambre",
       "de_DE": "Bernstein-High-Tops",
       "nl_NL": "Bruine hoge sneakers",
-      "ru_RU": "Кроссы «Янтарь»"
+      "ru_RU": "Кроссы «Янтарь»",
+      "it_IT": "Swimmer alte da trekking"
     },
     "main": "Drop Roller",
     "brand": "Tentatek",
@@ -727,7 +761,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis high-tech jaunes",
       "de_DE": "Gelbe Iromaki 750",
       "nl_NL": "Gele Iromaki 750",
-      "ru_RU": "Желтые сушитапки 750с"
+      "ru_RU": "Желтые сушитапки 750с",
+      "it_IT": "Slip-on gialle"
     },
     "main": "Special Saver",
     "brand": "Tentatek",
@@ -748,7 +783,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Egings IV marine et jaunes",
       "de_DE": "Gelb-blaue Squidkids IV",
       "nl_NL": "Geel-blauwe Squidkid IV",
-      "ru_RU": "Сине-желтые шузы"
+      "ru_RU": "Сине-желтые шузы",
+      "it_IT": "Mitilik gialle e blu"
     },
     "main": "Cold-Blooded",
     "brand": "Enperry",
@@ -769,7 +805,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Orques tissées",
       "de_DE": "Webe-Orca-High-Tops",
       "nl_NL": "Geweven orka-sneakers",
-      "ru_RU": "Высокие кроссы с узором"
+      "ru_RU": "Высокие кроссы с узором",
+      "it_IT": "Sneaker orca urbane"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Takoroka",
@@ -790,7 +827,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis high-tech vertes",
       "de_DE": "Grüne Iromaki 750",
       "nl_NL": "Groene Iromaki 750",
-      "ru_RU": "Зеленые сушитапки 750с"
+      "ru_RU": "Зеленые сушитапки 750с",
+      "it_IT": "Slip-on verdi"
     },
     "main": "Special Power Up",
     "brand": "Tentatek",
@@ -811,7 +849,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis high-tech violettes",
       "de_DE": "Lila Iromaki 750",
       "nl_NL": "Paarse Iromaki 750",
-      "ru_RU": "Фиолетовые сушитапки 750с"
+      "ru_RU": "Фиолетовые сушитапки 750с",
+      "it_IT": "Slip-on viola"
     },
     "main": "Swim Speed Up",
     "brand": "Tentatek",
@@ -832,7 +871,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis high-tech rouges",
       "de_DE": "Rote Iromaki 750",
       "nl_NL": "Rode Iromaki 750",
-      "ru_RU": "Бордовые сушитапки 750с"
+      "ru_RU": "Бордовые сушитапки 750с",
+      "it_IT": "Slip-on rosse"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Tentatek",
@@ -853,7 +893,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Tennis high-tech Gomashio 270",
       "de_DE": "Gomashio 270",
       "nl_NL": "Sesam & Zout 270",
-      "ru_RU": "«Сезам и соль» 270"
+      "ru_RU": "«Сезам и соль» 270",
+      "it_IT": "Slip-on sale e sesamo 270"
     },
     "main": "Quick Super Jump",
     "brand": "Tentatek",
@@ -874,7 +915,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles roses",
       "de_DE": "Pinke Turnschuhe",
       "nl_NL": "Roze sportschoenen",
-      "ru_RU": "Розовые кроссовки"
+      "ru_RU": "Розовые кроссовки",
+      "it_IT": "Runner rosa"
     },
     "main": "Sub Power Up",
     "brand": "Tentatek",
@@ -895,7 +937,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Flèches orange",
       "de_DE": "Orange Pfeilschuhe",
       "nl_NL": "Oranje pijlsneakers",
-      "ru_RU": "Оранжевые «Стрелы»"
+      "ru_RU": "Оранжевые «Стрелы»",
+      "it_IT": "Arrow arancioblu"
     },
     "main": "Ink Saver (Main)",
     "brand": "Takoroka",
@@ -916,7 +959,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles vert fluo",
       "de_DE": "Neongrüne Laufschuhe",
       "nl_NL": "Neongroene sportschoenen",
-      "ru_RU": "Лаймовые кроссовки"
+      "ru_RU": "Лаймовые кроссовки",
+      "it_IT": "Swimmer verdi fluo"
     },
     "main": "Ink Resistance Up",
     "brand": "Tentatek",
@@ -937,7 +981,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Flèches blanches",
       "de_DE": "Weiße Pfeilschuhe",
       "nl_NL": "Witte pijlsneakers",
-      "ru_RU": "Белые «Стрелы»"
+      "ru_RU": "Белые «Стрелы»",
+      "it_IT": "Arrow bianche"
     },
     "main": "Special Power Up",
     "brand": "Takoroka",
@@ -958,7 +1003,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles turquoise",
       "de_DE": "Türkise Turnschuhe",
       "nl_NL": "Turquoise sportschoenen",
-      "ru_RU": "Бирюзовые кроссовки"
+      "ru_RU": "Бирюзовые кроссовки",
+      "it_IT": "Runner verdeacqua"
     },
     "main": "Stealth Jump",
     "brand": "Tentatek",
@@ -979,7 +1025,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles rouges",
       "de_DE": "Rote Laufschuhe",
       "nl_NL": "Rode sportschoenen",
-      "ru_RU": "Красные кроссовки"
+      "ru_RU": "Красные кроссовки",
+      "it_IT": "Swimmer rosse"
     },
     "main": "Special Saver",
     "brand": "Tentatek",
@@ -1000,7 +1047,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles violettes",
       "de_DE": "Lila Laufschuhe",
       "nl_NL": "Paarse sportschoenen",
-      "ru_RU": "Лиловые кроссовки"
+      "ru_RU": "Лиловые кроссовки",
+      "it_IT": "Swimmer viola"
     },
     "main": "Run Speed Up",
     "brand": "Tentatek",
@@ -1021,7 +1069,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Flèches en folie",
       "de_DE": "Bunte Pfeilschuhe",
       "nl_NL": "Felgekleurde pijlsneakers",
-      "ru_RU": "Кроссовки «Психо»"
+      "ru_RU": "Кроссовки «Психо»",
+      "it_IT": "Arrow arcobaleno"
     },
     "main": "Stealth Jump",
     "brand": "Takoroka",
@@ -1042,7 +1091,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles noires",
       "de_DE": "Schwarze Turnschuhe",
       "nl_NL": "Zwarte sportschoenen",
-      "ru_RU": "Черные кроссовки"
+      "ru_RU": "Черные кроссовки",
+      "it_IT": "Runner nere"
     },
     "main": "Quick Respawn",
     "brand": "Tentatek",
@@ -1063,7 +1113,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets violettes",
       "de_DE": "Violette Turnschuhe",
       "nl_NL": "Violette sportschoenen",
-      "ru_RU": "Фиолетовые кроссовки"
+      "ru_RU": "Фиолетовые кроссовки",
+      "it_IT": "Runner viola"
     },
     "main": "Object Shredder",
     "brand": "Tentatek",
@@ -1084,7 +1135,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles canari",
       "de_DE": "Kanarien-Turnschuhe",
       "nl_NL": "Kanariesneakers",
-      "ru_RU": "Кроссовки «Канарейки»"
+      "ru_RU": "Кроссовки «Канарейки»",
+      "it_IT": "Runner canarino"
     },
     "main": "Quick Super Jump",
     "brand": "Tentatek",
@@ -1105,7 +1157,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles filet jaune",
       "de_DE": "Gelbe Netzsneaker",
       "nl_NL": "Gele gaassneakers",
-      "ru_RU": "Желтые кроссы «Сеть»"
+      "ru_RU": "Желтые кроссы «Сеть»",
+      "it_IT": "Sportive giallo fluo"
     },
     "main": "Cold-Blooded",
     "brand": "Tentatek",
@@ -1126,7 +1179,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles sans lacet",
       "de_DE": "Pfeil-Pull-ons",
       "nl_NL": "Pijlenlaarsjes",
-      "ru_RU": "Кроссовки без шнуровки"
+      "ru_RU": "Кроссовки без шнуровки",
+      "it_IT": "Arrow eleganti"
     },
     "main": "Drop Roller",
     "brand": "Toni Kensa",
@@ -1147,7 +1201,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles filet orange",
       "de_DE": "Orange Netzsneaker",
       "nl_NL": "Oranje gaassneakers",
-      "ru_RU": "Рыжие кроссы «Сеть»"
+      "ru_RU": "Рыжие кроссы «Сеть»",
+      "it_IT": "Sportive arancioni"
     },
     "main": "Special Power Up",
     "brand": "Tentatek",
@@ -1168,7 +1223,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets DUX Argent",
       "de_DE": "N-Pacer Ag",
       "nl_NL": "N-Pacer Ag",
-      "ru_RU": "Кроссы «VIP» (серебристые)"
+      "ru_RU": "Кроссы «VIP» (серебристые)",
+      "it_IT": "Sneaker Ag"
     },
     "main": "Ink Recovery Up",
     "brand": "Enperry",
@@ -1189,7 +1245,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Baskets DUX Or",
       "de_DE": "N-Pacer Au",
       "nl_NL": "N-Pacer Au",
-      "ru_RU": "Кроссы «VIP» (золотые)"
+      "ru_RU": "Кроссы «VIP» (золотые)",
+      "it_IT": "Sneaker Au"
     },
     "main": "Quick Respawn",
     "brand": "Enperry",
@@ -1210,7 +1267,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Anguilles Volt 95",
       "de_DE": "Laufschuhe Volt 95",
       "nl_NL": "Volt 95-sportschoenen",
-      "ru_RU": "Кроссовки «Вольт 95»"
+      "ru_RU": "Кроссовки «Вольт 95»",
+      "it_IT": "Swimmer Volt 95"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Tentatek",
@@ -1231,7 +1289,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sabots huître",
       "de_DE": "Austerngraue Clogs",
       "nl_NL": "Grijze klompen",
-      "ru_RU": "Серые клоги"
+      "ru_RU": "Серые клоги",
+      "it_IT": "Zoccoli grigi"
     },
     "main": "Run Speed Up",
     "brand": "Krak-On",
@@ -1252,7 +1311,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sabots chocolat",
       "de_DE": "Schokobraune Clogs",
       "nl_NL": "Bruine klompen",
-      "ru_RU": "Коричневые клоги"
+      "ru_RU": "Коричневые клоги",
+      "it_IT": "Zoccoli marroni"
     },
     "main": "Quick Respawn",
     "brand": "Krak-On",
@@ -1273,7 +1333,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures bleuets",
       "de_DE": "Blaue Halbschuhe",
       "nl_NL": "Blauwe veterschoenen",
-      "ru_RU": "Синие полуботинки"
+      "ru_RU": "Синие полуботинки",
+      "it_IT": "Comfort blu"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Krak-On",
@@ -1294,7 +1355,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures prune",
       "de_DE": "Lila Halbschuhe",
       "nl_NL": "Paarse veterschoenen",
-      "ru_RU": "Лиловые полуботинки"
+      "ru_RU": "Лиловые полуботинки",
+      "it_IT": "Comfort viola"
     },
     "main": "Object Shredder",
     "brand": "Krak-On",
@@ -1315,7 +1377,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sandales fluo",
       "de_DE": "Neon-Delta-Sandalen",
       "nl_NL": "Neon sandalen",
-      "ru_RU": "Неоновые сандалии"
+      "ru_RU": "Неоновые сандалии",
+      "it_IT": "Sandali a strappo neon"
     },
     "main": "Sub Power Up",
     "brand": "Inkline",
@@ -1336,7 +1399,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sandales de plage",
       "de_DE": "Schwarze Strandsandalen",
       "nl_NL": "Zwarte teenslippers",
-      "ru_RU": "Черные шлепки"
+      "ru_RU": "Черные шлепки",
+      "it_IT": "Ciabatte da mare"
     },
     "main": "Object Shredder",
     "brand": "Zekko",
@@ -1357,7 +1421,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sandales poudreuse",
       "de_DE": "Polarweiße Delta-Sandalen",
       "nl_NL": "Sneeuwwitte sandalen",
-      "ru_RU": "Снежные сандалии"
+      "ru_RU": "Снежные сандалии",
+      "it_IT": "Sandali a strappo neve"
     },
     "main": "Swim Speed Up",
     "brand": "Inkline",
@@ -1378,7 +1443,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sandales chaussettes fluo",
       "de_DE": "Signal-Delta-Sandalen",
       "nl_NL": "Roetzwarte sandalen",
-      "ru_RU": "Горные сандалии"
+      "ru_RU": "Горные сандалии",
+      "it_IT": "Sandali a strappo fluo"
     },
     "main": "Cold-Blooded",
     "brand": "Inkline",
@@ -1399,7 +1465,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Claquettes rouges Friture",
       "de_DE": "Rote Schlappen",
       "nl_NL": "Rode badslippers",
-      "ru_RU": "Шлепки «Фугасик»"
+      "ru_RU": "Шлепки «Фугасик»",
+      "it_IT": "Ciabatte rosse"
     },
     "main": "Object Shredder",
     "brand": "Firefin",
@@ -1420,7 +1487,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de rando",
       "de_DE": "Wanderstiefel",
       "nl_NL": "Wandelschoenen",
-      "ru_RU": "Горные ботинки"
+      "ru_RU": "Горные ботинки",
+      "it_IT": "Scarpe da trekking"
     },
     "main": "Ink Recovery Up",
     "brand": "Inkline",
@@ -1441,7 +1509,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes rando pro",
       "de_DE": "Profi-Wanderstiefel",
       "nl_NL": "Professionele wandelschoenen",
-      "ru_RU": "Горные ботинки ПРО"
+      "ru_RU": "Горные ботинки ПРО",
+      "it_IT": "Trekking pro"
     },
     "main": "Ink Resistance Up",
     "brand": "Inkline",
@@ -1462,7 +1531,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de moto",
       "de_DE": "Biker-Stiefel",
       "nl_NL": "Motorlaarzen",
-      "ru_RU": "Мотоботинки"
+      "ru_RU": "Мотоботинки",
+      "it_IT": "Stivali da moto"
     },
     "main": "Quick Respawn",
     "brand": "Rockenberg",
@@ -1483,7 +1553,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes sécurité beige",
       "de_DE": "Arbeitsstiefel",
       "nl_NL": "Bruine werkschoenen",
-      "ru_RU": "Бежевые рабочие боты"
+      "ru_RU": "Бежевые рабочие боты",
+      "it_IT": "Scarponi marroni"
     },
     "main": "Sub Power Up",
     "brand": "Rockenberg",
@@ -1504,7 +1575,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de moto bleues",
       "de_DE": "Blaue Biker-Stiefel",
       "nl_NL": "Blauwe moterlaarzen",
-      "ru_RU": "Синие мотоботинки"
+      "ru_RU": "Синие мотоботинки",
+      "it_IT": "Stivali da moto blu"
     },
     "main": "Ink Resistance Up",
     "brand": "Rockenberg",
@@ -1525,7 +1597,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de pluie vertes",
       "de_DE": "Moosgrüne Gummistiefel",
       "nl_NL": "Groene regenlaarzen",
-      "ru_RU": "Зеленые сапоги"
+      "ru_RU": "Зеленые сапоги",
+      "it_IT": "Stivali di gomma verdi"
     },
     "main": "Stealth Jump",
     "brand": "Inkline",
@@ -1546,7 +1619,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de pluie cerise",
       "de_DE": "Kirschrote Gummistiefel",
       "nl_NL": "Rode regenlaarzen",
-      "ru_RU": "Вишневые сапоги"
+      "ru_RU": "Вишневые сапоги",
+      "it_IT": "Stivali di gomma rossi"
     },
     "main": "Run Speed Up",
     "brand": "Inkline",
@@ -1567,7 +1641,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottines punk blanches",
       "de_DE": "Weiße Punkstiefel",
       "nl_NL": "Witte punkschoenen",
-      "ru_RU": "Белые берцы"
+      "ru_RU": "Белые берцы",
+      "it_IT": "Anfibi bianchi"
     },
     "main": "Special Charge Up",
     "brand": "Rockenberg",
@@ -1588,7 +1663,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottines punk rouges",
       "de_DE": "Rotbraune Punkstiefel",
       "nl_NL": "Rode punkschoenen",
-      "ru_RU": "Вишневые берцы"
+      "ru_RU": "Вишневые берцы",
+      "it_IT": "Anfibi melanzana"
     },
     "main": "Bomb Defense Up",
     "brand": "Rockenberg",
@@ -1609,7 +1685,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de pluie bulles",
       "de_DE": "Gummistiefeletten",
       "nl_NL": "Gestipte regenlaarzen",
-      "ru_RU": "Резиновые полуботинки"
+      "ru_RU": "Резиновые полуботинки",
+      "it_IT": "Stivaletti da pioggia"
     },
     "main": "Drop Roller",
     "brand": "Inkline",
@@ -1630,7 +1707,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Après-skis poudreuse",
       "de_DE": "Weiße Daunenstiefel",
       "nl_NL": "Sneeuwlaarzen",
-      "ru_RU": "Белые пуховые сапоги"
+      "ru_RU": "Белые пуховые сапоги",
+      "it_IT": "Stivali da neve"
     },
     "main": "Quick Super Jump",
     "brand": "Tentatek",
@@ -1651,7 +1729,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de chasse",
       "de_DE": "Jagdstiefel",
       "nl_NL": "Jachtlaarzen",
-      "ru_RU": "Болотные ботинки"
+      "ru_RU": "Болотные ботинки",
+      "it_IT": "Stivali da caccia"
     },
     "main": "Bomb Defense Up",
     "brand": "Splash Mob",
@@ -1672,7 +1751,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottines punk noires",
       "de_DE": "Schwarze Punkstiefel",
       "nl_NL": "Zwarte punkschoenen",
-      "ru_RU": "Черные берцы"
+      "ru_RU": "Черные берцы",
+      "it_IT": "Anfibi neri"
     },
     "main": "Cold-Blooded",
     "brand": "Rockenberg",
@@ -1693,7 +1773,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottines océaniques",
       "de_DE": "Tiefsee-Lederstiefel",
       "nl_NL": "Diepzeeblauwe laarzen",
-      "ru_RU": "Темно-синие берцы"
+      "ru_RU": "Темно-синие берцы",
+      "it_IT": "Anfibi mare"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Rockenberg",
@@ -1714,7 +1795,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottines camouf'algue",
       "de_DE": "Algen-Tarnstiefel",
       "nl_NL": "Algenlaarzen",
-      "ru_RU": "Маскботы «Дно»"
+      "ru_RU": "Маскботы «Дно»",
+      "it_IT": "Anfibi di alghe"
     },
     "main": "Object Shredder",
     "brand": "Forge",
@@ -1735,7 +1817,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins bleus",
       "de_DE": "Blaue Slip-ons",
       "nl_NL": "Blauwe instappers",
-      "ru_RU": "Синие слипоны"
+      "ru_RU": "Синие слипоны",
+      "it_IT": "Espadrillas blu"
     },
     "main": "Sub Power Up",
     "brand": "Krak-On",
@@ -1756,7 +1839,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins rouges",
       "de_DE": "Rote Slip-ons",
       "nl_NL": "Rode instappers",
-      "ru_RU": "Красные слипоны"
+      "ru_RU": "Красные слипоны",
+      "it_IT": "Espadrillas rosse"
     },
     "main": "Quick Super Jump",
     "brand": "Krak-On",
@@ -1777,7 +1861,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins pied-de-poulpe",
       "de_DE": "Pfeil-Slip-ons",
       "nl_NL": "Instappers met patroon",
-      "ru_RU": "Слипоны со стрелками"
+      "ru_RU": "Слипоны со стрелками",
+      "it_IT": "Espadrillas hip-hop"
     },
     "main": "Bomb Defense Up",
     "brand": "Krak-On",
@@ -1798,7 +1883,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins à pois",
       "de_DE": "Punkt-Slip-ons",
       "nl_NL": "Instappers met stippen",
-      "ru_RU": "Слипоны в горошек"
+      "ru_RU": "Слипоны в горошек",
+      "it_IT": "Espadrillas a pois"
     },
     "main": "Drop Roller",
     "brand": "Krak-On",
@@ -1819,7 +1905,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Compensées blanches",
       "de_DE": "Weiße Plateau-Sneaker",
       "nl_NL": "Witte plateauschoenen",
-      "ru_RU": "Белые платформы"
+      "ru_RU": "Белые платформы",
+      "it_IT": "Rialzate bianche"
     },
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
@@ -1840,7 +1927,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Compensées roses",
       "de_DE": "Kirsch-Plateau-Sneaker",
       "nl_NL": "Rode plateauschoenen",
-      "ru_RU": "Розовые платформы"
+      "ru_RU": "Розовые платформы",
+      "it_IT": "Rialzate rosa"
     },
     "main": "Stealth Jump",
     "brand": "Rockenberg",
@@ -1861,7 +1949,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Compensées turquoise",
       "de_DE": "Türkise Plateau-Sneaker",
       "nl_NL": "Turquoise plateauschoenen",
-      "ru_RU": "Бирюзовые платформы"
+      "ru_RU": "Бирюзовые платформы",
+      "it_IT": "Rialzate turchesi"
     },
     "main": "Special Charge Up",
     "brand": "Rockenberg",
@@ -1882,7 +1971,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures sépia",
       "de_DE": "Sepibrogues",
       "nl_NL": "Lakschoenen",
-      "ru_RU": "Элегантные броги"
+      "ru_RU": "Элегантные броги",
+      "it_IT": "Eleganti nero di seppia"
     },
     "main": "Quick Respawn",
     "brand": "Rockenberg",
@@ -1903,7 +1993,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures classiques",
       "de_DE": "Unibrogues",
       "nl_NL": "Klassieke schoenen",
-      "ru_RU": "Классические броги"
+      "ru_RU": "Классические броги",
+      "it_IT": "Eleganti marroni"
     },
     "main": "Bomb Defense Up",
     "brand": "Rockenberg",
@@ -1924,7 +2015,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures double boucle",
       "de_DE": "Doppelschnallen-Schuh",
       "nl_NL": "Gespenschoenen",
-      "ru_RU": "Броги с двумя пряжками"
+      "ru_RU": "Броги с двумя пряжками",
+      "it_IT": "Eleganti cammello"
     },
     "main": "Special Power Up",
     "brand": "Rockenberg",
@@ -1945,7 +2037,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Chaussures fumées",
       "de_DE": "Smoky Brogues",
       "nl_NL": "Elegante veterschoenen",
-      "ru_RU": "Дымчатые броги"
+      "ru_RU": "Дымчатые броги",
+      "it_IT": "Eleganti fumé"
     },
     "main": "Object Shredder",
     "brand": "Rockenberg",
@@ -1966,7 +2059,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Richelieu semelle rouge",
       "de_DE": "Rotsohlen-Brogues",
       "nl_NL": "Brogues met rode zool",
-      "ru_RU": "Броги с красной подошвой"
+      "ru_RU": "Броги с красной подошвой",
+      "it_IT": "Scamosciate suola rossa"
     },
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
@@ -1987,7 +2081,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Richelieu semelle jaune",
       "de_DE": "Gelbsohlen-Brogues",
       "nl_NL": "Brogues met gele zool",
-      "ru_RU": "Броги с желтой подошвой"
+      "ru_RU": "Броги с желтой подошвой",
+      "it_IT": "Scamosciate suola oro"
     },
     "main": "Quick Super Jump",
     "brand": "Rockenberg",
@@ -2008,7 +2103,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Compensées carmin Aroz",
       "de_DE": "Habanero-Annaki-Schuhe",
       "nl_NL": "Annaki-mocassins",
-      "ru_RU": "Красные платформы"
+      "ru_RU": "Красные платформы",
+      "it_IT": "Eleganti Annak"
     },
     "main": "Sub Power Up",
     "brand": "Annaki",
@@ -2029,9 +2125,10 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de pluie noires",
       "de_DE": "Arbeitsgummistiefel",
       "nl_NL": "Rubberlaarzen",
-      "ru_RU": "Рабочие сапоги"
+      "ru_RU": "Рабочие сапоги",
+      "it_IT": "Stivali squamosi"
     },
-    "main": undefined,
+    "main": "undefined",
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
@@ -2050,7 +2147,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins scolaires",
       "de_DE": "Schuluniform-Schuhe",
       "nl_NL": "Schoolschoenen",
-      "ru_RU": "Школьные ботинки"
+      "ru_RU": "Школьные ботинки",
+      "it_IT": "Mocassini neri"
     },
     "main": "Ink Saver (Sub)",
     "brand": "amiibo",
@@ -2071,7 +2169,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Sandales de samouraï",
       "de_DE": "Samurai-Schuhe",
       "nl_NL": "Samoeraischoenen",
-      "ru_RU": "Самурайские сандалии"
+      "ru_RU": "Самурайские сандалии",
+      "it_IT": "Calzature da samurai"
     },
     "main": "Special Power Up",
     "brand": "amiibo",
@@ -2092,7 +2191,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes technos",
       "de_DE": "Exo-Stiefel",
       "nl_NL": "Hightechschoenen",
-      "ru_RU": "Силовые боты"
+      "ru_RU": "Силовые боты",
+      "it_IT": "Stivali hi-tech"
     },
     "main": "Ink Saver (Main)",
     "brand": "amiibo",
@@ -2113,7 +2213,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Mocassins à franges",
       "de_DE": "Stulpen-Loafer",
       "nl_NL": "Loafers met franje",
-      "ru_RU": "Лоферы с бахромой"
+      "ru_RU": "Лоферы с бахромой",
+      "it_IT": "Mocassini con frangia"
     },
     "main": "Cold-Blooded",
     "brand": "amiibo",
@@ -2134,7 +2235,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes de ninja",
       "de_DE": "Ninja-Stiefel",
       "nl_NL": "Ninjalaarzen",
-      "ru_RU": "Таби ниндзялинга"
+      "ru_RU": "Таби ниндзялинга",
+      "it_IT": "Stivali ninja"
     },
     "main": "Swim Speed Up",
     "brand": "amiibo",
@@ -2155,7 +2257,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes méca Mk I",
       "de_DE": "Exo-Prototypenstiefel",
       "nl_NL": "Hightechschoenen (prototype)",
-      "ru_RU": "Силовые боты М-1"
+      "ru_RU": "Силовые боты М-1",
+      "it_IT": "Prototipo di stivali hi-tech"
     },
     "main": "Bomb Defense Up",
     "brand": "amiibo",
@@ -2176,7 +2279,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Espadrilles héroïques (rép.)",
       "de_DE": "Heldenschuhe Replik",
       "nl_NL": "Heldenschoenen (replica)",
-      "ru_RU": "Кроссы-004 (клон)"
+      "ru_RU": "Кроссы-004 (клон)",
+      "it_IT": "Runner élite replica"
     },
     "main": "Quick Super Jump",
     "brand": "Cuttlegear",
@@ -2197,7 +2301,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes encrifugées (rép.)",
       "de_DE": "Rüstungsstiefel Replik",
       "nl_NL": "Pantserschoenen (replica)",
-      "ru_RU": "Бронеботы-004 (клон)"
+      "ru_RU": "Бронеботы-004 (клон)",
+      "it_IT": "Stivali d'armatura replica"
     },
     "main": "Ink Saver (Main)",
     "brand": "Cuttlegear",
@@ -2218,7 +2323,8 @@ angular.module('splatApp').shoes = function($scope) {
       "fr_CA": "Bottes héroïques (répliques)",
       "de_DE": "Helden-Boots Replik",
       "nl_NL": "Heldenlaarzen (replica)",
-      "ru_RU": "Зимние боты-004 (клон)"
+      "ru_RU": "Зимние боты-004 (клон)",
+      "it_IT": "Scarponi élite replica"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Cuttlegear",

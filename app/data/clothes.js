@@ -13,7 +13,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt de base",
       "de_DE": "Alltagsshirt",
       "nl_NL": "T-shirt",
-      "ru_RU": "Обычная майка"
+      "ru_RU": "Обычная майка",
+      "it_IT": "T-shirt recluta"
     },
     "main": "Quick Respawn",
     "brand": "SquidForce",
@@ -34,7 +35,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt blanc",
       "de_DE": "Weißes Shirt",
       "nl_NL": "Wit T-shirt",
-      "ru_RU": "Белая майка"
+      "ru_RU": "Белая майка",
+      "it_IT": "T-shirt bianca"
     },
     "main": "Ink Saver (Sub)",
     "brand": "SquidForce",
@@ -55,7 +57,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt OculR noir",
       "de_DE": "Schwarzes Krakenaugen-Shirt",
       "nl_NL": "Zwart octopusoog-T-shirt",
-      "ru_RU": "Черная кальмарка"
+      "ru_RU": "Черная кальмарка",
+      "it_IT": "T-shirt neroseppia"
     },
     "main": "Run Speed Up",
     "brand": "Tentatek",
@@ -76,7 +79,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt OculR bleu clair",
       "de_DE": "Hellblaues Krakenaugen-Shirt",
       "nl_NL": "Lichtblauw octopusoog-T-shirt",
-      "ru_RU": "Голубая кальмарка"
+      "ru_RU": "Голубая кальмарка",
+      "it_IT": "Maglia azzurromare"
     },
     "main": "Cold-Blooded",
     "brand": "Tentatek",
@@ -97,7 +101,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Iormungand blanc",
       "de_DE": "Weißes Rockberg-Shirt",
       "nl_NL": "Wit Rockenberg-T-shirt",
-      "ru_RU": "Белая майка «Угрок»"
+      "ru_RU": "Белая майка «Угрок»",
+      "it_IT": "Rockenburg bianca"
     },
     "main": "Ink Recovery Up",
     "brand": "Rockenberg",
@@ -118,7 +123,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt noir",
       "de_DE": "Schwarzes Shirt",
       "nl_NL": "Zwart T-shirt",
-      "ru_RU": "Черная майка"
+      "ru_RU": "Черная майка",
+      "it_IT": "T-shirt nera"
     },
     "main": "Special Power Up",
     "brand": "SquidForce",
@@ -139,7 +145,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt belle journée",
       "de_DE": "Sonnenoranges Shirt",
       "nl_NL": "Zonnig T-shirt",
-      "ru_RU": "Майка «Бодрый краб»"
+      "ru_RU": "Майка «Бодрый краб»",
+      "it_IT": "T-shirt solearancio"
     },
     "main": "Special Charge Up",
     "brand": "Krak-On",
@@ -160,7 +167,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt jour de pluie",
       "de_DE": "Regenblaues Shirt",
       "nl_NL": "Hemelsblauw T-shirt",
-      "ru_RU": "Майка «Унылый краб»"
+      "ru_RU": "Майка «Унылый краб»",
+      "it_IT": "T-shirt blupioggia"
     },
     "main": "Ink Saver (Main)",
     "brand": "Krak-On",
@@ -181,7 +189,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt psychédélique",
       "de_DE": "Reggae-Shirt",
       "nl_NL": "Reggae-T-shirt",
-      "ru_RU": "«Я-Майка»"
+      "ru_RU": "«Я-Майка»",
+      "it_IT": "T-shirt reggae"
     },
     "main": "Special Saver",
     "brand": "Skalop",
@@ -202,7 +211,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Friture",
       "de_DE": "Kugelfisch-Shirt",
       "nl_NL": "Kogelvis-T-shirt",
-      "ru_RU": "Майка «Фугасик»"
+      "ru_RU": "Майка «Фугасик»",
+      "it_IT": "T-shirt pesce palla"
     },
     "main": "Swim Speed Up",
     "brand": "Firefin",
@@ -223,7 +233,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt menthe",
       "de_DE": "Minzgrünes Shirt",
       "nl_NL": "Zeegroen T-shirt",
-      "ru_RU": "Мятная майка"
+      "ru_RU": "Мятная майка",
+      "it_IT": "T-shirt verdeacqua"
     },
     "main": "Bomb Defense Up",
     "brand": "Skalop",
@@ -244,7 +255,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt fuchsia",
       "de_DE": "Lila Shirt",
       "nl_NL": "Paars T-shirt",
-      "ru_RU": "Лиловая майка"
+      "ru_RU": "Лиловая майка",
+      "it_IT": "T-shirt fucsia"
     },
     "main": "Ink Recovery Up",
     "brand": "Skalop",
@@ -265,7 +277,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt fléché rouge",
       "de_DE": "Rotes Profil-Shirt",
       "nl_NL": "Rood pijlen-T-shirt",
-      "ru_RU": "Красная майка с узором"
+      "ru_RU": "Красная майка с узором",
+      "it_IT": "T-shirt rossa frecce"
     },
     "main": "Ink Saver (Main)",
     "brand": "Takoroka",
@@ -286,7 +299,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Abysma bleu",
       "de_DE": "Eisgipfel-Shirt",
       "nl_NL": "Blauw bergen-T-shirt",
-      "ru_RU": "Синяя майка с горами"
+      "ru_RU": "Синяя майка с горами",
+      "it_IT": "T-shirt cime blu"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Inkline",
@@ -307,7 +321,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt rayé pirate",
       "de_DE": "Piraten-Shirt",
       "nl_NL": "Gestreept piraten-T-shirt",
-      "ru_RU": "Майка «Пиратка»"
+      "ru_RU": "Майка «Пиратка»",
+      "it_IT": "T-shirt da pirata"
     },
     "main": "Special Power Up",
     "brand": "Splash Mob",
@@ -328,7 +343,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt rayé marin",
       "de_DE": "Marine-Shirt",
       "nl_NL": "Gestreept matrozen-T-shirt",
-      "ru_RU": "Майка «Морячка»"
+      "ru_RU": "Майка «Морячка»",
+      "it_IT": "T-shirt da marinaio"
     },
     "main": "Run Speed Up",
     "brand": "Splash Mob",
@@ -349,7 +365,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt 8 bits blanc",
       "de_DE": "Weißes Rilax-Pixel-Shirt",
       "nl_NL": "Wit pixel-T-shirt",
-      "ru_RU": "«Фугасик-ретро» белая"
+      "ru_RU": "«Фугасик-ретро» белая",
+      "it_IT": "T-shirt 8 bit bianca"
     },
     "main": "Sub Power Up",
     "brand": "Firefin",
@@ -370,7 +387,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt 8 bits noir",
       "de_DE": "Schwarzes Rilax-Pixel-Shirt",
       "nl_NL": "Zwart pixel-T-shirt",
-      "ru_RU": "«Фугасик-ретро» черная"
+      "ru_RU": "«Фугасик-ретро» черная",
+      "it_IT": "T-shirt 8 bit nera"
     },
     "main": "Bomb Defense Up",
     "brand": "Firefin",
@@ -391,7 +409,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt ancre blanc",
       "de_DE": "Weißes Anker-Shirt",
       "nl_NL": "Wit anker-T-shirt",
-      "ru_RU": "Белая майка «Якорь»"
+      "ru_RU": "Белая майка «Якорь»",
+      "it_IT": "T-shirt ancora bianca"
     },
     "main": "Ninja Squid",
     "brand": "SquidForce",
@@ -412,7 +431,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt ancre noir",
       "de_DE": "Schwarzes Anker-Shirt",
       "nl_NL": "Zwart anker-T-shirt",
-      "ru_RU": "Черная майка «Якорь»"
+      "ru_RU": "Черная майка «Якорь»",
+      "it_IT": "T-shirt ancora nera"
     },
     "main": "Respawn Punisher",
     "brand": "SquidForce",
@@ -433,7 +453,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt prédateur",
       "de_DE": "Leo-Print-Shirt",
       "nl_NL": "Luipaard-T-shirt",
-      "ru_RU": "Майка «Хищник»"
+      "ru_RU": "Майка «Хищник»",
+      "it_IT": "T-shirt leopardata"
     },
     "main": "Bomb Defense Up",
     "brand": "Firefin",
@@ -454,7 +475,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt perles",
       "de_DE": "Perlen-Shirt",
       "nl_NL": "Parel-T-shirt",
-      "ru_RU": "Жемчужная майка"
+      "ru_RU": "Жемчужная майка",
+      "it_IT": "T-shirt perlata"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Skalop",
@@ -475,7 +497,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt col en V noir",
       "de_DE": "Schwarzes V-Shirt",
       "nl_NL": "Zwart T-shirt met V-hals",
-      "ru_RU": "Черная майка с вырезом"
+      "ru_RU": "Черная майка с вырезом",
+      "it_IT": "T-shirt nera ciclista"
     },
     "main": "Thermal Ink",
     "brand": "SquidForce",
@@ -496,7 +519,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt blanc à logo",
       "de_DE": "Weißes Deka-Shirt",
       "nl_NL": "Wit Deca-T-shirt",
-      "ru_RU": "Белая майка с лого"
+      "ru_RU": "Белая майка с лого",
+      "it_IT": "T-shirt bianca Totanic"
     },
     "main": "Ink Resistance Up",
     "brand": "Zink",
@@ -517,7 +541,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet à manches 3/4",
       "de_DE": "Half-Sleeve",
       "nl_NL": "Trui met korte mouwen",
-      "ru_RU": "Свитер-безрукавка"
+      "ru_RU": "Свитер-безрукавка",
+      "it_IT": "Felpa a maniche corte"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Toni Kensa",
@@ -538,7 +563,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot de hockey DUX",
       "de_DE": "King-Trikot",
       "nl_NL": "Calamars-hockeyshirt",
-      "ru_RU": "Майка «VIP»"
+      "ru_RU": "Майка «VIP»",
+      "it_IT": "Maglia hockey Calamars"
     },
     "main": "Respawn Punisher",
     "brand": "Enperry",
@@ -559,7 +585,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt 8 bits gris",
       "de_DE": "Graues Rilax-Pixel-Shirt",
       "nl_NL": "Grijs pixel-T-shirt",
-      "ru_RU": "«Фугасик-ретро» серая"
+      "ru_RU": "«Фугасик-ретро» серая",
+      "it_IT": "T-shirt 8 bit grigia"
     },
     "main": "Special Charge Up",
     "brand": "Firefin",
@@ -580,7 +607,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt col en V blanc",
       "de_DE": "Weißes V-Shirt",
       "nl_NL": "Wit T-shirt met V-hals",
-      "ru_RU": "Белая майка с вырезом"
+      "ru_RU": "Белая майка с вырезом",
+      "it_IT": "T-shirt bianca ciclista"
     },
     "main": "Special Saver",
     "brand": "SquidForce",
@@ -601,7 +629,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt blanc oursin rock",
       "de_DE": "Weißes Seeigel-Rock-Shirt",
       "nl_NL": "Wit festival-T-shirt",
-      "ru_RU": "Белая майка «Ежрок»"
+      "ru_RU": "Белая майка «Ежрок»",
+      "it_IT": "T-shirt rock bianca"
     },
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
@@ -622,7 +651,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt noir oursin rock",
       "de_DE": "Schwarzes Seeigel-Rock-Shirt",
       "nl_NL": "Zwart festival-T-shirt",
-      "ru_RU": "Черная майка «Ежрок»"
+      "ru_RU": "Черная майка «Ежрок»",
+      "it_IT": "T-shirt rock nera"
     },
     "main": "Ink Recovery Up",
     "brand": "Rockenberg",
@@ -643,7 +673,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Wet Floor",
       "de_DE": "Wet-Floor-Shirt",
       "nl_NL": "Wet Floor-T-shirt",
-      "ru_RU": "Майка «Wet Floor»"
+      "ru_RU": "Майка «Wet Floor»",
+      "it_IT": "T-shirt Wet Floor"
     },
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
@@ -664,7 +695,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Squid Squad",
       "de_DE": "Squid-Squad-Shirt",
       "nl_NL": "Squid Squad-T-shirt",
-      "ru_RU": "Майка «Squid Squad»"
+      "ru_RU": "Майка «Squid Squad»",
+      "it_IT": "T-shirt Squid Squad"
     },
     "main": "Ink Resistance Up",
     "brand": "Rockenberg",
@@ -685,7 +717,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt marine à logo",
       "de_DE": "Dunkelblaues Deka-Shirt",
       "nl_NL": "Blauw Deca-shirt",
-      "ru_RU": "Морская майка с лого"
+      "ru_RU": "Морская майка с лого",
+      "it_IT": "T-shirt indaco Totanic"
     },
     "main": "Ink Saver (Main)",
     "brand": "Zink",
@@ -706,7 +739,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Monsieur Plouf",
       "de_DE": "Mister-Shrug-Shirt",
       "nl_NL": "Meneer Boeiuh-T-shirt",
-      "ru_RU": "Майка «Мистер Ногс»"
+      "ru_RU": "Майка «Мистер Ногс»",
+      "it_IT": "T-shirt Mr. Spalluccio"
     },
     "main": "Ink Resistance Up",
     "brand": "Krak-On",
@@ -727,7 +761,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Chirpy Chips",
       "de_DE": "Chirpy-Chips-Shirt",
       "nl_NL": "Chirpy Chips-T-shirt",
-      "ru_RU": "Майка «Chirpy Chips»"
+      "ru_RU": "Майка «Chirpy Chips»",
+      "it_IT": "T-shirt Chirpy Chips"
     },
     "main": "Cold-Blooded",
     "brand": "Rockenberg",
@@ -748,7 +783,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Hightide Era",
       "de_DE": "Hightide-Era-Shirt",
       "nl_NL": "Hightide Era-T-shirt",
-      "ru_RU": "Майка «Hightide Era»"
+      "ru_RU": "Майка «Hightide Era»",
+      "it_IT": "T-shirt Hightide Era"
     },
     "main": "Thermal Ink",
     "brand": "Rockenberg",
@@ -769,7 +805,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt col en V rouge",
       "de_DE": "Rotes V-Shirt Spezial",
       "nl_NL": "Rood T-shirt met V-hals SE",
-      "ru_RU": "Красная майка с вырезом"
+      "ru_RU": "Красная майка с вырезом",
+      "it_IT": "T-shirt rossa logo"
     },
     "main": "Quick Respawn",
     "brand": "SquidForce",
@@ -790,7 +827,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt col en V vert",
       "de_DE": "Grünes V-Shirt Spezial",
       "nl_NL": "Groen T-shirt met V-hals SE",
-      "ru_RU": "Зеленая майка с вырезом"
+      "ru_RU": "Зеленая майка с вырезом",
+      "it_IT": "T-shirt verde logo"
     },
     "main": "Quick Super Jump",
     "brand": "SquidForce",
@@ -811,7 +849,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt ω-3",
       "de_DE": "ω-3-Shirt",
       "nl_NL": "ω-3-T-shirt",
-      "ru_RU": "Майка ω-3"
+      "ru_RU": "Майка ω-3",
+      "it_IT": "T-shirt ω-3"
     },
     "main": "Respawn Punisher",
     "brand": "Firefin",
@@ -832,7 +871,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt dégradé flammes",
       "de_DE": "Hitzewellen-Shirt",
       "nl_NL": "Vuurtinten-T-shirt",
-      "ru_RU": "Майка «Огонь»"
+      "ru_RU": "Майка «Огонь»",
+      "it_IT": "T-shirt rovente"
     },
     "main": "Special Charge Up",
     "brand": "Skalop",
@@ -853,7 +893,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt galaxie Cubic",
       "de_DE": "Galaxie-Batikshirt",
       "nl_NL": "Kosmisch Takoroka-shirt",
-      "ru_RU": "Синяя хеви-майка"
+      "ru_RU": "Синяя хеви-майка",
+      "it_IT": "T-shirt Pulpix galassia"
     },
     "main": "Thermal Ink",
     "brand": "Takoroka",
@@ -874,7 +915,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt arc-en-ciel Cubic",
       "de_DE": "Regenbogen-Batikshirt",
       "nl_NL": "Regenboog-Takoroka-shirt",
-      "ru_RU": "Радужная хеви-майка"
+      "ru_RU": "Радужная хеви-майка",
+      "it_IT": "T-shirt Pulpix arcobaleno"
     },
     "main": "Quick Super Jump",
     "brand": "Takoroka",
@@ -895,7 +937,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt slogan OculR",
       "de_DE": "Tentatek-Mottoshirt",
       "nl_NL": "Tentatek-T-shirt met opdruk",
-      "ru_RU": "Майка «Щуччи» со слоганом"
+      "ru_RU": "Майка «Щуччи» со слоганом",
+      "it_IT": "T-shirt motto Arome"
     },
     "main": "Special Charge Up",
     "brand": "Tentatek",
@@ -916,7 +959,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt dégradé glace",
       "de_DE": "Frostwellen-Shirt",
       "nl_NL": "Vriestinten-T-shirt",
-      "ru_RU": "Майка «Лед»"
+      "ru_RU": "Майка «Лед»",
+      "it_IT": "T-shirt glaciale"
     },
     "main": "Ninja Squid",
     "brand": "Skalop",
@@ -937,7 +981,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet rayé blanc",
       "de_DE": "Weißes Streifen-Longsleeve",
       "nl_NL": "Wit streepjesshirt",
-      "ru_RU": "«Черная полосатка»"
+      "ru_RU": "«Черная полосатка»",
+      "it_IT": "Maglia a righe"
     },
     "main": "Quick Respawn",
     "brand": "Splash Mob",
@@ -958,7 +1003,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut noir",
       "de_DE": "Schwarzes Longsleeve",
       "nl_NL": "Zwart shirt",
-      "ru_RU": "Черная футболка"
+      "ru_RU": "Черная футболка",
+      "it_IT": "Maglia nera"
     },
     "main": "Quick Super Jump",
     "brand": "Zekko",
@@ -979,7 +1025,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet à motif violet",
       "de_DE": "Lila Tarn-Longsleeve",
       "nl_NL": "Paars camouflageshirt",
-      "ru_RU": "Лиловая камуфляжка"
+      "ru_RU": "Лиловая камуфляжка",
+      "it_IT": "Mimetica viola"
     },
     "main": "Sub Power Up",
     "brand": "Takoroka",
@@ -1000,7 +1047,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut rayé marin",
       "de_DE": "Blaues Streifen-Longsleeve",
       "nl_NL": "Blauw streepjesshirt",
-      "ru_RU": "Тельняшка"
+      "ru_RU": "Тельняшка",
+      "it_IT": "Maglia navy a righe"
     },
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
@@ -1021,7 +1069,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut sportif Ezko",
       "de_DE": "Zekko-Baseball-Shirt",
       "nl_NL": "Zekko-honkbalshirt",
-      "ru_RU": "Футболка от «Йожко»"
+      "ru_RU": "Футболка от «Йожко»",
+      "it_IT": "Maglia Ezko"
     },
     "main": "Bomb Defense Up",
     "brand": "Zekko",
@@ -1042,7 +1091,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet baseball université",
       "de_DE": "Grau-blaues Baseball-Shirt",
       "nl_NL": "Universiteitshonkbalshirt",
-      "ru_RU": "Футболка «46»"
+      "ru_RU": "Футболка «46»",
+      "it_IT": "Maglia college"
     },
     "main": "Haunt",
     "brand": "Splash Mob",
@@ -1063,7 +1113,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet sportif noir",
       "de_DE": "Schwarzes Baseball-Shirt",
       "nl_NL": "Zwart honkbalshirt",
-      "ru_RU": "Черный «Угрок»"
+      "ru_RU": "Черный «Угрок»",
+      "it_IT": "Maglia sport nera"
     },
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
@@ -1084,7 +1135,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut sportif blanc",
       "de_DE": "Weißes Baseball-Shirt",
       "nl_NL": "Wit honkbalshirt",
-      "ru_RU": "Черно-белый «Угрок»"
+      "ru_RU": "Черно-белый «Угрок»",
+      "it_IT": "Maglia sport bianca"
     },
     "main": "Quick Super Jump",
     "brand": "Rockenberg",
@@ -1105,7 +1157,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet rayé vert",
       "de_DE": "Grünes Streifen-Longsleeve",
       "nl_NL": "Groen streepjesshirt",
-      "ru_RU": "«Зеленая полосатка»"
+      "ru_RU": "«Зеленая полосатка»",
+      "it_IT": "Maglia biancoverde"
     },
     "main": "Ninja Squid",
     "brand": "Inkline",
@@ -1126,7 +1179,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut Kalamarus Rex",
       "de_DE": "Kalmar-Longsleeve",
       "nl_NL": "SquidForce-shirt",
-      "ru_RU": "Футболка «Боец»"
+      "ru_RU": "Футболка «Боец»",
+      "it_IT": "Maglia da battaglia"
     },
     "main": "Haunt",
     "brand": "SquidForce",
@@ -1147,7 +1201,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet rayé saumon",
       "de_DE": "Rosa Blockstreifen-Shirt",
       "nl_NL": "Roze strokenshirt",
-      "ru_RU": "«Розовая полосатка»"
+      "ru_RU": "«Розовая полосатка»",
+      "it_IT": "Maglia rosa a righe"
     },
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
@@ -1168,7 +1223,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot Chromapolis",
       "de_DE": "Flying-Fish-Trikot",
       "nl_NL": "Vliegvissen-hockeyshirt",
-      "ru_RU": "Свитер ХК «Шпроты»"
+      "ru_RU": "Свитер ХК «Шпроты»",
+      "it_IT": "Maglia Coloropoli Tonnos"
     },
     "main": "Cold-Blooded",
     "brand": "Zink",
@@ -1189,7 +1245,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut Aroz classique",
       "de_DE": "Annaki-Lagen-Shirt",
       "nl_NL": "Licht Annaki-T-shirt",
-      "ru_RU": "«Драйв» от Панкасиуса"
+      "ru_RU": "«Драйв» от Панкасиуса",
+      "it_IT": "Maglia Annak classica"
     },
     "main": "Thermal Ink",
     "brand": "Annaki",
@@ -1210,7 +1267,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut rayé lime",
       "de_DE": "Grünes Blockstreifen-Shirt",
       "nl_NL": "Groen strokenshirt",
-      "ru_RU": "«Лаймовая полосатка»"
+      "ru_RU": "«Лаймовая полосатка»",
+      "it_IT": "Maglia lime a righe"
     },
     "main": "Ink Resistance Up",
     "brand": "Splash Mob",
@@ -1231,7 +1289,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut grunge évolution",
       "de_DE": "Annaki-Evolution-Shirt",
       "nl_NL": "Donker Annaki-T-shirt",
-      "ru_RU": "«Эво» от Панкасиуса"
+      "ru_RU": "«Эво» от Панкасиуса",
+      "it_IT": "Maglia Annak evo"
     },
     "main": "Respawn Punisher",
     "brand": "Annaki",
@@ -1252,7 +1311,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat Ezko carotte",
       "de_DE": "Karotten-Zekko-Shirt",
       "nl_NL": "Wortelkleurige trui",
-      "ru_RU": "Свитер «Каротин»"
+      "ru_RU": "Свитер «Каротин»",
+      "it_IT": "Maglia carota Ezko"
     },
     "main": "Ink Resistance Up",
     "brand": "Zekko",
@@ -1273,7 +1333,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat Ezko navet",
       "de_DE": "Rettich-Zekko-Shirt",
       "nl_NL": "Bloemkoolkleurige trui",
-      "ru_RU": "Свитер «Дайкон»"
+      "ru_RU": "Свитер «Дайкон»",
+      "it_IT": "Maglia ravanello Ezko"
     },
     "main": "Haunt",
     "brand": "Zekko",
@@ -1294,7 +1355,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet double blanc",
       "de_DE": "Weißes Lagen-Shirt",
       "nl_NL": "Wit laagjesshirt",
-      "ru_RU": "Белая двойка"
+      "ru_RU": "Белая двойка",
+      "it_IT": "A strati bianca"
     },
     "main": "Special Saver",
     "brand": "SquidForce",
@@ -1315,7 +1377,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet double moutarde",
       "de_DE": "Gelbes Lagen-Shirt",
       "nl_NL": "Geel laagjesshirt",
-      "ru_RU": "Желтая двойка"
+      "ru_RU": "Желтая двойка",
+      "it_IT": "A strati gialla"
     },
     "main": "Quick Super Jump",
     "brand": "SquidForce",
@@ -1336,7 +1399,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut double Leviathus",
       "de_DE": "Sagitron-Lagen-Shirt",
       "nl_NL": "Zink-laagjesshirt",
-      "ru_RU": "Двойка от «Шпротус»"
+      "ru_RU": "Двойка от «Шпротус»",
+      "it_IT": "A strati Totanic"
     },
     "main": "Respawn Punisher",
     "brand": "Zink",
@@ -1357,7 +1421,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet double ancre",
       "de_DE": "Anker-Lagen-Shirt",
       "nl_NL": "Ankerlaagjesshirt",
-      "ru_RU": "Двойка «Якорь»"
+      "ru_RU": "Двойка «Якорь»",
+      "it_IT": "A strati ancora"
     },
     "main": "Run Speed Up",
     "brand": "SquidForce",
@@ -1378,7 +1443,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet double Pionic",
       "de_DE": "Schoko-Lagen-Shirt",
       "nl_NL": "Bruin laagjesshirt",
-      "ru_RU": "Коричневая двойка"
+      "ru_RU": "Коричневая двойка",
+      "it_IT": "A strati marrone"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Takoroka",
@@ -1399,7 +1465,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet presque pirate",
       "de_DE": "Piraten-Lagen-Shirt",
       "nl_NL": "Piratenlaagjesshirt",
-      "ru_RU": "Двойка-пиратка"
+      "ru_RU": "Двойка-пиратка",
+      "it_IT": "A strati pirata"
     },
     "main": "Respawn Punisher",
     "brand": "Tentatek",
@@ -1420,7 +1487,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet double fléché",
       "de_DE": "Lagen-Profil-Shirt",
       "nl_NL": "Pijlenlaagjesshirt",
-      "ru_RU": "Двойка с узором"
+      "ru_RU": "Двойка с узором",
+      "it_IT": "A strati frecce"
     },
     "main": "Special Saver",
     "brand": "Takoroka",
@@ -1441,7 +1509,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt double vert",
       "de_DE": "Grünes Lagen-Shirt",
       "nl_NL": "Groen laagjes-T-shirt",
-      "ru_RU": "Короткая хаки двойка"
+      "ru_RU": "Короткая хаки двойка",
+      "it_IT": "T-shirt verde"
     },
     "main": "Special Saver",
     "brand": "Forge",
@@ -1462,7 +1531,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut double rouge Tentatek",
       "de_DE": "Rotes Tentatek-Shirt",
       "nl_NL": "Rood Tentatek-T-shirt",
-      "ru_RU": "Пара от «Щуччи»"
+      "ru_RU": "Пара от «Щуччи»",
+      "it_IT": "T-shirt rossa Arome"
     },
     "main": "Swim Speed Up",
     "brand": "Tentatek",
@@ -1483,7 +1553,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut double bleu Tentatek",
       "de_DE": "Blaues Tentatek-Shirt",
       "nl_NL": "Blauw Tentatek-T-shirt",
-      "ru_RU": "Синяя пара от «Щуччи»"
+      "ru_RU": "Синяя пара от «Щуччи»",
+      "it_IT": "T-shirt blu Arome"
     },
     "main": "Quick Respawn",
     "brand": "Tentatek",
@@ -1504,7 +1575,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut double Octa",
       "de_DE": "Okto-Lagen-Shirt",
       "nl_NL": "Octo-laagjesshirt",
-      "ru_RU": "Осьмо-двойка"
+      "ru_RU": "Осьмо-двойка",
+      "it_IT": "A strati octo"
     },
     "main": "Ink Saver (Main)",
     "brand": "Cuttlegear",
@@ -1525,7 +1597,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Polo rose crevette",
       "de_DE": "Krabbencocktail-Polohemd",
       "nl_NL": "Zalmroze polo",
-      "ru_RU": "Розовое поло"
+      "ru_RU": "Розовое поло",
+      "it_IT": "Polo rosa"
     },
     "main": "Ninja Squid",
     "brand": "Splash Mob",
@@ -1546,7 +1619,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet rayé tricolore",
       "de_DE": "Trikolor-Lang-Polohemd",
       "nl_NL": "Driekleurig rugbyshirt",
-      "ru_RU": "Трехцветная регбийка"
+      "ru_RU": "Трехцветная регбийка",
+      "it_IT": "Maglia rugby tricolore"
     },
     "main": "Quick Respawn",
     "brand": "Takoroka",
@@ -1567,7 +1641,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Polo vert clair",
       "de_DE": "Hellgrünes Polohemd",
       "nl_NL": "Grasgroene polo",
-      "ru_RU": "Светло-зеленое поло"
+      "ru_RU": "Светло-зеленое поло",
+      "it_IT": "Polo verde chiaro"
     },
     "main": "Cold-Blooded",
     "brand": "Splash Mob",
@@ -1588,7 +1663,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Polo noir",
       "de_DE": "Schwarzes Polohemd",
       "nl_NL": "Zwarte polo",
-      "ru_RU": "Черное поло"
+      "ru_RU": "Черное поло",
+      "it_IT": "Polo nera"
     },
     "main": "Ninja Squid",
     "brand": "Zekko",
@@ -1609,7 +1685,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot de cycliste",
       "de_DE": "Radlertrikot",
       "nl_NL": "Wielertrui",
-      "ru_RU": "Веломайка"
+      "ru_RU": "Веломайка",
+      "it_IT": "Maglia da ciclista"
     },
     "main": "Cold-Blooded",
     "brand": "Zink",
@@ -1630,7 +1707,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot de cycliste pro",
       "de_DE": "Champion-Radlertrikot",
       "nl_NL": "Bergkoningtrui",
-      "ru_RU": "Элитная велокуртка"
+      "ru_RU": "Элитная велокуртка",
+      "it_IT": "Maglia re della bici"
     },
     "main": "Bomb Defense Up",
     "brand": "Tentatek",
@@ -1651,7 +1729,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot AS Vortex",
       "de_DE": "FC-Barrakuda-Trikot",
       "nl_NL": "FC Barracuda-shirt",
-      "ru_RU": "ФK «Кальмарона»"
+      "ru_RU": "ФK «Кальмарона»",
+      "it_IT": "AS Medusana"
     },
     "main": "Bomb Defense Up",
     "brand": "Takoroka",
@@ -1672,7 +1751,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot FC Germon",
       "de_DE": "FC-Bonito-Trikot",
       "nl_NL": "Ansjovis United-shirt",
-      "ru_RU": "ФК «Зеленит»"
+      "ru_RU": "ФК «Зеленит»",
+      "it_IT": "SSC Trigliese"
     },
     "main": "Respawn Punisher",
     "brand": "Takoroka",
@@ -1693,7 +1773,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Anorak vert lime",
       "de_DE": "Grüner Anorak",
       "nl_NL": "Olijfgroen ski-jack",
-      "ru_RU": "Зеленая лыжная куртка"
+      "ru_RU": "Зеленая лыжная куртка",
+      "it_IT": "Giacca da sci verde"
     },
     "main": "Run Speed Up",
     "brand": "Inkline",
@@ -1714,7 +1795,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coupe-vent vintage Cubic",
       "de_DE": "Takoroka-Retropulli",
       "nl_NL": "Retro-Takoroka-jack",
-      "ru_RU": "Спортивка от «Рыбок»"
+      "ru_RU": "Спортивка от «Рыбок»",
+      "it_IT": "Tuta acetata Sepia"
     },
     "main": "Thermal Ink",
     "brand": "Takoroka",
@@ -1735,7 +1817,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Anorak framboise",
       "de_DE": "Lila Anorak",
       "nl_NL": "Fuchsia-ski-jack",
-      "ru_RU": "Лиловая лыжная куртка"
+      "ru_RU": "Лиловая лыжная куртка",
+      "it_IT": "Giacca da sci viola"
     },
     "main": "Special Power Up",
     "brand": "Inkline",
@@ -1756,7 +1839,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau université",
       "de_DE": "Rot-weiße Collegejacke",
       "nl_NL": "Universiteitsjack",
-      "ru_RU": "Бейсбольная куртка"
+      "ru_RU": "Бейсбольная куртка",
+      "it_IT": "Giubbino da stadio"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Zekko",
@@ -1777,7 +1861,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau sport bleu",
       "de_DE": "Sportjacke",
       "nl_NL": "Sportjack",
-      "ru_RU": "Спортивная куртка"
+      "ru_RU": "Спортивная куртка",
+      "it_IT": "Felpa scolastica"
     },
     "main": "Ninja Squid",
     "brand": "Zink",
@@ -1798,7 +1883,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau cuir noir",
       "de_DE": "Schwarze Bikerjacke",
       "nl_NL": "Zwart bikerjack",
-      "ru_RU": "Черная косуха"
+      "ru_RU": "Черная косуха",
+      "it_IT": "Chiodo nero"
     },
     "main": "Sub Power Up",
     "brand": "Rockenberg",
@@ -1819,7 +1905,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson en cuir blanc",
       "de_DE": "Weiße Bikerjacke",
       "nl_NL": "Wit bikerjack",
-      "ru_RU": "Белая косуха"
+      "ru_RU": "Белая косуха",
+      "it_IT": "Chiodo bianco"
     },
     "main": "Special Power Up",
     "brand": "Rockenberg",
@@ -1840,7 +1927,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Cardigan orange",
       "de_DE": "Oranger Cardigan",
       "nl_NL": "Oranje vest",
-      "ru_RU": "Оранжевая кофта"
+      "ru_RU": "Оранжевая кофта",
+      "it_IT": "Cardigan arancione"
     },
     "main": "Special Charge Up",
     "brand": "Splash Mob",
@@ -1861,7 +1949,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Parka Focus INK",
       "de_DE": "Focus-Inkling-Parka",
       "nl_NL": "Forge-Inklingparka",
-      "ru_RU": "Парка от «Блиц»"
+      "ru_RU": "Парка от «Блиц»",
+      "it_IT": "Parka Inkling Fortia"
     },
     "main": "Run Speed Up",
     "brand": "Forge",
@@ -1882,7 +1971,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Uniforme marin bleu",
       "de_DE": "Blaues Matrosen-Shirt",
       "nl_NL": "Blauw matrozenshirt",
-      "ru_RU": "Синяя фланка"
+      "ru_RU": "Синяя фланка",
+      "it_IT": "Felpa marinara blu"
     },
     "main": "Sub Power Up",
     "brand": "Forge",
@@ -1903,7 +1993,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Uniforme marin blanc",
       "de_DE": "Weißes Matrosen-Shirt",
       "nl_NL": "Wit matrozenshirt",
-      "ru_RU": "Белая фланка"
+      "ru_RU": "Белая фланка",
+      "it_IT": "Felpa marinara bianca"
     },
     "main": "Ink Saver (Main)",
     "brand": "Forge",
@@ -1924,7 +2015,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau satin calamar",
       "de_DE": "Katzen-Baseballjacke",
       "nl_NL": "Katten-honkbaljack",
-      "ru_RU": "Куртка «Хищник»"
+      "ru_RU": "Куртка «Хищник»",
+      "it_IT": "Giubbino furia"
     },
     "main": "Quick Respawn",
     "brand": "Zekko",
@@ -1945,7 +2037,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau poisson-charge",
       "de_DE": "Elektrowels-Baseballjacke",
       "nl_NL": "Voltvis-honkbaljack",
-      "ru_RU": "Куртка «Вольторыб»"
+      "ru_RU": "Куртка «Вольторыб»",
+      "it_IT": "Giubbino pesciscossa"
     },
     "main": "Special Charge Up",
     "brand": "Zekko",
@@ -1966,7 +2059,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau Krakeurs 528",
       "de_DE": "Medusa 528",
       "nl_NL": "Krak-On 528",
-      "ru_RU": "«Кра-Кен 528»"
+      "ru_RU": "«Кра-Кен 528»",
+      "it_IT": "Cnidarya 528"
     },
     "main": "Run Speed Up",
     "brand": "Krak-On",
@@ -1987,7 +2081,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Anorak beau temps",
       "de_DE": "Eisberg-Jacke",
       "nl_NL": "IJsbergjas",
-      "ru_RU": "Горная куртка"
+      "ru_RU": "Горная куртка",
+      "it_IT": "Giaccone da montagna"
     },
     "main": "Swim Speed Up",
     "brand": "Inkline",
@@ -2008,7 +2103,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coupe-vent rétro Pionic",
       "de_DE": "Kalamati-Windbreaker",
       "nl_NL": "Takoroka-windjack",
-      "ru_RU": "Куртка от «Рыбок»"
+      "ru_RU": "Куртка от «Рыбок»",
+      "it_IT": "Tuta vintage Sepia"
     },
     "main": "Cold-Blooded",
     "brand": "Takoroka",
@@ -2029,7 +2125,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Anorak matcha",
       "de_DE": "Matcha-Daunenjacke",
       "nl_NL": "Matchagroene donsjas",
-      "ru_RU": "Куртка «Чайная»"
+      "ru_RU": "Куртка «Чайная»",
+      "it_IT": "Giacca maccha"
     },
     "main": "Ninja Squid",
     "brand": "Inkline",
@@ -2050,7 +2147,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson aviateur (endroit)",
       "de_DE": "FA-01-Jacke",
       "nl_NL": "Pilotenjack",
-      "ru_RU": "Бомбер FA-01"
+      "ru_RU": "Бомбер FA-01",
+      "it_IT": "Bomber aviatore"
     },
     "main": "Ink Recovery Up",
     "brand": "Forge",
@@ -2071,7 +2169,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson aviateur (envers)",
       "de_DE": "FA-01-Wendejacke",
       "nl_NL": "Omgekeerd pilotenjack",
-      "ru_RU": "Бомбер FA-01 (изнанка)"
+      "ru_RU": "Бомбер FA-01 (изнанка)",
+      "it_IT": "Bomber aviatore a rovescio"
     },
     "main": "Quick Super Jump",
     "brand": "Forge",
@@ -2092,7 +2191,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau en feutre",
       "de_DE": "Pullovermantel",
       "nl_NL": "Fleecetrui",
-      "ru_RU": "Пальто со свитером"
+      "ru_RU": "Пальто со свитером",
+      "it_IT": "Cappotto pullover"
     },
     "main": "Thermal Ink",
     "brand": "Toni Kensa",
@@ -2113,7 +2213,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson K",
       "de_DE": "Kensa-Trainerjacke",
       "nl_NL": "Kensa-jack",
-      "ru_RU": "Куртка «Сушаки Кусаки»"
+      "ru_RU": "Куртка «Сушаки Кусаки»",
+      "it_IT": "Giacca Nero Marlin"
     },
     "main": "Respawn Punisher",
     "brand": "Toni Kensa",
@@ -2134,7 +2235,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson motif oiseaux",
       "de_DE": "Piepmatz-Cordjacke",
       "nl_NL": "Geborduurd jasje",
-      "ru_RU": "Вельветовая куртка"
+      "ru_RU": "Вельветовая куртка",
+      "it_IT": "Giacca con decorazioni"
     },
     "main": "Run Speed Up",
     "brand": "Zekko",
@@ -2155,7 +2257,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson Ezko grenat",
       "de_DE": "Ahorn-Zekko-Trainerjacke",
       "nl_NL": "Zekko-jack",
-      "ru_RU": "Куртка-рубашка"
+      "ru_RU": "Куртка-рубашка",
+      "it_IT": "Giacca rossa Ezko"
     },
     "main": "Haunt",
     "brand": "Zekko",
@@ -2176,7 +2279,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Anorak salamandre",
       "de_DE": "Dotterblumen-Jacke",
       "nl_NL": "Boterbloembergjas",
-      "ru_RU": "Плотная горная куртка"
+      "ru_RU": "Плотная горная куртка",
+      "it_IT": "Giaccone polare"
     },
     "main": "Special Saver",
     "brand": "Inkline",
@@ -2197,7 +2301,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson Ezko émeraude",
       "de_DE": "Jade-Zekko-Trainerjacke",
       "nl_NL": "Groen Zekko-jack",
-      "ru_RU": "Зеленая куртка-рубашка"
+      "ru_RU": "Зеленая куртка-рубашка",
+      "it_IT": "Giacca verde chiaro Ezko"
     },
     "main": "Respawn Punisher",
     "brand": "Zekko",
@@ -2218,7 +2323,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Doudoune positive",
       "de_DE": "Bomberjacke Plus",
       "nl_NL": "Lichte bomberjas",
-      "ru_RU": "Светлый бомбер"
+      "ru_RU": "Светлый бомбер",
+      "it_IT": "Bomber positivo"
     },
     "main": "Quick Super Jump",
     "brand": "Toni Kensa",
@@ -2239,7 +2345,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson aviateur 11 (endroit)",
       "de_DE": "FA-11-Jacke",
       "nl_NL": "Pilotenjack FA-11",
-      "ru_RU": "Бомбер FA-11"
+      "ru_RU": "Бомбер FA-11",
+      "it_IT": "Giacca FA-11"
     },
     "main": "Bomb Defense Up",
     "brand": "Forge",
@@ -2260,7 +2367,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson aviateur 11 (envers)",
       "de_DE": "FA-11-Wendejacke",
       "nl_NL": "Omgekeerd pilotenjack FA-11",
-      "ru_RU": "Бомбер FA-11 (изнанка)"
+      "ru_RU": "Бомбер FA-11 (изнанка)",
+      "it_IT": "Giacca FA-11 a rovescio"
     },
     "main": "Cold-Blooded",
     "brand": "Forge",
@@ -2281,7 +2389,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "King Bench Kaiser",
       "de_DE": "King-Kurzmantel",
       "nl_NL": "Calamars-mantel",
-      "ru_RU": "Китель «Маршал»"
+      "ru_RU": "Китель «Маршал»",
+      "it_IT": "Cappotto Imperial"
     },
     "main": "Run Speed Up",
     "brand": "Enperry",
@@ -2302,7 +2411,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau marine DUX",
       "de_DE": "Marine-King-Kurzmantel",
       "nl_NL": "Blauwe Calamars-mantel",
-      "ru_RU": "Китель «Адмирал»"
+      "ru_RU": "Китель «Адмирал»",
+      "it_IT": "Cappotto Imperial nautico"
     },
     "main": "Ink Saver (Main)",
     "brand": "Enperry",
@@ -2323,7 +2433,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coupe-vent Ezko safran",
       "de_DE": "Senf-Zekko-Trainerjacke",
       "nl_NL": "Mosterdgeel Zekko-jack",
-      "ru_RU": "Штормовка от «Йожко»"
+      "ru_RU": "Штормовка от «Йожко»",
+      "it_IT": "Giaccone Ezko curcuma"
     },
     "main": "Thermal Ink",
     "brand": "Zekko",
@@ -2344,7 +2455,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson fourré F-3",
       "de_DE": "F3-Jacke Spezial",
       "nl_NL": "Pilotenjack F-3",
-      "ru_RU": "Темная летная куртка F-3"
+      "ru_RU": "Темная летная куртка F-3",
+      "it_IT": "F-3 edizione speciale"
     },
     "main": "Ink Resistance Up",
     "brand": "Forge",
@@ -2365,7 +2477,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Doudoune négative",
       "de_DE": "Bomberjacke Minus",
       "nl_NL": "Donkere bomberjas",
-      "ru_RU": "Темный бомбер"
+      "ru_RU": "Темный бомбер",
+      "it_IT": "Bomber negativo"
     },
     "main": "Special Power Up",
     "brand": "Toni Kensa",
@@ -2386,7 +2499,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut camouf'algue",
       "de_DE": "Algen-Tarnanzug",
       "nl_NL": "Algencamouflagepak",
-      "ru_RU": "Маскхалат «Дно»"
+      "ru_RU": "Маскхалат «Дно»",
+      "it_IT": "Costume di alghe"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Forge",
@@ -2407,7 +2521,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot de basket (domicile)",
       "de_DE": "Basketball-Heimtrikot",
       "nl_NL": "Basketbalshirt (thuis)",
-      "ru_RU": "Баскетболка (основная)"
+      "ru_RU": "Баскетболка (основная)",
+      "it_IT": "Canotta (casa)"
     },
     "main": "Special Saver",
     "brand": "Zink",
@@ -2428,7 +2543,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Maillot de basket (extérieur)",
       "de_DE": "Basketball-Auswärtstrikot",
       "nl_NL": "Basketbalshirt (uit)",
-      "ru_RU": "Баскетболка (запасная)"
+      "ru_RU": "Баскетболка (запасная)",
+      "it_IT": "Canotta (trasferta)"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Zink",
@@ -2449,7 +2565,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Débardeur DUX blanc",
       "de_DE": "Weißes King-Tanktop",
       "nl_NL": "Witte Calamars-tanktop",
-      "ru_RU": "Белый танк-топ «VIP»"
+      "ru_RU": "Белый танк-топ «VIP»",
+      "it_IT": "Canotta bianca Calamars"
     },
     "main": "Haunt",
     "brand": "Enperry",
@@ -2470,7 +2587,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Débardeur DUX rayé",
       "de_DE": "Blockstreifen-King-Tanktop",
       "nl_NL": "Gestreepte Calamars-tanktop",
-      "ru_RU": "Крутой танк-топ «VIP»"
+      "ru_RU": "Крутой танк-топ «VIP»",
+      "it_IT": "Canotta a strisce Calamars"
     },
     "main": "Thermal Ink",
     "brand": "Enperry",
@@ -2491,7 +2609,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Débardeur DUX marine",
       "de_DE": "Marineblaues King-Tanktop",
       "nl_NL": "Blauwe Calamars-tanktop",
-      "ru_RU": "Морской танк-топ «VIP»"
+      "ru_RU": "Морской танк-топ «VIP»",
+      "it_IT": "Canotta blu Calamars"
     },
     "main": "Ink Resistance Up",
     "brand": "Enperry",
@@ -2512,7 +2631,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté université gris",
       "de_DE": "Graues Sweatshirt",
       "nl_NL": "Grijze universiteitstrui",
-      "ru_RU": "Серый свитер"
+      "ru_RU": "Серый свитер",
+      "it_IT": "Felpa college grigia"
     },
     "main": "Swim Speed Up",
     "brand": "Splash Mob",
@@ -2533,7 +2653,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat jaune Kalamarus Rex",
       "de_DE": "Kalmar-Sweatshirt",
       "nl_NL": "SquidForce-trui",
-      "ru_RU": "Свитер «Боец»"
+      "ru_RU": "Свитер «Боец»",
+      "it_IT": "Maglione CalamaX"
     },
     "main": "Sub Power Up",
     "brand": "SquidForce",
@@ -2554,7 +2675,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat rétro",
       "de_DE": "Retro-Sweatshirt",
       "nl_NL": "Retrotrui",
-      "ru_RU": "Ретро-свитер"
+      "ru_RU": "Ретро-свитер",
+      "it_IT": "Maglione vintage"
     },
     "main": "Bomb Defense Up",
     "brand": "SquidForce",
@@ -2575,7 +2697,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté Arki marin",
       "de_DE": "Blaues Rilax-Sweatshirt",
       "nl_NL": "Blauw Firefin-sweatshirt",
-      "ru_RU": "Свитер от «Фритюр»"
+      "ru_RU": "Свитер от «Фритюр»",
+      "it_IT": "Felpa Torryd"
     },
     "main": "Sub Power Up",
     "brand": "Firefin",
@@ -2596,7 +2719,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat bobine",
       "de_DE": "Pfeillogo-Sweatshirt",
       "nl_NL": "Haaktrui",
-      "ru_RU": "Свитер «Спиннинг»"
+      "ru_RU": "Свитер «Спиннинг»",
+      "it_IT": "Maglione giravolta"
     },
     "main": "Special Power Up",
     "brand": "Zekko",
@@ -2617,7 +2741,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté ancre",
       "de_DE": "Anker-Sweatshirt",
       "nl_NL": "Ankertrui",
-      "ru_RU": "Свитер «Якорь»"
+      "ru_RU": "Свитер «Якорь»",
+      "it_IT": "Maglione ancora"
     },
     "main": "Cold-Blooded",
     "brand": "SquidForce",
@@ -2638,7 +2763,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chandail manches cintrées noir",
       "de_DE": "Bündchen-Pulli Plus",
       "nl_NL": "Donkere gestikte trui",
-      "ru_RU": "Свитер «Антагонист»"
+      "ru_RU": "Свитер «Антагонист»",
+      "it_IT": "Maglione largo negativo"
     },
     "main": "Haunt",
     "brand": "Toni Kensa",
@@ -2659,7 +2785,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise et chandail court",
       "de_DE": "Pulli-Hemd-Kombi",
       "nl_NL": "Wollen trui met hemd",
-      "ru_RU": "Кофта с рубашкой"
+      "ru_RU": "Кофта с рубашкой",
+      "it_IT": "Camicia e maglioncino"
     },
     "main": "Ink Saver (Main)",
     "brand": "Toni Kensa",
@@ -2680,7 +2807,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chandail manches cintrées blanc",
       "de_DE": "Bündchen-Pulli Minus",
       "nl_NL": "Lichte gestikte trui",
-      "ru_RU": "Свитер «Протагонист»"
+      "ru_RU": "Свитер «Протагонист»",
+      "it_IT": "Maglione largo positivo"
     },
     "main": "Swim Speed Up",
     "brand": "Toni Kensa",
@@ -2701,7 +2829,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Pull grunge poignet bleu",
       "de_DE": "Annaki-Blauärmel-Pulli",
       "nl_NL": "Trui met blauw manchet",
-      "ru_RU": "Свитер с синим рукавом"
+      "ru_RU": "Свитер с синим рукавом",
+      "it_IT": "Maglione polsino blu Annak"
     },
     "main": "Special Saver",
     "brand": "Annaki",
@@ -2722,7 +2851,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Pull grunge poignet rouge",
       "de_DE": "Annaki-Rotärmel-Pulli",
       "nl_NL": "Trui met rood manchet",
-      "ru_RU": "Свитер с красным рукавом"
+      "ru_RU": "Свитер с красным рукавом",
+      "it_IT": "Maglione polsino rosso Annak"
     },
     "main": "Haunt",
     "brand": "Annaki",
@@ -2743,7 +2873,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat basket",
       "de_DE": "N-Pacer Trainingsjacke",
       "nl_NL": "N-Pacer-sweater",
-      "ru_RU": "Беговой свитер"
+      "ru_RU": "Беговой свитер",
+      "it_IT": "Felpa sneaker"
     },
     "main": "Thermal Ink",
     "brand": "Enperry",
@@ -2764,7 +2895,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise à carreaux",
       "de_DE": "Holzfäller-Hemd",
       "nl_NL": "Houthakkershemd",
-      "ru_RU": "Шотландка «Лесная»"
+      "ru_RU": "Шотландка «Лесная»",
+      "it_IT": "Camicia scozzese"
     },
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
@@ -2785,7 +2917,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise excentrique",
       "de_DE": "Rodeo-Hemd",
       "nl_NL": "Rodeohemd",
-      "ru_RU": "Ковбойка"
+      "ru_RU": "Ковбойка",
+      "it_IT": "Camicia hipsterica"
     },
     "main": "Quick Super Jump",
     "brand": "Krak-On",
@@ -2806,7 +2939,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise vichy verte",
       "de_DE": "Grünes Karohemd",
       "nl_NL": "Groen ruitjeshemd",
-      "ru_RU": "Рубашка в клетку"
+      "ru_RU": "Рубашка в клетку",
+      "it_IT": "Camicia a quadri"
     },
     "main": "Sub Power Up",
     "brand": "Zekko",
@@ -2827,7 +2961,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette blanche",
       "de_DE": "Weißes Kurzarmhemd",
       "nl_NL": "Wit overhemd",
-      "ru_RU": "Белая рубашка"
+      "ru_RU": "Белая рубашка",
+      "it_IT": "Camicia bianca"
     },
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
@@ -2848,7 +2983,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette baseball",
       "de_DE": "Urchins-Baseball-Trikot",
       "nl_NL": "Honkbalshirt",
-      "ru_RU": "Майка БК «Ежи»"
+      "ru_RU": "Майка БК «Ежи»",
+      "it_IT": "Divisa AS Riccidimare"
     },
     "main": "Run Speed Up",
     "brand": "Zink",
@@ -2869,7 +3005,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise hawaiienne",
       "de_DE": "Hawaiihemd",
       "nl_NL": "Hawaïhemd",
-      "ru_RU": "Голубая гавайка"
+      "ru_RU": "Голубая гавайка",
+      "it_IT": "Camicia floreale"
     },
     "main": "Ink Recovery Up",
     "brand": "Forge",
@@ -2890,7 +3027,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise méduses",
       "de_DE": "Quallen-Hemd",
       "nl_NL": "Kwallenhemd",
-      "ru_RU": "Рубашка «Медуза»"
+      "ru_RU": "Рубашка «Медуза»",
+      "it_IT": "Camicia meduse"
     },
     "main": "Bomb Defense Up",
     "brand": "Splash Mob",
@@ -2911,7 +3049,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet de baseball",
       "de_DE": "Baseball-Lagen-Hoodie",
       "nl_NL": "Honkbalshirt met lange mouwen",
-      "ru_RU": "Бейсбольная толстовка"
+      "ru_RU": "Бейсбольная толстовка",
+      "it_IT": "Maglia da baseball"
     },
     "main": "Special Charge Up",
     "brand": "Firefin",
@@ -2932,7 +3071,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise grise",
       "de_DE": "Graues Karodetail-Hemd",
       "nl_NL": "Grijs overhemd",
-      "ru_RU": "Рубашка со вставками"
+      "ru_RU": "Рубашка со вставками",
+      "it_IT": "Camicia grigia"
     },
     "main": "Quick Super Jump",
     "brand": "Zekko",
@@ -2953,7 +3093,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise à carreaux rétro",
       "de_DE": "Retro-Karohemd",
       "nl_NL": "Ouderwets ruitjeshemd",
-      "ru_RU": "Винтажная рубашка"
+      "ru_RU": "Винтажная рубашка",
+      "it_IT": "Camicia vintage"
     },
     "main": "Haunt",
     "brand": "Rockenberg",
@@ -2974,7 +3115,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette grise",
       "de_DE": "Bubikragen-Hemd",
       "nl_NL": "Paars overhemd",
-      "ru_RU": "Клубная рубашка"
+      "ru_RU": "Клубная рубашка",
+      "it_IT": "Camicia corta grigia"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Rockenberg",
@@ -2995,7 +3137,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette à logos",
       "de_DE": "Logo-Hawaiihemd",
       "nl_NL": "Logo-overhemd",
-      "ru_RU": "Гавайка с логотипами"
+      "ru_RU": "Гавайка с логотипами",
+      "it_IT": "Camicia hawaiana"
     },
     "main": "Ink Recovery Up",
     "brand": "Zekko",
@@ -3016,7 +3159,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise à rayures",
       "de_DE": "Streifenhemd",
       "nl_NL": "Gestreept overhemd",
-      "ru_RU": "Рубашка в полоску"
+      "ru_RU": "Рубашка в полоску",
+      "it_IT": "Camicia a righe"
     },
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
@@ -3037,7 +3181,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette en lin",
       "de_DE": "Leinenhemd",
       "nl_NL": "Linnen overhemd",
-      "ru_RU": "Льняная рубашка"
+      "ru_RU": "Льняная рубашка",
+      "it_IT": "Camicia di lino"
     },
     "main": "Sub Power Up",
     "brand": "Splash Mob",
@@ -3058,7 +3203,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise cravate",
       "de_DE": "Hemd mit Krawatte",
       "nl_NL": "Kantooroverhemd",
-      "ru_RU": "«Офисный планктон»"
+      "ru_RU": "«Офисный планктон»",
+      "it_IT": "Camicia con cravatta"
     },
     "main": "Special Saver",
     "brand": "Splash Mob",
@@ -3079,7 +3225,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette punk tropicale",
       "de_DE": "Hula-Punk-Hemd",
       "nl_NL": "Visaas-overhemd",
-      "ru_RU": "Гавайка «Планк-панк»"
+      "ru_RU": "Гавайка «Планк-панк»",
+      "it_IT": "Camicia da turista"
     },
     "main": "Ink Saver (Main)",
     "brand": "Annaki",
@@ -3100,7 +3247,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemisette de bowling",
       "de_DE": "Oktobowler-Hemd",
       "nl_NL": "Octobowler-hemd",
-      "ru_RU": "Поло «Осьмобоулинг»"
+      "ru_RU": "Поло «Осьмобоулинг»",
+      "it_IT": "Camicia da octobowling"
     },
     "main": "Ink Saver (Main)",
     "brand": "Krak-On",
@@ -3121,7 +3269,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise tache d'encre",
       "de_DE": "Ink Blocking-Hemd",
       "nl_NL": "Inktvlekhemd",
-      "ru_RU": "Рубашка «Клякса»"
+      "ru_RU": "Рубашка «Клякса»",
+      "it_IT": "Camicia inchiostrata"
     },
     "main": "Special Charge Up",
     "brand": "Toni Kensa",
@@ -3142,7 +3291,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut parachute grenat",
       "de_DE": "Rote Fallschirmjacke",
       "nl_NL": "Rode parachutistenjas",
-      "ru_RU": "Красная парашютка"
+      "ru_RU": "Красная парашютка",
+      "it_IT": "Giacca paracadute cremisi"
     },
     "main": "Special Charge Up",
     "brand": "Annaki",
@@ -3163,7 +3313,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise cravate méduses",
       "de_DE": "Quallen-Hemd mit Krawatte",
       "nl_NL": "Kwallenhemd met stropdas",
-      "ru_RU": "Рубашка с медузами"
+      "ru_RU": "Рубашка с медузами",
+      "it_IT": "Camicia meduse con cravatta"
     },
     "main": "Cold-Blooded",
     "brand": "Splash Mob",
@@ -3184,7 +3335,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Manteau parachute bleu nuit",
       "de_DE": "Blaue Fallschirmjacke",
       "nl_NL": "Blauwe parachutistenjas",
-      "ru_RU": "Сливовая парашютка"
+      "ru_RU": "Сливовая парашютка",
+      "it_IT": "Giacca paracadute cobalto"
     },
     "main": "Ninja Squid",
     "brand": "Annaki",
@@ -3205,7 +3357,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise cravate punk",
       "de_DE": "Punk-Hemd mit Krawatte",
       "nl_NL": "Visaas-overhemd met stropdas",
-      "ru_RU": "Красный «Питер Панк»"
+      "ru_RU": "Красный «Питер Панк»",
+      "it_IT": "Camicia e cravatta punk"
     },
     "main": "Ink Resistance Up",
     "brand": "Annaki",
@@ -3226,7 +3379,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Veste de montagne",
       "de_DE": "Kletter-Steppweste",
       "nl_NL": "Berg-bodywarmer",
-      "ru_RU": "Пуховик альпиниста"
+      "ru_RU": "Пуховик альпиниста",
+      "it_IT": "Piumino montagna"
     },
     "main": "Swim Speed Up",
     "brand": "Inkline",
@@ -3247,7 +3401,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet urbain noir",
       "de_DE": "Nachtblaue Steppweste",
       "nl_NL": "Stadsjungle-bodywarmer",
-      "ru_RU": "Темный пуховик"
+      "ru_RU": "Темный пуховик",
+      "it_IT": "Gilè urbano"
     },
     "main": "Cold-Blooded",
     "brand": "Firefin",
@@ -3268,7 +3423,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet urbain jaune",
       "de_DE": "Gelbe Steppweste",
       "nl_NL": "Gele bodywarmer",
-      "ru_RU": "Желтый пуховик"
+      "ru_RU": "Желтый пуховик",
+      "it_IT": "Gilè urbano giallo"
     },
     "main": "Haunt",
     "brand": "Firefin",
@@ -3289,7 +3445,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Veston motif étoile",
       "de_DE": "Kalmarstern-Weste",
       "nl_NL": "Hemd met sterrengilet",
-      "ru_RU": "Жилет «Звезда»"
+      "ru_RU": "Жилет «Звезда»",
+      "it_IT": "Gilè aquilamaro"
     },
     "main": "Cold-Blooded",
     "brand": "Krak-On",
@@ -3310,7 +3467,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet de pêcheur",
       "de_DE": "Anglerweste",
       "nl_NL": "Vissersvest",
-      "ru_RU": "Жилет рыбака"
+      "ru_RU": "Жилет рыбака",
+      "it_IT": "Gilè da pesca"
     },
     "main": "Quick Respawn",
     "brand": "Inkline",
@@ -3331,7 +3489,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet zippé asymétrique",
       "de_DE": "Reißverschlussweste",
       "nl_NL": "Bodywarmer met rits",
-      "ru_RU": "Жилет на молнии"
+      "ru_RU": "Жилет на молнии",
+      "it_IT": "Gilè con cerniera"
     },
     "main": "Ink Resistance Up",
     "brand": "Toni Kensa",
@@ -3352,7 +3511,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté zippé camouflage",
       "de_DE": "Tarn-Hoodie",
       "nl_NL": "Camouflagehoody",
-      "ru_RU": "Камуфляжная толстовка"
+      "ru_RU": "Камуфляжная толстовка",
+      "it_IT": "Felpa zip mimetica"
     },
     "main": "Quick Respawn",
     "brand": "Firefin",
@@ -3373,7 +3533,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté zippé vert",
       "de_DE": "Tannengrüner Hoodie",
       "nl_NL": "Groene hoody",
-      "ru_RU": "Зеленая толстовка"
+      "ru_RU": "Зеленая толстовка",
+      "it_IT": "Felpa zip verde"
     },
     "main": "Special Power Up",
     "brand": "Firefin",
@@ -3394,7 +3555,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat capuche Ezko",
       "de_DE": "Zekko-Hoodie",
       "nl_NL": "Zekko-hoody",
-      "ru_RU": "Толстовка от «Йожко»"
+      "ru_RU": "Толстовка от «Йожко»",
+      "it_IT": "Felpa Ezko"
     },
     "main": "Ninja Squid",
     "brand": "Zekko",
@@ -3415,7 +3577,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise et sweat marine",
       "de_DE": "Hemd mit blauem Hoodie",
       "nl_NL": "Hemd met blauwe hoody",
-      "ru_RU": "Толстовка с рубашкой"
+      "ru_RU": "Толстовка с рубашкой",
+      "it_IT": "Felpa blu e camicia"
     },
     "main": "Special Power Up",
     "brand": "Splash Mob",
@@ -3436,7 +3599,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté zippé mauve",
       "de_DE": "Traubenlila Hoodie",
       "nl_NL": "Calamars-hoody",
-      "ru_RU": "Фиолетовая толстовка"
+      "ru_RU": "Фиолетовая толстовка",
+      "it_IT": "Felpa viola Calamars"
     },
     "main": "Quick Respawn",
     "brand": "Enperry",
@@ -3457,7 +3621,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat capuche gris",
       "de_DE": "Grauer Hoodie",
       "nl_NL": "Grijze hoody",
-      "ru_RU": "Серая толстовка"
+      "ru_RU": "Серая толстовка",
+      "it_IT": "Felpa grigia con cappuccio"
     },
     "main": "Sub Power Up",
     "brand": "Skalop",
@@ -3478,7 +3643,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Chemise et sweat rose",
       "de_DE": "Pinker Hoodie",
       "nl_NL": "Roze hoody",
-      "ru_RU": "Розовая толстовка"
+      "ru_RU": "Розовая толстовка",
+      "it_IT": "Felpa rosa"
     },
     "main": "Bomb Defense Up",
     "brand": "Splash Mob",
@@ -3499,7 +3665,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Sweat Ezko olive",
       "de_DE": "Oliver Zekko-Hoodie",
       "nl_NL": "Groene Zekko-hoody",
-      "ru_RU": "Толстовка от «Йожко»"
+      "ru_RU": "Толстовка от «Йожко»",
+      "it_IT": "Felpa Ezko oliva"
     },
     "main": "Swim Speed Up",
     "brand": "Zekko",
@@ -3520,7 +3687,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Polo rayé",
       "de_DE": "Kurier-Polohemd",
       "nl_NL": "Bedrijfspolo",
-      "ru_RU": "Майка курьера"
+      "ru_RU": "Майка курьера",
+      "it_IT": "Polo da lavoro"
     },
     "main": undefined,
     "brand": "Grizzco",
@@ -3541,7 +3709,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet de sauvetage",
       "de_DE": "Rettungsweste",
       "nl_NL": "Reddingsvest",
-      "ru_RU": "Спасательный жилет"
+      "ru_RU": "Спасательный жилет",
+      "it_IT": "Giubbotto salvavita"
     },
     "main": undefined,
     "brand": "Grizzco",
@@ -3562,7 +3731,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Blouson d'ingénieur pétrolier",
       "de_DE": "Tankwart-Jacke",
       "nl_NL": "Pompbediendenjack",
-      "ru_RU": "Форма заправщика"
+      "ru_RU": "Форма заправщика",
+      "it_IT": "Giacca benzinaio"
     },
     "main": undefined,
     "brand": "Grizzco",
@@ -3583,7 +3753,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt et gants de travail",
       "de_DE": "Shirt mit Handschuhen",
       "nl_NL": "Shirt met handschoenen",
-      "ru_RU": "Безрукавка и перчатки"
+      "ru_RU": "Безрукавка и перчатки",
+      "it_IT": "Set con guanti da lavoro"
     },
     "main": undefined,
     "brand": "Grizzco",
@@ -3604,7 +3775,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt Crustassiette",
       "de_DE": "Shrimpy-Snacks-Shirt",
       "nl_NL": "Octobus-shirt XXL",
-      "ru_RU": "Майка «Мак-да-рак»"
+      "ru_RU": "Майка «Мак-да-рак»",
+      "it_IT": "T-shirt Fritto e Rifritto"
     },
     "main": undefined,
     "brand": "Grizzco",
@@ -3625,7 +3797,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Uniforme scolaire",
       "de_DE": "Schuluniform",
       "nl_NL": "Schooluniform",
-      "ru_RU": "Школьная форма"
+      "ru_RU": "Школьная форма",
+      "it_IT": "Uniforme scolastica"
     },
     "main": "Ink Recovery Up",
     "brand": "amiibo",
@@ -3646,7 +3819,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Haut de samouraï",
       "de_DE": "Samurai-Rüstung",
       "nl_NL": "Samoeraitenue",
-      "ru_RU": "Доспехи самурая"
+      "ru_RU": "Доспехи самурая",
+      "it_IT": "Armatura samurai"
     },
     "main": "Special Charge Up",
     "brand": "amiibo",
@@ -3667,7 +3841,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Armure méca",
       "de_DE": "Exo-Rüstung",
       "nl_NL": "Hightechpantser",
-      "ru_RU": "Силовые доспехи"
+      "ru_RU": "Силовые доспехи",
+      "it_IT": "Armatura hi-tech"
     },
     "main": "Quick Respawn",
     "brand": "amiibo",
@@ -3688,7 +3863,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Gilet scolaire",
       "de_DE": "Schul-Cardigan",
       "nl_NL": "Schoolvest",
-      "ru_RU": "Школьная кофта"
+      "ru_RU": "Школьная кофта",
+      "it_IT": "Cardigan scolastico"
     },
     "main": "Run Speed Up",
     "brand": "amiibo",
@@ -3709,7 +3885,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Tenue de ninja",
       "de_DE": "Ninja-Anzug",
       "nl_NL": "Ninjapak",
-      "ru_RU": "Костюм ниндзялинга"
+      "ru_RU": "Костюм ниндзялинга",
+      "it_IT": "Giacca ninja"
     },
     "main": "Special Saver",
     "brand": "amiibo",
@@ -3730,7 +3907,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Armure méca Mk I",
       "de_DE": "Exo-Prototypenrüstung",
       "nl_NL": "Hightechpantser (prototype)",
-      "ru_RU": "Силовые доспехи М-1"
+      "ru_RU": "Силовые доспехи М-1",
+      "it_IT": "Prototipo di armatura hi-tech"
     },
     "main": "Ink Resistance Up",
     "brand": "amiibo",
@@ -3751,7 +3929,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt festif",
       "de_DE": "Splatfest-Shirt",
       "nl_NL": "Splatfest-T-shirt",
-      "ru_RU": "Сплатфест-майка"
+      "ru_RU": "Сплатфест-майка",
+      "it_IT": "T-shirt festival"
     },
     "main": "Ability Doubler",
     "brand": "SquidForce",
@@ -3773,7 +3952,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "T-shirt festif",
       "de_DE": "Heldenjacke Replik",
       "nl_NL": "Heldenjack (replica)",
-      "ru_RU": "Жилет-004 (клон)"
+      "ru_RU": "Жилет-004 (клон)",
+      "it_IT": "Giubbino élite replica"
     },
     "main": "Swim Speed Up",
     "brand": "Cuttlegear",
@@ -3794,7 +3974,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Veste héroïque (réplique)",
       "de_DE": "Rüstungsjacke Replik",
       "nl_NL": "Pantserjack (replica)",
-      "ru_RU": "Бронекуртка-004 (клон)"
+      "ru_RU": "Бронекуртка-004 (клон)",
+      "it_IT": "Giacca d'armatura replica"
     },
     "main": "Special Charge Up",
     "brand": "Cuttlegear",
@@ -3815,7 +3996,8 @@ angular.module('splatApp').clothes = function($scope) {
       "fr_CA": "Coton ouaté héroïque (rép.)",
       "de_DE": "Helden-Hoodie Replik",
       "nl_NL": "Heldenhoody (replica)",
-      "ru_RU": "Толстовка-004 (клон)"
+      "ru_RU": "Толстовка-004 (клон)",
+      "it_IT": "Felpa élite replica"
     },
     "main": "Ink Recovery Up",
     "brand": "Cuttlegear",
