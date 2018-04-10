@@ -75,6 +75,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     `,
+    // TODO / FIXME - handle grizzco more elegantly
     gearPicker : `<div class="row">
     <div class="col-md-12">
     <div class="card {{::background}}" id="dialog">
@@ -91,7 +92,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="selected-label" class="selected-label">
     <span>{{selectedGear.localizedName['{{ LANG_FULL | translate }}']}}</span></div>
     <div id="gearpicker-stats">
-    <img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName['{{ LANG_FULL | translate }}']}}<br>
+    <span ng-if="selectedGear.main != undefined"><img ng-src="{{getSkillByName(selectedGear.main).image}}"/>  {{getSkillByName(selectedGear.main).localizedName['{{ LANG_FULL | translate }}']}}</span>
+    <span ng-if="selectedGear.main == undefined"><img ng-src="../common/assets/img/skills/Unknown.png"/>  ???</span>
+    <br>
     <img ng-src="{{brands[selectedGear.brand].image}}"/> {{brands[selectedGear.brand].localizedName['{{ LANG_FULL | translate }}']}}<br>
     <div>
     <span ng-if="brands[selectedGear.brand].common">
@@ -111,7 +114,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::brands[item.brand].image}}"/>
     </span>
     <span class="main-icon">
-    <img ng-src="{{::getSkillByName(item.main).image}}"/>
+    <img ng-if="item.main != undefined" ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     </div><!--
     --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
@@ -120,7 +123,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::brands[item.brand].image}}"/>
     </span>
     <span class="main-icon">
-    <img ng-src="{{::getSkillByName(item.main).image}}"/>
+    <img ng-if="item.main != undefined" ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="annie">
     <img ng-if="item.brand != 'Grizzco'?item.name != 'Splatfest Tee'?true:false:false" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
@@ -132,7 +135,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-src="{{::brands[item.brand].image}}"/>
     </span>
     <span class="main-icon">
-    <img ng-src="{{::getSkillByName(item.main).image}}"/>
+    <img ng-if="item.main != undefined" ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     <span class="not-possible" uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true">
     <span class="fa fa-5x fa-ban " ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
@@ -161,6 +164,17 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.1.5</h4>
+    <ul>
+    <li>The look and feel of many aspects of the site has been updated. Contributed by <a href="https://github.com/lah7" target="_blank">Luke Horwell</a>.</li>
+    <ul>
+    <li>See <a href="https://github.com/DeviPotato/splat2-calc/commit/abebfe05d48595c4df1da95d1d1b759093d3eeb3" target="_blank">this commit</a> for details.</li>
+    </ul>
+    <li>Added all available gear as of game version 2.3.3.</li>
+    <ul>
+    <li>Some localizations for Spanish (Mexico) and French (Canada) may be incorrect. Please report these on <a href="https://github.com/DeviPotato/splat2-calc/" target="_blank">GitHub</a> or <a href="https://twitter.com/loadout_ink" target="_blank">Twitter.</a></li>
+    </ul>
+    </ul>
     <h4>Version 1.1.4</h4>
     <ul>
     <li>Updated for game balance changes through version 2.3.3.</li>
@@ -249,6 +263,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     `,
+    // FIXME / LOCALIZE - Credit to Luke Horwell needs localization.
     about: `<div class="row">
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
@@ -257,6 +272,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content readable" id="about">
     <p>{{ UI_ABOUT_CONTENT |translate}}</p>
+    <p>
+    Splatoon 2 UI Dialog/Buttons by <a href="https://github.com/lah7" target="_blank">Luke Horwell.</a>
+    </p>
     <div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>

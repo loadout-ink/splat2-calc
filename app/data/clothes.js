@@ -3522,7 +3522,7 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Bedrijfspolo",
       "ru_RU": "Майка курьера"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "id": 97,
@@ -3543,7 +3543,7 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Reddingsvest",
       "ru_RU": "Спасательный жилет"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "id": 98,
@@ -3564,7 +3564,7 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Pompbediendenjack",
       "ru_RU": "Форма заправщика"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "id": 99,
@@ -3585,7 +3585,7 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Shirt met handschoenen",
       "ru_RU": "Безрукавка и перчатки"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21003,
@@ -3606,7 +3606,7 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Octobus-shirt XXL",
       "ru_RU": "Майка «Мак-да-рак»"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21004,

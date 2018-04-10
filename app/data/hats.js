@@ -1779,7 +1779,7 @@ $scope.hats = [
       "nl_NL": "Mijnwerkershelm",
       "ru_RU": "Каска с фонарем"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "id": 51,
@@ -1800,7 +1800,7 @@ $scope.hats = [
       "nl_NL": "Stofmasker",
       "ru_RU": "Маска от пыли 2.5"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
@@ -1821,7 +1821,7 @@ $scope.hats = [
       "nl_NL": "Laskap",
       "ru_RU": "Маска сварщика"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21002,
@@ -1842,7 +1842,7 @@ $scope.hats = [
       "nl_NL": "Oceanologenhelm",
       "ru_RU": "Шлем океанолога"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21006,

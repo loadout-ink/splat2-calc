@@ -2031,7 +2031,7 @@ angular.module('splatApp').shoes = function($scope) {
       "nl_NL": "Rubberlaarzen",
       "ru_RU": "Рабочие сапоги"
     },
-    "main": "Quick Respawn",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
