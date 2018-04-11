@@ -164,6 +164,18 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Version 1.2.0</h4>
+    <ul>
+    <li>Run Speed (Firing) and Ink Consumption (Main) values for most weapons are now up to date for game version 2.3.3.</li>
+    <ul>
+    <li>Many weapons that were missing these values, such as Hydra Splatling, now have them.</li>
+    </ul>
+    <li>loadout.ink is now available in Italian and Cantonese Chinese. Please report localization issues on <a href="https://github.com/DeviPotato/splat2-calc/" target="_blank">GitHub</a> or <a href="https://twitter.com/loadout_ink" target="_blank">Twitter.</a></li>
+    <ul>
+    <li>Italian contributed by <a href="https://twitter.com/marcolago" target="_blank">@marcolago</a>.</li>
+    <li>Cantonese Chinese contributed by <a href="https://twitter.com/sam0737" target="_blank">@sam0307</a>.</li>
+    </ul>
+    </ul>
     <h4>Version 1.1.5</h4>
     <ul>
     <li>The look and feel of many aspects of the site has been updated. Contributed by <a href="https://github.com/lah7" target="_blank">Luke Horwell</a>.</li>
