@@ -1764,7 +1764,7 @@ angular.module('splatApp').weapons = function ($scope) {
         "sub": "Squid Beakon",
         "special": "Tenta Missiles",
         "level": 15,
-        "specialCost": 180,
+        "specialCost": 170,
         "inkSaver": "Middle",
         "inkPerShot": 3.2,
         "speedLevel": "Middle",
