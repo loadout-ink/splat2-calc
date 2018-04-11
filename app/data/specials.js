@@ -11,6 +11,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Multi-missile",
         "fr_CA": "Multi-missile",
         "de_DE": "Schwarmraketen",
+        "it_IT": "Lanciarazzi",
+        "nl_NL": "Spetterraketten",
+        "ru_RU": "Каракатница",
         "zh_HK": "マルチミサイル (導弾)"
       },
       image: "../common/assets/img/subspe/Wsp_SuperMissile.png",
@@ -31,6 +34,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Chromo-sphère",
         "fr_CA": "Chromo-sphère",
         "de_DE": "Sepisphäre",
+        "it_IT": "Cromosfera",
+        "nl_NL": "Barstbubbel",
+        "ru_RU": "Шарокат",
         "zh_HK": "イカスフィア (倉鼠波)"
       },
       image: "../common/assets/img/subspe/Wsp_AquaBall.png",
@@ -51,6 +57,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Choc chromatique",
         "fr_CA": "Choc chromatique",
         "de_DE": "Tintenschock",
+        "it_IT": "Vernischianto",
+        "nl_NL": "Superlanding",
+        "ru_RU": "Мегаплюх",
         "zh_HK": "スーパーチャクチ (爆地)"
       },
       image: "../common/assets/img/subspe/Wsp_SuperLanding.png",
@@ -71,6 +80,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lance-bulles",
         "fr_CA": "Lance-bulles",
         "de_DE": "Blubberwerfer",
+        "it_IT": "Soffiabolle",
+        "nl_NL": "Bellenblazer",
+        "ru_RU": "Пузырятор",
         "zh_HK": "バブルランチャー (吹波波)"
       },
       image: "../common/assets/img/subspe/Wsp_SuperBubble.png"
@@ -86,6 +98,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Armure d'encre",
         "fr_CA": "Armure d'encre",
         "de_DE": "Tintenrüstung",
+        "it_IT": "Armatura d'inchiostro",
+        "nl_NL": "Inktharnas",
+        "ru_RU": "Бронекраска",
         "zh_HK": "インクアーマー (保護盾)"
       },
       image: "../common/assets/img/subspe/Wsp_SuperArmor.png",
@@ -102,6 +117,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Chromo-jet",
         "fr_CA": "Chromo-jet",
         "de_DE": "Tintendüser",
+        "it_IT": "Jet splat",
+        "nl_NL": "Inktjet",
+        "ru_RU": "Красколет",
         "zh_HK": "インクアーマー (飛行背包)"
       },
       image: "../common/assets/img/subspe/Wsp_Jetpack.png",
@@ -123,6 +141,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Pigmalance",
         "fr_CA": "Pigmalance",
         "de_DE": "Magistraal",
+        "it_IT": "Baccalaser",
+        "nl_NL": "Magistraal",
+        "ru_RU": "Струятор",
         "zh_HK": "ハイパープレッサー (Laser)"
       },
       image: "../common/assets/img/subspe/Wsp_WaterCutter.png",
@@ -139,6 +160,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Pluie d'encre",
         "fr_CA": "Pluie d'encre",
         "de_DE": "Tintenschauer",
+        "it_IT": "Pioggia di colore",
+        "nl_NL": "Spetterbui",
+        "ru_RU": "Туча краски",
         "zh_HK": "アメフラシ (雨雲)"
       },
       image: "../common/assets/img/subspe/Wsp_RainCloud.png",
@@ -153,8 +177,11 @@ angular.module('splatApp').specials = function ($scope) {
         "es_ES": "Bombardeos",
         "es_MX": "Bombardeos pegajoso",
         "fr_FR": "Lanceur de bombes",
-        "fr_CA": "Lance-bombes",
-        "de_DE": "Bomb Launcher",
+        "fr_CA": "Lance-bombes gluantes",
+        "de_DE": "Haftbomber",
+        "it_IT": "Lanciappiccibombe",
+        "nl_NL": "Kleefbomkanon",
+        "ru_RU": "Бомбомет (присоски)",
         "zh_HK": "ボムピッチャー (吸盤弾連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherSuction.png",
@@ -171,6 +198,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lanceur de bombes",
         "fr_CA": "Lance-bombes",
         "de_DE": "Bomb Launcher",
+        "it_IT": "Lanciabombe Robo",
+        "nl_NL": "Robobomkanon",
+        "ru_RU": "Бомбомет (Робобомб)",
         "zh_HK": "ボムピッチャー (自走弾連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherRobo.png",
@@ -187,6 +217,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lanceur de bombes",
         "fr_CA": "Lance-bombes",
         "de_DE": "Bomb Launcher",
+        "it_IT": "Lanciabombe splash",
+        "nl_NL": "Klodderbomkanon",
+        "ru_RU": "Бомбомет (брызгающие)",
         "zh_HK": "ボムピッチャー (三角弾連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherSplash.png",
@@ -203,6 +236,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lanceur de bombes",
         "fr_CA": "Lance-bombes",
         "de_DE": "Bomb Launcher",
+        "it_IT": "Lanciabombe granata",
+        "nl_NL": "Ballonbomkanon",
+        "ru_RU": "Бомбомет (Разрывная)",
         "zh_HK": "ボムピッチャー (水袋連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherQuick.png",
@@ -219,6 +255,9 @@ angular.module('splatApp').specials = function ($scope) {
         "fr_FR": "Lanceur de bombes",
         "fr_CA": "Lance-bombes",
         "de_DE": "Bomb Launcher",
+        "it_IT": "Lanciabombe curling",
+        "nl_NL": "Curlingbomkanon",
+        "ru_RU": "Бомбомет (керлинг)",
         "zh_HK": "ボムピッチャー (氷球連射)"
       },
       image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",

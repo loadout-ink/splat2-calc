@@ -2385,9 +2385,9 @@ angular.module('splatApp').weapons = function ($scope) {
           "fr_FR": "Para-encre espion",
           "fr_CA": "Para-encre espion",
           "de_DE": "UnderCover",
-          "it_IT": "Undercover Brella",
+          "it_IT": "Bombrello Solerra",
           "nl_NL": "Sorella Plenzer",
-          "ru_RU": "Undercover Brella"
+          "ru_RU": "Шпионский зонт «Родиччи»"
         },
         "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
         "sub": "Ink Mine",
@@ -2569,7 +2569,8 @@ angular.module('splatApp').weapons = function ($scope) {
           "es_MX": "Derramatic triple maestro",
           "fr_FR": "Dépoteur nuancé",
           "fr_CA": "Seauceur nuancé",
-          "de_DE": "Tri-Slosher Nouveau"
+          "de_DE": "Tri-Slosher Nouveau",
+          "it_IT": "Secchiostro triplo master"
         },
         "shotUnit": "{{ SHOT_UNIT_SLOSHER | translate }}",
         "sub": "Splat Bomb",

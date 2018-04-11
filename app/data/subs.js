@@ -11,6 +11,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe splash",
         "fr_CA": "Bombe splash",
         "de_DE": "Klecksbombe",
+        "it_IT": "Bomba splash",
+        "nl_NL": "Klodderbom",
+        "ru_RU": "Брызгающая бомба",
         "zh_HK": "スプラッシュボム (三角形)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
@@ -32,6 +35,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe ballon",
         "fr_CA": "Bombe ballon",
         "de_DE": "Insta-Bombe",
+        "it_IT": "Granata",
+        "nl_NL": "Ballonbom",
+        "ru_RU": "Разрывная бомба",
         "zh_HK": "クイックボム (水袋)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Quick.png",
@@ -54,6 +60,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe gluante",
         "fr_CA": "Bombe gluante",
         "de_DE": "Haftbombe",
+        "it_IT": "Appiccibomba",
+        "nl_NL": "Kleefbom",
+        "ru_RU": "Бомба на присоске",
         "zh_HK": "キューバンボム (吸盤)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
@@ -75,6 +84,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe robot",
         "fr_CA": "Bombe robot",
         "de_DE": "Robo-Bombe",
+        "it_IT": "Robobomba",
+        "nl_NL": "Robobom",
+        "ru_RU": "Робобомб",
         "zh_HK": "ロボットボム (自走式)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
@@ -96,6 +108,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Bombe curling",
         "fr_CA": "Bombe curling",
         "de_DE": "Curling-Bombe",
+        "it_IT": "Bomba curling",
+        "nl_NL": "Curlingbom",
+        "ru_RU": "Керлинг-бомба",
         "zh_HK": "カーリングボム (氷球)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
@@ -117,6 +132,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Mine",
         "fr_CA": "Mine d'encre",
         "de_DE": "Tintenmine",
+        "it_IT": "Mina",
+        "nl_NL": "Inktmijnen",
+        "ru_RU": "Мины",
         "zh_HK": "トラップ (地雷)"
       },
       image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
@@ -138,6 +156,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Balise de saut",
         "fr_CA": "Balise de saut",
         "de_DE": "Sprungboje",
+        "it_IT": "Trasferitore",
+        "nl_NL": "Springschotel",
+        "ru_RU": "Прыжковый маячок",
         "zh_HK": "ジャンプビーコン (雷達標志)"
       },
       image: "../common/assets/img/subspe/Wsb_Flag.png",
@@ -155,6 +176,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Fontaine",
         "fr_CA": "Gicleur",
         "de_DE": "Sprinkler",
+        "it_IT": "Spruzzatore",
+        "nl_NL": "Inktsprinkler",
+        "ru_RU": "Распылятор",
         "zh_HK": "ジャンプビーコン (淋花器)"
       },
       image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
@@ -172,6 +196,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Brume toxique",
         "fr_CA": "Brume toxique",
         "de_DE": "Sepitox-Nebel",
+        "it_IT": "Nebbia tossica",
+        "nl_NL": "Gifmist",
+        "ru_RU": "Едкий туман",
         "zh_HK": "ポイズンミスト (毒霧)"
       },
       image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
@@ -189,6 +216,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Détecteur",
         "fr_CA": "Détecteur",
         "de_DE": "Detektor",
+        "it_IT": "Cimice",
+        "nl_NL": "Detector",
+        "ru_RU": "Маркер движения",
         "zh_HK": "ポイントセンサー (追跡器)"
       },
       image: "../common/assets/img/subspe/Wsb_PointSensor.png",
@@ -206,6 +236,9 @@ angular.module('splatApp').subs = function ($scope) {
         "fr_FR": "Mur d'encre",
         "fr_CA": "Mur d'encre",
         "de_DE": "Tintenwall",
+        "it_IT": "Muro di colore",
+        "nl_NL": "Inktgordijn",
+        "ru_RU": "Чернильный занавес",
         "zh_HK": "スプラッシュシールド (水簾)"
       },
       image: "../common/assets/img/subspe/Wsb_Shield.png",
