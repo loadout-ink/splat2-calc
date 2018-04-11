@@ -244,10 +244,10 @@ $scope.stats = {
           base = 110;
           this.max = 1.274;
           this.name = "{{ STAT_SPECIAL_POWER_SPLASHDOWN | translate }}"
-          results = (1 +this.calcMod(abilityScore) / coeff)*100
+          results = (1 +this.calcMod(abilityScore) / coeff)
           this.desc = "{{ DESC_DISTANCE | translate }}".format({value: (base*results).toFixed(1)})
           this.value = results;
-          this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
+          this.label = "{{ LABEL_PERCENT | translate }}".format({value: (results*100).toFixed(1)})
           return (results*100).toFixed(1);
           break;
         case 'Bubble Blower':
