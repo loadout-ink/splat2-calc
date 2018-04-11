@@ -175,7 +175,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <li>Italian contributed by <a href="https://twitter.com/marcolago" target="_blank">@marcolago</a>.</li>
     <li>Cantonese Chinese contributed by <a href="https://twitter.com/sam0737" target="_blank">@sam0307</a>.</li>
     </ul>
-    <li>The bar for Special Power Up (Splashdown) no longer displays incorrectly.</li>
+    <li>Several minor bugfixes and improvements.</li>
     </ul>
     <h4>Version 1.1.5</h4>
     <ul>
