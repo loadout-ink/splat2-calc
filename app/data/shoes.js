@@ -2128,7 +2128,7 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Рабочие сапоги",
       "it_IT": "Stivali squamosi"
     },
-    "main": "undefined",
+    "main": undefined,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
