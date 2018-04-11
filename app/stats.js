@@ -178,7 +178,7 @@ $scope.stats = {
       var coeff = 0;
       var base = 0;
       var results = 0;
-      this.localizedDesc = { desc: null };
+      this.desc = null;
       this.name = "{{ STAT_SPECIAL_POWER_UNKNOWN | translate }}"
       switch(equippedSpecial.name) {
         case 'Suction-Bomb Launcher':
@@ -209,8 +209,7 @@ $scope.stats = {
         case 'Ink Storm':
         case 'Sting Ray':
           coeff = 120;
-          base = 480;
-          if(equippedSpecial.name == 'Sting Ray') base = 465
+          base = 465;
           this.max = 10;
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
           results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
