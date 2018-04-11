@@ -331,6 +331,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-size: 12pt
 }
 
+.statlabel:lang(zh) {
+  font-size: 12pt
+}
+
+
 .subspeicon {
   background:rgba(0,0,0,0.5);
   border-radius:5px;
@@ -572,7 +577,16 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Yu Gothic, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; !important;
 }
 
+.readable:lang(zh) {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Yu Gothic, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; !important;
+}
+
 #about:lang(ja) {
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
+}
+
+#about:lang(zh) {
   text-align: justify !important;
   text-justify: inter-ideograph !important;
 }

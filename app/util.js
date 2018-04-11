@@ -13,7 +13,8 @@ var language_map = {
   "fr_CA": "fr-ca",
   "es_ES": "es",
   "es_MX": "es-mx",
-  "it_IT": "it"
+  "it_IT": "it",
+  "zh_HK": "zh-hk"
 }
 
 String.prototype.format = function(scope) {
