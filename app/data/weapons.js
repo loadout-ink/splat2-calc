@@ -2362,7 +2362,7 @@ angular.module('splatApp').weapons = function ($scope) {
         "level": 23,
         "specialCost": 180,
         "inkSaver": "High",
-        "speedLevel": "Middle",
+        "speedLevel": "Low",
         "price": 14200,
         "stats": {
           "{{ SHELDON_RANGE | translate }}": 62,
