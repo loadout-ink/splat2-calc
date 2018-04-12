@@ -66,7 +66,7 @@ var it_strings = {
   // Stats - these appear over the stat bars.
   // If there is an asterisk (*), leave it in after the stat name.
   "STAT_SWIM_SPEED": "Velocità in nuoto",
-  "STAT_RUN_SPEED": "Velcità di corsa",
+  "STAT_RUN_SPEED": "Velocità di corsa",
   "STAT_RUN_SPEED_RESIST": "Vel. Corsa (Inchiostro nemico)",
   "STAT_RUN_SPEED_FIRING": "Vel. Corsa (Sparando)",
   "STAT_RUN_SPEED_ROLLING": "Corsa (Rotolando)",
