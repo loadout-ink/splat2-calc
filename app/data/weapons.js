@@ -2580,7 +2580,7 @@ angular.module('splatApp').weapons = function ($scope) {
         "inkSaver": "Middle",
         "inkPerShot": 6,
         "speedLevel": "Middle",
-        "baseSpeed": 0.6,
+        "baseSpeed": 0.66,
         "price": 11700,
         "stats": {
           "{{ SHELDON_RANGE | translate }}": 39,
