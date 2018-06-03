@@ -146,7 +146,7 @@ $scope.stats = {
       var costPerSub = sub.cost * (1 - reduction)
       this.value = costPerSub;
       this.localizedDesc = { reduction: reduction.toFixed(1), desc: 'DESC_SUB_COST' };
-      this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: reduction.toFixed(1)})
+      this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (reduction*100).toFixed(1)})
       this.label = "{{ LABEL_SUB_COST | translate }}".format({value: this.value.toFixed(2)})
       return costPerSub;
     }, 100),
