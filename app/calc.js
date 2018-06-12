@@ -120,7 +120,8 @@ angular
       'fr_FR': 'Français (FR)',
       'fr_CA': 'Français (CA)',
       'it_IT': 'Italiano',
-      'zh_HK': '中文 (香港)'
+      'zh_HK': '中文 (香港)',
+      'zh_CN': '中文 (中国)'
     }
   }])
   .filter("trust", ['$sce', function($sce) {

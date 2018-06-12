@@ -4,7 +4,7 @@ var cachebust = require('gulp-cache-bust');
 var connect = require('gulp-connect');
 var del = require('del');
 
-var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX', 'it_IT', 'zh_HK'];
+var translations = ['en_US', 'ja_JP', 'fr_FR', 'fr_CA', 'es_ES', 'es_MX', 'it_IT', 'zh_HK', 'zh_CN'];
 
 gulp.task('clean', function() {
   return del([
