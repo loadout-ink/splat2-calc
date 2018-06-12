@@ -591,6 +591,16 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   text-justify: inter-ideograph !important;
 }
 
+/* Chinese (Simplified) fonts */
+.readable:lang(cn), #statbox:lang(cn), .picker-right:lang(cn){
+  font-family: "PingFang SC","Microsoft YaHei", "微软雅黑", sans-serif; !important;
+}
+
+#about:lang(cn) {
+  text-align: justify !important;
+  text-justify: inter-ideograph !important;
+}
+
 .footer {
   width: 100%;
   height: 50px;
