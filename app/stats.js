@@ -8,33 +8,73 @@ function Stat(name, calc, max) {
   this.calcMod = function(abilityScore) {
     return (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))
   }
+  this.calcP = function(abilityScore) {
+    return Math.min(3.3*abilityScore - 0.027*Math.pow(abilityScore,2),100);
+  }
+  this.calcS = function(values) {
+    var max = values[0];
+    var mid = values[1];
+    var min = values[2];
+    return (mid-min) / (max-min);
+  }
+  this.calcRes = function(values, p, s) {
+    var max = values[0];
+    var mid = values[1];
+    var min = values[2];
+    return min + (max-min) * this.lerpN(p/100, s);
+  }
+  this.lerpN = function(p, s) {
+    if(s.toFixed(3) == 0.5) {
+      return p;
+    }
+    if(p == 0.0) {
+      return p;
+    }
+    if(p == 1.0) {
+      return p;
+    }
+    if(s != 0.5) {
+      return Math.log(-1 * (Math.log(p) * Math.log(s) / Math.log(2)));
+    }
+  }
 }
 
-//TODO: clean all this up
 angular.module('splatApp').stats = function ($scope) {
-$scope.stats = {
-  //TODO: come up with a better way to convey speed?
-  'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {
+  $scope.stats = {
+    'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Swim Speed Up');
-      var baseSpeed = 2.02;
-      var coeff = 150;
+      console.log("AP: " + abilityScore);
+      var p = this.calcP(abilityScore);
+      if(loadout.hasAbility('Ninja Squid')) {
+        p = p * 0.8;
+      }
+      console.log("P: " + p);
+      var s = null;
+      var res = null;
       if(loadout.weapon.speedLevel == 'Low') {
-        baseSpeed = 1.74;
-        coeff = 80;
+        s = this.calcS($scope.parameters["Swim Speed"]["Heavy"]);
+        res = this.calcRes($scope.parameters["Swim Speed"]["Heavy"], p, s);
       }
       if(loadout.weapon.speedLevel == 'Middle') {
-        baseSpeed = 1.92;
-        coeff = 120;
+        s = this.calcS($scope.parameters["Swim Speed"]["Mid"]);
+        res = this.calcRes($scope.parameters["Swim Speed"]["Mid"], p, s);          
       }
-      var speed = baseSpeed * (1 + this.calcMod(abilityScore)/coeff);
+      if(loadout.weapon.speedLevel == "High") {
+        s = this.calcS($scope.parameters["Swim Speed"]["Light"]);
+        res = this.calcRes($scope.parameters["Swim Speed"]["Light"], p, s);          
+      }
+      console.log("S: " + s);
+      console.log("RES: " + res);
+      var speed = res;
       if(loadout.hasAbility('Ninja Squid')) {
         speed = speed * 0.9;
       }
       this.value = speed;
-      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)})
+      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)})
       this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-      return speed.toFixed(2);
-    }, 2.43),
+      console.log("SPEED: " + speed.toFixed(4));
+      return speed.toFixed(3);
+    }, 2.4),
     'Run Speed': new Stat("{{ STAT_RUN_SPEED | translate }}", function(loadout) {
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         var baseSpeed = 0.96;
@@ -349,6 +389,8 @@ $scope.stats = {
       return (8 * (1 - trackReduction)).toFixed(2);
     }, 8)
   }
+
+
   $scope.getStatByName = function(name) {
     return $scope.stats[name]
   }
