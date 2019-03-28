@@ -112,6 +112,10 @@ angular
       eval("$scope.loadout." + slot + ".equipped = item")
     }
 
+    $scope.toFixedTrimmed = function(number, precision) {
+      return Number(number.toFixed(precision)).toString();
+    }
+
     $scope.languages = {
       'en_US': 'English',
       'ja_JP': '日本語',
