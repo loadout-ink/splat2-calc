@@ -42,106 +42,180 @@ function Stat(name, calc, max) {
 angular.module('splatApp').stats = function ($scope) {
   $scope.stats = {
     'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore('Swim Speed Up');
-      console.log("AP: " + abilityScore);
+      var default_swim_speed = null;
+      var swim_speed_parameters = null;
+      if(loadout.weapon.speedLevel == 'Low') {
+        swim_speed_parameters = $scope.parameters["Swim Speed"]["Heavy"];
+      }
+      if(loadout.weapon.speedLevel == 'Middle') {
+        swim_speed_parameters = $scope.parameters["Swim Speed"]["Mid"];
+      }
+      if(loadout.weapon.speedLevel == "High") {
+        swim_speed_parameters = $scope.parameters["Swim Speed"]["Light"];
+      }
+
+      var abilityScore = loadout.calcAbilityScore('Swim Speed Up');      
       var p = this.calcP(abilityScore);
+
       if(loadout.hasAbility('Ninja Squid')) {
         p = p * 0.8;
       }
-      console.log("P: " + p);
-      var s = null;
-      var res = null;
-      if(loadout.weapon.speedLevel == 'Low') {
-        s = this.calcS($scope.parameters["Swim Speed"]["Heavy"]);
-        res = this.calcRes($scope.parameters["Swim Speed"]["Heavy"], p, s);
-      }
-      if(loadout.weapon.speedLevel == 'Middle') {
-        s = this.calcS($scope.parameters["Swim Speed"]["Mid"]);
-        res = this.calcRes($scope.parameters["Swim Speed"]["Mid"], p, s);          
-      }
-      if(loadout.weapon.speedLevel == "High") {
-        s = this.calcS($scope.parameters["Swim Speed"]["Light"]);
-        res = this.calcRes($scope.parameters["Swim Speed"]["Light"], p, s);          
-      }
-      console.log("S: " + s);
-      console.log("RES: " + res);
-      var speed = res;
+
+      var s = this.calcS(swim_speed_parameters);
+      var swim_speed = this.calcRes(swim_speed_parameters, p, s);
+
       if(loadout.hasAbility('Ninja Squid')) {
-        speed = speed * 0.9;
+        swim_speed = swim_speed * 0.9;
       }
-      this.value = speed;
-      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)})
+
+      var delta = ((swim_speed / swim_speed_parameters[2] - 1) * 100).toFixed(1).toString();
+
+      // Debug log
+      var swim_speed_debug_log = {"Swim Speed":swim_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+      console.log(swim_speed_debug_log);
+
+      this.value = swim_speed;
+      this.percentage = delta;
+      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
       this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-      console.log("SPEED: " + speed.toFixed(4));
-      return speed.toFixed(3);
+      return this.value.toFixed(4);
     }, 2.4),
+
     'Run Speed': new Stat("{{ STAT_RUN_SPEED | translate }}", function(loadout) {
-        var abilityScore = loadout.calcAbilityScore('Run Speed Up');
-        var baseSpeed = 0.96;
-        var coeff = 60;
-        if(loadout.weapon.speedLevel == 'High') {
-          baseSpeed = 1.04;
-          coeff = 78;
-        }
+        var default_run_speed = null;
+        var run_speed_parameters = null;
         if(loadout.weapon.speedLevel == 'Low') {
-          baseSpeed = 0.88;
-          coeff = (420/9);
+          run_speed_parameters = $scope.parameters["Run Speed"]["Heavy"];
         }
-        var speed = baseSpeed * (1 + this.calcMod(abilityScore)/coeff);
-        this.value = speed;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)})
+        if(loadout.weapon.speedLevel == 'Middle') {
+          run_speed_parameters = $scope.parameters["Run Speed"]["Mid"];
+        }
+        if(loadout.weapon.speedLevel == "High") {
+          run_speed_parameters = $scope.parameters["Run Speed"]["Light"];
+        }
+
+        var abilityScore = loadout.calcAbilityScore('Run Speed Up');        
+        var p = this.calcP(abilityScore);       
+        var s = this.calcS(run_speed_parameters);
+        var run_speed = this.calcRes(run_speed_parameters, p, s);
+        var delta = ((run_speed / run_speed_parameters[2] - 1) * 100).toFixed(1).toString();        
+        
+        // Debug log
+        var run_speed_debug_log = {"Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(run_speed_debug_log);
+
+        this.value = run_speed;
+        this.percentage = delta;
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)})
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-        return speed.toFixed(2);
+        return this.value.toFixed(4);
       }, 1.44),
+
     'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }}", function(loadout) {
+        // TODO: Verify these results with Leanny
+        var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
         var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
-        var baseSpeed = 0.32;
-        var speed = baseSpeed * (1 + ((0.99 * abilityScore) - Math.pow(0.09 * abilityScore,2)) / 15)
-        this.value = speed
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
+        var p = this.calcP(abilityScore);       
+        var s = this.calcS(ink_resistance_parameters);
+        var run_speed = this.calcRes(ink_resistance_parameters, p, s);
+        var delta = ((run_speed / ink_resistance_parameters[2] - 1) * 100).toFixed(1).toString();        
+        
+        // Debug log
+        var run_speed_debug_log = {"Enemy Ink Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(run_speed_debug_log);
+        /*  Not sure why the old Loadout site had significantly different values for
+            this stat then Leanny's formula. His follows the same results here:
+            See: https://gamefaqs.gamespot.com/boards/200279-splatoon-2/75638591#5 
+        */
+        console.log("Ink Resist DEBUG: " + run_speed * loadout.weapon.baseSpeed)
+
+        this.value = run_speed
+        this.percentage = delta;
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-        return this.value.toFixed(1);
-      }, 1.44),
+        return this.value.toFixed(4);
+      }, 0.72),
+
     'Run Speed (Firing)': new Stat("{{ STAT_RUN_SPEED_FIRING | translate }}", function(loadout) {
-        var abilityScore = loadout.calcAbilityScore('Run Speed Up');
-        if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
+      // TODO: Figure out rolling speed calculation  
+      if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
           this.name = "{{ STAT_RUN_SPEED_ROLLING | translate }}"
-          var speed = loadout.weapon.baseSpeed;
-          this.value = speed;
-          this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
-          return speed.toFixed(2);
+          this.value = 0;
+          this.label = "{{ UNAVAILABLE | translate}}";
+          this.desc = null;
+          return this.value;
+          //var speed = loadout.weapon.baseSpeed;
+          //this.value = speed;
+          //this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
+          //return speed.toFixed(2);
         }
         else {
           this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
         }
-        var weaponRSU = 1 + this.calcMod(abilityScore)/120.452
-        var speed = loadout.weapon.baseSpeed * (weaponRSU);
-        this.value = speed
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
+
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"];
+        var abilityScore = loadout.calcAbilityScore('Run Speed Up');
+        var p = this.calcP(abilityScore);       
+        var s = this.calcS(run_speed_parameters);
+        var run_speed = this.calcRes(run_speed_parameters, p, s) * loadout.weapon.baseSpeed;
+        var delta = ((run_speed / loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();        
+
+        // Debug log
+        var run_speed_debug_log = {"Run Speed (Firing)":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(run_speed_debug_log);
+
+        this.value = run_speed
+        this.percentage = delta;
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
         if(isNaN(this.value)) {
           this.value = 0;
           this.label = "{{ UNAVAILABLE | translate}}";
           this.desc = null;
         }
-        return this.value.toFixed(1);
+        return this.value.toFixed(4);
       }, 1.44),
+
     'Ink Recovery Speed (Squid)': new Stat("{{ STAT_RECOVERY_SQUID | translate }}", function(loadout) {
+      var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["In Ink"];
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var seconds = 3 * (1 - this.calcMod(abilityScore) / (600 / 7))
-      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: seconds.toFixed(2)})
-      this.value = ((3 / seconds) * 100)
-      this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
-      return this.value.toFixed(1);
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(ink_recovery_parameters);
+      var refill_rate = this.calcRes(ink_recovery_parameters, p, s);
+      var refill_time = refill_rate / 60;
+      var delta = 3 / refill_time * 100;
+
+      // Debug log
+      var refill_speed_squid_debug_log = {"Ink Recovery Speed (Squid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+      console.log(refill_speed_squid_debug_log);
+
+      this.value = delta;
+      this.percentage = (100 - (100 / delta) * 100).toFixed(1);
+      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})
+      this.label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
+      return this.value.toFixed(2);
     }, 154),
+
     'Ink Recovery Speed (Kid)': new Stat("{{ STAT_RECOVERY_KID | translate }}", function(loadout) {
+      var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["Standing"];
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var seconds = 10 * (1 - this.calcMod(abilityScore) / 50)
-      this.value = ((10 / seconds) * 100);
-      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: seconds.toFixed(2)})
-      this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
-      return this.value.toFixed(1);
-    }, 251),
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(ink_recovery_parameters);
+      var refill_rate = this.calcRes(ink_recovery_parameters, p, s);
+      var refill_time = refill_rate / 60;
+      var delta = 10 / refill_time * 100;
+
+      // Debug log
+      var refill_speed_squid_debug_log = {"Ink Recovery Speed (Kid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+      console.log(refill_speed_squid_debug_log);
+
+      this.value = delta;
+      this.percentage = (100 - (100 / delta) * 100).toFixed(1);
+      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})      
+      this.label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
+      return this.value.toFixed(2);
+    }, 273),
+
     'Ink Consumption (Main)': new Stat("{{ STAT_SAVER_MAIN | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Main)');
       this.name = "{{ STAT_SAVER_MAIN | translate }}"
