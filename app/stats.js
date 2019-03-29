@@ -112,7 +112,7 @@ angular.module('splatApp').stats = function ($scope) {
         return this.value.toFixed(4);
       }, 1.44),
 
-    'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }} *", function(loadout) {
+    'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }}", function(loadout) {
         // TODO: Verify these results with Leanny
         var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
         var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
@@ -361,7 +361,7 @@ angular.module('splatApp').stats = function ($scope) {
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
           results = equippedSpecial.duration * modifier
 
-          var special_power_up_log = {"Special Power Up":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":modifier}
+          var special_power_up_log = {"Special Power Up (Bomb Launcher)":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":modifier}
           console.log(special_power_up_log);
 
           this.percentage = ((modifier - 1) * 100).toFixed(1);
@@ -370,13 +370,21 @@ angular.module('splatApp').stats = function ($scope) {
           return results;
           // break; // These shouldn't be needed after returns
         case 'Ink Armor':
-          coeff = 60;
-          base = 360;
-          this.max = 9;
-          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
-          this.value = results;
-          this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Ink Armor Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var results = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
+
+          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
+          this.percentage = ((results/min_duration - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Special Power Up (Ink Armor)":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+          
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"          
+          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
           return results.toFixed(2);
           break;
         case 'Inkjet':
