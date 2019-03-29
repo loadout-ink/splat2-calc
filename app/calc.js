@@ -168,7 +168,8 @@ angular
       },
   
       "Special Power Up": {
-          "Bomb Launcher": [1.335,1.237,1.0],
+          "Bomb Launcher": [1.335,1.237,1.0], // NOTE: Selicia approximated this using Wiki data
+          "Inkjet Duration": [506.25,492.1875,450], // NOTE: Selicia approximated this using Wiki data
           "Tenta Missiles Cross Paint Ray Length": [30.0, 30.0, 30.0],
           "Ultra Stamp Duration": [660, 600, 540],
           "Baller HP": [6000, 5000, 4000],

@@ -386,8 +386,25 @@ angular.module('splatApp').stats = function ($scope) {
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"          
           this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
           return results.toFixed(2);
-          break;
+          // break;
         case 'Inkjet':
+          // NOTE: This is using parameters Selicia derived from old data combined with patch notes
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Inkjet Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var results = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
+
+          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
+          this.percentage = ((results/min_duration - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Inkjet Duration":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+          
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"          
+          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
+          return results.toFixed(2);
         case 'Ink Storm':
         case 'Sting Ray':
           coeff = 120;
