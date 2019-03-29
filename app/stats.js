@@ -344,21 +344,31 @@ angular.module('splatApp').stats = function ($scope) {
       var results = 0;
       this.desc = null;
       this.name = "{{ STAT_SPECIAL_POWER_UNKNOWN | translate }}"
+
+      var special_power_up_parameters = null;
       switch(equippedSpecial.name) {
         case 'Suction-Bomb Launcher':
         case 'Burst-Bomb Launcher':
         case 'Curling-Bomb Launcher':
         case 'Autobomb Launcher':
         case 'Splat-Bomb Launcher':
-          coeff = 90;
-          base = 360;
-          this.max = 8.1;
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Bomb Launcher"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var modifier = this.calcRes(special_power_up_parameters, p, s);
+          var max_duration = special_power_up_parameters[0] * equippedSpecial.duration;
+
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
-          this.value = results;
-          this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-          return results.toFixed(2);
-          break;
+          results = equippedSpecial.duration * modifier
+
+          var special_power_up_log = {"Special Power Up":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":modifier}
+          console.log(special_power_up_log);
+
+          this.percentage = ((modifier - 1) * 100).toFixed(1);
+          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
+          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
+          return results;
+          // break; // These shouldn't be needed after returns
         case 'Ink Armor':
           coeff = 60;
           base = 360;

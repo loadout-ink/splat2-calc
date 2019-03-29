@@ -168,6 +168,7 @@ angular
       },
   
       "Special Power Up": {
+          "Bomb Launcher": [1.335,1.237,1.0],
           "Tenta Missiles Cross Paint Ray Length": [30.0, 30.0, 30.0],
           "Ultra Stamp Duration": [660, 600, 540],
           "Baller HP": [6000, 5000, 4000],
