@@ -301,12 +301,12 @@ angular.module('splatApp').stats = function ($scope) {
     }, 1.3),
 
     'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {
-      var special_saved_parameters = null;
+      var special_saver_parameters = null;
       if(loadout.weapon.special == "Splashdown") {
-        special_saved_parameters = $scope.parameters["Special Saver"]["Splashdown"];
+        special_saver_parameters = $scope.parameters["Special Saver"]["Splashdown"];
       }
       else {
-        special_saved_parameters = $scope.parameters["Special Saver"]["default"];        
+        special_saver_parameters = $scope.parameters["Special Saver"]["default"];        
       }
       
       var abilityScore = loadout.calcAbilityScore('Special Saver');
@@ -315,16 +315,27 @@ angular.module('splatApp').stats = function ($scope) {
         this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
       }
 
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(special_saver_parameters);
+      var modifier = this.calcRes(special_saver_parameters, p, s);
+      
+      var special_saved = 100.0 * modifier;
 
-      this.localizedDesc = { desc: null };
-      var y = this.calcMod(abilityScore)
-      var kept = (1/4500) * Math.pow(y,2) + (1/100)*y + 0.5
+      if(loadout.hasAbility('Respawn Punisher')) {
+        special_saved = special_saved * .225;
+      }
 
-      this.value = kept;
-      this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
-      return (kept * 100).toFixed(1);
-    }, 1),
-//TODO: clean this up a bit
+      // Debug log
+      var special_saver_debug_log = {"Special Saver":special_saved,"AP":abilityScore,"Delta":modifier}
+      console.log(special_saver_debug_log);
+
+      this.value = special_saved;
+      this.percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
+      this.localizedDesc = { desc: null }; // TODO: Verify what this actually does      
+      this.label = "{{ LABEL_PERCENT | translate }}".format({value: (special_saved).toFixed(1)});
+      return special_saved.toFixed(1);
+    }, 100),
+
     'Special Power': new Stat("{{ STAT_SPECIAL_POWER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Power Up');
       var equippedSpecial = $scope.getSpecialByName(loadout.weapon.special)

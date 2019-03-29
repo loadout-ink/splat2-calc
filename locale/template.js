@@ -106,7 +106,7 @@ var it_strings = {
   "LABEL_HP": "{{value}} HP",
 
   // Tooltips for stats
-  "DESC_PUNISHER_DISCLAIMER": "Effects with Respawn Punisher aren't fully understood.",
+  "DESC_PUNISHER_DISCLAIMER": "Respawn Punisher is affecting this stat.",
   "DESC_TRACKING": "Point Sensor/Ink Mine duration",
   "DESC_RECOVERY_TIME": "{{value}}s from empty to full",
   "DESC_MAIN_COST": "{{totalShots}} to empty ({{reduction}}% reduction)",
