@@ -115,7 +115,8 @@ var it_strings = {
   "DESC_DISTANCE": "{{value}} Distance Units",
   "DESC_QUICK_RESPAWN": "Respawn time when splatted without splatting others.",
   "UNIT_DISTANCE_UNITS_PER_FRAME": "Distance Units/frame",
-
+  "ROLL_SPEED": "Roll Speed for Rollers and Brushes is constant.",  
+  
   // The "unit" weapons fire in
   // Used in phrases like "200 shots to empty"
   "SHOT_UNIT_SHOT": "shot",

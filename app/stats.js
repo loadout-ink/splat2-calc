@@ -77,7 +77,7 @@ angular.module('splatApp').stats = function ($scope) {
 
       this.value = swim_speed;
       this.percentage = delta;
-      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
+      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
       this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
       return this.value.toFixed(4);
     }, 2.4),
@@ -107,12 +107,12 @@ angular.module('splatApp').stats = function ($scope) {
 
         this.value = run_speed;
         this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)})
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)})
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
         return this.value.toFixed(4);
       }, 1.44),
 
-    'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }}", function(loadout) {
+    'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }} *", function(loadout) {
         // TODO: Verify these results with Leanny
         var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
         var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
@@ -132,23 +132,19 @@ angular.module('splatApp').stats = function ($scope) {
 
         this.value = run_speed
         this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
         return this.value.toFixed(4);
       }, 0.72),
 
     'Run Speed (Firing)': new Stat("{{ STAT_RUN_SPEED_FIRING | translate }}", function(loadout) {
-      // TODO: Figure out rolling speed calculation  
       if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
+          this.value = loadout.weapon.baseSpeed;
+          this.percentage = 0.0;
           this.name = "{{ STAT_RUN_SPEED_ROLLING | translate }}"
-          this.value = 0;
-          this.label = "{{ UNAVAILABLE | translate}}";
-          this.desc = null;
-          return this.value;
-          //var speed = loadout.weapon.baseSpeed;
-          //this.value = speed;
-          //this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
-          //return speed.toFixed(2);
+          this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
+          this.desc = "{{ ROLL_SPEED | translate }}";
+          return this.value.toFixed(2);
         }
         else {
           this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
@@ -167,8 +163,9 @@ angular.module('splatApp').stats = function ($scope) {
 
         this.value = run_speed
         this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(4)});
+        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
         if(isNaN(this.value)) {
           this.value = 0;
           this.label = "{{ UNAVAILABLE | translate}}";
@@ -253,47 +250,76 @@ angular.module('splatApp').stats = function ($scope) {
     }, 100),
 
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
-      this.name = "{{ STAT_SAVER_SUB | translate }}"
-      var coeff = (600 / 7)
-      var sub = $scope.getSubByName(loadout.weapon.sub)
-      if(sub.inkSaver == 'Low') coeff = 100
-      var reduction =  this.calcMod(abilityScore) / coeff
-      // TODO: Hacky 2.0 balance fix. Possibly inaccurate.
-      switch(sub.name) {
-        case 'Burst Bomb':
-          reduction *= (2/3)
-          this.name = "{{ STAT_SAVER_SUB | translate }} *"
-          break
-        case 'Toxic Mist':
-          reduction *= 0.86
-          this.name = "{{ STAT_SAVER_SUB | translate }} *"
-          break
+      var ink_saver_sub_parameters = null;
+      if(loadout.weapon.inkSaver == 'Low') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["Low"];
       }
-      var costPerSub = sub.cost * (1 - reduction)
+      if(loadout.weapon.inkSaver == 'Middle') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["Mid"];
+      }
+      if(loadout.weapon.inkSaver == "High") {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["High"];
+      }      
+      var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(ink_saver_sub_parameters);
+      var reduction = this.calcRes(ink_saver_sub_parameters, p, s);
+      
+      var sub = $scope.getSubByName(loadout.weapon.sub)
+      var costPerSub = sub.cost * reduction;
+
+      this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (100 - (reduction*100)).toFixed(1)})
+      this.label = "{{ LABEL_SUB_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerSub,3)})      
+      this.localizedDesc = { reduction: (100 - (reduction*100)).toFixed(1), desc: 'DESC_SUB_COST' };
       this.value = costPerSub;
-      this.localizedDesc = { reduction: reduction.toFixed(1), desc: 'DESC_SUB_COST' };
-      this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: reduction.toFixed(1)})
-      this.label = "{{ LABEL_SUB_COST | translate }}".format({value: this.value.toFixed(2)})
+      this.percentage = (100 - (reduction*100)).toFixed(1);
+
+      // Debug log
+      var ink_saver_sub_debug_log = {"Ink Saver (Sub)":costPerSub,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
+      console.log(ink_saver_sub_debug_log);
+
       return costPerSub;
     }, 100),
+
     'Special Charge Speed': new Stat("{{ STAT_SPECIAL_CHARGE | translate }}", function(loadout) {
+      var special_charge_speed_parameters = $scope.parameters["Special Charge Up"]["default"]
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
-      var chargeSpeed = (1 + this.calcMod(abilityScore) / 100)
-      this.value = chargeSpeed;
-      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.round(loadout.weapon.specialCost / chargeSpeed)})
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(special_charge_speed_parameters);
+      var special_charge_speed = this.calcRes(special_charge_speed_parameters, p, s);      
+
+      this.value = special_charge_speed;
+      this.percentage = ((special_charge_speed*100) - 100).toFixed(1);
+      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.round(loadout.weapon.specialCost / special_charge_speed)})
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
-      return (chargeSpeed * 100).toFixed(1);
+
+      // Debug log
+      var special_charge_speed_debug_log = {"Special Charge Speed":special_charge_speed,"AP":abilityScore,"P":p,"S":s,"Delta":this.percentage}
+      console.log(special_charge_speed_debug_log);
+
+      return (special_charge_speed * 100).toFixed(1);
     }, 1.3),
+
     'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {
+      var special_saved_parameters = null;
+      if(loadout.weapon.special == "Splashdown") {
+        special_saved_parameters = $scope.parameters["Special Saver"]["Splashdown"];
+      }
+      else {
+        special_saved_parameters = $scope.parameters["Special Saver"]["default"];        
+      }
+      
       var abilityScore = loadout.calcAbilityScore('Special Saver');
+      if(loadout.hasAbility('Respawn Punisher')) {
+        abilityScore = abilityScore * 0.7;
+        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+      }
+
+
       this.localizedDesc = { desc: null };
       var y = this.calcMod(abilityScore)
       var kept = (1/4500) * Math.pow(y,2) + (1/100)*y + 0.5
-      if(loadout.hasAbility('Respawn Punisher')) {
-        kept -= .225;
-        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
-      }
+
       this.value = kept;
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
       return (kept * 100).toFixed(1);
