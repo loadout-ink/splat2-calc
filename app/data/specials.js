@@ -266,6 +266,26 @@ angular.module('splatApp').specials = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",
       duration: 6
+    },
+    {
+      name: "Booyah Bomb",
+      // TODO: These came from the Wiki or Google Translate. May not be correct.
+      localizedName: {
+        "ja_JP": "ナイスダマ",
+        "en_US": "Booyah Bomb",
+        "en_GB": "Booyah Bomb",
+        "es_ES": "Bola genializante",
+        "es_MX": "Bola genializante",
+        "fr_FR": "Jolizator",
+        "fr_CA": "Excellinator",
+        "de_DE": "Cool-Kugel",
+        "it_IT": "Granbotto",
+        "nl_NL": "Coole bom",
+        "ru_RU": "Йо-хо-плюхер Yo-kho-plyukher",
+        "zh_HK": "好球"
+      },
+      image: "../common/assets/img/subspe/Wsp_BooyahBomb.png",
+      duration: 8.5
     }
   ]
 

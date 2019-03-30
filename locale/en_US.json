@@ -60,6 +60,7 @@
   "STAT_SPECIAL_POWER_TENTA": "Special Power<br>(Targeting Radius)",
   "STAT_SPECIAL_POWER_SPLASHDOWN": "Special Power<br>(Lethal Radius)",
   "STAT_SPECIAL_POWER_BUBBLE": "Special Power<br>(Max Bubble Radius)",
+  "STAT_SPECIAL_POWER_BOOYAH": "Special Power<br>(Max Charge Time)",  
   "STAT_SUB_POWER": "Sub Power",
   "STAT_SUB_POWER_RANGE": "Sub Power<br>(Bomb Range)",
   "STAT_SUB_POWER_CURLING": "Sub Power<br>(Bomb Speed)",

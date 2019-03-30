@@ -529,6 +529,25 @@ angular.module('splatApp').stats = function ($scope) {
           this.name = "{{ STAT_SPECIAL_POWER_BUBBLE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(bubble_radius,2)})
           return bubble_radius;
+
+        case 'Booyah Bomb':
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Booyah Ball Auto Charge Increase"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var modifier = this.calcRes(special_power_up_parameters, p, s);
+          var charge_time = equippedSpecial.duration - (equippedSpecial.duration * modifier);
+          var max_charge_time = equippedSpecial.duration - (equippedSpecial.duration * special_power_up_parameters[2]);
+          var min_charge_time = equippedSpecial.duration - (equippedSpecial.duration * special_power_up_parameters[0]);
+        
+          this.percentage = Math.abs(((charge_time/max_charge_time - 1) * 100).toFixed(2));
+          this.value = 100 - (this.percentage * 100);
+          
+          var special_power_up_log = {"Special Power Up (Booyah Bomb)":charge_time,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+
+          this.name = "{{ STAT_SPECIAL_POWER_BOOYAH | translate }}";
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(charge_time,4)})
+          return charge_time;
       }
       return 0; // Default return value
     }, 100),

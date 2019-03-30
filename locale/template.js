@@ -83,6 +83,7 @@ var it_strings = {
   "STAT_SPECIAL_POWER_TENTA": "Special Power (Targeting Radius)",
   "STAT_SPECIAL_POWER_SPLASHDOWN": "Special Power (Lethal Radius)",
   "STAT_SPECIAL_POWER_BUBBLE": "Special Power (Max Bubble Radius)",
+  "STAT_SPECIAL_POWER_BOOYAH": "Special Power (Max Charge Time)",
   "STAT_SUB_POWER": "Sub Power",
   "STAT_SUB_POWER_RANGE": "Sub Power (Bomb Range)",
   "STAT_SUB_POWER_CURLING": "Sub Power (Bomb Speed)",

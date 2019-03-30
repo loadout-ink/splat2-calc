@@ -578,6 +578,40 @@ angular.module('splatApp').weapons = function ($scope) {
         "id": 16
       },
       {
+        "image": "../common/assets/img/weapons/S2_Weapon_Main_Kensa_.52_Gal.png",
+        "name": "Kensa .52 Gal",
+        // TODO: Missing translations (wiki only has 2)
+        "localizedName": {
+          "ja_JP": ".52ガロンベッチュー",
+          "en_US": "Kensa .52 Gal",
+          "en_GB": "Kensa .52 Gal",
+          "es_ES": "Kensa .52 Gal",
+          "es_MX": "Salpicadora 2000 Tonken",
+          "fr_FR": "Kensa .52 Gal",
+          "fr_CA": "Kensa .52 Gal",
+          "de_DE": "Kensa .52 Gal",
+          "it_IT": "Toni Kensa .52 Kaliter",
+          "nl_NL": "Kensa .52 Gal",
+          "ru_RU": "Kensa .52 Gal"
+        },
+        "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
+        "sub": "Splash Wall",
+        "special": "Booyah Bomb",
+        "level": 25,
+        "specialCost": 180,
+        "inkSaver": "Middle",
+        "inkPerShot": 1.3,
+        "speedLevel": "Middle",
+        "baseSpeed": 0.6,
+        "price": 15600,
+        "stats": {
+          "{{ SHELDON_RANGE | translate }}": 55,
+          "{{ SHELDON_FIRE_RATE | translate }}": 25,
+          "{{ SHELDON_DAMAGE | translate }}": 75
+        },
+        "id": 27 // TODO: Will need to re-do all weapon IDs if UI sorts by this      
+      },
+      {
         "image": "../common/assets/img/weapons/Wst_Shooter_Heavy_00.png",
         "name": ".96 Gal",
         "localizedName": {
