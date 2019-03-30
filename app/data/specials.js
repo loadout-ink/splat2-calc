@@ -85,7 +85,11 @@ angular.module('splatApp').specials = function ($scope) {
         "ru_RU": "Пузырятор",
         "zh_HK": "バブルランチャー (吹波波)"
       },
-      image: "../common/assets/img/subspe/Wsp_SuperBubble.png"
+      image: "../common/assets/img/subspe/Wsp_SuperBubble.png",
+      radius: {
+        "Max": 30.0,
+        "Min": 15.0,
+      }
     },
     {
       name: "Ink Armor",

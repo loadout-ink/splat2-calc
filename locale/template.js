@@ -80,9 +80,9 @@ var it_strings = {
   "STAT_SPECIAL_POWER_UNKNOWN": "Special Power (???)",
   "STAT_SPECIAL_POWER_DURATION": "Special Power (Duration)",
   "STAT_SPECIAL_POWER_BALLER": "Special Power (Baller HP)",
-  "STAT_SPECIAL_POWER_TENTA": "Special Power (Reticule Size)",
-  "STAT_SPECIAL_POWER_SPLASHDOWN": "Special Power (Splash Diameter)",
-  "STAT_SPECIAL_POWER_BUBBLE": "Special Power (Bubble Radius)",
+  "STAT_SPECIAL_POWER_TENTA": "Special Power (Targeting Radius)",
+  "STAT_SPECIAL_POWER_SPLASHDOWN": "Special Power (Lethal Radius)",
+  "STAT_SPECIAL_POWER_BUBBLE": "Special Power (Max Bubble Radius)",
   "STAT_SUB_POWER": "Sub Power",
   "STAT_SUB_POWER_RANGE": "Sub Power (Bomb Range)",
   "STAT_SUB_POWER_CURLING": "Sub Power (Bomb Speed)",
@@ -104,6 +104,7 @@ var it_strings = {
   "LABEL_SUB_COST": "{{value}}% tank",
   "LABEL_TIME": "{{value}}s",
   "LABEL_HP": "{{value}} HP",
+  "LABEL_NO_UNIT": "{{value}}",
 
   // Tooltips for stats
   "DESC_PUNISHER_DISCLAIMER": "Respawn Punisher is affecting this stat.",

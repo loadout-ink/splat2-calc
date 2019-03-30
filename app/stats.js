@@ -339,124 +339,200 @@ angular.module('splatApp').stats = function ($scope) {
     'Special Power': new Stat("{{ STAT_SPECIAL_POWER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Special Power Up');
       var equippedSpecial = $scope.getSpecialByName(loadout.weapon.special)
-      var coeff = 0;
-      var base = 0;
-      var results = 0;
       this.desc = null;
       this.name = "{{ STAT_SPECIAL_POWER_UNKNOWN | translate }}"
 
       var special_power_up_parameters = null;
       switch(equippedSpecial.name) {
-        case 'Suction-Bomb Launcher':
-        case 'Burst-Bomb Launcher':
         case 'Curling-Bomb Launcher':
-        case 'Autobomb Launcher':
-        case 'Splat-Bomb Launcher':
-          special_power_up_parameters = $scope.parameters["Special Power Up"]["Bomb Launcher"];
-          var p = this.calcP(abilityScore);      
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Curling Bomb Launcher"];
+          var p = this.calcP(abilityScore);
           var s = this.calcS(special_power_up_parameters);
-          var modifier = this.calcRes(special_power_up_parameters, p, s);
-          var max_duration = special_power_up_parameters[0] * equippedSpecial.duration;
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
 
-          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = equippedSpecial.duration * modifier
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
 
-          var special_power_up_log = {"Special Power Up (Bomb Launcher)":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":modifier}
+          var special_power_up_log = {"Special Power Up (Curling Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
           console.log(special_power_up_log);
 
-          this.percentage = ((modifier - 1) * 100).toFixed(1);
-          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
-          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
-          return results;
-          // break; // These shouldn't be needed after returns
+          this.percentage = $scope.toFixedTrimmed((((duration/min_duration) - 1) * 100),2);
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
+        case 'Suction-Bomb Launcher':
+        case 'Burst-Bomb Launcher':
+        case 'Autobomb Launcher':
+        case 'Splat-Bomb Launcher':
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Other Bomb Launcher"];
+          var p = this.calcP(abilityScore);
+          var s = this.calcS(special_power_up_parameters);
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
+
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
+
+          var special_power_up_log = {"Special Power Up (Other Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
+          console.log(special_power_up_log);
+
+          this.percentage = $scope.toFixedTrimmed((((duration/min_duration) - 1) * 100),2);
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
         case 'Ink Armor':
           special_power_up_parameters = $scope.parameters["Special Power Up"]["Ink Armor Duration"];
           var p = this.calcP(abilityScore);      
           var s = this.calcS(special_power_up_parameters);
-          var results = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
           var max_duration = special_power_up_parameters[0] / 60;
           var min_duration = special_power_up_parameters[2] / 60;
 
-          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
-          this.percentage = ((results/min_duration - 1) * 100).toFixed(1);
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Ink Armor)":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          var special_power_up_log = {"Special Power Up (Ink Armor)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
           console.log(special_power_up_log);
           
-          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"          
-          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
-          return results.toFixed(2);
-          // break;
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
         case 'Inkjet':
-          // NOTE: This is using parameters Selicia derived from old data combined with patch notes
           special_power_up_parameters = $scope.parameters["Special Power Up"]["Inkjet Duration"];
           var p = this.calcP(abilityScore);      
           var s = this.calcS(special_power_up_parameters);
-          var results = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
           var max_duration = special_power_up_parameters[0] / 60;
           var min_duration = special_power_up_parameters[2] / 60;
 
-          this.value = $scope.toFixedTrimmed((results/max_duration) * 100,2);
-          this.percentage = ((results/min_duration - 1) * 100).toFixed(1);
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Inkjet Duration":results,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          var special_power_up_log = {"Special Power Up (Inkjet)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
           console.log(special_power_up_log);
           
-          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"          
-          this.label = "{{ LABEL_TIME | translate }}".format({value: results.toFixed(2)});
-          return results.toFixed(2);
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
         case 'Ink Storm':
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Ink Storm Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
+
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+          
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";     
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
         case 'Sting Ray':
-          coeff = 120;
-          base = 465;
-          this.max = 10;
-          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}"
-          results = (base * (1 +this.calcMod(abilityScore) / coeff))/60
-          this.value = results;
-          this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-          return results.toFixed(2);
-          break;
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Ink Storm Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
+          var max_duration = special_power_up_parameters[0] / 60;
+          var min_duration = special_power_up_parameters[2] / 60;
+
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+          
+          this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";        
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+          return duration;
+
         case 'Baller':
-          coeff = 60;
-          base = 400;
-          this.max = 600;
-          this.name = "{{ STAT_SPECIAL_POWER_BALLER | translate }}"
-          results = (base * (1 +this.calcMod(abilityScore) / coeff))
-          this.value = results;
-          this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
-          return results.toFixed(1);
-          break;
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Baller HP"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var health = this.calcRes(special_power_up_parameters, p, s) / 10;
+          var max_health = special_power_up_parameters[0] / 10;
+          var min_health = special_power_up_parameters[2] / 10;
+
+          this.value = $scope.toFixedTrimmed((health/max_health) * 100,2);
+          this.percentage = ((health/min_health - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Special Power Up (Baller)":health,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+          
+          this.name = "{{ STAT_SPECIAL_POWER_BALLER | translate }}";       
+          this.label = "{{ LABEL_HP | translate }}".format({value: $scope.toFixedTrimmed(health,2)});
+          return health;
+
         case 'Tenta Missiles':
-          coeff = 45;
-          base = 4.8;
-          this.max = 8;
-          this.max = '166'
-          this.name = "{{ STAT_SPECIAL_POWER_TENTA | translate }}"
-          results = (1 +this.calcMod(abilityScore) / coeff)*100
-          this.value = results;
-          this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
-          return results.toFixed(1);
-          break;
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Tenta Missiles Target Circle Radius"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var targeting_radius = this.calcRes(special_power_up_parameters, p, s);
+          var max_targeting_radius = special_power_up_parameters[0];
+          var min_targeting_radius = special_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((targeting_radius/max_targeting_radius) * 100,2);
+          this.percentage = ((targeting_radius/min_targeting_radius - 1) * 100).toFixed(1);
+
+          var special_power_up_log = {"Special Power Up (Tenta Missiles)":targeting_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+
+          this.name = "{{ STAT_SPECIAL_POWER_TENTA | translate }}";
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(targeting_radius,2)})
+          return targeting_radius;
+
         case 'Splashdown':
-          coeff = 110;
-          base = 110;
-          this.max = 1.274;
-          this.name = "{{ STAT_SPECIAL_POWER_SPLASHDOWN | translate }}"
-          results = (1 +this.calcMod(abilityScore) / coeff)
-          this.desc = "{{ DESC_DISTANCE | translate }}".format({value: (base*results).toFixed(1)})
-          this.value = results;
-          this.label = "{{ LABEL_PERCENT | translate }}".format({value: (results*100).toFixed(1)})
-          return (results*100).toFixed(1);
-          break;
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Splash Down Burst Radius Close"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var lethal_radius = this.calcRes(special_power_up_parameters, p, s);
+          var max_lethal_radius = special_power_up_parameters[0];
+          var min_lethal_radius = special_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((lethal_radius/max_lethal_radius) * 100,2);
+          this.percentage = ((lethal_radius/min_lethal_radius - 1) * 100).toFixed(1);
+          
+          var special_power_up_log = {"Special Power Up (Splashdown)":lethal_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+
+          this.name = "{{ STAT_SPECIAL_POWER_SPLASHDOWN | translate }}";
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(lethal_radius,2)})
+          // TODO: Ask Leanny how to convert the Lethal Radius values to Distance Units (DU/f)
+          // this.desc = "{{ DESC_DISTANCE | translate }}".format({value: (base*results).toFixed(1)})
+          return lethal_radius;
+
         case 'Bubble Blower':
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Bubble Blower Bubble Radius Multiplier"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(special_power_up_parameters);
+          var modifier = this.calcRes(special_power_up_parameters, p, s);
+          var max_bubble_radius = special_power_up_parameters[0] * equippedSpecial.radius["Max"];
+          var min_bubble_radius = special_power_up_parameters[2] * equippedSpecial.radius["Max"];
+          var bubble_radius = modifier * equippedSpecial.radius["Max"];
+
+          this.value = $scope.toFixedTrimmed((bubble_radius/max_bubble_radius) * 100,2);
+          this.percentage = ((bubble_radius/min_bubble_radius - 1) * 100).toFixed(1);
+          
+          var special_power_up_log = {"Special Power Up (Bubble Blower)":bubble_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+
           this.name = "{{ STAT_SPECIAL_POWER_BUBBLE | translate }}";
-          this.value = 0;
-          this.label = "{{ UNAVAILABLE | translate }}";
-          break;
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(bubble_radius,2)})
+          return bubble_radius;
       }
-      return results;
+      return 0; // Default return value
     }, 100),
-//TODO: get effects for all subs
+
     'Sub Power': new Stat("{{ STAT_SUB_POWER | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Sub Power Up');
       var equippedSub = $scope.getSubByName(loadout.weapon.sub)
