@@ -244,6 +244,55 @@ angular.module('splatApp').subs = function ($scope) {
       image: "../common/assets/img/subspe/Wsb_Shield.png",
       cost: 60,
       inkSaver: "Normal"
+    },
+    {
+      name: "Torpedo",
+      localizedName: {
+        "ja_JP": "トーピード",
+        "en_US": "Torpedo",
+        "en_GB": "Torpedo",
+        "es_ES": "",
+        "es_MX": "",
+        "fr_FR": "Bentorpille",
+        "fr_CA": "Bentorpille",
+        "de_DE": "",
+        "it_IT": "Torpedinatore",
+        "nl_NL": "Torpedobom",
+        "ru_RU": "Торпедная бомба",
+        "zh_HK": ""  
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Tako.png",
+      cost: 65,
+      inkSaver: "Normal",
+      damage: {
+        "Direct": 60,
+        "Near": 35,
+        "Far": 12
+      }
+    },
+    {
+      name: "Fizzy Bomb",
+      localizedName: {
+        "ja_JP": "タンサンボム",
+        "en_US": "Fizzy Bomb",
+        "en_GB": "Fizzy Bomb",
+        "es_ES": "Bomba carbónica",
+        "es_MX": "Bomba carbónica",
+        "fr_FR": "Bombe soda",
+        "fr_CA": "Bombe soda",
+        "de_DE": "Sprudel-Bombe",
+        "it_IT": "Bomba a gassosa",
+        "nl_NL": "Bomblikje",
+        "ru_RU": "Содовая бомба",
+        "zh_HK": ""  
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Piyo.png",
+      cost: 60,
+      inkSaver: "Normal",
+      damage: {
+        "Direct": 50,
+        "Near": 35
+      }
     }
   ]
 
