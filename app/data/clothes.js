@@ -3491,601 +3491,916 @@ angular.module('splatApp').clothes = function($scope) {
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT001.png",
-    "name": "Rodeo Shirt", // TODO: Resume here
+    "name": "Rodeo Shirt",
+    "localizedName": {
+      "ja_JP": "イカスタンシャツ",
+      "en_US": "Rodeo Shirt",
+      "en_GB": "Rodeo Shirt",
+      "es_ES": "Camisa de época",
+      "es_MX": "Camisa de época",
+      "fr_FR": "Chemise excentrique",
+      "fr_CA": "Chemise excentrique",
+      "de_DE": "Rodeo-Hemd",
+      "nl_NL": "Rodeohemd",
+      "ru_RU": "Ковбойка",
+      "it_IT": "Camicia hipsterica"
+    },
     "main": "Quick Super Jump",
     "brand": "Krak-On",
     "stars": 1,
     "id": 177,
-    "splatnet": 8001,
-    "localizedName": {
-      "ja_JP": "\u30a4\u30ab\u30b9\u30bf\u30f3\u30b7\u30e3\u30c4",
-      "en_US": "Rodeo Shirt"
-    }
+    "splatnet": 8001
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT002.png",
     "name": "Green-Check Shirt",
+    "localizedName": {
+      "ja_JP": "ギンガムチェック ミドリ",
+      "en_US": "Green-Check Shirt",
+      "en_GB": "Green-Check Shirt",
+      "es_ES": "Camisa cuadros verdes",
+      "es_MX": "Camisa cuadros verdes",
+      "fr_FR": "Chemise vichy verte",
+      "fr_CA": "Chemise vichy verte",
+      "de_DE": "Grünes Karohemd",
+      "nl_NL": "Groen ruitjeshemd",
+      "ru_RU": "Рубашка в клетку",
+      "it_IT": "Camicia a quadri"
+    },
     "main": "Sub Power Up",
     "brand": "Zekko",
     "stars": 2,
     "id": 178,
-    "splatnet": 8002,
-    "localizedName": {
-      "ja_JP": "\u30ae\u30f3\u30ac\u30e0\u30c1\u30a7\u30c3\u30af \u30df\u30c9\u30ea",
-      "en_US": "Green-Check Shirt"
-    }
+    "splatnet": 8002
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT003.png",
     "name": "White Shirt",
+    "localizedName": {
+      "ja_JP": "シロシャツ",
+      "en_US": "White Shirt",
+      "en_GB": "White Shirt",
+      "es_ES": "Camisa blanca",
+      "es_MX": "Camisa blanca",
+      "fr_FR": "Chemisette blanche",
+      "fr_CA": "Chemisette blanche",
+      "de_DE": "Weißes Kurzarmhemd",
+      "nl_NL": "Wit overhemd",
+      "ru_RU": "Белая рубашка",
+      "it_IT": "Camicia bianca"
+    },
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
     "stars": 3,
     "id": 179,
-    "splatnet": 8003,
-    "localizedName": {
-      "ja_JP": "\u30b7\u30ed\u30b7\u30e3\u30c4",
-      "en_US": "White Shirt"
-    }
+    "splatnet": 8003
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT004.png",
     "name": "Urchins Jersey",
+    "localizedName": {
+      "ja_JP": "ウーニーズBBシャツ",
+      "en_US": "Urchins Jersey",
+      "en_GB": "Urchins Jersey",
+      "es_ES": "Camisa béisbol",
+      "es_MX": "Camisa béisbol",
+      "fr_FR": "Chemisette baseball",
+      "fr_CA": "Chemisette baseball",
+      "de_DE": "Urchins-Baseball-Trikot",
+      "nl_NL": "Honkbalshirt",
+      "ru_RU": "Майка БК «Ежи»",
+      "it_IT": "Divisa AS Riccidimare"
+    },
     "main": "Run Speed Up",
     "brand": "Zink",
     "stars": 1,
     "id": 180,
-    "splatnet": 8004,
-    "localizedName": {
-      "ja_JP": "\u30a6\u30fc\u30cb\u30fc\u30baBB\u30b7\u30e3\u30c4",
-      "en_US": "Urchins Jersey"
-    }
+    "splatnet": 8004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT005.png",
     "name": "Aloha Shirt",
+    "localizedName": {
+      "ja_JP": "おどるイカアロハ",
+      "en_US": "Aloha Shirt",
+      "en_GB": "Aloha Shirt",
+      "es_ES": "Camisa tropical",
+      "es_MX": "Camisa tropical",
+      "fr_FR": "Chemisette tropiques",
+      "fr_CA": "Chemise hawaiienne",
+      "de_DE": "Hawaiihemd",
+      "nl_NL": "Hawaïhemd",
+      "ru_RU": "Голубая гавайка",
+      "it_IT": "Camicia floreale"
+    },
     "main": "Ink Recovery Up",
     "brand": "Forge",
     "stars": 1,
     "id": 181,
-    "splatnet": 8005,
-    "localizedName": {
-      "ja_JP": "\u304a\u3069\u308b\u30a4\u30ab\u30a2\u30ed\u30cf",
-      "en_US": "Aloha Shirt"
-    }
+    "splatnet": 8005
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT006.png",
     "name": "Red-Check Shirt",
+    "localizedName": {
+      "ja_JP": "ギンガムチェック アカ",
+      "en_US": "Red-Check Shirt"
+    },
     "main": "Ink Saver (Main)",
     "brand": "Zekko",
     "stars": 2,
     "id": 182,
-    "splatnet": 8006,
-    "localizedName": {
-      "ja_JP": "\u30ae\u30f3\u30ac\u30e0\u30c1\u30a7\u30c3\u30af \u30a2\u30ab",
-      "en_US": "Red-Check Shirt"
-    }
+    "splatnet": 8006
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT007.png",
     "name": "Baby-Jelly Shirt",
+    "localizedName": {
+      "ja_JP": "ベイビークラゲシャツ",
+      "en_US": "Baby-Jelly Shirt",
+      "en_GB": "Baby-Jelly Shirt",
+      "es_ES": "Camisa medusas",
+      "es_MX": "Camisa aguamalas",
+      "fr_FR": "Chemise méduses",
+      "fr_CA": "Chemise méduses",
+      "de_DE": "Quallen-Hemd",
+      "nl_NL": "Kwallenhemd",
+      "ru_RU": "Рубашка «Медуза»",
+      "it_IT": "Camicia meduse"
+    },
     "main": "Bomb Defense Up DX",
     "brand": "Splash Mob",
     "stars": 1,
     "id": 183,
-    "splatnet": 8007,
-    "localizedName": {
-      "ja_JP": "\u30d9\u30a4\u30d3\u30fc\u30af\u30e9\u30b2\u30b7\u30e3\u30c4",
-      "en_US": "Baby-Jelly Shirt"
-    }
+    "splatnet": 8007
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT008.png",
     "name": "Baseball Jersey",
+    "localizedName": {
+      "ja_JP": "ミスターベースボール",
+      "en_US": "Baseball Jersey",
+      "en_GB": "Baseball Jersey",
+      "es_ES": "Uniforme béisbol",
+      "es_MX": "Uniforme béisbol",
+      "fr_FR": "Maillot baseball long",
+      "fr_CA": "Gilet de baseball",
+      "de_DE": "Baseball-Lagen-Hoodie",
+      "nl_NL": "Honkbalshirt met lange mouwen",
+      "ru_RU": "Бейсбольная толстовка",
+      "it_IT": "Maglia da baseball"
+    },
     "main": "Special Charge Up",
     "brand": "Firefin",
     "stars": 3,
     "id": 184,
-    "splatnet": 8008,
-    "localizedName": {
-      "ja_JP": "\u30df\u30b9\u30bf\u30fc\u30d9\u30fc\u30b9\u30dc\u30fc\u30eb",
-      "en_US": "Baseball Jersey"
-    }
+    "splatnet": 8008
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT009.png",
     "name": "Gray Mixed Shirt",
+    "localizedName": {
+      "ja_JP": "ミックスシャツグレー",
+      "en_US": "Gray Mixed Shirt",
+      "en_GB": "Gray Mixed Shirt",
+      "es_ES": "Camisa tonos grises",
+      "es_MX": "Camisa tonos gris",
+      "fr_FR": "Chemise grise",
+      "fr_CA": "Chemise grise",
+      "de_DE": "Graues Karodetail-Hemd",
+      "nl_NL": "Grijs overhemd",
+      "ru_RU": "Рубашка со вставками",
+      "it_IT": "Camicia grigia"
+    },
     "main": "Quick Super Jump",
     "brand": "Zekko",
     "stars": 2,
     "id": 185,
-    "splatnet": 8009,
-    "localizedName": {
-      "ja_JP": "\u30df\u30c3\u30af\u30b9\u30b7\u30e3\u30c4 \u30b0\u30ec\u30fc",
-      "en_US": "Gray Mixed Shirt"
-    }
+    "splatnet": 8009
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT010.png",
     "name": "Vintage Check Shirt",
+    "localizedName": {
+      "ja_JP": "ヴィンテージチェック",
+      "en_US": "Vintage Check Shirt",
+      "en_GB": "Vintage Check Shirt",
+      "es_ES": "Camisa cuadros retro",
+      "es_MX": "Camisa cuadros retro",
+      "fr_FR": "Chemise à carreaux rétro",
+      "fr_CA": "Chemise à carreaux rétro",
+      "de_DE": "Retro-Karohemd",
+      "nl_NL": "Ouderwets ruitjeshemd",
+      "ru_RU": "Винтажная рубашка",
+      "it_IT": "Camicia vintage"
+    },
     "main": "Haunt",
     "brand": "Rockenberg",
     "stars": 3,
     "id": 186,
-    "splatnet": 8010,
-    "localizedName": {
-      "ja_JP": "\u30f4\u30a3\u30f3\u30c6\u30fc\u30b8\u30c1\u30a7\u30c3\u30af",
-      "en_US": "Vintage Check Shirt"
-    }
+    "splatnet": 8010
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT011.png",
     "name": "Round-Collar Shirt",
+    "localizedName": {
+      "ja_JP": "マルエリシャツ",
+      "en_US": "Round-Collar Shirt",
+      "en_GB": "Round-Collar Shirt",
+      "es_ES": "Camisa cuello redondo",
+      "es_MX": "Camisa cuello redondo",
+      "fr_FR": "Chemisette grise",
+      "fr_CA": "Chemisette grise",
+      "de_DE": "Bubikragen-Hemd",
+      "nl_NL": "Paars overhemd",
+      "ru_RU": "Клубная рубашка",
+      "it_IT": "Camicia corta grigia"
+    },
     "main": "Ink Saver (Sub)",
     "brand": "Rockenberg",
     "stars": 2,
     "id": 187,
-    "splatnet": 8011,
-    "localizedName": {
-      "ja_JP": "\u30de\u30eb\u30a8\u30ea\u30b7\u30e3\u30c4",
-      "en_US": "Round-Collar Shirt"
-    }
+    "splatnet": 8011
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT012.png",
     "name": "Logo Aloha Shirt",
+    "localizedName": {
+      "ja_JP": "ロゴマシマシアロハ",
+      "en_US": "Logo Aloha Shirt",
+      "en_GB": "Logo Aloha Shirt",
+      "es_ES": "Camisa marcas",
+      "es_MX": "Camisa marcas",
+      "fr_FR": "Chemisette à logos",
+      "fr_CA": "Chemisette à logos",
+      "de_DE": "Logo-Hawaiihemd",
+      "nl_NL": "Logo-overhemd",
+      "ru_RU": "Гавайка с логотипами",
+      "it_IT": "Camicia hawaiana"
+    },
     "main": "Ink Recovery Up",
     "brand": "Zekko",
     "stars": 2,
     "id": 188,
-    "splatnet": 8012,
-    "localizedName": {
-      "ja_JP": "\u30ed\u30b4\u30de\u30b7\u30de\u30b7\u30a2\u30ed\u30cf",
-      "en_US": "Logo Aloha Shirt"
-    }
+    "splatnet": 8012
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT013.png",
     "name": "Striped Shirt",
+    "localizedName": {
+      "ja_JP": "ブロックストライプシャツ",
+      "en_US": "Striped Shirt",
+      "en_GB": "Striped Shirt",
+      "es_ES": "Camisa rayas",
+      "es_MX": "Camisa rayas",
+      "fr_FR": "Chemise à rayures",
+      "fr_CA": "Chemise à rayures",
+      "de_DE": "Streifenhemd",
+      "nl_NL": "Gestreept overhemd",
+      "ru_RU": "Рубашка в полоску",
+      "it_IT": "Camicia a righe"
+    },
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
     "stars": 2,
     "id": 189,
-    "splatnet": 8013,
-    "localizedName": {
-      "ja_JP": "\u30d6\u30ed\u30c3\u30af\u30b9\u30c8\u30e9\u30a4\u30d7\u30b7\u30e3\u30c4",
-      "en_US": "Striped Shirt"
-    }
+    "splatnet": 8013
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT014.png",
     "name": "Linen Shirt",
+    "localizedName": {
+      "ja_JP": "シャンブレーシャツ",
+      "en_US": "Linen Shirt",
+      "en_GB": "Linen Shirt",
+      "es_ES": "Camisa lino",
+      "es_MX": "Camisa lino",
+      "fr_FR": "Chemisette en lin",
+      "fr_CA": "Chemisette en lin",
+      "de_DE": "Leinenhemd",
+      "nl_NL": "Linnen overhemd",
+      "ru_RU": "Льняная рубашка",
+      "it_IT": "Camicia di lino"
+    },
     "main": "Sub Power Up",
     "brand": "Splash Mob",
     "stars": 1,
     "id": 190,
-    "splatnet": 8014,
-    "localizedName": {
-      "ja_JP": "\u30b7\u30e3\u30f3\u30d6\u30ec\u30fc\u30b7\u30e3\u30c4",
-      "en_US": "Linen Shirt"
-    }
+    "splatnet": 8014
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT015.png",
     "name": "Shirt & Tie",
+    "localizedName": {
+      "ja_JP": "タイシャツ",
+      "en_US": "Shirt & Tie",
+      "en_GB": "Shirt & Tie",
+      "es_ES": "Camisa con corbata",
+      "es_MX": "Camisa con corbata",
+      "fr_FR": "Chemise cravate",
+      "fr_CA": "Chemise cravate",
+      "de_DE": "Hemd mit Krawatte",
+      "nl_NL": "Kantooroverhemd",
+      "ru_RU": "«Офисный планктон»",
+      "it_IT": "Camicia con cravatta"
+    },
     "main": "Special Saver",
     "brand": "Splash Mob",
     "stars": 3,
     "id": 191,
-    "splatnet": 8015,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30a4\u30b7\u30e3\u30c4",
-      "en_US": "Shirt & Tie"
-    }
+    "splatnet": 8015
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT017.png",
     "name": "Hula Punk Shirt",
+    "localizedName": {
+      "ja_JP": "ピーターパンクシャツ",
+      "en_US": "Hula Punk Shirt",
+      "en_GB": "Hula Punk Shirt",
+      "es_ES": "Camisa estampada",
+      "es_MX": "Camiseta roquera tropical",
+      "fr_FR": "Chemisette punk farniente",
+      "fr_CA": "Chemisette punk tropicale",
+      "de_DE": "Hula-Punk-Hemd",
+      "nl_NL": "Visaas-overhemd",
+      "ru_RU": "Гавайка «Планк-панк»",
+      "it_IT": "Camicia da turista"
+    },
     "main": "Ink Saver (Main)",
     "brand": "Annaki",
     "stars": 2,
     "id": 192,
-    "splatnet": 8017,
-    "localizedName": {
-      "ja_JP": "\u30d4\u30fc\u30bf\u30fc\u30d1\u30f3\u30af\u30b7\u30e3\u30c4",
-      "en_US": "Hula Punk Shirt"
-    }
+    "splatnet": 8017
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT018.png",
     "name": "Octobowler Shirt",
+    "localizedName": {
+      "ja_JP": "タコボウラーシャツ",
+      "en_US": "Octobowler Shirt",
+      "en_GB": "Octobowler Shirt",
+      "es_ES": "Camisa bolos",
+      "es_MX": "Camisa bolos",
+      "fr_FR": "Chemisette de bowling",
+      "fr_CA": "Chemisette de bowling",
+      "de_DE": "Oktobowler-Hemd",
+      "nl_NL": "Octobowler-hemd",
+      "ru_RU": "Поло «Осьмобоулинг»",
+      "it_IT": "Camicia da octobowling"
+    },
     "main": "Ink Saver (Main)",
     "brand": "Krak-On",
     "stars": 2,
     "id": 193,
-    "splatnet": 8018,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30b3\u30dc\u30a6\u30e9\u30fc\u30b7\u30e3\u30c4",
-      "en_US": "Octobowler Shirt"
-    }
+    "splatnet": 8018
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT019.png",
     "name": "Inkfall Shirt",
+    "localizedName": {
+      "ja_JP": "スミカケシャツ",
+      "en_US": "Inkfall Shirt",
+      "en_GB": "Inkfall Shirt",
+      "es_ES": "Camisa entintada",
+      "es_MX": "Camisa entintada",
+      "fr_FR": "Chemise tache d'encre",
+      "fr_CA": "Chemise tache d'encre",
+      "de_DE": "Ink Blocking-Hemd",
+      "nl_NL": "Inktvlekhemd",
+      "ru_RU": "Рубашка «Клякса»",
+      "it_IT": "Camicia inchiostrata"
+    },
     "main": "Special Charge Up",
     "brand": "Toni Kensa",
     "stars": 2,
     "id": 194,
-    "splatnet": 8019,
-    "localizedName": {
-      "ja_JP": "\u30b9\u30df\u30ab\u30b1\u30b7\u30e3\u30c4",
-      "en_US": "Inkfall Shirt"
-    }
+    "splatnet": 8019
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT020.png",
     "name": "Crimson Parashooter",
+    "localizedName": {
+      "ja_JP": "パラシューター ザクロ",
+      "en_US": "Crimson Parashooter",
+      "en_GB": "Crimson Parashooter",
+      "es_ES": "Paracaidista carmesí",
+      "es_MX": "Paracaidista carmesí",
+      "fr_FR": "Haut parachute grenat",
+      "fr_CA": "Haut parachute grenat",
+      "de_DE": "Rote Fallschirmjacke",
+      "nl_NL": "Rode parachutistenjas",
+      "ru_RU": "Красная парашютка",
+      "it_IT": "Giacca paracadute cremisi"
+    },
     "main": "Special Charge Up",
     "brand": "Annaki",
     "stars": 3,
     "id": 195,
-    "splatnet": 8020,
-    "localizedName": {
-      "ja_JP": "\u30d1\u30e9\u30b7\u30e5\u30fc\u30bf\u30fc \u30b6\u30af\u30ed",
-      "en_US": "Crimson Parashooter"
-    }
+    "splatnet": 8020
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT021.png",
     "name": "Baby-Jelly Shirt & Tie",
+    "localizedName": {
+      "ja_JP": "タイツキベイビークラゲ",
+      "en_US": "Baby-Jelly Shirt & Tie",
+      "en_GB": "Baby-Jelly Shirt & Tie",
+      "es_ES": "Camisa medusas con corbata",
+      "es_MX": "Camisa medusas con corbata",
+      "fr_FR": "Chemise cravate méduses",
+      "fr_CA": "Chemise cravate méduses",
+      "de_DE": "Quallen-Hemd mit Krawatte",
+      "nl_NL": "Kwallenhemd met stropdas",
+      "ru_RU": "Рубашка с медузами",
+      "it_IT": "Camicia meduse con cravatta"
+    },
     "main": "Main Power Up",
     "brand": "Splash Mob",
     "stars": 2,
     "id": 196,
-    "splatnet": 8021,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30a4\u30c4\u30ad\u30d9\u30a4\u30d3\u30fc\u30af\u30e9\u30b2",
-      "en_US": "Baby-Jelly Shirt & Tie"
-    }
+    "splatnet": 8021
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT022.png",
     "name": "Prune Parashooter",
+    "localizedName": {
+      "ja_JP": "パラシューター プルーン",
+      "en_US": "Prune Parashooter",
+      "en_GB": "Prune Parashooter",
+      "es_ES": "Paracaidista arándano",
+      "es_MX": "Paracaidista arándano",
+      "fr_FR": "Haut parachute bleu nuit",
+      "fr_CA": "Manteau parachute bleu nuit",
+      "de_DE": "Blaue Fallschirmjacke",
+      "nl_NL": "Blauwe parachutistenjas",
+      "ru_RU": "Сливовая парашютка",
+      "it_IT": "Giacca paracadute cobalto"
+    },
     "main": "Ninja Squid",
     "brand": "Annaki",
     "stars": 3,
     "id": 197,
-    "splatnet": 8022,
-    "localizedName": {
-      "ja_JP": "\u30d1\u30e9\u30b7\u30e5\u30fc\u30bf\u30fc \u30d7\u30eb\u30fc\u30f3",
-      "en_US": "Prune Parashooter"
-    }
+    "splatnet": 8022
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT023.png",
     "name": "Red Hula Punk with Tie",
+    "localizedName": {
+      "ja_JP": "ピーターパンクタイ ブラッド",
+      "en_US": "Red Hula Punk with Tie",
+      "en_GB": "Red Hula Punk with Tie",
+      "es_ES": "Camisa estampada corbata",
+      "es_MX": "Camisa estampada corbata",
+      "fr_FR": "Chemise cravate punk",
+      "fr_CA": "Chemise cravate punk",
+      "de_DE": "Punk-Hemd mit Krawatte",
+      "nl_NL": "Visaas-overhemd met stropdas",
+      "ru_RU": "Красный «Питер Панк»",
+      "it_IT": "Camicia e cravatta punk"
+    },
     "main": "Ink Resistance Up",
     "brand": "Annaki",
     "stars": 3,
     "id": 198,
-    "splatnet": 8023,
-    "localizedName": {
-      "ja_JP": "\u30d4\u30fc\u30bf\u30fc\u30d1\u30f3\u30af\u30bf\u30a4 \u30d6\u30e9\u30c3\u30c9",
-      "en_US": "Red Hula Punk with Tie"
-    }
+    "splatnet": 8023
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT024.png",
     "name": "Chili Octo Aloha",
+    "localizedName": {
+      "ja_JP": "チリメンタコアロハ",
+      "en_US": "Chili Octo Aloha"
+    },
     "main": "Bomb Defense Up DX",
     "brand": "Krak-On",
     "stars": 2,
     "id": 199,
-    "splatnet": 8024,
-    "localizedName": {
-      "ja_JP": "\u30c1\u30ea\u30e1\u30f3\u30bf\u30b3\u30a2\u30ed\u30cf",
-      "en_US": "Chili Octo Aloha"
-    }
+    "splatnet": 8024
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT025.png",
     "name": "Annaki Flannel Hoodie",
+    "localizedName": {
+      "ja_JP": "アナアキオンブレネル",
+      "en_US": "Annaki Flannel Hoodie"
+    },
     "main": "Bomb Defense Up DX",
     "brand": "Annaki",
     "stars": 3,
     "id": 200,
-    "splatnet": 8025,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30ca\u30a2\u30ad\u30aa\u30f3\u30d6\u30ec\u30cd\u30eb",
-      "en_US": "Annaki Flannel Hoodie"
-    }
+    "splatnet": 8025
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT026.png",
     "name": "Ink-Wash Shirt",
+    "localizedName": {
+      "ja_JP": "スミヌキシャツ",
+      "en_US": "Ink-Wash Shirt"
+    },
     "main": "Ink Recovery Up",
     "brand": "Toni Kensa",
     "stars": 2,
     "id": 201,
-    "splatnet": 8026,
-    "localizedName": {
-      "ja_JP": "\u30b9\u30df\u30cc\u30ad\u30b7\u30e3\u30c4",
-      "en_US": "Ink-Wash Shirt"
-    }
+    "splatnet": 8026
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT027.png",
     "name": "Dots-On-Dots Shirt",
+    "localizedName": {
+      "ja_JP": "レイヤードットシャツ",
+      "en_US": "Dots-On-Dots Shirt"
+    },
     "main": "Quick Super Jump",
     "brand": "Skalop",
     "stars": 3,
     "id": 202,
-    "splatnet": 8027,
-    "localizedName": {
-      "ja_JP": "\u30ec\u30a4\u30e4\u30fc\u30c9\u30c3\u30c8\u30b7\u30e3\u30c4",
-      "en_US": "Dots-On-Dots Shirt"
-    }
+    "splatnet": 8027
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT028.png",
     "name": "Toni K. Baseball Jersey",
+    "localizedName": {
+      "ja_JP": "タタキBBBシャツ",
+      "en_US": "Toni K. Baseball Jersey"
+    },
     "main": "Special Charge Up",
     "brand": "Toni Kensa",
     "stars": 3,
     "id": 203,
-    "splatnet": 8028,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30bf\u30adBBB\u30b7\u30e3\u30c4",
-      "en_US": "Toni K. Baseball Jersey"
-    }
+    "splatnet": 8028
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_SHT029.png",
     "name": "Online Jersey",
+    "localizedName": {
+      "ja_JP": "BBシャツ プレミアム",
+      "en_US": "Online Jersey"
+    },
     "main": "Swim Speed Up",
     "brand": "Grizzco",
     "stars": 3,
     "id": 204,
-    "splatnet": 8029,
-    "localizedName": {
-      "ja_JP": "BB\u30b7\u30e3\u30c4 \u30d7\u30ec\u30df\u30a2\u30e0",
-      "en_US": "Online Jersey"
-    }
+    "splatnet": 8029
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST000.png",
     "name": "Mountain Vest",
+    "localizedName": {
+      "ja_JP": "マウンテンダウン",
+      "en_US": "Mountain Vest",
+      "en_GB": "Mountain Vest",
+      "es_ES": "Anorak montaña",
+      "es_MX": "Chaleco montaña",
+      "fr_FR": "Gilet de montagne",
+      "fr_CA": "Veste de montagne",
+      "de_DE": "Kletter-Steppweste",
+      "nl_NL": "Berg-bodywarmer",
+      "ru_RU": "Пуховик альпиниста",
+      "it_IT": "Piumino montagna"
+    },
     "main": "Swim Speed Up",
     "brand": "Inkline",
     "stars": 3,
     "id": 205,
-    "splatnet": 9000,
-    "localizedName": {
-      "ja_JP": "\u30de\u30a6\u30f3\u30c6\u30f3\u30c0\u30a6\u30f3",
-      "en_US": "Mountain Vest"
-    }
+    "splatnet": 9000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST001.png",
     "name": "Forest Vest",
+    "localizedName": {
+      "ja_JP": "フォレストダウン",
+      "en_US": "Forest Vest"
+    },
     "main": "Ink Recovery Up",
     "brand": "Inkline",
     "stars": 3,
     "id": 206,
-    "splatnet": 9001,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30a9\u30ec\u30b9\u30c8\u30c0\u30a6\u30f3",
-      "en_US": "Forest Vest"
-    }
+    "splatnet": 9001
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST002.png",
+    "localizedName": {
+      "ja_JP": "アーバンベスト ナイト",
+      "en_US": "Dark Urban Vest",
+      "en_GB": "Dark Urban Vest",
+      "es_ES": "Anorak urbano noche",
+      "es_MX": "Anorak urbano noche",
+      "fr_FR": "Gilet urbain noir",
+      "fr_CA": "Gilet urbain noir",
+      "de_DE": "Nachtblaue Steppweste",
+      "nl_NL": "Stadsjungle-bodywarmer",
+      "ru_RU": "Темный пуховик",
+      "it_IT": "Gilè urbano"
+    },
     "name": "Dark Urban Vest",
     "main": "Main Power Up",
     "brand": "Firefin",
     "stars": 3,
     "id": 207,
-    "splatnet": 9002,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30fc\u30d0\u30f3\u30d9\u30b9\u30c8 \u30ca\u30a4\u30c8",
-      "en_US": "Dark Urban Vest"
-    }
+    "splatnet": 9002
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST003.png",
     "name": "Yellow Urban Vest",
+    "localizedName": {
+      "ja_JP": "アーバンベスト イエロー",
+      "en_US": "Yellow Urban Vest",
+      "en_GB": "Yellow Urban Vest",
+      "es_ES": "Anorak urbano día",
+      "es_MX": "Anorak urbano día",
+      "fr_FR": "Gilet urbain jaune",
+      "fr_CA": "Gilet urbain jaune",
+      "de_DE": "Gelbe Steppweste",
+      "nl_NL": "Gele bodywarmer",
+      "ru_RU": "Желтый пуховик",
+      "it_IT": "Gilè urbano giallo"
+    },
     "main": "Haunt",
     "brand": "Firefin",
     "stars": 2,
     "id": 208,
-    "splatnet": 9003,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30fc\u30d0\u30f3\u30d9\u30b9\u30c8 \u30a4\u30a8\u30ed\u30fc",
-      "en_US": "Yellow Urban Vest"
-    }
+    "splatnet": 9003
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST004.png",
+    "localizedName": {
+      "ja_JP": "イカゴッチンベスト",
+      "en_US": "Squid-Pattern Waistcoat"
+    },
     "name": "Squid-Pattern Waistcoat",
     "main": "Special Power Up",
     "brand": "Krak-On",
     "stars": 1,
     "id": 209,
-    "splatnet": 9004,
-    "localizedName": {
-      "ja_JP": "\u30a4\u30ab\u30b4\u30c3\u30c1\u30f3\u30d9\u30b9\u30c8",
-      "en_US": "Squid-Pattern Waistcoat"
-    }
+    "splatnet": 9004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST005.png",
     "name": "Squidstar Waistcoat",
+    "localizedName": {
+      "ja_JP": "イカノボリベスト",
+      "en_US": "Squidstar Waistcoat",
+      "en_GB": "Squidstar Waistcoat",
+      "es_ES": "Chaleco con camisa lisa",
+      "es_MX": "Chaleco con camisa lisa",
+      "fr_FR": "Veston motif étoile",
+      "fr_CA": "Veston motif étoile",
+      "de_DE": "Kalmarstern-Weste",
+      "nl_NL": "Hemd met sterrengilet",
+      "ru_RU": "Жилет «Звезда»",
+      "it_IT": "Gilè aquilamaro"
+    },
     "main": "Main Power Up",
     "brand": "Krak-On",
     "stars": 1,
     "id": 210,
-    "splatnet": 9005,
-    "localizedName": {
-      "ja_JP": "\u30a4\u30ab\u30ce\u30dc\u30ea\u30d9\u30b9\u30c8",
-      "en_US": "Squidstar Waistcoat"
-    }
+    "splatnet": 9005
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST007.png",
     "name": "Fishing Vest",
+    "localizedName": {
+      "ja_JP": "フィッシャーズベスト オジ",
+      "en_US": "Fishing Vest",
+      "en_GB": "Fishing Vest",
+      "es_ES": "Chaleco pesca",
+      "es_MX": "Chaleco pesca",
+      "fr_FR": "Gilet de pêcheur",
+      "fr_CA": "Gilet de pêcheur",
+      "de_DE": "Anglerweste",
+      "nl_NL": "Vissersvest",
+      "ru_RU": "Жилет рыбака",
+      "it_IT": "Gilè da pesca"
+    },
     "main": "Quick Respawn",
     "brand": "Inkline",
     "stars": 2,
     "id": 211,
-    "splatnet": 9007,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30a3\u30c3\u30b7\u30e3\u30fc\u30ba\u30d9\u30b9\u30c8 \u30aa\u30b8",
-      "en_US": "Fishing Vest"
-    }
+    "splatnet": 9007
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST008.png",
     "name": "Front Zip Vest",
+    "localizedName": {
+      "ja_JP": "フロントジップベスト",
+      "en_US": "Front Zip Vest",
+      "en_GB": "Front Zip Vest",
+      "es_ES": "Chaleco elegante",
+      "es_MX": "Chaleco elegante",
+      "fr_FR": "Gilet zippé asymétrique",
+      "fr_CA": "Gilet zippé asymétrique",
+      "de_DE": "Reißverschlussweste",
+      "nl_NL": "Bodywarmer met rits",
+      "ru_RU": "Жилет на молнии",
+      "it_IT": "Gilè con cerniera"
+    },
     "main": "Ink Resistance Up",
     "brand": "Toni Kensa",
     "stars": 2,
     "id": 212,
-    "splatnet": 9008,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30ed\u30f3\u30c8\u30b8\u30c3\u30d7\u30d9\u30b9\u30c8",
-      "en_US": "Front Zip Vest"
-    }
+    "splatnet": 9008
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_VST009.png",
     "name": "Silver Tentatek Vest",
+    "localizedName": {
+      "ja_JP": "アロメランベスト シルバー",
+      "en_US": "Silver Tentatek Vest"
+    },
     "main": "Thermal Ink",
     "brand": "Tentatek",
     "stars": 2,
     "id": 213,
-    "splatnet": 9009,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30ed\u30e1\u30e9\u30f3\u30d9\u30b9\u30c8 \u30b7\u30eb\u30d0\u30fc",
-      "en_US": "Silver Tentatek Vest"
-    }
+    "splatnet": 9009
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK000.png",
     "name": "Camo Zip Hoodie",
+    "localizedName": {
+      "ja_JP": "ジップアップ カモ",
+      "en_US": "Camo Zip Hoodie",
+      "en_GB": "Camo Zip Hoodie",
+      "es_ES": "Sudadera camuflaje",
+      "es_MX": "Sudadera camuflaje",
+      "fr_FR": "Sweat zippé camouflage",
+      "fr_CA": "Coton ouaté zippé camouflage",
+      "de_DE": "Tarn-Hoodie",
+      "nl_NL": "Camouflagehoody",
+      "ru_RU": "Камуфляжная толстовка",
+      "it_IT": "Felpa zip mimetica"
+    },
     "main": "Quick Respawn",
     "brand": "Firefin",
     "stars": 3,
     "id": 214,
-    "splatnet": 10000,
-    "localizedName": {
-      "ja_JP": "\u30b8\u30c3\u30d7\u30a2\u30c3\u30d7 \u30ab\u30e2",
-      "en_US": "Camo Zip Hoodie"
-    }
+    "splatnet": 10000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK001.png",
     "name": "Green Zip Hoodie",
+    "localizedName": {
+      "ja_JP": "ジップアップ グリーン",
+      "en_US": "Green Zip Hoodie",
+      "en_GB": "Green Zip Hoodie",
+      "es_ES": "Sudadera verde",
+      "es_MX": "Sudadera verde",
+      "fr_FR": "Sweat zippé vert",
+      "fr_CA": "Coton ouaté zippé vert",
+      "de_DE": "Tannengrüner Hoodie",
+      "nl_NL": "Groene hoody",
+      "ru_RU": "Зеленая толстовка",
+      "it_IT": "Felpa zip verde"
+    },
     "main": "Special Power Up",
     "brand": "Firefin",
     "stars": 2,
     "id": 215,
-    "splatnet": 10001,
-    "localizedName": {
-      "ja_JP": "\u30b8\u30c3\u30d7\u30a2\u30c3\u30d7 \u30b0\u30ea\u30fc\u30f3",
-      "en_US": "Green Zip Hoodie"
-    }
+    "splatnet": 10001
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK002.png",
     "name": "Zekko Hoodie",
+    "localizedName": {
+      "ja_JP": "エゾッコパーカー アズキ",
+      "en_US": "Zekko Hoodie",
+      "en_GB": "Zekko Hoodie",
+      "es_ES": "Sudadera Ezko",
+      "es_MX": "Sudadera Zekko",
+      "fr_FR": "Sweat capuche Ezko",
+      "fr_CA": "Sweat capuche Ezko",
+      "de_DE": "Zekko-Hoodie",
+      "nl_NL": "Zekko-hoody",
+      "ru_RU": "Толстовка от «Йожко»",
+      "it_IT": "Felpa Ezko"
+    },
     "main": "Ninja Squid",
     "brand": "Zekko",
     "stars": 2,
     "id": 216,
-    "splatnet": 10002,
-    "localizedName": {
-      "ja_JP": "\u30a8\u30be\u30c3\u30b3\u30d1\u30fc\u30ab\u30fc \u30a2\u30ba\u30ad",
-      "en_US": "Zekko Hoodie"
-    }
+    "splatnet": 10002
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK004.png",
     "name": "Shirt with Blue Hoodie",
+    "localizedName": {
+      "ja_JP": "シャツノゾキブルー",
+      "en_US": "Shirt with Blue Hoodie",
+      "en_GB": "Shirt with Blue Hoodie",
+      "es_ES": "Sudadera con camisa",
+      "es_MX": "Sudadera con camisa",
+      "fr_FR": "Chemise et sweat marine",
+      "fr_CA": "Chemise et sweat marine",
+      "de_DE": "Hemd mit blauem Hoodie",
+      "nl_NL": "Hemd met blauwe hoody",
+      "ru_RU": "Толстовка с рубашкой",
+      "it_IT": "Felpa blu e camicia"
+    },
     "main": "Special Power Up",
     "brand": "Splash Mob",
     "stars": 2,
     "id": 217,
-    "splatnet": 10004,
-    "localizedName": {
-      "ja_JP": "\u30b7\u30e3\u30c4\u30ce\u30be\u30ad\u30d6\u30eb\u30fc",
-      "en_US": "Shirt with Blue Hoodie"
-    }
+    "splatnet": 10004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK005.png",
     "name": "Grape Hoodie",
+    "localizedName": {
+      "ja_JP": "キングパーカー グレープ",
+      "en_US": "Grape Hoodie",
+      "en_GB": "Grape Hoodie",
+      "es_ES": "Sudadera morada Theutik",
+      "es_MX": "Sudadera morada Theutik",
+      "fr_FR": "Sweat zippé violet DUX",
+      "fr_CA": "Coton ouaté zippé mauve",
+      "de_DE": "Traubenlila Hoodie",
+      "nl_NL": "Calamars-hoody",
+      "ru_RU": "Фиолетовая толстовка",
+      "it_IT": "Felpa viola Calamars"
+    },
     "main": "Quick Respawn",
     "brand": "Enperry",
     "stars": 1,
     "id": 218,
-    "splatnet": 10005,
-    "localizedName": {
-      "ja_JP": "\u30ad\u30f3\u30b0\u30d1\u30fc\u30ab\u30fc \u30b0\u30ec\u30fc\u30d7",
-      "en_US": "Grape Hoodie"
-    }
+    "splatnet": 10005
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK006.png",
     "name": "Gray Hoodie",
+    "localizedName": {
+      "ja_JP": "ホタパーカー グレー",
+      "en_US": "Gray Hoodie",
+      "en_GB": "Gray Hoodie",
+      "es_ES": "Sudadera gris con capucha",
+      "es_MX": "Sudadera gris con capucha",
+      "fr_FR": "Sweat capuche gris",
+      "fr_CA": "Sweat capuche gris",
+      "de_DE": "Grauer Hoodie",
+      "nl_NL": "Grijze hoody",
+      "ru_RU": "Серая толстовка",
+      "it_IT": "Felpa grigia con cappuccio"
+    },
     "main": "Sub Power Up",
     "brand": "Skalop",
     "stars": 2,
     "id": 219,
-    "splatnet": 10006,
-    "localizedName": {
-      "ja_JP": "\u30db\u30bf\u30d1\u30fc\u30ab\u30fc \u30b0\u30ec\u30fc",
-      "en_US": "Gray Hoodie"
-    }
+    "splatnet": 10006
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK007.png",
     "name": "Hothouse Hoodie",
+    "localizedName": {
+      "ja_JP": "ホタプラントパーカー",
+      "en_US": "Hothouse Hoodie"
+    },
     "main": "Run Speed Up",
     "brand": "Skalop",
     "stars": 2,
     "id": 220,
-    "splatnet": 10007,
-    "localizedName": {
-      "ja_JP": "\u30db\u30bf\u30d7\u30e9\u30f3\u30c8\u30d1\u30fc\u30ab\u30fc",
-      "en_US": "Hothouse Hoodie"
-    }
+    "splatnet": 10007
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK008.png",
     "name": "Pink Hoodie",
+    "localizedName": {
+      "ja_JP": "シャツノゾキピンク",
+      "en_US": "Pink Hoodie",
+      "en_GB": "Pink Hoodie",
+      "es_ES": "Sudadera rosa con camisa",
+      "es_MX": "Sudadera rosa con camisa",
+      "fr_FR": "Chemise et sweat rose",
+      "fr_CA": "Chemise et sweat rose",
+      "de_DE": "Pinker Hoodie",
+      "nl_NL": "Roze hoody",
+      "ru_RU": "Розовая толстовка",
+      "it_IT": "Felpa rosa"
+    },
     "main": "Bomb Defense Up DX",
     "brand": "Splash Mob",
     "stars": 2,
     "id": 221,
-    "splatnet": 10008,
-    "localizedName": {
-      "ja_JP": "\u30b7\u30e3\u30c4\u30ce\u30be\u30ad\u30d4\u30f3\u30af",
-      "en_US": "Pink Hoodie"
-    }
+    "splatnet": 10008
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK009.png",
     "name": "Olive Zekko Parka",
+    "localizedName": {
+      "ja_JP": "エゾッコパーカー ウグイス",
+      "en_US": "Olive Zekko Parka",
+      "en_GB": "Olive Zekko Parka",
+      "es_ES": "Sudadera Ezko oliva",
+      "es_MX": "Sudadera Ezko oliva",
+      "fr_FR": "Sweat Ezko olive",
+      "fr_CA": "Sweat Ezko olive",
+      "de_DE": "Oliver Zekko-Hoodie",
+      "nl_NL": "Groene Zekko-hoody",
+      "ru_RU": "Толстовка от «Йожко»",
+      "it_IT": "Felpa Ezko oliva"
+    },
     "main": "Swim Speed Up",
     "brand": "Zekko",
     "stars": 2,
     "id": 222,
-    "splatnet": 10009,
-    "localizedName": {
-      "ja_JP": "\u30a8\u30be\u30c3\u30b3\u30d1\u30fc\u30ab\u30fc \u30a6\u30b0\u30a4\u30b9",
-      "en_US": "Olive Zekko Parka"
-    }
+    "splatnet": 10009
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK010.png",
