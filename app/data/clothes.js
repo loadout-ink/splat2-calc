@@ -4405,392 +4405,527 @@ angular.module('splatApp').clothes = function($scope) {
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK010.png",
     "name": "Black Hoodie",
+    "localizedName": {
+      "ja_JP": "ホタパーカー ブラック",
+      "en_US": "Black Hoodie"
+    },
     "main": "Ink Resistance Up",
     "brand": "Skalop",
     "stars": 2,
     "id": 223,
-    "splatnet": 10010,
-    "localizedName": {
-      "ja_JP": "\u30db\u30bf\u30d1\u30fc\u30ab\u30fc \u30d6\u30e9\u30c3\u30af",
-      "en_US": "Black Hoodie"
-    }
+    "splatnet": 10010
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_PRK011.png",
     "name": "Octo Support Hoodie",
+    "localizedName": {
+      "ja_JP": "おうえんパーカー(タコver.)",
+      "en_US": "Octo Support Hoodie"
+    },
     "main": "Main Power Up",
     "brand": "SquidForce",
     "stars": 3,
     "id": 224,
-    "splatnet": 10011,
-    "localizedName": {
-      "ja_JP": "\u304a\u3046\u3048\u3093\u30d1\u30fc\u30ab\u30fc(\u30bf\u30b3ver.)",
-      "en_US": "Octo Support Hoodie"
-    }
+    "splatnet": 10011
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP100.png",
     "name": "Squiddor Polo",
+    "localizedName": {
+      "ja_JP": "イカテンくんポロ",
+      "en_US": "Squiddor Polo",
+      "en_GB": "Squiddor Polo",
+      "es_ES": "Polo corporativo",
+      "es_MX": "Polo corporativo",
+      "fr_FR": "Polo rayé",
+      "fr_CA": "Polo rayé",
+      "de_DE": "Kurier-Polohemd",
+      "nl_NL": "Bedrijfspolo",
+      "ru_RU": "Майка курьера",
+      "it_IT": "Polo da lavoro"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 225,
-    "splatnet": 21000,
-    "localizedName": {
-      "ja_JP": "\u30a4\u30ab\u30c6\u30f3\u304f\u3093\u30dd\u30ed",
-      "en_US": "Squiddor Polo"
-    }
+    "splatnet": 21000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP101.png",
     "name": "Anchor Life Vest",
+    "localizedName": {
+      "ja_JP": "アンカーベスト",
+      "en_US": "Anchor Life Vest",
+      "en_GB": "Anchor Life Vest",
+      "es_ES": "Chaleco de seguridad",
+      "es_MX": "Chaleco de seguridad",
+      "fr_FR": "Gilet de sauvetage",
+      "fr_CA": "Gilet de sauvetage",
+      "de_DE": "Rettungsweste",
+      "nl_NL": "Reddingsvest",
+      "ru_RU": "Спасательный жилет",
+      "it_IT": "Giubbotto salvavita"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 226,
-    "splatnet": 21001,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30f3\u30ab\u30fc\u30d9\u30b9\u30c8",
-      "en_US": "Anchor Life Vest"
-    }
+    "splatnet": 21001
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP102.png",
     "name": "Juice Parka",
+    "localizedName": {
+      "ja_JP": "フューエルブルゾン",
+      "en_US": "Juice Parka",
+      "en_GB": "Juice Parka",
+      "es_ES": "Chaqueta gasolinera",
+      "es_MX": "Chaqueta gasolinera",
+      "fr_FR": "Blouson d'ingénieur pétrolier",
+      "fr_CA": "Blouson d'ingénieur pétrolier",
+      "de_DE": "Tankwart-Jacke",
+      "nl_NL": "Pompbediendenjack",
+      "ru_RU": "Форма заправщика",
+      "it_IT": "Giacca benzinaio"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 227,
-    "splatnet": 21002,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30e5\u30fc\u30a8\u30eb\u30d6\u30eb\u30be\u30f3",
-      "en_US": "Juice Parka"
-    }
+    "splatnet": 21002
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP103.png",
     "name": "Garden Gear",
+    "localizedName": {
+      "ja_JP": "マクレGT",
+      "en_US": "Garden Gear",
+      "en_GB": "Garden Gear",
+      "es_ES": "Camiseta con guantes",
+      "es_MX": "Camiseta paisajista",
+      "fr_FR": "T-shirt et gants de travail",
+      "fr_CA": "T-shirt et gants de travail",
+      "de_DE": "Shirt mit Handschuhen",
+      "nl_NL": "Shirt met handschoenen",
+      "ru_RU": "Безрукавка и перчатки",
+      "it_IT": "Set con guanti da lavoro"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 228,
-    "splatnet": 21003,
-    "localizedName": {
-      "ja_JP": "\u30de\u30af\u30ecGT",
-      "en_US": "Garden Gear"
-    }
+    "splatnet": 21003
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP104.png",
     "name": "Crustwear XXL",
+    "localizedName": {
+      "ja_JP": "アゲアゲ・10・プラーXXL",
+      "en_US": "Crustwear XXL",
+      "en_GB": "Crustwear XXL",
+      "es_ES": "Camiseta fritoneta",
+      "es_MX": "Antofritos XXL",
+      "fr_FR": "T-shirt Crustassiette",
+      "fr_CA": "T-shirt Crustassiette",
+      "de_DE": "Shrimpy-Snacks-Shirt",
+      "nl_NL": "Octobus-shirt XXL",
+      "ru_RU": "Майка «Мак-да-рак»",
+      "it_IT": "T-shirt Fritto e Rifritto"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 229,
-    "splatnet": 21004,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30b2\u30a2\u30b2\u30fb10\u30fb\u30d7\u30e9\u30fcXXL",
-      "en_US": "Crustwear XXL"
-    }
+    "splatnet": 21004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP105.png",
     "name": "North-Country Parka",
+    "localizedName": {
+      "ja_JP": "フロムキタグニ87",
+      "en_US": "North-Country Parka"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 230,
-    "splatnet": 21005,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30ed\u30e0\u30ad\u30bf\u30b0\u30cb87",
-      "en_US": "North-Country Parka"
-    }
+    "splatnet": 21005
   },
-  {
-    "image": "../common/assets/img/gear/clothes/Clt_COP106.png",
-    "name": "Octoleet Armor",
-    "main": "Quick Respawn",
-    "brand": "Grizzco",
-    "stars": 3,
-    "id": 231,
-    "splatnet": 21006,
-    "localizedName": {
-      "ja_JP": "\u30be\u30cd\u30b9\u30c6\u30a3\u30c3\u30af\u30d7\u30ed\u30c6\u30af\u30bf\u30fc",
-      "en_US": "Octoleet Armor"
-    }
-  },
+  // {
+  //   "image": "../common/assets/img/gear/clothes/Clt_COP106.png",
+  //   "name": "Octoleet Armor",
+  //   "localizedName": {
+  //     "ja_JP": "ゾネスティックプロテクター",
+  //     "en_US": "Octoleet Armor"
+  //   },
+  //   "main": "Quick Respawn",
+  //   "brand": "Grizzco",
+  //   "stars": 3,
+  //   "id": 231,
+  //   "splatnet": 21006
+  // },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP107.png",
     "name": "Record Shop Look EP",
+    "localizedName": {
+      "ja_JP": "レコヤルックEP",
+      "en_US": "Record Shop Look EP"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 232,
-    "splatnet": 21007,
-    "localizedName": {
-      "ja_JP": "\u30ec\u30b3\u30e4\u30eb\u30c3\u30afEP",
-      "en_US": "Record Shop Look EP"
-    }
+    "splatnet": 21007
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP108.png",
     "name": "Dev Uniform",
+    "localizedName": {
+      "ja_JP": "デベロッパーズワークウエア",
+      "en_US": "Dev Uniform"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 233,
-    "splatnet": 21008,
-    "localizedName": {
-      "ja_JP": "\u30c7\u30d9\u30ed\u30c3\u30d1\u30fc\u30ba\u30ef\u30fc\u30af\u30a6\u30a8\u30a2",
-      "en_US": "Dev Uniform"
-    }
+    "splatnet": 21008
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_COP109.png",
     "name": "Office Attire",
+    "localizedName": {
+      "ja_JP": "ジムパーソンアーマー",
+      "en_US": "Office Attire"
+    },
     "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "id": 234,
-    "splatnet": 21009,
-    "localizedName": {
-      "ja_JP": "\u30b8\u30e0\u30d1\u30fc\u30bd\u30f3\u30a2\u30fc\u30de\u30fc",
-      "en_US": "Office Attire"
-    }
+    "splatnet": 21009
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB000.png",
     "name": "School Uniform",
+    "localizedName": {
+      "ja_JP": "スクールブレザー",
+      "en_US": "School Uniform",
+      "en_GB": "School Uniform",
+      "es_ES": "Uniforme escolar",
+      "es_MX": "Uniforme escolar",
+      "fr_FR": "Uniforme scolaire",
+      "fr_CA": "Uniforme scolaire",
+      "de_DE": "Schuluniform",
+      "nl_NL": "Schooluniform",
+      "ru_RU": "Школьная форма",
+      "it_IT": "Uniforme scolastica"
+    },
     "main": "Ink Recovery Up",
     "brand": "amiibo",
     "stars": 2,
     "id": 235,
-    "splatnet": 25000,
-    "localizedName": {
-      "ja_JP": "\u30b9\u30af\u30fc\u30eb\u30d6\u30ec\u30b6\u30fc",
-      "en_US": "School Uniform"
-    }
+    "splatnet": 25000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB001.png",
     "name": "Samurai Jacket",
+    "localizedName": {
+      "ja_JP": "サムライジャケット",
+      "en_US": "Samurai Jacket",
+      "en_GB": "Samurai Jacket",
+      "es_ES": "Armadura samurái",
+      "es_MX": "Armadura samurái",
+      "fr_FR": "Haut de samouraï",
+      "fr_CA": "Haut de samouraï",
+      "de_DE": "Samurai-Rüstung",
+      "nl_NL": "Samoeraitenue",
+      "ru_RU": "Доспехи самурая",
+      "it_IT": "Armatura samurai"
+    },
     "main": "Special Charge Up",
     "brand": "amiibo",
     "stars": 2,
     "id": 236,
-    "splatnet": 25001,
-    "localizedName": {
-      "ja_JP": "\u30b5\u30e0\u30e9\u30a4\u30b8\u30e3\u30b1\u30c3\u30c8",
-      "en_US": "Samurai Jacket"
-    }
+    "splatnet": 25001
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB002.png",
     "name": "Power Armor",
+    "localizedName": {
+      "ja_JP": "パワードスーツ",
+      "en_US": "Power Armor",
+      "en_GB": "Power Armor",
+      "es_ES": "Tecnoarmadura",
+      "es_MX": "Tecnoarmadura",
+      "fr_FR": "Armure méca",
+      "fr_CA": "Armure méca",
+      "de_DE": "Exo-Rüstung",
+      "nl_NL": "Hightechpantser",
+      "ru_RU": "Силовые доспехи",
+      "it_IT": "Armatura hi-tech"
+    },
     "main": "Quick Respawn",
     "brand": "amiibo",
     "stars": 2,
     "id": 237,
-    "splatnet": 25002,
-    "localizedName": {
-      "ja_JP": "\u30d1\u30ef\u30fc\u30c9\u30b9\u30fc\u30c4",
-      "en_US": "Power Armor"
-    }
+    "splatnet": 25002
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB003.png",
     "name": "School Cardigan",
+    "localizedName": {
+      "ja_JP": "スクールカーデ",
+      "en_US": "School Cardigan",
+      "en_GB": "School Cardigan",
+      "es_ES": "Traje escolar",
+      "es_MX": "Traje escolar",
+      "fr_FR": "Gilet scolaire",
+      "fr_CA": "Gilet scolaire",
+      "de_DE": "Schul-Cardigan",
+      "nl_NL": "Schoolvest",
+      "ru_RU": "Школьная кофта",
+      "it_IT": "Cardigan scolastico"
+    },
     "main": "Run Speed Up",
     "brand": "amiibo",
     "stars": 2,
     "id": 238,
-    "splatnet": 25003,
-    "localizedName": {
-      "ja_JP": "\u30b9\u30af\u30fc\u30eb\u30ab\u30fc\u30c7",
-      "en_US": "School Cardigan"
-    }
+    "splatnet": 25003
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB004.png",
     "name": "Squinja Suit",
+    "localizedName": {
+      "ja_JP": "ニンジャスーツ",
+      "en_US": "Squinja Suit",
+      "en_GB": "Squinja Suit",
+      "es_ES": "Atuendo ninja",
+      "es_MX": "Atuendo ninja",
+      "fr_FR": "Tenue de ninja",
+      "fr_CA": "Tenue de ninja",
+      "de_DE": "Ninja-Anzug",
+      "nl_NL": "Ninjapak",
+      "ru_RU": "Костюм ниндзялинга",
+      "it_IT": "Giacca ninja"
+    },
     "main": "Special Saver",
     "brand": "amiibo",
     "stars": 2,
     "id": 239,
-    "splatnet": 25004,
-    "localizedName": {
-      "ja_JP": "\u30cb\u30f3\u30b8\u30e3\u30b9\u30fc\u30c4",
-      "en_US": "Squinja Suit"
-    }
+    "splatnet": 25004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB005.png",
     "name": "Power Armor Mk I",
+    "localizedName": {
+      "ja_JP": "パワードスーツ オリジン",
+      "en_US": "Power Armor Mk I",
+      "en_GB": "Power Armor Mk I",
+      "es_ES": "Prototipo de tecnoarmadura",
+      "es_MX": "Prototipo de tecnoarmadura",
+      "fr_FR": "Armure méca Mk I",
+      "fr_CA": "Armure méca Mk I",
+      "de_DE": "Exo-Prototypenrüstung",
+      "nl_NL": "Hightechpantser (prototype)",
+      "ru_RU": "Силовые доспехи М-1",
+      "it_IT": "Prototipo di armatura hi-tech"
+    },
     "main": "Ink Resistance Up",
     "brand": "amiibo",
     "stars": 2,
     "id": 240,
-    "splatnet": 25005,
-    "localizedName": {
-      "ja_JP": "\u30d1\u30ef\u30fc\u30c9\u30b9\u30fc\u30c4 \u30aa\u30ea\u30b8\u30f3",
-      "en_US": "Power Armor Mk I"
-    }
+    "splatnet": 25005
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB006.png",
     "name": "Pearlescent Hoodie",
+    "localizedName": {
+      "ja_JP": "ヒメイトパーカー",
+      "en_US": "Pearlescent Hoodie"
+    },
     "main": "Respawn Punisher",
     "brand": "amiibo",
     "stars": 2,
     "id": 241,
-    "splatnet": 25006,
-    "localizedName": {
-      "ja_JP": "\u30d2\u30e1\u30a4\u30c8\u30d1\u30fc\u30ab\u30fc",
-      "en_US": "Pearlescent Hoodie"
-    }
+    "splatnet": 25006
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB007.png",
     "name": "Marinated Top",
+    "localizedName": {
+      "ja_JP": "イイダチトップス",
+      "en_US": "Marinated Top"
+    },
     "main": "Special Power Up",
     "brand": "amiibo",
     "stars": 2,
     "id": 242,
-    "splatnet": 25007,
-    "localizedName": {
-      "ja_JP": "\u30a4\u30a4\u30c0\u30c1\u30c8\u30c3\u30d7\u30b9",
-      "en_US": "Marinated Top"
-    }
+    "splatnet": 25007
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB008.png",
     "name": "Enchanted Robe",
+    "localizedName": {
+      "ja_JP": "エンチャントローブ",
+      "en_US": "Enchanted Robe"
+    },
     "main": "Thermal Ink",
     "brand": "amiibo",
     "stars": 2,
     "id": 243,
-    "splatnet": 25008,
-    "localizedName": {
-      "ja_JP": "\u30a8\u30f3\u30c1\u30e3\u30f3\u30c8\u30ed\u30fc\u30d6",
-      "en_US": "Enchanted Robe"
-    }
+    "splatnet": 25008
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB009.png",
     "name": "Steel Platemail",
+    "localizedName": {
+      "ja_JP": "タコティカルなよろい",
+      "en_US": "Steel Platemail"
+    },
     "main": "Ink Saver (Sub)",
     "brand": "amiibo",
     "stars": 2,
     "id": 244,
-    "splatnet": 25009,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30b3\u30c6\u30a3\u30ab\u30eb\u306a\u3088\u308d\u3044",
-      "en_US": "Steel Platemail"
-    }
+    "splatnet": 25009
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB010.png",
     "name": "Fresh Fish Gloves",
+    "localizedName": {
+      "ja_JP": "ひれおくんのて",
+      "en_US": "Fresh Fish Gloves"
+    },
     "main": "Quick Super Jump",
     "brand": "amiibo",
     "stars": 2,
     "id": 245,
-    "splatnet": 25010,
-    "localizedName": {
-      "ja_JP": "\u3072\u308c\u304a\u304f\u3093\u306e\u3066",
-      "en_US": "Fresh Fish Gloves"
-    }
+    "splatnet": 25010
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_HAP001.png",
     "name": "Splatfest Tee",
+    "localizedName": {
+      "ja_JP": "フェスＴ",
+      "en_US": "Splatfest Tee",
+      "en_GB": "Splatfest Tee",
+      "es_ES": "Camiseta festiva",
+      "es_MX": "Camiseta festiva",
+      "fr_FR": "T-shirt festif",
+      "fr_CA": "T-shirt festif",
+      "de_DE": "Splatfest-Shirt",
+      "nl_NL": "Splatfest-T-shirt",
+      "ru_RU": "Сплатфест-майка",
+      "it_IT": "T-shirt festival"
+    },
     "main": "Ability Doubler",
     "brand": "SquidForce",
+    "fixed": true,    
     "stars": 3,
     "id": 246,
-    "splatnet": 26000,
-    "localizedName": {
-      "ja_JP": "\u30d5\u30a7\u30b9\uff34",
-      "en_US": "Splatfest Tee"
-    }
+    "splatnet": 26000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN000.png",
     "name": "Hero Jacket Replica",
+    "localizedName": {
+      "ja_JP": "ヒーロージャケット レプリカ",
+      "en_US": "Hero Jacket Replica",
+      "en_GB": "Hero Jacket Replica",
+      "es_ES": "Sudadera de élite (réplica)",
+      "es_MX": "Camiseta festiva",
+      "fr_FR": "Veste héroïque (réplique)",
+      "fr_CA": "T-shirt festif",
+      "de_DE": "Heldenjacke Replik",
+      "nl_NL": "Heldenjack (replica)",
+      "ru_RU": "Жилет-004 (клон)",
+      "it_IT": "Giubbino élite replica"
+    },
     "main": "Swim Speed Up",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 247,
-    "splatnet": 27000,
-    "localizedName": {
-      "ja_JP": "\u30d2\u30fc\u30ed\u30fc\u30b8\u30e3\u30b1\u30c3\u30c8 \u30ec\u30d7\u30ea\u30ab",
-      "en_US": "Hero Jacket Replica"
-    }
+    "splatnet": 27000
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN004.png",
     "name": "Armor Jacket Replica",
+    "localizedName": {
+      "ja_JP": "アーマージャケット レプリカ",
+      "en_US": "Armor Jacket Replica",
+      "en_GB": "Armor Jacket Replica",
+      "es_ES": "Chaqueta reforzada (réplica)",
+      "es_MX": "Sudadera de élite (réplica)",
+      "fr_FR": "Anorak encrifugé (réplique)",
+      "fr_CA": "Veste héroïque (réplique)",
+      "de_DE": "Rüstungsjacke Replik",
+      "nl_NL": "Pantserjack (replica)",
+      "ru_RU": "Бронекуртка-004 (клон)",
+      "it_IT": "Giacca d'armatura replica"
+    },
     "main": "Special Charge Up",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 248,
-    "splatnet": 27004,
-    "localizedName": {
-      "ja_JP": "\u30a2\u30fc\u30de\u30fc\u30b8\u30e3\u30b1\u30c3\u30c8 \u30ec\u30d7\u30ea\u30ab",
-      "en_US": "Armor Jacket Replica"
-    }
+    "splatnet": 27004
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN101.png",
     "name": "Hero Hoodie Replica",
+    "localizedName": {
+      "ja_JP": "ヒーローフーディー レプリカ",
+      "en_US": "Hero Hoodie Replica",
+      "en_GB": "Hero Hoodie Replica",
+      "es_ES": "Cortavientos de élite (réplica)",
+      "es_MX": "Sudadera de élite réplica",
+      "fr_FR": "Sweat héroïque (réplique)",
+      "fr_CA": "Coton ouaté héroïque (rép.)",
+      "de_DE": "Helden-Hoodie Replik",
+      "nl_NL": "Heldenhoody (replica)",
+      "ru_RU": "Толстовка-004 (клон)",
+      "it_IT": "Felpa élite replica"
+    },
     "main": "Ink Recovery Up",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 249,
-    "splatnet": 27101,
-    "localizedName": {
-      "ja_JP": "\u30d2\u30fc\u30ed\u30fc\u30d5\u30fc\u30c7\u30a3\u30fc \u30ec\u30d7\u30ea\u30ab",
-      "en_US": "Hero Hoodie Replica"
-    }
+    "splatnet": 27101
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN104.png",
     "name": "Neo Octoling Armor",
+    "localizedName": {
+      "ja_JP": "タコゾネスプロテクターネオ",
+      "en_US": "Neo Octoling Armor"
+    },
     "main": "Haunt",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 250,
-    "splatnet": 27104,
-    "localizedName": {
-      "ja_JP": "\u30bf\u30b3\u30be\u30cd\u30b9\u30d7\u30ed\u30c6\u30af\u30bf\u30fc\u30cd\u30aa",
-      "en_US": "Neo Octoling Armor"
-    }
+    "splatnet": 27104
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN105.png",
     "name": "Null Armor Replica",
+    "localizedName": {
+      "ja_JP": "ネルアーマー レプリカ",
+      "en_US": "Null Armor Replica"
+    },
     "main": "Ink Resistance Up",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 251,
-    "splatnet": 27105,
-    "localizedName": {
-      "ja_JP": "\u30cd\u30eb\u30a2\u30fc\u30de\u30fc \u30ec\u30d7\u30ea\u30ab",
-      "en_US": "Null Armor Replica"
-    }
+    "splatnet": 27105
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_MSN106.png",
     "name": "Old-Timey Clothes",
+    "localizedName": {
+      "ja_JP": "グランパなフク",
+      "en_US": "Old-Timey Clothes"
+    },
     "main": "Thermal Ink",
     "brand": "Cuttlegear",
     "stars": 2,
     "id": 252,
-    "splatnet": 27106,
-    "localizedName": {
-      "ja_JP": "\u30b0\u30e9\u30f3\u30d1\u306a\u30d5\u30af",
-      "en_US": "Old-Timey Clothes"
-    }
-  }
-]
+    "splatnet": 27106
+  }]
 }
