@@ -68,6 +68,7 @@
   "STAT_SUB_POWER_WALL": "Sub Power<br>(Wall HP)",
   "STAT_SUB_POWER_SPRINKLER": "Sub Power<br>(Full-Power Duration)",
   "STAT_SUB_POWER_BEAKON": "Sub Power<br>(Jump Speed to Beakon)",
+  "STAT_SUB_POWER_DURATION": "Sub Power (Duration)",  
   "STAT_JUMP_SQUID": "Super Jump Time (Squid)",
   "STAT_JUMP_KID": "Super Jump Time (Kid)",
   "STAT_QUICK_RESPAWN": "Quick Respawn Time",

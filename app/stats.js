@@ -549,7 +549,7 @@ angular.module('splatApp').stats = function ($scope) {
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(charge_time,4)})
           return charge_time;
       }
-      return 0; // Default return value
+      return 0;
     }, 100),
 
     'Sub Power': new Stat("{{ STAT_SUB_POWER | translate }}", function(loadout) {
@@ -557,47 +557,195 @@ angular.module('splatApp').stats = function ($scope) {
       var equippedSub = $scope.getSubByName(loadout.weapon.sub)
       this.name = "{{ STAT_SUB_POWER_RANGE | translate }}"
       this.value = 0;
+
+      var sub_power_up_parameters = null;
       switch(equippedSub.name) {
+        case 'Autobomb':    
         case 'Burst Bomb':
+        case 'Curling Bomb':
         case 'Splat Bomb':
         case 'Suction Bomb':
-        case 'Autobomb':
-        case 'Point Sensor':
-        case 'Toxic Mist':
-          var range = (1 + this.calcMod(abilityScore) / 60)
-          this.value = range*100;
-          this.label = "{{ LABEL_PERCENT | translate }}".format({value: this.value.toFixed(1)})
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["General Bomb Distance Up"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var sub_range = this.calcRes(sub_power_up_parameters, p, s);
+          var max_sub_range = sub_power_up_parameters[0];          
+          var min_sub_range = sub_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((sub_range/max_sub_range) * 100,2);
+          this.percentage = ((sub_range/min_sub_range - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (General Bombs)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
-          this.max = 150;
-          return (range * 100).toFixed(1);
-          break;
-        case 'Curling Bomb':
-          this.name = "{{ STAT_SUB_POWER_CURLING | translate }}";
-          this.label = "{{ UNAVAILABLE | translate }}";
-          break;
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(sub_range,2)})
+          return sub_range;
+
+        case 'Fizzy Bomb':
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Fizzy Bomb Distance Up"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var sub_range = this.calcRes(sub_power_up_parameters, p, s);
+          var max_sub_range = sub_power_up_parameters[0];          
+          var min_sub_range = sub_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((sub_range/max_sub_range) * 100,2);
+          this.percentage = ((sub_range/min_sub_range - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
+          this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(sub_range,2)})
+          return sub_range;     
+
+        case 'Point Sensor':
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Point Sensor Distance Up"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var scan_radius = this.calcRes(sub_power_up_parameters, p, s);
+          var max_scan_radius = sub_power_up_parameters[0];          
+          var min_scan_radius = sub_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((scan_radius/max_scan_radius) * 100,2);
+          this.percentage = ((scan_radius/min_scan_radius - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":scan_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
+          this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(scan_radius,2)})
+          return scan_radius;
+
+        case 'Toxic Mist':
+          // TODO: Get confirmation from Lean that these values work for Toxic Mist
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Ink Mine Mark Time Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var duration = this.calcRes(sub_power_up_parameters, p, s) / 60;
+          var max_duration = sub_power_up_parameters[0] / 60;
+          var min_duration = sub_power_up_parameters[2] / 60;
+
+          this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Toxic Mist)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
+          this.name = "{{ STAT_SUB_POWER_DURATION | translate }}";
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
+          return duration;
+
         case 'Ink Mine':
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Ink Mine Mark Radius"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var radius = this.calcRes(sub_power_up_parameters, p, s);
+          var max_radius = sub_power_up_parameters[0];
+          var min_radius = sub_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((radius/max_radius) * 100,2);
+          this.percentage = ((radius/min_radius - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Ink Mine)":radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
           this.name = "{{ STAT_SUB_POWER_MINE | translate }}";
-          this.label = "{{ UNAVAILABLE | translate }}";
-          break;
+          this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(radius*100,2)})
+          return $scope.toFixedTrimmed(radius*100,2);
+
         case 'Splash Wall':
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Splash Wall Max HP"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var wall_hp = this.calcRes(sub_power_up_parameters, p, s) / 10;
+          var max_wall_hp = sub_power_up_parameters[0] / 10;
+          var min_wall_hp = sub_power_up_parameters[2] / 10;
+
+          this.value = $scope.toFixedTrimmed((wall_hp/max_wall_hp) * 100,2);
+          this.percentage = ((wall_hp/min_wall_hp - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Splash Wall)":wall_hp,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
           this.name = "{{ STAT_SUB_POWER_WALL | translate }}";
-          this.label = "{{ UNAVAILABLE | translate }}";
-          var HP = 800 * (1 + this.calcMod(abilityScore) / (240/7))
-          this.value = HP;
-          this.label = "{{ LABEL_HP | translate }}".format({value: this.value.toFixed(2)});
-          this.max = 1500;
-          break;
+          this.label = "{{ LABEL_HP | translate }}".format({value: $scope.toFixedTrimmed(wall_hp,2)})
+          return wall_hp;
+
         case 'Sprinkler':
-          this.name = "{{ STAT_SUB_POWER_SPRINKLER | translate }}";
-          this.label = "{{ UNAVAILABLE | translate }}";
-          break;
+          /* To simplify conceptualizing how SPU affects the Sprinkler, this stat will 
+             display the total time (phases 1 & 2) of the Sprinkler. */
+          var phase_one_parameters = $scope.parameters["Sub Power Up"]["Sprinkler First Phase Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(phase_one_parameters);
+          var phase_one_duration = this.calcRes(phase_one_parameters, p, s);
+
+          var phase_two_parameters = $scope.parameters["Sub Power Up"]["Sprinkler Second Phase Duration"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(phase_two_parameters);
+          var phase_two_duration = this.calcRes(phase_two_parameters, p, s);
+
+          var total_duration = (phase_one_duration + phase_two_duration) / 60;
+          var max_duration = (phase_one_parameters[0] + phase_two_parameters[0]) / 60;
+          var min_duration = (phase_one_parameters[2] + phase_two_parameters[2]) / 60;
+
+          this.value = $scope.toFixedTrimmed((total_duration/max_duration) * 100,2);
+          this.percentage = ((total_duration/min_duration - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Sprinkler)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
+          this.name = "{{ STAT_SUB_POWER_DURATION | translate }}";
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
+          return total_duration;          
+
         case 'Squid Beakon':
+          // Squid Beakon grants the effects of Quick Super Jump.
+          var jump_parameters = $scope.parameters["Quick Super Jump"]["Jump"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(jump_parameters);
+          var jump_duration = this.calcRes(jump_parameters, p, s);
+
+          var prepare_parameters = $scope.parameters["Quick Super Jump"]["Prepare"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(prepare_parameters);
+          var prepare_duration = this.calcRes(prepare_parameters, p, s);
+
+          var total_duration = (jump_duration + prepare_duration) / 60;
+          var max_duration = (jump_parameters[2] + prepare_parameters[2]) / 60;
+
+          this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
+          this.value = 100 - this.percentage;
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Squid Beakon)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
           this.name = "{{ STAT_SUB_POWER_BEAKON | translate }}";
-          this.label = "{{ UNAVAILABLE | translate }}";
-          break;
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
+          return total_duration;             
+
+        case 'Torpedo':
+          sub_power_up_parameters = $scope.parameters["Sub Power Up"]["Torpedo Distance Up"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(sub_power_up_parameters);
+          var distance = this.calcRes(sub_power_up_parameters, p, s);
+          var max_distance = sub_power_up_parameters[0];          
+          var min_distance = sub_power_up_parameters[2];
+
+          this.value = $scope.toFixedTrimmed((distance/max_distance) * 100,2);
+          this.percentage = ((distance/min_distance - 1) * 100).toFixed(1);
+          
+          var sub_power_up_debug_log = {"Sub Power Up (Torpedo)":distance,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(sub_power_up_debug_log);
+
+          this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(distance,2)})
+          return distance;
       }
-      return (range * 100).toFixed(1);
-    }, 150),
+      return 0;
+    }, 100),
+
     'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var mod = this.calcMod(abilityScore)
@@ -606,6 +754,7 @@ angular.module('splatApp').stats = function ($scope) {
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       return ((totalFrames) / 60).toFixed(2);
     }, 3.65),
+
     'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
       var mod = this.calcMod(abilityScore)
@@ -614,7 +763,7 @@ angular.module('splatApp').stats = function ($scope) {
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       return (totalFrames / 60).toFixed(2);
     }, 4),
-    //TODO: This is WRONG! Need more data on Respawn Punisher!
+
     'Quick Respawn Time': new Stat("{{ STAT_QUICK_RESPAWN | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Respawn');
       this.name = "{{ STAT_QUICK_RESPAWN | translate }}";
@@ -634,6 +783,7 @@ angular.module('splatApp').stats = function ($scope) {
       this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
       return this.value.toFixed(2)
     }, 9.6),
+
     'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
       var trackReduction = this.calcMod(abilityScore) / 40

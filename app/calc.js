@@ -242,13 +242,13 @@ angular
       },
   
       "Sub Power Up": {
-          "Point Sensor Distance Up ": [19.0, 17.0, 15.0],
+          "Point Sensor Distance Up": [19.0, 17.0, 15.0],
           "Splash Wall Max HP": [15000, 11500, 8000],
           "Ink Mine Mark Radius": [1.375, 1.1875, 1.0],
           "Ink Mine Mark Time Duration": [600, 450, 300],
           "Sprinkler First Phase Duration": [600, 450, 300],
           "Splash Wall Object Shredder Multiplier": [1.5, 1.5, 1.5],
-          "Torpedo Distance Up ": [18.4, 16.0, 13.6],
+          "Torpedo Distance Up": [18.4, 16.0, 13.6],
           "Beakon Object Shredder Multiplier": [10.0, 10.0, 10.0],
           "Fizzy Bomb Distance Up": [18.4, 16.0, 13.6],
           "Sprinkler Object Shredder Multiplier": [10.0, 10.0, 10.0],
