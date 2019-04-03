@@ -251,21 +251,31 @@ angular.module('splatApp').stats = function ($scope) {
 
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
       var ink_saver_sub_parameters = null;
-      if(loadout.weapon.inkSaver == 'Low') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["Low"];
+      var sub = $scope.getSubByName(loadout.weapon.sub)
+      
+      if(sub.inkSaver == 'A') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["A"];
       }
-      if(loadout.weapon.inkSaver == 'Middle') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["Mid"];
+      if(sub.inkSaver == 'B') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["B"];
       }
-      if(loadout.weapon.inkSaver == "High") {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["High"];
-      }      
+      if(sub.inkSaver == 'C') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["C"];
+      }
+      if(sub.inkSaver == 'D') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["D"];
+      }
+      if(sub.inkSaver == 'E') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["E"];
+      }
+      if(sub.inkSaver == 'F') {
+        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["F"];
+      }
+
       var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
       var p = this.calcP(abilityScore);       
       var s = this.calcS(ink_saver_sub_parameters);
-      var reduction = this.calcRes(ink_saver_sub_parameters, p, s);
-      
-      var sub = $scope.getSubByName(loadout.weapon.sub)
+      var reduction = this.calcRes(ink_saver_sub_parameters, p, s);      
       var costPerSub = sub.cost * reduction;
 
       this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (100 - (reduction*100)).toFixed(1)})
