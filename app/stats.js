@@ -756,58 +756,118 @@ angular.module('splatApp').stats = function ($scope) {
       return 0;
     }, 100),
 
-    'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }} *", function(loadout) {
+    'Super Jump Time (Squid)': new Stat("{{ STAT_JUMP_SQUID | translate }} ", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
-      var mod = this.calcMod(abilityScore)
-      var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 218
-      this.value = (totalFrames) / 60
-      this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-      return ((totalFrames) / 60).toFixed(2);
-    }, 3.65),
+      var jump_parameters = $scope.parameters["Quick Super Jump"]["Jump"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(jump_parameters);
+      var jump_duration = this.calcRes(jump_parameters, p, s);
 
-    'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }} *", function(loadout) {
+      var prepare_parameters = $scope.parameters["Quick Super Jump"]["Prepare"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(prepare_parameters);
+      var prepare_duration = this.calcRes(prepare_parameters, p, s);
+
+      var total_duration = (jump_duration + prepare_duration) / 60;
+      var max_duration = (jump_parameters[2] + prepare_parameters[2]) / 60;
+
+      this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
+      this.value = 100 - this.percentage;
+      
+      var super_jump_squid_debug_log = {"Super Jump Time (Squid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+      console.log(super_jump_squid_debug_log);
+
+      this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
+      return total_duration;
+    }, 100),
+
+    'Super Jump Time (Kid)': new Stat("{{ STAT_JUMP_KID | translate }} ", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Super Jump');
-      var mod = this.calcMod(abilityScore)
-      var totalFrames = (-1/75)*Math.pow(mod,2) - (84/25)*mod + 239
-      this.value = totalFrames / 60
-      this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-      return (totalFrames / 60).toFixed(2);
-    }, 4),
+      var jump_parameters = $scope.parameters["Quick Super Jump"]["Jump"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(jump_parameters);
+      var jump_duration = this.calcRes(jump_parameters, p, s);
+
+      var prepare_parameters = $scope.parameters["Quick Super Jump"]["Prepare"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(prepare_parameters);
+      var prepare_duration = this.calcRes(prepare_parameters, p, s);
+
+      var total_duration = ((jump_duration + prepare_duration) / 60) + 0.35;
+      var max_duration = ((jump_parameters[2] + prepare_parameters[2]) / 60) + 0.35;
+
+      this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
+      this.value = 100 - this.percentage;
+      
+      var super_jump_kid_debug_log = {"Super Jump Time (Kid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+      console.log(super_jump_kid_debug_log);
+
+      this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
+      return total_duration;
+    }, 100),
 
     'Quick Respawn Time': new Stat("{{ STAT_QUICK_RESPAWN | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Quick Respawn');
       this.name = "{{ STAT_QUICK_RESPAWN | translate }}";
       this.desc = "{{ DESC_QUICK_RESPAWN | translate }}";
-      var death = 30;
-      var splatcam = 354;
-      var spawn = 120;
-      var mod = this.calcMod(abilityScore)/60
-      if(loadout.hasAbility('Respawn Punisher')) {
-        this.name = "{{ STAT_QUICK_RESPAWN_PUNISHER | translate }} *";
-        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
-        mod *= 0.5;
-        splatcam += 74;
-      }
-      var spawnFrames = death + (splatcam*(1-mod)) + spawn;
-      this.value = spawnFrames/60
-      this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
-      return this.value.toFixed(2)
-    }, 9.6),
 
-    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }} *", function(loadout) {
-      var abilityScore = loadout.calcAbilityScore('Cold-Blooded');
-      var trackReduction = this.calcMod(abilityScore) / 40
-      this.value = (8 * (1 - trackReduction))
-      this.label = "{{ LABEL_TIME | translate }}".format({value: this.value.toFixed(2)});
+      var death_frames_parameters = $scope.parameters["Quick Respawn"]["Die Frames"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(death_frames_parameters);
+      var death_duration = this.calcRes(death_frames_parameters, p, s);
+
+      var deathcam_parameters = $scope.parameters["Quick Respawn"]["Deathcam Frames"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(deathcam_parameters);
+      var deathcam_duration = this.calcRes(deathcam_parameters, p, s);
+
+      var total_duration = ((death_duration + deathcam_duration) / 60) + 2.5;
+      var max_duration = ((death_frames_parameters[2] + deathcam_parameters[2]) / 60) + 2.5;
+
+      this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
+      this.value = 100 - this.percentage;
+      
+      var quick_respawn_debug_log = {"Quick Respawn":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+      console.log(quick_respawn_debug_log);
+
+      this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
+      return total_duration;
+    }, 100),
+
+    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }} ", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore('Bomb Defense Up DX');
+      var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Point Sensor"];
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(tracking_time_parameters);
+      var modifier = this.calcRes(tracking_time_parameters, p, s);
+
+      var duration = 8 * modifier;
+      var max_duration = 8;
+      var min_duration = tracking_time_parameters[2] * 8;
+
+      this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+      this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+      
+      var tracking_time_debug_log = {"(Bomb Defense Up DX (Tracking Time)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+      console.log(tracking_time_debug_log);
+
+      this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
       this.desc = "{{ DESC_TRACKING | translate }}";
-      return (8 * (1 - trackReduction)).toFixed(2);
-    }, 8)
-  }
+      return duration;
+    }, 100),
 
+    'Main Power Up': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
+      this.value = 0;
+      this.label = "{{ UNAVAILABLE | translate}}";
+      this.desc = null;
+      return this.value;
+    }, 100),
+  }
 
   $scope.getStatByName = function(name) {
     return $scope.stats[name]
   }
+
   $scope.getAdjustedSubSpeDamage = function(sub,loadout) {
   var abilityScore = loadout.calcAbilityScore('Bomb Defense Up');
   var coeff;

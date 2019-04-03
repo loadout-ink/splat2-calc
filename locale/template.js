@@ -97,6 +97,7 @@ var it_strings = {
   "STAT_QUICK_RESPAWN": "Quick Respawn Time",
   "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time *",
   "STAT_TRACKING_TIME": "Tracking Time",
+  "STAT_MAIN_POWER_UP": "Main Power Up",
 
   // Labels that go on the stat bars themselves. Keep these SHORT!
   "LABEL_DISTANCE_PER_FRAME": "{{value}} DU/f",
