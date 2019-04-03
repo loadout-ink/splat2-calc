@@ -70,9 +70,10 @@ angular.module('splatApp').stats = function ($scope) {
 
       var delta = ((swim_speed / swim_speed_parameters[2] - 1) * 100).toFixed(1).toString();
 
-      // Debug log
-      var swim_speed_debug_log = {"Swim Speed":swim_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-      console.log(swim_speed_debug_log);
+      if($scope.logging) {
+        var swim_speed_debug_log = {"Swim Speed":swim_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(swim_speed_debug_log);        
+      }
 
       this.value = swim_speed;
       this.percentage = delta;
@@ -100,9 +101,10 @@ angular.module('splatApp').stats = function ($scope) {
         var run_speed = this.calcRes(run_speed_parameters, p, s);
         var delta = ((run_speed / run_speed_parameters[2] - 1) * 100).toFixed(1).toString();        
         
-        // Debug log
-        var run_speed_debug_log = {"Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(run_speed_debug_log);
+        if($scope.logging) {
+          var run_speed_debug_log = {"Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(run_speed_debug_log);
+        }
 
         this.value = run_speed;
         this.percentage = delta;
@@ -120,14 +122,14 @@ angular.module('splatApp').stats = function ($scope) {
         var run_speed = this.calcRes(ink_resistance_parameters, p, s);
         var delta = ((run_speed / ink_resistance_parameters[2] - 1) * 100).toFixed(1).toString();        
         
-        // Debug log
-        var run_speed_debug_log = {"Enemy Ink Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(run_speed_debug_log);
+        if($scope.logging) {
+          var run_speed_debug_log = {"Enemy Ink Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(run_speed_debug_log);
+        }
         /*  Not sure why the old Loadout site had significantly different values for
             this stat then Leanny's formula. His follows the same results here:
             See: https://gamefaqs.gamespot.com/boards/200279-splatoon-2/75638591#5 
         */
-        console.log("Ink Resist DEBUG: " + run_speed * loadout.weapon.baseSpeed)
 
         this.value = run_speed
         this.percentage = delta;
@@ -156,9 +158,10 @@ angular.module('splatApp').stats = function ($scope) {
         var run_speed = this.calcRes(run_speed_parameters, p, s) * loadout.weapon.baseSpeed;
         var delta = ((run_speed / loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();        
 
-        // Debug log
-        var run_speed_debug_log = {"Run Speed (Firing)":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(run_speed_debug_log);
+        if($scope.logging) {
+          var run_speed_debug_log = {"Run Speed (Firing)":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(run_speed_debug_log);
+        }
 
         this.value = run_speed
         this.percentage = delta;
@@ -182,9 +185,10 @@ angular.module('splatApp').stats = function ($scope) {
       var refill_time = refill_rate / 60;
       var delta = 3 / refill_time * 100;
 
-      // Debug log
-      var refill_speed_squid_debug_log = {"Ink Recovery Speed (Squid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-      console.log(refill_speed_squid_debug_log);
+      if($scope.logging) {
+        var refill_speed_squid_debug_log = {"Ink Recovery Speed (Squid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(refill_speed_squid_debug_log);
+      }
 
       this.value = delta;
       this.percentage = (100 - (100 / delta) * 100).toFixed(1);
@@ -202,9 +206,10 @@ angular.module('splatApp').stats = function ($scope) {
       var refill_time = refill_rate / 60;
       var delta = 10 / refill_time * 100;
 
-      // Debug log
-      var refill_speed_squid_debug_log = {"Ink Recovery Speed (Kid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-      console.log(refill_speed_squid_debug_log);
+      if($scope.logging) {
+        var refill_speed_squid_debug_log = {"Ink Recovery Speed (Kid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+        console.log(refill_speed_squid_debug_log);
+      }
 
       this.value = delta;
       this.percentage = (100 - (100 / delta) * 100).toFixed(1);
@@ -236,9 +241,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.value = costPerShot;
       this.percentage = (100 - (reduction*100)).toFixed(1);
 
-      // Debug log
-      var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
-      console.log(ink_saver_debug_log);
+      if($scope.logging) {
+        var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
+        console.log(ink_saver_debug_log);
+      }
 
       if(isNaN(this.value)) {
         this.value = 0;
@@ -283,9 +289,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.value = costPerSub;
       this.percentage = (100 - (reduction*100)).toFixed(1);
 
-      // Debug log
-      var ink_saver_sub_debug_log = {"Ink Saver (Sub)":costPerSub,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
-      console.log(ink_saver_sub_debug_log);
+      if($scope.logging) {
+        var ink_saver_sub_debug_log = {"Ink Saver (Sub)":costPerSub,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
+        console.log(ink_saver_sub_debug_log);
+      }
 
       return costPerSub;
     }, 100),
@@ -302,9 +309,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.round(loadout.weapon.specialCost / special_charge_speed)})
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
 
-      // Debug log
-      var special_charge_speed_debug_log = {"Special Charge Speed":special_charge_speed,"AP":abilityScore,"P":p,"S":s,"Delta":this.percentage}
-      console.log(special_charge_speed_debug_log);
+      if($scope.logging) {
+        var special_charge_speed_debug_log = {"Special Charge Speed":special_charge_speed,"AP":abilityScore,"P":p,"S":s,"Delta":this.percentage}
+        console.log(special_charge_speed_debug_log);
+      }
 
       return (special_charge_speed * 100).toFixed(1);
     }, 1.3),
@@ -334,9 +342,10 @@ angular.module('splatApp').stats = function ($scope) {
         special_saved = special_saved * .225;
       }
 
-      // Debug log
-      var special_saver_debug_log = {"Special Saver":special_saved,"AP":abilityScore,"Delta":modifier}
-      console.log(special_saver_debug_log);
+      if($scope.logging) {
+        var special_saver_debug_log = {"Special Saver":special_saved,"AP":abilityScore,"Delta":modifier}
+        console.log(special_saver_debug_log);
+      }
 
       this.value = special_saved;
       this.percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
@@ -363,8 +372,10 @@ angular.module('splatApp').stats = function ($scope) {
 
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
 
-          var special_power_up_log = {"Special Power Up (Curling Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Curling Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
+            console.log(special_power_up_log);
+          }
 
           this.percentage = $scope.toFixedTrimmed((((duration/min_duration) - 1) * 100),2);
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
@@ -384,8 +395,10 @@ angular.module('splatApp').stats = function ($scope) {
 
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
 
-          var special_power_up_log = {"Special Power Up (Other Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Other Bomb Launcher)":duration,"AP:":abilityScore,"P":p,"S":s}
+            console.log(special_power_up_log);
+          }
 
           this.percentage = $scope.toFixedTrimmed((((duration/min_duration) - 1) * 100),2);
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
@@ -403,8 +416,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Ink Armor)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Ink Armor)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
           
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
@@ -421,8 +436,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Inkjet)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Inkjet)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
           
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
@@ -439,8 +456,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
           
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";     
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
@@ -457,8 +476,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
           
           this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";        
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
@@ -475,8 +496,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((health/max_health) * 100,2);
           this.percentage = ((health/min_health - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Baller)":health,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Baller)":health,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
           
           this.name = "{{ STAT_SPECIAL_POWER_BALLER | translate }}";       
           this.label = "{{ LABEL_HP | translate }}".format({value: $scope.toFixedTrimmed(health,2)});
@@ -493,8 +516,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((targeting_radius/max_targeting_radius) * 100,2);
           this.percentage = ((targeting_radius/min_targeting_radius - 1) * 100).toFixed(1);
 
-          var special_power_up_log = {"Special Power Up (Tenta Missiles)":targeting_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Tenta Missiles)":targeting_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
 
           this.name = "{{ STAT_SPECIAL_POWER_TENTA | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(targeting_radius,2)})
@@ -511,8 +536,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((lethal_radius/max_lethal_radius) * 100,2);
           this.percentage = ((lethal_radius/min_lethal_radius - 1) * 100).toFixed(1);
           
-          var special_power_up_log = {"Special Power Up (Splashdown)":lethal_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Splashdown)":lethal_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
 
           this.name = "{{ STAT_SPECIAL_POWER_SPLASHDOWN | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(lethal_radius,2)})
@@ -532,8 +559,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((bubble_radius/max_bubble_radius) * 100,2);
           this.percentage = ((bubble_radius/min_bubble_radius - 1) * 100).toFixed(1);
           
-          var special_power_up_log = {"Special Power Up (Bubble Blower)":bubble_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Bubble Blower)":bubble_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
 
           this.name = "{{ STAT_SPECIAL_POWER_BUBBLE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(bubble_radius,2)})
@@ -551,8 +580,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.percentage = Math.abs(((charge_time/max_charge_time - 1) * 100).toFixed(2));
           this.value = 100 - (this.percentage * 100);
           
-          var special_power_up_log = {"Special Power Up (Booyah Bomb)":charge_time,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(special_power_up_log);
+          if($scope.logging) {
+            var special_power_up_log = {"Special Power Up (Booyah Bomb)":charge_time,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(special_power_up_log);
+          }
 
           this.name = "{{ STAT_SPECIAL_POWER_BOOYAH | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(charge_time,4)})
@@ -584,8 +615,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((sub_range/max_sub_range) * 100,2);
           this.percentage = ((sub_range/min_sub_range - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (General Bombs)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (General Bombs)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(sub_range,2)})
@@ -602,8 +635,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((sub_range/max_sub_range) * 100,2);
           this.percentage = ((sub_range/min_sub_range - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":sub_range,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(sub_range,2)})
@@ -620,8 +655,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((scan_radius/max_scan_radius) * 100,2);
           this.percentage = ((scan_radius/min_scan_radius - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":scan_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Fizzy Bomb)":scan_radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(scan_radius,2)})
@@ -639,8 +676,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Toxic Mist)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Toxic Mist)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_DURATION | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
@@ -657,8 +696,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((radius/max_radius) * 100,2);
           this.percentage = ((radius/min_radius - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Ink Mine)":radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Ink Mine)":radius,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_MINE | translate }}";
           this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(radius*100,2)})
@@ -675,8 +716,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((wall_hp/max_wall_hp) * 100,2);
           this.percentage = ((wall_hp/min_wall_hp - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Splash Wall)":wall_hp,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Splash Wall)":wall_hp,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_WALL | translate }}";
           this.label = "{{ LABEL_HP | translate }}".format({value: $scope.toFixedTrimmed(wall_hp,2)})
@@ -702,8 +745,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((total_duration/max_duration) * 100,2);
           this.percentage = ((total_duration/min_duration - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Sprinkler)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Sprinkler)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_DURATION | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
@@ -727,8 +772,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
           this.value = 100 - this.percentage;
           
-          var sub_power_up_debug_log = {"Sub Power Up (Squid Beakon)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Squid Beakon)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_BEAKON | translate }}";
           this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
@@ -745,8 +792,10 @@ angular.module('splatApp').stats = function ($scope) {
           this.value = $scope.toFixedTrimmed((distance/max_distance) * 100,2);
           this.percentage = ((distance/min_distance - 1) * 100).toFixed(1);
           
-          var sub_power_up_debug_log = {"Sub Power Up (Torpedo)":distance,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(sub_power_up_debug_log);
+          if($scope.logging) {
+            var sub_power_up_debug_log = {"Sub Power Up (Torpedo)":distance,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            console.log(sub_power_up_debug_log);
+          }
 
           this.name = "{{ STAT_SUB_POWER_RANGE | translate }}";
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(distance,2)})
@@ -773,8 +822,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
       this.value = 100 - this.percentage;
       
-      var super_jump_squid_debug_log = {"Super Jump Time (Squid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-      console.log(super_jump_squid_debug_log);
+      if($scope.logging) {
+        var super_jump_squid_debug_log = {"Super Jump Time (Squid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+        console.log(super_jump_squid_debug_log);
+      }
 
       this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
       return total_duration;
@@ -798,8 +849,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
       this.value = 100 - this.percentage;
       
-      var super_jump_kid_debug_log = {"Super Jump Time (Kid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-      console.log(super_jump_kid_debug_log);
+      if($scope.logging) {
+        var super_jump_kid_debug_log = {"Super Jump Time (Kid Form)":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+        console.log(super_jump_kid_debug_log);
+      }
 
       this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
       return total_duration;
@@ -826,8 +879,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
       this.value = 100 - this.percentage;
       
-      var quick_respawn_debug_log = {"Quick Respawn":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-      console.log(quick_respawn_debug_log);
+      if($scope.logging) {
+        var quick_respawn_debug_log = {"Quick Respawn":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+        console.log(quick_respawn_debug_log);
+      }
 
       this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
       return total_duration;
@@ -847,8 +902,10 @@ angular.module('splatApp').stats = function ($scope) {
       this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
       this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
       
-      var tracking_time_debug_log = {"(Bomb Defense Up DX (Tracking Time)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-      console.log(tracking_time_debug_log);
+      if($scope.logging) {
+        var tracking_time_debug_log = {"(Bomb Defense Up DX (Tracking Time)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+        console.log(tracking_time_debug_log);
+      }
 
       this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
       this.desc = "{{ DESC_TRACKING | translate }}";
@@ -893,8 +950,10 @@ angular.module('splatApp').stats = function ($scope) {
     var s = $scope.calcS(bomb_defense_parameters);
     var modifier = $scope.calcRes(bomb_defense_parameters, p, s);
 
-    var sub_damage_reduction_debug_log = {"(Bomb Defense Up DX (Sub Reduction)":modifier,"AP:":abilityScore,"P":p,"S":s}
-    console.log(sub_damage_reduction_debug_log);
+    if($scope.logging) {
+      var sub_damage_reduction_debug_log = {"(Bomb Defense Up DX (Sub Reduction)":modifier,"AP:":abilityScore,"P":p,"S":s}
+      console.log(sub_damage_reduction_debug_log);
+    }
 
     var results = {}
     for(damageValue in sub.damage) {
@@ -927,8 +986,10 @@ angular.module('splatApp').stats = function ($scope) {
     var s = $scope.calcS(bomb_defense_parameters);
     var modifier = $scope.calcRes(bomb_defense_parameters, p, s);
     
-    var special_damage_reduction_debug_log = {"Bomb Defense Up DX":modifier,"Special":special.name,"parameters":bomb_defense_parameters,"AP:":abilityScore,"P":p,"S":s}
-    console.log(special_damage_reduction_debug_log);
+    if($scope.logging) {
+      var special_damage_reduction_debug_log = {"Bomb Defense Up DX":modifier,"Special":special.name,"parameters":bomb_defense_parameters,"AP:":abilityScore,"P":p,"S":s}
+      console.log(special_damage_reduction_debug_log);
+    }
 
     var results = {}
     for(damageValue in special.damage) {

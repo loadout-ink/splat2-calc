@@ -60,6 +60,7 @@
   "STAT_SPECIAL_POWER_TENTA": "スペシャル性能<br>(索敵範囲の拡大)",
   "STAT_SPECIAL_POWER_SPLASHDOWN": "スペシャル性能<br>(爆風範囲拡大)",
   "STAT_SPECIAL_POWER_BUBBLE": "スペシャル性能<br>(泡のサイズの拡大)",
+  "STAT_SPECIAL_POWER_BOOYAH": "スペシャル性能<br>(最大充電時間)",
   "STAT_SUB_POWER": "サブ性能",
   "STAT_SUB_POWER_RANGE": "サブ性能<br>(飛距離)",
   "STAT_SUB_POWER_CURLING": "サブ性能<br>(速度)",
@@ -67,11 +68,13 @@
   "STAT_SUB_POWER_WALL": "サブ性能<br>(耐久力)",
   "STAT_SUB_POWER_SPRINKLER": "サブ性能<br>(弱くなるまでの時間延長)",
   "STAT_SUB_POWER_BEAKON": "サブ性能<br>(スーパージャンプの時間を短縮)",
+  "STAT_SUB_POWER_DURATION": "サブ性能<br>(期限)",
   "STAT_JUMP_SQUID": "スーパージャンプの時間 (イカ)",
   "STAT_JUMP_KID": "スーパージャンプの時間 (ヒト)",
   "STAT_QUICK_RESPAWN": "復活時間",
   "STAT_QUICK_RESPAWN_PUNISHER": "復活時間",
   "STAT_TRACKING_TIME": "マーキング時間",
+  "STAT_MAIN_POWER_UP": "メイン性能アップ",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",
   "LABEL_PERCENT": "{value}%",
@@ -79,8 +82,9 @@
   "LABEL_SUB_COST": "タンクの{value}%",
   "LABEL_TIME": "{value}秒",
   "LABEL_HP": "{value} HP",
+  "LABEL_NO_UNIT": "{value}",
 
-  "DESC_PUNISHER_DISCLAIMER": "復活ペナルティの効果はまだ調査中。",
+  "DESC_PUNISHER_DISCLAIMER": "復活ペナルティアップはこのステータスに影響を与えています。",
   "DESC_TRACKING": "相手のポイントセンサーなど位置を発見してくる攻撃の効果時間",
   "DESC_RECOVERY_TIME": "満タンから空まで{value}秒",
   "DESC_MAIN_COST": "満タンから空まで{totalShots}回 ({reduction}% 減少)",
@@ -88,8 +92,8 @@
   "DESC_SPECIAL_COST": "スペシャルがたまるまでの塗りポイントが{value}p",
   "DESC_DISTANCE": "{value} 距離単位",
   "DESC_QUICK_RESPAWN": "相手を一人も倒せないまま連続でやられてしまったときの復活時間",
-
   "UNIT_DISTANCE_UNITS_PER_FRAME": "DU/f = Distance Unit Per Frame(1フレームに移動できる距離単位)で、試し撃ちラインが50D",
+  "ROLL_SPEED": "ローラーとブラシのロール速度は一定です。",
 
   "SHOT_UNIT_SHOT": "一発",
   "SHOT_UNIT_SHOT_PLURAL": "発",
@@ -151,6 +155,6 @@
   "SHELDON_DAMAGE": "攻撃力",
   "SHELDON_HANDLING": "軽さ",
 
-  "UI_ABOUT_CONTENT": "主にAngularJS 1.6.5とBootstrap 3で作られています。<br><br> このツールは<a href='https://twitter.com/LeanYoshi' target='_blank'>Lean</a>さんや、InkademyとSplatoon DevelopersのDiscordの皆さんから教えていただいた情報と資産を基にして開発された。 <br><br>データの収集や応援をしてくれた皆様に感謝を申し上げます。<br><br> ほとんどの計算式がInkipediaの<a href='https://splatoonwiki.org/wiki/User:Heddy/Charts' target='_blank'>Heddy's charts</a>でみられる<br><br> バグの報告・改善の提案などがありましたら、<a href='https://github.com/DeviPotato/splat2-calc' target='_blank'>GitHub</a>のプロジェクトに報告・提案してください。<br> <a href='https://twitter.com/loadout_ink' target='_blank'>ツイッター</a>でも自由に連絡ください。"
-
+  "UI_ABOUT_CONTENT": "Built primarily with AngularJS 1.6.5 and Bootstrap 3.<br><br> This tool was developed using info and assets datamined by <a href='https://twitter.com/LeanYoshi' target='_blank'>Lean</a>, as well as information provided by several members of the Inkademy and Splatoon Developers servers on Discord. <br><br>Thanks to everyone who gave me help and data!<br><br> Many of the formulas used can be seen on <a href='https://splatoonwiki.org/wiki/User:Heddy/Charts' target='_blank'>Heddy's charts</a> on Inkipedia.<br><br> Any feature suggestions, bug reports, and feedback can be left as issues on the project's <a href='https://github.com/DeviPotato/splat2-calc' target='_blank'>GitHub</a>. <br> You can also reach me on the project's <a href='https://twitter.com/loadout_ink' target='_blank'>twitter</a>."
+  
 }
