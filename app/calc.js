@@ -116,6 +116,43 @@ angular
       return Number(number.toFixed(precision)).toString();
     }
 
+    $scope.calcMod = function(abilityScore) {
+      return (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))
+    }
+
+    $scope.calcP = function(abilityScore) {
+      return Math.min(3.3*abilityScore - 0.027*Math.pow(abilityScore,2),100);
+    }
+
+    $scope.calcS = function(values) {
+      var max = values[0];
+      var mid = values[1];
+      var min = values[2];
+      return (mid-min) / (max-min);
+    }
+
+    $scope.calcRes = function(values, p, s) {
+      var max = values[0];
+      var mid = values[1];
+      var min = values[2];
+      return min + (max-min) * this.lerpN(p/100, s);
+    }
+
+    $scope.lerpN = function(p, s) {
+      if(s.toFixed(3) == 0.5) {
+        return p;
+      }
+      if(p == 0.0) {
+        return p;
+      }
+      if(p == 1.0) {
+        return p;
+      }
+      if(s != 0.5) {
+        return Math.pow(Math.E,-1 * (Math.log(p) * Math.log(s) / Math.log(2)))
+      }
+    }
+
     $scope.languages = {
       'en_US': 'English',
       'ja_JP': '日本語',
@@ -129,13 +166,13 @@ angular
 
     $scope.parameters = {
       "Ink Saver Sub": {
-        "A": [0.8, 0.9, 1.0],
-        "B": [0.7, 0.85, 1.0],
-        "C": [0.65, 0.825, 1.0],
-        "D": [0.6, 0.8, 1.0],
-        "E": [0.5, 0.75, 1.0],
-        "F": [1.0, 1.0, 1.0]
-    },
+          "A": [0.8, 0.9, 1.0],
+          "B": [0.7, 0.85, 1.0],
+          "C": [0.65, 0.825, 1.0],
+          "D": [0.6, 0.8, 1.0],
+          "E": [0.5, 0.75, 1.0],
+          "F": [1.0, 1.0, 1.0]
+      },
   
       "Ink Saver Main": {
           "Low": [0.6, 0.8, 1.0],
@@ -259,7 +296,7 @@ angular
           "General Bomb Distance Up": [16.8, 14.0, 11.2],
           "Point Sensor Mark Time Duration": [960, 720, 480]
       }
-  }
+    }
 
   }])
   .filter("trust", ['$sce', function($sce) {

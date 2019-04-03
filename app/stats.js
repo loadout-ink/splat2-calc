@@ -35,7 +35,6 @@ function Stat(name, calc, max) {
     }
     if(s != 0.5) {
       return Math.pow(Math.E,-1 * (Math.log(p) * Math.log(s) / Math.log(2)))
-      //return Math.log(-1 * (Math.log(p) * Math.log(s) / Math.log(2)));
     }
   }
 }
@@ -868,36 +867,81 @@ angular.module('splatApp').stats = function ($scope) {
     return $scope.stats[name]
   }
 
-  $scope.getAdjustedSubSpeDamage = function(sub,loadout) {
-  var abilityScore = loadout.calcAbilityScore('Bomb Defense Up');
-  var coeff;
-  switch(sub.name) {
-    case 'Burst Bomb':
-      coeff = 75;
-      break;
-    case 'Splat Bomb':
-    case 'Suction Bomb':
-    case 'Autobomb':
-    case 'Curling Bomb':
-    case 'Ink Mine':
-      coeff = 60;
-      break;
-    default:
-      coeff = (600/7);
-      break;
-  }
-  var damageReduction = (1 - (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2)) / coeff)
+  $scope.getAdjustedSubDamage = function(sub,loadout) {
+    var abilityScore = loadout.calcAbilityScore('Bomb Defense Up DX');
+    var modifier = null;
+
+    switch(sub.name) {
+      // TODO: Confirm with Lean that the new subs (Fizzy & Torpedo) use the same params as these other subs.
+      case "Autobomb":
+      case "Curling Bomb":
+      case "Fizzy Bomb":
+      case "Ink Mine":
+      case "Splat Bomb":
+      case "Suction Bomb":
+      case "Torpedo":
+        var bomb_defense_parameters = $scope.parameters["Bomb Defense"]["Heavy Sub"];
+        break;
+      case "Burst Bomb":
+        var bomb_defense_parameters = $scope.parameters["Bomb Defense"]["Heavy Light"];
+        break;
+      default:
+        var bomb_defense_parameters = $scope.parameters["Bomb Defense"]["Additional"];;
+    }
+
+    var p = $scope.calcP(abilityScore);      
+    var s = $scope.calcS(bomb_defense_parameters);
+    var modifier = $scope.calcRes(bomb_defense_parameters, p, s);
+
+    var sub_damage_reduction_debug_log = {"(Bomb Defense Up DX (Sub Reduction)":modifier,"AP:":abilityScore,"P":p,"S":s}
+    console.log(sub_damage_reduction_debug_log);
+
     var results = {}
     for(damageValue in sub.damage) {
       var subDamage = sub.damage[damageValue]
       if(subDamage >= 100) {
         results[damageValue] = subDamage.toFixed(1);
       } else {
-        results[damageValue] = (subDamage * damageReduction).toFixed(1);
+        results[damageValue] = (subDamage * modifier).toFixed(1);
       }
     }
     return results
   }
+
+  $scope.getAdjustedSpecialDamage = function(special,loadout) {
+    var abilityScore = loadout.calcAbilityScore('Bomb Defense Up DX');
+    var modifier = null;
+
+    switch(special.name) {
+      case "Baller":
+      case "Inkjet":
+      case "Splashdown":
+      case "Tenta Missiles":
+        var bomb_defense_parameters = $scope.parameters["Bomb Defense"]["Special"];
+        break;
+      default:
+        var bomb_defense_parameters = $scope.parameters["Bomb Defense"]["Additional"];;
+    }
+
+    var p = $scope.calcP(abilityScore);      
+    var s = $scope.calcS(bomb_defense_parameters);
+    var modifier = $scope.calcRes(bomb_defense_parameters, p, s);
+    
+    var special_damage_reduction_debug_log = {"Bomb Defense Up DX":modifier,"Special":special.name,"parameters":bomb_defense_parameters,"AP:":abilityScore,"P":p,"S":s}
+    console.log(special_damage_reduction_debug_log);
+
+    var results = {}
+    for(damageValue in special.damage) {
+      var specialDamage = special.damage[damageValue]
+      if(specialDamage >= 100) {
+        results[damageValue] = specialDamage.toFixed(1);
+      } else {
+        results[damageValue] = (specialDamage * modifier).toFixed(1);
+      }
+    }
+    return results
+  }
+
   $scope.getAdjustedSpecialCost = function(loadout) {
     var stat = $scope.getStatByName('Special Charge Speed');
     return Math.floor(loadout.weapon.specialCost / (stat.value))
