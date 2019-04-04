@@ -53,6 +53,7 @@
   "STAT_SAVER_SUB": "サブウェポンの消費インク量",
   "STAT_SPECIAL_CHARGE": "スペシャルゲージの増加量",
   "STAT_SPECIAL_SAVER": "復活後のスペシャルゲージの残り",
+  "STAT_SPECIAL_SAVER_ON_DEATH": "復活後のスペシャルゲージの残り (使用中の死)",
   "STAT_SPECIAL_POWER": "スペシャル性能",
   "STAT_SPECIAL_POWER_UNKNOWN": "スペシャル性能<br>(???)",
   "STAT_SPECIAL_POWER_DURATION": "スペシャル性能<br>(時間)",
@@ -75,6 +76,10 @@
   "STAT_QUICK_RESPAWN_PUNISHER": "復活時間",
   "STAT_TRACKING_TIME": "マーキング時間",
   "STAT_MAIN_POWER_UP": "メイン性能アップ",
+  "STAT_MAIN_POWER_UP_UNUSED": "メイン性能アップ (未使用)",  
+  "STAT_MAIN_POWER_UP_MIN_DAMAGE": "メイン性能アップ (最低ダメージ)",
+  "STAT_MAIN_POWER_UP_MAX_DAMAGE": "メイン性能アップ (最大ダメージ)",
+  "STAT_MAIN_POWER_UP_INK_COVERAGE": "メイン性能アップ (インクカバレッジ)",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",
   "LABEL_PERCENT": "{value}%",

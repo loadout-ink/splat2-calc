@@ -954,47 +954,58 @@ angular.module('splatApp').stats = function ($scope) {
     // This is the first MPU stat. It will always have a value for every weapon.
     'Main Power Up 1': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
+      var parameters = null;
 
       if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
-        var parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["min_params"];
+        parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["min_params"];
         this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";
       }
 
       if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1) {
-        var parameters = $scope.parameters["Main Power Up"]["Splattershot Jr."]["params"];        
+        parameters = $scope.parameters["Main Power Up"]["Splattershot Jr."]["params"];        
         this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";
       }
 
       if(loadout.weapon.name.indexOf('Splash-o-matic') != -1) {
-        var parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["params"];        
+        parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["params"];        
         this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
       }
 
-      var p = this.calcP(abilityScore);      
-      var s = this.calcS(parameters);
-      var result = this.calcRes(parameters, p, s);
-
-      var max_param = parameters[0];
-      var min_param = parameters[2];
-
-      this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-      this.percentage = ((result/min_param - 1) * 100).toFixed(1);
-
-      if($scope.logging) {
-        var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-        console.log(main_power_up_debug_log);
+      if(parameters) {
+        var p = this.calcP(abilityScore);      
+        var s = this.calcS(parameters);
+        var result = this.calcRes(parameters, p, s);
+  
+        var max_param = parameters[0];
+        var min_param = parameters[2];
+  
+        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+        this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+  
+        if($scope.logging) {
+          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(main_power_up_debug_log);
+        }
+        
+        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+        return this.percentage;
       }
-      
-      this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
-      return this.percentage;
+
+      // Defaults
+      this.value = 0;
+      this.name = "{{ STAT_MAIN_POWER_UP_UNUSED | translate }}";
+      this.label = "{{ UNAVAILABLE | translate}}".format({value: this.value});
+      this.desc = null;
+      return this.value;
     }, 100),
 
     // This is the second MPU stat. It will only have values for weapons with additional MPU stats.
     'Main Power Up 2': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
+      var parameters = null;
       
       if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
-        var parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["max_params"];   
+        parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["max_params"];   
         this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";
       }
 
@@ -1024,7 +1035,8 @@ angular.module('splatApp').stats = function ($scope) {
       
       // Defaults
       this.value = 0;
-      this.label = "{{ UNAVAILABLE | translate}}";
+      this.name = "{{ STAT_MAIN_POWER_UP_UNUSED | translate }}";      
+      this.label = "{{ UNAVAILABLE | translate}}".format({value: this.value});
       this.desc = null;
       return this.value;
     }, 100),
