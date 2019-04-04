@@ -56,7 +56,7 @@ angular.module('splatApp').gear = function($scope) {
       },
       image: "../common/assets/img/brands/B02.png",
       common: "Swim Speed Up",
-      uncommon: "Bomb Defense Up"
+      uncommon: "Bomb Defense Up DX"
     },
     "Rockenberg" : {
       localizedName: {
@@ -181,7 +181,7 @@ angular.module('splatApp').gear = function($scope) {
         "it_IT": "Maremont"
       },
       image: "../common/assets/img/brands/B09.png",
-      common: "Bomb Defense Up",
+      common: "Bomb Defense Up DX",
       uncommon: "Cold-Blooded"
     },
     "Tentatek" : {
@@ -235,7 +235,7 @@ angular.module('splatApp').gear = function($scope) {
         "it_IT": "Annak"
       },
       image: "../common/assets/img/brands/B15.png",
-      common: "Cold-Blooded",
+      common: "Main Power Up",
       uncommon: "Special Saver"
     },
     "Enperry" : {
@@ -271,7 +271,7 @@ angular.module('splatApp').gear = function($scope) {
         "it_IT": "Nero Marlin"
       },
       image: "../common/assets/img/brands/B17.png",
-      common: "Cold-Blooded",
+      common: "Main Power Up",
       uncommon: "Sub Power Up"
     },
     "Grizzco" : {
