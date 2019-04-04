@@ -75,7 +75,8 @@ var it_strings = {
   "STAT_SAVER_MAIN": "Ink Consumption (Main)",
   "STAT_SAVER_SUB": "Ink Consumption (Sub)",
   "STAT_SPECIAL_CHARGE": "Special Charge Speed",
-  "STAT_SPECIAL_SAVER": "Special Saved *",
+  "STAT_SPECIAL_SAVER": "Special Saved",
+  "STAT_SPECIAL_SAVER_ON_DEATH": "Special Saved (On-Use Death)",
   "STAT_SPECIAL_POWER": "Special Power",
   "STAT_SPECIAL_POWER_UNKNOWN": "Special Power (???)",
   "STAT_SPECIAL_POWER_DURATION": "Special Power (Duration)",
@@ -95,11 +96,13 @@ var it_strings = {
   "STAT_JUMP_SQUID": "Super Jump Time (Squid)",
   "STAT_JUMP_KID": "Super Jump Time (Kid)",
   "STAT_QUICK_RESPAWN": "Quick Respawn Time",
-  "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time *",
+  "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time",
   "STAT_TRACKING_TIME": "Tracking Time",
   "STAT_MAIN_POWER_UP": "Main Power Up",
-  "STAT_MAIN_POWER_UP_MIN_DAMAGE_UP": "Main Power Up (Min Damage)",
-  "STAT_MAIN_POWER_UP_MAX_DAMAGE_UP": "Main Power Up (Max Damage)",
+  "STAT_MAIN_POWER_UP_UNUSED": "Main Power Up (Unused)",
+  "STAT_MAIN_POWER_UP_MIN_DAMAGE": "Main Power Up (Min Damage)",
+  "STAT_MAIN_POWER_UP_MAX_DAMAGE": "Main Power Up (Max Damage)",
+  "STAT_MAIN_POWER_UP_INK_COVERAGE": "Main Power Up (Ink Coverage)",
   
 
   // Labels that go on the stat bars themselves. Keep these SHORT!

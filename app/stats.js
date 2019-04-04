@@ -325,15 +325,9 @@ angular.module('splatApp').stats = function ($scope) {
     }, 1.3),
 
     'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {
-      var special_saver_parameters = null;
-      if(loadout.weapon.special == "Splashdown") {
-        special_saver_parameters = $scope.parameters["Special Saver"]["Splashdown"];
-      }
-      else {
-        special_saver_parameters = $scope.parameters["Special Saver"]["default"];        
-      }
-      
+      var special_saver_parameters = special_saver_parameters = $scope.parameters["Special Saver"]["default"];        
       var abilityScore = loadout.calcAbilityScore('Special Saver');
+      
       if(loadout.hasAbility('Respawn Punisher')) {
         abilityScore = abilityScore * 0.7;
         this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
@@ -356,7 +350,45 @@ angular.module('splatApp').stats = function ($scope) {
 
       this.value = special_saved;
       this.percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
-      this.localizedDesc = { desc: null }; // TODO: Verify what this actually does      
+      this.label = "{{ LABEL_PERCENT | translate }}".format({value: (special_saved).toFixed(1)});
+      return special_saved.toFixed(1);
+    }, 100),
+
+    'Special Saved On Death': new Stat("{{ STAT_SPECIAL_SAVER_ON_DEATH | translate }}", function(loadout) {
+      var special_saver_parameters = null;
+      if(loadout.weapon.special == "Splashdown") {
+        special_saver_parameters = $scope.parameters["Special Saver"]["Splashdown"];
+      }
+      else {
+        special_saver_parameters = $scope.parameters["Special Saver"]["default"];        
+      }
+      
+      var abilityScore = loadout.calcAbilityScore('Special Saver');
+      if(loadout.hasAbility('Respawn Punisher')) {
+        abilityScore = abilityScore * 0.7;
+        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+      }
+
+      var p = this.calcP(abilityScore);       
+      var s = this.calcS(special_saver_parameters);
+      var modifier = this.calcRes(special_saver_parameters, p, s);
+      
+      var special_saved = 100.0 * modifier;
+      if(special_saved > 100) {
+        special_saved = 100.0;
+      }
+
+      if(loadout.hasAbility('Respawn Punisher')) {
+        special_saved = special_saved * .225;
+      }
+
+      if($scope.logging) {
+        var special_saver_debug_log = {"Special Saver (On Death)":special_saved,"AP":abilityScore,"Delta":modifier}
+        console.log(special_saver_debug_log);
+      }
+
+      this.value = special_saved;
+      this.percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (special_saved).toFixed(1)});
       return special_saved.toFixed(1);
     }, 100),
@@ -924,32 +956,37 @@ angular.module('splatApp').stats = function ($scope) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
 
       if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
-        var damage_parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["min_params"];
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(damage_parameters);
-        var damage = this.calcRes(damage_parameters, p, s);
+        var parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";
+      }
 
-        var max_damage = damage_parameters[0];
-        var min_damage = damage_parameters[2];
+      if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1) {
+        var parameters = $scope.parameters["Main Power Up"]["Splattershot Jr."]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";
+      }
 
-        this.value = $scope.toFixedTrimmed((damage/max_damage) * 100,2);
-        this.percentage = ((damage/min_damage - 1) * 100).toFixed(1);
+      if(loadout.weapon.name.indexOf('Splash-o-matic') != -1) {
+        var parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
 
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up (Min Damage)":damage,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-        
-        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE_UP | translate }}";
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(damage,2)});
-        return this.percentage;
+      var p = this.calcP(abilityScore);      
+      var s = this.calcS(parameters);
+      var result = this.calcRes(parameters, p, s);
+
+      var max_param = parameters[0];
+      var min_param = parameters[2];
+
+      this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+      this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+
+      if($scope.logging) {
+        var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+        console.log(main_power_up_debug_log);
       }
       
-      // Defaults
-      this.value = 0;
-      this.label = "{{ UNAVAILABLE | translate}}";
-      this.desc = null;
-      return this.value;
+      this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+      return this.percentage;
     }, 100),
 
     // This is the second MPU stat. It will only have values for weapons with additional MPU stats.
@@ -957,27 +994,34 @@ angular.module('splatApp').stats = function ($scope) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
       
       if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
-        var damage_parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["max_params"];
+        var parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["max_params"];   
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";
+      }
+
+      if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1) {
+        this.name = "{{ STAT_MAIN_POWER_UP_UNUSED | translate }}";
+      }
+
+      if(parameters) {
         var p = this.calcP(abilityScore);      
-        var s = this.calcS(damage_parameters);
-        var damage = this.calcRes(damage_parameters, p, s);
-
-        var max_damage = damage_parameters[0];
-        var min_damage = damage_parameters[2];
-
-        this.value = $scope.toFixedTrimmed((damage/max_damage) * 100,2);
-        this.percentage = ((damage/min_damage - 1) * 100).toFixed(1);
-
+        var s = this.calcS(parameters);
+        var result = this.calcRes(parameters, p, s);
+  
+        var max_param = parameters[0];
+        var min_param = parameters[2];
+  
+        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+        this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+  
         if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up (Max Damage)":damage,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
           console.log(main_power_up_debug_log);
         }
         
-        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE_UP | translate }}";
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(damage,2)});
+        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
         return this.percentage;
       }
-
+      
       // Defaults
       this.value = 0;
       this.label = "{{ UNAVAILABLE | translate}}";
