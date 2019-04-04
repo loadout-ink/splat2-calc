@@ -236,7 +236,14 @@ angular.module('splatApp').stats = function ($scope) {
       var reduction = this.calcRes(ink_saver_parameters, p, s);
       
       var costPerShot = loadout.weapon.inkPerShot * reduction;
-      this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)})
+
+      if(loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
+        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)})                
+      }
+      else {
+        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)})        
+      }
+      
       this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: loadout.weapon.shotUnit})
       this.value = costPerShot;
       this.percentage = (100 - (reduction*100)).toFixed(1);
@@ -912,7 +919,66 @@ angular.module('splatApp').stats = function ($scope) {
       return duration;
     }, 100),
 
-    'Main Power Up': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
+    // This is the first MPU stat. It will always have a value for every weapon.
+    'Main Power Up 1': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore('Main Power Up');
+
+      if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
+        var damage_parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["min_params"];
+        var p = this.calcP(abilityScore);      
+        var s = this.calcS(damage_parameters);
+        var damage = this.calcRes(damage_parameters, p, s);
+
+        var max_damage = damage_parameters[0];
+        var min_damage = damage_parameters[2];
+
+        this.value = $scope.toFixedTrimmed((damage/max_damage) * 100,2);
+        this.percentage = ((damage/min_damage - 1) * 100).toFixed(1);
+
+        if($scope.logging) {
+          var main_power_up_debug_log = {"Main Power Up (Min Damage)":damage,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(main_power_up_debug_log);
+        }
+        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE_UP | translate }}";
+        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(damage,2)});
+        return this.percentage;
+      }
+      
+      // Defaults
+      this.value = 0;
+      this.label = "{{ UNAVAILABLE | translate}}";
+      this.desc = null;
+      return this.value;
+    }, 100),
+
+    // This is the second MPU stat. It will only have values for weapons with additional MPU stats.
+    'Main Power Up 2': new Stat("{{ STAT_MAIN_POWER_UP | translate }} *", function(loadout) {
+      var abilityScore = loadout.calcAbilityScore('Main Power Up');
+      
+      if(loadout.weapon.name.indexOf('Sploosh-o-matic') != -1) {
+        var damage_parameters = $scope.parameters["Main Power Up"]["Sploosh-o-matic"]["max_params"];
+        var p = this.calcP(abilityScore);      
+        var s = this.calcS(damage_parameters);
+        var damage = this.calcRes(damage_parameters, p, s);
+
+        var max_damage = damage_parameters[0];
+        var min_damage = damage_parameters[2];
+
+        this.value = $scope.toFixedTrimmed((damage/max_damage) * 100,2);
+        this.percentage = ((damage/min_damage - 1) * 100).toFixed(1);
+
+        if($scope.logging) {
+          var main_power_up_debug_log = {"Main Power Up (Max Damage)":damage,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(main_power_up_debug_log);
+        }
+        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE_UP | translate }}";
+        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(damage,2)});
+        return this.percentage;
+      }
+
+      // Defaults
       this.value = 0;
       this.label = "{{ UNAVAILABLE | translate}}";
       this.desc = null;

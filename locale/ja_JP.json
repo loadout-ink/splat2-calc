@@ -144,6 +144,8 @@
   "UI_VERIFY": "削除してもよろしいですか？",
   "UI_SAVED_LOADOUTS": "保存された揃え",
   "UI_DELETE_ALL": "揃えを全部削除",
+  "UI_UPDATE": "更新がありました！",
+  "UI_VERSION_PREFIX": "ギア揃え ｖ",  
 
   "SHELDON_RANGE": "射程",
   "SHELDON_FIRE_RATE": "連射力",

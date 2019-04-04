@@ -98,6 +98,9 @@ var it_strings = {
   "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time *",
   "STAT_TRACKING_TIME": "Tracking Time",
   "STAT_MAIN_POWER_UP": "Main Power Up",
+  "STAT_MAIN_POWER_UP_MIN_DAMAGE_UP": "Main Power Up (Min Damage)",
+  "STAT_MAIN_POWER_UP_MAX_DAMAGE_UP": "Main Power Up (Max Damage)",
+  
 
   // Labels that go on the stat bars themselves. Keep these SHORT!
   "LABEL_DISTANCE_PER_FRAME": "{{value}} DU/f",
@@ -177,6 +180,8 @@ var it_strings = {
   "UI_VERIFY": "Are you sure?",
   "UI_SAVED_LOADOUTS": "Saved Loadouts",
   "UI_DELETE_ALL": "Delete All Loadouts",
+  "UI_UPDATE": "There's been an update!",
+  "UI_VERSION_PREFIX": "Loadout v",
 
   // For Google and other search engines
   //// This will appear when loadout.ink appears in search results.

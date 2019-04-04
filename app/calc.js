@@ -15,8 +15,21 @@ angular
 
     $scope.loadout = new Loadout();
     $scope.status = {}
+    $scope.logging = false;
+    $scope.appVersion = 200; // 2.0.0
 
     $scope.screenshotMode = false;
+
+    $scope.appVersionToString = function() {
+      var appVersionString = "";
+      for(i = 0; i < $scope.appVersion.toString().length; i++) {
+        appVersionString += $scope.appVersion.toString()[i];
+        if(i < $scope.appVersion.toString().length - 1) {
+          appVersionString += ".";
+        }
+      }
+      return appVersionString;
+    }
 
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
@@ -260,10 +273,10 @@ angular
   
       "Ink Resistance": {
           "Dmg Per Frame": [0.0015, 0.00225, 0.003],
-          "Run": [0.72, 0.48, 0.24],
+          "Run": [0.768, 0.5568, 0.24],
           "Dmg Limit": [0.2, 0.3, 0.4],
           "Shoot K": [1.0, 0.75, 0.5],
-          "Jump": [1.05, 0.925, 0.8],
+          "Jump": [1.1, 0.98, 0.8],
           "Shoot": [0.4, 0.26, 0.12],
           "Jump(story)": [1.05, 0.825, 0.6]
       },
@@ -295,6 +308,506 @@ angular
           "Sprinkler Second Phase Duration": [1020, 960, 900],
           "General Bomb Distance Up": [16.8, 14.0, 11.2],
           "Point Sensor Mark Time Duration": [960, 720, 480]
+      },
+
+      "Main Power Up": {
+        ".52 Gal": {
+          "desc": "Jump Shot Randomization",
+          "params": [
+            6.0,
+            9.0,
+            12.0
+          ]
+        },
+        ".96 Gal": {
+          "desc": "Damage Up",
+          "min_params": [
+            38.7,
+            34.85,
+            31.0
+          ],
+          "max_params": [
+            77.5,
+            69.75,
+            62.0
+          ]
+        },
+        "Aerospray": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            14.0,
+            13.0,
+            12.0
+          ]
+        },
+        "Ballpoint Splatling": {
+          "desc": "Damage Up",
+          "min_params": [
+            17.6,
+            16.8,
+            16.0
+          ],
+          "max_params": [
+            33.3,
+            32.65,
+            32.0
+          ]
+        },
+        "Bamboozler 14": {
+          "desc": "Base Damage Up",
+          "min_params": [
+            36.0,
+            33.0,
+            30.0
+          ],
+          "max_params": [
+            99.9,
+            92.45,
+            85.0
+          ]
+        },
+        "Blaster": {
+          "desc": "Increased Shot Accuracy",
+          "params": [
+            6.0,
+            8.0,
+            10.0
+          ]
+        },
+        "Bloblobber": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            1.2,
+            1.1,
+            1.0
+          ]
+        },
+        "Carbon Roller": {
+          "desc": "Vertical Flick Damage Up",
+          "min_params": [
+            40.2,
+            37.6,
+            35.0
+          ],
+          "max_params": [
+            138.0,
+            129.0,
+            120.0
+          ]
+        },
+        "Clash Blaster": {
+          "desc": "Increased Shot Accuracy",
+          "params": [
+            4.0,
+            6.0,
+            8.0
+          ]
+        },
+        "Dapple Dualies": {
+          "desc": "Damage Up",
+          "min_params": [
+            21.6,
+            19.8,
+            18.0
+          ],
+          "max_params": [
+            43.2,
+            39.6,
+            36.0
+          ]
+        },
+        "Dualie Squelchers": {
+          "desc": "Damage Up",
+          "min_params": [
+            16.8,
+            15.4,
+            14.0
+          ],
+          "max_params": [
+            33.3,
+            30.65,
+            28.0
+          ]
+        },
+        "Dynamo Roller": {
+          "desc": "Vertical Flick Damage Up",
+          "min_params": [
+            45.9,
+            42.95,
+            40.0
+          ],
+          "max_params": [
+            207.0,
+            193.5,
+            180.0
+          ]
+        },
+        "E-Liter 4k Scope": {
+          "desc": "Full Charge Distance",
+          "params": [
+            325.5,
+            318.0,
+            310.5
+          ]
+        },
+        "E-Liter 4k": {
+          "desc": "Full Charge Distance",
+          "params": [
+            350.5,
+            320.5,
+            290.5
+          ]
+        },
+        "Explosher": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            1.3,
+            1.15,
+            1.0
+          ]
+        },
+        "Flingza Roller": {
+          "desc": "Vertical Flick Damage Up",
+          "min_params": [
+            45.9,
+            42.95,
+            40.0
+          ],
+          "max_params": [
+            172.4,
+            161.2,
+            150.0
+          ]
+        },
+        "Glooga Dualies": {
+          "desc": "Damage Up",
+          "min_params": [
+            21.6,
+            19.8,
+            18.0
+          ],
+          "max_params": [
+            43.2,
+            39.6,
+            36.0
+          ]
+        },
+        "Goo Tuber": {
+          "desc": "Base Damage Up",
+          "min_params": [
+            45.9,
+            42.95,
+            40.0
+          ],
+          "max_params": [
+            149.4,
+            139.7,
+            130.0
+          ]
+        },
+        "H-3 Nozzlenose": {
+          "desc": "Damage Up",
+          "min_params": [
+            25.6,
+            23.05,
+            20.5
+          ],
+          "max_params": [
+            49.9,
+            45.45,
+            41.0
+          ]
+        },
+        "Heavy Splatling": {
+          "desc": "Burst Duration",
+          "params": [
+            179.0,
+            161.5,
+            144.0
+          ]
+        },
+        "Hydra Splatling": {
+          "desc": "Full Charge Damage Up",
+          "min_params": [
+            19.2,
+            17.6,
+            16.0
+          ],
+          "max_params": [
+            48.0,
+            44.0,
+            40.0
+          ]
+        },
+        "Inkbrush": {
+          "desc": "Roll Speed",
+          "params": [
+            2.016,
+            1.968,
+            1.92
+          ]
+        },
+        "Jet Squelcher": {
+          "desc": "Bullet Velocity Multiplier",
+          "params": [
+            36.4426,
+            35.0213,
+            33.6
+          ]
+        },
+        "L-3 Nozzlenose": {
+          "desc": "Damage Up",
+          "min_params": [
+            18.8,
+            16.65,
+            14.5
+          ],
+          "max_params": [
+            33.3,
+            31.15,
+            29.0
+          ]
+        },
+        "Luna Blaster": {
+          "desc": "Increased High-Damage Radius",
+          "params": [
+            30.0,
+            20.0,
+            10.0
+          ]
+        },
+        "Mini Splatling": {
+          "desc": "Burst Duration",
+          "params": [
+            94.0,
+            83.0,
+            72.0
+          ]
+        },
+        "N-ZAP": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            13.2,
+            12.1,
+            11.0
+          ]
+        },
+        "Nautilus": {
+          "desc": "Burst Duration",
+          "params": [
+            136.0,
+            120.0,
+            104.0
+          ]
+        },
+        "Octo Brush": {
+          "desc": "Roll Speed",
+          "params": [
+            1.8816,
+            1.7808,
+            1.68
+          ]
+        },
+        "Range Blaster": {
+          "desc": "Increased Shot Accuracy",
+          "params": [
+            5.0,
+            6.5,
+            8.0
+          ]
+        },
+        "Rapid Blaster Pro": {
+          "desc": "Increased Shot Accuracy",
+          "params": [
+            4.0,
+            6.0,
+            8.0
+          ]
+        },
+        "Rapid Blaster": {
+          "desc": "Increased Shot Accuracy",
+          "params": [
+            4.0,
+            6.0,
+            8.0
+          ]
+        },
+        "Slosher": {
+          "desc": "Max Damage Range",
+          "params": [
+            -55.0,
+            -35.0,
+            -15.0
+          ]
+        },
+        "Sloshing Machine": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            1.15,
+            1.075,
+            1.0
+          ]
+        },
+        "Splash-o-matic": {
+          "desc": "Damage Up",
+          "min_params": [
+            17.5,
+            15.75,
+            14.0
+          ],
+          "max_params": [
+            33.3,
+            30.65,
+            28.0
+          ]
+        },
+        "Splat Brella": {
+          "desc": "Canopy Regeneration Time",
+          "params": [
+            210.0,
+            300.0,
+            390.0
+          ]
+        },
+        "Splat Charger": {
+          "desc": "Base Damage Up",
+          "min_params": [
+            48.0,
+            44.0,
+            40.0
+          ],
+          "max_params": [
+            96.0,
+            88.0,
+            80.0
+          ]
+        },
+        "Splat Dualies": {
+          "desc": "Damage Up",
+          "min_params": [
+            17.4,
+            16.2,
+            15.0
+          ],
+          "max_params": [
+            33.3,
+            31.65,
+            30.0
+          ]
+        },
+        "Splat Roller": {
+          "desc": "Vertical Flick Damage Up",
+          "min_params": [
+            45.9,
+            42.95,
+            40.0
+          ],
+          "max_params": [
+            207.0,
+            193.5,
+            180.0
+          ]
+        },
+        "Splattershot Jr.": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            15.5,
+            14.2,
+            12.9
+          ]
+        },
+        "Splattershot Pro": {
+          "desc": "Damage Up",
+          "min_params": [
+            26.2,
+            23.6,
+            21.0
+          ],
+          "max_params": [
+            49.9,
+            45.95,
+            42.0
+          ]
+        },
+        "Splattershot": {
+          "desc": "Jump Shot Randomization",
+          "params": [
+            6.0,
+            9.0,
+            12.0
+          ]
+        },
+        "Sploosh-o-matic": {
+          "desc": "Damage Up",
+          "min_params": [
+            24.7,
+            21.85,
+            19.0
+          ],
+          "max_params": [
+            49.4,
+            43.7,
+            38.0
+          ]
+        },
+        "Squeezer": {
+          "desc": "Damage Up",
+          "min_params": [
+            24.7,
+            21.85,
+            19.0
+          ],
+          "max_params": [
+            49.4,
+            43.7,
+            38.0
+          ]
+        },
+        "Squiffer": {
+          "desc": "Full Charge Distance",
+          "params": [
+            182.65,
+            175.15,
+            167.65
+          ]
+        },
+        "Tenta Brella": {
+          "desc": "Canopy HP",
+          "params": [
+            10000.0,
+            8500.0,
+            7000.0
+          ]
+        },
+        "Tetra Dualies": {
+          "desc": "Damage Up",
+          "min_params": [
+            16.8,
+            15.4,
+            14.0
+          ],
+          "max_params": [
+            33.3,
+            30.65,
+            28.0
+          ]
+        },
+        "Tri-Slosher": {
+          "desc": "Increased Ink Coverage",
+          "params": [
+            1.1,
+            1.05,
+            1.0
+          ]
+        },
+        "Undercover Brella": {
+          "desc": "Canopy Regeneration Time",
+          "params": [
+            150.0,
+            210.0,
+            270.0
+          ]
+        }
       }
     }
 

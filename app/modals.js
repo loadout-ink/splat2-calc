@@ -304,7 +304,25 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     </div>
-    `
+    `,
+    update: `<div class="row">
+    <div class="col-md-12">
+    <div class="card purplestripes" id="dialog">
+    <div class="row cardheader">
+    {{ UI_UPDATE | translate }}
+    </div>
+    <div class="row basic-content readable" id="update">
+    <img src="/common/assets/img/ui/update.jpg" width="100%" height="100%"></img>
+    <h2 style="text-align:center;">
+    {{ UI_VERSION_PREFIX | translate }}`
+    +
+    $scope.appVersionToString()
+    +
+    `</h2></div><div class="row buttons">
+    <div class="col-xs-12">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
+    </div>
+    </div>`
   }
 
   $scope.openWeaponPicker = function(size) {
@@ -343,8 +361,6 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $log.info('Weapon picker cancelled');
     });
   };
-
-
 
   $scope.openChangelog = function() {
     var modalInstance = $uibModal.open({
@@ -428,6 +444,28 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $log.info('Gear picker cancelled');
     });
   };
+
+  // Update modal
+  var openUpdateModel = function() {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["update"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'BasicCtrl'
+    });
+
+    modalInstance.result.then(function(results) {
+
+    }, function() {
+
+    });  
+  }
+  if (typeof(Storage) !== "undefined") {
+    if(!localStorage.appVersion || localStorage.appVersion < $scope.appVersion) {
+      localStorage.appVersion = $scope.appVersion;
+      openUpdateModel();
+    }
+  }
 });
 
 angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
