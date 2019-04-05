@@ -1130,6 +1130,97 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE | translate }}";      
       }
 
+      if((loadout.weapon.name.indexOf('Slosher') != -1 || loadout.weapon.name.indexOf('Hero Slosher Replica') != -1) &&
+          loadout.weapon.name.indexOf('Tri') == -1) 
+      {
+        parameters = $scope.parameters["Main Power Up"]["Slosher"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE_RANGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Tri-Slosher') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Tri-Slosher"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Sloshing Machine') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Sloshing Machine"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Bloblobber') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Bloblobber"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Explosher') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Explosher"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Mini Splatling') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Mini Splatling"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_BURST_DURATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Heavy Splatling') != -1 || loadout.weapon.name.indexOf('Hero Splatling Replica') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Heavy Splatling"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_BURST_DURATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Hydra Splatling') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Hydra Splatling"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_FULL_CHARGE_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Ballpoint Splatling') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Ballpoint Splatling"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Nautilus') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Nautilus"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_BURST_DURATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Dapple Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Dapple Dualies"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Splat Dualies') != -1 || loadout.weapon.name.indexOf('Hero Dualie Replicas') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splat Dualies"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Glooga Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Glooga Dualies"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Dualie Squelchers') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Dualie Squelchers"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Tetra Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Tetra Dualies"]["min_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Splat Brella') != -1 || loadout.weapon.name.indexOf('Hero Brella Replica') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splat Brella"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME | translate }}";
+      }
+
+      if(loadout.weapon.name.indexOf('Tenta Brella') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Tenta Brella"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_HP | translate }}";
+      }
+
+      if(loadout.weapon.name.indexOf('Undercover Brella') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Undercover Brella"]["params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME | translate }}";
+      }
 
       if(parameters) {
         var p = this.calcP(abilityScore);      
@@ -1236,6 +1327,41 @@ angular.module('splatApp').stats = function ($scope) {
       if(loadout.weapon.name.indexOf('Goo Tuber') != -1) {
         parameters = $scope.parameters["Main Power Up"]["Goo Tuber"]["max_params"];
         this.name = "{{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Hydra Splatling') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Hydra Splatling"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_FULL_CHARGE_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Ballpoint Splatling') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Ballpoint Splatling"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Dapple Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Dapple Dualies"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }    
+      
+      if(loadout.weapon.name.indexOf('Splat Dualies') != -1 || loadout.weapon.name.indexOf('Hero Dualie Replicas') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splat Dualies"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Glooga Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Glooga Dualies"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+      
+      if(loadout.weapon.name.indexOf('Dualie Squelchers') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Dualie Squelchers"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Tetra Dualies') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Tetra Dualies"]["max_params"];
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
       }
 
 

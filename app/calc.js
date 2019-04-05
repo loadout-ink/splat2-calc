@@ -335,9 +335,9 @@ angular
         "Aerospray": {
           "desc": "Increased Ink Coverage",
           "params": [
-            14.0,
-            13.3,
-            12.0
+            1.167,
+            1.108,
+            1.0
           ]
         },
         "Ballpoint Splatling": {
@@ -587,9 +587,9 @@ angular
         "N-ZAP": {
           "desc": "Increased Ink Coverage",
           "params": [
-            13.2,
-            12.2,
-            11.6
+            1.138,
+            1.052,
+            1.0
           ]
         },
         "Nautilus": {
@@ -724,9 +724,9 @@ angular
         "Splattershot Jr.": {
           "desc": "Increased Ink Coverage",
           "params": [
-            15.5,
-            13.7,
-            12.9
+            1.202,
+            1.062,
+            1.0
           ]
         },
         "Splattershot Pro": {
