@@ -83,6 +83,12 @@
   "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION": "メイン性能アップ (ジャンプショットランダム化)",
   "STAT_MAIN_POWER_UP_BULLET_VELOCITY": "メイン性能アップ (弾丸の速度)",
   "STAT_MAIN_POWER_UP_HIGH_DAMAGE_RADIUS": "メイン性能アップ (高いダメージ半径)",
+  "STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE": "メイン性能アップ (垂直最低ダメージ)",
+  "STAT_MAIN_POWER_UP_VERTICAL_MAX_DAMAGE": "メイン性能アップ (垂直最大ダメージ)",
+  "STAT_MAIN_POWER_UP_SPRINT_SPEED": "メイン性能アップ (スプリントスピード)",
+  "STAT_MAIN_POWER_UP_MAX_CHARGE_DISTANCE": "メイン性能アップ (最大充電距離)",
+  "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE": "メイン性能アップ (部分充電最小ダメージ)",
+  "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE": "メイン性能アップ (部分チャージ最大ダメージ)",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",
   "LABEL_PERCENT": "{value}%",

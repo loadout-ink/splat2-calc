@@ -106,6 +106,13 @@ var it_strings = {
   "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION": "Main Power Up (Jump Shot Randomization)",
   "STAT_MAIN_POWER_UP_BULLET_VELOCITY": "Main Power Up (Bullet Velocity)",
   "STAT_MAIN_POWER_UP_HIGH_DAMAGE_RADIUS": "Main Power Up (High Damage Radius)",
+  "STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE": "Main Power Up (Vertical Min Damage)",
+  "STAT_MAIN_POWER_UP_VERTICAL_MAX_DAMAGE": "Main Power Up (Vertical Max Damage)",
+  "STAT_MAIN_POWER_UP_SPRINT_SPEED": "Main Power Up (Sprint Speed)",
+  "STAT_MAIN_POWER_UP_MAX_CHARGE_DISTANCE": "Main Power Up (Max Charge Distance)",
+  "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE": "Main Power Up (Partial Charge Min Damage)",
+  "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE": "Main Power Up (Partial Charge Max Damage)",
+
   
   // Labels that go on the stat bars themselves. Keep these SHORT!
   "LABEL_DISTANCE_PER_FRAME": "{{value}} DU/f",
