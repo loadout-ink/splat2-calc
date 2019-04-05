@@ -245,7 +245,7 @@ angular
           "Splash Down Jump-In Additional Height": [40.0, 20.0, 0.0],
           "Inkjet Bullet Damage Radius Multiplier": [1.3, 1.15, 1.0],
           "Sting Ray Duration": [585, 525, 465],
-          "Bubble Blower Bubble Radius Multiplier": [1.3, 1.15, 1.0],
+          "Bubble Blower Bubble Radius Multiplier": [1.3, 1.18, 1.0],
           "Splash Down Burst Radius Close (Stealth Jump)": [90.0, 90.0, 90.0],
           "Splash Down Jump-In Height": [100.0, 60.0, 20.0],
           "Bubble Blower Burst Paint Radius": [80, 68, 56],
@@ -367,7 +367,7 @@ angular
           ]
         },
         "Blaster": {
-          "desc": "Increased Shot Accuracy",
+          "desc": "Jump Shot Randomization",
           "params": [
             6.0,
             8.0,
@@ -396,7 +396,7 @@ angular
           ]
         },
         "Clash Blaster": {
-          "desc": "Increased Shot Accuracy",
+          "desc": "Jump Shot Randomization",
           "params": [
             4.0,
             6.0,
@@ -609,7 +609,7 @@ angular
           ]
         },
         "Range Blaster": {
-          "desc": "Increased Shot Accuracy",
+          "desc": "Jump Shot Randomization",
           "params": [
             5.0,
             6.5,
@@ -617,7 +617,7 @@ angular
           ]
         },
         "Rapid Blaster Pro": {
-          "desc": "Increased Shot Accuracy",
+          "desc": "Jump Shot Randomization",
           "params": [
             4.0,
             6.0,
@@ -625,7 +625,7 @@ angular
           ]
         },
         "Rapid Blaster": {
-          "desc": "Increased Shot Accuracy",
+          "desc": "Jump Shot Randomization",
           "params": [
             4.0,
             6.0,

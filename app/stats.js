@@ -971,6 +971,91 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
       }
 
+      if(loadout.weapon.name.indexOf('Aerospray') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Aerospray"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Splattershot') != -1 && loadout.weapon.name.indexOf('Jr.') == -1 && loadout.weapon.name.indexOf('Pro') == -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splattershot"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('.52 Gal') != -1) {
+        parameters = $scope.parameters["Main Power Up"][".52 Gal"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('N-ZAP') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["N-ZAP"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Splattershot Pro') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splattershot Pro"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('.96 Gal') != -1) {
+        parameters = $scope.parameters["Main Power Up"][".96 Gal"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Jet Squelcher') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Jet Squelcher"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_BULLET_VELOCITY | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('L-3 Nozzlenose') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["L-3 Nozzlenose"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('H-3 Nozzlenose') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["H-3 Nozzlenose"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Squeezer') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Squeezer"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Luna Blaster') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Luna Blaster"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_HIGH_DAMAGE_RADIUS | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Blaster') != -1 && 
+         loadout.weapon.name.indexOf('Clash') == -1 && 
+         loadout.weapon.name.indexOf('Luna') == -1 &&
+         loadout.weapon.name.indexOf('Range') == -1 &&
+         loadout.weapon.name.indexOf('Rapid') == -1)
+      {
+        parameters = $scope.parameters["Main Power Up"]["Blaster"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Range Blaster') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Range Blaster"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Clash Blaster') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Clash Blaster"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Rapid Blaster') != -1 && loadout.weapon.name.indexOf('Pro') == -1) {
+        parameters = $scope.parameters["Main Power Up"]["Rapid Blaster"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Rapid Blaster Pro') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Rapid Blaster Pro"]["params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
+      }
+
       if(parameters) {
         var p = this.calcP(abilityScore);      
         var s = this.calcS(parameters);
@@ -987,6 +1072,7 @@ angular.module('splatApp').stats = function ($scope) {
           console.log(main_power_up_debug_log);
         }
         
+        // TODO: Return correct labels and values for each weapon type
         this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
         return this.percentage;
       }
@@ -1009,8 +1095,29 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";
       }
 
-      if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1) {
-        this.name = "{{ STAT_MAIN_POWER_UP_UNUSED | translate }}";
+      if(loadout.weapon.name.indexOf('Splattershot Pro') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splattershot Pro"]["max_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('.96 Gal') != -1) {
+        parameters = $scope.parameters["Main Power Up"][".96 Gal"]["max_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('L-3 Nozzlenose') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["L-3 Nozzlenose"]["max_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('H-3 Nozzlenose') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["H-3 Nozzlenose"]["max_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Squeezer') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Squeezer"]["max_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
       }
 
       if(parameters) {
