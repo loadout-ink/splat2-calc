@@ -1087,7 +1087,7 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_SPRINT_SPEED | translate }}";      
       }
 
-      if(loadout.weapon.name.indexOf('Octobrush') != -1) {
+      if(loadout.weapon.name.indexOf('Octobrush') != -1 || loadout.weapon.name.indexOf('Herobrush Replica') != -1) {
         parameters = $scope.parameters["Main Power Up"]["Octobrush"]["params"];
         this.name = "{{ STAT_MAIN_POWER_UP_SPRINT_SPEED | translate }}";      
       }
@@ -1099,8 +1099,8 @@ angular.module('splatApp').stats = function ($scope) {
 
       if(loadout.weapon.name.indexOf('Splat Charger') != -1 ||
          loadout.weapon.name.indexOf('Kensa Charger') != -1 ||
-         loadout.weapon.name.indexOf('Hero Charger Replica')
-      ){
+         loadout.weapon.name.indexOf('Hero Charger Replica') != -1)
+      {
         parameters = $scope.parameters["Main Power Up"]["Splat Charger"]["min_params"];
         this.name = "{{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE | translate }}";      
       }
@@ -1217,8 +1217,8 @@ angular.module('splatApp').stats = function ($scope) {
 
       if(loadout.weapon.name.indexOf('Splat Charger') != -1 ||
          loadout.weapon.name.indexOf('Kensa Charger') != -1 ||
-         loadout.weapon.name.indexOf('Hero Charger Replica')
-      ){
+         loadout.weapon.name.indexOf('Hero Charger Replica') != -1)
+      {
         parameters = $scope.parameters["Main Power Up"]["Splat Charger"]["max_params"];
         this.name = "{{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE | translate }}";      
       }

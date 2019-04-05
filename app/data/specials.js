@@ -286,7 +286,27 @@ angular.module('splatApp').specials = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsp_BooyahBomb.png",
       duration: 8.5
-    }
+    },
+    {
+      name: "Ultra Stamp",
+      // TODO: These came from the Wiki or Google Translate. May not be correct.
+      localizedName: {
+        "ja_JP": "ウルトラハンコ",
+        "en_US": "Ultra Stamp",
+        "en_GB": "Ultra Stamp",
+        "es_ES": "Ultraselladora",
+        "es_MX": "Ultraselladora",
+        "fr_FR": "Ultra-tamponneur",
+        "fr_CA": "Ultra-tamponneur",
+        "de_DE": "Ultra-Stempel",
+        "it_IT": "Mega timbro",
+        "nl_NL": "Ultrastempel",
+        "ru_RU": "Припечать",
+        "zh_HK": "超级邮票"
+      },
+      image: "../common/assets/img/subspe/Wsp_Ultra_Stamp.png",
+      duration: 9.0
+    }    
   ]
 
   $scope.getSpecialByName = function(name) {
