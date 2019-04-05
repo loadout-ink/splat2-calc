@@ -1212,7 +1212,7 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME | translate }}";
       }
 
-      if(loadout.weapon.name.indexOf('Tenta Brella') != -1) {
+      if(loadout.weapon.name.indexOf('Tenta Brella') != -1 || loadout.weapon.name.indexOf('Tenta Sorella Brella') != -1) {
         parameters = $scope.parameters["Main Power Up"]["Tenta Brella"]["params"];
         this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_HP | translate }}";
       }
@@ -1226,20 +1226,107 @@ angular.module('splatApp').stats = function ($scope) {
         var p = this.calcP(abilityScore);      
         var s = this.calcS(parameters);
         var result = this.calcRes(parameters, p, s);
+        var label_set = false;
   
         var max_param = parameters[0];
         var min_param = parameters[2];
   
-        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-        this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+        // INK COVERAGE formatting and calculations
+        if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1 ||
+           loadout.weapon.name.indexOf('Splash-o-matic') != -1 ||
+           loadout.weapon.name.indexOf('Splash-o-matic') != -1 ||
+           loadout.weapon.name.indexOf('Aerospray') != -1 ||
+           loadout.weapon.name.indexOf('N-ZAP') != -1 ||
+           loadout.weapon.name.indexOf('Tri-Slosher') != -1 ||
+           loadout.weapon.name.indexOf('Sloshing Machine') != -1 ||
+           loadout.weapon.name.indexOf('Bloblobber') != -1 ||
+           loadout.weapon.name.indexOf('Explosher') != -1
+          )
+        {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(result,3)});
+          label_set = true;
+        }
+
+        // JUMP SHOT RANDOMIZATION formatting and calculations
+        if((loadout.weapon.name.indexOf('Splattershot') != -1 || 
+            loadout.weapon.name.indexOf('Hero Shot Replica') != -1 ||
+            loadout.weapon.name.indexOf('Octo Shot Replica') != -1 ||
+            loadout.weapon.name.indexOf('.52 Gal') != -1 ||
+            loadout.weapon.name.indexOf('Blaster') != -1 ||
+            loadout.weapon.name.indexOf('Hero Blaster Replica') != -1
+           ) && 
+           loadout.weapon.name.indexOf('Jr.') == -1 && 
+           loadout.weapon.name.indexOf('Pro') == -1 &&
+           loadout.weapon.name.indexOf('Luna') == -1
+          )
+        {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(result,3)});
+          label_set = true;
+        }
+
+        // SPRINT SPEED formatting and calculations
+        if(loadout.weapon.name.indexOf('Inkbrush') != -1 ||
+           loadout.weapon.name.indexOf('Octobrush') != -1 ||
+           loadout.weapon.name.indexOf('Herobrush Replica') != -1
+          )
+        {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(result,4)});
+          label_set = true;
+        }
+
+        // BURST DURATION formatting and calculations
+        if(loadout.weapon.name.indexOf('Mini Splatling') != -1 ||
+           loadout.weapon.name.indexOf('Heavy Splatling') != -1 ||
+           loadout.weapon.name.indexOf('Hero Splatling Replica') != -1 ||
+           loadout.weapon.name.indexOf('Nautilus') != -1
+          )
+        {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          result = result / 60.0;
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+          label_set = true;
+        }
+
+        // CANOPY REGENERATION formatting and calculations
+        if(loadout.weapon.name.indexOf('Splat Brella') != -1 ||
+           loadout.weapon.name.indexOf('Hero Brella Replica') != -1 ||
+           loadout.weapon.name.indexOf('Undercover Brella') != -1
+          )
+        {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          result = result / 60.0;
+          this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+          label_set = true;
+        }
+
+        // CANOPY HP formatting and calculations
+        if(loadout.weapon.name.indexOf('Tenta Brella') != -1 || loadout.weapon.name.indexOf('Tenta Sorella Brella') != -1) {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          result = result / 10.0;
+          this.label = "{{ LABEL_HP | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+          label_set = true;
+        }
+
+        if(!label_set) {
+          this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          this.percentage = ((result/min_param - 1) * 100).toFixed(1);
+          this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+        }
   
         if($scope.logging) {
           var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
           console.log(main_power_up_debug_log);
         }
-        
-        // TODO: Return correct labels and values for each weapon type
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+
         return this.percentage;
       }
 
@@ -1375,13 +1462,13 @@ angular.module('splatApp').stats = function ($scope) {
   
         this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
         this.percentage = ((result/min_param - 1) * 100).toFixed(1);
-  
+        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+
         if($scope.logging) {
           var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
           console.log(main_power_up_debug_log);
         }
         
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
         return this.percentage;
       }
       
