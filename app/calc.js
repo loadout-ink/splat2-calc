@@ -315,15 +315,15 @@ angular
           "desc": "Jump Shot Randomization",
           "params": [
             6.0,
-            9.0,
+            8.0,
             12.0
           ]
         },
         ".96 Gal": {
           "desc": "Damage Up",
           "min_params": [
-            38.7,
-            34.85,
+            38.75,
+            34.875,
             31.0
           ],
           "max_params": [
@@ -336,21 +336,21 @@ angular
           "desc": "Increased Ink Coverage",
           "params": [
             14.0,
-            13.0,
+            13.3,
             12.0
           ]
         },
         "Ballpoint Splatling": {
           "desc": "Damage Up",
           "min_params": [
-            17.6,
-            16.8,
-            16.0
+            16.5,
+            15.75,
+            15.0
           ],
           "max_params": [
-            33.3,
-            32.65,
-            32.0
+            33.0,
+            31.5,
+            30.0
           ]
         },
         "Bamboozler 14": {
@@ -362,7 +362,7 @@ angular
           ],
           "max_params": [
             99.9,
-            92.45,
+            93.5,
             85.0
           ]
         },
@@ -385,12 +385,12 @@ angular
         "Carbon Roller": {
           "desc": "Vertical Flick Damage Up",
           "min_params": [
-            40.2,
-            37.6,
-            35.0
+            46.0,
+            43.0,
+            40.0
           ],
           "max_params": [
-            138.0,
+            138,
             129.0,
             120.0
           ]
@@ -424,16 +424,16 @@ angular
             14.0
           ],
           "max_params": [
-            33.3,
-            30.65,
+            33.6,
+            30.8,
             28.0
           ]
         },
         "Dynamo Roller": {
           "desc": "Vertical Flick Damage Up",
           "min_params": [
-            45.9,
-            42.95,
+            46.0,
+            43.0,
             40.0
           ],
           "max_params": [
@@ -453,8 +453,8 @@ angular
         "E-Liter 4k": {
           "desc": "Full Charge Distance",
           "params": [
-            350.5,
-            320.5,
+            305.5,
+            298.0,
             290.5
           ]
         },
@@ -469,13 +469,13 @@ angular
         "Flingza Roller": {
           "desc": "Vertical Flick Damage Up",
           "min_params": [
-            45.9,
-            42.95,
+            46.0,
+            44.0,
             40.0
           ],
           "max_params": [
-            172.4,
-            161.2,
+            172.5,
+            165.0,
             150.0
           ]
         },
@@ -493,36 +493,36 @@ angular
           ]
         },
         "Goo Tuber": {
-          "desc": "Base Damage Up",
+          "desc": "Damage Up (Partial Charge)",
           "min_params": [
-            45.9,
-            42.95,
+            46.0,
+            43.0,
             40.0
           ],
           "max_params": [
-            149.4,
-            139.7,
+            149.5,
+            139.75,
             130.0
           ]
         },
         "H-3 Nozzlenose": {
           "desc": "Damage Up",
           "min_params": [
-            25.6,
-            23.05,
+            25.42,
+            22.96,
             20.5
           ],
           "max_params": [
-            49.9,
-            45.45,
+            50.84,
+            45.92,
             41.0
           ]
         },
         "Heavy Splatling": {
           "desc": "Burst Duration",
           "params": [
-            179.0,
-            161.5,
+            178.56,
+            161.28,
             144.0
           ]
         },
@@ -543,28 +543,28 @@ angular
           "desc": "Roll Speed",
           "params": [
             2.016,
-            1.968,
+            1.986,
             1.92
           ]
         },
         "Jet Squelcher": {
-          "desc": "Bullet Velocity Multiplier",
+          "desc": "Bullet Velocity",
           "params": [
-            36.4426,
-            35.0213,
+            36.44256,
+            34.60464,
             33.6
           ]
         },
         "L-3 Nozzlenose": {
           "desc": "Damage Up",
           "min_params": [
-            18.8,
-            16.65,
+            18.85,
+            16.675,
             14.5
           ],
           "max_params": [
-            33.3,
-            31.15,
+            37.7,
+            33.35,
             29.0
           ]
         },
@@ -572,15 +572,15 @@ angular
           "desc": "Increased High-Damage Radius",
           "params": [
             30.0,
-            20.0,
+            17.5,
             10.0
           ]
         },
         "Mini Splatling": {
           "desc": "Burst Duration",
           "params": [
-            94.0,
-            83.0,
+            97.2,
+            90.0,
             72.0
           ]
         },
@@ -588,23 +588,23 @@ angular
           "desc": "Increased Ink Coverage",
           "params": [
             13.2,
-            12.1,
-            11.0
+            12.2,
+            11.6
           ]
         },
         "Nautilus": {
           "desc": "Burst Duration",
           "params": [
-            136.0,
-            120.0,
+            135.2,
+            124.8,
             104.0
           ]
         },
-        "Octo Brush": {
+        "Octobrush": {
           "desc": "Roll Speed",
           "params": [
             1.8816,
-            1.7808,
+            1.806,
             1.68
           ]
         },
@@ -635,9 +635,9 @@ angular
         "Slosher": {
           "desc": "Max Damage Range",
           "params": [
-            -55.0,
-            -35.0,
-            -15.0
+            55.0,
+            35.0,
+            15.0
           ]
         },
         "Sloshing Machine": {
@@ -656,8 +656,8 @@ angular
             14.0
           ],
           "max_params": [
-            33.3,
-            30.65,
+            35,
+            31.5,
             28.0
           ]
         },
@@ -670,7 +670,7 @@ angular
           ]
         },
         "Splat Charger": {
-          "desc": "Base Damage Up",
+          "desc": "Damage Up (Partial Charge)",
           "min_params": [
             48.0,
             44.0,
@@ -686,46 +686,59 @@ angular
           "desc": "Damage Up",
           "min_params": [
             17.4,
-            16.2,
+            15.9,
             15.0
           ],
           "max_params": [
-            33.3,
-            31.65,
+            34.8,
+            31.8,
             30.0
           ]
         },
         "Splat Roller": {
           "desc": "Vertical Flick Damage Up",
           "min_params": [
-            45.9,
-            42.95,
+            46,
+            44.0,
             40.0
           ],
           "max_params": [
             207.0,
-            193.5,
+            198.0,
             180.0
+          ]
+        },
+        "Splatterscope": {
+          "desc": "Damage Up (Partial Charge)",
+          "min_params": [
+            48.0,
+            44.0,
+            40.0
+          ],
+          "max_params": [
+            96.0,
+            88.0,
+            80.0
           ]
         },
         "Splattershot Jr.": {
           "desc": "Increased Ink Coverage",
           "params": [
             15.5,
-            14.2,
+            13.7,
             12.9
           ]
         },
         "Splattershot Pro": {
           "desc": "Damage Up",
           "min_params": [
-            26.2,
-            23.6,
+            26.25,
+            23.625,
             21.0
           ],
           "max_params": [
-            49.9,
-            45.95,
+            52.5,
+            47.25,
             42.0
           ]
         },
@@ -740,18 +753,18 @@ angular
         "Sploosh-o-matic": {
           "desc": "Damage Up",
           "min_params": [
-            24.7,
-            21.85,
+            23.75,
+            21.375,
             19.0
           ],
           "max_params": [
-            49.4,
-            43.7,
+            47.5,
+            42.75,
             38.0
           ]
         },
         "Squeezer": {
-          "desc": "Damage Up",
+          "desc": "Damage Up (Burst Fire)",
           "min_params": [
             24.7,
             21.85,
@@ -787,8 +800,8 @@ angular
             14.0
           ],
           "max_params": [
-            33.3,
-            30.65,
+            33.6,
+            30.8,
             28.0
           ]
         },
@@ -804,7 +817,7 @@ angular
           "desc": "Canopy Regeneration Time",
           "params": [
             150.0,
-            210.0,
+            180.0,
             270.0
           ]
         }
