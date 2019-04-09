@@ -915,6 +915,12 @@ angular.module('splatApp').stats = function ($scope) {
       var total_duration = ((death_duration + deathcam_duration) / 60) + 2.5;
       var max_duration = ((death_frames_parameters[2] + deathcam_parameters[2]) / 60) + 2.5;
 
+      if(loadout.hasAbility('Respawn Punisher')) {
+        total_duration += 1.13;
+        max_duration += 1.13;
+        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+      }
+
       this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
       this.value = 100 - this.percentage;
       
