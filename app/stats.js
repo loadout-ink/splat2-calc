@@ -1212,7 +1212,7 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME | translate }}";
       }
 
-      if(loadout.weapon.name.indexOf('Tenta Brella') != -1 || loadout.weapon.name.indexOf('Tenta Sorella Brella') != -1) {
+      if(loadout.weapon.name.indexOf('Tenta') != -1 && loadout.weapon.name.indexOf('Brella') != -1) {
         parameters = $scope.parameters["Main Power Up"]["Tenta Brella"]["params"];
         this.name = "{{ STAT_MAIN_POWER_UP_CANOPY_HP | translate }}";
       }
@@ -1308,7 +1308,7 @@ angular.module('splatApp').stats = function ($scope) {
         }
 
         // CANOPY HP formatting and calculations
-        if(loadout.weapon.name.indexOf('Tenta Brella') != -1 || loadout.weapon.name.indexOf('Tenta Sorella Brella') != -1) {
+        if(loadout.weapon.name.indexOf('Tenta') != -1 && loadout.weapon.name.indexOf('Brella') != -1) {
           this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
           this.percentage = ((result/min_param - 1) * 100).toFixed(1);
           result = result / 10.0;
