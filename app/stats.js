@@ -1316,6 +1316,11 @@ angular.module('splatApp').stats = function ($scope) {
           label_set = true;
         }
 
+        // Adjust max damage for MPU damage caps
+        if(loadout.weapon.mpuMaxDamage != null && result >= loadout.weapon.mpuMaxDamage) {
+          result = loadout.weapon.mpuMaxDamage;
+        }
+
         if(!label_set) {
           this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
           this.percentage = ((result/min_param - 1) * 100).toFixed(1);
@@ -1459,6 +1464,11 @@ angular.module('splatApp').stats = function ($scope) {
   
         var max_param = parameters[0];
         var min_param = parameters[2];
+
+        // Adjust max damage for MPU damage caps
+        if(loadout.weapon.mpuMaxDamage != null && result >= loadout.weapon.mpuMaxDamage) {
+          result = loadout.weapon.mpuMaxDamage;
+        }
   
         this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
         this.percentage = ((result/min_param - 1) * 100).toFixed(1);

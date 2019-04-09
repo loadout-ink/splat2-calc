@@ -43,6 +43,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "High",
           "baseSpeed": 0.8,
+          "minDamage": 19.0,
+          "maxDamage": 38.0,
+          "mpuMaxDamage": 49.9,
           "price": 9700,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 12,
@@ -76,6 +79,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "High",
           "baseSpeed": 0.8,
+          "minDamage": 19.0,
+          "maxDamage": 38.0,
+          "mpuMaxDamage": 49.9,
           "price": 12200,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 12,
@@ -100,6 +106,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "High",
           "baseSpeed": 0.8,
+          "minDamage": 19.0,
+          "maxDamage": 38.0,
+          "mpuMaxDamage": 49.9,
           "price": 14600,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 12,
@@ -703,6 +712,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.55,
+          "minDamage": 21.0,
+          "maxDamage": 42.0,
+          "mpuMaxDamage": 49.9,
           "price": 13800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -736,6 +748,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.55,
+          "minDamage": 21.0,
+          "maxDamage": 42.0,
+          "mpuMaxDamage": 49.9,
           "price": 20800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -760,6 +775,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.55,
+          "minDamage": 21.0,
+          "maxDamage": 42.0,
+          "mpuMaxDamage": 49.9,
           "price": 21900,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -793,6 +811,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.5,
           "speedLevel": "Middle",
           "baseSpeed": 0.4,
+          "minDamage": 31.0,
+          "maxDamage": 62.0,
+          "mpuMaxDamage": 99.9,
           "price": 12600,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 74,
@@ -826,6 +847,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.5,
           "speedLevel": "Middle",
           "baseSpeed": 0.4,
+          "minDamage": 31.0,
+          "maxDamage": 62.0,
+          "mpuMaxDamage": 99.9,
           "price": 16200,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 74,
@@ -925,6 +949,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 14.5,
+          "maxDamage": 29.0,
+          "mpuMaxDamage": 33.3,
           "price": 10400,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -958,6 +985,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 14.5,
+          "maxDamage": 29.0,
+          "mpuMaxDamage": 33.3,
           "price": 12500,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -982,6 +1012,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.0,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 14.5,
+          "maxDamage": 29.0,
+          "mpuMaxDamage": 33.3,
           "price": 17700,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -1015,6 +1048,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.6,
+          "minDamage": 20.5,
+          "maxDamage": 41.0,
+          "mpuMaxDamage": 49.9,
           "price": 17200,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -1048,6 +1084,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.6,
+          "minDamage": 20.5,
+          "maxDamage": 41.0,
+          "mpuMaxDamage": 49.9,
           "price": 18400,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -1072,6 +1111,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.6,
+          "minDamage": 20.5,
+          "maxDamage": 41.0,
+          "mpuMaxDamage": 49.9,
           "price": 26600,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -1105,6 +1147,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.5,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 19.0,
+          "maxDamage": 38.0,
+          "mpuMaxDamage": 49.9,
           "price": 9400,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 77,
@@ -1135,6 +1180,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 2.5,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 19.0,
+          "maxDamage": 38.0,
+          "mpuMaxDamage": 49.9,
           "price": 10900,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 77,
@@ -3772,6 +3820,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 15.0,
+          "maxDamage": 30.0,
+          "mpuMaxDamage": 33.3,
           "price": 2400,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 50,
@@ -3805,6 +3856,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 15.0,
+          "maxDamage": 30.0,
+          "mpuMaxDamage": 33.3,
           "price": 9000,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 50,
@@ -3829,6 +3883,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 15.0,
+          "maxDamage": 30.0,
+          "mpuMaxDamage": 33.3,
           "price": 13000,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 50,
@@ -3862,6 +3919,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.8,
+          "minDamage": 15.0,
+          "maxDamage": 30.0,
+          "mpuMaxDamage": 33.3,
           "price": 3100,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 50,
@@ -3982,6 +4042,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.2,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 9800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -4012,6 +4075,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 1.2,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 12900,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 70,
@@ -4045,6 +4111,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 10700,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 58,
@@ -4075,6 +4144,9 @@ angular.module('splatApp').weapons = function($scope) {
           "inkPerShot": 0.8,
           "speedLevel": "Middle",
           "baseSpeed": 0.72,
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 13300,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 58,
