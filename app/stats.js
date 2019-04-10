@@ -973,8 +973,8 @@ angular.module('splatApp').stats = function ($scope) {
       }
 
       if(loadout.weapon.name.indexOf('Splash-o-matic') != -1) {
-        parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["params"];        
-        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
+        parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["min_params"];        
+        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";      
       }
 
       if(loadout.weapon.name.indexOf('Aerospray') != -1) {
@@ -1239,8 +1239,6 @@ angular.module('splatApp').stats = function ($scope) {
   
         // INK COVERAGE formatting and calculations
         if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1 ||
-           loadout.weapon.name.indexOf('Splash-o-matic') != -1 ||
-           loadout.weapon.name.indexOf('Splash-o-matic') != -1 ||
            loadout.weapon.name.indexOf('Aerospray') != -1 ||
            loadout.weapon.name.indexOf('N-ZAP') != -1 ||
            loadout.weapon.name.indexOf('Tri-Slosher') != -1 ||
@@ -1362,6 +1360,11 @@ angular.module('splatApp').stats = function ($scope) {
       if(loadout.weapon.name.indexOf('Splattershot Pro') != -1) {
         parameters = $scope.parameters["Main Power Up"]["Splattershot Pro"]["max_params"];        
         this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";      
+      }
+
+      if(loadout.weapon.name.indexOf('Splash-o-matic') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["Splash-o-matic"]["max_params"];   
+        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";
       }
 
       if(loadout.weapon.name.indexOf('.96 Gal') != -1) {
