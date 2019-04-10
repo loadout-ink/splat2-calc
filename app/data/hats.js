@@ -1,7 +1,7 @@
 angular.module('splatApp').hats = function($scope) {
 $scope.hats = [
   {
-    "image": "../common/assets/img/gear/Hed_FST000.png",
+    "image": "../common/assets/img/gear/hats/Hed_FST000.png",
     "name": "White Headband",
     "localizedName": {
       "ja_JP": "ヘッドバンド ホワイト",
@@ -23,7 +23,7 @@ $scope.hats = [
     "splatnet": 1
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP000.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP000.png",
     "name": "Urchins Cap",
     "localizedName": {
       "ja_JP": "ウーニーズBBキャップ",
@@ -45,7 +45,7 @@ $scope.hats = [
     "splatnet": 1000
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP001.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP001.png",
     "name": "Lightweight Cap",
     "localizedName": {
       "ja_JP": "キャンプキャップ",
@@ -67,7 +67,7 @@ $scope.hats = [
     "splatnet": 1001
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP002.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP002.png",
     "name": "Takoroka Mesh",
     "localizedName": {
       "ja_JP": "ヤコメッシュ",
@@ -82,14 +82,14 @@ $scope.hats = [
       "ru_RU": "Тракер от «Рыбок»",
       "it_IT": "Berretto Sepia"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Takoroka",
     "stars": 1,
     "id": 3,
     "splatnet": 1002
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP003.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP003.png",
     "name": "Streetstyle Cap",
     "localizedName": {
       "ja_JP": "ビバレッジキャップ",
@@ -108,10 +108,23 @@ $scope.hats = [
     "brand": "Skalop",
     "stars": 1,
     "splatnet": 1003,
-    "id": 97
+    "id": 4
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP005.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP004.png",
+    "name": "Squid-Stitch Cap",
+    "localizedName": {
+      "ja_JP": "チドリキャップ",
+      "en_US": "Squid-Stitch Cap"
+    },
+    "main": "Opening Gambit",
+    "brand": "Skalop",
+    "stars": 3,
+    "id": 5,
+    "splatnet": 1004
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_CAP005.png",
     "name": "Squidvader Cap",
     "localizedName": {
       "ja_JP": "イカベーダーキャップ",
@@ -129,11 +142,11 @@ $scope.hats = [
     "main": "Special Charge Up",
     "brand": "Skalop",
     "stars": 1,
-    "id": 4,
+    "id": 6,
     "splatnet": 1005
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP006.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP006.png",
     "name": "Camo Mesh",
     "localizedName": {
       "ja_JP": "カモメッシュ",
@@ -151,11 +164,11 @@ $scope.hats = [
     "main": "Swim Speed Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 5,
+    "id": 7,
     "splatnet": 1006
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP007.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP007.png",
     "name": "Five-Panel Cap",
     "localizedName": {
       "ja_JP": "5パネルキャップ",
@@ -173,11 +186,24 @@ $scope.hats = [
     "main": "Comeback",
     "brand": "Zekko",
     "stars": 2,
-    "id": 6,
+    "id": 8,
     "splatnet": 1007
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP009.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP008.png",
+    "name": "Zekko Mesh",
+    "localizedName": {
+      "ja_JP": "エゾッコメッシュ",
+      "en_US": "Zekko Mesh"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Zekko",
+    "stars": 1,
+    "id": 9,
+    "splatnet": 1008
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_CAP009.png",
     "name": "Backwards Cap",
     "localizedName": {
       "ja_JP": "バックワードキャップ",
@@ -195,11 +221,11 @@ $scope.hats = [
     "main": "Quick Respawn",
     "brand": "Zekko",
     "stars": 1,
-    "id": 7,
+    "id": 10,
     "splatnet": 1009
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP010.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP010.png",
     "name": "Two-Stripe Mesh",
     "localizedName": {
       "ja_JP": "2ラインメッシュ",
@@ -218,10 +244,10 @@ $scope.hats = [
     "brand": "Krak-On",
     "stars": 1,
     "splatnet": 1010,
-    "id": 98
+    "id": 11
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP011.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP011.png",
     "name": "Jet Cap",
     "localizedName": {
       "ja_JP": "ジェットキャップ",
@@ -240,10 +266,10 @@ $scope.hats = [
     "brand": "Firefin",
     "stars": 1,
     "splatnet": 1011,
-    "id": 99
+    "id": 12
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP012.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP012.png",
     "name": "Cycling Cap",
     "localizedName": {
       "ja_JP": "テッカサイクルキャップ",
@@ -262,10 +288,10 @@ $scope.hats = [
     "brand": "Zink",
     "stars": 1,
     "splatnet": 1012,
-    "id": 100
+    "id": 13
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP014.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP014.png",
     "name": "Cycle King Cap",
     "localizedName": {
       "ja_JP": "チャリキング帽",
@@ -280,14 +306,27 @@ $scope.hats = [
       "ru_RU": "Элитная велокепка",
       "it_IT": "Cappello re della bici"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 8,
+    "id": 14,
     "splatnet": 1014
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP019.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP018.png",
+    "name": "Long-Billed Cap",
+    "localizedName": {
+      "ja_JP": "ロングビルキャップ",
+      "en_US": "Long-Billed Cap"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Krak-On",
+    "stars": 3,
+    "id": 15,
+    "splatnet": 1018
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_CAP019.png",
     "name": "King Flip Mesh",
     "localizedName": {
       "ja_JP": "キングフリップメッシュ",
@@ -305,11 +344,11 @@ $scope.hats = [
     "main": "Run Speed Up",
     "brand": "Enperry",
     "stars": 2,
-    "id": 9,
+    "id": 16,
     "splatnet": 1019
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP020.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP020.png",
     "name": "Hickory Work Cap",
     "localizedName": {
       "ja_JP": "ヒッコリーワークキャップ",
@@ -327,11 +366,11 @@ $scope.hats = [
     "main": "Special Power Up",
     "brand": "Krak-On",
     "stars": 3,
-    "id": 10,
+    "id": 17,
     "splatnet": 1020
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP021.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP021.png",
     "name": "Woolly Urchins Classic",
     "localizedName": {
       "ja_JP": "ウールウーニーズクラシック",
@@ -350,10 +389,10 @@ $scope.hats = [
     "brand": "Krak-On",
     "stars": 2,
     "splatnet": 1021,
-    "id": 101
+    "id": 18
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP023.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP023.png",
     "name": "Jellyvader Cap",
     "localizedName": {
       "ja_JP": "クラゲーダーキャップ",
@@ -371,11 +410,11 @@ $scope.hats = [
     "main": "Ink Saver (Sub)",
     "brand": "Skalop",
     "stars": 3,
-    "id": 11,
+    "id": 19,
     "splatnet": 1023
   },
   {
-    "image": "../common/assets/img/gear/Hed_CAP024.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP024.png",
     "name": "House-Tag Denim Cap",
     "localizedName": {
       "ja_JP": "ハウスタグデニムCAP",
@@ -394,10 +433,49 @@ $scope.hats = [
     "brand": "Splash Mob",
     "stars": 2,
     "splatnet": 1024,
-    "id": 102
+    "id": 20
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP000.png",
+    "image": "../common/assets/img/gear/hats/Hed_CAP025.png",
+    "name": "Blowfish Newsie",
+    "localizedName": {
+      "ja_JP": "フグハンチング",
+      "en_US": "Blowfish Newsie"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Firefin",
+    "stars": 2,
+    "id": 21,
+    "splatnet": 1025
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_CAP026.png",
+    "name": "Do-Rag, Cap, & Glasses",
+    "localizedName": {
+      "ja_JP": "ドゥーラグキャップガサネ",
+      "en_US": "Do-Rag, Cap, & Glasses"
+    },
+    "main": "Main Power Up",
+    "brand": "Skalop",
+    "stars": 3,
+    "id": 22,
+    "splatnet": 1026
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_CAP027.png",
+    "name": "Pilot Hat",
+    "localizedName": {
+      "ja_JP": "フライトぼう",
+      "en_US": "Pilot Hat"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 23,
+    "splatnet": 1027
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_NCP000.png",
     "name": "Bobble Hat",
     "localizedName": {
       "ja_JP": "ボンボンニット",
@@ -415,11 +493,11 @@ $scope.hats = [
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 12,
+    "id": 24,
     "splatnet": 2000
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP001.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP001.png",
     "name": "Short Beanie",
     "localizedName": {
       "ja_JP": "ショートビーニー",
@@ -438,10 +516,10 @@ $scope.hats = [
     "brand": "Inkline",
     "stars": 1,
     "splatnet": 2001,
-    "id": 103
+    "id": 25
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP002.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP002.png",
     "name": "Striped Beanie",
     "localizedName": {
       "ja_JP": "ボーダービーニー",
@@ -459,11 +537,11 @@ $scope.hats = [
     "main": "Opening Gambit",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 13,
+    "id": 26,
     "splatnet": 2002
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP003.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP003.png",
     "name": "Sporty Bobble Hat",
     "localizedName": {
       "ja_JP": "ウインターボンボン",
@@ -482,10 +560,10 @@ $scope.hats = [
     "brand": "Skalop",
     "stars": 1,
     "splatnet": 2003,
-    "id": 104
+    "id": 27
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP004.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP004.png",
     "name": "Special Forces Beret",
     "localizedName": {
       "ja_JP": "モンゴウベレー",
@@ -503,11 +581,37 @@ $scope.hats = [
     "main": "Opening Gambit",
     "brand": "Forge",
     "stars": 3,
-    "id": 14,
+    "id": 28,
     "splatnet": 2004
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP008.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP005.png",
+    "name": "Squid Nordic",
+    "localizedName": {
+      "ja_JP": "イカノルディック",
+      "en_US": "Squid Nordic"
+    },
+    "main": "Comeback",
+    "brand": "Skalop",
+    "stars": 3,
+    "id": 29,
+    "splatnet": 2005
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_NCP006.png",
+    "name": "Sennyu Bon Bon Beanie",
+    "localizedName": {
+      "ja_JP": "センニューボンボン",
+      "en_US": "Sennyu Bon Bon Beanie"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 30,
+    "splatnet": 2006,
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_NCP008.png",
     "name": "Knitted Hat",
     "localizedName": {
       "ja_JP": "リブニット",
@@ -525,11 +629,11 @@ $scope.hats = [
     "main": "Ink Resistance Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 15,
+    "id": 31,
     "splatnet": 2008
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP009.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP009.png",
     "name": "Annaki Beret",
     "localizedName": {
       "ja_JP": "アナアキアンピンベレー",
@@ -547,11 +651,11 @@ $scope.hats = [
     "main": "Ink Resistance Up",
     "brand": "Annaki",
     "stars": 3,
-    "id": 16,
+    "id": 32,
     "splatnet": 2009
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP010.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP010.png",
     "name": "Yamagiri Beanie",
     "localizedName": {
       "ja_JP": "ヤマギリビーニー",
@@ -566,14 +670,14 @@ $scope.hats = [
       "ru_RU": "Шапочка с узором",
       "it_IT": "Zuccotto zig-zag"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Inkline",
     "stars": 1,
     "splatnet": 2010,
-    "id": 105
+    "id": 33
   },
   {
-    "image": "../common/assets/img/gear/Hed_NCP011.png",
+    "image": "../common/assets/img/gear/hats/Hed_NCP011.png",
     "name": "Sneaky Beanie",
     "localizedName": {
       "ja_JP": "オシノビニット",
@@ -592,10 +696,10 @@ $scope.hats = [
     "brand": "Skalop",
     "stars": 2,
     "splatnet": 2011,
-    "id": 106
+    "id": 34
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE000.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE000.png",
     "name": "Retro Specs",
     "localizedName": {
       "ja_JP": "クロブチ レトロ",
@@ -613,11 +717,11 @@ $scope.hats = [
     "main": "Quick Respawn",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 17,
+    "id": 35,
     "splatnet": 3000
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE001.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE001.png",
     "name": "Splash Goggles",
     "localizedName": {
       "ja_JP": "スプラッシュゴーグル",
@@ -632,14 +736,14 @@ $scope.hats = [
       "ru_RU": "Маска для ныряния",
       "it_IT": "Maschera da sub"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Forge",
     "stars": 2,
     "splatnet": 3001,
-    "id": 107
+    "id": 36
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE002.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE002.png",
     "name": "Pilot Goggles",
     "localizedName": {
       "ja_JP": "パイロットゴーグル",
@@ -657,11 +761,11 @@ $scope.hats = [
     "main": "Sub Power Up",
     "brand": "Forge",
     "stars": 2,
-    "id": 18,
+    "id": 37,
     "splatnet": 3002
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE003.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE003.png",
     "name": "Tinted Shades",
     "localizedName": {
       "ja_JP": "イロメガネ",
@@ -679,11 +783,11 @@ $scope.hats = [
     "main": "Last-Ditch Effort",
     "brand": "Zekko",
     "stars": 1,
-    "id": 19,
+    "id": 38,
     "splatnet": 3003
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE004.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE004.png",
     "name": "Black Arrowbands",
     "localizedName": {
       "ja_JP": "アローバンド ブラック",
@@ -702,10 +806,10 @@ $scope.hats = [
     "brand": "Zekko",
     "stars": 2,
     "splatnet": 3004,
-    "id": 108
+    "id": 39
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE005.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE005.png",
     "name": "Snorkel Mask",
     "localizedName": {
       "ja_JP": "ダイバーゴーグル",
@@ -723,11 +827,24 @@ $scope.hats = [
     "main": "Ink Saver (Sub)",
     "brand": "Forge",
     "stars": 2,
-    "id": 20,
+    "id": 40,
     "splatnet": 3005
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE007.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE006.png",
+    "name": "White Arrowbands",
+    "localizedName": {
+      "ja_JP": "アローバンド ホワイト",
+      "en_US": "White Arrowbands"
+    },
+    "main": "Special Power Up",
+    "brand": "Zekko",
+    "stars": 3,
+    "id": 41,
+    "splatnet": 3006
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE007.png",
     "name": "Fake Contacts",
     "localizedName": {
       "ja_JP": "ダテコンタクト",
@@ -745,11 +862,11 @@ $scope.hats = [
     "main": "Special Charge Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 21,
+    "id": 42,
     "splatnet": 3007
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE008.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE008.png",
     "name": "18K Aviators",
     "localizedName": {
       "ja_JP": "タレサン18K",
@@ -767,11 +884,11 @@ $scope.hats = [
     "main": "Last-Ditch Effort",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 22,
+    "id": 43,
     "splatnet": 3008
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE009.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE009.png",
     "name": "Full Moon Glasses",
     "localizedName": {
       "ja_JP": "マルベッコー",
@@ -790,10 +907,23 @@ $scope.hats = [
     "brand": "Krak-On",
     "stars": 1,
     "splatnet": 3009,
-    "id": 109
+    "id": 44
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE011.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE010.png",
+    "name": "Octoglasses",
+    "localizedName": {
+      "ja_JP": "オクタグラス",
+      "en_US": "Octoglasses"
+    },
+    "main": "Last-Ditch Effort",
+    "brand": "Firefin",
+    "stars": 3,
+    "id": 45,
+    "splatnet": 3010
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE011.png",
     "name": "Half-Rim Glasses",
     "localizedName": {
       "ja_JP": "セルブロウ",
@@ -811,11 +941,11 @@ $scope.hats = [
     "main": "Special Power Up",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 23,
+    "id": 46,
     "splatnet": 3011
   },
   {
-    "image": "../common/assets/img/gear/Hed_EYE012.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE012.png",
     "name": "Double Egg Shades",
     "localizedName": {
       "ja_JP": "ダブルエッグサングラス",
@@ -834,10 +964,114 @@ $scope.hats = [
     "brand": "Zekko",
     "stars": 2,
     "splatnet": 3012,
-    "id": 110
+    "id": 47
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT000.png",
+    "image": "../common/assets/img/gear/hats/Hed_EYE013.png",
+    "name": "Zekko Cap",
+    "localizedName": {
+      "ja_JP": "エゾッコフリッパー",
+      "en_US": "Zekko Cap"
+    },
+    "main": "Opening Gambit",
+    "brand": "Zekko",
+    "stars": 2,
+    "id": 48,
+    "splatnet": 3013
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE014.png",
+    "name": "SV925 Circle Shades",
+    "localizedName": {
+      "ja_JP": "マルサンSV925",
+      "en_US": "SV925 Circle Shades"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "id": 49,
+    "splatnet": 3014
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE015.png",
+    "name": "Annaki Beret & Glasses",
+    "localizedName": {
+      "ja_JP": "アナアキバスクベレー",
+      "en_US": "Annaki Beret & Glasses"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Annaki",
+    "stars": 3,
+    "id": 50,
+    "splatnet": 3015
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE016.png",
+    "name": "Swim Goggles",
+    "localizedName": {
+      "ja_JP": "スイミングモーグル",
+      "en_US": "Swim Goggles"
+    },
+    "main": "Last-Ditch Effort",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 51,
+    "splatnet": 3016
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE017.png",
+    "name": "Ink-Guard Goggles",
+    "localizedName": {
+      "ja_JP": "スミガードゴーグル",
+      "en_US": "Ink-Guard Goggles"
+    },
+    "main": "Run Speed Up",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "id": 52,
+    "splatnet": 3017
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE018.png",
+    "name": "Toni Kensa Goggles",
+    "localizedName": {
+      "ja_JP": "モーグル タタキベッチュー",
+      "en_US": "Toni Kensa Goggles"
+    },
+    "main": "Comeback",
+    "brand": "Toni Kensa",
+    "stars": 1,
+    "id": 53,
+    "splatnet": 3018
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE019.png",
+    "name": "Sennyu Goggles",
+    "localizedName": {
+      "ja_JP": "センニューゴーグル",
+      "en_US": "Sennyu Goggles"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 54,
+    "splatnet": 3019
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_EYE020.png",
+    "name": "Sennyu Specs",
+    "localizedName": {
+      "ja_JP": "センニュークロブチ",
+      "en_US": "Sennyu Specs"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 55,
+    "splatnet": 3020
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAT000.png",
     "name": "Safari Hat",
     "localizedName": {
       "ja_JP": "ロブスターブーニー",
@@ -855,11 +1089,11 @@ $scope.hats = [
     "main": "Last-Ditch Effort",
     "brand": "Forge",
     "stars": 2,
-    "id": 24,
+    "id": 56,
     "splatnet": 4000
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT001.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT001.png",
     "name": "Jungle Hat",
     "localizedName": {
       "ja_JP": "サファリハット",
@@ -878,10 +1112,10 @@ $scope.hats = [
     "brand": "Firefin",
     "stars": 3,
     "splatnet": 4001,
-    "id": 111
+    "id": 57
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT002.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT002.png",
     "name": "Camping Hat",
     "localizedName": {
       "ja_JP": "キャンプハット",
@@ -899,11 +1133,11 @@ $scope.hats = [
     "main": "Special Power Up",
     "brand": "Inkline",
     "stars": 1,
-    "id": 25,
+    "id": 58,
     "splatnet": 4002
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT003.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT003.png",
     "name": "Blowfish Bell Hat",
     "localizedName": {
       "ja_JP": "フグベルハット",
@@ -921,11 +1155,11 @@ $scope.hats = [
     "main": "Ink Recovery Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 26,
+    "id": 59,
     "splatnet": 4003
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT004.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT004.png",
     "name": "Bamboo Hat",
     "localizedName": {
       "ja_JP": "スゲ",
@@ -943,11 +1177,11 @@ $scope.hats = [
     "main": "Ink Saver (Main)",
     "brand": "Inkline",
     "stars": 2,
-    "id": 27,
+    "id": 60,
     "splatnet": 4004
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT005.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT005.png",
     "name": "Straw Boater",
     "localizedName": {
       "ja_JP": "イカンカン",
@@ -965,11 +1199,11 @@ $scope.hats = [
     "main": "Quick Super Jump",
     "brand": "Skalop",
     "stars": 1,
-    "id": 28,
+    "id": 61,
     "splatnet": 4005
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT006.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT006.png",
     "name": "Classic Straw Boater",
     "localizedName": {
       "ja_JP": "イカンカン クラシック",
@@ -988,10 +1222,10 @@ $scope.hats = [
     "brand": "Skalop",
     "stars": 2,
     "splatnet": 4006,
-    "id": 112
+    "id": 62
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT007.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT007.png",
     "name": "Treasure Hunter",
     "localizedName": {
       "ja_JP": "トレジャーメット",
@@ -1010,10 +1244,10 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 2,
     "splatnet": 4007,
-    "id": 113
+    "id": 63
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT008.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT008.png",
     "name": "Bucket Hat",
     "localizedName": {
       "ja_JP": "イカバケット",
@@ -1031,11 +1265,11 @@ $scope.hats = [
     "main": "Special Saver",
     "brand": "SquidForce",
     "stars": 1,
-    "id": 29,
+    "id": 64,
     "splatnet": 4008
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT009.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT009.png",
     "name": "Patched Hat",
     "localizedName": {
       "ja_JP": "パッチハット",
@@ -1050,14 +1284,14 @@ $scope.hats = [
       "ru_RU": "Панама из лоскутов",
       "it_IT": "Cappello con toppe"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Skalop",
     "stars": 2,
-    "id": 30,
+    "id": 65,
     "splatnet": 4009
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT010.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT010.png",
     "name": "Tulip Parasol",
     "localizedName": {
       "ja_JP": "パラソルチューリップ",
@@ -1076,10 +1310,10 @@ $scope.hats = [
     "brand": "Inkline",
     "stars": 1,
     "splatnet": 4010,
-    "id": 114
+    "id": 66
   },
   {
-    "image": "../common/assets/img/gear/Hed_HAT011.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT011.png",
     "name": "Fugu Bell Hat",
     "localizedName": {
       "ja_JP": "フグベルベルハット",
@@ -1098,10 +1332,49 @@ $scope.hats = [
     "brand": "Firefin",
     "stars": 2,
     "splatnet": 4011,
-    "id": 115
+    "id": 67
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP000.png",
+    "image": "../common/assets/img/gear/hats/Hed_HAT012.png",
+    "name": "Seashell Bamboo Hat",
+    "localizedName": {
+      "ja_JP": "カイガラスゲ",
+      "en_US": "Seashell Bamboo Hat"
+    },
+    "main": "Quick Respawn",
+    "brand": "Inkline",
+    "stars": 2,
+    "id": 68,
+    "splatnet": 4012
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAT013.png",
+    "name": "Hothouse Hat",
+    "localizedName": {
+      "ja_JP": "ホタプラントハット",
+      "en_US": "Hothouse Hat"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Skalop",
+    "stars": 2,
+    "id": 69,
+    "splatnet": 4013
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAT014.png",
+    "name": "Mountie Hat",
+    "localizedName": {
+      "ja_JP": "ヤマハット",
+      "en_US": "Mountie Hat"
+    },
+    "main": "Special Charge Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 70,
+    "splatnet": 4014
+  }, 
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HDP000.png",
     "name": "Studio Headphones",
     "localizedName": {
       "ja_JP": "スタジオヘッドホン",
@@ -1119,11 +1392,11 @@ $scope.hats = [
     "main": "Ink Saver (Main)",
     "brand": "Forge",
     "stars": 2,
-    "id": 31,
+    "id": 71,
     "splatnet": 5000
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP001.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP001.png",
     "name": "Designer Headphones",
     "localizedName": {
       "ja_JP": "オーロラヘッドホン",
@@ -1142,10 +1415,10 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 2,
     "splatnet": 5001,
-    "id": 116
+    "id": 72
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP002.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP002.png",
     "name": "Noise Cancelers",
     "localizedName": {
       "ja_JP": "イヤーマフ",
@@ -1163,11 +1436,11 @@ $scope.hats = [
     "main": "Quick Respawn",
     "brand": "Forge",
     "stars": 3,
-    "id": 32,
+    "id": 73,
     "splatnet": 5002
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP003.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP003.png",
     "name": "Squidfin Hook Cans",
     "localizedName": {
       "ja_JP": "エンペラフックHDP",
@@ -1185,11 +1458,11 @@ $scope.hats = [
     "main": "Ink Resistance Up",
     "brand": "Forge",
     "stars": 2,
-    "id": 33,
+    "id": 74,
     "splatnet": 5003
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP004.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP004.png",
     "name": "Squidlife Headphones",
     "localizedName": {
       "ja_JP": "ステカセヘッドホン",
@@ -1208,10 +1481,10 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 3,
     "splatnet": 5004,
-    "id": 117
+    "id": 75
   },
   {
-    "image": "../common/assets/img/gear/Hed_HDP005.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP005.png",
     "name": "Studio Octophones",
     "localizedName": {
       "ja_JP": "スタジオオクトホン",
@@ -1230,10 +1503,36 @@ $scope.hats = [
     "brand": "Cuttlegear",
     "stars": 3,
     "splatnet": 5005,
-    "id": 118
+    "id": 76
   },
   {
-    "image": "../common/assets/img/gear/Hed_VIS001.png",
+    "image": "../common/assets/img/gear/hats/Hed_HDP006.png",
+    "name": "Sennyu Headphones",
+    "localizedName": {
+      "ja_JP": "センニューヘッドホン",
+      "en_US": "Sennyu Headphones"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 77,
+    "splatnet": 5006
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_VIS000.png",
+    "name": "Golf Visor",
+    "localizedName": {
+      "ja_JP": "キャディ サンバイザー",
+      "en_US": "Golf Visor"
+    },
+    "main": "Run Speed Up",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 78,
+    "splatnet": 6000
+  }, 
+  {
+    "image": "../common/assets/img/gear/hats/Hed_VIS001.png",
     "name": "FishFry Visor",
     "localizedName": {
       "ja_JP": "ヤキフグ サンバイザー",
@@ -1251,11 +1550,11 @@ $scope.hats = [
     "main": "Special Charge Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 34,
+    "id": 79,
     "splatnet": 6001
   },
   {
-    "image": "../common/assets/img/gear/Hed_VIS002.png",
+    "image": "../common/assets/img/gear/hats/Hed_VIS002.png",
     "name": "Sun Visor",
     "localizedName": {
       "ja_JP": "サンサンサンバイザー",
@@ -1273,11 +1572,11 @@ $scope.hats = [
     "main": "Sub Power Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 35,
+    "id": 80,
     "splatnet": 6002
   },
   {
-    "image": "../common/assets/img/gear/Hed_VIS003.png",
+    "image": "../common/assets/img/gear/hats/Hed_VIS003.png",
     "name": "Takoroka Visor",
     "localizedName": {
       "ja_JP": "ヤコバイザー",
@@ -1295,11 +1594,11 @@ $scope.hats = [
     "main": "Quick Super Jump",
     "brand": "Takoroka",
     "stars": 3,
-    "id": 36,
+    "id": 81,
     "splatnet": 6003
   },
   {
-    "image": "../common/assets/img/gear/Hed_VIS004.png",
+    "image": "../common/assets/img/gear/hats/Hed_VIS004.png",
     "name": "Face Visor",
     "localizedName": {
       "ja_JP": "フェイスバイザー",
@@ -1314,14 +1613,14 @@ $scope.hats = [
       "ru_RU": "Визор-козырек",
       "it_IT": "Visiera fumé"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Toni Kensa",
     "stars": 3,
     "splatnet": 6004,
-    "id": 119
+    "id": 82
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET000.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET000.png",
     "name": "Bike Helmet",
     "localizedName": {
       "ja_JP": "サイクルメット",
@@ -1339,11 +1638,11 @@ $scope.hats = [
     "main": "Ink Recovery Up",
     "brand": "Skalop",
     "stars": 2,
-    "id": 37,
+    "id": 83,
     "splatnet": 7000
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET002.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET002.png",
     "name": "Stealth Goggles",
     "localizedName": {
       "ja_JP": "ナイトビジョン",
@@ -1362,10 +1661,10 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 3,
     "splatnet": 7002,
-    "id": 120
+    "id": 84
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET004.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET004.png",
     "name": "Skate Helmet",
     "localizedName": {
       "ja_JP": "スケボーメット",
@@ -1384,10 +1683,10 @@ $scope.hats = [
     "brand": "Skalop",
     "stars": 2,
     "splatnet": 7004,
-    "id": 121
+    "id": 85
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET005.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET005.png",
     "name": "Visor Skate Helmet",
     "localizedName": {
       "ja_JP": "バイザーメット",
@@ -1405,11 +1704,11 @@ $scope.hats = [
     "main": "Last-Ditch Effort",
     "brand": "Skalop",
     "stars": 3,
-    "id": 38,
+    "id": 86,
     "splatnet": 7005
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET006.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET006.png",
     "name": "MTB Helmet",
     "localizedName": {
       "ja_JP": "ロゴヅクシMTBメット",
@@ -1427,11 +1726,11 @@ $scope.hats = [
     "main": "Tenacity",
     "brand": "Zekko",
     "stars": 3,
-    "id": 39,
+    "id": 87,
     "splatnet": 7006
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET007.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET007.png",
     "name": "Hockey Helmet",
     "localizedName": {
       "ja_JP": "イカロスHKメット",
@@ -1446,14 +1745,14 @@ $scope.hats = [
       "ru_RU": "Шлем ХК «Барракуда»",
       "it_IT": "Casco da hockey"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Forge",
     "stars": 3,
-    "id": 40,
+    "id": 88,
     "splatnet": 7007
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET008.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET008.png",
     "name": "Matte Bike Helmet",
     "localizedName": {
       "ja_JP": "ツヤケシMTBメット",
@@ -1472,10 +1771,23 @@ $scope.hats = [
     "brand": "Zekko",
     "stars": 3,
     "splatnet": 7008,
-    "id": 122
+    "id": 89
   },
   {
-    "image": "../common/assets/img/gear/Hed_MET010.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET009.png",
+    "name": "Octo Tackle Helmet Deco",
+    "localizedName": {
+      "ja_JP": "オクトメットプライズデコ",
+      "en_US": "Octo Tackle Helmet Deco"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 90,
+    "splatnet": 7009
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MET010.png",
     "name": "Moist Ghillie Helmet",
     "localizedName": {
       "ja_JP": "モイストワカメット",
@@ -1494,10 +1806,36 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 3,
     "splatnet": 7010,
-    "id": 123
+    "id": 91
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK001.png",
+    "image": "../common/assets/img/gear/hats/Hed_MET011.png",
+    "name": "Deca Tackle Visor Helmet",
+    "localizedName": {
+      "ja_JP": "デカメットアイシールド",
+      "en_US": "Deca Tackle Visor Helmet"
+    },
+    "main": "Sub Power Up",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 92,
+    "splatnet": 7011
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSK000.png",
+    "name": "Gas Mask",
+    "localizedName": {
+      "ja_JP": "タコマスク",
+      "en_US": "Gas Mask"
+    },
+    "main": "Tenacity",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 93,
+    "splatnet": 8000
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSK001.png",
     "name": "Paintball Mask",
     "localizedName": {
       "ja_JP": "フェイスゴーグル",
@@ -1515,11 +1853,11 @@ $scope.hats = [
     "main": "Comeback",
     "brand": "Forge",
     "stars": 3,
-    "id": 41,
+    "id": 94,
     "splatnet": 8001
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK002.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK002.png",
     "name": "Paisley Bandana",
     "localizedName": {
       "ja_JP": "エイズリーバンダナ",
@@ -1538,10 +1876,10 @@ $scope.hats = [
     "brand": "Krak-On",
     "stars": 1,
     "splatnet": 8002,
-    "id": 124
+    "id": 95
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK003.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK003.png",
     "name": "Skull Bandana",
     "localizedName": {
       "ja_JP": "イカスカルマスク",
@@ -1559,11 +1897,11 @@ $scope.hats = [
     "main": "Special Saver",
     "brand": "Forge",
     "stars": 3,
-    "id": 42,
+    "id": 96,
     "splatnet": 8003
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK004.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK004.png",
     "name": "Painter's Mask",
     "localizedName": {
       "ja_JP": "ペインターマスク",
@@ -1578,14 +1916,14 @@ $scope.hats = [
       "ru_RU": "Респиратор маляра",
       "it_IT": "Maschera da verniciatura"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 43,
+    "id": 97,
     "splatnet": 8004
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK005.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK005.png",
     "name": "Annaki Mask",
     "localizedName": {
       "ja_JP": "アナアキマスク",
@@ -1603,11 +1941,24 @@ $scope.hats = [
     "main": "Opening Gambit",
     "brand": "Annaki",
     "stars": 2,
-    "id": 44,
+    "id": 98,
     "splatnet": 8005
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK007.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK006.png",
+    "name": "Octoking Facemask",
+    "localizedName": {
+      "ja_JP": "キングタコスターマスク",
+      "en_US": "Octoking Facemask"
+    },
+    "main": "Tenacity",
+    "brand": "Enperry",
+    "stars": 1,
+    "id": 99,
+    "splatnet": 8006
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSK007.png",
     "name": "Squid Facemask",
     "localizedName": {
       "ja_JP": "イカバッテンガード",
@@ -1625,11 +1976,11 @@ $scope.hats = [
     "main": "Ink Saver (Main)",
     "brand": "SquidForce",
     "stars": 1,
-    "id": 45,
+    "id": 100,
     "splatnet": 8007
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK008.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK008.png",
     "name": "Firefin Facemask",
     "localizedName": {
       "ja_JP": "マスクドホッコリー",
@@ -1647,11 +1998,11 @@ $scope.hats = [
     "main": "Run Speed Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 46,
+    "id": 101,
     "splatnet": 8008
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK009.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK009.png",
     "name": "King Facemask",
     "localizedName": {
       "ja_JP": "キングオブマスク",
@@ -1669,11 +2020,11 @@ $scope.hats = [
     "main": "Ink Saver (Sub)",
     "brand": "Enperry",
     "stars": 1,
-    "id": 47,
+    "id": 102,
     "splatnet": 8009
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK010.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK010.png",
     "name": "Motocross Nose Guard",
     "localizedName": {
       "ja_JP": "ノーズガードモトクロス",
@@ -1692,10 +2043,10 @@ $scope.hats = [
     "brand": "Forge",
     "stars": 3,
     "splatnet": 8010,
-    "id": 125
+    "id": 103
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSK011.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK011.png",
     "name": "Forge Mask",
     "localizedName": {
       "ja_JP": "フォーリマスク",
@@ -1710,14 +2061,40 @@ $scope.hats = [
       "ru_RU": "Вело-маска",
       "it_IT": "Mascherina Fortia"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Forge",
     "stars": 1,
     "splatnet": 8011,
-    "id": 126
+    "id": 104
   },
   {
-    "image": "../common/assets/img/gear/Hed_HBD001.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSK012.png",
+    "name": "Digi-Camo Forge Mask",
+    "localizedName": {
+      "ja_JP": "フォーリマスク デジカモ",
+      "en_US": "Digi-Camo Forge Mask"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Forge",
+    "stars": 2,
+    "id": 105,
+    "splatnet": 8012
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSK013.png",
+    "name": "Koshien Bandana",
+    "localizedName": {
+      "ja_JP": "こうしえんバンダナ",
+      "en_US": "Koshien Bandana"
+    },
+    "main": "Swim Speed Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 106,
+    "splatnet": 8013
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HBD001.png",
     "name": "B-ball Headband",
     "localizedName": {
       "ja_JP": "バスケバンド",
@@ -1736,10 +2113,10 @@ $scope.hats = [
     "brand": "Zink",
     "stars": 1,
     "splatnet": 9001,
-    "id": 127
+    "id": 107
   },
   {
-    "image": "../common/assets/img/gear/Hed_HBD002.png",
+    "image": "../common/assets/img/gear/hats/Hed_HBD002.png",
     "name": "Squash Headband",
     "localizedName": {
       "ja_JP": "スカッシュバンド",
@@ -1757,11 +2134,11 @@ $scope.hats = [
     "main": "Special Saver",
     "brand": "Zink",
     "stars": 1,
-    "id": 48,
+    "id": 108,
     "splatnet": 9002
   },
   {
-    "image": "../common/assets/img/gear/Hed_HBD003.png",
+    "image": "../common/assets/img/gear/hats/Hed_HBD003.png",
     "name": "Tennis Headband",
     "localizedName": {
       "ja_JP": "テニスバンド",
@@ -1779,11 +2156,24 @@ $scope.hats = [
     "main": "Comeback",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 49,
+    "id": 109,
     "splatnet": 9003
   },
   {
-    "image": "../common/assets/img/gear/Hed_HBD005.png",
+    "image": "../common/assets/img/gear/hats/Hed_HBD004.png",
+    "name": "Jogging Headband",
+    "localizedName": {
+      "ja_JP": "ランニングバンド",
+      "en_US": "Jogging Headband"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Zekko",
+    "stars": 1,
+    "id": 110,
+    "splatnet": 9004
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HBD005.png",
     "name": "Soccer Headband",
     "localizedName": {
       "ja_JP": "サッカーバンド",
@@ -1801,11 +2191,11 @@ $scope.hats = [
     "main": "Tenacity",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 50,
+    "id": 111,
     "splatnet": 9005
   },
   {
-    "image": "../common/assets/img/gear/Hed_HBD007.png",
+    "image": "../common/assets/img/gear/hats/Hed_HBD007.png",
     "name": "FishFry Biscuit Bandana",
     "localizedName": {
       "ja_JP": "ヤキフグビスケットバンダナ",
@@ -1824,10 +2214,23 @@ $scope.hats = [
     "brand": "Firefin",
     "stars": 1,
     "splatnet": 9007,
-    "id": 128
+    "id": 112
   },
   {
-    "image": "../common/assets/img/gear/Hed_ACC001.png",
+    "image": "../common/assets/img/gear/hats/Hed_HBD008.png",
+    "name": "Black FishFry Bandana",
+    "localizedName": {
+      "ja_JP": "クロヤキフグバンダナ",
+      "en_US": "Black FishFry Bandana"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Firefin",
+    "stars": 1,
+    "id": 113,
+    "splatnet": 9008
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_ACC001.png",
     "name": "Eminence Cuff",
     "localizedName": {
       "ja_JP": "カイザーカフ",
@@ -1846,10 +2249,10 @@ $scope.hats = [
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 10000,
-    "id": 129
+    "id": 114
   },
   {
-    "image": "../common/assets/img/gear/Hed_COP100.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP100.png",
     "name": "Headlamp Helmet",
     "localizedName": {
       "ja_JP": "ヘッドライトヘルム",
@@ -1864,14 +2267,14 @@ $scope.hats = [
       "ru_RU": "Каска с фонарем",
       "it_IT": "Casco da minatore"
     },
-    "main": undefined,
+    "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
-    "id": 51,
+    "id": 115,
     "splatnet": 21000
   },
   {
-    "image": "../common/assets/img/gear/Hed_COP101.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP101.png",
     "name": "Dust Blocker 2000",
     "localizedName": {
       "ja_JP": "ダストブロッカー 2.5",
@@ -1886,14 +2289,14 @@ $scope.hats = [
       "ru_RU": "Маска от пыли 2.5",
       "it_IT": "Maschera antipolvere"
     },
-    "main": undefined,
+    "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
-    "id": 130
+    "id": 116
   },
   {
-    "image": "../common/assets/img/gear/Hed_COP102.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP102.png",
     "name": "Welding Mask",
     "localizedName": {
       "ja_JP": "アイアンマスカレイド",
@@ -1908,14 +2311,53 @@ $scope.hats = [
       "ru_RU": "Маска сварщика",
       "it_IT": "Maschera da saldatore"
     },
-    "main": undefined,
+    "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21002,
-    "id": 131
+    "id": 117
   },
   {
-    "image": "../common/assets/img/gear/Hed_COP106.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP103.png",
+    "name": "Beekeeper Hat",
+    "localizedName": {
+      "ja_JP": "ガーディアンアーミーハット",
+      "en_US": "Beekeeper Hat"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 118,
+    "splatnet": 21003
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_COP104.png",
+    "name": "Octoleet Goggles",
+    "localizedName": {
+      "ja_JP": "ゾネスティックスコープ",
+      "en_US": "Octoleet Goggles"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 119,
+    "splatnet": 21004
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_COP105.png",
+    "name": "Cap of Legend",
+    "localizedName": {
+      "ja_JP": "レジェンドのぼうし",
+      "en_US": "Cap of Legend"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 120,
+    "splatnet": 21005
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_COP106.png",
     "name": "Oceanic Hard Hat",
     "localizedName": {
       "ja_JP": "オーシャンズヘルム",
@@ -1930,14 +2372,211 @@ $scope.hats = [
       "ru_RU": "Шлем океанолога",
       "it_IT": "Casco da oceanografo"
     },
-    "main": undefined,
+    "main": "Quick Respawn",
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21006,
-    "id": 132
+    "id": 121
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB000.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP107.png",
+    "name": "Worker's Head Towel",
+    "localizedName": {
+      "ja_JP": "アセストップソシナ",
+      "en_US": "Worker's Head Towel"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 122,
+    "splatnet": 21007
+  },
+  {
+    "image": "../common/assets/img/gear/placeholder.png",
+    "name": "Sailor Cap",
+    "localizedName": {
+      "ja_JP": "マリリンハットウィズピンズ",
+      "en_US": "Sailor Cap"
+    },
+    "main": "Quick Respawn",
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 123,
+    "splatnet": 21009,
+    "unreleased": true
+  },
+  {
+    "image": "../common/assets/img/gear/placeholder.png",
+    "name": "Mecha Head - HTR",
+    "localizedName": {
+      "ja_JP": "メカヘッド・HTR",
+      "en_US": "Mecha Head - HTR"
+    },
+    "main": "Main Power Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 124,
+    "splatnet": 22000,
+    "unreleased": true
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP000.png",
+    "name": "Kyonshi Hat",
+    "localizedName": {
+      "ja_JP": "キョンキョンぼう",
+      "en_US": "Kyonshi Hat"
+    },
+    "main": "Run Speed Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 125,
+    "splatnet": 24000
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP001.png",
+    "name": "Li'l Devil Horns",
+    "localizedName": {
+      "ja_JP": "ウミウシカチューシャ",
+      "en_US": "Li'l Devil Horns"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 126,
+    "splatnet": 24001
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP002.png",
+    "name": "Hockey Mask",
+    "localizedName": {
+      "ja_JP": "ホッケかめん",
+      "en_US": "Hockey Mask"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 127,
+    "splatnet": 24002
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP003.png",
+    "name": "Anglerfish Mask",
+    "localizedName": {
+      "ja_JP": "アンコウラバーマスク",
+      "en_US": "Anglerfish Mask"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 128,
+    "splatnet": 24003
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP004.png",
+    "name": "Festive Party Cone",
+    "localizedName": {
+      "ja_JP": "パーティーコーンデコ",
+      "en_US": "Festive Party Cone"
+    },
+    "main": "Main Power Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 129,
+    "splatnet": 24004
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP005.png",
+    "name": "New Year's Glasses DX",
+    "localizedName": {
+      "ja_JP": "ニューイヤーグラスDX",
+      "en_US": "New Year's Glasses DX"
+    },
+    "main": "Special Charge Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 130,
+    "splatnet": 24005
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP006.png",
+    "name": "Twisty Headband",
+    "localizedName": {
+      "ja_JP": "ねじりゴージャス",
+      "en_US": "Twisty Headband"
+    },
+    "main": "Special Power Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 131,
+    "splatnet": 24006
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP007.png",
+    "name": "Eel-Cake Hat",
+    "localizedName": {
+      "ja_JP": "ハッピーチンアナゴハット",
+      "en_US": "Eel-Cake Hat"
+    },
+    "main": "Quick Respawn",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 132,
+    "splatnet": 24007
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP008.png",
+    "name": "Purple Novelty Visor",
+    "localizedName": {
+      "ja_JP": "ノベルティバイザールピナス",
+      "en_US": "Purple Novelty Visor"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 133,
+    "splatnet": 24008
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP009.png",
+    "name": "Green Novelty Visor",
+    "localizedName": {
+      "ja_JP": "ノベルティバイザーナズナ",
+      "en_US": "Green Novelty Visor"
+    },
+    "main": "Special Saver",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 134,
+    "splatnet": 24009
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP010.png",
+    "name": "Orange Novelty Visor",
+    "localizedName": {
+      "ja_JP": "ノベルティバイザーポピー",
+      "en_US": "Orange Novelty Visor"
+    },
+    "main": "Last-Ditch Effort",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 135,
+    "splatnet": 24010
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_HAP011.png",
+    "name": "Pink Novelty Visor",
+    "localizedName": {
+      "ja_JP": "ノベルティバイザーナデシコ",
+      "en_US": "Pink Novelty Visor"
+    },
+    "main": "Tenacity",
+    "brand": "Tentatek",
+    "stars": 3,
+    "id": 136,
+    "splatnet": 24011
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_AMB000.png",
     "name": "Squid Hairclip",
     "localizedName": {
       "ja_JP": "イカパッチン",
@@ -1955,11 +2594,11 @@ $scope.hats = [
     "main": "Swim Speed Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 52,
+    "id": 137,
     "splatnet": 25000
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB001.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB001.png",
     "name": "Samurai Helmet",
     "localizedName": {
       "ja_JP": "サムライヘルメット",
@@ -1977,11 +2616,11 @@ $scope.hats = [
     "main": "Quick Super Jump",
     "brand": "amiibo",
     "stars": 2,
-    "id": 53,
+    "id": 138,
     "splatnet": 25001
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB002.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB002.png",
     "name": "Power Mask",
     "localizedName": {
       "ja_JP": "パワードマスク",
@@ -1996,14 +2635,14 @@ $scope.hats = [
       "ru_RU": "Силовой шлем",
       "it_IT": "Maschera hi-tech"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "amiibo",
     "stars": 2,
-    "id": 54,
+    "id": 139,
     "splatnet": 25002
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB003.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB003.png",
     "name": "Squid Clip-Ons",
     "localizedName": {
       "ja_JP": "イカクリップ",
@@ -2021,11 +2660,11 @@ $scope.hats = [
     "main": "Opening Gambit",
     "brand": "amiibo",
     "stars": 2,
-    "id": 55,
+    "id": 140,
     "splatnet": 25003
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB004.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB004.png",
     "name": "Squinja Mask",
     "localizedName": {
       "ja_JP": "イカカゲマスク",
@@ -2043,11 +2682,11 @@ $scope.hats = [
     "main": "Quick Respawn",
     "brand": "amiibo",
     "stars": 2,
-    "id": 56,
+    "id": 141,
     "splatnet": 25004
   },
   {
-    "image": "../common/assets/img/gear/Hed_AMB005.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB005.png",
     "name": "Power Mask Mk I",
     "localizedName": {
       "ja_JP": "パワードマスク オリジン",
@@ -2065,11 +2704,76 @@ $scope.hats = [
     "main": "Ink Resistance Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 57,
+    "id": 142,
     "splatnet": 25005
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSN000.png",
+    "image": "../common/assets/img/gear/hats/Hed_AMB006.png",
+    "name": "Pearlescent Crown",
+    "localizedName": {
+      "ja_JP": "ヒメイトクラウン",
+      "en_US": "Pearlescent Crown"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 143,
+    "splatnet": 25006
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_AMB007.png",
+    "name": "Marinated Headphones",
+    "localizedName": {
+      "ja_JP": "イイダチヘッドホン",
+      "en_US": "Marinated Headphones"
+    },
+    "main": "Special Saver",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 144,
+    "splatnet": 25007
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_AMB008.png",
+    "name": "Enchanted Hat",
+    "localizedName": {
+      "ja_JP": "エンチャントハット",
+      "en_US": "Enchanted Hat"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 145,
+    "splatnet": 25008
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_AMB009.png",
+    "name": "Steel Helm",
+    "localizedName": {
+      "ja_JP": "タコティカルなヘルム",
+      "en_US": "Steel Helm"
+    },
+    "main": "Special Charge Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 146,
+    "splatnet": 25009
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_AMB010.png",
+    "name": "Fresh Fish Head",
+    "localizedName": {
+      "ja_JP": "ひれおくん",
+      "en_US": "Fresh Fish Head"
+    },
+    "main": "Comeback",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 147,
+    "splatnet": 25010
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN000.png",
     "name": "Hero Headset Replica",
     "localizedName": {
       "ja_JP": "ヒーローヘッズ レプリカ",
@@ -2087,11 +2791,11 @@ $scope.hats = [
     "main": "Run Speed Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 58,
+    "id": 148,
     "splatnet": 27000
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSN004.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSN004.png",
     "name": "Armor Helmet Replica",
     "localizedName": {
       "ja_JP": "アーマーメット レプリカ",
@@ -2109,11 +2813,11 @@ $scope.hats = [
     "main": "Tenacity",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 59,
+    "id": 149,
     "splatnet": 27004
   },
   {
-    "image": "../common/assets/img/gear/Hed_MSN101.png",
+    "image": "../common/assets/img/gear/hats/Hed_MSN101.png",
     "name": "Hero Headphones Replica",
     "localizedName": {
       "en_US": "Hero Headphones Replica",
@@ -2131,8 +2835,73 @@ $scope.hats = [
     "main": "Special Saver",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 60,
+    "id": 150,
     "splatnet": 27101
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN104.png",
+    "name": "Octoling Shades",
+    "localizedName": {
+      "ja_JP": "タコゾネスサングラス",
+      "en_US": "Octoling Shades"
+    },
+    "main": "Last-Ditch Effort",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 151,
+    "splatnet": 27104
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN105.png",
+    "name": "Null Visor Replica",
+    "localizedName": {
+      "ja_JP": "ネルメット レプリカ",
+      "en_US": "Null Visor Replica"
+    },
+    "main": "Special Power Up",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 152,
+    "splatnet": 27105
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN106.png",
+    "name": "Old-Timey Hat",
+    "localizedName": {
+      "ja_JP": "グランパなアタマ",
+      "en_US": "Old-Timey Hat"
+    },
+    "main": "Comeback",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 153,
+    "splatnet": 27106
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN107.png",
+    "name": "Conductor Cap",
+    "localizedName": {
+      "ja_JP": "メトロぼう",
+      "en_US": "Conductor Cap"
+    },
+    "main": "Sub Power Up",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 154,
+    "splatnet": 27107
+  },
+  {
+    "image": "../common/assets/img/gear/hats/Hed_MSN108.png",
+    "name": "Golden Toothpick",
+    "localizedName": {
+      "ja_JP": "金のつまようじ",
+      "en_US": "Golden Toothpick"
+    },
+    "main": "Special Charge Up",
+    "brand": "Cuttlegear",
+    "stars": 3,
+    "id": 155,
+    "splatnet": 27108
   }
 ]
 }

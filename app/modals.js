@@ -358,7 +358,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $scope.$parent.selectedSet=results.set; // ???
       $scope.$parent.loadout.weapon=results.weapon;
     }, function() {
-      $log.info('Weapon picker cancelled');
+ 
     });
   };
 
@@ -441,7 +441,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       }
       eval("$scope.loadout." + slot + ".equipped = results.selected")
     }, function() {
-      $log.info('Gear picker cancelled');
+
     });
   };
 

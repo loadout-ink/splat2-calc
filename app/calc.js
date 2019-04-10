@@ -118,7 +118,6 @@ angular
     }
 
     $scope.equip = function(item,slot) {
-      console.log(eval("$scope.loadout." + slot + ".equipped.name") == "Splatfest Tee")
       if(eval("$scope.loadout." + slot + ".main") == null || eval("$scope.loadout." + slot + ".equipped.name") == "Splatfest Tee" || item.name == "Splatfest Tee") {
         eval(("$scope.loadout." + slot + ".main = $scope.getSkillByName('" + item.main + "')"))
       }
@@ -130,7 +129,7 @@ angular
     }
 
     $scope.calcMod = function(abilityScore) {
-      return (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2))
+      return (0.99 * abilityScore - Math.pow(0.09 * abilityScore,2));
     }
 
     $scope.calcP = function(abilityScore) {
