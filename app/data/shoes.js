@@ -1,7 +1,7 @@
 angular.module('splatApp').shoes = function($scope) {
   $scope.shoes =[
   {
-    "image": "../common/assets/img/gear/Shs_FST000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_FST000.png",
     "name": "Cream Basics",
     "localizedName": {
       "ja_JP": "キャンバス ホワイト",
@@ -19,11 +19,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Saver",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 0,
-    "splatnet": 1
+    "splatnet": 1,
+    "id": 0
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO000.png",
     "name": "Blue Lo-Tops",
     "localizedName": {
       "ja_JP": "グリッチョ ブルー",
@@ -38,14 +38,40 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Синие сникеры",
       "it_IT": "Basse blu"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Zekko",
     "stars": 1,
     "splatnet": 1000,
-    "id": 106
+    "id": 1
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO001.png",
+    "name": "Banana Basics",
+    "localizedName": {
+      "ja_JP": "キャンバス バナナ",
+      "en_US": "Banana Basics"
+     },
+    "main": "Bomb Defense Up DX",
+    "brand": "Krak-On",
+    "stars": 1,
+    "splatnet": 1001,
+    "id": 2
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO002.png",
+    "name": "LE Lo-Tops",
+    "localizedName": {
+     "ja_JP": "グリッチョ グリーン 限定版",
+     "en_US": "LE Lo-Tops"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Zekko",
+    "stars": 3,
+    "splatnet": 1002,
+    "id": 3
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO003.png",
     "name": "White Seahorses",
     "localizedName": {
       "ja_JP": "シーホース ホワイト",
@@ -63,11 +89,24 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Zink",
     "stars": 1,
-    "id": 1,
-    "splatnet": 1003
+    "splatnet": 1003,
+    "id": 4
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO004.png",
+    "name": "Orange Lo-Tops",
+    "localizedName": {
+     "ja_JP": "グリッチョ オレンジ",
+     "en_US": "Orange Lo-Tops"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Zekko",
+    "stars": 1,
+    "splatnet": 1004,
+    "id": 5
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO005.png",
     "name": "Black Seahorses",
     "localizedName": {
       "ja_JP": "シーホース ブラックレザー",
@@ -86,10 +125,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zink",
     "stars": 2,
     "splatnet": 1005,
-    "id": 107
+    "id": 6
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO006.png",
     "name": "Clownfish Basics",
     "localizedName": {
       "ja_JP": "キャンバス クマノミ",
@@ -108,10 +147,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Krak-On",
     "stars": 1,
     "splatnet": 1006,
-    "id": 108
+    "id": 7
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO008.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO007.png",
+    "name": "Yellow Seahorses",
+    "localizedName": {
+     "ja_JP": "シーホース イエロー",
+     "en_US": "Yellow Seahorses"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Zink",
+    "stars": 2,
+    "splatnet": 1007,
+    "id": 8
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO008.png",
     "name": "Strapping Whites",
     "localizedName": {
       "ja_JP": "ベリベリホワイト",
@@ -129,11 +181,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Splash Mob",
     "stars": 3,
-    "id": 2,
-    "splatnet": 1008
+    "splatnet": 1008,
+    "id": 9
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO009.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO009.png",
     "name": "Strapping Reds",
     "localizedName": {
       "ja_JP": "ベリベリレッド",
@@ -151,11 +203,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 3,
-    "splatnet": 1009
+    "splatnet": 1009,
+    "id": 10
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO010.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO010.png",
     "name": "Soccer Shoes",
     "localizedName": {
       "ja_JP": "ユデスパイカ",
@@ -170,14 +222,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Бутсы",
       "it_IT": "Scarpe da calcio"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Takoroka",
     "stars": 3,
     "splatnet": 1010,
-    "id": 109
+    "id": 11
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO011.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO011.png",
     "name": "LE Soccer Shoes",
     "localizedName": {
       "ja_JP": "レアスパイカ",
@@ -195,11 +247,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Takoroka",
     "stars": 3,
-    "id": 4,
-    "splatnet": 1011
+    "splatnet": 1011,
+    "id": 12
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO012.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO012.png",
     "name": "Sunny Climbing Shoes",
     "localizedName": {
       "ja_JP": "ボルダーシューズ タイノエ",
@@ -217,11 +269,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Saver",
     "brand": "Inkline",
     "stars": 2,
-    "id": 5,
-    "splatnet": 1012
+    "splatnet": 1012,
+    "id": 13
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO013.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO013.png",
     "name": "Birch Climbing Shoes",
     "localizedName": {
       "ja_JP": "ボルダーシューズ ハザクラ",
@@ -239,11 +291,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Inkline",
     "stars": 1,
-    "id": 6,
-    "splatnet": 1013
+    "splatnet": 1013,
+    "id": 14
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO014.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO014.png",
     "name": "Green Laceups",
     "localizedName": {
       "ja_JP": "ヒモヒモグリーン",
@@ -258,14 +310,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Зеленые кеды со шнурками",
       "it_IT": "Verdi a stringhe"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Splash Mob",
     "stars": 1,
     "splatnet": 1014,
-    "id": 110
+    "id": 15
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO015.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO015.png",
     "name": "White Laceless Dakroniks",
     "localizedName": {
       "ja_JP": "デカロノーレース ホワイト",
@@ -284,10 +336,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zink",
     "stars": 2,
     "splatnet": 1015,
-    "id": 111
+    "id": 16
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLO016.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO016.png",
     "name": "Blue Laceless Dakroniks",
     "localizedName": {
       "ja_JP": "デカロノーレース ブルー",
@@ -306,10 +358,62 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zink",
     "stars": 1,
     "splatnet": 1016,
-    "id": 112
+    "id": 17
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLO017.png",
+    "name": "Suede Gray Lace-Ups",
+    "localizedName": {
+     "ja_JP": "ノーリーチャッカ グレー",
+     "en_US": "Suede Gray Lace-Ups"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Zekko",
+    "stars": 1,
+    "splatnet": 1017,
+    "id": 18
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO018.png",
+    "name": "Suede Nation Lace-Ups",
+    "localizedName": {
+     "ja_JP": "ノーリーチャッカ トライブ",
+     "en_US": "Suede Nation Lace-Ups"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Zekko",
+    "stars": 2,
+    "splatnet": 1018,
+    "id": 19
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO019.png",
+    "name": "Suede Marine Lace-Ups",
+    "localizedName": {
+     "ja_JP": "ノーリーチャッカ ロビンズ",
+     "en_US": "Suede Marine Lace-Ups"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Zekko",
+    "stars": 1,
+    "splatnet": 1019,
+    "id": 20
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLO020.png",
+    "name": "Toni Kensa Soccer Shoes",
+    "localizedName": {
+     "ja_JP": "スパイカ タタキベッチュー",
+     "en_US": "Toni Kensa Soccer Shoes"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "splatnet": 1020,
+    "id": 21
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI000.png",
     "name": "Red Hi-Horses",
     "localizedName": {
       "ja_JP": "シーホースHi レッド",
@@ -327,11 +431,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Zink",
     "stars": 1,
-    "id": 7,
-    "splatnet": 2000
+    "splatnet": 2000,
+    "id": 22
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI001.png",
     "name": "Zombie Hi-Horses",
     "localizedName": {
       "ja_JP": "シーホースHi ゾンビ",
@@ -350,10 +454,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zink",
     "stars": 1,
     "splatnet": 2001,
-    "id": 113
+    "id": 23
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI002.png",
+    "name": "Cream Hi-Tops",
+    "localizedName": {
+     "ja_JP": "キャンバスHi マッシュルーム",
+     "en_US": "Cream Hi-Tops"
+    },
+    "main": "Stealth Jump",
+    "brand": "Krak-On",
+    "stars": 1,
+    "splatnet": 2002,
+    "id": 24
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI003.png",
     "name": "Purple Hi-Horses",
     "localizedName": {
       "ja_JP": "シーホースHi パープル",
@@ -371,11 +488,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Power Up",
     "brand": "Zink",
     "stars": 1,
-    "id": 8,
-    "splatnet": 2003
+    "splatnet": 2003,
+    "id": 25
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI004.png",
     "name": "Hunter Hi-Tops",
     "localizedName": {
       "ja_JP": "キャンバスHi モロヘイヤ",
@@ -393,11 +510,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 9,
-    "splatnet": 2004
+    "splatnet": 2004,
+    "id": 26
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI005.png",
     "name": "Red Hi-Tops",
     "localizedName": {
       "ja_JP": "キャンバスHi トマト",
@@ -416,10 +533,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Krak-On",
     "stars": 2,
     "splatnet": 2005,
-    "id": 114
+    "id": 27
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI006.png",
     "name": "Gold Hi-Horses",
     "localizedName": {
       "ja_JP": "シーホースHi ゴールド",
@@ -437,11 +554,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Zink",
     "stars": 3,
-    "id": 10,
-    "splatnet": 2006
+    "splatnet": 2006,
+    "id": 28
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI008.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI008.png",
     "name": "Shark Moccasins",
     "localizedName": {
       "ja_JP": "シャークモカシン",
@@ -460,10 +577,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Splash Mob",
     "stars": 1,
     "splatnet": 2008,
-    "id": 115
+    "id": 29
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI009.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI009.png",
     "name": "Mawcasins",
     "localizedName": {
       "ja_JP": "ジョーズモカシン",
@@ -481,11 +598,24 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 11,
-    "splatnet": 2009
+    "splatnet": 2009,
+    "id": 30
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI011.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI010.png",
+    "name": "Chocolate Dakroniks",
+    "localizedName": {
+     "ja_JP": "デカロニックチョコレート",
+     "en_US": "Chocolate Dakroniks"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Zink",
+    "stars": 2,
+    "splatnet": 2010,
+    "id": 31
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI011.png",
     "name": "Mint Dakroniks",
     "localizedName": {
       "ja_JP": "デカロニックミント",
@@ -503,11 +633,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Drop Roller",
     "brand": "Zink",
     "stars": 1,
-    "id": 12,
-    "splatnet": 2011
+    "splatnet": 2011,
+    "id": 32
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI012.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI012.png",
     "name": "Black Dakroniks",
     "localizedName": {
       "ja_JP": "デカロニックブラック",
@@ -522,14 +652,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Черные кросс-кеды",
       "it_IT": "Dakroniks nere"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Zink",
     "stars": 2,
-    "id": 13,
-    "splatnet": 2012
+    "splatnet": 2012,
+    "id": 33
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI013.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI013.png",
     "name": "Piranha Moccasins",
     "localizedName": {
       "ja_JP": "ピラニアモカシン",
@@ -547,11 +677,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Stealth Jump",
     "brand": "Splash Mob",
     "stars": 3,
-    "id": 14,
-    "splatnet": 2013
+    "splatnet": 2013,
+    "id": 34
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI014.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI014.png",
     "name": "White Norimaki 750s",
     "localizedName": {
       "ja_JP": "ノリマキ750 ホワイト",
@@ -569,11 +699,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 15,
-    "splatnet": 2014
+    "splatnet": 2014,
+    "id": 35
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI015.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI015.png",
     "name": "Black Norimaki 750s",
     "localizedName": {
       "ja_JP": "ノリマキ750 ブラック",
@@ -591,11 +721,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Tentatek",
     "stars": 3,
-    "id": 16,
-    "splatnet": 2015
+    "splatnet": 2015,
+    "id": 36
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI016.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI016.png",
     "name": "Sunset Orca Hi-Tops",
     "localizedName": {
       "ja_JP": "オルカHiサンセット",
@@ -613,11 +743,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Drop Roller",
     "brand": "Takoroka",
     "stars": 2,
-    "id": 17,
-    "splatnet": 2016
+    "splatnet": 2016,
+    "id": 37
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI017.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI017.png",
     "name": "Red & Black Squidkid IV",
     "localizedName": {
       "ja_JP": "エギング4 アカクロ",
@@ -635,11 +765,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Enperry",
     "stars": 3,
-    "id": 18,
-    "splatnet": 2017
+    "splatnet": 2017,
+    "id": 38
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI018.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI018.png",
     "name": "Blue & Black Squidkid IV",
     "localizedName": {
       "ja_JP": "エギング4 アオクロ",
@@ -657,11 +787,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Enperry",
     "stars": 3,
-    "id": 19,
-    "splatnet": 2018
+    "splatnet": 2018,
+    "id": 39
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI019.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI019.png",
     "name": "Gray Sea-Slug Hi-Tops",
     "localizedName": {
       "ja_JP": "ウミウシタウンHi グレー",
@@ -676,14 +806,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Серые высокие кроссы",
       "it_IT": "Swimmer alte grigie"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Tentatek",
     "stars": 3,
-    "id": 20,
-    "splatnet": 2019
+    "splatnet": 2019,
+    "id": 40
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI020.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI020.png",
     "name": "Orca Hi-Tops",
     "localizedName": {
       "ja_JP": "オルカHi",
@@ -701,11 +831,24 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Saver",
     "brand": "Takoroka",
     "stars": 2,
-    "id": 21,
-    "splatnet": 2020
+    "splatnet": 2020,
+    "id": 41
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI022.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI021.png",
+    "name": "Milky Enperrials",
+    "localizedName": {
+     "ja_JP": "エンペリアルカイザー",
+     "en_US": "Milky Enperrials"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2021,
+    "id": 42
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI022.png",
     "name": "Navy Enperrials",
     "localizedName": {
       "ja_JP": "エンペリアルNV",
@@ -724,10 +867,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 2022,
-    "id": 116
+    "id": 43
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI023.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI023.png",
     "name": "Amber Sea Slug Hi-Tops",
     "localizedName": {
       "ja_JP": "ウミウシタウンHi アンバー",
@@ -746,10 +889,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 3,
     "splatnet": 2023,
-    "id": 117
+    "id": 44
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI024.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI024.png",
     "name": "Yellow Iromaki 750s",
     "localizedName": {
       "ja_JP": "イロマキ750 イエロー",
@@ -768,10 +911,36 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 2024,
-    "id": 118
+    "id": 45
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI027.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI025.png",
+    "name": "Red & White Squidkid V",
+    "localizedName": {
+     "ja_JP": "エギング5 シロアカ",
+     "en_US": "Red & White Squidkid V"
+    },
+    "main": "Run Speed Up",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2025,
+    "id": 46
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI026.png",
+    "name": "Honey & Orange Squidkid V",
+    "localizedName": {
+     "ja_JP": "エギング5 ハニオレ",
+     "en_US": "Honey & Orange Squidkid V"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Enperry",
+    "stars": 2,
+    "splatnet": 2026,
+    "id": 47
+   },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI027.png",
     "name": "Sun & Shade Squidkid IV",
     "localizedName": {
       "ja_JP": "エギング4 キイコン",
@@ -786,14 +955,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Сине-желтые шузы",
       "it_IT": "Mitilik gialle e blu"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 2027,
-    "id": 119
+    "id": 48
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI028.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI028.png",
     "name": "Orca Woven Hi-Tops",
     "localizedName": {
       "ja_JP": "オルカHiウーブン",
@@ -812,10 +981,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Takoroka",
     "stars": 2,
     "splatnet": 2028,
-    "id": 120
+    "id": 49
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI029.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI029.png",
     "name": "Green Iromaki 750s",
     "localizedName": {
       "ja_JP": "イロマキ750 グリーン",
@@ -834,10 +1003,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 2029,
-    "id": 121
+    "id": 50
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI030.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI030.png",
     "name": "Purple Iromaki 750s",
     "localizedName": {
       "ja_JP": "イロマキ750 パープル",
@@ -856,10 +1025,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 2030,
-    "id": 122
+    "id": 51
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI031.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI031.png",
     "name": "Red Iromaki 750s",
     "localizedName": {
       "ja_JP": "イロマキ750 レッド",
@@ -878,10 +1047,75 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 2031,
-    "id": 123
+    "id": 52
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHI037.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI032.png",
+    "name": "Blue Iromaki 750s",
+    "localizedName": {
+     "ja_JP": "イロマキ750 ブルー",
+     "en_US": "Blue Iromaki 750s"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2032,
+    "id": 53
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI033.png",
+    "name": "Orange Iromaki 750s",
+    "localizedName": {
+     "ja_JP": "イロマキ750 オレンジ",
+     "en_US": "Orange Iromaki 750s"
+    },
+    "main": "Drop Roller",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 2033,
+    "id": 54
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI034.png",
+    "name": "Red Power Stripes",
+    "localizedName": {
+     "ja_JP": "パワーストリップ アカアシ",
+     "en_US": "Red Power Stripes"
+    },
+    "main": "Run Speed Up",
+    "brand": "Takoroka",
+    "stars": 2,
+    "splatnet": 2034,
+    "id": 55
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI035.png",
+    "name": "Blue Power Stripes",
+    "localizedName": {
+     "ja_JP": "パワーストリップ アオアシ",
+     "en_US": "Blue Power Stripes"
+    },
+    "main": "Quick Respawn",
+    "brand": "Takoroka",
+    "stars": 2,
+    "splatnet": 2035,
+    "id": 56
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI036.png",
+    "name": "Toni Kensa Black Hi-Tops",
+    "localizedName": {
+     "ja_JP": "ストリップ タタキベッチュー",
+     "en_US": "Toni Kensa Black Hi-Tops"
+    },
+    "main": "Sub Power Up",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "splatnet": 2036,
+    "id": 57
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI037.png",
     "name": "Sesame Salt 270s",
     "localizedName": {
       "ja_JP": "ゴマシオ270",
@@ -900,10 +1134,62 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 2,
     "splatnet": 2037,
-    "id": 124
+    "id": 58
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHI038.png",
+    "name": "Black & Blue Squidkid V",
+    "localizedName": {
+     "ja_JP": "エギング5 クロアオ",
+     "en_US": "Black & Blue Squidkid V"
+    },
+    "main": "Special Saver",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2038,
+    "id": 59
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI039.png",
+    "name": "Orca Passion Hi-Tops",
+    "localizedName": {
+     "ja_JP": "オルカHiパッション",
+     "en_US": "Orca Passion Hi-Tops"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Takoroka",
+    "stars": 2,
+    "splatnet": 2039,
+    "id": 60
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI040.png",
+    "name": "Truffle Canvas Hi-Tops",
+    "localizedName": {
+     "ja_JP": "キャンバスHi トリュフ",
+     "en_US": "Truffle Canvas Hi-Tops"
+    },
+    "main": "Special Power Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "splatnet": 2040,
+    "id": 61
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHI041.png",
+    "name": "Online Squidkid V",
+    "localizedName": {
+     "ja_JP": "エギング5 プレミアム",
+     "en_US": "Online Squidkid V"
+    },
+    "main": "Stealth Jump",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 2041,
+    "id": 62
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHT000.png",
     "name": "Pink Trainers",
     "localizedName": {
       "ja_JP": "ピンクビーンズ",
@@ -921,11 +1207,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 22,
-    "splatnet": 3000
+    "splatnet": 3000,
+    "id": 63
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT001.png",
     "name": "Orange Arrows",
     "localizedName": {
       "ja_JP": "オレンジアローズ",
@@ -943,11 +1229,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 23,
-    "splatnet": 3001
+    "splatnet": 3001,
+    "id": 64
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT002.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT002.png",
     "name": "Neon Sea Slugs",
     "localizedName": {
       "ja_JP": "ウミウシイエロー",
@@ -965,11 +1251,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 24,
-    "splatnet": 3002
+    "splatnet": 3002,
+    "id": 65
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT003.png",
     "name": "White Arrows",
     "localizedName": {
       "ja_JP": "ホワイトアローズ",
@@ -988,10 +1274,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Takoroka",
     "stars": 2,
     "splatnet": 3003,
-    "id": 125
+    "id": 66
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT004.png",
     "name": "Cyan Trainers",
     "localizedName": {
       "ja_JP": "シアンビーンズ",
@@ -1010,10 +1296,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 3004,
-    "id": 126
+    "id": 67
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT005.png",
+    "name": "Blue Sea Slugs",
+    "localizedName": {
+     "ja_JP": "ウミウシブルー",
+     "en_US": "Blue Sea Slugs"
+    },
+    "main": "Special Charge Up",
+    "brand": "Tentatek",
+    "stars": 1,
+    "splatnet": 3005,
+    "id": 68
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHT006.png",
     "name": "Red Sea Slugs",
     "localizedName": {
       "ja_JP": "ウミウシ レッド",
@@ -1032,10 +1331,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 3,
     "splatnet": 3006,
-    "id": 127
+    "id": 69
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT007.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT007.png",
     "name": "Purple Sea Slugs",
     "localizedName": {
       "ja_JP": "ウミウシパープル",
@@ -1053,11 +1352,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 25,
-    "splatnet": 3007
+    "splatnet": 3007,
+    "id": 70
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT008.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT008.png",
     "name": "Crazy Arrows",
     "localizedName": {
       "ja_JP": "クレイジーアローズ",
@@ -1075,11 +1374,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Stealth Jump",
     "brand": "Takoroka",
     "stars": 2,
-    "id": 26,
-    "splatnet": 3008
+    "splatnet": 3008,
+    "id": 71
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT009.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT009.png",
     "name": "Black Trainers",
     "localizedName": {
       "ja_JP": "ブラックビーンズ",
@@ -1097,11 +1396,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 27,
-    "splatnet": 3009
+    "splatnet": 3009,
+    "id": 72
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT010.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT010.png",
     "name": "Violet Trainers",
     "localizedName": {
       "ja_JP": "スミレビーンズ",
@@ -1120,10 +1419,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 1,
     "splatnet": 3010,
-    "id": 128
+    "id": 73
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT011.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT011.png",
     "name": "Canary Trainers",
     "localizedName": {
       "ja_JP": "カナリアビーンズ",
@@ -1141,11 +1440,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 28,
-    "splatnet": 3011
+    "splatnet": 3011,
+    "id": 74
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT012.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT012.png",
     "name": "Yellow-Mesh Sneakers",
     "localizedName": {
       "ja_JP": "アロメッシュイエロー",
@@ -1160,14 +1459,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Желтые кроссы «Сеть»",
       "it_IT": "Sportive giallo fluo"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 29,
-    "splatnet": 3012
+    "splatnet": 3012,
+    "id": 75
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT013.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT013.png",
     "name": "Arrow Pull-Ons",
     "localizedName": {
       "ja_JP": "アローズ タタキベッチュー",
@@ -1185,11 +1484,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Drop Roller",
     "brand": "Toni Kensa",
     "stars": 3,
-    "id": 30,
-    "splatnet": 3013
+    "splatnet": 3013,
+    "id": 76
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT014.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT014.png",
     "name": "Red-Mesh Sneakers",
     "localizedName": {
       "ja_JP": "アロメッシュバーミリオン",
@@ -1207,11 +1506,24 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Power Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 31,
-    "splatnet": 3014
+    "splatnet": 3014,
+    "id": 77
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT016.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT015.png",
+    "name": "N-Pacer CaO",
+    "localizedName": {
+     "ja_JP": "エンペーサーCaO",
+     "en_US": "N-Pacer CaO"
+    },
+    "main": "Object Shredder",
+    "brand": "Enperry",
+    "stars": 2,
+    "splatnet": 3015,
+    "id": 78
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SHT016.png",
     "name": "N-Pacer Ag",
     "localizedName": {
       "ja_JP": "エンペーサーAg",
@@ -1230,10 +1542,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Enperry",
     "stars": 2,
     "splatnet": 3016,
-    "id": 129
+    "id": 79
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT017.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT017.png",
     "name": "N-Pacer Au",
     "localizedName": {
       "ja_JP": "エンペーサーAu",
@@ -1252,10 +1564,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 3017,
-    "id": 130
+    "id": 80
   },
   {
-    "image": "../common/assets/img/gear/Shs_SHT018.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT018.png",
     "name": "Sea Slug Volt 95s",
     "localizedName": {
       "ja_JP": "ウミウシボルト95",
@@ -1274,10 +1586,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 2,
     "splatnet": 3018,
-    "id": 131
+    "id": 81
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SHT019.png",
+    "name": "Athletic Arrows",
+    "localizedName": {
+     "ja_JP": "アスレチックアローズ",
+     "en_US": "Athletic Arrows"
+    },
+    "main": "Object Shredder",
+    "brand": "Takoroka",
+    "stars": 1,
+    "splatnet": 3019,
+    "id": 82
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SDL000.png",
     "name": "Oyster Clogs",
     "localizedName": {
       "ja_JP": "オイスタークロッグ",
@@ -1295,11 +1620,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 32,
-    "splatnet": 4000
+    "splatnet": 4000,
+    "id": 83
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL001.png",
     "name": "Choco Clogs",
     "localizedName": {
       "ja_JP": "チョコクロッグ",
@@ -1317,11 +1642,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Krak-On",
     "stars": 2,
-    "id": 33,
-    "splatnet": 4001
+    "splatnet": 4001,
+    "id": 84
   },
   {
-    "image": "../common/assets/img/gear/Shs_CFS000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_CFS000.png",
     "name": "Blueberry Casuals",
     "localizedName": {
       "ja_JP": "ブルーベリーコンフォート",
@@ -1339,11 +1664,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 34,
-    "splatnet": 4002
+    "splatnet": 4002,
+    "id": 85
   },
   {
-    "image": "../common/assets/img/gear/Shs_CFS001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_CFS001.png",
     "name": "Plum Casuals",
     "localizedName": {
       "ja_JP": "アケビコンフォート",
@@ -1361,11 +1686,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Object Shredder",
     "brand": "Krak-On",
     "stars": 2,
-    "id": 35,
-    "splatnet": 4003
+    "splatnet": 4003,
+    "id": 86
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL003.png",
     "name": "Neon Delta Straps",
     "localizedName": {
       "ja_JP": "デルタストラップ ネオン",
@@ -1383,11 +1708,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Inkline",
     "stars": 2,
-    "id": 36,
-    "splatnet": 4007
+    "splatnet": 4007,
+    "id": 87
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL004.png",
     "name": "Black Flip-Flops",
     "localizedName": {
       "ja_JP": "BBサンダル",
@@ -1405,11 +1730,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Object Shredder",
     "brand": "Zekko",
     "stars": 1,
-    "id": 37,
-    "splatnet": 4008
+    "splatnet": 4008,
+    "id": 88
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL005.png",
     "name": "Snow Delta Straps",
     "localizedName": {
       "ja_JP": "デルタストラップ スノー",
@@ -1427,11 +1752,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Inkline",
     "stars": 3,
-    "id": 38,
-    "splatnet": 4009
+    "splatnet": 4009,
+    "id": 89
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL006.png",
     "name": "Luminous Delta Straps",
     "localizedName": {
       "ja_JP": "デルタストラップ ルミナス",
@@ -1446,14 +1771,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Горные сандалии",
       "it_IT": "Sandali a strappo fluo"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Inkline",
     "stars": 2,
     "splatnet": 4010,
-    "id": 132
+    "id": 90
   },
   {
-    "image": "../common/assets/img/gear/Shs_SDL007.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL007.png",
     "name": "Red FishFry Sandals",
     "localizedName": {
       "ja_JP": "ヤキフグシャワサン アカ",
@@ -1472,10 +1797,36 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Firefin",
     "stars": 2,
     "splatnet": 4011,
-    "id": 133
+    "id": 91
   },
   {
-    "image": "../common/assets/img/gear/Shs_TRS000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SDL008.png",
+    "name": "Yellow FishFry Sandals",
+    "localizedName": {
+     "ja_JP": "ヤキフグシャワサン キ",
+     "en_US": "Yellow FishFry Sandals"
+    },
+    "main": "Main Power Up",
+    "brand": "Firefin",
+    "stars": 2,
+    "splatnet": 4012,
+    "id": 92
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SDL009.png",
+    "name": "Musselforge Flip-Flops",
+    "localizedName": {
+     "ja_JP": "フジツボペタサン",
+     "en_US": "Musselforge Flip-Flops"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Inkline",
+    "stars": 1,
+    "splatnet": 4013,
+    "id": 93
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_TRS000.png",
     "name": "Trail Boots",
     "localizedName": {
       "ja_JP": "トレッキングライト",
@@ -1493,11 +1844,24 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Inkline",
     "stars": 3,
-    "id": 39,
-    "splatnet": 5000
+    "splatnet": 5000,
+    "id": 94
   },
   {
-    "image": "../common/assets/img/gear/Shs_TRS002.png",
+    "image": "../common/assets/img/gear/shoes/Shs_TRS001.png",
+    "name": "Custom Trail Boots",
+    "localizedName": {
+     "ja_JP": "トレッキングカスタム",
+     "en_US": "Custom Trail Boots"
+    },
+    "main": "Special Power Up",
+    "brand": "Inkline",
+    "stars": 2,
+    "splatnet": 5001,
+    "id": 95
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_TRS002.png",
     "name": "Pro Trail Boots",
     "localizedName": {
       "ja_JP": "トレッキングプロ",
@@ -1515,11 +1879,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Inkline",
     "stars": 3,
-    "id": 40,
-    "splatnet": 5002
+    "splatnet": 5002,
+    "id": 96
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT000.png",
     "name": "Moto Boots",
     "localizedName": {
       "ja_JP": "モトクロスブーツ",
@@ -1537,11 +1901,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Rockenberg",
     "stars": 2,
-    "id": 41,
-    "splatnet": 6000
+    "splatnet": 6000,
+    "id": 97
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT001.png",
     "name": "Tan Work Boots",
     "localizedName": {
       "ja_JP": "ヌバックブーツ イエロー",
@@ -1560,10 +1924,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 2,
     "splatnet": 6001,
-    "id": 134
+    "id": 98
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT002.png",
+    "name": "Red Work Boots",
+    "localizedName": {
+     "ja_JP": "ヌバックブーツ レッド",
+     "en_US": "Red Work Boots"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 6002,
+    "id": 99
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_BOT003.png",
     "name": "Blue Moto Boots",
     "localizedName": {
       "ja_JP": "モトクロス ソリッドブルー",
@@ -1581,11 +1958,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 42,
-    "splatnet": 6003
+    "splatnet": 6003,
+    "id": 100
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT004.png",
     "name": "Green Rain Boots",
     "localizedName": {
       "ja_JP": "レイニーモスグリーン",
@@ -1604,10 +1981,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Inkline",
     "stars": 2,
     "splatnet": 6004,
-    "id": 135
+    "id": 101
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT005.png",
     "name": "Acerola Rain Boots",
     "localizedName": {
       "ja_JP": "レイニーアセロラ",
@@ -1625,11 +2002,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Inkline",
     "stars": 1,
-    "id": 43,
-    "splatnet": 6005
+    "splatnet": 6005,
+    "id": 102
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT006.png",
     "name": "Punk Whites",
     "localizedName": {
       "ja_JP": "ロッキンホワイト",
@@ -1647,11 +2024,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Rockenberg",
     "stars": 2,
-    "id": 44,
-    "splatnet": 6006
+    "splatnet": 6006,
+    "id": 103
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT007.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT007.png",
     "name": "Punk Cherries",
     "localizedName": {
       "ja_JP": "ロッキンチェリー",
@@ -1666,14 +2043,27 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Вишневые берцы",
       "it_IT": "Anfibi melanzana"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Rockenberg",
     "stars": 3,
     "splatnet": 6007,
-    "id": 136
+    "id": 104
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT009.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT008.png",
+    "name": "Punk Yellows",
+    "localizedName": {
+     "ja_JP": "ロッキンイエロー",
+     "en_US": "Punk Yellows"
+    },
+    "main": "Special Saver",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 6008,
+    "id": 105
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_BOT009.png",
     "name": "Bubble Rain Boots",
     "localizedName": {
       "ja_JP": "レイニーシャボン",
@@ -1692,10 +2082,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Inkline",
     "stars": 1,
     "splatnet": 6009,
-    "id": 137
+    "id": 106
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT010.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT010.png",
     "name": "Snowy Down Boots",
     "localizedName": {
       "ja_JP": "ミルキーダウンブーツ",
@@ -1714,10 +2104,23 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Tentatek",
     "stars": 3,
     "splatnet": 6010,
-    "id": 138
+    "id": 107
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT012.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT011.png",
+    "name": "Icy Down Boots",
+    "localizedName": {
+     "ja_JP": "アイスダウンブーツ",
+     "en_US": "Icy Down Boots"
+    },
+    "main": "Stealth Jump",
+    "brand": "Tentatek",
+    "stars": 3,
+    "splatnet": 6011,
+    "id": 108
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_BOT012.png",
     "name": "Hunting Boots",
     "localizedName": {
       "ja_JP": "ハンティングブーツ",
@@ -1732,14 +2135,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Болотные ботинки",
       "it_IT": "Stivali da caccia"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Splash Mob",
     "stars": 3,
-    "id": 45,
-    "splatnet": 6012
+    "splatnet": 6012,
+    "id": 109
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT013.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT013.png",
     "name": "Punk Blacks",
     "localizedName": {
       "ja_JP": "ロッキンブラック",
@@ -1754,14 +2157,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Черные берцы",
       "it_IT": "Anfibi neri"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 46,
-    "splatnet": 6013
+    "splatnet": 6013,
+    "id": 110
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT014.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT014.png",
     "name": "Deepsea Leather Boots",
     "localizedName": {
       "ja_JP": "シンカイレザーブーツ",
@@ -1780,10 +2183,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 3,
     "splatnet": 6014,
-    "id": 139
+    "id": 111
   },
   {
-    "image": "../common/assets/img/gear/Shs_BOT015.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT015.png",
     "name": "Moist Ghillie Boots",
     "localizedName": {
       "ja_JP": "モイストギリーブーツ",
@@ -1802,10 +2205,49 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Forge",
     "stars": 3,
     "splatnet": 6015,
-    "id": 140
+    "id": 112
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLP000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_BOT016.png",
+    "name": "Annaki Arachno Boots",
+    "localizedName": {
+     "ja_JP": "アナアキスパイダー6ホール",
+     "en_US": "Annaki Arachno Boots"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Annaki",
+    "stars": 3,
+    "splatnet": 6016,
+    "id": 113
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_BOT017.png",
+    "name": "New-Leaf Leather Boots",
+    "localizedName": {
+     "ja_JP": "シンリョクレザーブーツ",
+     "en_US": "New-Leaf Leather Boots"
+    },
+    "main": "Drop Roller",
+    "brand": "Rockenberg",
+    "stars": 2,
+    "splatnet": 6017,
+    "id": 114
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_BOT018.png",
+    "name": "Tea-Green Hunting Boots",
+    "localizedName": {
+     "ja_JP": "チャバハンティングブーツ",
+     "en_US": "Tea-Green Hunting Boots"
+    },
+    "main": "Quick Respawn",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "splatnet": 6018,
+    "id": 115
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_SLP000.png",
     "name": "Blue Slip-Ons",
     "localizedName": {
       "ja_JP": "スリッポン ブルー",
@@ -1823,11 +2265,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 47,
-    "splatnet": 7000
+    "splatnet": 7000,
+    "id": 116
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLP001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLP001.png",
     "name": "Red Slip-Ons",
     "localizedName": {
       "ja_JP": "スリッポン レッド",
@@ -1846,10 +2288,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Krak-On",
     "stars": 1,
     "splatnet": 7001,
-    "id": 141
+    "id": 117
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLP002.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLP002.png",
     "name": "Squid-Stitch Slip-Ons",
     "localizedName": {
       "ja_JP": "スリッポン チドリ",
@@ -1864,14 +2306,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Слипоны со стрелками",
       "it_IT": "Espadrillas hip-hop"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Krak-On",
     "stars": 2,
     "splatnet": 7002,
-    "id": 142
+    "id": 118
   },
   {
-    "image": "../common/assets/img/gear/Shs_SLP003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_SLP003.png",
     "name": "Polka-dot Slip-Ons",
     "localizedName": {
       "ja_JP": "スリッポン ポルカ",
@@ -1890,10 +2332,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Krak-On",
     "stars": 2,
     "splatnet": 7003,
-    "id": 143
+    "id": 119
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS000.png",
     "name": "White Kicks",
     "localizedName": {
       "ja_JP": "ラバーソール ホワイト",
@@ -1911,11 +2353,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 48,
-    "splatnet": 8000
+    "splatnet": 8000,
+    "id": 120
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS001.png",
     "name": "Cherry Kicks",
     "localizedName": {
       "ja_JP": "ラバーソール チェリー",
@@ -1933,11 +2375,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Stealth Jump",
     "brand": "Rockenberg",
     "stars": 2,
-    "id": 49,
-    "splatnet": 8001
+    "splatnet": 8001,
+    "id": 121
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS002.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS002.png",
     "name": "Turquoise Kicks",
     "localizedName": {
       "ja_JP": "ラバーソール ターコイズ",
@@ -1956,10 +2398,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 2,
     "splatnet": 8002,
-    "id": 144
+    "id": 122
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS003.png",
     "name": "Squink Wingtips",
     "localizedName": {
       "ja_JP": "イカスミチップ",
@@ -1978,10 +2420,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 1,
     "splatnet": 8003,
-    "id": 145
+    "id": 123
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS004.png",
     "name": "Roasted Brogues",
     "localizedName": {
       "ja_JP": "イカヤキチップ",
@@ -1996,14 +2438,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Классические броги",
       "it_IT": "Eleganti marroni"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 50,
-    "splatnet": 8004
+    "splatnet": 8004,
+    "id": 124
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS005.png",
     "name": "Kid Clams",
     "localizedName": {
       "ja_JP": "イカボウズキャメル",
@@ -2021,11 +2463,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Power Up",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 51,
-    "splatnet": 8005
+    "splatnet": 8005,
+    "id": 125
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS006.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS006.png",
     "name": "Smoky Wingtips",
     "localizedName": {
       "ja_JP": "スモークチップ",
@@ -2043,11 +2485,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Object Shredder",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 52,
-    "splatnet": 8006
+    "splatnet": 8006,
+    "id": 126
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS007.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS007.png",
     "name": "Navy Red-Soled Wingtips",
     "localizedName": {
       "ja_JP": "ネイビーチップ レッドソール",
@@ -2066,10 +2508,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 2,
     "splatnet": 8007,
-    "id": 146
+    "id": 127
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS008.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS008.png",
     "name": "Gray Yellow-Soled Wingtips",
     "localizedName": {
       "ja_JP": "グレーチップ イエローソール",
@@ -2088,10 +2530,10 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 2,
     "splatnet": 8008,
-    "id": 147
+    "id": 128
   },
   {
-    "image": "../common/assets/img/gear/Shs_LTS010.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS010.png",
     "name": "Annaki Habaneros",
     "localizedName": {
       "ja_JP": "アナアキラバー ハバネロ",
@@ -2110,10 +2552,49 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Annaki",
     "stars": 3,
     "splatnet": 8010,
-    "id": 148
+    "id": 129
   },
   {
-    "image": "../common/assets/img/gear/Shs_COP101.png",
+    "image": "../common/assets/img/gear/shoes/Shs_LTS011.png",
+    "name": "Annaki Tigers",
+    "localizedName": {
+     "ja_JP": "アナアキラバー フェイク",
+     "en_US": "Annaki Tigers"
+    },
+    "main": "Special Power Up",
+    "brand": "Annaki",
+    "stars": 3,
+    "splatnet": 8011,
+    "id": 130
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_LTS009.png",
+    "name": "Inky Kid Clams",
+    "localizedName": {
+     "ja_JP": "イカボウズジェットブラック",
+     "en_US": "Inky Kid Clams"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 8009,
+    "id": 131
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_LTS012.png",
+    "name": "Sennyu Inksoles",
+    "localizedName": {
+     "ja_JP": "センニューチップ スミソール",
+     "en_US": "Sennyu Inksoles"
+    },
+    "main": "Stealth Jump",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 8012,
+    "id": 132
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_COP101.png",
     "name": "Angry Rain Boots",
     "localizedName": {
       "ja_JP": "マッドラバー",
@@ -2128,14 +2609,183 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Рабочие сапоги",
       "it_IT": "Stivali squamosi"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
-    "id": 149
+    "id": 133
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_COP102.png",
+    "name": "Non-slip Senseis",
+    "localizedName": {
+     "ja_JP": "ノンスリップタクミ",
+     "en_US": "Non-slip Senseis"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "splatnet": 21002,
+    "id": 134
+  },
+  {
+    "image": "../common/assets/img/gear/placeholder.png",
+    "name": "Octoleet Boots",
+    "localizedName": {
+     "ja_JP": "ゾネスティックブーツ",
+     "en_US": "Octoleet Boots"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "splatnet": 21003,
+    "id": 135
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_COP105.png",
+    "name": "Flipper Floppers",
+    "localizedName": {
+     "ja_JP": "ゲソバタアシスト",
+     "en_US": "Flipper Floppers"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "splatnet": 21005,
+    "id": 136
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_COP106.png",
+    "name": "Wooden Sandals",
+    "localizedName": {
+     "ja_JP": "バンカラコロン",
+     "en_US": "Wooden Sandals"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "splatnet": 21006,
+    "id": 137
+  },
+  {
+    "image": "../common/assets/img/gear/placeholder.png",
+    "name": "Mecha Legs - LBS",
+    "localizedName": {
+     "ja_JP": "メカレッグ・IBS",
+     "en_US": "Mecha Legs - LBS"
+    },
+    "main": "Stealth Jump",
+    "brand": "SquidForce",
+    "stars": 3,
+    "splatnet": 22000,
+    "id": 138
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP000.png",
+    "name": "Pearl-Scout Lace-Ups",
+    "localizedName": {
+     "ja_JP": "ノーリーチャッカ ヒメイト",
+     "en_US": "Pearl-Scout Lace-Ups"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Zekko",
+    "stars": 3,
+    "splatnet": 23000,
+    "id": 139
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP001.png",
+    "name": "Pearlescent Squidkid IV",
+    "localizedName": {
+     "ja_JP": "エギング4 ヒメキン",
+     "en_US": "Pearlescent Squidkid IV"
+    },
+    "main": "Drop Roller",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 23001,
+    "id": 140
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP002.png",
+    "name": "Pearl Punk Crowns",
+    "localizedName": {
+     "ja_JP": "ロッキンクラウン",
+     "en_US": "Pearl Punk Crowns"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Rockenberg",
+    "stars": 3,
+    "splatnet": 23002,
+    "id": 141
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP003.png",
+    "name": "New-Day Arrows",
+    "localizedName": {
+     "ja_JP": "アカツキアローズ",
+     "en_US": "New-Day Arrows"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Takoroka",
+    "stars": 3,
+    "splatnet": 23003,
+    "id": 142
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP004.png",
+    "name": "Marination Lace-Ups",
+    "localizedName": {
+     "ja_JP": "ノーリーチャッカ イイダチ",
+     "en_US": "Marination Lace-Ups"
+    },
+    "main": "Special Power Up",
+    "brand": "Zekko",
+    "stars": 3,
+    "splatnet": 23004,
+    "id": 143
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP005.png",
+    "name": "Rina Squidkid IV",
+    "localizedName": {
+     "ja_JP": "エギング4 イイマリ",
+     "en_US": "Rina Squidkid IV"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Enperry",
+    "stars": 3,
+    "splatnet": 23005,
+    "id": 144
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP006.png",
+    "name": "Trooper Power Stripes",
+    "localizedName": {
+     "ja_JP": "パワーストリップ トルーパー",
+     "en_US": "Trooper Power Stripes"
+    },
+    "main": "Sub Power Up",
+    "brand": "Takoroka",
+    "stars": 3,
+    "splatnet": 23006,
+    "id": 145
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_HAP007.png",
+    "name": "Midnight Slip-Ons",
+    "localizedName": {
+     "ja_JP": "ミッドナイトスリッポン",
+     "en_US": "Midnight Slip-Ons"
+    },
+    "main": "Object Shredder",
+    "brand": "Krak-On",
+    "stars": 3,
+    "splatnet": 23007,
+    "id": 146
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_AMB000.png",
     "name": "School Shoes",
     "localizedName": {
       "ja_JP": "スクールローファー",
@@ -2153,11 +2803,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "amiibo",
     "stars": 2,
-    "id": 53,
-    "splatnet": 25000
+    "splatnet": 25000,
+    "id": 147
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB001.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB001.png",
     "name": "Samurai Shoes",
     "localizedName": {
       "ja_JP": "サムライシューズ",
@@ -2175,11 +2825,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Special Power Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 54,
-    "splatnet": 25001
+    "splatnet": 25001,
+    "id": 148
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB002.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB002.png",
     "name": "Power Boots",
     "localizedName": {
       "ja_JP": "パワードレッグス",
@@ -2197,11 +2847,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "amiibo",
     "stars": 2,
-    "id": 55,
-    "splatnet": 25002
+    "splatnet": 25002,
+    "id": 149
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB003.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB003.png",
     "name": "Fringed Loafers",
     "localizedName": {
       "ja_JP": "キルトローファー",
@@ -2216,14 +2866,14 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Лоферы с бахромой",
       "it_IT": "Mocassini con frangia"
     },
-    "main": "Cold-Blooded",
+    "main": "Bomb Defense Up DX",
     "brand": "amiibo",
     "stars": 2,
-    "id": 56,
-    "splatnet": 25003
+    "splatnet": 25003,
+    "id": 150
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB004.png",
     "name": "Squinja Boots",
     "localizedName": {
       "ja_JP": "シノビアシ",
@@ -2241,11 +2891,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 57,
-    "splatnet": 25004
+    "splatnet": 25004,
+    "id": 151
   },
   {
-    "image": "../common/assets/img/gear/Shs_AMB005.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB005.png",
     "name": "Power Boots Mk I",
     "localizedName": {
       "ja_JP": "パワードレッグス オリジン",
@@ -2260,14 +2910,79 @@ angular.module('splatApp').shoes = function($scope) {
       "ru_RU": "Силовые боты М-1",
       "it_IT": "Prototipo di stivali hi-tech"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "amiibo",
     "stars": 2,
-    "id": 58,
-    "splatnet": 25005
+    "splatnet": 25005,
+    "id": 152
   },
   {
-    "image": "../common/assets/img/gear/Shs_MSN000.png",
+    "image": "../common/assets/img/gear/shoes/Shs_AMB006.png",
+    "name": "Pearlescent Kicks",
+    "localizedName": {
+     "ja_JP": "ヒメイトスニーカー",
+     "en_US": "Pearlescent Kicks"
+    },
+    "main": "Special Charge Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "splatnet": 25006,
+    "id": 153
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_AMB007.png",
+    "name": "Marinated Slip-Ons",
+    "localizedName": {
+     "ja_JP": "イイダチスリッポン",
+     "en_US": "Marinated Slip-Ons"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "splatnet": 25007,
+    "id": 154
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_AMB008.png",
+    "name": "Enchanted Boots",
+    "localizedName": {
+     "ja_JP": "エンチャントブーツ",
+     "en_US": "Enchanted Boots"
+    },
+    "main": "Run Speed Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "splatnet": 25008,
+    "id": 155
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_AMB009.png",
+    "name": "Steel Greaves",
+    "localizedName": {
+     "ja_JP": "タコティカルなすねあて",
+     "en_US": "Steel Greaves"
+    },
+    "main": "Object Shredder",
+    "brand": "amiibo",
+    "stars": 2,
+    "splatnet": 25009,
+    "id": 156
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_AMB010.png",
+    "name": "Fresh Fish Feet",
+    "localizedName": {
+     "ja_JP": "ひれおくんのあし",
+     "en_US": "Fresh Fish Feet"
+    },
+    "main": "Quick Respawn",
+    "brand": "amiibo",
+    "stars": 2,
+    "splatnet": 25010,
+    "id": 157
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_MSN000.png",
     "name": "Hero Runner Replicas",
     "localizedName": {
       "ja_JP": "ヒーローキックス レプリカ",
@@ -2285,11 +3000,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 59,
-    "splatnet": 27000
+    "splatnet": 27000,
+    "id": 158
   },
   {
-    "image": "../common/assets/img/gear/Shs_MSN004.png",
+    "image": "../common/assets/img/gear/shoes/Shs_MSN004.png",
     "name": "Armor Boot Replicas",
     "localizedName": {
       "ja_JP": "アーマーブーツ レプリカ",
@@ -2307,11 +3022,11 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 60,
-    "splatnet": 27004
+    "splatnet": 27004,
+    "id": 159
   },
   {
-    "image": "../common/assets/img/gear/Shs_MSN101.png",
+    "image": "../common/assets/img/gear/shoes/Shs_MSN101.png",
     "name": "Hero Snowboots Replicas",
     "localizedName": {
       "ja_JP": "ヒーローバインダー レプリカ",
@@ -2329,8 +3044,47 @@ angular.module('splatApp').shoes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 61,
-    "splatnet": 27101
+    "splatnet": 27101,
+    "id": 160
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_MSN104.png",
+    "name": "Neo Octoling Boots",
+    "localizedName": {
+     "ja_JP": "タコゾネスブーツネオ",
+     "en_US": "Neo Octoling Boots"
+    },
+    "main": "Object Shredder",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "splatnet": 27104,
+    "id": 161
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_MSN105.png",
+    "name": "Null Boots Replica",
+    "localizedName": {
+     "ja_JP": "ネルブーツ レプリカ",
+     "en_US": "Null Boots Replica"
+    },
+    "main": "Drop Roller",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "splatnet": 27105,
+    "id": 162
+  },
+  {
+    "image": "../common/assets/img/gear/shoes/Shs_MSN106.png",
+    "name": "Old-Timey Shoes",
+    "localizedName": {
+     "ja_JP": "グランパなクツ",
+     "en_US": "Old-Timey Shoes"
+    },
+    "main": "Run Speed Up",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "splatnet": 27106,
+    "id": 163
   }
 ]
 }

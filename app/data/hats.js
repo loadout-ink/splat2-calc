@@ -2267,7 +2267,7 @@ $scope.hats = [
       "ru_RU": "Каска с фонарем",
       "it_IT": "Casco da minatore"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 115,
@@ -2289,7 +2289,7 @@ $scope.hats = [
       "ru_RU": "Маска от пыли 2.5",
       "it_IT": "Maschera antipolvere"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21001,
@@ -2311,7 +2311,7 @@ $scope.hats = [
       "ru_RU": "Маска сварщика",
       "it_IT": "Maschera da saldatore"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21002,
@@ -2324,7 +2324,7 @@ $scope.hats = [
       "ja_JP": "ガーディアンアーミーハット",
       "en_US": "Beekeeper Hat"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 118,
@@ -2337,7 +2337,7 @@ $scope.hats = [
       "ja_JP": "ゾネスティックスコープ",
       "en_US": "Octoleet Goggles"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 119,
@@ -2350,7 +2350,7 @@ $scope.hats = [
       "ja_JP": "レジェンドのぼうし",
       "en_US": "Cap of Legend"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 120,
@@ -2372,7 +2372,7 @@ $scope.hats = [
       "ru_RU": "Шлем океанолога",
       "it_IT": "Casco da oceanografo"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21006,
@@ -2385,7 +2385,7 @@ $scope.hats = [
       "ja_JP": "アセストップソシナ",
       "en_US": "Worker's Head Towel"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 122,
@@ -2398,7 +2398,7 @@ $scope.hats = [
       "ja_JP": "マリリンハットウィズピンズ",
       "en_US": "Sailor Cap"
     },
-    "main": "Quick Respawn",
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
     "id": 123,
