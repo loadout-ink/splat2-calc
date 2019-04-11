@@ -17,7 +17,7 @@ angular.module('splatApp').subs = function ($scope) {
         "zh_HK": "ロボットボム (自走式)"
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
-      cost: 70,
+      cost: 55,
       inkSaver: "B",
       damage: {
         "Direct": 150,
@@ -138,7 +138,7 @@ angular.module('splatApp').subs = function ($scope) {
         "zh_HK": "ポイントセンサー (追跡器)"
       },
       image: "../common/assets/img/subspe/Wsb_PointSensor.png",
-      cost: 60,
+      cost: 45,
       inkSaver: "B"
     },
     {
@@ -202,7 +202,7 @@ angular.module('splatApp').subs = function ($scope) {
         "zh_HK": "ジャンプビーコン (淋花器)"
       },
       image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
-      cost: 70,
+      cost: 60,
       inkSaver: "D"
     },
     {
