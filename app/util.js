@@ -8,14 +8,14 @@ function filter_available(item) {
 
 var language_map = {
   "en_US": "en_US",
-  // "fr_FR": "fr_FR",
+  "fr_FR": "fr_FR",
   "ja_JP": "ja_JP",
-  // "fr_CA": "fr_CA",
-  // "es_ES": "es_ES",
-  // "es_MX": "es_MX",
-  // "it_IT": "it_IT",
-  // "zh_HK": "zh_HK"
-  
+  "fr_CA": "fr_CA",
+  "es_ES": "es_ES",
+  "es_MX": "es_MX",
+  "it_IT": "it_IT",
+  "zh_HK": "zh_HK"
+
   // "en_US": "en-us",
   // "fr_FR": "fr",
   // "ja_JP": "ja",
