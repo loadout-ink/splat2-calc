@@ -33,6 +33,10 @@
   "UI_OK": "OK",
   "UI_CANCEL": "キャンセル",
   "UI_CONFIRM_CASUAL": "了解～",
+  "UI_EXCESSIVE_AP_HEADER": "過度のAP警告",
+  "UI_EXCESSIVE_AP_WARNING": "1つの能力を使いすぎると、収益が大幅に減少します。このギアを使用するときは慎重に進めてください。このメッセージは二度と表示されません。",
+  "UI_SPYKE_TOOLTIP": "ダウニー統合",
+  "UI_SPYKE_WARNING": "ダウニーDiscordアプリケーションにリダイレクトされようとしています： http://spyke.h3xmani.ac/",
 
   "UI_COPY_LINK": "リンクをコピー",
   "UI_SCREENSHOT_MODE": "スクリーンショットモード",

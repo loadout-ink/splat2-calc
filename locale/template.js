@@ -53,6 +53,10 @@ var it_strings = {
   "UI_OK": "OK",
   "UI_CANCEL": "Cancel",
   "UI_CONFIRM_CASUAL": "Got it!",
+  "UI_EXCESSIVE_AP_HEADER": "Excessive AP Warning",
+  "UI_EXCESSIVE_AP_WARNING": "Using too much of one ability has significant diminishing returns. Proceed with caution when using this gear. This message will not display again.",
+  "UI_SPYKE_TOOLTIP": "Spyke Integration",
+  "UI_SPYKE_WARNING": "You are about to be redirected to the Spyke Discord application: http://spyke.h3xmani.ac/",
 
   // Tooltips for utility buttons
   "UI_COPY_LINK": "Copy Link",
