@@ -139,19 +139,22 @@ angular.module('splatApp').stats = function ($scope) {
       }, 0.72),
 
     'Run Speed (Firing)': new Stat("{{ STAT_RUN_SPEED_FIRING | translate }}", function(loadout) {
-      if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
-          this.value = loadout.weapon.baseSpeed;
-          this.percentage = 0.0;
-          this.name = "{{ STAT_RUN_SPEED_ROLLING | translate }}"
-          this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
-          this.desc = "{{ ROLL_SPEED | translate }}";
-          return this.value.toFixed(2);
+        if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
+            this.value = loadout.weapon.baseSpeed;
+            this.percentage = 0.0;
+            this.name = "{{ STAT_RUN_SPEED_ROLLING | translate }}"
+            this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
+            this.desc = "{{ ROLL_SPEED | translate }}";
+            return this.value.toFixed(2);
+        }
+      
+        if(loadout.weapon.name.toLowerCase().indexOf('splatling') != -1 || loadout.weapon.name.toLowerCase().indexOf('nautilus') != -1) {
+          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting, Splatling"];
         }
         else {
-          this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
+          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"];
         }
 
-        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"];
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         var p = this.calcP(abilityScore);       
         var s = this.calcS(run_speed_parameters);
@@ -165,6 +168,7 @@ angular.module('splatApp').stats = function ($scope) {
 
         this.value = run_speed
         this.percentage = delta;
+        this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
 
