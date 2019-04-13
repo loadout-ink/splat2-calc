@@ -442,7 +442,7 @@ angular
             180.0
           ]
         },
-        "E-Liter 4k Scope": {
+        "E-liter 4K Scope": {
           "desc": "Full Charge Distance",
           "params": [
             325.5,
@@ -450,7 +450,7 @@ angular
             310.5
           ]
         },
-        "E-Liter 4k": {
+        "E-liter 4K": {
           "desc": "Full Charge Distance",
           "params": [
             305.5,
@@ -588,7 +588,7 @@ angular
           "desc": "Increased Ink Coverage",
           "params": [
             1.138,
-            1.052,
+            1.086,
             1.0
           ]
         },

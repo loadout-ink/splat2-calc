@@ -1120,13 +1120,14 @@ angular.module('splatApp').stats = function ($scope) {
         this.name = "{{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE | translate }}";      
       }
 
-      if(loadout.weapon.name.indexOf('E-Liter 4k') != -1 && loadout.weapon.name.indexOf('Scope') == -1) {
-        parameters = $scope.parameters["Main Power Up"]["E-Liter 4k"]["params"];
+      if(loadout.weapon.name.indexOf('E-liter 4K') != -1 && loadout.weapon.name.indexOf('Scope') == -1)
+      {
+        parameters = $scope.parameters["Main Power Up"]["E-liter 4K"]["params"];
         this.name = "{{ STAT_MAIN_POWER_UP_MAX_CHARGE_DISTANCE | translate }}";      
       }
 
-      if(loadout.weapon.name.indexOf('E-Liter 4k Scope') != -1) {
-        parameters = $scope.parameters["Main Power Up"]["E-Liter 4k Scope"]["params"];
+      if(loadout.weapon.name.indexOf('E-liter 4K Scope') != -1) {
+        parameters = $scope.parameters["Main Power Up"]["E-liter 4K Scope"]["params"];
         this.name = "{{ STAT_MAIN_POWER_UP_MAX_CHARGE_DISTANCE | translate }}";      
       }
 
