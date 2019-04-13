@@ -74,6 +74,7 @@ var it_strings = {
   "STAT_RUN_SPEED_RESIST": "Run Speed (Enemy Ink)",
   "STAT_RUN_SPEED_FIRING": "Run Speed (Firing)",
   "STAT_RUN_SPEED_ROLLING": "Run Speed (Rolling)",
+  "STAT_RUN_SPEED_CHARGING": "Run Speed (Charging)",
   "STAT_RECOVERY_SQUID": "Ink Recovery Speed (Squid)",
   "STAT_RECOVERY_KID": "Ink Recovery Speed (Kid)",
   "STAT_SAVER_MAIN": "Ink Consumption (Main)",

@@ -244,7 +244,7 @@
                   <!-- <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats" ng-class="{ 'col-sm-offset-3': $last==true && $even ==true }"> -->
                   <div class="col-sm-6 col-xs-12" ng-repeat="stat in stats">
                     <div class="statlabel readable">
-                      <span ng-bind-html="stat.name | trust"></span>
+                      <span ng-click="statBarClicked(stat.name)" ng-bind-html="stat.name | trust"></span>
                       <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright readable">{{stat.label}} (&#177;{{stat.percentage}}%)</span></uib-progressbar>
                     </div>
                   </div>

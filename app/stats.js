@@ -131,7 +131,7 @@ angular.module('splatApp').stats = function ($scope) {
             See: https://gamefaqs.gamespot.com/boards/200279-splatoon-2/75638591#5 
         */
 
-        this.value = run_speed
+        this.value = run_speed;
         this.percentage = delta;
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
@@ -139,7 +139,7 @@ angular.module('splatApp').stats = function ($scope) {
       }, 0.72),
 
     'Run Speed (Firing)': new Stat("{{ STAT_RUN_SPEED_FIRING | translate }}", function(loadout) {
-        if(loadout.weapon.name.toLowerCase().indexOf('brush') != -1 || loadout.weapon.name.toLowerCase().indexOf('roller') != -1) {
+        if(loadout.weapon.class.toLowerCase()== 'brush' || loadout.weapon.class.toLowerCase() =='roller') {
             this.value = loadout.weapon.baseSpeed;
             this.percentage = 0.0;
             this.name = "{{ STAT_RUN_SPEED_ROLLING | translate }}"
@@ -147,14 +147,15 @@ angular.module('splatApp').stats = function ($scope) {
             this.desc = "{{ ROLL_SPEED | translate }}";
             return this.value.toFixed(2);
         }
-      
-        if(loadout.weapon.name.toLowerCase().indexOf('splatling') != -1 || loadout.weapon.name.toLowerCase().indexOf('nautilus') != -1) {
-          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting, Splatling"];
+
+        if(loadout.weapon.class.toLowerCase() == 'charger') {
+          this.name = "{{ STAT_RUN_SPEED_CHARGING | translate }}";
         }
         else {
-          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"];
+          this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}";
         }
-
+      
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][loadout.weapon.shootingSpeed];
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
         var p = this.calcP(abilityScore);       
         var s = this.calcS(run_speed_parameters);
@@ -166,9 +167,8 @@ angular.module('splatApp').stats = function ($scope) {
           console.log(run_speed_debug_log);
         }
 
-        this.value = run_speed
+        this.value = run_speed;
         this.percentage = delta;
-        this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}"
         this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
 

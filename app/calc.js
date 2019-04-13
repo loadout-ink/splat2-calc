@@ -165,6 +165,37 @@ angular
       }
     }
 
+    $scope.statBarClicked = function(name) {
+      if($scope.loadout.weapon.class.toLowerCase() == 'splatling' || $scope.loadout.weapon.class.toLowerCase() == 'brella') {
+        if(name == "{{ STAT_RUN_SPEED_FIRING | translate }}") {
+          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var p = $scope.calcP(abilityScore);       
+          var s = $scope.calcS(run_speed_parameters);
+          var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.chargeSpeed;
+          var delta = ((run_speed / $scope.loadout.weapon.chargeSpeed - 1) * 100).toFixed(1).toString();
+          
+          $scope.stats["Run Speed (Firing)"].name = "{{ STAT_RUN_SPEED_CHARGING | translate }}";
+          $scope.stats["Run Speed (Firing)"].value = run_speed;
+          $scope.stats["Run Speed (Firing)"].percentage = delta;
+          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+        }
+        else {
+          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var p = $scope.calcP(abilityScore);       
+          var s = $scope.calcS(run_speed_parameters);
+          var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.baseSpeed;
+          var delta = ((run_speed / $scope.loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();
+          
+          $scope.stats["Run Speed (Firing)"].name = "{{ STAT_RUN_SPEED_FIRING | translate }}";
+          $scope.stats["Run Speed (Firing)"].value = run_speed;
+          $scope.stats["Run Speed (Firing)"].percentage = delta;
+          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});        
+        }
+      }
+    }
+
     // TODO: Re-enable these when localisations are updated.
     $scope.languages = {
       'en_US': 'English',
@@ -287,13 +318,18 @@ angular
       },
   
       "Run Speed": {
-          "Shooting": [1.25, 1.125, 1.0],
-          "Shooting, Splatling": [1.3, 1.15, 1.0],
-          "Light": [1.44, 1.24, 1.04],
-          "Heavy": [1.44, 1.16, 0.88],
-          "Mid": [1.44, 1.2, 0.96]
+        "Light": [1.44, 1.24, 1.04],
+        "Heavy": [1.44, 1.16, 0.88],
+        "Mid": [1.44, 1.2, 0.96],
+        "Shooting": {
+          "A": [1.2, 1.1, 1.0],
+          "B": [1.25, 1.125, 1.0],
+          "C": [1.3, 1.15, 1.0],
+          "D": [1.35, 1.175, 1.0],
+          "E": [1.4, 1.2, 1.0]
+        }
       },
-  
+
       "Sub Power Up": {
           "Point Sensor Distance Up": [19.0, 17.0, 15.0],
           "Splash Wall Max HP": [15000, 11500, 8000],

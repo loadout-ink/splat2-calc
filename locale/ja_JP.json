@@ -51,6 +51,8 @@
   "STAT_RUN_SPEED_RESIST": "ヒト移動速度 (相手のインク)",
   "STAT_RUN_SPEED_FIRING": "ヒト移動速度 (発射中)",
   "STAT_RUN_SPEED_ROLLING": "ヒト移動速度 (スライド中)",
+  "STAT_RUN_SPEED_CHARGING": "ヒト移動速度 (充電)",
+
   "STAT_RECOVERY_SQUID": "インク回復力 (イカ)",
   "STAT_RECOVERY_KID": "インク回復力 (ヒト)",
   "STAT_SAVER_MAIN": "メインウェポンの消費インク量",
