@@ -1,15 +1,13 @@
 angular
   .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
   .controller('splatController', ['$scope', '$rootScope', '$timeout', '$locale', function splatCtrl($scope, $rootScope, $timeout, $locale, $translate, $uibModal, $log) {
-    $scope.placeholder = ["PH Data", "More PH Data", "Hello"];
-    $scope.dummy = $scope.placeholder[0];
+    $rootScope.splatController = $scope;
     angular.module('splatApp').skills($scope);
     angular.module('splatApp').stats($scope, $translate);
     angular.module('splatApp').weapons($scope);
     angular.module('splatApp').subs($scope);
     angular.module('splatApp').specials($scope);
     angular.module('splatApp').gear($scope);
-
     angular.module('splatApp').clipboard($scope, $timeout);
     angular.module('splatApp').util($scope);
 

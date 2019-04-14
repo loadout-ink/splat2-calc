@@ -3,7 +3,6 @@ var modalCloseDelay = 200;
 angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, $uibModal, $log, $timeout) {
   $scope.animationsEnabled = true;
 
-
   var templates = {
     weaponPickerNew : `
     <div class="row">
@@ -51,12 +50,13 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="row">
     <div class="col-md-12">
     <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_SELECTOR | translate }}' || '{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+    <input id="weaponSearchFilterText" ng-model="weaponSearchFilterText" class="form-control form-control-sm" type="text" placeholder="Search...">
     </div>
     </div>
     <div class="col-md-12">
     <div class="row">
     <div class="picker">
-    <div class="gear-wrapper" ng-repeat="weapon in availableWeapons()">
+    <div class="gear-wrapper" ng-repeat="weapon in availableWeapons() | filter:weaponSearchFilter">
     <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{::weapon.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"/>
     </div>
     </div>
@@ -107,8 +107,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     <div class="col-md-8 picker-right">
+    <input id="gearSearchFilterText" ng-model="gearSearchFilterText" class="form-control form-control-sm" type="text" placeholder="Search...">
     <div class="picker">
-    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
+    <div ng-click="selectGear(item)" ng-repeat="item in filtered.primary | filter:gearSearchFilter track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -117,7 +118,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <img ng-if="item.main != undefined" ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     </div><!--
-    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
+    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary | filter:gearSearchFilter track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -129,7 +130,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <img ng-if="item.brand != 'Grizzco'?item.name != 'Splatfest Tee'?true:false:false" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
     </span>
     </div><!--
-    --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
+    --><div ng-repeat="item in filtered.notEligible | filter:gearSearchFilter track by item.id" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -386,7 +387,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
           return $scope.getSubByName;
         },
         getSpecialByName: function() {
-          return $scope.getSpecialByName
+          return $scope.getSpecialByName;
         }
       }
     });
@@ -536,10 +537,23 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
   }
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
+angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $rootScope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
+
+  $scope.weaponSearchFilter = function(value) {
+    var langs = $rootScope.splatController.languages;
+    var keys = Object.keys(langs);
+    var searchText = document.getElementById("weaponSearchFilterText").value;
+    
+    for(var i = 0; i < keys.length;i++){
+      if(value.localizedName[keys[i]].indexOf(searchText) != -1) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   $scope.switchSet = function() {
     $scope.selectedWeapon = this.availableWeapons()[0];
@@ -580,17 +594,34 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
-  $scope.slot = slot
-  $scope.set = set
-  $scope.filterByMain = filterByMain
-  $scope.selectedGear = selectedGear
-  $scope.getSkillByName = getSkillByName
-  $scope.brands = brands
-  $scope.background = background
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootScope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
+  $scope.slot = slot;
+  $scope.set = set;
+  $scope.filterByMain = filterByMain;
+  $scope.selectedGear = selectedGear;
+  $scope.getSkillByName = getSkillByName;
+  $scope.brands = brands;
+  $scope.background = background;
 
-  if(slot.main != null) $scope.filtered = filterByMain(set,slot.main.name)
-  else $scope.filtered = filterByMain(set,null)
+  $scope.gearSearchFilter = function(value) {
+    var langs = $rootScope.splatController.languages;
+    var keys = Object.keys(langs);
+    var searchText = document.getElementById("gearSearchFilterText").value;
+    
+    for(var i = 0; i < keys.length;i++){
+      if(value.localizedName[keys[i]].indexOf(searchText) != -1) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  if(slot.main != null) {
+    $scope.filtered = filterByMain(set,slot.main.name);
+  }
+  else {
+    $scope.filtered = filterByMain(set,null);
+  }
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;
