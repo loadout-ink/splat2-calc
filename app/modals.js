@@ -50,7 +50,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="row">
     <div class="col-md-12">
     <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_SELECTOR | translate }}' || '{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
-    <input id="weaponSearchFilterText" ng-model="weaponSearchFilterText" class="form-control form-control-sm" type="text" placeholder="Search...">
+    <input id="weaponSearchFilterText" ng-model="weaponSearchFilterText" class="form-control form-control-sm" type="text" placeholder="{{ UI_SEARCH | translate }}">
     </div>
     </div>
     <div class="col-md-12">
@@ -107,7 +107,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     <div class="col-md-8 picker-right">
-    <input id="gearSearchFilterText" ng-model="gearSearchFilterText" class="form-control form-control-sm" type="text" placeholder="Search...">
+    <input id="gearSearchFilterText" ng-model="gearSearchFilterText" class="form-control form-control-sm" type="text" placeholder="{{ UI_SEARCH | translate }}">
     <div class="picker">
     <div ng-click="selectGear(item)" ng-repeat="item in filtered.primary | filter:gearSearchFilter track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{item.image}}"/>
@@ -547,11 +547,49 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
     var keys = Object.keys(langs);
     var searchText = document.getElementById("weaponSearchFilterText").value;
     
+    // Filter on NAME
     for(var i = 0; i < keys.length;i++){
       if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
         return true;
       }
     }
+
+    // Filter on SPECIAL
+    var specials = $rootScope.splatController.specials;
+    var special = null;
+    for(var i = 0; i < specials.length; i++){
+      if(value.special != null && specials[i].name == value.special) {
+        special = specials[i];
+        break;
+      }
+    }
+    if(special != null) {
+      var keys = Object.keys(special.localizedName);
+      for(var i = 0; i < keys.length;i++){
+        if(special.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+          return true;
+        }
+      }
+    }
+
+    // Filter on SUB ABILITY
+    var subs = $rootScope.splatController.subs;
+    var sub = null;
+    for(var i = 0; i < subs.length; i++){
+      if(value.main != null && subs[i].name == value.main) {
+        sub = subs[i];
+        break;
+      }
+    }
+    if(sub != null) {
+      var keys = Object.keys(sub.localizedName);
+      for(var i = 0; i < keys.length;i++){
+        if(sub.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+          return true;
+        }
+      }
+    }
+
     return false;
   };
 
@@ -608,11 +646,40 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootSc
     var keys = Object.keys(langs);
     var searchText = document.getElementById("gearSearchFilterText").value;
     
+    // Filter on NAME
     for(var i = 0; i < keys.length;i++){
       if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
         return true;
       }
     }
+
+    // Filter on BRAND
+    var brand = $rootScope.splatController.brands[value.brand];
+    var keys = Object.keys(brand.localizedName);
+    for(var i = 0; i < keys.length;i++){
+      if(brand.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        return true;
+      }
+    }
+
+    // Filter on MAIN ABILITY
+    var skills = $rootScope.splatController.skills;
+    var skill = null;
+    for(var i = 0; i < skills.length; i++){
+      if(value.main != null && skills[i].name == value.main) {
+        skill = skills[i];
+        break;
+      }
+    }
+    if(skill != null) {
+      var keys = Object.keys(skill.localizedName);
+      for(var i = 0; i < keys.length;i++){
+        if(skill.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+          return true;
+        }
+      }
+    }
+
     return false;
   };
 
