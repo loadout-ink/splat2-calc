@@ -548,7 +548,7 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
     var searchText = document.getElementById("weaponSearchFilterText").value;
     
     for(var i = 0; i < keys.length;i++){
-      if(value.localizedName[keys[i]].indexOf(searchText) != -1) {
+      if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
         return true;
       }
     }
@@ -609,7 +609,7 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootSc
     var searchText = document.getElementById("gearSearchFilterText").value;
     
     for(var i = 0; i < keys.length;i++){
-      if(value.localizedName[keys[i]].indexOf(searchText) != -1) {
+      if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
         return true;
       }
     }
