@@ -192,8 +192,44 @@ angular
           $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});        
         }
       }
+      switch(name) {
+        case "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Bomb Defense Up DX');
+          var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Ink Mine"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(tracking_time_parameters);
+          var modifier = this.calcRes(tracking_time_parameters, p, s);
+    
+          var duration = 8 * modifier;
+          var max_duration = 8;
+          var min_duration = tracking_time_parameters[2] * 8;
+    
+          $scope.stats["Tracking Time"].name = "[+] {{ STAT_TRACKING_TIME_INK_MINE | translate }}"
+          $scope.stats["Tracking Time"].value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          $scope.stats["Tracking Time"].percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+          $scope.stats["Tracking Time"].label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
+          $scope.stats["Tracking Time"].desc = "{{ DESC_TRACKING | translate }}";
+          break;
+          
+        case "[+] {{ STAT_TRACKING_TIME_INK_MINE | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Bomb Defense Up DX');
+          var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Point Sensor"];
+          var p = this.calcP(abilityScore);      
+          var s = this.calcS(tracking_time_parameters);
+          var modifier = this.calcRes(tracking_time_parameters, p, s);
+    
+          var duration = 8 * modifier;
+          var max_duration = 8;
+          var min_duration = tracking_time_parameters[2] * 8;
+    
+          $scope.stats["Tracking Time"].name = "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}"
+          $scope.stats["Tracking Time"].value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+          $scope.stats["Tracking Time"].percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+          $scope.stats["Tracking Time"].label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
+          $scope.stats["Tracking Time"].desc = "{{ DESC_TRACKING | translate }}";
+          break;
+      }
     }
-
     // TODO: Re-enable these when localisations are updated.
     $scope.languages = {
       'en_US': 'English',
@@ -296,7 +332,7 @@ angular
           "Thermal Ink Time Reduction": [1.0, 1.0, 1.0],
           "Silhouette Close": [250.0, 190.0, 130.0],
           "Silhouette Far": [290.0, 230.0, 170.0],
-          "Point Sensor": [0.1, 0.55, 1.0],
+          "Point Sensor": [0.1, 0.43, 1.0],
           "Ink Mine": [0.1, 0.55, 1.0]
       },
   
@@ -563,13 +599,13 @@ angular
         "Hydra Splatling": {
           "desc": "Full Charge Damage Up",
           "min_params": [
-            19.2,
             17.6,
+            16.8,
             16.0
           ],
           "max_params": [
-            48.0,
             44.0,
+            42.0,
             40.0
           ]
         },

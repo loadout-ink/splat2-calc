@@ -105,6 +105,8 @@ var it_strings = {
   "STAT_QUICK_RESPAWN": "Quick Respawn Time",
   "STAT_QUICK_RESPAWN_PUNISHER": "Quick Respawn Time",
   "STAT_TRACKING_TIME": "Tracking Time",
+  "STAT_TRACKING_TIME_POINT_SENSOR": "Tracking Time (Point Sensor)",
+  "STAT_TRACKING_TIME_INK_MINE": "Tracking Time (Ink Mine)",
   "STAT_MAIN_POWER_UP": "Main Power Up",
   "STAT_MAIN_POWER_UP_UNUSED": "Main Power Up (Unused)",
   "STAT_MAIN_POWER_UP_MIN_DAMAGE": "Main Power Up (Min Damage)",

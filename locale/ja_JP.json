@@ -83,6 +83,8 @@
   "STAT_QUICK_RESPAWN": "復活時間",
   "STAT_QUICK_RESPAWN_PUNISHER": "復活時間",
   "STAT_TRACKING_TIME": "マーキング時間",
+  "STAT_TRACKING_TIME_POINT_SENSOR": "マーキング時間 (ポイントセンサー)",
+  "STAT_TRACKING_TIME_INK_MINE": "マーキング時間 (トラップ)",
   "STAT_MAIN_POWER_UP": "メイン性能アップ",
   "STAT_MAIN_POWER_UP_UNUSED": "メイン性能アップ (未使用)",  
   "STAT_MAIN_POWER_UP_MIN_DAMAGE": "メイン性能アップ (最低ダメージ)",

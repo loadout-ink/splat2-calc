@@ -946,7 +946,7 @@ angular.module('splatApp').stats = function ($scope) {
       return total_duration;
     }, 100),
 
-    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME | translate }} ", function(loadout) {
+    'Tracking Time': new Stat("{{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Bomb Defense Up DX');
       var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Point Sensor"];
       var p = this.calcP(abilityScore);      
@@ -957,6 +957,7 @@ angular.module('splatApp').stats = function ($scope) {
       var max_duration = 8;
       var min_duration = tracking_time_parameters[2] * 8;
 
+      this.name = "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}"
       this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
       this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
       
