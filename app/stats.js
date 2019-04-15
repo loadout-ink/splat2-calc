@@ -317,7 +317,7 @@ angular.module('splatApp').stats = function ($scope) {
 
       this.value = special_charge_speed;
       this.percentage = ((special_charge_speed*100) - 100).toFixed(1);
-      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.round(loadout.weapon.specialCost / special_charge_speed)})
+      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.ceil(loadout.weapon.specialCost / special_charge_speed)});
       this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
 
       if($scope.logging) {
@@ -1590,6 +1590,6 @@ angular.module('splatApp').stats = function ($scope) {
 
   $scope.getAdjustedSpecialCost = function(loadout) {
     var stat = $scope.getStatByName('Special Charge Speed');
-    return Math.floor(loadout.weapon.specialCost / (stat.value))
+    return Math.ceil(loadout.weapon.specialCost / (stat.value))
   }
 }

@@ -576,7 +576,7 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
     var subs = $rootScope.splatController.subs;
     var sub = null;
     for(var i = 0; i < subs.length; i++){
-      if(value.main != null && subs[i].name == value.main) {
+      if(value.sub != null && subs[i].name == value.sub) {
         sub = subs[i];
         break;
       }

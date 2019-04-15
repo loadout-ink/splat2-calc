@@ -3553,8 +3553,8 @@ angular.module('splatApp').weapons = function($scope) {
           "inkSaver": "Middle",
           "inkPerShot": 15.0,
           "speedLevel": "Middle",
-          "baseSpeed": 0.8,
-          "chargeSpeed": 0.7,
+          "baseSpeed": 0.864,
+          "chargeSpeed": 0.721,
           "shootingSpeed": "E",
           "price": 12300,
           "stats": {
@@ -3589,8 +3589,8 @@ angular.module('splatApp').weapons = function($scope) {
           "inkSaver": "Middle",
           "inkPerShot": 15.0,
           "speedLevel": "Middle",
-          "baseSpeed": 0.8,
-          "chargeSpeed": 0.7,
+          "baseSpeed": 0.864,
+          "chargeSpeed": 0.721,
           "shootingSpeed": "E",
           "price": 15400,
           "stats": {
@@ -3616,8 +3616,8 @@ angular.module('splatApp').weapons = function($scope) {
           "inkSaver": "Middle",
           "inkPerShot": 15.0,
           "speedLevel": "Middle",
-          "baseSpeed": 0.8,
-          "chargeSpeed": 0.7,
+          "baseSpeed": 0.864,
+          "chargeSpeed": 0.721,
           "shootingSpeed": "E",
           "price": 18800,
           "stats": {
