@@ -246,6 +246,9 @@ angular.module('splatApp').weapons = function($scope) {
           "speedLevel": "High",
           "baseSpeed": 0.72,
           "shootingSpeed": "B",
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 11200,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 42,
@@ -278,6 +281,9 @@ angular.module('splatApp').weapons = function($scope) {
           "speedLevel": "High",
           "baseSpeed": 0.72,
           "shootingSpeed": "B",
+          "minDamage": 14,
+          "maxDamage": 28,
+          "mpuMaxDamage": 33.3,
           "price": 16800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 42,
