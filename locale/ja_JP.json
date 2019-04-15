@@ -38,6 +38,7 @@
   "UI_SPYKE_TOOLTIP": "ダウニー統合",
   "UI_SPYKE_WARNING": "ダウニーDiscordアプリケーションにリダイレクトされようとしています： http://spyke.h3xmani.ac/",
   "UI_SEARCH": "サーチ...",
+  "UI_STAT_TOGGLE_NOTICE": "[+]でマークされた能力は、名前をクリックすることで切り替えられます。",
 
   "UI_COPY_LINK": "リンクをコピー",
   "UI_SCREENSHOT_MODE": "スクリーンショットモード",

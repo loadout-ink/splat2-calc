@@ -165,7 +165,7 @@ angular
 
     $scope.statBarClicked = function(name) {
       if($scope.loadout.weapon.class.toLowerCase() == 'splatling' || $scope.loadout.weapon.class.toLowerCase() == 'brella') {
-        if(name == "{{ STAT_RUN_SPEED_FIRING | translate }}") {
+        if(name == "[+] {{ STAT_RUN_SPEED_FIRING | translate }}") {
           var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
           var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
           var p = $scope.calcP(abilityScore);       
@@ -173,7 +173,7 @@ angular
           var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.chargeSpeed;
           var delta = ((run_speed / $scope.loadout.weapon.chargeSpeed - 1) * 100).toFixed(1).toString();
           
-          $scope.stats["Run Speed (Firing)"].name = "{{ STAT_RUN_SPEED_CHARGING | translate }}";
+          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_CHARGING | translate }}";
           $scope.stats["Run Speed (Firing)"].value = run_speed;
           $scope.stats["Run Speed (Firing)"].percentage = delta;
           $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
@@ -186,7 +186,7 @@ angular
           var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.baseSpeed;
           var delta = ((run_speed / $scope.loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();
           
-          $scope.stats["Run Speed (Firing)"].name = "{{ STAT_RUN_SPEED_FIRING | translate }}";
+          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_FIRING | translate }}";
           $scope.stats["Run Speed (Firing)"].value = run_speed;
           $scope.stats["Run Speed (Firing)"].percentage = delta;
           $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});        

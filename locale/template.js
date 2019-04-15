@@ -58,6 +58,7 @@ var it_strings = {
   "UI_SPYKE_TOOLTIP": "Spyke Integration",
   "UI_SPYKE_WARNING": "You are about to be redirected to the Spyke Discord application: http://spyke.h3xmani.ac/",
   "UI_SEARCH": "Search...",
+  "UI_STAT_TOGGLE_NOTICE": "Abilities marked with a [+] may be toggled by clicking on the name.",
 
   // Tooltips for utility buttons
   "UI_COPY_LINK": "Copy Link",
