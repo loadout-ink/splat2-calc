@@ -3665,7 +3665,7 @@ angular.module('splatApp').weapons = function($scope) {
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
             "{{ SHELDON_CHARGE_SPEED | translate }}": 38,
-            "{{ SHELDON_MOBILITY | translate }}": 50
+            "{{ SHELDON_MOBILITY | translate }}": 55
           },
           "id": 3
         },
@@ -3701,7 +3701,7 @@ angular.module('splatApp').weapons = function($scope) {
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
             "{{ SHELDON_CHARGE_SPEED | translate }}": 38,
-            "{{ SHELDON_MOBILITY | translate }}": 50
+            "{{ SHELDON_MOBILITY | translate }}": 55
           },
           "id": 4
         },
