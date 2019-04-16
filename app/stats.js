@@ -518,7 +518,7 @@ angular.module('splatApp').stats = function ($scope) {
           return duration;
 
         case 'Sting Ray':
-          special_power_up_parameters = $scope.parameters["Special Power Up"]["Ink Storm Duration"];
+          special_power_up_parameters = $scope.parameters["Special Power Up"]["Sting Ray Duration"];
           var p = this.calcP(abilityScore);      
           var s = this.calcS(special_power_up_parameters);
           var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
@@ -529,7 +529,7 @@ angular.module('splatApp').stats = function ($scope) {
           this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
 
           if($scope.logging) {
-            var special_power_up_log = {"Special Power Up (Ink Storm)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+            var special_power_up_log = {"Special Power Up (Sting Ray)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
             console.log(special_power_up_log);
           }
           
