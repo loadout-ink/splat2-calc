@@ -59,6 +59,8 @@ var it_strings = {
   "UI_SPYKE_WARNING": "You are about to be redirected to the Spyke Discord application: http://spyke.h3xmani.ac/",
   "UI_SEARCH": "Search...",
   "UI_STAT_TOGGLE_NOTICE": "Abilities marked with a [+] may be toggled by clicking on the name.",
+  "UI_X_RANK_POPULARITY": "X Rank Popularity",
+  "UI_X_RANK_POPULARITY_TOOLTIP": "How frequently the weapon is used in X rank.",
 
   // Tooltips for utility buttons
   "UI_COPY_LINK": "Copy Link",

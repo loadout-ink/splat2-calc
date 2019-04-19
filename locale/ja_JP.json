@@ -39,6 +39,8 @@
   "UI_SPYKE_WARNING": "ダウニーDiscordアプリケーションにリダイレクトされようとしています： http://spyke.h3xmani.ac/",
   "UI_SEARCH": "サーチ...",
   "UI_STAT_TOGGLE_NOTICE": "[+]でマークされた能力は、名前をクリックすることで切り替えられます。",
+  "UI_X_RANK_POPULARITY": "人気人気ウデマエX",
+  "UI_X_RANK_POPULARITY_TOOLTIP": "Xランクで武器が使われる頻度。",
 
   "UI_COPY_LINK": "リンクをコピー",
   "UI_SCREENSHOT_MODE": "スクリーンショットモード",

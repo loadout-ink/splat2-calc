@@ -620,6 +620,26 @@ angular.module('splatApp').stats = function ($scope) {
           this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(bubble_radius,2)})
           return bubble_radius;
 
+        case 'Ultra Stamp':
+        special_power_up_parameters = $scope.parameters["Special Power Up"]["Ultra Stamp Duration"];
+        var p = this.calcP(abilityScore);      
+        var s = this.calcS(special_power_up_parameters);
+        var duration = this.calcRes(special_power_up_parameters, p, s) / 60;
+        var max_duration = special_power_up_parameters[0] / 60;
+        var min_duration = special_power_up_parameters[2] / 60;
+
+        this.value = $scope.toFixedTrimmed((duration/max_duration) * 100,2);
+        this.percentage = ((duration/min_duration - 1) * 100).toFixed(1);
+
+        if($scope.logging) {
+          var special_power_up_log = {"Special Power Up (Ultra Stamp)":duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+          console.log(special_power_up_log);
+        }
+        
+        this.name = "{{ STAT_SPECIAL_POWER_DURATION | translate }}";        
+        this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)});
+        return duration;
+
         case 'Booyah Bomb':
           special_power_up_parameters = $scope.parameters["Special Power Up"]["Booyah Ball Auto Charge Increase"];
           var p = this.calcP(abilityScore);      
