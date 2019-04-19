@@ -230,6 +230,7 @@ angular
           break;
       }
     }
+
     // TODO: Re-enable these when localisations are updated.
     $scope.languages = {
       'en_US': 'English',
@@ -446,7 +447,8 @@ angular
           "Shoot K": [1.0, 0.75, 0.5],
           "Jump": [1.1, 0.98, 0.8],
           "Shoot": [0.4, 0.26, 0.12],
-          "Jump(story)": [1.05, 0.825, 0.6]
+          "Jump(story)": [1.05, 0.825, 0.6],
+          "Invuln Frames": [39, 20.5, 0] // TODO: Get updated params from Lean
       },
   
       "Quick Super Jump": {

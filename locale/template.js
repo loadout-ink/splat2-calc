@@ -28,8 +28,15 @@ var it_strings = {
   "TABLE_NEAR": "Near",
   "TABLE_FAR": "Far",
   "TABLE_HIT": "Hit",
+  "TABLE_EFFECT": "Effect",
+  "TABLE_VALUE": "Value",
   "SPECIAL_HEADER": "Special Damage",
   "SPECIAL_TABLE_SPECIAL": "Special",
+  "INK_RESISTANCE_HEADER": "Ink Resistance Effects",
+  "INVULN_TIME": "Invulnerability Time",
+  "DAMAGE_PER_SECOND": "Damage Per Second",
+  "DAMAGE_LIMIT": "Damage Limit",
+  "JUMP_HEIGHT": "Jump Height",
 
   // Footer
   "FOOTER_COPYRIGHT": "Splatoon and all related copyrights/assets used on this page are the property of Nintendo.",

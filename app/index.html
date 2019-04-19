@@ -299,6 +299,25 @@
                           </tbody>
                         </table>
                       </div>
+                      <div uib-accordion-group class="panel-stats" is-open="status.inkOpen">
+                        <uib-accordion-heading>
+                          <div>
+                            {{ INK_RESISTANCE_HEADER | translate }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.inkOpen, 'glyphicon-chevron-right': !status.inkOpen}"></i>
+                          </div>
+                        </uib-accordion-heading>
+                        <table class="table table-sm">
+                          <tr>
+                            <th>{{ TABLE_EFFECT | translate }}</th>
+                            <th class="readable">{{ TABLE_VALUE | translate }}</th>
+                          </tr>
+                          <tbody>
+                            <tr ng-repeat="effect in getInkResistanceEffects()">
+                              <td>{{effect.name}}</td>                              
+                              <td>{{getAdjustedInkResistanceEffect(effect.key,loadout)}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </uib-accordion>
                   </div>
                 </div>

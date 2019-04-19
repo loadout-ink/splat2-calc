@@ -15,8 +15,16 @@
   "TABLE_NEAR": "爆風(近)",
   "TABLE_FAR": "爆風(遠)",
   "TABLE_HIT": "直撃",
+  "TABLE_EFFECT": "効果",
+  "TABLE_VALUE": "バリュー",
   "SPECIAL_HEADER": "スペシャルウェポン",
   "SPECIAL_TABLE_SPECIAL": "スペシャル",
+  "INK_RESISTANCE_HEADER": "耐インク効果",
+  "INVULN_TIME": "無敵時間",
+  "DAMAGE_PER_SECOND": "毎秒のダメージ",
+  "DAMAGE_LIMIT": "ダメージリミット",
+  "JUMP_HEIGHT": "ジャンプの高さ",
+
   "FOOTER_COPYRIGHT": "スプラトゥーンは、任天堂株式会社の商標であり、当サイトは任天堂株式会社とは一切関係のないサービスです。",
   "FOOTER_ABOUT": "お問い合わせ",
 

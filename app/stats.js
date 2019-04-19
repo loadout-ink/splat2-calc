@@ -1622,4 +1622,41 @@ angular.module('splatApp').stats = function ($scope) {
     var stat = $scope.getStatByName('Special Charge Speed');
     return Math.ceil(loadout.weapon.specialCost / (stat.value))
   }
+
+  var inkResistanceEffects = [
+    {"name":"{{INVULN_TIME | translate}}","key":"Invuln Frames"},
+    {"name":"{{DAMAGE_PER_SECOND | translate}}","key":"Dmg Per Frame"},
+    {"name":"{{DAMAGE_LIMIT | translate}}", "key":"Dmg Limit"},
+    {"name":"{{JUMP_HEIGHT | translate}}", "key":"Jump"}      
+  ];
+
+  $scope.getInkResistanceEffects = function () {
+    return inkResistanceEffects;
+  }
+
+  $scope.getAdjustedInkResistanceEffect = function(key, loadout) {
+    var parameters = $scope.parameters["Ink Resistance"][key];
+    var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
+    var p = $scope.calcP(abilityScore);       
+    var s = $scope.calcS(parameters);
+    var result = $scope.calcRes(parameters, p, s);
+
+    if(key == "Invuln Frames") {
+      result = $scope.toFixedTrimmed(result / 60, 2) + "s";
+    }
+    if(key == "Dmg Per Frame") {
+      result = $scope.toFixedTrimmed(result * 100 * 60, 2);
+    }
+    if(key == "Dmg Limit") {
+      result = $scope.toFixedTrimmed(result * 100, 2);
+    }
+    if(key == "Jump") {
+      if(result > 1) {
+        result = 1;
+      }
+      result = $scope.toFixedTrimmed(result * 100, 2) + "%";
+    }
+
+    return result;
+  }
 }
