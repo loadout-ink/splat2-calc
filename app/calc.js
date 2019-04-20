@@ -29,6 +29,14 @@ angular
       return appVersionString;
     }
 
+    $scope.getCurrentLang = function() {
+      var current_lang = window.location.pathname;
+      while(current_lang.indexOf("/") != -1) {
+        current_lang = current_lang.replace("/","");
+      }
+      return current_lang;
+    }
+
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
     }

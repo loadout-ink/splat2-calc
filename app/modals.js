@@ -564,15 +564,11 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
   });
 
   $scope.weaponSearchFilter = function(value) {
-    var langs = $rootScope.splatController.languages;
-    var keys = Object.keys(langs);
+    var current_lang = $rootScope.splatController.getCurrentLang();
     var searchText = document.getElementById("weaponSearchFilterText").value;
     
-    // Filter on NAME
-    for(var i = 0; i < keys.length;i++){
-      if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-        return true;
-      }
+    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
     }
 
     // Filter on SPECIAL
@@ -585,12 +581,9 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
       }
     }
     if(special != null) {
-      var keys = Object.keys(special.localizedName);
-      for(var i = 0; i < keys.length;i++){
-        if(special.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        if(special.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
           return true;
         }
-      }
     }
 
     // Filter on SUB ABILITY
@@ -603,11 +596,8 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $root
       }
     }
     if(sub != null) {
-      var keys = Object.keys(sub.localizedName);
-      for(var i = 0; i < keys.length;i++){
-        if(sub.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-          return true;
-        }
+      if(sub.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        return true;
       }
     }
 
@@ -663,26 +653,20 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootSc
   $scope.background = background;
 
   $scope.gearSearchFilter = function(value) {
-    var langs = $rootScope.splatController.languages;
-    var keys = Object.keys(langs);
+    var current_lang = $rootScope.splatController.getCurrentLang();
     var searchText = document.getElementById("gearSearchFilterText").value;
     
     // Filter on NAME
-    for(var i = 0; i < keys.length;i++){
-      if(value.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-        return true;
-      }
+    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
     }
-
+    
     // Filter on BRAND
     var brand = $rootScope.splatController.brands[value.brand];
-    var keys = Object.keys(brand.localizedName);
-    for(var i = 0; i < keys.length;i++){
-      if(brand.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-        return true;
-      }
+    if(brand.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
     }
-
+    
     // Filter on MAIN ABILITY
     var skills = $rootScope.splatController.skills;
     var skill = null;
@@ -693,11 +677,8 @@ angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootSc
       }
     }
     if(skill != null) {
-      var keys = Object.keys(skill.localizedName);
-      for(var i = 0; i < keys.length;i++){
-        if(skill.localizedName[keys[i]].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-          return true;
-        }
+      if(skill.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        return true;
       }
     }
 
