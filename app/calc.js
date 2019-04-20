@@ -448,9 +448,9 @@ angular
           "Jump": [1.1, 0.98, 0.8],
           "Shoot": [0.4, 0.26, 0.12],
           "Jump(story)": [1.05, 0.825, 0.6],
-          "Invuln Frames": [39, 20.5, 0] // TODO: Get updated params from Lean
+          "Invuln Frames": [39.0, 26.0, 0.0]
       },
-  
+
       "Quick Super Jump": {
           "Jump": [96.6, 132.3, 138.0],
           "Prepare": [20.0, 35.0, 80.0]

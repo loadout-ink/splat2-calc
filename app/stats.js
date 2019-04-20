@@ -1642,7 +1642,7 @@ angular.module('splatApp').stats = function ($scope) {
     var result = $scope.calcRes(parameters, p, s);
 
     if(key == "Invuln Frames") {
-      result = $scope.toFixedTrimmed(result / 60, 2) + "s";
+      result = $scope.toFixedTrimmed(result / 60, 3) + "s";
     }
     if(key == "Dmg Per Frame") {
       result = $scope.toFixedTrimmed(result * 100 * 60, 2);
@@ -1651,10 +1651,7 @@ angular.module('splatApp').stats = function ($scope) {
       result = $scope.toFixedTrimmed(result * 100, 2);
     }
     if(key == "Jump") {
-      if(result > 1) {
-        result = 1;
-      }
-      result = $scope.toFixedTrimmed(result * 100, 2) + "%";
+      result = $scope.toFixedTrimmed(result, 3);
     }
 
     return result;
