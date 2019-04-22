@@ -15,8 +15,9 @@ angular
     $scope.status = {}
     $scope.logging = false;
     $scope.appVersion = 200; // 2.0.0
-
     $scope.screenshotMode = false;
+
+    $scope.tutorial = angular.module('splatApp').tutorial;
 
     $scope.appVersionToString = function() {
       var appVersionString = "";

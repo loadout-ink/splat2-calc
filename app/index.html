@@ -42,6 +42,13 @@
 
   <link rel="stylesheet" href="../common/style/calc.css">
   <link rel="stylesheet" href="../common/style/dialog.css">
+
+  <!-- Hopscotch Resources -->
+  <link rel="stylesheet" href="../common/style/hopscotch.css"></link>
+  <script src="../common/lib/hopscotch.js"></script>
+
+  <script src="./tutorials.js"></script>
+
 </head>
 <body ng-cloak ng-app="splatApp" ng-controller="splatController">
   <div id="main">
@@ -84,13 +91,15 @@
                         <button class="icon-button" ng-click="resetLoadout()" uib-tooltip="{{ UI_CLEAR_ALL | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-bomb"></span></button>
                       </div>
                       <div class="col-xs-2">
-                        <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" /></button>
+                        <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" style="padding-bottom:3px;" /></button>
                       </div>
                     </div>
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
-                          <span>
-                            ver. 2.0.0 BETA <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                          <span id="version">
+                            ver. 2.0.0 BETA
+                            <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
+                            <span id="tutorial" class="icon-button fa fa-magic" ng-controller="splatController" uib-tooltip="{{ UI_TUTORIAL | translate }}" ng-click="tutorial()" tooltip-append-to-body="true"></span>
                           </span>
                         </div>
                       </div>
@@ -145,7 +154,7 @@
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding">
-                            <div class="gear-wrapper">
+                            <div id="hats" class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.head.equipped.image}}" />
                               <span class="not-possible">
                                 <span class="fa fa-5x fa-ban" uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.head.equipped,loadout.head.main.name)"></span>
@@ -157,7 +166,7 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="ability-wrapper">
+                          <div id="hat-abilities" class="ability-wrapper">
                             <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.head.main" contains-fixed="{{loadout.head.equipped.fixed?true:false}}" contains-exclusive="{{loadout.head.main?loadout.head.main.exclusive?true:false:false}}" ng-src="{{loadout.head.getmainIcon()}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.head.subs[0]" ng-src="{{loadout.head.getSubIcon(0)}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.head.subs[1]" ng-src="{{loadout.head.getSubIcon(1)}}" />
@@ -174,7 +183,7 @@
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
-                            <div class="gear-wrapper">
+                            <div id="clothes" class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.clothes.equipped.image}}" />
                               <span class="not-possible">
                                 <span class="fa fa-5x fa-ban " uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.clothes.equipped,loadout.clothes.main.name)"></span>
@@ -186,7 +195,7 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="ability-wrapper">
+                          <div id="clothes-abilities" class="ability-wrapper">
                             <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.clothes.main" contains-fixed="{{loadout.clothes.equipped.fixed?true:false}}" contains-exclusive="{{loadout.clothes.main?loadout.clothes.main.exclusive?true:false:false}}" ng-src="{{loadout.clothes.getmainIcon()}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.clothes.subs[0]" ng-src="{{loadout.clothes.getSubIcon(0)}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.clothes.subs[1]" ng-src="{{loadout.clothes.getSubIcon(1)}}" />
@@ -203,7 +212,7 @@
                         </div>
                         <div class="row">
                           <div class="col-xs-12 nopadding" >
-                            <div class="gear-wrapper">
+                            <div id="shoes" class="gear-wrapper">
                               <img fallback-img class="gear-icon" ng-src="{{loadout.shoes.equipped.image}}" />
                               <span class="not-possible">
                                 <span class="fa fa-5x fa-ban " uib-tooltip="{{ UI_NOT_POSSIBLE | translate }}" tooltip-append-to-body="true" ng-if="!isPossibleMain(loadout.shoes.equipped,loadout.shoes.main.name)"></span>
@@ -215,7 +224,7 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="ability-wrapper">
+                          <div id="shoes-abilities" class="ability-wrapper">
                             <img tabindex="0" class="abilityicon main" draggable-ability ability-slot="loadout.shoes.main" contains-fixed="{{loadout.shoes.equipped.fixed?true:false}}" contains-exclusive="{{loadout.shoes.main?loadout.shoes.main.exclusive?true:false:false}}" ng-src="{{loadout.shoes.getmainIcon()}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.shoes.subs[0]" ng-src="{{loadout.shoes.getSubIcon(0)}}" />
                             <img tabindex="0" class="abilityicon sub" draggable-ability ability-slot="loadout.shoes.subs[1]" ng-src="{{loadout.shoes.getSubIcon(1)}}" />
@@ -228,9 +237,9 @@
                 </div>
               </div>
               <div class="row card" ability-box id="abilitybox">
-                <img fallback-img ng-repeat="skill in getStackableSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getStackableSkills()" id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
                 <hr>
-                <img fallback-img ng-repeat="skill in getExclusiveSkills()" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
+                <img fallback-img ng-repeat="skill in getExclusiveSkills()" id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
               </div>
             </div>
           </div>
@@ -328,7 +337,7 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >{{ FOOTER_ABOUT | translate }}</a> | <a href="https://github.com/selicia/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/loadout_ink" target="_blank">twitter</a></span><br>
+          <span><a ng-controller="ModalCtrl" href="" ng-click="openAbout()" >{{ FOOTER_ABOUT | translate }}</a> | <a href="https://github.com/selicia/splat2-calc" target="_blank">github</a> | <a href="https://twitter.com/Selicia2" target="_blank">twitter</a></span><br>
           <span>Original site created by <a href="http://github.com/DeviPotato/splat2-calc/" target="_blank">devipotato</a> 2018. Forked by <a href="http://github.com/selicia/splat2-calc/" target="_blank">selicia</a> 2019. Data and information provided by <a href="https://twitter.com/LeanYoshi" target="_blank">Lean</a>.</span><br>
           {{ FOOTER_COPYRIGHT | translate }}
         </div>

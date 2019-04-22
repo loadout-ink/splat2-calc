@@ -69,6 +69,9 @@ var it_strings = {
   "UI_X_RANK_POPULARITY": "X Rank Popularity",
   "UI_X_RANK_POPULARITY_TOOLTIP": "How frequently the weapon is used in X rank.",
 
+  // Tutorial text
+  "UI_TUTORIAL": "Tutorial",
+
   // Tooltips for utility buttons
   "UI_COPY_LINK": "Copy Link",
   "UI_SCREENSHOT_MODE": "Toggle Screenshot Mode",
