@@ -277,6 +277,7 @@ angular.module('splatApp').stats = function ($scope) {
       }
       else {
         costPerShot = loadout.weapon.inkPerShot * reduction;
+        this.name = "{{ STAT_SAVER_MAIN | translate }}";
         this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
         this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: loadout.weapon.shotUnit});
       }
