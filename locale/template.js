@@ -87,7 +87,11 @@ var it_strings = {
   "STAT_RUN_SPEED": "Run Speed",
   "STAT_RUN_SPEED_RESIST": "Run Speed (Enemy Ink)",
   "STAT_RUN_SPEED_FIRING": "Run Speed (Firing)",
-  "STAT_RUN_SPEED_ROLLING": "Run Speed (Rolling)",
+  "STAT_RUN_SPEED_FLICKING": "Run Speed (Flicking)",
+  "STAT_RUN_SPEED_FLICKING_HORIZONTAL": "Run Speed (Flicking): Horizontal",
+  "STAT_RUN_SPEED_FLICKING_VERTICAL": "Run Speed (Flicking): Vertical",
+  "STAT_RUN_SPEED_ROLLING": "Run Speed (Roll)",
+  "STAT_RUN_SPEED_DASHING": "Run Speed (Dash)",
   "STAT_RUN_SPEED_CHARGING": "Run Speed (Charging)",
   "STAT_RECOVERY_SQUID": "Ink Recovery Speed (Squid)",
   "STAT_RECOVERY_KID": "Ink Recovery Speed (Kid)",
@@ -163,7 +167,8 @@ var it_strings = {
   "DESC_DISTANCE": "{{value}} Distance Units",
   "DESC_QUICK_RESPAWN": "Respawn time when splatted without splatting others.",
   "UNIT_DISTANCE_UNITS_PER_FRAME": "Distance Units/frame",
-  "ROLL_SPEED": "Roll Speed for Rollers and Brushes is constant.",  
+  "ROLL_SPEED": "Roll Speed for Rollers is constant.",
+  "BRUSH_SPEED": "Brush Speed is affected by Main Power Up.",
   
   // The "unit" weapons fire in
   // Used in phrases like "200 shots to empty"
