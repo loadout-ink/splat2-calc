@@ -201,6 +201,45 @@ angular
           $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});        
         }
       }
+      if($scope.loadout.weapon.class.toLowerCase() == 'roller') {
+        var ink_saver_parameters = null;
+        if($scope.loadout.weapon.inkSaver == 'Low') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        }
+        if($scope.loadout.weapon.inkSaver == 'Middle') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
+        }
+        if($scope.loadout.weapon.inkSaver == "High") {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
+        }
+
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_parameters);
+        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
+
+        if(name == "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}") {
+          costPerShot = $scope.loadout.weapon.horizontalInkPerShot * reduction;
+          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_HORIZONTAL_FLICK | translate }}";
+          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          $scope.stats["Ink Consumption (Main)"].label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_HORIZ | translate}}"});
+        }
+        else if(name == "[+] {{ STAT_SAVER_MAIN_HORIZONTAL_FLICK | translate }}") {
+          costPerShot = $scope.loadout.weapon.verticalInkPerShot * reduction;
+          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_VERTICAL_FLICK | translate }}";
+          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          $scope.stats["Ink Consumption (Main)"].label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_VERT | translate}}"});
+        }
+        else if(name == "[+] {{ STAT_SAVER_MAIN_VERTICAL_FLICK | translate }}") {
+          costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
+          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
+          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          $scope.stats["Ink Consumption (Main)"].label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});
+        }
+
+        $scope.stats["Ink Consumption (Main)"].value = costPerShot;
+        $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
+      }
       switch(name) {
         case "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}":
           var abilityScore = $scope.loadout.calcAbilityScore('Bomb Defense Up DX');

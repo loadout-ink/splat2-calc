@@ -241,22 +241,29 @@ angular.module('splatApp').stats = function ($scope) {
       var p = this.calcP(abilityScore);       
       var s = this.calcS(ink_saver_parameters);
       var reduction = this.calcRes(ink_saver_parameters, p, s);
-      
-      var costPerShot = loadout.weapon.inkPerShot * reduction;
+      var costPerShot = null;
 
-      if(loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
-        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)})                
+      if(loadout.weapon.class == "Roller") {
+        costPerShot = loadout.weapon.inkPerShotRolling * reduction * 60;
+        this.name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
+        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        this.label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});
       }
       else {
-        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)})        
+        costPerShot = loadout.weapon.inkPerShot * reduction;
+        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: loadout.weapon.shotUnit});
+      }
+
+      if(loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
+        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
       }
       
-      this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: loadout.weapon.shotUnit})
       this.value = costPerShot;
       this.percentage = (100 - (reduction*100)).toFixed(1);
 
       if($scope.logging) {
-        var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
+        var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction};
         console.log(ink_saver_debug_log);
       }
 
@@ -270,7 +277,7 @@ angular.module('splatApp').stats = function ($scope) {
 
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
       var ink_saver_sub_parameters = null;
-      var sub = $scope.getSubByName(loadout.weapon.sub)
+      var sub = $scope.getSubByName(loadout.weapon.sub);
       
       if(sub.inkSaver == 'A') {
         ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["A"];
