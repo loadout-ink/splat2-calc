@@ -48,8 +48,17 @@ angular.module('splatApp').shoes = function($scope) {
     "image": "../common/assets/img/gear/shoes/Shs_SLO001.png",
     "name": "Banana Basics",
     "localizedName": {
-      "ja_JP": "キャンバス バナナ",
-      "en_US": "Banana Basics"
+     "ja_JP": "キャンバス バナナ",
+     "en_US": "Banana Basics",
+	 "en_GB": "Banana Basics",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis banane",
+	 "fr_CA": "Espadrilles banane",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
      },
     "main": "Bomb Defense Up DX",
     "brand": "Krak-On",
@@ -62,7 +71,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "LE Lo-Tops",
     "localizedName": {
      "ja_JP": "グリッチョ グリーン 限定版",
-     "en_US": "LE Lo-Tops"
+     "en_US": "LE Lo-Tops",
+	 "en_GB": "LE Lo-Tops",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis édition limitée",
+	 "fr_CA": "Espadrilles édition limitée",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Zekko",
@@ -97,7 +115,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Orange Lo-Tops",
     "localizedName": {
      "ja_JP": "グリッチョ オレンジ",
-     "en_US": "Orange Lo-Tops"
+     "en_US": "Orange Lo-Tops",
+	 "en_GB": "Orange Lo-Tops",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis orange",
+	 "fr_CA": "Espadrilles orange",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Zekko",
@@ -154,7 +181,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Yellow Seahorses",
     "localizedName": {
      "ja_JP": "シーホース イエロー",
-     "en_US": "Yellow Seahorses"
+     "en_US": "Yellow Seahorses",
+	 "en_GB": "Yellow Seahorses",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Hippo jaunes",
+	 "fr_CA": "Hippo jaunes",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Bomb Defense Up DX",
     "brand": "Zink",
@@ -365,7 +401,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Suede Gray Lace-Ups",
     "localizedName": {
      "ja_JP": "ノーリーチャッカ グレー",
-     "en_US": "Suede Gray Lace-Ups"
+     "en_US": "Suede Gray Lace-Ups",
+	 "en_GB": "Suede Gray Lace-Ups",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Baskets suédine grises",
+	 "fr_CA": "Baskets suédine grises",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "Zekko",
@@ -378,7 +423,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Suede Nation Lace-Ups",
     "localizedName": {
      "ja_JP": "ノーリーチャッカ トライブ",
-     "en_US": "Suede Nation Lace-Ups"
+     "en_US": "Suede Nation Lace-Ups",
+	 "en_GB": "Suede Nation Lace-Ups",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Baskets suédine multicolores",
+	 "fr_CA": "Baskets suédine multicolores",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Zekko",
@@ -391,7 +445,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Suede Marine Lace-Ups",
     "localizedName": {
      "ja_JP": "ノーリーチャッカ ロビンズ",
-     "en_US": "Suede Marine Lace-Ups"
+     "en_US": "Suede Marine Lace-Ups",
+	 "en_GB": "Suede Marine Lace-Ups",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Baskets suédine turquoise",
+	 "fr_CA": "Baskets suédine turquoise",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Zekko",
@@ -404,7 +467,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Toni Kensa Soccer Shoes",
     "localizedName": {
      "ja_JP": "スパイカ タタキベッチュー",
-     "en_US": "Toni Kensa Soccer Shoes"
+     "en_US": "Toni Kensa Soccer Shoes",
+	 "en_GB": "Toni Kensa Soccer Shoes",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Chaussures à crampons K",
+	 "fr_CA": "Chaussures à crampons K",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Toni Kensa",
@@ -461,7 +533,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Cream Hi-Tops",
     "localizedName": {
      "ja_JP": "キャンバスHi マッシュルーム",
-     "en_US": "Cream Hi-Tops"
+     "en_US": "Cream Hi-Tops",
+	 "en_GB": "Cream Hi-Tops",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis montantes crème",
+	 "fr_CA": "Espadrilles montantes crème",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Stealth Jump",
     "brand": "Krak-On",
@@ -606,7 +687,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Chocolate Dakroniks",
     "localizedName": {
      "ja_JP": "デカロニックチョコレート",
-     "en_US": "Chocolate Dakroniks"
+     "en_US": "Chocolate Dakroniks",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Baskets montantes choco",
+	 "fr_CA": "Baskets montantes choco",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Zink",
@@ -839,7 +929,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Milky Enperrials",
     "localizedName": {
      "ja_JP": "エンペリアルカイザー",
-     "en_US": "Milky Enperrials"
+     "en_US": "Milky Enperrials",
+	 "en_GB": "Milky Enperrials",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottillons impériaux DUX",
+	 "fr_CA": "Bottillons impériaux DUX",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Enperry",
@@ -918,7 +1017,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Red & White Squidkid V",
     "localizedName": {
      "ja_JP": "エギング5 シロアカ",
-     "en_US": "Red & White Squidkid V"
+     "en_US": "Red & White Squidkid V",
+	 "en_GB": "Red & White Squidkid V",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Egings V rouges et blanches",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "Enperry",
@@ -931,7 +1039,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Honey & Orange Squidkid V",
     "localizedName": {
      "ja_JP": "エギング5 ハニオレ",
-     "en_US": "Honey & Orange Squidkid V"
+     "en_US": "Honey & Orange Squidkid V",
+	 "en_GB": "Honey & Orange Squidkid V",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Egings V miel et orange",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Enperry",
@@ -1054,7 +1171,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Blue Iromaki 750s",
     "localizedName": {
      "ja_JP": "イロマキ750 ブルー",
-     "en_US": "Blue Iromaki 750s"
+     "en_US": "Blue Iromaki 750s",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis high-tech bleues",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Tentatek",
@@ -1067,7 +1193,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Orange Iromaki 750s",
     "localizedName": {
      "ja_JP": "イロマキ750 オレンジ",
-     "en_US": "Orange Iromaki 750s"
+     "en_US": "Orange Iromaki 750s",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis high-tech orange",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Drop Roller",
     "brand": "Tentatek",
@@ -1080,7 +1215,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Red Power Stripes",
     "localizedName": {
      "ja_JP": "パワーストリップ アカアシ",
-     "en_US": "Red Power Stripes"
+     "en_US": "Red Power Stripes",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Mégamax rouges",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "Takoroka",
@@ -1093,7 +1237,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Blue Power Stripes",
     "localizedName": {
      "ja_JP": "パワーストリップ アオアシ",
-     "en_US": "Blue Power Stripes"
+     "en_US": "Blue Power Stripes",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Mégamax bleues",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Respawn",
     "brand": "Takoroka",
@@ -1106,7 +1259,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Toni Kensa Black Hi-Tops",
     "localizedName": {
      "ja_JP": "ストリップ タタキベッチュー",
-     "en_US": "Toni Kensa Black Hi-Tops"
+     "en_US": "Toni Kensa Black Hi-Tops",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Mégamax noires K	",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Sub Power Up",
     "brand": "Toni Kensa",
@@ -1141,7 +1303,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Black & Blue Squidkid V",
     "localizedName": {
      "ja_JP": "エギング5 クロアオ",
-     "en_US": "Black & Blue Squidkid V"
+     "en_US": "Black & Blue Squidkid V",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Egings V noires et bleues",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Saver",
     "brand": "Enperry",
@@ -1154,7 +1325,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Orca Passion Hi-Tops",
     "localizedName": {
      "ja_JP": "オルカHiパッション",
-     "en_US": "Orca Passion Hi-Tops"
+     "en_US": "Orca Passion Hi-Tops",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Orques passion",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Super Jump",
     "brand": "Takoroka",
@@ -1167,7 +1347,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Truffle Canvas Hi-Tops",
     "localizedName": {
      "ja_JP": "キャンバスHi トリュフ",
-     "en_US": "Truffle Canvas Hi-Tops"
+     "en_US": "Truffle Canvas Hi-Tops",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tennis montantes truffe",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Krak-On",
@@ -1180,7 +1369,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Online Squidkid V",
     "localizedName": {
      "ja_JP": "エギング5 プレミアム",
-     "en_US": "Online Squidkid V"
+     "en_US": "Online Squidkid V",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Egings V Premium",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Stealth Jump",
     "brand": "Enperry",
@@ -1303,7 +1501,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Blue Sea Slugs",
     "localizedName": {
      "ja_JP": "ウミウシブルー",
-     "en_US": "Blue Sea Slugs"
+     "en_US": "Blue Sea Slugs",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Anguilles bleues",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "Tentatek",
@@ -1514,7 +1721,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "N-Pacer CaO",
     "localizedName": {
      "ja_JP": "エンペーサーCaO",
-     "en_US": "N-Pacer CaO"
+     "en_US": "N-Pacer CaO",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Baskets DUX Calcium",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Object Shredder",
     "brand": "Enperry",
@@ -1593,7 +1809,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Athletic Arrows",
     "localizedName": {
      "ja_JP": "アスレチックアローズ",
-     "en_US": "Athletic Arrows"
+     "en_US": "Athletic Arrows",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Flèches athlétiques",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Object Shredder",
     "brand": "Takoroka",
@@ -1804,7 +2029,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Yellow FishFry Sandals",
     "localizedName": {
      "ja_JP": "ヤキフグシャワサン キ",
-     "en_US": "Yellow FishFry Sandals"
+     "en_US": "Yellow FishFry Sandals",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Claquettes jaunes Friture",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Main Power Up",
     "brand": "Firefin",
@@ -1817,7 +2051,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Musselforge Flip-Flops",
     "localizedName": {
      "ja_JP": "フジツボペタサン",
-     "en_US": "Musselforge Flip-Flops"
+     "en_US": "Musselforge Flip-Flops",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Tongs coquillages",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Inkline",
@@ -1852,7 +2095,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Custom Trail Boots",
     "localizedName": {
      "ja_JP": "トレッキングカスタム",
-     "en_US": "Custom Trail Boots"
+     "en_US": "Custom Trail Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Chaussures rando exclusives",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Inkline",
@@ -1931,7 +2183,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Red Work Boots",
     "localizedName": {
      "ja_JP": "ヌバックブーツ レッド",
-     "en_US": "Red Work Boots"
+     "en_US": "Red Work Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottes sécurité rouges",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Super Jump",
     "brand": "Rockenberg",
@@ -2054,7 +2315,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Punk Yellows",
     "localizedName": {
      "ja_JP": "ロッキンイエロー",
-     "en_US": "Punk Yellows"
+     "en_US": "Punk Yellows",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottines punk jaunes",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Saver",
     "brand": "Rockenberg",
@@ -2111,7 +2381,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Icy Down Boots",
     "localizedName": {
      "ja_JP": "アイスダウンブーツ",
-     "en_US": "Icy Down Boots"
+     "en_US": "Icy Down Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Après-skis glacier",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Stealth Jump",
     "brand": "Tentatek",
@@ -2212,7 +2491,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Annaki Arachno Boots",
     "localizedName": {
      "ja_JP": "アナアキスパイダー6ホール",
-     "en_US": "Annaki Arachno Boots"
+     "en_US": "Annaki Arachno Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottines Arachno Aroz",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Annaki",
@@ -2225,7 +2513,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "New-Leaf Leather Boots",
     "localizedName": {
      "ja_JP": "シンリョクレザーブーツ",
-     "en_US": "New-Leaf Leather Boots"
+     "en_US": "New-Leaf Leather Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottines printanières",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Drop Roller",
     "brand": "Rockenberg",
@@ -2238,7 +2535,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Tea-Green Hunting Boots",
     "localizedName": {
      "ja_JP": "チャバハンティングブーツ",
-     "en_US": "Tea-Green Hunting Boots"
+     "en_US": "Tea-Green Hunting Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottes de chasse kaki",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Respawn",
     "brand": "Splash Mob",
@@ -2559,7 +2865,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Annaki Tigers",
     "localizedName": {
      "ja_JP": "アナアキラバー フェイク",
-     "en_US": "Annaki Tigers"
+     "en_US": "Annaki Tigers",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Compensées Tigre Aroz",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Annaki",
@@ -2572,7 +2887,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Inky Kid Clams",
     "localizedName": {
      "ja_JP": "イカボウズジェットブラック",
-     "en_US": "Inky Kid Clams"
+     "en_US": "Inky Kid Clams",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Ch. double boucle noires",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "Rockenberg",
@@ -2585,7 +2909,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Sennyu Inksoles",
     "localizedName": {
      "ja_JP": "センニューチップ スミソール",
-     "en_US": "Sennyu Inksoles"
+     "en_US": "Sennyu Inksoles",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Richelieu d'infiltration",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Stealth Jump",
     "brand": "Rockenberg",
@@ -2620,7 +2953,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Non-slip Senseis",
     "localizedName": {
      "ja_JP": "ノンスリップタクミ",
-     "en_US": "Non-slip Senseis"
+     "en_US": "Non-slip Senseis",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Souliers antidérapants",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2633,7 +2975,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Octoleet Boots",
     "localizedName": {
      "ja_JP": "ゾネスティックブーツ",
-     "en_US": "Octoleet Boots"
+     "en_US": "Octoleet Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Rangers octaliennes",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2646,7 +2997,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Flipper Floppers",
     "localizedName": {
      "ja_JP": "ゲソバタアシスト",
-     "en_US": "Flipper Floppers"
+     "en_US": "Flipper Floppers",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Palmes de plongée",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2659,7 +3019,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Wooden Sandals",
     "localizedName": {
      "ja_JP": "バンカラコロン",
-     "en_US": "Wooden Sandals"
+     "en_US": "Wooden Sandals",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Sandales en bois",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2672,7 +3041,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Mecha Legs - LBS",
     "localizedName": {
      "ja_JP": "メカレッグ・IBS",
-     "en_US": "Mecha Legs - LBS"
+     "en_US": "Mecha Legs - LBS",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Stealth Jump",
     "brand": "SquidForce",
@@ -2685,7 +3063,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Pearl-Scout Lace-Ups",
     "localizedName": {
      "ja_JP": "ノーリーチャッカ ヒメイト",
-     "en_US": "Pearl-Scout Lace-Ups"
+     "en_US": "Pearl-Scout Lace-Ups",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Super Jump",
     "brand": "Zekko",
@@ -2698,7 +3085,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Pearlescent Squidkid IV",
     "localizedName": {
      "ja_JP": "エギング4 ヒメキン",
-     "en_US": "Pearlescent Squidkid IV"
+     "en_US": "Pearlescent Squidkid IV",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Drop Roller",
     "brand": "Enperry",
@@ -2711,7 +3107,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Pearl Punk Crowns",
     "localizedName": {
      "ja_JP": "ロッキンクラウン",
-     "en_US": "Pearl Punk Crowns"
+     "en_US": "Pearl Punk Crowns",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
@@ -2724,7 +3129,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "New-Day Arrows",
     "localizedName": {
      "ja_JP": "アカツキアローズ",
-     "en_US": "New-Day Arrows"
+     "en_US": "New-Day Arrows",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "Takoroka",
@@ -2737,7 +3151,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Marination Lace-Ups",
     "localizedName": {
      "ja_JP": "ノーリーチャッカ イイダチ",
-     "en_US": "Marination Lace-Ups"
+     "en_US": "Marination Lace-Ups",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Zekko",
@@ -2750,7 +3173,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Rina Squidkid IV",
     "localizedName": {
      "ja_JP": "エギング4 イイマリ",
-     "en_US": "Rina Squidkid IV"
+     "en_US": "Rina Squidkid IV",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Bomb Defense Up DX",
     "brand": "Enperry",
@@ -2763,7 +3195,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Trooper Power Stripes",
     "localizedName": {
      "ja_JP": "パワーストリップ トルーパー",
-     "en_US": "Trooper Power Stripes"
+     "en_US": "Trooper Power Stripes",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Sub Power Up",
     "brand": "Takoroka",
@@ -2776,7 +3217,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Midnight Slip-Ons",
     "localizedName": {
      "ja_JP": "ミッドナイトスリッポン",
-     "en_US": "Midnight Slip-Ons"
+     "en_US": "Midnight Slip-Ons",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Object Shredder",
     "brand": "Krak-On",
@@ -2921,7 +3371,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Pearlescent Kicks",
     "localizedName": {
      "ja_JP": "ヒメイトスニーカー",
-     "en_US": "Pearlescent Kicks"
+     "en_US": "Pearlescent Kicks",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "amiibo",
@@ -2934,7 +3393,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Marinated Slip-Ons",
     "localizedName": {
      "ja_JP": "イイダチスリッポン",
-     "en_US": "Marinated Slip-Ons"
+     "en_US": "Marinated Slip-Ons",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "amiibo",
@@ -2947,7 +3415,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Enchanted Boots",
     "localizedName": {
      "ja_JP": "エンチャントブーツ",
-     "en_US": "Enchanted Boots"
+     "en_US": "Enchanted Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "amiibo",
@@ -2960,7 +3437,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Steel Greaves",
     "localizedName": {
      "ja_JP": "タコティカルなすねあて",
-     "en_US": "Steel Greaves"
+     "en_US": "Steel Greaves",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Object Shredder",
     "brand": "amiibo",
@@ -2973,7 +3459,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Fresh Fish Feet",
     "localizedName": {
      "ja_JP": "ひれおくんのあし",
-     "en_US": "Fresh Fish Feet"
+     "en_US": "Fresh Fish Feet",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Null",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Quick Respawn",
     "brand": "amiibo",
@@ -3052,7 +3547,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Neo Octoling Boots",
     "localizedName": {
      "ja_JP": "タコゾネスブーツネオ",
-     "en_US": "Neo Octoling Boots"
+     "en_US": "Neo Octoling Boots",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Rangers Octaling Néo",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Object Shredder",
     "brand": "Cuttlegear",
@@ -3065,7 +3569,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Null Boots Replica",
     "localizedName": {
      "ja_JP": "ネルブーツ レプリカ",
-     "en_US": "Null Boots Replica"
+     "en_US": "Null Boots Replica",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Bottes Patapoulpe (répliques)",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Drop Roller",
     "brand": "Cuttlegear",
@@ -3078,7 +3591,16 @@ angular.module('splatApp').shoes = function($scope) {
     "name": "Old-Timey Shoes",
     "localizedName": {
      "ja_JP": "グランパなクツ",
-     "en_US": "Old-Timey Shoes"
+     "en_US": "Old-Timey Shoes",
+	 "en_GB": "Null",
+	 "es_ES": "Null",
+	 "es_MX": "Null",
+	 "fr_FR": "Mocassins de papi",
+	 "fr_CA": "Null",
+	 "de_DE": "Null",
+	 "it_IT": "Null",
+	 "nl_NL": "Null",
+	 "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "Cuttlegear",

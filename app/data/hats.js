@@ -115,7 +115,16 @@ $scope.hats = [
     "name": "Squid-Stitch Cap",
     "localizedName": {
       "ja_JP": "チドリキャップ",
-      "en_US": "Squid-Stitch Cap"
+      "en_US": "Squid-Stitch Cap",
+	  "en_GB": "Null",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Casquette pied-de-poulpe",
+      "fr_CA": "Null",
+      "de_DE": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null",
+      "it_IT": "Null"
     },
     "main": "Opening Gambit",
     "brand": "Skalop",
@@ -194,7 +203,16 @@ $scope.hats = [
     "name": "Zekko Mesh",
     "localizedName": {
       "ja_JP": "エゾッコメッシュ",
-      "en_US": "Zekko Mesh"
+      "en_US": "Zekko Mesh",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette filet Ezko",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Quick Super Jump",
     "brand": "Zekko",
@@ -317,7 +335,16 @@ $scope.hats = [
     "name": "Long-Billed Cap",
     "localizedName": {
       "ja_JP": "ロングビルキャップ",
-      "en_US": "Long-Billed Cap"
+      "en_US": "Long-Billed Cap",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette à longue visière",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "Krak-On",
@@ -440,7 +467,16 @@ $scope.hats = [
     "name": "Blowfish Newsie",
     "localizedName": {
       "ja_JP": "フグハンチング",
-      "en_US": "Blowfish Newsie"
+      "en_US": "Blowfish Newsie",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette plate Friture",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Quick Super Jump",
     "brand": "Firefin",
@@ -453,7 +489,16 @@ $scope.hats = [
     "name": "Do-Rag, Cap, & Glasses",
     "localizedName": {
       "ja_JP": "ドゥーラグキャップガサネ",
-      "en_US": "Do-Rag, Cap, & Glasses"
+      "en_US": "Do-Rag, Cap, & Glasses",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Trio estival",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Main Power Up",
     "brand": "Skalop",
@@ -466,7 +511,16 @@ $scope.hats = [
     "name": "Pilot Hat",
     "localizedName": {
       "ja_JP": "フライトぼう",
-      "en_US": "Pilot Hat"
+      "en_US": "Pilot Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette cache-oreilles",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Splash Mob",
@@ -589,7 +643,16 @@ $scope.hats = [
     "name": "Squid Nordic",
     "localizedName": {
       "ja_JP": "イカノルディック",
-      "en_US": "Squid Nordic"
+      "en_US": "Squid Nordic",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bonnet sports d'hiver",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Comeback",
     "brand": "Skalop",
@@ -602,7 +665,16 @@ $scope.hats = [
     "name": "Sennyu Bon Bon Beanie",
     "localizedName": {
       "ja_JP": "センニューボンボン",
-      "en_US": "Sennyu Bon Bon Beanie"
+      "en_US": "Sennyu Bon Bon Beanie",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bonnet d'infiltration",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Splash Mob",
@@ -835,7 +907,16 @@ $scope.hats = [
     "name": "White Arrowbands",
     "localizedName": {
       "ja_JP": "アローバンド ホワイト",
-      "en_US": "White Arrowbands"
+      "en_US": "White Arrowbands",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes blanches à élastique",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Zekko",
@@ -914,7 +995,16 @@ $scope.hats = [
     "name": "Octoglasses",
     "localizedName": {
       "ja_JP": "オクタグラス",
-      "en_US": "Octoglasses"
+      "en_US": "Octoglasses",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes octogonales",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Last-Ditch Effort",
     "brand": "Firefin",
@@ -971,7 +1061,16 @@ $scope.hats = [
     "name": "Zekko Cap",
     "localizedName": {
       "ja_JP": "エゾッコフリッパー",
-      "en_US": "Zekko Cap"
+      "en_US": "Zekko Cap",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette et lunettes Ezko",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Opening Gambit",
     "brand": "Zekko",
@@ -984,7 +1083,16 @@ $scope.hats = [
     "name": "SV925 Circle Shades",
     "localizedName": {
       "ja_JP": "マルサンSV925",
-      "en_US": "SV925 Circle Shades"
+      "en_US": "SV925 Circle Shades",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes de soleil SV925",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
@@ -997,7 +1105,16 @@ $scope.hats = [
     "name": "Annaki Beret & Glasses",
     "localizedName": {
       "ja_JP": "アナアキバスクベレー",
-      "en_US": "Annaki Beret & Glasses"
+      "en_US": "Annaki Beret & Glasses",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Béret et lunettes Aroz",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Annaki",
@@ -1010,7 +1127,16 @@ $scope.hats = [
     "name": "Swim Goggles",
     "localizedName": {
       "ja_JP": "スイミングモーグル",
-      "en_US": "Swim Goggles"
+      "en_US": "Swim Goggles",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes de natation",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Last-Ditch Effort",
     "brand": "Zink",
@@ -1023,7 +1149,16 @@ $scope.hats = [
     "name": "Ink-Guard Goggles",
     "localizedName": {
       "ja_JP": "スミガードゴーグル",
-      "en_US": "Ink-Guard Goggles"
+      "en_US": "Ink-Guard Goggles",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque anti-adhérent",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "Toni Kensa",
@@ -1036,7 +1171,16 @@ $scope.hats = [
     "name": "Toni Kensa Goggles",
     "localizedName": {
       "ja_JP": "モーグル タタキベッチュー",
-      "en_US": "Toni Kensa Goggles"
+      "en_US": "Toni Kensa Goggles",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes de natation K",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Comeback",
     "brand": "Toni Kensa",
@@ -1049,7 +1193,16 @@ $scope.hats = [
     "name": "Sennyu Goggles",
     "localizedName": {
       "ja_JP": "センニューゴーグル",
-      "en_US": "Sennyu Goggles"
+      "en_US": "Sennyu Goggles",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes d'infiltration",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Forge",
@@ -1062,7 +1215,16 @@ $scope.hats = [
     "name": "Sennyu Specs",
     "localizedName": {
       "ja_JP": "センニュークロブチ",
-      "en_US": "Sennyu Specs"
+      "en_US": "Sennyu Specs",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Monture d'infiltration",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Splash Mob",
@@ -1339,7 +1501,16 @@ $scope.hats = [
     "name": "Seashell Bamboo Hat",
     "localizedName": {
       "ja_JP": "カイガラスゲ",
-      "en_US": "Seashell Bamboo Hat"
+      "en_US": "Seashell Bamboo Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau zen coquilles",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Quick Respawn",
     "brand": "Inkline",
@@ -1352,7 +1523,16 @@ $scope.hats = [
     "name": "Hothouse Hat",
     "localizedName": {
       "ja_JP": "ホタプラントハット",
-      "en_US": "Hothouse Hat"
+      "en_US": "Hothouse Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau tulipe feuillage",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Skalop",
@@ -1365,7 +1545,16 @@ $scope.hats = [
     "name": "Mountie Hat",
     "localizedName": {
       "ja_JP": "ヤマハット",
-      "en_US": "Mountie Hat"
+      "en_US": "Mountie Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau quatre bosses",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "Inkline",
@@ -1510,7 +1699,16 @@ $scope.hats = [
     "name": "Sennyu Headphones",
     "localizedName": {
       "ja_JP": "センニューヘッドホン",
-      "en_US": "Sennyu Headphones"
+      "en_US": "Sennyu Headphones",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque d'infiltration",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "Forge",
@@ -1523,7 +1721,16 @@ $scope.hats = [
     "name": "Golf Visor",
     "localizedName": {
       "ja_JP": "キャディ サンバイザー",
-      "en_US": "Golf Visor"
+      "en_US": "Golf Visor",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Visière de golf",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "Zink",
@@ -1778,7 +1985,16 @@ $scope.hats = [
     "name": "Octo Tackle Helmet Deco",
     "localizedName": {
       "ja_JP": "オクトメットプライズデコ",
-      "en_US": "Octo Tackle Helmet Deco"
+      "en_US": "Octo Tackle Helmet Deco",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque de football Octa",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Bomb Defense Up DX",
     "brand": "Forge",
@@ -1813,7 +2029,16 @@ $scope.hats = [
     "name": "Deca Tackle Visor Helmet",
     "localizedName": {
       "ja_JP": "デカメットアイシールド",
-      "en_US": "Deca Tackle Visor Helmet"
+      "en_US": "Deca Tackle Visor Helmet",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque de football à visière",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Sub Power Up",
     "brand": "Forge",
@@ -1826,7 +2051,16 @@ $scope.hats = [
     "name": "Gas Mask",
     "localizedName": {
       "ja_JP": "タコマスク",
-      "en_US": "Gas Mask"
+      "en_US": "Gas Mask",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque à gaz",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Tenacity",
     "brand": "Forge",
@@ -1949,7 +2183,16 @@ $scope.hats = [
     "name": "Octoking Facemask",
     "localizedName": {
       "ja_JP": "キングタコスターマスク",
-      "en_US": "Octoking Facemask"
+      "en_US": "Octoking Facemask",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque OCTADUX",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Tenacity",
     "brand": "Enperry",
@@ -2072,7 +2315,16 @@ $scope.hats = [
     "name": "Digi-Camo Forge Mask",
     "localizedName": {
       "ja_JP": "フォーリマスク デジカモ",
-      "en_US": "Digi-Camo Forge Mask"
+      "en_US": "Digi-Camo Forge Mask",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque camouflage Focus",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "Forge",
@@ -2085,7 +2337,16 @@ $scope.hats = [
     "name": "Koshien Bandana",
     "localizedName": {
       "ja_JP": "こうしえんバンダナ",
-      "en_US": "Koshien Bandana"
+      "en_US": "Koshien Bandana",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bandana Koshien",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Swim Speed Up",
     "brand": "SquidForce",
@@ -2164,7 +2425,16 @@ $scope.hats = [
     "name": "Jogging Headband",
     "localizedName": {
       "ja_JP": "ランニングバンド",
-      "en_US": "Jogging Headband"
+      "en_US": "Jogging Headband",
+	  "en_GB": "Jogging Headband",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bandeau de jogging",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "Zekko",
@@ -2221,7 +2491,16 @@ $scope.hats = [
     "name": "Black FishFry Bandana",
     "localizedName": {
       "ja_JP": "クロヤキフグバンダナ",
-      "en_US": "Black FishFry Bandana"
+      "en_US": "Black FishFry Bandana",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bandana noir Friture",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Bomb Defense Up DX",
     "brand": "Firefin",
@@ -2322,7 +2601,16 @@ $scope.hats = [
     "name": "Beekeeper Hat",
     "localizedName": {
       "ja_JP": "ガーディアンアーミーハット",
-      "en_US": "Beekeeper Hat"
+      "en_US": "Beekeeper Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau d'apiculteur",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2335,7 +2623,16 @@ $scope.hats = [
     "name": "Octoleet Goggles",
     "localizedName": {
       "ja_JP": "ゾネスティックスコープ",
-      "en_US": "Octoleet Goggles"
+      "en_US": "Octoleet Goggles",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes octaliennes",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2348,7 +2645,16 @@ $scope.hats = [
     "name": "Cap of Legend",
     "localizedName": {
       "ja_JP": "レジェンドのぼうし",
-      "en_US": "Cap of Legend"
+      "en_US": "Cap of Legend",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette de légende",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2383,7 +2689,16 @@ $scope.hats = [
     "name": "Worker's Head Towel",
     "localizedName": {
       "ja_JP": "アセストップソシナ",
-      "en_US": "Worker's Head Towel"
+      "en_US": "Worker's Head Towel",
+	  "en_GB": "Worker's Head Towel",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bandana d'ouvrier",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2396,7 +2711,16 @@ $scope.hats = [
     "name": "Sailor Cap",
     "localizedName": {
       "ja_JP": "マリリンハットウィズピンズ",
-      "en_US": "Sailor Cap"
+      "en_US": "Sailor Cap",
+	  "en_GB": "Sailor Cap",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau marin",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": null,
     "brand": "Grizzco",
@@ -2410,7 +2734,16 @@ $scope.hats = [
     "name": "Mecha Head - HTR",
     "localizedName": {
       "ja_JP": "メカヘッド・HTR",
-      "en_US": "Mecha Head - HTR"
+      "en_US": "Mecha Head - HTR",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Null",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Main Power Up",
     "brand": "SquidForce",
@@ -2424,7 +2757,16 @@ $scope.hats = [
     "name": "Kyonshi Hat",
     "localizedName": {
       "ja_JP": "キョンキョンぼう",
-      "en_US": "Kyonshi Hat"
+      "en_US": "Kyonshi Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau kyonshi",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Run Speed Up",
     "brand": "SquidForce",
@@ -2437,7 +2779,16 @@ $scope.hats = [
     "name": "Li'l Devil Horns",
     "localizedName": {
       "ja_JP": "ウミウシカチューシャ",
-      "en_US": "Li'l Devil Horns"
+      "en_US": "Li'l Devil Horns",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Cornes de diablotin",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Sub)",
     "brand": "SquidForce",
@@ -2450,7 +2801,16 @@ $scope.hats = [
     "name": "Hockey Mask",
     "localizedName": {
       "ja_JP": "ホッケかめん",
-      "en_US": "Hockey Mask"
+      "en_US": "Hockey Mask",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque de hockey",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Recovery Up",
     "brand": "SquidForce",
@@ -2463,7 +2823,16 @@ $scope.hats = [
     "name": "Anglerfish Mask",
     "localizedName": {
       "ja_JP": "アンコウラバーマスク",
-      "en_US": "Anglerfish Mask"
+      "en_US": "Anglerfish Mask",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Masque de baudroie",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "SquidForce",
@@ -2476,7 +2845,16 @@ $scope.hats = [
     "name": "Festive Party Cone",
     "localizedName": {
       "ja_JP": "パーティーコーンデコ",
-      "en_US": "Festive Party Cone"
+      "en_US": "Festive Party Cone",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau pointu festif",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Main Power Up",
     "brand": "SquidForce",
@@ -2489,7 +2867,16 @@ $scope.hats = [
     "name": "New Year's Glasses DX",
     "localizedName": {
       "ja_JP": "ニューイヤーグラスDX",
-      "en_US": "New Year's Glasses DX"
+      "en_US": "New Year's Glasses DX",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes du nouvel an DX",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "SquidForce",
@@ -2502,7 +2889,16 @@ $scope.hats = [
     "name": "Twisty Headband",
     "localizedName": {
       "ja_JP": "ねじりゴージャス",
-      "en_US": "Twisty Headband"
+      "en_US": "Twisty Headband",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Bandeau torsadé",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "SquidForce",
@@ -2515,7 +2911,16 @@ $scope.hats = [
     "name": "Eel-Cake Hat",
     "localizedName": {
       "ja_JP": "ハッピーチンアナゴハット",
-      "en_US": "Eel-Cake Hat"
+      "en_US": "Eel-Cake Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau festif anguilles",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Quick Respawn",
     "brand": "SquidForce",
@@ -2528,7 +2933,16 @@ $scope.hats = [
     "name": "Purple Novelty Visor",
     "localizedName": {
       "ja_JP": "ノベルティバイザールピナス",
-      "en_US": "Purple Novelty Visor"
+      "en_US": "Purple Novelty Visor",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Null",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Resistance Up",
     "brand": "Tentatek",
@@ -2541,7 +2955,16 @@ $scope.hats = [
     "name": "Green Novelty Visor",
     "localizedName": {
       "ja_JP": "ノベルティバイザーナズナ",
-      "en_US": "Green Novelty Visor"
+      "en_US": "Green Novelty Visor",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Null",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Saver",
     "brand": "Tentatek",
@@ -2554,7 +2977,16 @@ $scope.hats = [
     "name": "Orange Novelty Visor",
     "localizedName": {
       "ja_JP": "ノベルティバイザーポピー",
-      "en_US": "Orange Novelty Visor"
+      "en_US": "Orange Novelty Visor",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Null",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Last-Ditch Effort",
     "brand": "Tentatek",
@@ -2567,7 +2999,16 @@ $scope.hats = [
     "name": "Pink Novelty Visor",
     "localizedName": {
       "ja_JP": "ノベルティバイザーナデシコ",
-      "en_US": "Pink Novelty Visor"
+      "en_US": "Pink Novelty Visor",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Null",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Tenacity",
     "brand": "Tentatek",
@@ -2712,7 +3153,16 @@ $scope.hats = [
     "name": "Pearlescent Crown",
     "localizedName": {
       "ja_JP": "ヒメイトクラウン",
-      "en_US": "Pearlescent Crown"
+      "en_US": "Pearlescent Crown",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Couronne princière",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Bomb Defense Up DX",
     "brand": "amiibo",
@@ -2725,7 +3175,16 @@ $scope.hats = [
     "name": "Marinated Headphones",
     "localizedName": {
       "ja_JP": "イイダチヘッドホン",
-      "en_US": "Marinated Headphones"
+      "en_US": "Marinated Headphones",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque coralien",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Saver",
     "brand": "amiibo",
@@ -2738,7 +3197,16 @@ $scope.hats = [
     "name": "Enchanted Hat",
     "localizedName": {
       "ja_JP": "エンチャントハット",
-      "en_US": "Enchanted Hat"
+      "en_US": "Enchanted Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Chapeau magique",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Ink Saver (Main)",
     "brand": "amiibo",
@@ -2751,7 +3219,16 @@ $scope.hats = [
     "name": "Steel Helm",
     "localizedName": {
       "ja_JP": "タコティカルなヘルム",
-      "en_US": "Steel Helm"
+      "en_US": "Steel Helm",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque d'Octaguerrier",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "amiibo",
@@ -2764,7 +3241,16 @@ $scope.hats = [
     "name": "Fresh Fish Head",
     "localizedName": {
       "ja_JP": "ひれおくん",
-      "en_US": "Fresh Fish Head"
+      "en_US": "Fresh Fish Head",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Tête de mascotte",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Comeback",
     "brand": "amiibo",
@@ -2843,7 +3329,16 @@ $scope.hats = [
     "name": "Octoling Shades",
     "localizedName": {
       "ja_JP": "タコゾネスサングラス",
-      "en_US": "Octoling Shades"
+      "en_US": "Octoling Shades",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Lunettes Octaling Néo",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Last-Ditch Effort",
     "brand": "Cuttlegear",
@@ -2856,7 +3351,16 @@ $scope.hats = [
     "name": "Null Visor Replica",
     "localizedName": {
       "ja_JP": "ネルメット レプリカ",
-      "en_US": "Null Visor Replica"
+      "en_US": "Null Visor Replica",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casque Patapoulpe (réplique)",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Power Up",
     "brand": "Cuttlegear",
@@ -2869,7 +3373,16 @@ $scope.hats = [
     "name": "Old-Timey Hat",
     "localizedName": {
       "ja_JP": "グランパなアタマ",
-      "en_US": "Old-Timey Hat"
+      "en_US": "Old-Timey Hat",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette de papi",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Comeback",
     "brand": "Cuttlegear",
@@ -2882,7 +3395,16 @@ $scope.hats = [
     "name": "Conductor Cap",
     "localizedName": {
       "ja_JP": "メトロぼう",
-      "en_US": "Conductor Cap"
+      "en_US": "Conductor Cap",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Casquette de chef de bord",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Sub Power Up",
     "brand": "Cuttlegear",
@@ -2895,7 +3417,16 @@ $scope.hats = [
     "name": "Golden Toothpick",
     "localizedName": {
       "ja_JP": "金のつまようじ",
-      "en_US": "Golden Toothpick"
+      "en_US": "Golden Toothpick",
+	  "en_GB": "Null",
+	  "es_ES": "Null",
+	  "es_MX": "Null",
+	  "fr_FR": "Cure-dent d'or",
+	  "fr_CA": "Null",
+	  "de_DE": "Null",
+	  "it_IT": "Null",
+	  "nl_NL": "Null",
+	  "ru_RU": "Null"
     },
     "main": "Special Charge Up",
     "brand": "Cuttlegear",
