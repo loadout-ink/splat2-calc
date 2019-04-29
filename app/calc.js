@@ -38,6 +38,18 @@ angular
       return current_lang;
     }
 
+    $scope.saveToggledAbility = function(key, value) {
+      if (typeof(Storage) !== "undefined") {
+        sessionStorage[key] = value;
+      }
+    }
+
+    $scope.loadSavedToggledAbilities = function() {
+      if (typeof(Storage) !== "undefined") {
+        // TODO: For each stat, call functions that display toggled stats for.
+      }
+    }
+
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
     }
@@ -60,6 +72,7 @@ angular
 
      $scope.$watch('loadout', function() {
        $scope.refreshStats();
+       $scope.loadSavedToggledAbilities();
        history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
      },true);
 
@@ -105,7 +118,7 @@ angular
       randomized.head.equipped = randomFrom($scope.hats)
       randomized.clothes.equipped = randomFrom($scope.clothes)
       randomized.shoes.equipped = randomFrom($scope.shoes)
-      $scope.loadout = randomized
+      $scope.loadout = randomized;
     }
 
     $scope.resetLoadout = function() {
@@ -120,7 +133,7 @@ angular
     if(window.location.hash) {
       var newLoadout = $scope.loadCode(window.location.hash.replace('#',''))
       if(newLoadout) {
-        $scope.loadout = newLoadout
+        $scope.loadout = newLoadout;
       }
     }
 
@@ -364,6 +377,7 @@ angular
 
       switch(name) {
         case "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}":
+          $scope.saveToggledAbility("Tracking Time", "[+] {{ STAT_TRACKING_TIME_INK_MINE | translate }}");
           var abilityScore = $scope.loadout.calcAbilityScore('Bomb Defense Up DX');
           var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Ink Mine"];
           var p = this.calcP(abilityScore);      
@@ -382,6 +396,7 @@ angular
           break;
           
         case "[+] {{ STAT_TRACKING_TIME_INK_MINE | translate }}":
+          $scope.saveToggledAbility("Tracking Time", "[+] {{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}");
           var abilityScore = $scope.loadout.calcAbilityScore('Bomb Defense Up DX');
           var tracking_time_parameters = $scope.parameters["Cold Blooded"]["Point Sensor"];
           var p = this.calcP(abilityScore);      
@@ -657,518 +672,671 @@ angular
 
       "Main Power Up": {
         ".52 Gal": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            6.0,
-            8.0,
-            12.0
-          ]
+          "DegRandom": {
+            "desc": "Ground Shot Randomization",
+            "params": [
+              4.8,
+              5.2,
+              6.0
+            ]
+          },
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              6.0,
+              8.0,
+              12.0
+            ],
+          }
         },
         ".96 Gal": {
-          "desc": "Damage Up",
-          "min_params": [
-            38.75,
-            34.875,
-            31.0
-          ],
-          "max_params": [
-            77.5,
-            69.75,
-            62.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.25,
+              1.125,
+              1.0
+            ]
+          }
         },
         "Aerospray": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.167,
-            1.108,
-            1.0
-          ]
+          "SplashPaintRadius": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              14.0,
+              13.3,
+              12.0
+            ]
+          }
         },
         "Ballpoint Splatling": {
-          "desc": "Damage Up",
-          "min_params": [
-            16.5,
-            15.75,
-            15.0
-          ],
-          "max_params": [
-            33.0,
-            31.5,
-            30.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "normal_params": [
+              1.1,
+              1.05,
+              1.0
+            ],
+            "repeat_params": [
+              1.1,
+              1.05,
+              1.0
+            ]
+          }
         },
         "Bamboozler 14": {
-          "desc": "Base Damage Up",
-          "min_params": [
-            36.0,
-            33.0,
-            30.0
-          ],
-          "max_params": [
-            102.0,
-            93.5,
-            85.0
-          ]
+          "MinMaxChargeDamageRate": {
+            "desc": "Partial Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          },
+          "FullChargeDamageRate": {
+            "desc": "Full Charge Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]            
+          }
         },
         "Blaster": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            6.0,
-            8.0,
-            10.0
-          ]
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              6.0,
+              8.0,
+              10.0
+            ]
+          }
         },
         "Bloblobber": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.2,
-            1.1,
-            1.0
-          ]
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Carbon Roller": {
-          "desc": "Vertical Flick Damage Up",
-          "min_params": [
-            46.0,
-            43.0,
-            40.0
-          ],
-          "max_params": [
-            138,
-            129.0,
-            120.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "rolling": [
+              1.15,
+              1.075,
+              1.0
+            ],
+            "standing": [
+              1.15,
+              1.075,
+              1.0
+            ],
+            "jumping": [
+              1.15,
+              1.075,
+              1.0
+            ]
+          }
         },
         "Clash Blaster": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            4.0,
-            6.0,
-            8.0
-          ]
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              4.0,
+              6.0,
+              8.0
+            ]
+          }
         },
         "Dapple Dualies": {
-          "desc": "Damage Up",
-          "min_params": [
-            21.6,
-            19.8,
-            18.0
-          ],
-          "max_params": [
-            43.2,
-            39.6,
-            36.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Dualie Squelchers": {
-          "desc": "Damage Up",
-          "min_params": [
-            16.8,
-            15.4,
-            14.0
-          ],
-          "max_params": [
-            33.6,
-            30.8,
-            28.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Dynamo Roller": {
-          "desc": "Vertical Flick Damage Up",
-          "min_params": [
-            46.0,
-            43.0,
-            40.0
-          ],
-          "max_params": [
-            207.0,
-            193.5,
-            180.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "rolling": [
+              1.15,
+              1.075,
+              1.0
+            ],
+            "standing": [
+              1.15,
+              1.075,
+              1.0
+            ],
+            "jumping": [
+              1.15,
+              1.075,
+              1.0
+            ]
+          }
         },
         "E-liter 4K Scope": {
-          "desc": "Full Charge Distance",
-          "params": [
-            325.5,
-            318.0,
-            310.5
-          ]
+          "FullChargeDistance": {
+            "desc": "Full Charge Distance",
+            "params": [
+              325.5,
+              318.0,
+              310.5
+            ]            
+          },
+          "MaxDistance": {
+            "desc": "Partial Charge Distance",     
+            "params": [
+              305.5,
+              298.0,
+              290.5
+            ]       
+          },
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.17,
+              1.12,
+              1.0
+            ]
+          }
         },
         "E-liter 4K": {
-          "desc": "Full Charge Distance",
-          "params": [
-            305.5,
-            298.0,
-            290.5
-          ]
+          "FullChargeDistance": {
+            "desc": "Full Charge Distance",
+            "params": [
+              305.5,
+              298.0,
+              290.5
+            ]            
+          },
+          "MaxDistance": {
+            "desc": "Partial Charge Distance",     
+            "params": [
+              305.5,
+              298.0,
+              290.5
+            ]       
+          },
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.17,
+              1.12,
+              1.0
+            ]
+          }
         },
         "Explosher": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.3,
-            1.15,
-            1.0
-          ]
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.3,
+              1.15,
+              1.0
+            ]
+          }
         },
         "Flingza Roller": {
-          "desc": "Vertical Flick Damage Up",
-          "min_params": [
-            46.0,
-            44.0,
-            40.0
-          ],
-          "max_params": [
-            172.5,
-            165.0,
-            150.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "rolling": [
+              1.15,
+              1.1,
+              1.0
+            ],
+            "standing": [
+              1.15,
+              1.1,
+              1.0
+            ],
+            "jumping": [
+              1.15,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Glooga Dualies": {
-          "desc": "Damage Up",
-          "min_params": [
-            21.6,
-            19.8,
-            18.0
-          ],
-          "max_params": [
-            43.2,
-            39.6,
-            36.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Goo Tuber": {
-          "desc": "Damage Up (Partial Charge)",
-          "min_params": [
-            46.0,
-            43.0,
-            40.0
-          ],
-          "max_params": [
-            149.5,
-            139.75,
-            130.0
-          ]
+          "MinMaxChargeDamageRate": {
+            "desc": "Partial Damage Up",
+            "params": [
+              1.15,
+              1.075,
+              1.0
+            ]
+          },
+          "FullChargeDamageRate": {
+            "desc": "Full Charge Damage Up",
+            "params": [
+              1.15,
+              1.075,
+              1.0
+            ]            
+          }
         },
         "H-3 Nozzlenose": {
-          "desc": "Damage Up",
-          "min_params": [
-            25.42,
-            22.96,
-            20.5
-          ],
-          "max_params": [
-            50.84,
-            45.92,
-            41.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.24,
+              1.12,
+              1.0
+            ]
+          }
         },
         "Heavy Splatling": {
-          "desc": "Burst Duration",
-          "params": [
-            178.56,
-            161.28,
-            144.0
-          ]
+          "MaxChargeShootingFrameTimes": {
+            "desc": "Burst Duration",
+            "params": [
+              1.24,
+              1.12,
+              1.0
+            ]
+          }
         },
         "Hydra Splatling": {
-          "desc": "Full Charge Damage Up",
-          "min_params": [
-            17.6,
-            16.8,
-            16.0
-          ],
-          "max_params": [
-            44.0,
-            42.0,
-            40.0
-          ]
+          "DamageRate": {
+            "desc": "Partial Charge Damage Up",
+            "params": [
+              1.1,
+              1.05,
+              1.0
+            ]
+          },
+          "DamageMaxMaxChargeRate": {
+            "desc": "Full Charge Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Inkbrush": {
-          "desc": "Roll Speed",
-          "params": [
-            2.016,
-            1.986,
-            1.92
-          ]
+          "DashSpeed": {
+            "desc": "Dash Speed",
+            "params": [
+              2.016,
+              1.986,
+              1.92
+            ]
+          }
         },
         "Jet Squelcher": {
-          "desc": "Bullet Velocity",
-          "params": [
-            36.44256,
-            34.60464,
-            33.6
-          ]
+          "DegRandom": {
+            "desc": "Ground Shot Randomization",
+            "params": [
+              2.1,
+              2.45,
+              3.0
+            ]
+          },
+          "InitVelRate": {
+            "desc": "Bullet Velocity",
+            "params": [
+              1.0846,
+              1.0299,
+              1.0
+            ]
+          }
         },
         "L-3 Nozzlenose": {
-          "desc": "Damage Up",
-          "min_params": [
-            18.85,
-            16.675,
-            14.5
-          ],
-          "max_params": [
-            37.7,
-            33.35,
-            29.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.3,
+              1.15,
+              1.0
+            ]
+          }
         },
         "Luna Blaster": {
-          "desc": "Increased High-Damage Radius",
-          "params": [
-            30.0,
-            17.5,
-            10.0
-          ]
+          "SphereSplashDropPaintRadiusRate": {
+            "desc": "Increased High-Damage Radius",
+            "params": [
+              3.0,
+              1.75,
+              1.0
+            ]
+          }
         },
         "Mini Splatling": {
-          "desc": "Burst Duration",
-          "params": [
-            97.2,
-            90.0,
-            72.0
-          ]
+          "MaxChargeShootingFrameTimes": {
+            "desc": "Burst Duration",
+            "params": [
+              1.35,
+              1.25,
+              1.0
+            ]
+          }
         },
         "N-ZAP": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.138,
-            1.086,
-            1.0
-          ]
+          "SplashPaintRadius": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              13.2,
+              12.6,
+              11.6
+            ]
+          },
+          "DegRandom": {
+            "desc": "Ground Shot Randomization",
+            "params": [
+              4.8,
+              5.2,
+              6.0
+            ]
+          }
         },
         "Nautilus": {
-          "desc": "Burst Duration",
-          "params": [
-            135.2,
-            124.8,
-            104.0
-          ]
+          "MaxChargeShootingFrameTimes": {
+            "desc": "Burst Duration",
+            "params": [
+              1.3,
+              1.2,
+              1.0
+            ]
         },
         "Octobrush": {
-          "desc": "Roll Speed",
-          "params": [
-            1.8816,
-            1.806,
-            1.68
-          ]
+          "DashSpeed": {
+            "desc": "Dash Speed",
+            "params": [
+              1.8816,
+              1.806,
+              1.68
+            ]
+          },
+          "CorePaintWidthHalfRate": {
+            "desc": "Ink Tail Width",
+            "params": [
+              1.6,
+              1.3,
+              1.0
+            ]
+          }
         },
         "Range Blaster": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            5.0,
-            6.5,
-            8.0
-          ]
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              5.0,
+              6.5,
+              8.0
+            ]
         },
         "Rapid Blaster Pro": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            4.0,
-            6.0,
-            8.0
-          ]
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              4.0,
+              6.0,
+              8.0
+            ]
         },
         "Rapid Blaster": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            4.0,
-            6.0,
-            8.0
-          ]
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              4.0,
+              6.0,
+              8.0
+            ]
         },
         "Slosher": {
-          "desc": "Max Damage Range",
-          "params": [
-            55.0,
-            35.0,
-            15.0
-          ]
+          "BulletDamageMaxDist": {
+            "desc": "Max Damage Range",
+            "params": [
+              55.0,
+              35.0,
+              15.0
+            ]
+          }
         },
         "Sloshing Machine": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.15,
-            1.075,
-            1.0
-          ]
+          "PaintRRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.15,
+              1.075,
+              1.0
+            ]
+          }
         },
         "Splash-o-matic": {
-          "desc": "Damage Up",
-          "min_params": [
-            17.5,
-            15.75,
-            14.0
-          ],
-          "max_params": [
-            35,
-            31.5,
-            28.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.25,
+              1.125,
+              1.0
+            ]
+          }
         },
         "Splat Brella": {
-          "desc": "Canopy Regeneration Time",
-          "params": [
-            210.0,
-            300.0,
-            390.0
-          ]
+          "CanopyNakedFrame": {
+            "desc": "Canopy Regeneration Time",
+            "params": [
+              210.0,
+              300.0,
+              390.0
+            ]
+          }
         },
         "Splat Charger": {
-          "desc": "Damage Up (Partial Charge)",
-          "min_params": [
-            48.0,
-            44.0,
-            40.0
-          ],
-          "max_params": [
-            96.0,
-            88.0,
-            80.0
-          ]
+          "MinMaxChargeDamageRate": {
+            "desc": "Partial Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          },
+          "FullChargeDamageRate": {
+            "desc": "Full Charge Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]            
+          }
         },
         "Splat Dualies": {
-          "desc": "Damage Up",
-          "min_params": [
-            17.4,
-            15.9,
-            15.0
-          ],
-          "max_params": [
-            34.8,
-            31.8,
-            30.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.16,
+              1.06,
+              1.0
+            ]
+          }
         },
         "Splat Roller": {
-          "desc": "Vertical Flick Damage Up",
-          "min_params": [
-            46,
-            44.0,
-            40.0
-          ],
-          "max_params": [
-            207.0,
-            198.0,
-            180.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.15,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Splatterscope": {
-          "desc": "Damage Up (Partial Charge)",
-          "min_params": [
-            48.0,
-            44.0,
-            40.0
-          ],
-          "max_params": [
-            96.0,
-            88.0,
-            80.0
-          ]
+          "MinMaxChargeDamageRate": {
+            "desc": "Partial Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          },
+          "FullChargeDamageRate": {
+            "desc": "Full Charge Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]            
+          }
         },
         "Splattershot Jr.": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.202,
-            1.062,
-            1.0
-          ]
+          "SplashPaintRadius": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              15.5,
+              13.7,
+              12.9
+            ]
+          }
         },
         "Splattershot Pro": {
-          "desc": "Damage Up",
-          "min_params": [
-            25.536,
-            23.268,
-            21.0
-          ],
-          "max_params": [
-            51.072,
-            46.536,
-            42.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.216,
+              1.108,
+              1.0
+            ]
+          }
         },
         "Splattershot": {
-          "desc": "Jump Shot Randomization",
-          "params": [
-            6.0,
-            9.0,
-            12.0
-          ]
+          "DegRandom": {
+            "desc": "Ground Shot Randomization",
+            "params": [
+              4.8,
+              5.2,
+              6.0
+            ]
+          },
+          "DegJumpRandom": {
+            "desc": "Jump Shot Randomization",
+            "params": [
+              6.0,
+              8.0,
+              12.0
+            ],
+          }
         },
         "Sploosh-o-matic": {
-          "desc": "Damage Up",
-          "min_params": [
-            23.75,
-            21.375,
-            19.0
-          ],
-          "max_params": [
-            47.5,
-            42.75,
-            38.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.25,
+              1.125,
+              1.0
+            ]
+          }
         },
         "Squeezer": {
-          "desc": "Damage Up (Burst Fire)",
-          "min_params": [
-            24.7,
-            21.85,
-            19.0
-          ],
-          "max_params": [
-            49.4,
-            43.7,
-            38.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "normal_params": [
+              1.3,
+              1.15,
+              1.0
+            ],
+            "repeat_params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Squiffer": {
-          "desc": "Full Charge Distance",
-          "params": [
-            182.65,
-            175.15,
-            167.65
-          ]
+          "FullChargeDistance": {
+            "desc": "Full Charge Distance",
+            "params": [
+              182.65,
+              175.15,
+              167.65
+            ]            
+          },
+          "MaxDistance": {
+            "desc": "Partial Charge Distance",     
+            "params": [
+              182.65,
+              175.15,
+              167.65
+            ]       
+          },
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.24,
+              1.12,
+              1.0
+            ]
+          }        
         },
         "Tenta Brella": {
-          "desc": "Canopy HP",
-          "params": [
-            10000.0,
-            8500.0,
-            7000.0
-          ]
+          "CanopyHP": {
+            "desc": "Canopy HP",
+            "params": [
+              10000,
+              8500,
+              7000
+            ]
+          }
         },
         "Tetra Dualies": {
-          "desc": "Damage Up",
-          "min_params": [
-            16.8,
-            15.4,
-            14.0
-          ],
-          "max_params": [
-            33.6,
-            30.8,
-            28.0
-          ]
+          "DamageRate": {
+            "desc": "Damage Up",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Tri-Slosher": {
-          "desc": "Increased Ink Coverage",
-          "params": [
-            1.1,
-            1.05,
-            1.0
-          ]
+          "SplashPaintRadiusRate": {
+            "desc": "Increased Ink Coverage",
+            "params": [
+              1.2,
+              1.1,
+              1.0
+            ]
+          }
         },
         "Undercover Brella": {
-          "desc": "Canopy Regeneration Time",
-          "params": [
-            150.0,
-            180.0,
-            270.0
-          ]
+          "CanopyNakedFrame": {
+            "desc": "Canopy Regeneration Time",
+            "params": [
+              150,
+              180,
+              270
+            ]
+          }
         }
       }
     }
-
   }])
   .filter("trust", ['$sce', function($sce) {
     return function(htmlCode){
