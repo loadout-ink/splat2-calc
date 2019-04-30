@@ -315,6 +315,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Аэроспрей"
           },
           "class": "Shooter",
+          "type": "Aerospray",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Curling-Bomb Launcher",
@@ -352,6 +353,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Аэроспрей ДЕЛЮКС"
           },
           "class": "Shooter",
+          "type": "Aerospray",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Baller",
@@ -380,6 +382,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Aerospray PG"
           },
           "class": "Shooter",
+          "type": "Aerospray",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Booyah Bomb",
@@ -584,6 +587,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Струевик .52"
           },
           "class": "Shooter",
+          "type": ".52 Gal",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Baller",
@@ -621,6 +625,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Струевик .52 «Деко»"
           },
           "class": "Shooter",
+          "type": ".52 Gal",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Sting Ray",
@@ -649,6 +654,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa .52 Gal"
           },
           "class": "Shooter",
+          "type": ".52 Gal",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Booyah Bomb",
@@ -893,6 +899,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Струевик .96"
           },
           "class": "Shooter",
+          "type": ".96 Gal",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Ink Armor",
@@ -931,6 +938,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Струевик .96 «Деко»"
           },
           "class": "Shooter",
+          "type": ".96 Gal",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Splashdown",
@@ -4698,6 +4706,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Ballpoint Splatling"
           },
           "class": "Splatling",
+          "type": "Ballpoint Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Inkjet",
@@ -4737,6 +4746,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Ballpoint Splatling Nouveau"
           },
           "class": "Splatling",
+          "type": "Ballpoint Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Squid Beakon",
           "special": "Ink Storm",
