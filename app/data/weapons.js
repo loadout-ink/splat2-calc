@@ -3592,6 +3592,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бамбух 14-I"
           },
           "class": "Charger",
+          "type": "Bamboozler 14",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Tenta Missiles",
@@ -3636,6 +3637,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Bamboozler 14 Mk II"
           },
           "class": "Charger",
+          "type": "Bamboozler 14",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Burst-Bomb Launcher",
@@ -3674,6 +3676,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Bamboozler 14 Mk III"
           },
           "class": "Charger",
+          "type": "Bamboozler 14",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Fizzy Bomb",
           "special": "Bubble Blower",

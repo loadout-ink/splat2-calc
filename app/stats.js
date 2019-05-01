@@ -1029,72 +1029,30 @@ angular.module('splatApp').stats = function ($scope) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
 
       if(loadout.weapon.type == ".52 Gal") {
-        var parameters = $scope.parameters["Main Power Up"][".52 Gal"]["DegJumpRandom"]["params"];
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(parameters);
-        var result = this.calcRes(parameters, p, s);
-        var max_param = parameters[0];
-        var min_param = parameters[2];
-
-        this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";
-        this.value = 100 - Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_param) * 100),3)});
-      
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
         return this.percentage;
       }
 
       if(loadout.weapon.type == ".96 Gal") {
-        var parameters = $scope.parameters["Main Power Up"][".96 Gal"]["DamageRate"]["params"];
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(parameters);
-        var result = this.calcRes(parameters, p, s);
-        var max_param = parameters[0];
-        var min_param = parameters[2];
-
-        // Adjust max damage for MPU damage caps
-        var min_damage = result * loadout.weapon.minDamage;
-        if(loadout.weapon.mpuMaxDamage != null && min_damage >= loadout.weapon.mpuMaxDamage) {
-          min_damage = loadout.weapon.mpuMaxDamage;
-        }
-
-        this.name = "{{ STAT_MAIN_POWER_UP_MIN_DAMAGE | translate }}";
-        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-        this.percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(min_damage,2)});
-        
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
         return this.percentage;
       }
 
       if(loadout.weapon.type == "Aerospray") {
-        var parameters = $scope.parameters["Main Power Up"]["Aerospray"]["SplashPaintRadius"]["params"];        
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(parameters);
-        var result = this.calcRes(parameters, p, s);
-        var max_param = parameters[0];
-        var min_param = parameters[2];
-        
-        this.name = "{{ STAT_MAIN_POWER_UP_INK_COVERAGE | translate }}";      
-        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-        this.percentage = ((result/min_param - 1) * 100).toFixed(1);
-        this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_param) * 100),3)});
-      
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-
-        return this.percentage;        
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_COVERAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;  
         
       }
 
@@ -1482,50 +1440,20 @@ angular.module('splatApp').stats = function ($scope) {
       var abilityScore = loadout.calcAbilityScore('Main Power Up');
 
       if(loadout.weapon.type == ".52 Gal") {
-        var parameters = $scope.parameters["Main Power Up"][".52 Gal"]["DegRandom"]["params"];
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(parameters);
-        var result = this.calcRes(parameters, p, s);
-        var max_param = parameters[0];
-        var min_param = parameters[2];
-
-        this.name = "{{ STAT_MAIN_POWER_UP_GROUND_SHOT_RANDOMIZATION | translate }}";
-        this.value = 100 - Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_param) * 100),3)});
-
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_GROUND_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
         return this.percentage;
       }
 
       if(loadout.weapon.type == ".96 Gal") {
-        var parameters = $scope.parameters["Main Power Up"][".96 Gal"]["DamageRate"]["params"];
-        var p = this.calcP(abilityScore);      
-        var s = this.calcS(parameters);
-        var result = this.calcRes(parameters, p, s);
-        var max_param = parameters[0];
-        var min_param = parameters[2];
-
-        // Adjust max damage for MPU damage caps
-        var max_damage = result * loadout.weapon.maxDamage;
-        if(loadout.weapon.mpuMaxDamage != null && max_damage >= loadout.weapon.mpuMaxDamage) {
-          max_damage = loadout.weapon.mpuMaxDamage;
-        }
-
-        this.name = "{{ STAT_MAIN_POWER_UP_MAX_DAMAGE | translate }}";
-        this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-        this.percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-        this.label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(max_damage,2)});
-        
-        if($scope.logging) {
-          var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
-          console.log(main_power_up_debug_log);
-        }
-
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
         return this.percentage;
       }
 
