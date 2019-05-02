@@ -1741,6 +1741,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Контрабластер"
           },
           "class": "Blaster",
+          "type": "Clash Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Sting Ray",
@@ -1784,6 +1785,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Контрабластер «Нео»"
           },
           "class": "Blaster",
+          "type": "Clash Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Tenta Missiles",
@@ -2370,6 +2372,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Мотовалик"
           },
           "class": "Roller",
+          "type": "Dynamo Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Sting Ray",
@@ -2425,6 +2428,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Мотовалик VIP"
           },
           "class": "Roller",
+          "type": "Dynamo Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Ink Armor",
@@ -2471,6 +2475,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Dynamo Roller"
           },
           "class": "Roller",
+          "type": "Dynamo Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Booyah Bomb",
@@ -3415,6 +3420,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Э-литр 95"
           },
           "class": "Charger",
+          "type": "E-liter 4K",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Ink Storm",
@@ -3459,6 +3465,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Custom E-liter 4K"
           },
           "class": "Charger",
+          "type": "E-liter 4K",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Squid Beakon",
           "special": "Bubble Blower",
@@ -3506,6 +3513,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Снайп-э-литр 95"
           },
           "class": "Charger",
+          "type": "E-liter 4K Scope",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Ink Storm",
@@ -3550,6 +3558,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Custom E-liter 4K Scope"
           },
           "class": "Charger",
+          "type": "E-liter 4K Scope",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Squid Beakon",
           "special": "Bubble Blower",
@@ -4287,6 +4296,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Explosher"
           },
           "class": "Slosher",
+          "type": "Explosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Bubble Blower",
@@ -4321,6 +4331,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Custom Explosher"
           },
           "class": "Slosher",
+          "type": "Explosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Baller",
@@ -4883,6 +4894,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Импрессиометы"
           },
           "class": "Dualies",
+          "type": "Dapple Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Squid Beakon",
           "special": "Suction-Bomb Launcher",
@@ -4921,6 +4933,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Импрессиометы «НуВо»"
           },
           "class": "Dualies",
+          "type": "Dapple Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Ink Storm",
@@ -4950,6 +4963,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Clear Dapple Dualies"
           },
           "class": "Dualies",
+          "type": "Dapple Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Torpedo",
           "special": "Splashdown",
@@ -5233,6 +5247,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Спурт-плескари"
           },
           "class": "Dualies",
+          "type": "Dualie Squelchers",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Tenta Missiles",
@@ -5268,6 +5283,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Custom Dualie Squelchers"
           },
           "class": "Dualies",
+          "type": "Dualie Squelchers",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Ink Storm",
