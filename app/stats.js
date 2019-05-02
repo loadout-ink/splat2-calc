@@ -1053,7 +1053,6 @@ angular.module('splatApp').stats = function ($scope) {
         this.percentage = statValues.percentage;
         this.label = statValues.label;
         return this.percentage;  
-        
       }
 
       if(loadout.weapon.type == "Ballpoint Splatling") {
@@ -1063,6 +1062,42 @@ angular.module('splatApp').stats = function ($scope) {
         this.percentage = statValues.percentage;
         this.label = statValues.label;
         return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Bamboozler 14") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;        
+      }
+
+      if(loadout.weapon.type == "Bloblobber") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_COVERAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Carbon Roller") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_ROLLING_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;        
       }
 
       // if(loadout.weapon.name.indexOf('Bamboozler 14') != -1) {
@@ -1168,25 +1203,7 @@ angular.module('splatApp').stats = function ($scope) {
       //   this.name = "{{ STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION | translate }}";      
       // }
 
-      // if(loadout.weapon.name.indexOf('Carbon Roller') != -1) {
-      //   parameters = $scope.parameters["Main Power Up"]["Carbon Roller"]["min_params"];        
-      //   this.name = "{{ STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE | translate }}";      
-      // }
 
-      // if(loadout.weapon.name.indexOf('Splat Roller') != -1 || loadout.weapon.name.indexOf('Hero Roller Replica') != -1) {
-      //   parameters = $scope.parameters["Main Power Up"]["Carbon Roller"]["min_params"];        
-      //   this.name = "{{ STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE | translate }}";      
-      // }
-
-      // if(loadout.weapon.name.indexOf('Dynamo Roller') != -1) {
-      //   parameters = $scope.parameters["Main Power Up"]["Dynamo Roller"]["min_params"];        
-      //   this.name = "{{ STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE | translate }}";      
-      // }
-
-      // if(loadout.weapon.name.indexOf('Flingza Roller') != -1) {
-      //   parameters = $scope.parameters["Main Power Up"]["Flingza Roller"]["min_params"];        
-      //   this.name = "{{ STAT_MAIN_POWER_UP_VERTICAL_MIN_DAMAGE | translate }}";      
-      // }
 
       // if(loadout.weapon.name.indexOf('Inkbrush') != -1) {
       //   parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["params"];
@@ -1464,6 +1481,24 @@ angular.module('splatApp').stats = function ($scope) {
         this.percentage = statValues.percentage;
         this.label = statValues.label;
         return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Bamboozler 14") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Carbon Roller") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_ROLLING_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;        
       }
 
 

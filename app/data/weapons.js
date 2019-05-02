@@ -1492,6 +1492,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластер"
           },
           "class": "Blaster",
+          "type": "Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Splashdown",
@@ -1535,6 +1536,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластер «Понт»"
           },
           "class": "Blaster",
+          "type": "Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Inkjet",
@@ -1578,6 +1580,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластер-004 (клон)"
           },
           "class": "Blaster",
+          "type": "Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Splashdown",
@@ -2047,6 +2050,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Валик ЛАЙТ"
           },
           "class": "Roller",
+          "type": "Carbon Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Ink Storm",
@@ -2099,6 +2103,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Carbon Roller Deco"
           },
           "class": "Roller",
+          "type": "Carbon Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Autobomb Launcher",
@@ -4208,6 +4213,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Bloblobber"
           },
           "class": "Slosher",
+          "type": "Bloblobber",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Ink Storm",
@@ -4244,6 +4250,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Bloblobber Deco"
           },
           "class": "Slosher",
+          "type": "Bloblobber",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Suction-Bomb Launcher",
