@@ -692,6 +692,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "N-ZAP 85"
           },
           "class": "Shooter",
+          "type": "N-ZAP",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Ink Armor",
@@ -729,6 +730,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "N-ZAP 89"
           },
           "class": "Shooter",
+          "type": "N-ZAP",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Tenta Missiles",
@@ -757,6 +759,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "N-ZAP '83"
           },
           "class": "Shooter",
+          "type": "N-ZAP",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Ink Storm",
@@ -977,6 +980,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Плескарь"
           },
           "class": "Shooter",
+          "type": "Jet Squelcher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Tenta Missiles",
@@ -1014,6 +1018,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Плескарь «Понт»"
           },
           "class": "Shooter",
+          "type": "Jet Squelcher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Sting Ray",
@@ -1156,6 +1161,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Тяжелый каплетрон"
           },
           "class": "Shooter",
+          "type": "H-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Tenta Missiles",
@@ -1194,6 +1200,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Тяжелый каплетрон 2.0"
           },
           "class": "Shooter",
+          "type": "H-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Ink Armor",
@@ -1223,6 +1230,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Cherry H-3 Nozzlenose"
           },
           "class": "Shooter",
+          "type": "H-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Bubble Blower",
@@ -1372,6 +1380,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Лунобластер"
           },
           "class": "Blaster",
+          "type": "Luna Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Baller",
@@ -1415,6 +1424,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Лунобластер «Нео»"
           },
           "class": "Blaster",
+          "type": "Luna Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Suction-Bomb Launcher",
@@ -1449,6 +1459,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Luna Blaster"
           },
           "class": "Blaster",
+          "type": "Luna Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Fizzy Bomb",
           "special": "Ink Storm",
@@ -1624,6 +1635,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Дальнобластер"
           },
           "class": "Blaster",
+          "type": "Range Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Ink Storm",
@@ -1664,6 +1676,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Custom Range Blaster"
           },
           "class": "Blaster",
+          "type": "Range Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Bubble Blower",
@@ -1698,6 +1711,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Grim Range Blaster"
           },
           "class": "Blaster",
+          "type": "Range Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Tenta Missiles",
@@ -1829,6 +1843,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластермат"
           },
           "class": "Blaster",
+          "type": "Rapid Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Splat-Bomb Launcher",
@@ -1872,6 +1887,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластермат «Деко»"
           },
           "class": "Blaster",
+          "type": "Rapid Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Inkjet",
@@ -1906,6 +1922,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Rapid Blaster"
           },
           "class": "Blaster",
+          "type": "Rapid Blaster",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Torpedo",
           "special": "Baller",
@@ -1949,6 +1966,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Бластермат ПРО"
           },
           "class": "Blaster",
+          "type": "Rapid Blaster Pro",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Ink Storm",
@@ -1989,6 +2007,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Rapid Blaster Pro Deco"
           },
           "class": "Blaster",
+          "type": "Rapid Blaster Pro",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Ink Armor",
@@ -2531,6 +2550,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Омнивалик"
           },
           "class": "Roller",
+          "type": "Flingza Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Splat-Bomb Launcher",
@@ -2586,6 +2606,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Омнивалик «Блеск»"
           },
           "class": "Roller",
+          "type": "Flingza Roller",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Tenta Missiles",
@@ -2661,6 +2682,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Кисть"
           },
           "class": "Brush",
+          "type": "Inkbrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Splashdown",
@@ -2708,6 +2730,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Кисть «НуВо»"
           },
           "class": "Brush",
+          "type": "Inkbrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Baller",
@@ -2746,6 +2769,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Permanent Inkbrush"
           },
           "class": "Brush",
+          "type": "Inkbrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Ink Armor",
@@ -2793,6 +2817,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Арт-кисть"
           },
           "class": "Brush",
+          "type": "Octobrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Inkjet",
@@ -2840,6 +2865,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Арт-кисть «НуВо»"
           },
           "class": "Brush",
+          "type": "Octobrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Squid Beakon",
           "special": "Tenta Missiles",
@@ -2878,6 +2904,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Octobrush"
           },
           "class": "Brush",
+          "type": "Octobrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Ultra Stamp",
@@ -2925,6 +2952,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Кисть-004 (клон)"
           },
           "class": "Brush",
+          "type": "Octobrush",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Inkjet",
@@ -3738,6 +3766,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Трубастер"
           },
           "class": "Charger",
+          "type": "Goo Tuber",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Splashdown",
@@ -3785,6 +3814,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Импрессиометы «Понт»"
           },
           "class": "Charger",
+          "type": "Goo Tuber",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Inkjet",
@@ -3852,6 +3882,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Ведроган"
           },
           "class": "Slosher",
+          "type": "Slosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Tenta Missiles",
@@ -3897,6 +3928,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Ведроган «Деко»"
           },
           "class": "Slosher",
+          "type": "Slosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Baller",
@@ -3933,6 +3965,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Soda Slosher"
           },
           "class": "Slosher",
+          "type": "Slosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splat Bomb",
           "special": "Burst-Bomb Launcher",
@@ -3978,6 +4011,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Ведроган-004 (клон)"
           },
           "class": "Slosher",
+          "type": "Slosher",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Tenta Missiles",
@@ -4395,6 +4429,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет-М"
           },
           "class": "Splatling",
+          "type": "Mini Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Tenta Missiles",
@@ -4408,6 +4443,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "E",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 36,
+          "secondRingBurstDuration": 72,
           "price": 12300,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -4433,6 +4470,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет-М «Шпротус»"
           },
           "class": "Splatling",
+          "type": "Mini Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Ink Storm",
@@ -4446,6 +4484,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "E",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 36,
+          "secondRingBurstDuration": 72,
           "price": 15400,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -4462,6 +4502,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Mini Splatling"
           },
           "class": "Splatling",
+          "type": "Mini Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Toxic Mist",
           "special": "Ultra Stamp",
@@ -4475,6 +4516,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "E",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 36,
+          "secondRingBurstDuration": 72,
           "price": 18800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 62,
@@ -4500,6 +4543,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет XL"
           },
           "class": "Splatling",
+          "type": "Heavy Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Sting Ray",
@@ -4513,6 +4557,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "D",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 72,
+          "secondRingBurstDuration": 144,
           "price": 7800,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -4538,6 +4584,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет XL «Деко»"
           },
           "class": "Splatling",
+          "type": "Heavy Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Bubble Blower",
@@ -4551,6 +4598,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "D",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 72,
+          "secondRingBurstDuration": 144,
           "price": 9600,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -4567,6 +4616,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Heavy Splatling Remix"
           },
           "class": "Splatling",
+          "type": "Heavy Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Booyah Bomb",
@@ -4580,6 +4630,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "D",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 72,
+          "secondRingBurstDuration": 144,
           "price": 18300,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -4605,6 +4657,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет-004 (клон)"
           },
           "class": "Splatling",
+          "type": "Heavy Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Sprinkler",
           "special": "Sting Ray",
@@ -4618,6 +4671,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "D",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 72,
+          "secondRingBurstDuration": 144,
           "price": 8600,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 78,
@@ -4643,6 +4698,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Брызгомет «Горыныч»"
           },
           "class": "Splatling",
+          "type": "Hydra Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Autobomb",
           "special": "Splashdown",
@@ -4688,6 +4744,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Custom Hydra Splatling"
           },
           "class": "Splatling",
+          "type": "Hydra Splatling",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Ink Armor",
@@ -4807,6 +4864,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Nautilus 47"
           },
           "class": "Splatling",
+          "type": "Nautilus",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Point Sensor",
           "special": "Baller",
@@ -4820,6 +4878,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "C",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 52,
+          "secondRingBurstDuration": 104,
           "price": 14700,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 74,
@@ -4836,6 +4896,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Nautilus 79"
           },
           "class": "Splatling",
+          "type": "Nautilus",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Suction Bomb",
           "special": "Inkjet",
@@ -4849,6 +4910,8 @@ angular.module('splatApp').weapons = function($scope) {
           "shootingSpeed": "C",
           "minDamage": 16.0,
           "maxDamage": 32.0,
+          "firstRingBurstDuration": 52,
+          "secondRingBurstDuration": 104,
           "price": 27900,
           "stats": {
             "{{ SHELDON_RANGE | translate }}": 74,
@@ -5145,6 +5208,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Термоплюхи 525"
           },
           "class": "Dualies",
+          "type": "Glooga Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Ink Mine",
           "special": "Inkjet",
@@ -5180,6 +5244,7 @@ angular.module('splatApp').weapons = function($scope) {
             "de_DE": "Glooga Dualies Deco"
           },
           "class": "Dualies",
+          "type": "Glooga Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Baller",
@@ -5209,6 +5274,7 @@ angular.module('splatApp').weapons = function($scope) {
             "en_US": "Kensa Glooga Dualies"
           },
           "class": "Dualies",
+          "type": "Glooga Dualies",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Fizzy Bomb",
           "special": "Ink Armor",

@@ -152,10 +152,10 @@ angular.module('splatApp').stats = function ($scope) {
         if(loadout.weapon.class.toLowerCase() == 'brush') {
             var parameters = null;            
             if(loadout.weapon.name.indexOf('Inkbrush') != -1) {
-              parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["params"];
+              parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["DashSpeed"]["params"];
             }
             if(loadout.weapon.name.indexOf('Octobrush') != -1 || loadout.weapon.name.indexOf('Herobrush Replica') != -1) {
-              parameters = $scope.parameters["Main Power Up"]["Octobrush"]["params"];
+              parameters = $scope.parameters["Main Power Up"]["Octobrush"]["DashSpeed"]["params"];
             }
             
             var abilityScore = loadout.calcAbilityScore('Main Power Up');
@@ -1163,6 +1163,167 @@ angular.module('splatApp').stats = function ($scope) {
         return this.percentage;
       }
 
+      if(loadout.weapon.type == "Flingza Roller") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_ROLLING_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;        
+      }
+
+      if(loadout.weapon.type == "Glooga Dualies") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Goo Tuber") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "H-3 Nozzlenose") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Heavy Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_FIRST_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Hydra Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Inkbrush") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_DASH_SPEED");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Jet Squelcher") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_GROUND_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "L-3 Nozzlenose") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MIN_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Luna Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_HIGH_DAMAGE_RADIUS");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Mini Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_FIRST_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "N-ZAP") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_GROUND_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Nautilus") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_FIRST_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Octobrush") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_DASH_SPEED");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Range Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Rapid Blaster Pro") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Rapid Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Slosher") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MAX_DAMAGE_RANGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
 
       //   // INK COVERAGE formatting and calculations
       //   if(loadout.weapon.name.indexOf('Splattershot Jr.') != -1 ||
@@ -1365,6 +1526,150 @@ angular.module('splatApp').stats = function ($scope) {
         this.percentage = statValues.percentage;
         this.label = statValues.label;
         return this.percentage;        
+      }
+
+      if(loadout.weapon.type == "Flingza Roller") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_ROLLING_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;        
+      }
+
+      if(loadout.weapon.type == "Glooga Dualies") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Goo Tuber") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "H-3 Nozzlenose") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Heavy Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_SECOND_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Hydra Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Inkbrush") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_TRAIL_SIZE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Jet Squelcher") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_BULLET_VELOCITY");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "L-3 Nozzlenose") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_MAX_DAMAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Luna Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_COVERAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Mini Splatling") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_SECOND_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "N-ZAP") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_COVERAGE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Nautilus") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_SECOND_RING_BURST_DURATION");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Octobrush") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_INK_TRAIL_SIZE");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Rapid Blaster Pro") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_DAMAGE_RADIUS");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
+      }
+
+      if(loadout.weapon.type == "Rapid Blaster") {
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_MAIN_POWER_UP_DAMAGE_RADIUS");
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        return this.percentage;
       }
 
       // Defaults
