@@ -157,7 +157,9 @@ var it_strings = {
   "STAT_MAIN_POWER_UP_SECOND_RING_BURST_DURATION": "Main Power Up (Second Ring Burst Duration)",
   "STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME": "Main Power Up (Canopy Regeneration Time)",
   "STAT_MAIN_POWER_UP_CANOPY_HP": "Main Power Up (Canopy HP)",
-  
+  "STAT_MAIN_POWER_UP_BURST_MIN_DAMAGE": "Main Power Up (Burst Min Damage)",
+  "STAT_MAIN_POWER_UP_BURST_MAX_DAMAGE": "Main Power Up (Burst Max Damage)",
+
   // Labels that go on the stat bars themselves. Keep these SHORT!
   "LABEL_DISTANCE_PER_FRAME": "{{value}} DU/f",
   "LABEL_PERCENT": "{{value}}%",

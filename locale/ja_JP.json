@@ -135,6 +135,8 @@
   "STAT_MAIN_POWER_UP_SECOND_RING_BURST_DURATION": "メイン性能アップ (2番目のリングバースト期間)",
   "STAT_MAIN_POWER_UP_CANOPY_REGENERATION_TIME": "メイン性能アップ (傘回復時間)",
   "STAT_MAIN_POWER_UP_CANOPY_HP": "メイン性能アップ (傘 HP)",
+  "STAT_MAIN_POWER_UP_BURST_MIN_DAMAGE": "メイン性能アップ (最小限のダメージをバースト)",
+  "STAT_MAIN_POWER_UP_BURST_MAX_DAMAGE": "メイン性能アップ (最大ダメージをバースト)",
 
   "LABEL_DISTANCE_PER_FRAME": "{value} DU/f",
   "LABEL_PERCENT": "{value}%",
