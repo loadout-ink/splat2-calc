@@ -97,6 +97,7 @@
   "STAT_SUB_POWER_SPRINKLER": "サブ性能<br>(弱くなるまでの時間延長)",
   "STAT_SUB_POWER_BEAKON": "サブ性能<br>(スーパージャンプの時間を短縮)",
   "STAT_SUB_POWER_DURATION": "サブ性能<br>(期限)",
+  "STAT_SUB_POWER_TRACKING_TIME": "サブ性能<br>(追跡時間)",
   "STAT_JUMP_SQUID": "スーパージャンプの時間 (イカ)",
   "STAT_JUMP_KID": "スーパージャンプの時間 (ヒト)",
   "STAT_QUICK_RESPAWN": "復活時間",

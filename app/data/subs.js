@@ -20,8 +20,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 55,
       inkSaver: "B",
       damage: {
-        "Direct": 150,
-        "Near": 30
+        "Near": 150,
+        "Far": 30
       }
     },
     {
@@ -69,8 +69,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 70,
       inkSaver: "C",
       damage: {
-        "Direct": 150,
-        "Near": 30
+        "Near": 150,
+        "Far": 30
       }
     },
     {
@@ -93,8 +93,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 60,
       inkSaver: "B",
       damage: {
-        "Direct": 50,
-        "Near": 35
+        "Near": 50,
+        "Far": 35
       }
     },
     {
@@ -117,8 +117,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 60,
       inkSaver: "D",
       damage: {
-        "Direct": 45,
-        "Near": 35
+        "Near": 45,
+        "Far": 35
       }
     },
     {
@@ -181,8 +181,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 70,
       inkSaver: "C",
       damage: {
-        "Direct": 180,
-        "Near": 30
+        "Near": 180,
+        "Far": 30
       }
     },
     {
@@ -245,8 +245,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 70,
       inkSaver: "C",
       damage: {
-        "Direct": 180,
-        "Near": 30
+        "Near": 180,
+        "Far": 30
       }
     },
     {
@@ -269,8 +269,8 @@ angular.module('splatApp').subs = function ($scope) {
       cost: 65,
       inkSaver: "C",
       damage: {
-        "Direct": 60,
-        "Near": 35
+        "Near": 60,
+        "Far": 35
       }
     },
     {

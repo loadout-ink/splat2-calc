@@ -44,10 +44,42 @@ angular
         $scope.toggledAbilities[weaponType] = {};
       }
       $scope.toggledAbilities[weaponType][statKey] = statName;
-      console.log($scope.toggledAbilities);
     }
 
     $scope.loadSavedToggledAbilities = function() {
+      var weaponNameKeys = Object.keys($scope.toggledAbilities);
+
+      for(var i = 0; i < weaponNameKeys.length; i++) {
+        if(weaponNameKeys[i] == $scope.loadout.weapon.name) {
+          var weaponName = weaponNameKeys[i];
+          var statKeyKeys = Object.keys($scope.toggledAbilities[weaponName]);
+  
+          for(var j = 0; j < statKeyKeys.length; j++) {
+            var statKey = statKeyKeys[j];
+            var statName = $scope.toggledAbilities[weaponName][statKey];
+  
+            // TODO: The value stored should be a dictionary of the Stat Name and Ability Name
+            var abilityName = null;
+            if(statKey.indexOf("Main Power Up") != -1)  {
+              abilityName = "Main Power Up";
+            }
+            if(statKey == "Special Saved") {
+              abilityName = "Special Saver";
+            }
+            if(statKey == "Sub Power") {
+              abilityName = "Sub Power Up";
+            }
+  
+            var abilityScore = $scope.loadout.calcAbilityScore(abilityName);
+            var statValues = $scope.calcStat(abilityScore, weaponName, statName);
+            $scope.displayStat(statKey, statValues.name, statValues.value, statValues.percentage, statValues.label);
+          }
+          break;
+        }
+      }
+    }
+
+    $scope.checkIfToggledAbilityActive = function(name) {
       var weaponTypeKeys = Object.keys($scope.toggledAbilities);
 
       for(var i = 0; i < weaponTypeKeys.length; i++) {
@@ -58,19 +90,15 @@ angular
           for(var j = 0; j < statKeyKeys.length; j++) {
             var statKey = statKeyKeys[j];
             var statName = $scope.toggledAbilities[weaponType][statKey];
-            var abilityName = statKey;
   
-            if(abilityName.indexOf("Main Power Up") != -1)  {
-              abilityName = "Main Power Up";
+            if(statName == name)  {
+              return true;
             }
-  
-            var abilityScore = $scope.loadout.calcAbilityScore(abilityName);
-            var statValues = $scope.calcStat(abilityScore, weaponType, statName);
-            $scope.displayStat(statKey, statValues.name, statValues.value, statValues.percentage, statValues.label);
           }
-          break;
         }
+        break;
       }
+      return false;
     }
 
     $scope.switchSet = function() {
@@ -224,9 +252,204 @@ angular
       $scope.stats[key].label = label;
     }
 
+    // TODO: Remove the Ability Score and Weapon Type parameters. Determine both in function.
     $scope.calcStat = function(abilityScore, weaponType, stat, saveStat) {
       if(saveStat === undefined) {
         saveStat = false;
+      }
+
+      if(stat == "STAT_SPECIAL_SAVER") {
+        var parameters = $scope.parameters["Special Saver"]["default"];
+        var ap = abilityScore * 1.0;
+        
+        var desc = null;
+        if($scope.loadout.hasAbility('Respawn Punisher')) {
+          ap = ap * 0.7;
+          desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+        }
+  
+        var p = $scope.calcP(ap);       
+        var s = $scope.calcS(parameters);
+        var modifier = $scope.calcRes(parameters, p, s);
+        var special_saved = 100.0 * modifier;
+  
+        if($scope.loadout.hasAbility('Respawn Punisher')) {
+          special_saved = special_saved * 0.775;
+        }
+
+        // Only enable toggle if the Special is Splashdown
+        var equippedSpecial = $scope.getSpecialByName($scope.loadout.weapon.special)
+        if(equippedSpecial.name == "Splashdown") {
+          var name = "[+] {{ STAT_SPECIAL_SAVER | translate }}";
+        }
+        else {
+          var name = "{{ STAT_SPECIAL_SAVER | translate }}";
+        }
+        var value = special_saved;
+        var percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
+        var label = "{{ LABEL_PERCENT | translate }}".format({value: (special_saved).toFixed(1)});  
+
+        if($scope.logging) {
+          var special_saver_debug_log = {"Special Saver":special_saved,"AP":ap,"Delta":modifier}
+          console.log(special_saver_debug_log);
+        }
+  
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Special Saved");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label);
+      }
+
+      if(stat == "STAT_SPECIAL_SAVER_ON_DEATH") {
+        var parameters = null;
+        var ap = abilityScore * 1.0;
+
+        if($scope.loadout.weapon.special == "Splashdown") {
+          parameters = $scope.parameters["Special Saver"]["Splashdown"];
+        }
+        else {
+          parameters = $scope.parameters["Special Saver"]["default"];        
+        }
+        
+        var desc = null;
+        if($scope.loadout.hasAbility('Respawn Punisher')) {
+          ap = ap * 0.7;
+          desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+        }
+  
+        var p = $scope.calcP(ap);       
+        var s = $scope.calcS(parameters);
+        var modifier = $scope.calcRes(parameters, p, s);
+        
+        var special_saved = 100.0 * modifier;
+        if(special_saved > 100) {
+          special_saved = 100.0;
+        }
+  
+        if($scope.loadout.hasAbility('Respawn Punisher')) {
+          special_saved = special_saved * 0.775;
+        }
+  
+        if($scope.logging) {
+          var special_saver_debug_log = {"Special Saver (On Death)":special_saved,"AP":ap,"Delta":modifier}
+          console.log(special_saver_debug_log);
+        }
+
+        var name = "[+] {{ STAT_SPECIAL_SAVER_ON_DEATH | translate }}";
+        var value = special_saved;
+        var percentage = $scope.toFixedTrimmed((modifier - 0.5) * 100, 2);
+        var label = "{{ LABEL_PERCENT | translate }}".format({value: (special_saved).toFixed(1)});
+  
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Special Saved");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label);
+      }
+      
+      if(stat == "STAT_SUB_POWER_RANGE") {
+        var equippedSub = $scope.getSubByName($scope.loadout.weapon.sub);
+
+        switch(equippedSub.name) {
+          case 'Point Sensor':
+            var parameters = $scope.parameters["Sub Power Up"]["Point Sensor Distance Up"];
+            var p = $scope.calcP(abilityScore);      
+            var s = $scope.calcS(parameters);
+            var result = $scope.calcRes(parameters, p, s);
+            var max_param = parameters[0];          
+            var min_param = parameters[2];
+
+            var name = "[+] {{ STAT_SUB_POWER_RANGE | translate }}";
+            var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+            var percentage = ((result/min_param - 1) * 100).toFixed(1);
+            var label = "{{ LABEL_NO_UNIT | translate }}".format({value: $scope.toFixedTrimmed(result,2)})
+
+            if($scope.logging) {
+              var sub_power_up_debug_log = {"Sub Power Up (Point Sensor Range)":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
+              console.log(sub_power_up_debug_log);
+            }
+
+            if(saveStat) {
+              $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Sub Power");
+            }
+            return $scope.statValuesToDict(name, value, percentage, label);        
+        }
+      }
+
+      if(stat == "STAT_SUB_POWER_TRACKING_TIME") {
+        var equippedSub = $scope.getSubByName($scope.loadout.weapon.sub);
+
+        if(equippedSub.name == "Point Sensor") {
+          var parameters = $scope.parameters["Sub Power Up"]["Point Sensor Mark Time Duration"];
+          var p = $scope.calcP(abilityScore);      
+          var s = $scope.calcS(parameters);
+          var result = $scope.calcRes(parameters, p, s) / 60;
+          var max_param = parameters[0] / 60;
+          var min_param = parameters[2] / 60;
+  
+          var name = "[+] {{ STAT_SUB_POWER_TRACKING_TIME | translate }}";
+          var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          var percentage = ((result/min_param - 1) * 100).toFixed(1);
+          var label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+
+          if($scope.logging) {
+            var main_power_up_debug_log = {"Sub Power Up (Point Sensor Tracking Time)":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":percentage}
+            console.log(main_power_up_debug_log);
+          }
+  
+          if(saveStat) {
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Sub Power");
+          }
+          return $scope.statValuesToDict(name, value, percentage, label);
+        }
+
+        if(equippedSub.name == "Ink Mine") {
+          var parameters = $scope.parameters["Sub Power Up"]["Ink Mine Mark Time Duration"];
+          var p = $scope.calcP(abilityScore);      
+          var s = $scope.calcS(parameters);
+          var result = $scope.calcRes(parameters, p, s) / 60;
+          var max_param = parameters[0] / 60;
+          var min_param = parameters[2] / 60;
+  
+          var name = "[+] {{ STAT_SUB_POWER_TRACKING_TIME | translate }}";
+          var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+          var percentage = ((result/min_param - 1) * 100).toFixed(1);
+          var label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(result,2)});
+
+          if($scope.logging) {
+            var main_power_up_debug_log = {"Sub Power Up (Ink Mine Tracking Time)":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":percentage}
+            console.log(main_power_up_debug_log);
+          }
+  
+          if(saveStat) {
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Sub Power");
+          }
+          return $scope.statValuesToDict(name, value, percentage, label);
+        }        
+
+      }
+
+      if(stat == "STAT_SUB_POWER_MINE") {
+        var parameters = $scope.parameters["Sub Power Up"]["Ink Mine Mark Radius"];
+        var p = this.calcP(abilityScore);      
+        var s = this.calcS(parameters);
+        var result = this.calcRes(parameters, p, s);
+        var max_param = parameters[0];
+        var min_param = parameters[2];
+
+        var name = "[+] {{ STAT_SUB_POWER_MINE | translate }}";
+        var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+        var percentage = ((result/min_param - 1) * 100).toFixed(1);
+        var label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(result*100,2)})
+
+        if($scope.logging) {
+          var sub_power_up_debug_log = {"Sub Power Up (Ink Mine Radius)":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":percentage}
+          console.log(sub_power_up_debug_log);
+        }
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Sub Power");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label);
       }
 
       if(weaponType == ".52 Gal") {
@@ -378,7 +601,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -408,7 +631,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -437,7 +660,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -466,7 +689,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }        
@@ -497,7 +720,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -526,7 +749,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -555,7 +778,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -584,7 +807,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -662,7 +885,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -692,7 +915,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -722,7 +945,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -752,7 +975,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -782,7 +1005,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -812,7 +1035,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -979,7 +1202,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1009,7 +1232,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1039,7 +1262,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1069,7 +1292,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1099,7 +1322,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1129,7 +1352,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1155,7 +1378,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -1179,7 +1402,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -1226,7 +1449,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -1250,7 +1473,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -1326,7 +1549,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1356,7 +1579,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1386,7 +1609,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1416,7 +1639,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1446,7 +1669,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -1476,7 +1699,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1508,7 +1731,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1538,7 +1761,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);       
         }
@@ -1568,7 +1791,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1598,7 +1821,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);       
         }
@@ -1629,7 +1852,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1658,7 +1881,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1687,7 +1910,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1716,7 +1939,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -1848,7 +2071,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1878,7 +2101,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);       
         }
@@ -1908,7 +2131,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -1938,7 +2161,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);       
         }        
@@ -2567,7 +2790,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2596,7 +2819,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2625,7 +2848,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2654,7 +2877,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -2742,7 +2965,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -2772,7 +2995,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2802,7 +3025,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -2832,7 +3055,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2862,7 +3085,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -2892,7 +3115,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2923,7 +3146,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2952,7 +3175,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -2981,7 +3204,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -3010,7 +3233,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -3221,7 +3444,7 @@ angular
           }
           
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);         
         }
@@ -3251,7 +3474,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -3280,7 +3503,7 @@ angular
           }
 
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }
@@ -3309,7 +3532,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 2");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 2");
           }
           return $scope.statValuesToDict(name, value, percentage, label);
         }        
@@ -3335,7 +3558,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -3359,7 +3582,7 @@ angular
           }
   
           if(saveStat) {
-            $scope.saveToggledAbility(weaponType, stat, "Main Power Up 1");
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Main Power Up 1");
           }
           return $scope.statValuesToDict(name, value, percentage, label);          
         }
@@ -3867,10 +4090,6 @@ angular
         }        
       }
 
-
-
-
-
       // TODO: Add Charging run speeds for Charger weapons
       if($scope.loadout.weapon.class.toLowerCase() == 'splatling' || $scope.loadout.weapon.class.toLowerCase() == 'brella') {
         if(name == "[+] {{ STAT_RUN_SPEED_FIRING | translate }}") {
@@ -4096,6 +4315,44 @@ angular
           $scope.stats["Tracking Time"].percentage = ((duration/min_duration - 1) * 100).toFixed(1);
           $scope.stats["Tracking Time"].label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(duration,2)})
           $scope.stats["Tracking Time"].desc = "{{ DESC_TRACKING | translate }}";
+          break;
+
+        case "[+] {{ STAT_SPECIAL_SAVER | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Special Saver');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SPECIAL_SAVER_ON_DEATH", true);
+          $scope.displayStat("Special Saved", statValues.name, statValues.value, statValues.percentage, statValues.label);
+          break;
+
+        case "[+] {{ STAT_SPECIAL_SAVER_ON_DEATH | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Special Saver');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SPECIAL_SAVER", true);
+          $scope.displayStat("Special Saved", statValues.name, statValues.value, statValues.percentage, statValues.label);
+          break;
+
+        case "[+] {{ STAT_SUB_POWER_RANGE | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Sub Power Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SUB_POWER_TRACKING_TIME", true);
+          $scope.displayStat("Sub Power", statValues.name, statValues.value, statValues.percentage, statValues.label);
+          break;
+
+        case "[+] {{ STAT_SUB_POWER_TRACKING_TIME | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Sub Power Up');
+          var equippedSub = $scope.getSubByName($scope.loadout.weapon.sub);
+
+          if(equippedSub.name == "Point Sensor") {
+            var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SUB_POWER_RANGE", true);
+          }
+          if(equippedSub.name == "Ink Mine") {
+            var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SUB_POWER_MINE", true);
+          }
+
+          $scope.displayStat("Sub Power", statValues.name, statValues.value, statValues.percentage, statValues.label);
+          break;
+
+        case "[+] {{ STAT_SUB_POWER_MINE | translate }}":
+          var abilityScore = $scope.loadout.calcAbilityScore('Sub Power Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SUB_POWER_TRACKING_TIME", true);
+          $scope.displayStat("Sub Power", statValues.name, statValues.value, statValues.percentage, statValues.label);
           break;
       }
     }
