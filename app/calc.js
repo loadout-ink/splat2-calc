@@ -2085,9 +2085,9 @@ angular
           var min_param = parameters[2];
   
           // Adjust max damage for MPU damage caps
-          var max_damage = result * $scope.loadout.weapon.maxDamage.full;
-          if($scope.loadout.weapon.mpuMaxDamage.full != null && max_damage >= $scope.loadout.weapon.mpuMaxDamage.full) {
-            max_damage = $scope.loadout.weapon.mpuMaxDamage.full;
+          var max_damage = result * $scope.loadout.weapon.maxDamage.partial;
+          if($scope.loadout.weapon.mpuMaxDamage.partial != null && max_damage >= $scope.loadout.weapon.mpuMaxDamage.partial) {
+            max_damage = $scope.loadout.weapon.mpuMaxDamage.partial;
           }
   
           var name = "[+] {{ STAT_MAIN_POWER_UP_PARTIAL_CHARGE_MAX_DAMAGE | translate }}";
