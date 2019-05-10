@@ -375,6 +375,10 @@ angular.module('splatApp').stats = function ($scope) {
       else {
         var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SPECIAL_SAVER");
       }
+
+      if($scope.loadout.hasAbility('Respawn Punisher')) {
+        this.desc = "{{ DESC_PUNISHER_DISCLAIMER | translate }}";
+      }      
       
       this.name = statValues.name;
       this.value = statValues.value;
@@ -884,6 +888,7 @@ angular.module('splatApp').stats = function ($scope) {
 
       var total_duration = ((death_duration + deathcam_duration) / 60) + 2.5;
       var max_duration = ((death_frames_parameters[2] + deathcam_parameters[2]) / 60) + 2.5;
+      console.log(max_duration);
 
       if(loadout.hasAbility('Respawn Punisher')) {
         total_duration += 1.13;
@@ -892,7 +897,7 @@ angular.module('splatApp').stats = function ($scope) {
       }
 
       this.percentage = Math.abs(((total_duration/max_duration - 1) * 100).toFixed(2));
-      this.value = 100 - this.percentage;
+      this.value = total_duration;
       
       if($scope.logging) {
         var quick_respawn_debug_log = {"Quick Respawn":total_duration,"AP:":abilityScore,"P":p,"S":s,"Delta:":this.percentage}
@@ -901,7 +906,7 @@ angular.module('splatApp').stats = function ($scope) {
 
       this.label = "{{ LABEL_TIME | translate }}".format({value: $scope.toFixedTrimmed(total_duration,2)})
       return total_duration;
-    }, 100),
+    }, 9.62),
 
     'Tracking Time': new Stat("{{ STAT_TRACKING_TIME_POINT_SENSOR | translate }}", function(loadout) {
       var abilityScore = loadout.calcAbilityScore('Bomb Defense Up DX');
