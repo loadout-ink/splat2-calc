@@ -193,6 +193,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <li>Updated all MPU parameters and calculations to include missing values.</li>
     <li>Updated Sub Power Up calculations and stats for Point Sensor, Ink Mine, and Squid Beakon.</li>
     <li>Updated tutorial to include all regular abilities.</li>
+    <li>Updated Quick Respawn Time stat to correctly visualize the penalty for Respawn Punisher.</li>
+    <li>Added tooltip to Special Saved stat indicating the penalty for Respawn Punisher.</li>
     </ul>
 
     <h4>Version 2.0.16</h4>
