@@ -97,7 +97,7 @@
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
                           <span id="version">
-                            ver. 2.0.0 BETA
+                            {{UI_VERSION_PREFIX | translate}}2.1.0
                             <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                             <span id="tutorial" class="icon-button fa fa-magic" ng-controller="splatController" uib-tooltip="{{ UI_TUTORIAL | translate }}" ng-click="tutorial()" tooltip-append-to-body="true"></span>
                           </span>

@@ -168,6 +168,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     </div>`,
+
     //TODO: split this into its own file
     whatsNew: `<div class="row">
     <div class="col-md-12">
@@ -177,12 +178,164 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
-    <h4>Version 2.0.0 BETA</h4>
+    <h4>Development Notice</h4>
     <ul>
       <li>This is a fork of the original Loadout.ink code base being updated by <a href="https://twitter.com/Selicia2" target="_blank">Selicia</a>. Please consult the Trello Board for progress and status updates.</li>
       <li>Github Repo: <a href="https://github.com/selicia/splat2-calc" target="_blank">https://github.com/selicia/splat2-calc</a>.
       <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
     </ul>
+
+    <h4>Version 2.1.0 (Current)</h4>
+    <ul>
+    <li>MPU stats will now retain the selected stat when changing gear, weapons, or abilities.</li>
+    <li>Updated weapon special costs for v4.7.</li>
+    <li>Updated ink costs for weapons for v4.7.</li>
+    <li>Updated all MPU parameters and calculations to include missing values.</li>
+    <li>Updated Sub Power Up calculations and stats for Point Sensor, Ink Mine, and Squid Beakon.</li>
+    <li>Updated tutorial to include all regular abilities.</li>
+    <li>Updated Quick Respawn Time stat to correctly visualize the penalty for Respawn Punisher.</li>
+    <li>Added tooltip to Special Saved stat indicating the penalty for Respawn Punisher.</li>
+    </ul>
+
+    <h4>Version 2.0.16</h4>
+    <ul>
+    <li>Updated search/filter for weapons and gear to be language specific.</li>
+    <li>Added first part of Loadout tutorial.</li>
+    <li>Added rolling, ground, and jumping Ink Saver Main stats for all Rollers.</li>
+    <li>Added flick and roll Ink Saver Main stats for all Brushes.</li>
+    </ul>
+
+    <h4>Version 2.0.15</h4>
+    <ul>
+    <li>Updated Special Power Up parameters for Sting Ray.</li>
+    <li>Added X Rank weapon popularity bar to weapon picker.</li>
+    <li>Added Ultra Stamp duration to Special Power Up.</li>
+    <li>Added Ink Resistance Effects tables.</li>
+    </ul>
+
+    <h4>Version 2.0.14</h4>
+    <ul>
+    <li>Added UI indicator [+] for stats that may be toggled.</li>
+    <li>Fixed Respawn Punisher penalty for Special Saver calculations.</li>
+    <li>Updated Bomb Defense Up DX parameters and calculations.</li>
+    <li>Added stat toggle for Tracking Time to switch between Point Sensor and Ink Mine.</li>
+    </ul>
+
+    <h4>Version 2.0.13</h4>
+    <ul>
+    <li>Fixed bugs for the weapon and gear search/filter.</li>
+    <li>Updated Special Cost calculation.</li>
+    <li>Updated Run Speed parameters for Mini Splatling.</li>
+    </ul>    
+
+    <h4>Version 2.0.12</h4>
+    <ul>
+    <li>Updated Run Speed (Firing) calculations for all weapons.</li>
+    <li>Added Run Speed (Charging) calculations for Splatlings and Brellas.</li>
+    <li>Added the ability to filter/search Weapons and Gear.</li>
+    <li>Updated MPU parameters for several weapons.</li>
+    <li>Fixed a bug preventing MPU stats from displaying for E-Liter weapons.</li>
+    </ul>    
+
+    <h4>Version 2.0.11</h4>
+    <ul>
+    <li>Updated the landing page to disable localisations that aren't finished.</li>
+    <li>Added integration for the Spyke Discord app.</li>
+    <li>Corrected the Run Speed (Firing) calculations for Splatlings.</li>
+    <li>Updated MPU parameters for several weapons.</li>
+    <li>Fixed a bug preventing MPU stats from displaying for E-Liter weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.10</h4>
+    <ul>
+    <li>Added all hats through v4.6.</li>
+    <li>Updated damage for several sub weapons.</li>
+    <li>Added all shoes through v4.6.</li>
+    <li>Updated the ink cost of all sub weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.10</h4>
+    <ul>
+    <li>Added new v4.6 weapons.</li>
+    <li>Added MPU damage caps for weapons with the Damage Up MPU effect.</li>
+    <li>Updated Respawn Time calculations to include the penalty for Respawn Punisher.</li>
+    <li>Updated several MPU parameters.</li>
+    </ul>
+
+    <h4>Version 2.0.9</h4>
+    <ul>
+    <li>Updated several parameters for Main Power Up.</li>
+    <li>Updated parameters for Bubble Blower (Special Power Up).</li>
+    <li>Added Ultra Stamp.</li>
+    <li>Added several Main Power Up stats.</li>
+    </ul> 
+
+    <h4>Version 2.0.8</h4>
+    <ul>
+    <li>Added Main Power Up ability.</li>
+    <li>Added update notifications to Loadout.</li>
+    <li>Added Special Saved On Death for Splashdown.</li>
+    <li>Fixed brand affinities.</li>
+    <li>Added landing (home) page.</li>
+    </ul>
+
+    <h4>Version 2.0.7</h4>
+    <ul>
+    <li>Updated Ink Saver Sub parameters and calculations.</li>
+    <li>Updated Quick Super Jump calculations.</li>
+    <li>Updated Bomb Defense DX (Tracking Time) calculations.</li>
+    <li>Updated Bomb Defense DX (Damage Reduction) calculations.</li>
+    <li>Updated Japanese localisation file.</li>
+    </ul>
+
+    <h4>Version 2.0.6</h4>
+    <ul>
+    <li>Added all missing clothing gear.</li>
+    <li>Updated Sub Power Up parameters for Point Sensor and Torpedo.</li>
+    </ul>
+
+    <h4>Version 2.0.5</h4>
+    <ul>
+    <li>Adding missing sub weapons (Fizzy Bomb & Torpedo).</li>
+    <li>Added all missing weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.4</h4>
+    <ul>
+    <li>Corrected calculations for Special Saver and added Respawn Punisher penalty.</li>
+    <li>Added tooltip indicating when a stat is impacted by the Respawn Punisher penalty.</li>
+    <li>Updated Special Power Up stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.3</h4>
+    <ul>
+    <li>Fixed a bug in the core stat formula.</li>
+    <li>Updated the UI to more appropriately round values for stats.</li>
+    <li>Added tooltips for several abilities.</li>
+    <li>Added tooltips for several abilities.</li>
+    <li>Updated Ink Saver Main stat to use the new AP parameters and formula.</li>
+    <li>Updated Ink Saver Sub stat to use the new AP parameters and formula.</li>
+    <li>Updated Special Charge Up stat to use the new AP parameters and formula.</li>
+    <li>Updated Special Saver stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.2</h4>
+    <ul>
+    <li>Added a percentage change value for each stat.</li>
+    <li>Corrected calculations for Swim Speed and added Ninja Squid penalty.</li>
+    <li>Updated the Run Speed stat to use the new AP parameters and formula.</li>
+    <li>Updated the Ink Resistance stat to use the new AP parameters and formula.</li>
+    <li>Updated the Ink Recovery Up stat to use the new AP parameters and formula.</li>
+    <li>Updated the Run Speed stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.1</h4>
+    <ul>
+    <li>Updated the core formula for calculating the effects of Ability Points (AP).</li>
+    <li>Added <a href="https://twitter.com/LeanYoshi" target="_blank">Lean's</a> parameters for calculating stats using AP.
+    <li>Updated the Swim Speed stat to use the new AP parameters and formula.</li>
+    </ul>
+
     <h4>Version 1.2.0</h4>
     <ul>
     <li>Run Speed (Firing) and Ink Consumption (Main) values for most weapons are now up to date for game version 2.3.3.</li>

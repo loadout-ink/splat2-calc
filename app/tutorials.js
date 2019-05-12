@@ -116,6 +116,91 @@ angular.module('splatApp').tutorial = function() {
                 placement: "top"         
             },
             {
+                title: "<u>Run Speed Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Run_Speed_Up' target='_blank'>Run Speed Up</a> ability improves movement speed while running and while firing the weapon. " +
+                    "However, it does not affect rolling speed with roller or brush type weapons. Additionally, this effect provides no benefit in enemy ink." +
+                    "<br><br>This ability is displayed in Loadout as both the <i>Run Speed</i> and <i>Run Speed (Firing)</i> stats.",
+                target: "icon:Run Speed Up",
+                placement: "top"         
+            },
+            {
+                title: "<u>Swim Speed Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Swim_Speed_Up' target='_blank'>Swim Speed Up</a> ability increases movement speed while swimming in squid form. " +
+                    "It is important to remember that you are unable to swim in enemy ink. Additionally, the effects of this stat are dramatically reduced when using the <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ninja_Squid' target='_blank'>Ninja Squid</a> primary ability." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Swim Speed</i> stat.",
+                target: "icon:Swim Speed Up",
+                placement: "top"
+            },
+            {
+                title: "<u>Quick Super Jump</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Quick_Super_Jump' target='_blank'>Quick Super Jump</a> ability increases <a class='wiki-link' href='https://splatoonwiki.org/wiki/Super_Jump' target='_blank'>Super Jump</a> speed. " +
+                    "The benefits of this ability take effect when jumping to your teammates, a <a class='wiki-link' href='https://splatoonwiki.org/wiki/Squid_Beakon' target='_blank'>Squid Beakon</a>, or your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Spawn_point' target='_blank'>Spawn Point</a>." +
+                    "<br><br>This ability is displayed in Loadout as both the <i>Super Jump Time (Squid)</i> and <i>Super Jump Time (Kid)</i> stats.",
+                target: "icon:Quick Super Jump",
+                placement: "top"
+            },
+            {
+                title: "<u>Ink Resistance Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Ink_Resistance_Up' target='_blank'>Ink Resistance Up</a> ability provides several benefits when you are standing in enemy ink." +
+                    "It reduces the damage taken from enemy ink, increases your Run Speed and Jump Height in enemy ink, and even grants temporary immunity to the damage dealt by enemy ink." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Run Speed (Enemy Ink)</i> and <i>Ink Resistance Effects</i> table.",
+                target: "icon:Ink Resistance Up",
+                placement: "top"
+            },
+            {
+                title: "<u>Bomb Defense Up DX</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up_DX' target='_blank'>Bomb Defense Up DX</a> ability provides the benefits of <a class='wiki-link' href='https://splatoonwiki.org/wiki/Bomb_Defense_Up' target='_blank'>Bomb Defense Up</a> and <a class='wiki-link' href='https://splatoonwiki.org/wiki/Cold-Blooded' target='_blank'>Cold-Blooded</a>. " +
+                    "Bomb Defense Up reduces the damage taken from enemy <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_weapon' target='_blank'>Sub Weapons</a> and <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_weapon' target='_blank'>Special Weapons</a>." +
+                    "<br><br>This ability is displayed in Loadout as both the <i>Bomb Damage</i> and <i>Special Damage</i> tables.",
+                target: "icon:Bomb Defense Up DX",
+                placement: "top"
+            },
+            {
+                title: "<u>Main Power Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Main_Power_Up' target='_blank'>Main Power Up</a> ability enhances the performance of your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Main_weapon' target='_blank'>Main Weapon</a>. It has different effects for each weapon." +
+                    "<br><br>This ability is displayed in Loadout as both the <i>Main Power Up (1)</i> and <i>Main Power Up (2)</i> stats. The names will vary depending on the ability's effects granted for your weapon.",
+                target: "icon:Main Power Up",
+                placement: "top"
+            },
+            {
+                title: "<u>Quick Respawn</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Quick_Respawn' target='_blank'>Quick Respawn</a> ability shortens your respawn time after getting splatted." +
+                    "However, in order for Quick Respawn to activate, you must not splat an enemy during the time between your most recent death and current death." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Quick Respawn Time</i> stat.",
+                target: "icon:Quick Respawn",
+                placement: "top"
+            },
+            {
+                title: "<u>Special Charge Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_Charge_Up' target='_blank'>Special Charge Up</a> ability reduces the points needed to fill your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_gauge' target='_blank'>Special Gauge</a>." +
+                    "Each weapon has its own cost (points) required in order to activate its <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_weapon' target='_blank'>Special Weapon</a>." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Special Charge Speed</i> stat.",
+                target: "icon:Special Charge Up",
+                placement: "top"
+            },
+            {
+                title: "<u>Special Saver</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_Saver' target='_blank'>Special Saver</a> ability reduces the points removed from your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_gauge' target='_blank'>Special Gauge</a> when splatted." +
+                    "The effects of this stat are dramatically reduced when using the <a class='wiki-link' href='https://splatoonwiki.org/wiki/Respawn_Punisher' target='_blank'>Respawn Punisher</a> primary ability." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Special Saved</i> stat.",
+                target: "icon:Special Saver",
+                placement: "top"
+            },
+            {
+                title: "<u>Special Power Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_Power_Up' target='_blank'>Special Power Up</a> ability enhances the performance of your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Special_weapon' target='_blank'>Special Weapon</a>. It has different effects for each special." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Special Power</i> stat. The name will vary depending on the ability's effects granted for your special weapon.",
+                target: "icon:Special Power Up",
+                placement: "top"
+            },
+            {
+                title: "<u>Sub Power Up</u>",
+                content: "The <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_Power_Up' target='_blank'>Sub Power Up</a> ability enhances the performance of your <a class='wiki-link' href='https://splatoonwiki.org/wiki/Sub_weapon' target='_blank'>Sub Weapon</a>. It has different effects for each sub weapon." +
+                    "<br><br>This ability is displayed in Loadout as the <i>Sub Power</i> stat. The name will vary depending on the ability's effects granted for your sub weapon.",
+                target: "icon:Sub Power Up",
+                placement: "top"
+            },
+            {
                 title: "<u>Work In Progress</u>",
                 content: "This tutorial for Loadout is a work in progress. More information cards will be added in future updates. " +
                     "If you have feedback, suggestions, or comments please reach out to <a class='wiki-link' href='https://twitter.com/Selicia2' target='_blank'>Selicia</a> on Twitter.",
