@@ -224,6 +224,9 @@ angular.module('splatApp').tutorial = function(skillName) {
         "Main Power Up": 15,
         "Quick Respawn": 16,
         "Special Charge Up": 17,
+        "Special Saver": 18,
+        "Special Power Up": 19,
+        "Sub Power Up": 20
     };
 
     if(skillNameToIndex[skillName]) {
