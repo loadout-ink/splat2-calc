@@ -185,7 +185,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
       <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
     </ul>
 
-    <h4>Version 2.1.0 (Current)</h4>
+    <h4>Version 2.1.1 (Current)</h4>
+    <ul>
+    <li>French localisation added by <a href="https://github.com/Filumbitu" target="_blank">Filumbitu</a>!</li>
+    <li>Added information icons to abilities as tutorial shortcuts.</li>
+    <li>The tutorial windows will now try to position better on smaller screens.</li>
+    </ul>
+
+    <h4>Version 2.1.0</h4>
     <ul>
     <li>MPU stats will now retain the selected stat when changing gear, weapons, or abilities.</li>
     <li>Updated weapon special costs for v4.7.</li>
