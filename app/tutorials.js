@@ -1,4 +1,7 @@
-angular.module('splatApp').tutorial = function() {
+angular.module('splatApp').tutorial = function(skillName) {
+    var position = null;
+    if(screen.width <= 480) { position = "bottom"; } else { position = "right"; }
+
     var tour = {
         id: "loadout-tutorial",
         showPrevButton: true,
@@ -8,8 +11,7 @@ angular.module('splatApp').tutorial = function() {
             prevBtn: "Back",
             doneBtn: "Done",
             skipBtn: "Skip",
-            closeTooltip: "Close",
-            stepNums : ["1", "2", "3"]
+            closeTooltip: "Close"
           },
         steps: [
             {
@@ -22,7 +24,7 @@ angular.module('splatApp').tutorial = function() {
                     "The weapon's details will be displayed, along with its popularity." +
                     "<br><br>You can even earch for weapons by their <i>name</i>, <i>sub weapon</i>, or <i>special</i> too!",
                 target: "weapon",
-                placement: "right"
+                placement: position
             },
             {
                 title: "<u>Head Card</u>",
@@ -35,7 +37,7 @@ angular.module('splatApp').tutorial = function() {
                     "<li>The headgear's <a class='wiki-link' href='https://splatoonwiki.org/wiki/Brand' target='_blank'>brand</a>.</li></ul>" +
                     "You can even earch for headgear items by their <i>name</i>, <i>primary ability</i>, or <i>brand</i> too!",
                     target: "hats",
-                placement: "right"
+                placement: position
             },
             {
                 title: "<u>Headgear Abilities</u>",
@@ -58,7 +60,7 @@ angular.module('splatApp').tutorial = function() {
                     "<li>The clothes' <a class='wiki-link' href='https://splatoonwiki.org/wiki/Brand' target='_blank'>brand</a>.</li></ul>" +
                     "You can even earch for clothes by their <i>name</i>, <i>primary ability</i>, or <i>brand</i> too!",
                     target: "clothes",
-                placement: "right"
+                placement: position
             },
             {
                 title: "<u>Clothes Abilities</u>",
@@ -81,7 +83,7 @@ angular.module('splatApp').tutorial = function() {
                     "<li>The shoes' <a class='wiki-link' href='https://splatoonwiki.org/wiki/Brand' target='_blank'>brand</a>.</li></ul>" +
                     "You can even earch for shoes by their <i>name</i>, <i>primary ability</i>, or <i>brand</i> too!",
                     target: "shoes",
-                placement: "right"
+                placement: position
             },
             {
                 title: "<u>Shoes Abilities</u>",
@@ -210,6 +212,25 @@ angular.module('splatApp').tutorial = function() {
         ]
     };
 
-    hopscotch.startTour(tour);
+    var skillNameToIndex = {
+        "Ink Saver (Main)": 7,
+        "Ink Saver (Sub)": 8,
+        "Ink Recovery Up": 9,
+        "Run Speed Up": 10,
+        "Swim Speed Up": 11,
+        "Quick Super Jump": 12,
+        "Ink Resistance Up": 13,
+        "Bomb Defense Up DX": 14,
+        "Main Power Up": 15,
+        "Quick Respawn": 16,
+        "Special Charge Up": 17,
+    };
+
+    if(skillNameToIndex[skillName]) {
+        hopscotch.startTour(tour, skillNameToIndex[skillName]);
+    }
+    else {
+        hopscotch.startTour(tour);
+    }
 };
   

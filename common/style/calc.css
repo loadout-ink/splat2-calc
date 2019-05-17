@@ -653,3 +653,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background: #484848;
   color: white;
 }
+
+@media only screen and (min-width:800px) {
+  .fa-info-circle {
+    position: absolute !important;
+    right: 10px;
+    z-index: 100;
+  }
+}

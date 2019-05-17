@@ -237,7 +237,12 @@
                 </div>
               </div>
               <div class="row card" ability-box id="abilitybox">
-                <img fallback-img ng-repeat="skill in getStackableSkills()" id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
+                <span ng-repeat="skill in getStackableSkills()">
+                  <img fallback-img  id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
+                  <span style="position: relative; width: 0; height: 0">
+                      <span class="fa fa-info-circle fa-1" ng-controller="splatController" uib-tooltip="{{ UI_ABOUT | translate }}: {{skill.localizedName['{{ LANG_FULL | translate }}']}}" ng-click="tutorial(skill.name)" tooltip-append-to-body="true"></span>
+                  </span>
+                </span>
                 <hr>
                 <img fallback-img ng-repeat="skill in getExclusiveSkills()" id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"  ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{::skill}}" ng-src="{{::skill.image}}">
               </div>
