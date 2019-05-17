@@ -240,7 +240,7 @@
                 <span ng-repeat="skill in getStackableSkills()">
                   <img fallback-img  id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
                   <span style="position: relative; width: 0; height: 0">
-                      <span class="fa fa-info-circle fa-1" ng-controller="splatController" uib-tooltip="{{ UI_ABOUT | translate }}: {{skill.localizedName['{{ LANG_FULL | translate }}']}}" ng-click="tutorial(skill.name)" tooltip-append-to-body="true"></span>
+                      <span style="color: #fff;" class="fa fa-info-circle fa-1" ng-controller="splatController" uib-tooltip="{{ UI_ABOUT | translate }}: {{skill.localizedName['{{ LANG_FULL | translate }}']}}" ng-click="tutorial(skill.name)" tooltip-append-to-body="true"></span>
                   </span>
                 </span>
                 <hr>
@@ -262,6 +262,8 @@
                       <uib-progressbar type="pink" value="stat.value" max="stat.max" tooltip-placement="bottom" uib-tooltip="{{stat.desc}}" class="statbar"><span class="labelright readable">{{stat.label}} (&#177;{{stat.percentage}}%)</span></uib-progressbar>
                     </div>
                   </div>
+                  <!-- TODO: Add checkbox for toggling "conditional" stats (LDE, OG, Comeback, etc) -->
+                  <!-- <input type="checkbox" ng-model="string"> -->
                   <div id="disclaimer">{{ UI_STAT_TOGGLE_NOTICE | translate }}</div>
                 </div>
                 <div class="row">
