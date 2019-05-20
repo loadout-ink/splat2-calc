@@ -329,7 +329,14 @@ angular.module('splatApp').stats = function ($scope) {
       var p = this.calcP(abilityScore);       
       var s = this.calcS(ink_saver_sub_parameters);
       var reduction = this.calcRes(ink_saver_sub_parameters, p, s);      
-      var costPerSub = sub.cost * reduction;
+
+      var costPerSub = null;
+      if(loadout.weapon.type == "Splattershot Jr.") {
+        costPerSub = (sub.cost - sub.cost * 0.1) * reduction;
+      }
+      else {
+        costPerSub = sub.cost * reduction;
+      }
 
       this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (100 - (reduction*100)).toFixed(1)})
       this.label = "{{ LABEL_SUB_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerSub,3)})      

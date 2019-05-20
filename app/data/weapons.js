@@ -1147,6 +1147,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Каплетрон-компакт"
           },
           "class": "Shooter",
+          "type": "L-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Curling Bomb",
           "special": "Baller",
@@ -1185,6 +1186,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Каплетрон-компакт 2.0"
           },
           "class": "Shooter",
+          "type": "L-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Burst Bomb",
           "special": "Inkjet",
@@ -1223,6 +1225,7 @@ angular.module('splatApp').weapons = function($scope) {
             "ru_RU": "Каплетрон-компакт С.К."
           },
           "class": "Shooter",
+          "type": "L-3 Nozzlenose",
           "shotUnit": "{{ SHOT_UNIT_SHOT | translate }}",
           "sub": "Splash Wall",
           "special": "Ultra Stamp",
