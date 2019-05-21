@@ -17,6 +17,7 @@ angular
     $scope.appVersion = 211; // 2.X.X
     $scope.screenshotMode = false;
     $scope.toggledAbilities = {};
+    // $scope.conditionalAbilityCheckbox = false;
 
     $scope.tutorial = angular.module('splatApp').tutorial;
 
@@ -101,6 +102,24 @@ angular
       return false;
     }
 
+    $scope.resetConditionalAbilities = function() {
+      if(!$scope.loadout.hasAbility("Opening Gambit") && !$scope.loadout.hasAbility("Last-Ditch Effort") && !$scope.loadout.hasAbility("Comeback")) {
+        $scope.conditionalAbilityCheckbox = false;
+      }
+    }
+
+
+    $scope.toggleConditionalAbilityCheckbox = function() {
+      console.log($scope);
+      if($scope.loadout.hasAbility("Opening Gambit")) {
+        // TODO: Figure out why the checkbox's binding on "conditionalAbilityCheckbox" isn't working.
+        $scope.conditionalAbilityCheckbox = document.getElementById("checkbox:Opening Gambit").checked;
+        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
+        $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+      }
+    }
+
     $scope.switchSet = function() {
       $scope.loadout.weapon = $scope.availableWeapons()[0];
     }
@@ -122,9 +141,10 @@ angular
     }
 
      $scope.$watch('loadout', function() {
+       $scope.resetConditionalAbilities();
        $scope.refreshStats();
        $scope.loadSavedToggledAbilities();
-       history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout())
+       history.replaceState(undefined, undefined, "#" + $scope.encodeLoadout());
      },true);
 
     $scope.encodeLoadout = function() {
@@ -195,6 +215,16 @@ angular
       eval("$scope.loadout." + slot + ".equipped = item")
     }
 
+    $scope.getActiveConditionalAbilities = function() {
+      var activeConditionalAbilities = [];
+      for(var i = 0; i < $scope.skills.length; i++) {
+        if($scope.skills[i].conditional && $scope.loadout.hasAbility($scope.skills[i].name)) {
+          activeConditionalAbilities.push($scope.skills[i]);
+        }
+      }
+      return activeConditionalAbilities;
+    }
+
     $scope.toFixedTrimmed = function(number, precision) {
       return Number(number.toFixed(precision)).toString();
     }
@@ -256,6 +286,61 @@ angular
     $scope.calcStat = function(abilityScore, weaponType, stat, saveStat) {
       if(saveStat === undefined) {
         saveStat = false;
+      }
+
+      if(stat == "STAT_SWIM_SPEED") {
+        var swim_speed_parameters = null;
+        if($scope.loadout.weapon.speedLevel == 'Low') {
+          swim_speed_parameters = $scope.parameters["Swim Speed"]["Heavy"];
+        }
+        if($scope.loadout.weapon.speedLevel == 'Middle') {
+          swim_speed_parameters = $scope.parameters["Swim Speed"]["Mid"];
+        }
+        if($scope.loadout.weapon.speedLevel == "High") {
+          swim_speed_parameters = $scope.parameters["Swim Speed"]["Light"];
+        }
+  
+        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');
+  
+        console.log($scope);
+        console.log("$scope.conditionalAbilityCheckbox == " + $scope.conditionalAbilityCheckbox);
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+   
+        var p = $scope.calcP(abilityScore);
+  
+        if($scope.loadout.hasAbility('Ninja Squid')) {
+          p = p * 0.8;
+        }
+  
+        var s = $scope.calcS(swim_speed_parameters);
+        var swim_speed = $scope.calcRes(swim_speed_parameters, p, s);
+  
+        if($scope.loadout.hasAbility('Ninja Squid')) {
+          swim_speed = swim_speed * 0.9;
+        }
+  
+        var delta = ((swim_speed / swim_speed_parameters[2] - 1) * 100).toFixed(1).toString();
+  
+        var name = "{{ STAT_SWIM_SPEED | translate }}";
+        var value = swim_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(value,4)});
+
+        if($scope.logging) {
+          var swim_speed_debug_log = {"Swim Speed":swim_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(swim_speed_debug_log);        
+        }
+
+        return $scope.statValuesToDict(name, value, percentage, label);
       }
 
       if(stat == "STAT_SPECIAL_SAVER") {

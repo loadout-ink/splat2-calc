@@ -264,7 +264,14 @@
                   </div>
                   <!-- TODO: Add checkbox for toggling "conditional" stats (LDE, OG, Comeback, etc) -->
                   <!-- <input type="checkbox" ng-model="string"> -->
-                  <div id="disclaimer">{{ UI_STAT_TOGGLE_NOTICE | translate }}</div>
+                  <div id="disclaimer">
+                    <span ng-repeat="conditionalAbility in getActiveConditionalAbilities()">
+                      <input id="{{'checkbox:' + conditionalAbility.name}}" type="checkbox" ng-model="conditionalAbilityCheckbox" ng-change="toggleConditionalAbilityCheckbox()">
+                      <span>{{conditionalAbility.localizedName['{{ LANG_SELECTOR | translate }}'] || conditionalAbility.localizedName['{{ LANG_FULL | translate }}']}}</span>
+                    </span>
+                    <br>
+                    <span>{{ UI_STAT_TOGGLE_NOTICE | translate }}</span>
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">

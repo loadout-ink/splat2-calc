@@ -269,6 +269,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/StartAllUp.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 15
     },
     {
@@ -288,6 +289,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/EndAllUp.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 16
     },
     {
@@ -307,6 +309,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/ComeBack.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 17
     },
     {

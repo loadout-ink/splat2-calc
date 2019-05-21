@@ -42,44 +42,16 @@ function Stat(name, calc, max) {
 angular.module('splatApp').stats = function ($scope) {
   $scope.stats = {
     'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {
-      var default_swim_speed = null;
-      var swim_speed_parameters = null;
-      if(loadout.weapon.speedLevel == 'Low') {
-        swim_speed_parameters = $scope.parameters["Swim Speed"]["Heavy"];
-      }
-      if(loadout.weapon.speedLevel == 'Middle') {
-        swim_speed_parameters = $scope.parameters["Swim Speed"]["Mid"];
-      }
-      if(loadout.weapon.speedLevel == "High") {
-        swim_speed_parameters = $scope.parameters["Swim Speed"]["Light"];
-      }
+        var abilityScore = loadout.calcAbilityScore('Swim Speed Up');        
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SWIM_SPEED");
 
-      var abilityScore = loadout.calcAbilityScore('Swim Speed Up');      
-      var p = this.calcP(abilityScore);
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
 
-      if(loadout.hasAbility('Ninja Squid')) {
-        p = p * 0.8;
-      }
-
-      var s = this.calcS(swim_speed_parameters);
-      var swim_speed = this.calcRes(swim_speed_parameters, p, s);
-
-      if(loadout.hasAbility('Ninja Squid')) {
-        swim_speed = swim_speed * 0.9;
-      }
-
-      var delta = ((swim_speed / swim_speed_parameters[2] - 1) * 100).toFixed(1).toString();
-
-      if($scope.logging) {
-        var swim_speed_debug_log = {"Swim Speed":swim_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(swim_speed_debug_log);        
-      }
-
-      this.value = swim_speed;
-      this.percentage = delta;
-      this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
-      this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-      return this.value.toFixed(4);
+        return this.value.toFixed(4);
     }, 2.4),
 
     'Run Speed': new Stat("{{ STAT_RUN_SPEED | translate }}", function(loadout) {
