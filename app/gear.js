@@ -341,7 +341,7 @@ angular.module('splatApp').gear = function($scope) {
   }
 
   $scope.isPossibleMain = function(item, abilityName) {
-    return abilityName == undefined || item.main == abilityName || (item.brand != "amiibo" && item.brand != "Cuttlegear" && item.brand !="Grizzco" && item.main != abilityName) || (item.brand == "Grizzco" && item.main != abilityName && !$scope.getSkillByName(abilityName).exclusive);
+    return abilityName == undefined || item.main == abilityName || (item.brand != "amiibo" && item.brand != "Cuttlegear" && item.brand !="Grizzco" && item.main != abilityName) || (item.brand == "Grizzco" && item.main != abilityName && !$scope.getSkillByName(abilityName).exclusive) || (item.splatnetShop != null && item.splatnetShop);
   }
 
   $scope.getHatById = function(id) {

@@ -614,7 +614,8 @@ angular.module('splatApp').clothes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 3,
     "id": 27,
-    "splatnet": 1028
+    "splatnet": 1028,
+    "splatnetShop": true
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_TES029.png",
