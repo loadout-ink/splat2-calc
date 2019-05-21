@@ -2581,14 +2581,19 @@ angular
           var p = $scope.calcP(abilityScore);      
           var s = $scope.calcS(parameters);
           var result = $scope.calcRes(parameters, p, s);
-          var max_param = parameters[0];
-          var min_param = parameters[2];
+          var max_value = $scope.parameters["Main Power Up"]["Rapid Blaster Pro"]["CollisionRadiusRate"]["CollisionRadiusMiddle_MWPUG_Max"];
+          var min_value = $scope.parameters["Main Power Up"]["Rapid Blaster Pro"]["CollisionRadiusRate"]["CollisionRadiusMiddle"];
+  
+          result = result * $scope.parameters["Main Power Up"]["Rapid Blaster Pro"]["CollisionRadiusRate"]["CollisionRadiusMiddle"];
+          if(result > max_value) {
+            result = max_value;
+          }
   
           var name = "{{ STAT_MAIN_POWER_UP_DAMAGE_RADIUS | translate }}";
-          var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-          var percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-          var label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_param) * 100),3)});
-  
+          var value = $scope.toFixedTrimmed((result/max_value) * 100,2);
+          var percentage = Math.abs(((result/min_value - 1) * 100).toFixed(1));
+          var label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_value) * 100),3)});
+          
           if($scope.logging) {
             var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":percentage}
             console.log(main_power_up_debug_log);
@@ -2625,14 +2630,19 @@ angular
           var p = $scope.calcP(abilityScore);      
           var s = $scope.calcS(parameters);
           var result = $scope.calcRes(parameters, p, s);
-          var max_param = parameters[0];
-          var min_param = parameters[2];
+          var max_value = $scope.parameters["Main Power Up"]["Rapid Blaster"]["CollisionRadiusRate"]["CollisionRadiusMiddle_MWPUG_Max"];
+          var min_value = $scope.parameters["Main Power Up"]["Rapid Blaster"]["CollisionRadiusRate"]["CollisionRadiusMiddle"];
+  
+          result = result * $scope.parameters["Main Power Up"]["Rapid Blaster"]["CollisionRadiusRate"]["CollisionRadiusMiddle"];
+          if(result > max_value) {
+            result = max_value;
+          }
   
           var name = "{{ STAT_MAIN_POWER_UP_DAMAGE_RADIUS | translate }}";
-          var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-          var percentage = Math.abs(((result/min_param - 1) * 100).toFixed(1));
-          var label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_param) * 100),3)});
-  
+          var value = $scope.toFixedTrimmed((result/max_value) * 100,2);
+          var percentage = Math.abs(((result/min_value - 1) * 100).toFixed(1));
+          var label = "{{ LABEL_PERCENT | translate }}".format({value: $scope.toFixedTrimmed(((result/min_value) * 100),3)});
+          
           if($scope.logging) {
             var main_power_up_debug_log = {"Main Power Up":result,"AP:":abilityScore,"P":p,"S":s,"Delta:":percentage}
             console.log(main_power_up_debug_log);
@@ -5074,7 +5084,9 @@ angular
               1.093939,
               1.036364, 
               1.0
-            ]
+            ],
+            "CollisionRadiusMiddle": 33,
+            "CollisionRadiusMiddle_MWPUG_Max": 35
           }
         },
         "Rapid Blaster": {
@@ -5092,7 +5104,9 @@ angular
               1.093939,
               1.036364, 
               1.0
-            ]
+            ],
+            "CollisionRadiusMiddle": 33,
+            "CollisionRadiusMiddle_MWPUG_Max": 35
           }
         },
         "Slosher": {
