@@ -42,7 +42,7 @@ function Stat(name, calc, max) {
 angular.module('splatApp').stats = function ($scope) {
   $scope.stats = {
     'Swim Speed': new Stat("{{ STAT_SWIM_SPEED | translate }}", function(loadout) {
-        var abilityScore = loadout.calcAbilityScore('Swim Speed Up');        
+        var abilityScore = loadout.calcAbilityScore('Swim Speed Up'); 
         var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SWIM_SPEED");
 
         this.name = statValues.name;
@@ -55,130 +55,40 @@ angular.module('splatApp').stats = function ($scope) {
     }, 2.4),
 
     'Run Speed': new Stat("{{ STAT_RUN_SPEED | translate }}", function(loadout) {
-        var default_run_speed = null;
-        var run_speed_parameters = null;
-        if(loadout.weapon.speedLevel == 'Low') {
-          run_speed_parameters = $scope.parameters["Run Speed"]["Heavy"];
-        }
-        if(loadout.weapon.speedLevel == 'Middle') {
-          run_speed_parameters = $scope.parameters["Run Speed"]["Mid"];
-        }
-        if(loadout.weapon.speedLevel == "High") {
-          run_speed_parameters = $scope.parameters["Run Speed"]["Light"];
-        }
+        var abilityScore = loadout.calcAbilityScore('Run Speed Up'); 
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_RUN_SPEED");
 
-        var abilityScore = loadout.calcAbilityScore('Run Speed Up');        
-        var p = this.calcP(abilityScore);       
-        var s = this.calcS(run_speed_parameters);
-        var run_speed = this.calcRes(run_speed_parameters, p, s);
-        var delta = ((run_speed / run_speed_parameters[2] - 1) * 100).toFixed(1).toString();        
-        
-        if($scope.logging) {
-          var run_speed_debug_log = {"Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-          console.log(run_speed_debug_log);
-        }
-
-        this.value = run_speed;
-        this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)})
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
         this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
         return this.value.toFixed(4);
       }, 1.44),
 
     'Run Speed (Enemy Ink)': new Stat("{{ STAT_RUN_SPEED_RESIST | translate }}", function(loadout) {
-        // TODO: Verify these results with Leanny
-        var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
-        var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
-        var p = this.calcP(abilityScore);       
-        var s = this.calcS(ink_resistance_parameters);
-        var run_speed = this.calcRes(ink_resistance_parameters, p, s);
-        var delta = ((run_speed / ink_resistance_parameters[2] - 1) * 100).toFixed(1).toString();        
-        
-        if($scope.logging) {
-          var run_speed_debug_log = {"Enemy Ink Run Speed":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-          console.log(run_speed_debug_log);
-        }
-        /*  Not sure why the old Loadout site had significantly different values for
-            this stat then Leanny's formula. His follows the same results here:
-            See: https://gamefaqs.gamespot.com/boards/200279-splatoon-2/75638591#5 
-        */
+      var abilityScore = loadout.calcAbilityScore('Ink Resistance Up'); 
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_RUN_SPEED_RESIST");
 
-        this.value = run_speed;
-        this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
-        this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-        return this.value.toFixed(4);
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
+      return this.value.toFixed(4);
       }, 0.72),
 
     'Run Speed (Firing)': new Stat("{{ STAT_RUN_SPEED_FIRING | translate }}", function(loadout) {
-        if(loadout.weapon.class.toLowerCase() =='roller') {
-          this.value = loadout.weapon.dashSpeed;
-          this.percentage = 0.0;
-          this.name = "[+] {{ STAT_RUN_SPEED_ROLLING | translate }}";
-          this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: this.value.toFixed(2)});
-          this.desc = "{{ ROLL_SPEED | translate }}";
-          return this.value.toFixed(2);        
-        }
-
-        // NOTE: Factor MPU bonus into Run Speed (Dash) for Brushes
-        if(loadout.weapon.class.toLowerCase() == 'brush') {
-            var parameters = null;            
-            if(loadout.weapon.name.indexOf('Inkbrush') != -1) {
-              parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["DashSpeed"]["params"];
-            }
-            if(loadout.weapon.name.indexOf('Octobrush') != -1 || loadout.weapon.name.indexOf('Herobrush Replica') != -1) {
-              parameters = $scope.parameters["Main Power Up"]["Octobrush"]["DashSpeed"]["params"];
-            }
-            
-            var abilityScore = loadout.calcAbilityScore('Main Power Up');
-            var p = this.calcP(abilityScore);
-            var s = this.calcS(parameters);
-            var result = this.calcRes(parameters, p, s);
-      
-            var max_param = parameters[0];
-            var min_param = parameters[2];
-    
-            this.value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-            this.percentage = ((result/min_param - 1) * 100).toFixed(1);            
-            this.name = "[+] {{ STAT_RUN_SPEED_DASHING | translate }}";
-            this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(result,4)});
-            this.desc = "{{ BRUSH_SPEED | translate }}";
-            return this.value;
-        }
-
-        if(loadout.weapon.class.toLowerCase() == 'charger') {
-          this.name = "{{ STAT_RUN_SPEED_CHARGING | translate }}";
-        }
-        else if(loadout.weapon.class.toLowerCase() == 'splatling' || loadout.weapon.class.toLowerCase() == 'brella') {
-          this.name = "[+] {{ STAT_RUN_SPEED_FIRING | translate }}";
-        }
-        else {
-          this.name = "{{ STAT_RUN_SPEED_FIRING | translate }}";
-        }
-      
-        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][loadout.weapon.shootingSpeed];
         var abilityScore = loadout.calcAbilityScore('Run Speed Up');
-        var p = this.calcP(abilityScore);       
-        var s = this.calcS(run_speed_parameters);
-        var run_speed = this.calcRes(run_speed_parameters, p, s) * loadout.weapon.baseSpeed;
-        var delta = ((run_speed / loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();        
+        var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
 
-        if($scope.logging) {
-          var run_speed_debug_log = {"Run Speed (Firing)":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-          console.log(run_speed_debug_log);
-        }
-
-        this.value = run_speed;
-        this.percentage = delta;
-        this.label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(this.value,4)});
-        this.desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
-
-        if(isNaN(this.value)) {
-          this.value = 0;
-          this.label = "{{ UNAVAILABLE | translate}}";
-          this.desc = null;
-        }
-        return this.value.toFixed(4);
+        this.name = statValues.name;
+        this.value = statValues.value;
+        this.percentage = statValues.percentage;
+        this.label = statValues.label;
+        this.desc = statValues.desc;
       }, 1.44),
 
     'Ink Recovery Speed (Squid)': new Stat("{{ STAT_RECOVERY_SQUID | translate }}", function(loadout) {
@@ -1922,6 +1832,15 @@ angular.module('splatApp').stats = function ($scope) {
   $scope.getAdjustedInkResistanceEffect = function(key, loadout) {
     var parameters = $scope.parameters["Ink Resistance"][key];
     var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
+
+    if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+      abilityScore += 30;
+    }
+
+    if(abilityScore > 57) {
+      abilityScore = 57;
+    }
+
     var p = $scope.calcP(abilityScore);       
     var s = $scope.calcS(parameters);
     var result = $scope.calcRes(parameters, p, s);

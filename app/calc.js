@@ -110,13 +110,29 @@ angular
 
 
     $scope.toggleConditionalAbilityCheckbox = function() {
-      console.log($scope);
       if($scope.loadout.hasAbility("Opening Gambit")) {
         // TODO: Figure out why the checkbox's binding on "conditionalAbilityCheckbox" isn't working.
         $scope.conditionalAbilityCheckbox = document.getElementById("checkbox:Opening Gambit").checked;
+
+        // 1. Modify the Swim Speed stat.
         var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
         var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
         $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+      
+        // 2. Modify the Run Speed stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED");
+        $scope.displayStat("Run Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+      
+        // 3. Modify the Ink Resistance (Run Speed) stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Ink Resistance Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_RESIST");
+        $scope.displayStat("Run Speed (Enemy Ink)", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 4. Modify the Run Speed Firing stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
+        $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
       }
     }
 
@@ -266,20 +282,25 @@ angular
       }
     }
 
-    $scope.statValuesToDict = function(name, value, percentage, label) {
+    $scope.statValuesToDict = function(name, value, percentage, label, desc) {
       return {
         "name": name,
         "value": value,
         "percentage": percentage,
-        "label": label
+        "label": label,
+        "desc": desc
       };
     }
 
-    $scope.displayStat = function(key, name, value, percentage, label) {
+    $scope.displayStat = function(key, name, value, percentage, label, desc) {
       $scope.stats[key].name = name;
       $scope.stats[key].value = value;
       $scope.stats[key].percentage = percentage;
       $scope.stats[key].label = label;
+
+      if(desc != null) {
+        $scope.stats[key].desc = desc;
+      }
     }
 
     // TODO: Remove the Ability Score and Weapon Type parameters. Determine both in function.
@@ -302,13 +323,11 @@ angular
   
         var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');
   
-        console.log($scope);
-        console.log("$scope.conditionalAbilityCheckbox == " + $scope.conditionalAbilityCheckbox);
         if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
           abilityScore += 30;
         }
         if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
-          abilityScore += 30;
+          abilityScore += 10;
         }
 
         if(abilityScore > 57) {
@@ -341,6 +360,301 @@ angular
         }
 
         return $scope.statValuesToDict(name, value, percentage, label);
+      }
+
+      if(stat == "STAT_RUN_SPEED") {
+        var run_speed_parameters = null;
+        if($scope.loadout.weapon.speedLevel == 'Low') {
+          run_speed_parameters = $scope.parameters["Run Speed"]["Heavy"];
+        }
+        if($scope.loadout.weapon.speedLevel == 'Middle') {
+          run_speed_parameters = $scope.parameters["Run Speed"]["Mid"];
+        }
+        if($scope.loadout.weapon.speedLevel == "High") {
+          run_speed_parameters = $scope.parameters["Run Speed"]["Light"];
+        }
+
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(run_speed_parameters);
+
+        var name = "{{ STAT_RUN_SPEED | translate }}";
+        var value = $scope.calcRes(run_speed_parameters, p, s);
+        var percentage = ((value / run_speed_parameters[2] - 1) * 100).toFixed(1).toString();        
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(value,4)})
+
+        if($scope.logging) {
+          var run_speed_debug_log = {"Run Speed":value,"AP":abilityScore,"P":p,"S":s,"Delta":percentage}
+          console.log(run_speed_debug_log);
+        }
+
+        return $scope.statValuesToDict(name, value, percentage, label);
+      }
+
+      if(stat == "STAT_RUN_SPEED_RESIST") {
+        var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Resistance Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_resistance_parameters);
+        
+        var name = "{{ STAT_RUN_SPEED_RESIST | translate }}";
+        var value = $scope.calcRes(ink_resistance_parameters, p, s);
+        var percentage = ((value / ink_resistance_parameters[2] - 1) * 100).toFixed(1).toString();        
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(value,4)});
+
+        if($scope.logging) {
+          var run_speed_debug_log = {"Enemy Ink Run Speed":value,"AP":abilityScore,"P":p,"S":s,"Delta":percentage}
+          console.log(run_speed_debug_log);
+        }
+
+        return $scope.statValuesToDict(name, value, percentage, label);
+      }
+
+      if(stat == "STAT_RUN_SPEED_FIRING") {
+        if($scope.loadout.weapon.class.toLowerCase() =='roller') {
+          var name = "[+] {{ STAT_RUN_SPEED_ROLLING | translate }}";
+          var value = $scope.loadout.weapon.dashSpeed;
+          var percentage = 0.0;
+          var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: value.toFixed(2)});
+          var desc = "{{ ROLL_SPEED | translate }}";
+
+          if(saveStat) {
+            $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+          }
+
+          return $scope.statValuesToDict(name, value, percentage, label, desc);        
+        }
+
+        if($scope.loadout.weapon.class.toLowerCase() == 'brush') {
+            var parameters = null;            
+            if($scope.loadout.weapon.type == 'Inkbrush') {
+              parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["DashSpeed"]["params"];
+            }
+            if($scope.loadout.weapon.type == 'Octobrush') {
+              parameters = $scope.parameters["Main Power Up"]["Octobrush"]["DashSpeed"]["params"];
+            }
+            
+            var abilityScore = $scope.loadout.calcAbilityScore('Main Power Up');
+            var p = $scope.calcP(abilityScore);
+            var s = $scope.calcS(parameters);
+            var result = $scope.calcRes(parameters, p, s);
+      
+            var max_param = parameters[0];
+            var min_param = parameters[2];
+    
+            var name = "[+] {{ STAT_RUN_SPEED_DASHING | translate }}";
+            var value = $scope.toFixedTrimmed((result/max_param) * 100,2);
+            var percentage = ((result/min_param - 1) * 100).toFixed(1);            
+            var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(result,4)});
+            var desc = "{{ BRUSH_SPEED | translate }}";
+
+            if(saveStat) {
+              $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+            }
+
+            return $scope.statValuesToDict(name, value, percentage, label, desc);
+        }
+
+        if($scope.loadout.weapon.class.toLowerCase() == 'splatling' || $scope.loadout.weapon.class.toLowerCase() == 'brella') {
+          var name = "[+] {{ STAT_RUN_SPEED_FIRING | translate }}";
+        }
+        else {
+          var name = "{{ STAT_RUN_SPEED_FIRING | translate }}";
+        }
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(run_speed_parameters);
+        var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.baseSpeed;
+        var delta = ((run_speed / $scope.loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();        
+
+        if($scope.logging) {
+          var run_speed_debug_log = {"Run Speed (Firing)":run_speed,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(run_speed_debug_log);
+        }
+
+        var value = run_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(value,4)});
+        var desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
+        if(isNaN(value)) {
+          value = 0;
+          label = "{{ UNAVAILABLE | translate}}";
+          desc = null;
+        }
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+        }
+
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_RUN_SPEED_CHARGING") {
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(run_speed_parameters);
+        var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.chargeSpeed;
+        var delta = ((run_speed / $scope.loadout.weapon.chargeSpeed - 1) * 100).toFixed(1).toString();
+        
+        var name = "[+] {{ STAT_RUN_SPEED_CHARGING | translate }}";
+        var value = run_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+        }
+        
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_RUN_SPEED_FLICKING_HORIZONTAL") {
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(run_speed_parameters);
+        var result = $scope.calcRes(run_speed_parameters, p, s);
+        var run_speed = result * $scope.loadout.weapon.horizontalSwingMoveSpeed;
+        var delta = ((run_speed / $scope.loadout.weapon.horizontalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
+
+        var name = "[+] {{ STAT_RUN_SPEED_FLICKING_HORIZONTAL | translate }}";
+        var value = run_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+        var desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";        
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+        }
+        
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_RUN_SPEED_FLICKING_VERTICAL") {
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(run_speed_parameters);
+        var result = $scope.calcRes(run_speed_parameters, p, s);
+        var run_speed = result * $scope.loadout.weapon.verticalSwingMoveSpeed;
+        var delta = ((run_speed / $scope.loadout.weapon.verticalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
+
+        var name = "[+] {{ STAT_RUN_SPEED_FLICKING_VERTICAL | translate }}";
+        var value = run_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+        var desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+        }
+        
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_RUN_SPEED_FLICKING") {
+        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
+        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);
+        var s = $scope.calcS(run_speed_parameters);
+        var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.horizontalSwingMoveSpeed;
+        var delta = ((run_speed / $scope.loadout.weapon.horizontalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
+
+        var name = "[+] {{ STAT_RUN_SPEED_FLICKING | translate }}";
+        var value = run_speed;
+        var percentage = delta;
+        var label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+        var desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Run Speed (Firing)");
+        }
+        
+        return $scope.statValuesToDict(name, value, percentage, label, desc);        
       }
 
       if(stat == "STAT_SPECIAL_SAVER") {
@@ -4185,33 +4499,16 @@ angular
         }        
       }
 
-      // TODO: Add Charging run speeds for Charger weapons
       if($scope.loadout.weapon.class.toLowerCase() == 'splatling' || $scope.loadout.weapon.class.toLowerCase() == 'brella') {
         if(name == "[+] {{ STAT_RUN_SPEED_FIRING | translate }}") {
-          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
           var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
-          var p = $scope.calcP(abilityScore);       
-          var s = $scope.calcS(run_speed_parameters);
-          var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.chargeSpeed;
-          var delta = ((run_speed / $scope.loadout.weapon.chargeSpeed - 1) * 100).toFixed(1).toString();
-          
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_CHARGING | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = run_speed;
-          $scope.stats["Run Speed (Firing)"].percentage = delta;
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_CHARGING", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label);
         }
         else {
-          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
           var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
-          var p = $scope.calcP(abilityScore);       
-          var s = $scope.calcS(run_speed_parameters);
-          var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.baseSpeed;
-          var delta = ((run_speed / $scope.loadout.weapon.baseSpeed - 1) * 100).toFixed(1).toString();
-          
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_FIRING | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = run_speed;
-          $scope.stats["Run Speed (Firing)"].percentage = delta;
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});        
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label);
         }
       }
 
@@ -4263,36 +4560,23 @@ angular
         /****************************
          * RUN SPEED (FIRING) STATS *
          ****************************/
-        var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
-        var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
-        var p = $scope.calcP(abilityScore);       
-        var s = $scope.calcS(run_speed_parameters);
-        var result = $scope.calcRes(run_speed_parameters, p, s);
+
 
         if(name == "[+] {{ STAT_RUN_SPEED_ROLLING | translate }}") {
-          var run_speed = result * $scope.loadout.weapon.horizontalSwingMoveSpeed;
-          var delta = ((run_speed / $scope.loadout.weapon.horizontalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_FLICKING_HORIZONTAL | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = run_speed;
-          $scope.stats["Run Speed (Firing)"].percentage = delta;
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
-          $scope.stats["Run Speed (Firing)"].desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FLICKING_HORIZONTAL", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);          
         }
         else if(name == "[+] {{ STAT_RUN_SPEED_FLICKING_HORIZONTAL | translate }}") {
-          var run_speed = result * $scope.loadout.weapon.verticalSwingMoveSpeed;
-          var delta = ((run_speed / $scope.loadout.weapon.verticalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_FLICKING_VERTICAL | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = run_speed;
-          $scope.stats["Run Speed (Firing)"].percentage = delta;
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
-          $scope.stats["Run Speed (Firing)"].desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FLICKING_VERTICAL", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);          
+
         }
         else if(name == "[+] {{ STAT_RUN_SPEED_FLICKING_VERTICAL | translate }}") {
-          $scope.stats["Run Speed (Firing)"].value = $scope.loadout.weapon.dashSpeed;
-          $scope.stats["Run Speed (Firing)"].percentage = 0.0;
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_ROLLING | translate }}";
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.loadout.weapon.dashSpeed});
-          $scope.stats["Run Speed (Firing)"].desc = "{{ ROLL_SPEED | translate }}";
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);          
         }
       }
 
@@ -4337,41 +4621,14 @@ angular
          * RUN SPEED (FIRING) STATS *
          ****************************/
         if(name == "[+] {{ STAT_RUN_SPEED_DASHING | translate }}") {
-          var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
           var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
-          var p = $scope.calcP(abilityScore);
-          var s = $scope.calcS(run_speed_parameters);
-          var run_speed = $scope.calcRes(run_speed_parameters, p, s) * $scope.loadout.weapon.horizontalSwingMoveSpeed;
-          var delta = ((run_speed / $scope.loadout.weapon.horizontalSwingMoveSpeed - 1) * 100).toFixed(1).toString();        
-
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_FLICKING | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = run_speed;
-          $scope.stats["Run Speed (Firing)"].percentage = delta;
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(run_speed,4)});
-          $scope.stats["Run Speed (Firing)"].desc = "{{ UNIT_DISTANCE_UNITS_PER_FRAME | translate }}";
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FLICKING", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);          
         }
         else if(name == "[+] {{ STAT_RUN_SPEED_FLICKING | translate }}") {
-          var parameters = null;            
-          if($scope.loadout.weapon.name.indexOf('Inkbrush') != -1) {
-            parameters = $scope.parameters["Main Power Up"]["Inkbrush"]["DashSpeed"]["params"];
-          }
-          if($scope.loadout.weapon.name.indexOf('Octobrush') != -1 || $scope.loadout.weapon.name.indexOf('Herobrush Replica') != -1) {
-            parameters = $scope.parameters["Main Power Up"]["Octobrush"]["DashSpeed"]["params"];
-          }
-          
-          var abilityScore = $scope.loadout.calcAbilityScore('Main Power Up');
-          var p = $scope.calcP(abilityScore);
-          var s = $scope.calcS(parameters);
-          var result = $scope.calcRes(parameters, p, s);
-    
-          var max_param = parameters[0];
-          var min_param = parameters[2];
-  
-          $scope.stats["Run Speed (Firing)"].name = "[+] {{ STAT_RUN_SPEED_DASHING | translate }}";
-          $scope.stats["Run Speed (Firing)"].value = $scope.toFixedTrimmed((result/max_param) * 100,2);
-          $scope.stats["Run Speed (Firing)"].percentage = ((result/min_param - 1) * 100).toFixed(1);            
-          $scope.stats["Run Speed (Firing)"].label = "{{ LABEL_DISTANCE_PER_FRAME | translate }}".format({value: $scope.toFixedTrimmed(result,4)});
-          $scope.stats["Run Speed (Firing)"].desc = "{{ BRUSH_SPEED | translate }}";
+          var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING", true);
+          $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);                    
         }
       }
 
