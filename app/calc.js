@@ -70,6 +70,12 @@ angular
             if(statKey == "Sub Power") {
               abilityName = "Sub Power Up";
             }
+            if(statKey == "Run Speed (Firing)") {
+              abilityName = "Run Speed Up";
+            }
+            if(statKey == "Ink Consumption (Main)") {
+              abilityName = "Ink Saver (Main)";
+            }
   
             var abilityScore = $scope.loadout.calcAbilityScore(abilityName);
             var statValues = $scope.calcStat(abilityScore, weaponName, statName);
@@ -103,11 +109,10 @@ angular
     }
 
     $scope.resetConditionalAbilities = function() {
-      if(!$scope.loadout.hasAbility("Opening Gambit") && !$scope.loadout.hasAbility("Last-Ditch Effort") && !$scope.loadout.hasAbility("Comeback")) {
+      if(!$scope.loadout.hasAbility("Opening Gambit") && !$scope.loadout.hasAbility("Last-Ditch Effort") && !$scope.loadout.hasAbility("Comeback") && !$scope.loadout.hasAbility("Drop Roller")) {
         $scope.conditionalAbilityCheckbox = false;
       }
     }
-
 
     $scope.toggleConditionalAbilityCheckbox = function() {
       if($scope.loadout.hasAbility("Opening Gambit")) {
@@ -133,6 +138,51 @@ angular
         abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
         statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
         $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+      }
+
+      if($scope.loadout.hasAbility("Comeback")) {
+        // TODO: Figure out why the checkbox's binding on "conditionalAbilityCheckbox" isn't working.
+        $scope.conditionalAbilityCheckbox = document.getElementById("checkbox:Comeback").checked;
+
+        // 1. Modify the Ink Consumption (Main) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN");
+        $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 2. Modify the Ink Consumption (Sub) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Sub)');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_SUB");
+        $scope.displayStat("Ink Consumption (Sub)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 3. Modify the Ink Recovery Speed (Squid) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RECOVERY_SQUID");
+        $scope.displayStat("Ink Recovery Speed (Squid)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 4. Modify the Ink Recovery Speed (Kid) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RECOVERY_KID");
+        $scope.displayStat("Ink Recovery Speed (Kid)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 5. Modify the Run Speed stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED");
+        $scope.displayStat("Run Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 6. Modify the Run Speed (Firing) stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
+        $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 7. Modify the Swim Speed stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
+        $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 8. Modify the Special Charge Speed stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Special Charge Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SPECIAL_CHARGE");
+        $scope.displayStat("Special Charge Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
       }
     }
 
@@ -657,6 +707,36 @@ angular
         return $scope.statValuesToDict(name, value, percentage, label, desc);        
       }
 
+      if(stat == "STAT_SPECIAL_CHARGE") {
+        var special_charge_speed_parameters = $scope.parameters["Special Charge Up"]["default"]
+        var abilityScore = $scope.loadout.calcAbilityScore('Special Charge Up');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(special_charge_speed_parameters);
+        var special_charge_speed = $scope.calcRes(special_charge_speed_parameters, p, s);      
+  
+        var name = "{{ STAT_SPECIAL_CHARGE | translate }}";
+        var value = special_charge_speed;
+        var percentage = ((special_charge_speed*100) - 100).toFixed(1);
+        var desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.ceil($scope.loadout.weapon.specialCost / special_charge_speed)});
+        var label = "{{ LABEL_PERCENT | translate }}".format({value: (value*100).toFixed(1)});
+  
+        if($scope.logging) {
+          var special_charge_speed_debug_log = {"Special Charge Speed":special_charge_speed,"AP":abilityScore,"P":p,"S":s,"Delta":percentage}
+          console.log(special_charge_speed_debug_log);
+        }
+  
+        return $scope.statValuesToDict(name, value, percentage, label, desc);      
+      }
+
       if(stat == "STAT_SPECIAL_SAVER") {
         var parameters = $scope.parameters["Special Saver"]["default"];
         var ap = abilityScore * 1.0;
@@ -850,6 +930,311 @@ angular
         }
         return $scope.statValuesToDict(name, value, percentage, label);
       }
+
+      if(stat == "STAT_SAVER_MAIN") {
+        var ink_saver_parameters = null;
+        if($scope.loadout.weapon.inkSaver == 'Low') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        }
+        if($scope.loadout.weapon.inkSaver == 'Middle') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
+        }
+        if($scope.loadout.weapon.inkSaver == "High") {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
+        }
+  
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_parameters);
+        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
+  
+        if($scope.loadout.weapon.class == "Roller" || $scope.loadout.weapon.class == "Brush") {
+          var costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
+          var name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
+          var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});
+        }
+        else {
+          var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
+          var name = "{{ STAT_SAVER_MAIN | translate }}";
+          var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+          var label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: $scope.loadout.weapon.shotUnit});
+        }
+  
+        if($scope.loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
+          var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
+        }
+        
+        var value = costPerShot;
+        var percentage = (100 - (reduction*100)).toFixed(1);
+  
+        if($scope.logging) {
+          var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction};
+          console.log(ink_saver_debug_log);
+        }
+  
+        if(isNaN(value)) {
+          value = 0;
+          label = "{{ UNAVAILABLE | translate}}";
+          desc = null;
+        }
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Ink Consumption (Main)");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_SAVER_MAIN_FLICK") {
+        var ink_saver_parameters = null;
+        if($scope.loadout.weapon.inkSaver == 'Low') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        }
+        if($scope.loadout.weapon.inkSaver == 'Middle') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
+        }
+        if($scope.loadout.weapon.inkSaver == "High") {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
+        }
+
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_parameters);
+        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
+        var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
+
+        var name = "[+] {{ STAT_SAVER_MAIN_FLICK | translate }}";
+        var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK | translate}}"});
+        var value = costPerShot;
+        var percentage = (100 - (reduction*100)).toFixed(1);
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Ink Consumption (Main)");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label, desc);        
+      }
+
+      if(stat == "STAT_SAVER_MAIN_HORIZONTAL_FLICK") {
+        var ink_saver_parameters = null;
+        if($scope.loadout.weapon.inkSaver == 'Low') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        }
+        if($scope.loadout.weapon.inkSaver == 'Middle') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
+        }
+        if($scope.loadout.weapon.inkSaver == "High") {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
+        }
+
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_parameters);
+        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
+        var costPerShot = $scope.loadout.weapon.horizontalInkPerShot * reduction;
+
+        var name = "[+] {{ STAT_SAVER_MAIN_HORIZONTAL_FLICK | translate }}";
+        var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_HORIZ | translate}}"});
+        var value = costPerShot;
+        var percentage = (100 - (reduction*100)).toFixed(1);
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Ink Consumption (Main)");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_SAVER_MAIN_VERTICAL_FLICK") {
+        var ink_saver_parameters = null;
+        if($scope.loadout.weapon.inkSaver == 'Low') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        }
+        if($scope.loadout.weapon.inkSaver == 'Middle') {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
+        }
+        if($scope.loadout.weapon.inkSaver == "High") {
+          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
+        }
+
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_parameters);
+        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
+        var costPerShot = $scope.loadout.weapon.verticalInkPerShot * reduction;
+
+        var name = "[+] {{ STAT_SAVER_MAIN_VERTICAL_FLICK | translate }}";
+        var desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
+        var label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_VERT | translate}}"});
+        var value = costPerShot;
+        var percentage = (100 - (reduction*100)).toFixed(1);
+
+        if(saveStat) {
+          $scope.saveToggledAbility($scope.loadout.weapon.name, stat, "Ink Consumption (Main)");
+        }
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      if(stat == "STAT_SAVER_SUB") {
+        var ink_saver_sub_parameters = null;
+        var sub = $scope.getSubByName($scope.loadout.weapon.sub);
+        
+        if(sub.inkSaver == 'A') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["A"];
+        }
+        if(sub.inkSaver == 'B') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["B"];
+        }
+        if(sub.inkSaver == 'C') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["C"];
+        }
+        if(sub.inkSaver == 'D') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["D"];
+        }
+        if(sub.inkSaver == 'E') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["E"];
+        }
+        if(sub.inkSaver == 'F') {
+          ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["F"];
+        }
+  
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Sub)');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_saver_sub_parameters);
+        var reduction = $scope.calcRes(ink_saver_sub_parameters, p, s);      
+  
+        var costPerSub = null;
+        if($scope.loadout.weapon.type == "Splattershot Jr.") {
+          costPerSub = (sub.cost - sub.cost * 0.1) * reduction;
+        }
+        else {
+          costPerSub = sub.cost * reduction;
+        }
+  
+        var name = "{{ STAT_SAVER_SUB | translate }}";
+        var desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (100 - (reduction*100)).toFixed(1)})
+        var label = "{{ LABEL_SUB_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerSub,3)})      
+        var value = costPerSub;
+        var percentage = (100 - (reduction*100)).toFixed(1);
+  
+        if($scope.logging) {
+          var ink_saver_sub_debug_log = {"Ink Saver (Sub)":costPerSub,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
+          console.log(ink_saver_sub_debug_log);
+        }
+  
+        return $scope.statValuesToDict(name, value, percentage, label, desc);
+      }
+
+      // TODO: Fix the progress bar so it decreases
+      if(stat == "STAT_RECOVERY_SQUID") {
+        var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["In Ink"];
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_recovery_parameters);
+        var refill_rate = $scope.calcRes(ink_recovery_parameters, p, s);
+        var refill_time = refill_rate / 60;
+        var delta = 3 / refill_time * 100;
+  
+        if($scope.logging) {
+          var refill_speed_squid_debug_log = {"Ink Recovery Speed (Squid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(refill_speed_squid_debug_log);
+        }
+  
+        var name = "{{ STAT_RECOVERY_SQUID | translate }}";
+        var value = delta;
+        var percentage = (100 - (100 / delta) * 100).toFixed(1);
+        var desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})
+        var label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
+        
+        return $scope.statValuesToDict(name, value, percentage, label, desc);       
+      }
+
+      // TODO: Fix the progress bar so it decreases
+      if(stat == "STAT_RECOVERY_KID") {
+        var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["Standing"];
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');
+
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+          abilityScore += 10;
+        }
+
+        if(abilityScore > 57) {
+          abilityScore = 57;
+        }
+
+        var p = $scope.calcP(abilityScore);       
+        var s = $scope.calcS(ink_recovery_parameters);
+        var refill_rate = $scope.calcRes(ink_recovery_parameters, p, s);
+        var refill_time = refill_rate / 60;
+        var delta = 10 / refill_time * 100;
+  
+        if($scope.logging) {
+          var refill_speed_squid_debug_log = {"Ink Recovery Speed (Kid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
+          console.log(refill_speed_squid_debug_log);
+        }
+  
+        var name = "{{ STAT_RECOVERY_KID | translate }}";
+        var value = delta;
+        var percentage = (100 - (100 / delta) * 100).toFixed(1);
+        var desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})      
+        var label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
+
+        return $scope.statValuesToDict(name, value, percentage, label, desc);     
+      }      
 
       if(weaponType == ".52 Gal") {
         if(stat == "STAT_MAIN_POWER_UP_JUMP_SHOT_RANDOMIZATION") {
@@ -4513,55 +4898,28 @@ angular
       }
 
       if($scope.loadout.weapon.class.toLowerCase() == 'roller') {
-        var ink_saver_parameters = null;
-        if($scope.loadout.weapon.inkSaver == 'Low') {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
-        }
-        if($scope.loadout.weapon.inkSaver == 'Middle') {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
-        }
-        if($scope.loadout.weapon.inkSaver == "High") {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
-        }
-
         /**************************
          * INK SAVER (MAIN) STATS *
          **************************/
-        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
-        var p = $scope.calcP(abilityScore);       
-        var s = $scope.calcS(ink_saver_parameters);
-        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
-
         if(name == "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}") {
-          costPerShot = $scope.loadout.weapon.horizontalInkPerShot * reduction;
-          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_HORIZONTAL_FLICK | translate }}";
-          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          $scope.stats["Ink Consumption (Main)"].label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_HORIZ | translate}}"});
-          $scope.stats["Ink Consumption (Main)"].value = costPerShot;
-          $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
+          var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN_HORIZONTAL_FLICK", true);
+          $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
         }
         else if(name == "[+] {{ STAT_SAVER_MAIN_HORIZONTAL_FLICK | translate }}") {
-          costPerShot = $scope.loadout.weapon.verticalInkPerShot * reduction;
-          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_VERTICAL_FLICK | translate }}";
-          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          $scope.stats["Ink Consumption (Main)"].label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_VERT | translate}}"});
-          $scope.stats["Ink Consumption (Main)"].value = costPerShot;
-          $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
+          var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN_VERTICAL_FLICK", true);
+          $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
         }
         else if(name == "[+] {{ STAT_SAVER_MAIN_VERTICAL_FLICK | translate }}") {
-          costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
-          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
-          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          $scope.stats["Ink Consumption (Main)"].label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});
-          $scope.stats["Ink Consumption (Main)"].value = costPerShot;
-          $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
+          var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN", true);
+          $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);  
         }
 
         /****************************
          * RUN SPEED (FIRING) STATS *
          ****************************/
-
-
         if(name == "[+] {{ STAT_RUN_SPEED_ROLLING | translate }}") {
           var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
           var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FLICKING_HORIZONTAL", true);
@@ -4584,37 +4942,15 @@ angular
         /**************************
          * INK SAVER (MAIN) STATS *
          **************************/
-        var ink_saver_parameters = null;
-        if($scope.loadout.weapon.inkSaver == 'Low') {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
+        if(name == "[+] {{ STAT_SAVER_MAIN | translate }}") {
+          var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN_FLICK", true);
+          $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
         }
-        if($scope.loadout.weapon.inkSaver == 'Middle') {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
-        }
-        if($scope.loadout.weapon.inkSaver == "High") {
-          ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
-        }
-
-        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
-        var p = $scope.calcP(abilityScore);
-        var s = $scope.calcS(ink_saver_parameters);
-        var reduction = $scope.calcRes(ink_saver_parameters, p, s);
-
-        if(name == "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}") {
-          var costPerShot = $scope.loadout.weapon.inkPerShot * reduction;
-          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN | translate }}";
-          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          $scope.stats["Ink Consumption (Main)"].label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: "{{SHOT_UNIT_FLICK_HORIZ | translate}}"});
-          $scope.stats["Ink Consumption (Main)"].value = costPerShot;
-          $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
-        }
-        else if(name == "[+] {{ STAT_SAVER_MAIN | translate }}") {
-          var costPerShot = $scope.loadout.weapon.inkPerShotRolling * reduction * 60;
-          $scope.stats["Ink Consumption (Main)"].name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
-          $scope.stats["Ink Consumption (Main)"].desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-          $scope.stats["Ink Consumption (Main)"].label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});          
-          $scope.stats["Ink Consumption (Main)"].value = costPerShot;
-          $scope.stats["Ink Consumption (Main)"].percentage = (100 - (reduction*100)).toFixed(1);
+        else if(name == "[+] {{ STAT_SAVER_MAIN_FLICK | translate }}") {
+          var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+          var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN", true);
+          $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
         }
 
         /****************************

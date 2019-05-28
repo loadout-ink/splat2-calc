@@ -89,169 +89,71 @@ angular.module('splatApp').stats = function ($scope) {
         this.percentage = statValues.percentage;
         this.label = statValues.label;
         this.desc = statValues.desc;
+
+        return this.value;
       }, 1.44),
 
     'Ink Recovery Speed (Squid)': new Stat("{{ STAT_RECOVERY_SQUID | translate }}", function(loadout) {
-      var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["In Ink"];
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var p = this.calcP(abilityScore);       
-      var s = this.calcS(ink_recovery_parameters);
-      var refill_rate = this.calcRes(ink_recovery_parameters, p, s);
-      var refill_time = refill_rate / 60;
-      var delta = 3 / refill_time * 100;
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_RECOVERY_SQUID");
 
-      if($scope.logging) {
-        var refill_speed_squid_debug_log = {"Ink Recovery Speed (Squid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(refill_speed_squid_debug_log);
-      }
-
-      this.value = delta;
-      this.percentage = (100 - (100 / delta) * 100).toFixed(1);
-      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})
-      this.label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
-      return this.value.toFixed(2);
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = statValues.desc;
+      
+      return this.value;
     }, 154),
 
     'Ink Recovery Speed (Kid)': new Stat("{{ STAT_RECOVERY_KID | translate }}", function(loadout) {
-      var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["Standing"];
       var abilityScore = loadout.calcAbilityScore('Ink Recovery Up');
-      var p = this.calcP(abilityScore);       
-      var s = this.calcS(ink_recovery_parameters);
-      var refill_rate = this.calcRes(ink_recovery_parameters, p, s);
-      var refill_time = refill_rate / 60;
-      var delta = 10 / refill_time * 100;
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_RECOVERY_KID");
 
-      if($scope.logging) {
-        var refill_speed_squid_debug_log = {"Ink Recovery Speed (Kid)":refill_rate,"time":refill_time,"AP":abilityScore,"P":p,"S":s,"Delta":delta}
-        console.log(refill_speed_squid_debug_log);
-      }
-
-      this.value = delta;
-      this.percentage = (100 - (100 / delta) * 100).toFixed(1);
-      this.desc = "{{ DESC_RECOVERY_TIME | translate }}".format({value: refill_time.toFixed(2)})      
-      this.label = "{{ LABEL_TIME | translate }}".format({value: refill_time.toFixed(2)})
-      return this.value.toFixed(2);
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = statValues.desc;
+      
+      return this.value;      
     }, 273),
 
     'Ink Consumption (Main)': new Stat("{{ STAT_SAVER_MAIN | translate }}", function(loadout) {
-      var ink_saver_parameters = null;
-      if(loadout.weapon.inkSaver == 'Low') {
-        ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Low"];
-      }
-      if(loadout.weapon.inkSaver == 'Middle') {
-        ink_saver_parameters = $scope.parameters["Ink Saver Main"]["Mid"];
-      }
-      if(loadout.weapon.inkSaver == "High") {
-        ink_saver_parameters = $scope.parameters["Ink Saver Main"]["High"];
-      }
+      var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SAVER_MAIN");
 
-      var abilityScore = loadout.calcAbilityScore('Ink Saver (Main)');
-      var p = this.calcP(abilityScore);       
-      var s = this.calcS(ink_saver_parameters);
-      var reduction = this.calcRes(ink_saver_parameters, p, s);
-      var costPerShot = null;
-
-      if(loadout.weapon.class == "Roller" || loadout.weapon.class == "Brush") {
-        costPerShot = loadout.weapon.inkPerShotRolling * reduction * 60;
-        this.name = "[+] {{ STAT_SAVER_MAIN_ROLLING | translate }}";
-        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-        this.label = "{{ INK_BREAKDOWN_INK_PER_SECOND | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3)});
-      }
-      else {
-        costPerShot = loadout.weapon.inkPerShot * reduction;
-        this.name = "{{ STAT_SAVER_MAIN | translate }}";
-        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(100/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});       
-        this.label = "{{ LABEL_MAIN_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerShot,3), unit: loadout.weapon.shotUnit});
-      }
-
-      if(loadout.weapon.name.indexOf("Splattershot Jr.") !== -1) {
-        this.desc = "{{ DESC_MAIN_COST | translate }}".format({totalShots: Math.floor(110/costPerShot), reduction: (100 - (reduction*100)).toFixed(1)});                
-      }
-      
-      this.value = costPerShot;
-      this.percentage = (100 - (reduction*100)).toFixed(1);
-
-      if($scope.logging) {
-        var ink_saver_debug_log = {"Ink Saver (Main)":costPerShot,"AP":abilityScore,"P":p,"S":s,"Delta":reduction};
-        console.log(ink_saver_debug_log);
-      }
-
-      if(isNaN(this.value)) {
-        this.value = 0;
-        this.label = "{{ UNAVAILABLE | translate}}";
-        this.desc = null;
-      }
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = statValues.desc;
       return this.value;
     }, 100),
 
     'Ink Consumption (Sub)': new Stat("{{ STAT_SAVER_SUB | translate }}", function(loadout) {
-      var ink_saver_sub_parameters = null;
-      var sub = $scope.getSubByName(loadout.weapon.sub);
-      
-      if(sub.inkSaver == 'A') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["A"];
-      }
-      if(sub.inkSaver == 'B') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["B"];
-      }
-      if(sub.inkSaver == 'C') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["C"];
-      }
-      if(sub.inkSaver == 'D') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["D"];
-      }
-      if(sub.inkSaver == 'E') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["E"];
-      }
-      if(sub.inkSaver == 'F') {
-        ink_saver_sub_parameters = $scope.parameters["Ink Saver Sub"]["F"];
-      }
+      var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Sub)');
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SAVER_SUB");
 
-      var abilityScore = loadout.calcAbilityScore('Ink Saver (Sub)');
-      var p = this.calcP(abilityScore);       
-      var s = this.calcS(ink_saver_sub_parameters);
-      var reduction = this.calcRes(ink_saver_sub_parameters, p, s);      
-
-      var costPerSub = null;
-      if(loadout.weapon.type == "Splattershot Jr.") {
-        costPerSub = (sub.cost - sub.cost * 0.1) * reduction;
-      }
-      else {
-        costPerSub = sub.cost * reduction;
-      }
-
-      this.desc = "{{ DESC_SUB_COST | translate }}".format({reduction: (100 - (reduction*100)).toFixed(1)})
-      this.label = "{{ LABEL_SUB_COST | translate }}".format({value: $scope.toFixedTrimmed(costPerSub,3)})      
-      this.localizedDesc = { reduction: (100 - (reduction*100)).toFixed(1), desc: 'DESC_SUB_COST' };
-      this.value = costPerSub;
-      this.percentage = (100 - (reduction*100)).toFixed(1);
-
-      if($scope.logging) {
-        var ink_saver_sub_debug_log = {"Ink Saver (Sub)":costPerSub,"AP":abilityScore,"P":p,"S":s,"Delta":reduction}
-        console.log(ink_saver_sub_debug_log);
-      }
-
-      return costPerSub;
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = statValues.desc;
+      return this.value;
     }, 100),
 
     'Special Charge Speed': new Stat("{{ STAT_SPECIAL_CHARGE | translate }}", function(loadout) {
-      var special_charge_speed_parameters = $scope.parameters["Special Charge Up"]["default"]
       var abilityScore = loadout.calcAbilityScore('Special Charge Up');
-      var p = this.calcP(abilityScore);       
-      var s = this.calcS(special_charge_speed_parameters);
-      var special_charge_speed = this.calcRes(special_charge_speed_parameters, p, s);      
+      var statValues = $scope.calcStat(abilityScore, loadout.weapon.type, "STAT_SPECIAL_CHARGE");
 
-      this.value = special_charge_speed;
-      this.percentage = ((special_charge_speed*100) - 100).toFixed(1);
-      this.desc = "{{ DESC_SPECIAL_COST | translate }}".format({value: Math.ceil(loadout.weapon.specialCost / special_charge_speed)});
-      this.label = "{{ LABEL_PERCENT | translate }}".format({value: (this.value*100).toFixed(1)});
+      this.name = statValues.name;
+      this.value = statValues.value;
+      this.percentage = statValues.percentage;
+      this.label = statValues.label;
+      this.desc = statValues.desc;      
 
-      if($scope.logging) {
-        var special_charge_speed_debug_log = {"Special Charge Speed":special_charge_speed,"AP":abilityScore,"P":p,"S":s,"Delta":this.percentage}
-        console.log(special_charge_speed_debug_log);
-      }
-
-      return (special_charge_speed * 100).toFixed(1);
+      return (this.value * 100).toFixed(1);
     }, 1.3),
 
     'Special Saved': new Stat("{{ STAT_SPECIAL_SAVER | translate }}", function(loadout) {

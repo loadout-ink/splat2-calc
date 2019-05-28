@@ -75,6 +75,7 @@
   "STAT_RECOVERY_KID": "インク回復力 (ヒト)",
   "STAT_SAVER_MAIN": "メインウェポンの消費インク量",
   "STAT_SAVER_MAIN_ROLLING": "メインウェポンの消費インク量：ローリング",
+  "STAT_SAVER_MAIN_FLICK": "メインウェポンの消費インク量",
   "STAT_SAVER_MAIN_HORIZONTAL_FLICK": "メインウェポンの消費インク量：水平な",
   "STAT_SAVER_MAIN_VERTICAL_FLICK": "メインウェポンの消費インク量：垂直",
   "STAT_SAVER_SUB": "サブウェポンの消費インク量",

@@ -73,6 +73,7 @@
   "STAT_RECOVERY_KID": "Ink Recovery Speed (Kid)",
   "STAT_SAVER_MAIN": "Ink Consumption (Main)",
   "STAT_SAVER_MAIN_ROLLING": "Ink Consumption (Main): Rolling",
+  "STAT_SAVER_MAIN_FLICK": "Ink Consumption (Main)",
   "STAT_SAVER_MAIN_HORIZONTAL_FLICK": "Ink Consumption (Main): Horizontal",
   "STAT_SAVER_MAIN_VERTICAL_FLICK": "Ink Consumption (Main): Vertical",
   "STAT_SAVER_SUB": "Ink Consumption (Sub)",

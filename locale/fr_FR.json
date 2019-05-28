@@ -73,6 +73,7 @@
   "STAT_RECOVERY_KID": "Vitesse de recharge d'encre (Enfant)",
   "STAT_SAVER_MAIN": "Consommation d'encre (Principal)",
   "STAT_SAVER_MAIN_ROLLING": "Cons. d'encre (Pr.): En roulant",
+  "STAT_SAVER_MAIN_FLICK": "Consommation d'encre (Principal)",
   "STAT_SAVER_MAIN_HORIZONTAL_FLICK": "Cons. d'encre (Pr.): Horizontal",
   "STAT_SAVER_MAIN_VERTICAL_FLICK": "Cons. d'encre (Pr.): Vertical",
   "STAT_SAVER_SUB": "Consommation d'encre (Secondaire)",
