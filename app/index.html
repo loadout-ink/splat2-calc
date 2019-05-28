@@ -97,7 +97,7 @@
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
                           <span id="version">
-                            {{UI_VERSION_PREFIX | translate}}2.1.1
+                            {{UI_VERSION_PREFIX | translate}}2.2.0
                             <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
                             <span id="tutorial" class="icon-button fa fa-magic" ng-controller="splatController" uib-tooltip="{{ UI_TUTORIAL | translate }}" ng-click="tutorial()" tooltip-append-to-body="true"></span>
                           </span>
@@ -263,7 +263,6 @@
                     </div>
                   </div>
                   <!-- TODO: Add checkbox for toggling "conditional" stats (LDE, OG, Comeback, etc) -->
-                  <!-- <input type="checkbox" ng-model="string"> -->
                   <div id="disclaimer">
                     <span ng-repeat="conditionalAbility in getActiveConditionalAbilities()">
                       <input id="{{'checkbox:' + conditionalAbility.name}}" type="checkbox" ng-model="conditionalAbilityCheckbox" ng-change="toggleConditionalAbilityCheckbox()">

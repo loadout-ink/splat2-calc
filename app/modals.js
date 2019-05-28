@@ -185,7 +185,17 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
       <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
     </ul>
 
-    <h4>Version 2.1.1 (Current)</h4>
+    <h4>Version 2.2.0 (Current)</h4>
+    <ul>
+    <li>Added the ability to toggle stat modifications for Opening Gambit and Comeback.</li>
+    <li>Fixed the sub weapon cost for Splattershot Jr. weapons.</li>
+    <li>Fixed a bug that was causing the MPU stats for the L-3 Nozzlenose weapons to not display.</li>
+    <li>Added an MPU stat cap for the Rapid Blaster & Rapid Blaster Pro weapons.</li>
+    <li>Added images and updated information for the following gear: Mecha Head, Meacha Body, Mecha Legs, Sailor Cap, and SRL Coat.</li>
+    <li>Updated the Octo Tee shirt to remove the primary stat restriction.</li>
+    </ul>
+
+    <h4>Version 2.1.1</h4>
     <ul>
     <li>French localisation added by <a href="https://github.com/Filumbitu" target="_blank">Filumbitu</a>!</li>
     <li>Added information icons to abilities as tutorial shortcuts.</li>

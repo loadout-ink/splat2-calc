@@ -14,7 +14,7 @@ angular
     $scope.loadout = new Loadout();
     $scope.status = {}
     $scope.logging = false;
-    $scope.appVersion = 211; // 2.X.X
+    $scope.appVersion = 220; // 2.X.X
     $scope.screenshotMode = false;
     $scope.toggledAbilities = {};
     // $scope.conditionalAbilityCheckbox = false;
