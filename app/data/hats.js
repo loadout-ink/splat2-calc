@@ -2707,7 +2707,7 @@ $scope.hats = [
     "splatnet": 21007
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/hats/Hed_COP109.png",
     "name": "Sailor Cap",
     "localizedName": {
       "ja_JP": "マリリンハットウィズピンズ",
@@ -2730,7 +2730,7 @@ $scope.hats = [
     "unreleased": true
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/hats/Hed_CRC000.png",
     "name": "Mecha Head - HTR",
     "localizedName": {
       "ja_JP": "メカヘッド・HTR",
@@ -2738,8 +2738,8 @@ $scope.hats = [
       "en_GB": "Mecha Head - HTR",
       "es_ES": "Null",
       "es_MX": "Null",
-      "fr_FR": "Casque Mécanique - HTR",
-      "fr_CA": "Casque Mécanique - HTR",
+      "fr_FR": "Casque blindé traqueur",
+      "fr_CA": "Casque blindé traqueur",
       "de_DE": "Null",
       "it_IT": "Null",
       "nl_NL": "Null",

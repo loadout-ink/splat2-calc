@@ -3037,22 +3037,22 @@ angular.module('splatApp').shoes = function($scope) {
     "id": 137
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/shoes/Shs_CRC000.png",
     "name": "Mecha Legs - LBS",
     "localizedName": {
       "ja_JP": "メカレッグ・IBS",
       "en_US": "Mecha Legs - LBS",
-      "en_GB": "Null",
+      "en_GB": "Mecha Legs - LBS",
       "es_ES": "Null",
       "es_MX": "Null",
-      "fr_FR": "Bottes Blindées Bitro",
-      "fr_CA": "Bottes Blindées Bitro",
+      "fr_FR": "Bottes blindées nitro",
+      "fr_CA": "Bottes blindées nitro",
       "de_DE": "Null",
       "it_IT": "Null",
       "nl_NL": "Null",
       "ru_RU": "Null"
     },
-    "main": "Stealth Jump",
+    "main": "Object Shredder",
     "brand": "SquidForce",
     "stars": 3,
     "splatnet": 22000,

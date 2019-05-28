@@ -5172,7 +5172,29 @@ angular.module('splatApp').clothes = function($scope) {
     "splatnet": 21009
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP110.png",
+    "name": "SRL Coat",
+    "localizedName": {
+      "ja_JP": "アカシックコート",
+      "en_US": "SRL Coat",
+      "en_GB": "SRL Coat",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouse ésotérique",
+      "fr_CA": "Blouse ésotérique",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Акашический халат"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 235,
+    "splatnet": 21010
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_CRC000.png",
     "name": "Mecha Body - AKM",
     "localizedName": {
       "ja_JP": "メカボディ・AKM",
@@ -5180,18 +5202,18 @@ angular.module('splatApp').clothes = function($scope) {
       "en_GB": "Mecha Body - AKM",
       "es_ES": "Null",
       "es_MX": "Null",
-      "fr_FR": "Armure Mécanique - AKM",
-      "fr_CA": "Armure Mécanique - AKM",
+      "fr_FR": "Combi blindée démon",
+      "fr_CA": "Combi blindée démon",
       "de_DE": "Null",
       "it_IT": "Null",
       "nl_NL": "Null",
       "ru_RU": "Null"
     },
-    "main": "Ink Saver (Sub)",
+    "main": "Sub Power Up",
     "brand": "SquidForce",
     "stars": 3,
     "splatnet": 22000,
-    "id": 235
+    "id": 236
   },
   {
     "image": "../common/assets/img/gear/clothes/Clt_AMB000.png",
@@ -5212,7 +5234,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 236,
+    "id": 237,
     "splatnet": 25000
   },
   {
@@ -5234,7 +5256,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 237,
+    "id": 238,
     "splatnet": 25001
   },
   {
@@ -5256,7 +5278,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "amiibo",
     "stars": 2,
-    "id": 238,
+    "id": 239,
     "splatnet": 25002
   },
   {
@@ -5278,7 +5300,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 239,
+    "id": 240,
     "splatnet": 25003
   },
   {
@@ -5300,7 +5322,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "amiibo",
     "stars": 2,
-    "id": 240,
+    "id": 241,
     "splatnet": 25004
   },
   {
@@ -5322,7 +5344,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 241,
+    "id": 242,
     "splatnet": 25005
   },
   {
@@ -5344,7 +5366,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "amiibo",
     "stars": 2,
-    "id": 242,
+    "id": 243,
     "splatnet": 25006
   },
   {
@@ -5366,7 +5388,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 243,
+    "id": 244,
     "splatnet": 25007
   },
   {
@@ -5388,7 +5410,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "amiibo",
     "stars": 2,
-    "id": 244,
+    "id": 245,
     "splatnet": 25008
   },
   {
@@ -5410,7 +5432,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "amiibo",
     "stars": 2,
-    "id": 245,
+    "id": 246,
     "splatnet": 25009
   },
   {
@@ -5432,7 +5454,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "amiibo",
     "stars": 2,
-    "id": 246,
+    "id": 247,
     "splatnet": 25010
   },
   {
@@ -5455,7 +5477,7 @@ angular.module('splatApp').clothes = function($scope) {
     "brand": "SquidForce",
     "fixed": true,    
     "stars": 3,
-    "id": 247,
+    "id": 248,
     "splatnet": 26000
   },
   {
@@ -5477,7 +5499,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 248,
+    "id": 249,
     "splatnet": 27000
   },
   {
@@ -5499,7 +5521,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 249,
+    "id": 250,
     "splatnet": 27004
   },
   {
@@ -5521,7 +5543,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 250,
+    "id": 251,
     "splatnet": 27101
   },
   {
@@ -5543,7 +5565,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 251,
+    "id": 252,
     "splatnet": 27104
   },
   {
@@ -5565,7 +5587,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 252,
+    "id": 253,
     "splatnet": 27105
   },
   {
@@ -5587,7 +5609,7 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 253,
+    "id": 254,
     "splatnet": 27106
   }]
 }
