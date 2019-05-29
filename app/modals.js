@@ -185,7 +185,16 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
       <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
     </ul>
 
-    <h4>Version 2.2.0 (Current)</h4>
+    <h4>Version 2.3.0 (Current)</h4>
+    <ul>
+    <li>Updated several weapons for the <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/27028/~/how-to-update-splatoon-2" target="_blank">v4.8 patch</a>.</li>
+    <li>Added the ability to toggle stat modifications for Last-Ditch Effort and Drop Roller.</li>
+    <li>Corrected toggled stat modifications for Opening Gambit and Comeback.</li>
+    <li>Added missing gear images for the Octoleet Armor and Octoleet Boots.</li>
+    <li>Added image and information for the new gear piece: Friendship Bracelet.</li>
+    </ul>
+
+    <h4>Version 2.2.0</h4>
     <ul>
     <li>Added the ability to toggle stat modifications for Opening Gambit and Comeback.</li>
     <li>Fixed the sub weapon cost for Splattershot Jr. weapons.</li>

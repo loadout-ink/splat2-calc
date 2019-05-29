@@ -1735,8 +1735,11 @@ angular.module('splatApp').stats = function ($scope) {
     var parameters = $scope.parameters["Ink Resistance"][key];
     var abilityScore = loadout.calcAbilityScore('Ink Resistance Up');
 
-    if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+    if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
       abilityScore += 30;
+    }
+    if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
+      abilityScore += 10;
     }
 
     if(abilityScore > 57) {
