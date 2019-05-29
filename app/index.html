@@ -47,6 +47,10 @@
   <link rel="stylesheet" href="../common/style/hopscotch.css"></link>
   <script src="../common/lib/hopscotch.js"></script>
 
+  <!-- AngularJS Slider Resources -->
+  <link rel="stylesheet" href="../common/style/rzslider.css"></link>
+  <script src="../common/lib/rzslider.js"></script>  
+
   <script src="./tutorials.js"></script>
 
 </head>
@@ -265,9 +269,12 @@
                   <!-- TODO: Add checkbox for toggling "conditional" stats (LDE, OG, Comeback, etc) -->
                   <div id="disclaimer">
                     <span ng-repeat="conditionalAbility in getActiveConditionalAbilities()">
-                      <input id="{{'checkbox:' + conditionalAbility.name}}" type="checkbox" ng-model="conditionalAbilityCheckbox" ng-change="toggleConditionalAbilityCheckbox()">
+                      <input id="{{'checkbox:' + conditionalAbility.name}}" type="checkbox" ng-model="conditionalAbility.selected" ng-change="toggleConditionalAbilityCheckbox()">
                       <span>{{conditionalAbility.localizedName['{{ LANG_SELECTOR | translate }}'] || conditionalAbility.localizedName['{{ LANG_FULL | translate }}']}}</span>
                     </span>
+                    <div id="sliderWrapper" ng-show="ldeSlider.visible">
+                        <rzslider rz-slider-model="ldeSlider.value" rz-slider-options="ldeSlider.options"></rzslider>
+                    </div>
                     <br>
                     <span>{{ UI_STAT_TOGGLE_NOTICE | translate }}</span>
                   </div>

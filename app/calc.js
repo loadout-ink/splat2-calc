@@ -1,5 +1,5 @@
 angular
-  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria'])
+  .module('splatApp', ['ui.bootstrap', 'ngAnimate', 'ngAria', 'rzSlider'])
   .controller('splatController', ['$scope', '$rootScope', '$timeout', '$locale', function splatCtrl($scope, $rootScope, $timeout, $locale, $translate, $uibModal, $log) {
     $rootScope.splatController = $scope;
     angular.module('splatApp').skills($scope);
@@ -17,7 +17,17 @@ angular
     $scope.appVersion = 220; // 2.X.X
     $scope.screenshotMode = false;
     $scope.toggledAbilities = {};
-    // $scope.conditionalAbilityCheckbox = false;
+
+    $scope.ldeSlider = {
+      visible: false,
+      value: 50,
+      options: {
+        floor: 30,
+        ceil: 50,
+        disabled: true,
+        showSelectionBar: true
+      }
+    };
 
     $scope.tutorial = angular.module('splatApp').tutorial;
 
@@ -109,16 +119,24 @@ angular
     }
 
     $scope.resetConditionalAbilities = function() {
-      if(!$scope.loadout.hasAbility("Opening Gambit") && !$scope.loadout.hasAbility("Last-Ditch Effort") && !$scope.loadout.hasAbility("Comeback") && !$scope.loadout.hasAbility("Drop Roller")) {
-        $scope.conditionalAbilityCheckbox = false;
+      if(!$scope.loadout.hasAbility("Opening Gambit")) {
+        $scope.setConditionalAbilitySelected("Opening Gambit", false);
+      }
+      if(!$scope.loadout.hasAbility("Last-Ditch Effort")) {
+        $scope.setConditionalAbilitySelected("Last-Ditch Effort", false);
+        $scope.ldeSlider.visible = false;
+        $scope.ldeSlider.value = 50;
+      }
+      if(!$scope.loadout.hasAbility("Comeback")) {
+        $scope.setConditionalAbilitySelected("Comeback", false);
+      }
+      if(!$scope.loadout.hasAbility("Drop Roller")) {
+        $scope.setConditionalAbilitySelected("Drop Roller", false);
       }
     }
 
     $scope.toggleConditionalAbilityCheckbox = function() {
       if($scope.loadout.hasAbility("Opening Gambit")) {
-        // TODO: Figure out why the checkbox's binding on "conditionalAbilityCheckbox" isn't working.
-        $scope.conditionalAbilityCheckbox = document.getElementById("checkbox:Opening Gambit").checked;
-
         // 1. Modify the Swim Speed stat.
         var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
         var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
@@ -141,8 +159,20 @@ angular
       }
 
       if($scope.loadout.hasAbility("Comeback")) {
-        // TODO: Figure out why the checkbox's binding on "conditionalAbilityCheckbox" isn't working.
-        $scope.conditionalAbilityCheckbox = document.getElementById("checkbox:Comeback").checked;
+        // 1. Modify the Swim Speed stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
+        $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 2. Modify the Run Speed stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED");
+        $scope.displayStat("Run Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 3. Modify the Run Speed (Firing) stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
+        $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
 
         // 1. Modify the Ink Consumption (Main) stat.
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');        
@@ -164,26 +194,85 @@ angular
         var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RECOVERY_KID");
         $scope.displayStat("Ink Recovery Speed (Kid)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
 
-        // 5. Modify the Run Speed stat.
-        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');        
-        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED");
-        $scope.displayStat("Run Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
-
-        // 6. Modify the Run Speed (Firing) stat.
-        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
-        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
-        $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
-
-        // 7. Modify the Swim Speed stat.
-        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
-        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
-        $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
-
         // 8. Modify the Special Charge Speed stat.
         var abilityScore = $scope.loadout.calcAbilityScore('Special Charge Up');        
         var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SPECIAL_CHARGE");
         $scope.displayStat("Special Charge Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
       }
+
+      if($scope.loadout.hasAbility("Last-Ditch Effort")) {
+        $scope.ldeSlider.visible = true;
+        $timeout(function() {
+          $scope.$broadcast('rzSliderForceRender');
+        });
+
+        if($scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          $scope.ldeSlider.options.disabled = false;
+        }
+        else {
+          $scope.ldeSlider.options.disabled = true;          
+        }
+
+        // 1. Modify the Ink Consumption (Main) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_MAIN");
+        $scope.displayStat("Ink Consumption (Main)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 2. Modify the Ink Consumption (Sub) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Sub)');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SAVER_SUB");
+        $scope.displayStat("Ink Consumption (Sub)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 3. Modify the Ink Recovery Speed (Squid) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RECOVERY_SQUID");
+        $scope.displayStat("Ink Recovery Speed (Squid)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+
+        // 4. Modify the Ink Recovery Speed (Kid) stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RECOVERY_KID");
+        $scope.displayStat("Ink Recovery Speed (Kid)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+      }
+      else {
+        $scope.ldeSlider.visible = false;
+      }
+
+      if($scope.loadout.hasAbility("Drop Roller")) {
+        // 1. Modify the Swim Speed stat.
+        var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');        
+        var statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_SWIM_SPEED");
+        $scope.displayStat("Swim Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+      
+        // 2. Modify the Run Speed stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED");
+        $scope.displayStat("Run Speed", statValues.name, statValues.value, statValues.percentage, statValues.label);
+      
+        // 3. Modify the Ink Resistance (Run Speed) stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Ink Resistance Up');        
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_RESIST");
+        $scope.displayStat("Run Speed (Enemy Ink)", statValues.name, statValues.value, statValues.percentage, statValues.label);
+
+        // 4. Modify the Run Speed Firing stat.
+        abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
+        statValues = $scope.calcStat(abilityScore, $scope.loadout.weapon.type, "STAT_RUN_SPEED_FIRING");
+        $scope.displayStat("Run Speed (Firing)", statValues.name, statValues.value, statValues.percentage, statValues.label, statValues.desc);
+      }
+    }
+
+    $scope.ldeSlider.options.onChange = function() {
+      $scope.toggleConditionalAbilityCheckbox();
+    }
+
+    $scope.calcLDEBonus = function() {
+      var score = $scope.ldeSlider.value;
+      if(score == 50) {
+        score = 0;
+      }
+      else {
+        score = (50 - score) + 1;
+      }
+      return Math.floor(Math.min(24, 8 * score / 7));
     }
 
     $scope.switchSet = function() {
@@ -288,7 +377,30 @@ angular
           activeConditionalAbilities.push($scope.skills[i]);
         }
       }
+
+      $scope.activeConditionalAbilities = activeConditionalAbilities;
       return activeConditionalAbilities;
+    }
+
+    $scope.conditionalAbilitySelected = function(ability) {
+      if($scope.activeConditionalAbilities) {
+        for(var i = 0; i < $scope.activeConditionalAbilities.length; i++) {
+          if($scope.activeConditionalAbilities[i].name == ability) {
+            return $scope.activeConditionalAbilities[i].selected;
+          }
+        }
+      }
+      return false;
+    }
+
+    $scope.setConditionalAbilitySelected = function(ability, value) {
+      if($scope.activeConditionalAbilities) {
+        for(var i = 0; i < $scope.activeConditionalAbilities.length; i++) {
+          if($scope.activeConditionalAbilities[i].name == ability) {
+            $scope.activeConditionalAbilities[i].selected = value;
+          }
+        }
+      }      
     }
 
     $scope.toFixedTrimmed = function(number, precision) {
@@ -373,10 +485,13 @@ angular
   
         var abilityScore = $scope.loadout.calcAbilityScore('Swim Speed Up');
   
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -426,10 +541,13 @@ angular
 
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -457,8 +575,11 @@ angular
         var ink_resistance_parameters = $scope.parameters["Ink Resistance"]["Run"];
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Resistance Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
+          abilityScore += 10;
         }
 
         if(abilityScore > 57) {
@@ -535,10 +656,13 @@ angular
         var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -578,10 +702,13 @@ angular
         var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -610,10 +737,13 @@ angular
         var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -644,10 +774,13 @@ angular
         var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -678,10 +811,13 @@ angular
         var run_speed_parameters = $scope.parameters["Run Speed"]["Shooting"][$scope.loadout.weapon.shootingSpeed];
         var abilityScore = $scope.loadout.calcAbilityScore('Run Speed Up');
 
-        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Opening Gambit') && $scope.conditionalAbilitySelected("Opening Gambit")) {
           abilityScore += 30;
         }
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
+          abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Drop Roller') && $scope.conditionalAbilitySelected("Drop Roller")) {
           abilityScore += 10;
         }
 
@@ -711,7 +847,7 @@ angular
         var special_charge_speed_parameters = $scope.parameters["Special Charge Up"]["default"]
         var abilityScore = $scope.loadout.calcAbilityScore('Special Charge Up');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
         }
 
@@ -945,8 +1081,11 @@ angular
   
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1008,8 +1147,11 @@ angular
 
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1047,8 +1189,11 @@ angular
 
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1086,8 +1231,11 @@ angular
 
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Main)');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1136,8 +1284,11 @@ angular
   
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Saver (Sub)');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1175,8 +1326,11 @@ angular
         var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["In Ink"];
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {
@@ -1208,8 +1362,11 @@ angular
         var ink_recovery_parameters = $scope.parameters["Ink Recovery Up"]["Standing"];
         var abilityScore = $scope.loadout.calcAbilityScore('Ink Recovery Up');
 
-        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilityCheckbox) {
+        if($scope.loadout.hasAbility('Comeback') && $scope.conditionalAbilitySelected("Comeback")) {
           abilityScore += 10;
+        }
+        if($scope.loadout.hasAbility('Last-Ditch Effort') && $scope.conditionalAbilitySelected("Last-Ditch Effort")) {
+          abilityScore += $scope.calcLDEBonus();
         }
 
         if(abilityScore > 57) {

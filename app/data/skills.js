@@ -289,7 +289,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/EndAllUp.png",
       exclusive:"loadout.head.main",
-      // conditional: true,
+      conditional: true,
       id: 16
     },
     {
@@ -425,6 +425,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/SomersaultLanding.png",
       exclusive:"loadout.shoes.main",
+      conditional: true,
       id: 23
     },
     {

@@ -661,3 +661,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
     z-index: 100;
   }
 }
+
+#sliderWrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
