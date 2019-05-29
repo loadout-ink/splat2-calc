@@ -5084,7 +5084,7 @@ angular.module('splatApp').clothes = function($scope) {
     "splatnet": 21005
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP106.png",
     "name": "Octoleet Armor",
     "localizedName": {
       "ja_JP": "ゾネスティックプロテクター",

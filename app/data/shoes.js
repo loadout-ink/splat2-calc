@@ -2971,7 +2971,7 @@ angular.module('splatApp').shoes = function($scope) {
     "id": 134
   },
   {
-    "image": "../common/assets/img/gear/placeholder.png",
+    "image": "../common/assets/img/gear/shoes/Shs_COP103.png",
     "name": "Octoleet Boots",
     "localizedName": {
       "ja_JP": "ゾネスティックブーツ",
@@ -2993,6 +2993,28 @@ angular.module('splatApp').shoes = function($scope) {
     "id": 135
   },
   {
+    "image": "../common/assets/img/gear/shoes/Shs_COP104.png",
+    "name": "Friendship Bracelet",
+    "localizedName": {
+      "ja_JP": "チギリノヒモ",
+      "en_US": "Friendship Bracelet",
+      "en_GB": "Friendship Bracelet",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Bracelet de l'amitié",
+      "fr_CA": "Bracelet de l'amitié",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 136,
+    "splatnet": 21004
+  },
+  {
     "image": "../common/assets/img/gear/shoes/Shs_COP105.png",
     "name": "Flipper Floppers",
     "localizedName": {
@@ -3012,7 +3034,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21005,
-    "id": 136
+    "id": 137
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_COP106.png",
@@ -3034,7 +3056,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Grizzco",
     "stars": 3,
     "splatnet": 21006,
-    "id": 137
+    "id": 138
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_CRC000.png",
@@ -3056,7 +3078,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "SquidForce",
     "stars": 3,
     "splatnet": 22000,
-    "id": 138
+    "id": 139
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP000.png",
@@ -3078,7 +3100,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zekko",
     "stars": 3,
     "splatnet": 23000,
-    "id": 139
+    "id": 140
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP001.png",
@@ -3100,7 +3122,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 23001,
-    "id": 140
+    "id": 141
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP002.png",
@@ -3122,7 +3144,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Rockenberg",
     "stars": 3,
     "splatnet": 23002,
-    "id": 141
+    "id": 142
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP003.png",
@@ -3144,7 +3166,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Takoroka",
     "stars": 3,
     "splatnet": 23003,
-    "id": 142
+    "id": 143
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP004.png",
@@ -3166,7 +3188,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Zekko",
     "stars": 3,
     "splatnet": 23004,
-    "id": 143
+    "id": 144
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP005.png",
@@ -3188,7 +3210,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Enperry",
     "stars": 3,
     "splatnet": 23005,
-    "id": 144
+    "id": 145
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP006.png",
@@ -3210,7 +3232,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Takoroka",
     "stars": 3,
     "splatnet": 23006,
-    "id": 145
+    "id": 146
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_HAP007.png",
@@ -3232,7 +3254,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Krak-On",
     "stars": 3,
     "splatnet": 23007,
-    "id": 146
+    "id": 147
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB000.png",
@@ -3254,7 +3276,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25000,
-    "id": 147
+    "id": 148
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB001.png",
@@ -3276,7 +3298,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25001,
-    "id": 148
+    "id": 149
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB002.png",
@@ -3298,7 +3320,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25002,
-    "id": 149
+    "id": 150
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB003.png",
@@ -3320,7 +3342,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25003,
-    "id": 150
+    "id": 151
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB004.png",
@@ -3342,7 +3364,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25004,
-    "id": 151
+    "id": 152
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB005.png",
@@ -3364,7 +3386,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25005,
-    "id": 152
+    "id": 153
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB006.png",
@@ -3386,7 +3408,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25006,
-    "id": 153
+    "id": 154
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB007.png",
@@ -3408,7 +3430,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25007,
-    "id": 154
+    "id": 155
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB008.png",
@@ -3430,7 +3452,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25008,
-    "id": 155
+    "id": 156
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB009.png",
@@ -3452,7 +3474,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25009,
-    "id": 156
+    "id": 157
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_AMB010.png",
@@ -3474,7 +3496,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "amiibo",
     "stars": 2,
     "splatnet": 25010,
-    "id": 157
+    "id": 158
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN000.png",
@@ -3496,7 +3518,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27000,
-    "id": 158
+    "id": 159
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN004.png",
@@ -3518,7 +3540,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27004,
-    "id": 159
+    "id": 160
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN101.png",
@@ -3540,7 +3562,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27101,
-    "id": 160
+    "id": 161
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN104.png",
@@ -3562,7 +3584,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27104,
-    "id": 161
+    "id": 162
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN105.png",
@@ -3584,7 +3606,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27105,
-    "id": 162
+    "id": 163
   },
   {
     "image": "../common/assets/img/gear/shoes/Shs_MSN106.png",
@@ -3606,7 +3628,7 @@ angular.module('splatApp').shoes = function($scope) {
     "brand": "Cuttlegear",
     "stars": 2,
     "splatnet": 27106,
-    "id": 163
+    "id": 164
   }
 ]
 }
