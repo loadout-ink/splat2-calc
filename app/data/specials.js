@@ -151,7 +151,7 @@ angular.module('splatApp').specials = function ($scope) {
         "zh_HK": "ハイパープレッサー (Laser)"
       },
       image: "../common/assets/img/subspe/Wsp_WaterCutter.png",
-      duration: 8
+      duration: 7.17
     },
     {
       name: "Ink Storm",

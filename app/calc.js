@@ -379,7 +379,7 @@ angular
       }
 
       $scope.activeConditionalAbilities = activeConditionalAbilities;
-      return activeConditionalAbilities;
+      return $scope.activeConditionalAbilities;
     }
 
     $scope.conditionalAbilitySelected = function(ability) {
@@ -5384,7 +5384,7 @@ angular
           "Splash Down Burst Radius Midle (Stealth Jump)": [112.5, 112.5, 112.5],
           "Splash Down Jump-In Additional Height": [40.0, 20.0, 0.0],
           "Inkjet Bullet Damage Radius Multiplier": [1.3, 1.15, 1.0],
-          "Sting Ray Duration": [585, 525, 465],
+          "Sting Ray Duration": [510, 470, 430],
           "Bubble Blower Bubble Radius Multiplier": [1.3, 1.18, 1.0],
           "Splash Down Burst Radius Close (Stealth Jump)": [90.0, 90.0, 90.0],
           "Splash Down Jump-In Height": [100.0, 60.0, 20.0],
