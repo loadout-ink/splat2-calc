@@ -95,7 +95,7 @@
                           <span id="version">
                             {{UI_VERSION_PREFIX | translate}}2.3.0
                             <span class="icon-button fa fa-question-circle-o" ng-controller="ModalCtrl" uib-tooltip="{{ UI_CHANGELOG | translate }}" ng-click="openChangelog()" tooltip-append-to-body="true"></span>
-                            <span id="tutorial" class="icon-button fa fa-magic" ng-controller="splatController" uib-tooltip="{{ UI_TUTORIAL | translate }}" ng-click="tutorial()" tooltip-append-to-body="true"></span>
+                            <span id="tutorial" class="icon-button fa fa-magic hidden-xs" ng-controller="splatController" uib-tooltip="{{ UI_TUTORIAL | translate }}" ng-click="tutorial()" tooltip-append-to-body="true"></span>
                           </span>
                         </div>
                       </div>
@@ -236,7 +236,7 @@
                 <span ng-repeat="skill in getStackableSkills()">
                   <img fallback-img  id="{{'icon:' + skill.name}}" class="abilityicon" ability-menu uib-tooltip="{{skill.localizedName['{{ LANG_FULL | translate }}']}}"  tooltip-append-to-body="true" ng-click="loadout.setOpenSlot(skill)" draggable-ability skill="{{skill}}" ng-src="{{::skill.image}}">
                   <span style="position: relative; width: 0; height: 0">
-                      <span style="color: #fff;" class="fa fa-info-circle fa-1" ng-controller="splatController" uib-tooltip="{{ UI_ABOUT | translate }}: {{skill.localizedName['{{ LANG_FULL | translate }}']}}" ng-click="tutorial(skill.name)" tooltip-append-to-body="true"></span>
+                      <span style="color: #fff;" class="fa fa-info-circle fa-1 hidden-xs" ng-controller="splatController" uib-tooltip="{{ UI_ABOUT | translate }}: {{skill.localizedName['{{ LANG_FULL | translate }}']}}" ng-click="tutorial(skill.name)" tooltip-append-to-body="true"></span>
                   </span>
                 </span>
                 <hr>
