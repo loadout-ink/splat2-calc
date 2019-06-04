@@ -13,12 +13,12 @@ Running locally requires being built with Gulp.
 1. Clone or download the repository.
 2. With a command line (cmd/Terminal/etc.), navigate to the repository directory.
 3. Install the project's build dependencies with npm: `npm install`
-4. Build with Gulp: `gulp`
+4. Build with Gulp: `npm run build`
 5. Results are located in the /dist/ directory.
 
 ### Dev Tools
 
-To ease development, you can use the `gulp serve` command 
+To ease development, you can use the `npm run serve` command 
 to build the project, start a webserver, and rebuild the project whenever
 a file changes in the project.
 

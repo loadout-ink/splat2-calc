@@ -20,7 +20,8 @@
 		"gulp-translator": "^0.2.0"
 	},
 	"scripts": {
-		"serve": "gulp serve"
+		"serve": "gulp serve",
+		"build": "gulp"
 	},
 	"repository": {
 		"type": "git",
