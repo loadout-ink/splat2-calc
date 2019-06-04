@@ -82,21 +82,13 @@
                 <div class="col-sm-6 col-sm-push-6 nopadding">
                   <div class="card purplestripes" id="utils">
                     <div class="row" ng-hide="screenshotMode">
-                      <div class="col-xs-2">
-                        <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="{{ UI_COPY_LINK | translate }}" tooltip-append-to-body="true"><span class=""><i class="fa fa-fw fa-clipboard"></i><i class="fa fa-fw fa-check green" ng-show="showCopy"></i></span></button>
-                      </div>
-                      <div class="col-xs-2">
-                        <button class="icon-button" ng-click="screenshotMode=!screenshotMode" uib-tooltip="{{ UI_SCREENSHOT_MODE | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-window-maximize"></span></button>
-                      </div>
-                      <div class="col-xs-2">
-                        <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="{{ UI_CLEAR_ABILITIES | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-undo"></span></button>
-                      </div>
-                      <div class="col-xs-2">
-                        <button class="icon-button" ng-click="resetLoadout()" uib-tooltip="{{ UI_CLEAR_ALL | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-bomb"></span></button>
-                      </div>
-                      <div class="col-xs-2">
-                        <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" style="padding-bottom:3px;" /></button>
-                      </div>
+                        <div style="display: flex; justify-content: space-around; margin-left: 10px; margin-right: 10px">
+                            <button class="icon-button" id="copybtn" data-clipboard-text="{{encodedURL()}}" uib-tooltip="{{ UI_COPY_LINK | translate }}" tooltip-append-to-body="true"><span class=""><i class="fa fa-fw fa-clipboard"></i><i class="fa fa-fw fa-check green" ng-show="showCopy"></i></span></button>
+                            <button class="icon-button" ng-click="screenshotMode=!screenshotMode" uib-tooltip="{{ UI_SCREENSHOT_MODE | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-window-maximize"></span></button>
+                            <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="{{ UI_CLEAR_ABILITIES | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-undo"></span></button>
+                            <button class="icon-button" ng-click="resetLoadout()" uib-tooltip="{{ UI_CLEAR_ALL | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-bomb"></span></button>
+                            <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" style="padding-bottom:3px;" /></button>
+                        </div>
                     </div>
                       <div class="row" ng-hide="screenshotMode">
                         <div class="col-xs-12">
