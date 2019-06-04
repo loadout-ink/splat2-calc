@@ -109,6 +109,7 @@ angular.module('splatApp')
       elm.click(function() {
         scope.$apply(function() {
           if(scope.bind.name != "Ability Doubler") {
+            scope.$root.splatController.setConditionalAbilitySelected(scope.bind.name, false);
             scope.bind = null;
           }
         })
