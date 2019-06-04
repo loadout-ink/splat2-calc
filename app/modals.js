@@ -1,8 +1,7 @@
 var modalCloseDelay = 200;
 
-angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $log, $timeout) {
+angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, $uibModal, $log, $timeout) {
   $scope.animationsEnabled = true;
-
 
   var templates = {
     weaponPickerNew : `
@@ -35,15 +34,27 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="col-md-12" id="minibar-container">
-    <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
-    <div class="col-sm-6 col-xs-3 nopadding minibar-label readable">
-    {{stat}}
+      <div class="row" ng-repeat="(stat,value) in selectedWeapon.stats">
+        <div class="col-sm-6 col-xs-3 nopadding minibar-label readable">
+          {{stat}}
+        </div>
+        <div class="col-sm-6 col-xs-9 nopadding">
+          <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-xs-9 nopadding">
-    <uib-progressbar max="100" type="pink" value="value" class="statbar mini" />
+
+    <div class="col-md-12" id="minibar-container">
+      <div class="row">
+        <div class="col-sm-6 col-xs-3 nopadding minibar-label readable">
+        {{UI_X_RANK_POPULARITY | translate}}
+        </div>
+        <div class="col-sm-6 col-xs-9 nopadding">
+          <uib-progressbar max="100" type="pink" tooltip-placement="bottom" uib-tooltip="{{UI_X_RANK_POPULARITY_TOOLTIP | translate}}" value="weaponRank" class="statbar mini" />
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+
     </div>
     </div>
     </div>
@@ -51,12 +62,13 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <div class="row">
     <div class="col-md-12">
     <select class="form-control dropdown-toggle" data-ng-options="x.localizedName['{{ LANG_SELECTOR | translate }}' || '{{ LANG_FULL | translate }}'] for x in weaponSets" data-ng-model="selectedSet" ng-change="switchSet()"></select>
+    <input id="weaponSearchFilterText" ng-model="weaponSearchFilterText" class="form-control form-control-sm" type="text" placeholder="{{ UI_SEARCH | translate }}">
     </div>
     </div>
     <div class="col-md-12">
     <div class="row">
     <div class="picker">
-    <div class="gear-wrapper" ng-repeat="weapon in availableWeapons()">
+    <div class="gear-wrapper" ng-repeat="weapon in availableWeapons() | filter:weaponSearchFilter">
     <img class="gear-icon" ng-src="{{::weapon.image}}" ng-click="selectWeapon(weapon)" uib-tooltip="{{::weapon.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true"/>
     </div>
     </div>
@@ -107,8 +119,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     <div class="col-md-8 picker-right">
+    <input id="gearSearchFilterText" ng-model="gearSearchFilterText" class="form-control form-control-sm" type="text" placeholder="{{ UI_SEARCH | translate }}">
     <div class="picker">
-    <div ng-click="selectGear(item)"  ng-repeat="item in filtered.primary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
+    <div ng-click="selectGear(item)" ng-repeat="item in filtered.primary | filter:gearSearchFilter track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -117,7 +130,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-if="item.main != undefined" ng-src="{{::getSkillByName(item.main).image}}"/>
     </span>
     </div><!--
-    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
+    --><div ng-click="selectGear(item)" ng-repeat="item in filtered.secondary | filter:gearSearchFilter track by item.id" uib-tooltip="{{::item.localizedName['{{ LANG_FULL | translate }}']}}" tooltip-append-to-body="true" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -129,7 +142,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     <img ng-if="item.brand != 'Grizzco'?item.name != 'Splatfest Tee'?true:false:false" src="../common/assets/img/misc/annie.png" tooltip-append-to-body="true" tooltip-placement="bottom" uib-tooltip="{{ UI_NONSTANDARD_SPLATNET | translate }}"/>
     </span>
     </div><!--
-    --><div ng-repeat="item in filtered.notEligible track by item.id" class="gear-wrapper">
+    --><div ng-repeat="item in filtered.notEligible | filter:gearSearchFilter track by item.id" class="gear-wrapper">
     <img class="gear-icon" ng-src="{{::item.image}}"/>
     <span class="brand-icon">
     <img ng-src="{{::brands[item.brand].image}}"/>
@@ -155,6 +168,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     </div>`,
+
     //TODO: split this into its own file
     whatsNew: `<div class="row">
     <div class="col-md-12">
@@ -164,6 +178,190 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     <div class="row basic-content">
     <div id="changelog"</div>
+    <h4>Development Notice</h4>
+    <ul>
+      <li>This is a fork of the original Loadout.ink code base being updated by <a href="https://twitter.com/Selicia2" target="_blank">Selicia</a>. Please consult the Trello Board for progress and status updates.</li>
+      <li>Github Repo: <a href="https://github.com/selicia/splat2-calc" target="_blank">https://github.com/selicia/splat2-calc</a>.
+      <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
+    </ul>
+
+    <h4>Version 2.3.0 (Current)</h4>
+    <ul>
+    <li>Updated several weapons for the <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/27028/~/how-to-update-splatoon-2" target="_blank">v4.8 patch</a>.</li>
+    <li>Added the ability to toggle stat modifications for Last-Ditch Effort and Drop Roller.</li>
+    <li>Corrected toggled stat modifications for Opening Gambit and Comeback.</li>
+    <li>Added missing gear images for the Octoleet Armor and Octoleet Boots.</li>
+    <li>Added image and information for the new gear piece: Friendship Bracelet.</li>
+    </ul>
+
+    <h4>Version 2.2.0</h4>
+    <ul>
+    <li>Added the ability to toggle stat modifications for Opening Gambit and Comeback.</li>
+    <li>Fixed the sub weapon cost for Splattershot Jr. weapons.</li>
+    <li>Fixed a bug that was causing the MPU stats for the L-3 Nozzlenose weapons to not display.</li>
+    <li>Added an MPU stat cap for the Rapid Blaster & Rapid Blaster Pro weapons.</li>
+    <li>Added images and updated information for the following gear: Mecha Head, Meacha Body, Mecha Legs, Sailor Cap, and SRL Coat.</li>
+    <li>Updated the Octo Tee shirt to remove the primary stat restriction.</li>
+    </ul>
+
+    <h4>Version 2.1.1</h4>
+    <ul>
+    <li>French localisation added by <a href="https://github.com/Filumbitu" target="_blank">Filumbitu</a>!</li>
+    <li>Added information icons to abilities as tutorial shortcuts.</li>
+    <li>The tutorial windows will now try to position better on smaller screens.</li>
+    </ul>
+
+    <h4>Version 2.1.0</h4>
+    <ul>
+    <li>MPU stats will now retain the selected stat when changing gear, weapons, or abilities.</li>
+    <li>Updated weapon special costs for v4.7.</li>
+    <li>Updated ink costs for weapons for v4.7.</li>
+    <li>Updated all MPU parameters and calculations to include missing values.</li>
+    <li>Updated Sub Power Up calculations and stats for Point Sensor, Ink Mine, and Squid Beakon.</li>
+    <li>Updated tutorial to include all regular abilities.</li>
+    <li>Updated Quick Respawn Time stat to correctly visualize the penalty for Respawn Punisher.</li>
+    <li>Added tooltip to Special Saved stat indicating the penalty for Respawn Punisher.</li>
+    </ul>
+
+    <h4>Version 2.0.16</h4>
+    <ul>
+    <li>Updated search/filter for weapons and gear to be language specific.</li>
+    <li>Added first part of Loadout tutorial.</li>
+    <li>Added rolling, ground, and jumping Ink Saver Main stats for all Rollers.</li>
+    <li>Added flick and roll Ink Saver Main stats for all Brushes.</li>
+    </ul>
+
+    <h4>Version 2.0.15</h4>
+    <ul>
+    <li>Updated Special Power Up parameters for Sting Ray.</li>
+    <li>Added X Rank weapon popularity bar to weapon picker.</li>
+    <li>Added Ultra Stamp duration to Special Power Up.</li>
+    <li>Added Ink Resistance Effects tables.</li>
+    </ul>
+
+    <h4>Version 2.0.14</h4>
+    <ul>
+    <li>Added UI indicator [+] for stats that may be toggled.</li>
+    <li>Fixed Respawn Punisher penalty for Special Saver calculations.</li>
+    <li>Updated Bomb Defense Up DX parameters and calculations.</li>
+    <li>Added stat toggle for Tracking Time to switch between Point Sensor and Ink Mine.</li>
+    </ul>
+
+    <h4>Version 2.0.13</h4>
+    <ul>
+    <li>Fixed bugs for the weapon and gear search/filter.</li>
+    <li>Updated Special Cost calculation.</li>
+    <li>Updated Run Speed parameters for Mini Splatling.</li>
+    </ul>    
+
+    <h4>Version 2.0.12</h4>
+    <ul>
+    <li>Updated Run Speed (Firing) calculations for all weapons.</li>
+    <li>Added Run Speed (Charging) calculations for Splatlings and Brellas.</li>
+    <li>Added the ability to filter/search Weapons and Gear.</li>
+    <li>Updated MPU parameters for several weapons.</li>
+    <li>Fixed a bug preventing MPU stats from displaying for E-Liter weapons.</li>
+    </ul>    
+
+    <h4>Version 2.0.11</h4>
+    <ul>
+    <li>Updated the landing page to disable localisations that aren't finished.</li>
+    <li>Added integration for the Spyke Discord app.</li>
+    <li>Corrected the Run Speed (Firing) calculations for Splatlings.</li>
+    <li>Updated MPU parameters for several weapons.</li>
+    <li>Fixed a bug preventing MPU stats from displaying for E-Liter weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.10</h4>
+    <ul>
+    <li>Added all hats through v4.6.</li>
+    <li>Updated damage for several sub weapons.</li>
+    <li>Added all shoes through v4.6.</li>
+    <li>Updated the ink cost of all sub weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.10</h4>
+    <ul>
+    <li>Added new v4.6 weapons.</li>
+    <li>Added MPU damage caps for weapons with the Damage Up MPU effect.</li>
+    <li>Updated Respawn Time calculations to include the penalty for Respawn Punisher.</li>
+    <li>Updated several MPU parameters.</li>
+    </ul>
+
+    <h4>Version 2.0.9</h4>
+    <ul>
+    <li>Updated several parameters for Main Power Up.</li>
+    <li>Updated parameters for Bubble Blower (Special Power Up).</li>
+    <li>Added Ultra Stamp.</li>
+    <li>Added several Main Power Up stats.</li>
+    </ul> 
+
+    <h4>Version 2.0.8</h4>
+    <ul>
+    <li>Added Main Power Up ability.</li>
+    <li>Added update notifications to Loadout.</li>
+    <li>Added Special Saved On Death for Splashdown.</li>
+    <li>Fixed brand affinities.</li>
+    <li>Added landing (home) page.</li>
+    </ul>
+
+    <h4>Version 2.0.7</h4>
+    <ul>
+    <li>Updated Ink Saver Sub parameters and calculations.</li>
+    <li>Updated Quick Super Jump calculations.</li>
+    <li>Updated Bomb Defense DX (Tracking Time) calculations.</li>
+    <li>Updated Bomb Defense DX (Damage Reduction) calculations.</li>
+    <li>Updated Japanese localisation file.</li>
+    </ul>
+
+    <h4>Version 2.0.6</h4>
+    <ul>
+    <li>Added all missing clothing gear.</li>
+    <li>Updated Sub Power Up parameters for Point Sensor and Torpedo.</li>
+    </ul>
+
+    <h4>Version 2.0.5</h4>
+    <ul>
+    <li>Adding missing sub weapons (Fizzy Bomb & Torpedo).</li>
+    <li>Added all missing weapons.</li>
+    </ul>
+
+    <h4>Version 2.0.4</h4>
+    <ul>
+    <li>Corrected calculations for Special Saver and added Respawn Punisher penalty.</li>
+    <li>Added tooltip indicating when a stat is impacted by the Respawn Punisher penalty.</li>
+    <li>Updated Special Power Up stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.3</h4>
+    <ul>
+    <li>Fixed a bug in the core stat formula.</li>
+    <li>Updated the UI to more appropriately round values for stats.</li>
+    <li>Added tooltips for several abilities.</li>
+    <li>Added tooltips for several abilities.</li>
+    <li>Updated Ink Saver Main stat to use the new AP parameters and formula.</li>
+    <li>Updated Ink Saver Sub stat to use the new AP parameters and formula.</li>
+    <li>Updated Special Charge Up stat to use the new AP parameters and formula.</li>
+    <li>Updated Special Saver stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.2</h4>
+    <ul>
+    <li>Added a percentage change value for each stat.</li>
+    <li>Corrected calculations for Swim Speed and added Ninja Squid penalty.</li>
+    <li>Updated the Run Speed stat to use the new AP parameters and formula.</li>
+    <li>Updated the Ink Resistance stat to use the new AP parameters and formula.</li>
+    <li>Updated the Ink Recovery Up stat to use the new AP parameters and formula.</li>
+    <li>Updated the Run Speed stat to use the new AP parameters and formula.</li>
+    </ul>
+
+    <h4>Version 2.0.1</h4>
+    <ul>
+    <li>Updated the core formula for calculating the effects of Ability Points (AP).</li>
+    <li>Added <a href="https://twitter.com/LeanYoshi" target="_blank">Lean's</a> parameters for calculating stats using AP.
+    <li>Updated the Swim Speed stat to use the new AP parameters and formula.</li>
+    </ul>
+
     <h4>Version 1.2.0</h4>
     <ul>
     <li>Run Speed (Firing) and Ink Consumption (Main) values for most weapons are now up to date for game version 2.3.3.</li>
@@ -298,7 +496,62 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
     </div>
     </div>
     </div>
-    `
+    `,
+    update: `<div class="row">
+    <div class="col-md-12">
+    <div class="card purplestripes" id="dialog">
+    <div class="row cardheader">
+    {{ UI_UPDATE | translate }}
+    </div>
+    <div class="row basic-content readable" id="update">
+    <img src="/common/assets/img/ui/update.jpg" width="100%" height="100%"></img>
+    <h2 style="text-align:center;">
+    {{ UI_VERSION_PREFIX | translate }}`
+    +
+    $scope.appVersionToString()
+    +
+    `</h2></div><div class="row buttons">
+    <div class="col-xs-12">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
+    </div>
+    </div>`,
+    excessiveAP: `<div class="row">
+    <div class="col-md-12">
+    <div class="card purplestripes" id="dialog">
+    <div class="row cardheader">
+    {{ UI_EXCESSIVE_AP_HEADER | translate }}
+    </div>
+    <div class="row basic-content readable" id="about">
+    <p>{{ UI_EXCESSIVE_AP_WARNING | translate }}</p>
+    <div class="row buttons">
+    <div class="col-xs-12">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>`,
+    spyke: `<div class="row">
+    <div class="col-md-12">
+    <div class="card purplestripes" id="dialog">
+    <div class="row cardheader">
+    {{ UI_SPYKE_TOOLTIP | translate }}
+    </div>
+    <div class="row basic-content readable" id="about">
+    <p>{{ UI_SPYKE_WARNING | translate }}</p>
+    <div class="row buttons">
+    <div class="col-xs-6 col-md-4 col-md-offset-2">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="cancel()"><span>{{ UI_CANCEL | translate }}</span></button>
+    </div>
+    <div class="col-xs-6 col-md-4">
+    <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_OK | translate }}</span></button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>`
   }
 
   $scope.openWeaponPicker = function(size) {
@@ -325,7 +578,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
           return $scope.getSubByName;
         },
         getSpecialByName: function() {
-          return $scope.getSpecialByName
+          return $scope.getSpecialByName;
         }
       }
     });
@@ -334,11 +587,9 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       $scope.$parent.selectedSet=results.set; // ???
       $scope.$parent.loadout.weapon=results.weapon;
     }, function() {
-      $log.info('Weapon picker cancelled');
+ 
     });
   };
-
-
 
   $scope.openChangelog = function() {
     var modalInstance = $uibModal.open({
@@ -419,15 +670,118 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $uibModal, $
       }
       eval("$scope.loadout." + slot + ".equipped = results.selected")
     }, function() {
-      $log.info('Gear picker cancelled');
+
     });
   };
+
+  $scope.openSpykeModal = function() {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["spyke"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'BasicCtrl'
+    });
+
+    modalInstance.result.then(function(results) {
+      var url = "http://spyke.h3xmani.ac/app/loadout?encoding=" + $scope.encodeLoadout();
+      window.open(url,'_blank');
+    }, function() {
+
+    });    
+  };
+
+  $rootScope.openExcessiveAPModal = function() {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["excessiveAP"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'BasicCtrl'
+    });
+
+    modalInstance.result.then(function(results) {
+
+    }, function() {
+
+    });
+  };
+
+  // Update modal
+  var openUpdateModel = function() {
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      template: templates["update"],
+      windowTemplateUrl: 'blankModal.html',
+      controller: 'BasicCtrl'
+    });
+
+    modalInstance.result.then(function(results) {
+
+    }, function() {
+
+    });  
+  }
+  if (typeof(Storage) !== "undefined") {
+    if(!localStorage.appVersion || localStorage.appVersion < $scope.appVersion) {
+      localStorage.appVersion = $scope.appVersion;
+      openUpdateModel();
+    }
+  }
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
+angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $rootScope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
   $scope.selectedSet = selectedSet;
   $scope.weaponSets = weaponSets;
   $scope.selectedWeapon = selectedWeapon;
+
+  $scope.$watch('selectedWeapon', function (newValue, oldValue, scope) {
+    if($rootScope.splatController.weaponRanks.indexOf(newValue.name) != -1) {
+      $scope.weaponRank = 100 - $rootScope.splatController.weaponRanks.indexOf(newValue.name);
+    }
+    else {
+      $scope.weaponRank = 0;
+    }
+  });
+
+  $scope.weaponSearchFilter = function(value) {
+    var current_lang = $rootScope.splatController.getCurrentLang();
+    var searchText = document.getElementById("weaponSearchFilterText").value;
+    
+    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
+    }
+
+    // Filter on SPECIAL
+    var specials = $rootScope.splatController.specials;
+    var special = null;
+    for(var i = 0; i < specials.length; i++){
+      if(value.special != null && specials[i].name == value.special) {
+        special = specials[i];
+        break;
+      }
+    }
+    if(special != null) {
+        if(special.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+          return true;
+        }
+    }
+
+    // Filter on SUB ABILITY
+    var subs = $rootScope.splatController.subs;
+    var sub = null;
+    for(var i = 0; i < subs.length; i++){
+      if(value.sub != null && subs[i].name == value.sub) {
+        sub = subs[i];
+        break;
+      }
+    }
+    if(sub != null) {
+      if(sub.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        return true;
+      }
+    }
+
+    return false;
+  };
 
   $scope.switchSet = function() {
     $scope.selectedWeapon = this.availableWeapons()[0];
@@ -468,17 +822,54 @@ angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $uibM
 });
 
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
-  $scope.slot = slot
-  $scope.set = set
-  $scope.filterByMain = filterByMain
-  $scope.selectedGear = selectedGear
-  $scope.getSkillByName = getSkillByName
-  $scope.brands = brands
-  $scope.background = background
+angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootScope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
+  $scope.slot = slot;
+  $scope.set = set;
+  $scope.filterByMain = filterByMain;
+  $scope.selectedGear = selectedGear;
+  $scope.getSkillByName = getSkillByName;
+  $scope.brands = brands;
+  $scope.background = background;
 
-  if(slot.main != null) $scope.filtered = filterByMain(set,slot.main.name)
-  else $scope.filtered = filterByMain(set,null)
+  $scope.gearSearchFilter = function(value) {
+    var current_lang = $rootScope.splatController.getCurrentLang();
+    var searchText = document.getElementById("gearSearchFilterText").value;
+    
+    // Filter on NAME
+    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
+    }
+    
+    // Filter on BRAND
+    var brand = $rootScope.splatController.brands[value.brand];
+    if(brand.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      return true;
+    }
+    
+    // Filter on MAIN ABILITY
+    var skills = $rootScope.splatController.skills;
+    var skill = null;
+    for(var i = 0; i < skills.length; i++){
+      if(value.main != null && skills[i].name == value.main) {
+        skill = skills[i];
+        break;
+      }
+    }
+    if(skill != null) {
+      if(skill.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
+  if(slot.main != null) {
+    $scope.filtered = filterByMain(set,slot.main.name);
+  }
+  else {
+    $scope.filtered = filterByMain(set,null);
+  }
 
   $scope.selectGear = function(item) {
     $scope.selectedGear=item;

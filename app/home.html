@@ -1,0 +1,102 @@
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    loadout.ink - Stat Calculator + Gear Planner for Splatoon 2
+  </title>
+  <meta name="description" content="Gear planner and stat calculator for Splatoon 2. Create gear configurations and see the effects on your stats.">
+  <meta name="robots" content="index, follow">
+  <script>
+
+    var language_map = {
+      "en_US": "en_US",
+      "fr_FR": "fr_FR",
+      "ja_JP": "ja_JP",
+      "fr_CA": "fr_CA",
+      "es_ES": "es_ES",
+      "es_MX": "es_MX",
+      "it_IT": "it_IT",
+      "zh_HK": "zh_HK"
+      // "en_US": "en-us",
+      // "fr_FR": "fr",
+      // "ja_JP": "ja",
+      // "fr_CA": "fr-ca",
+      // "es_ES": "es",
+      // "es_MX": "es-mx",
+      // "it_IT": "it",
+      // "zh_HK": "zh-hk"
+    }
+
+    if (typeof(Storage) !== "undefined") {
+      if(localStorage.selectedLang) {
+        redirect(localStorage.selectedLang)
+      }
+    }
+    function redirect(lang) {
+      var URL = "https://selicia.github.io/" + language_map[lang] + "/"
+      if(window.location.hash) URL += window.location.hash
+        if (typeof(Storage) !== "undefined") {
+          localStorage.selectedLang = lang;
+        }
+        window.location = URL;
+      }
+    </script>
+    <link rel="stylesheet" href="/common/style/splash.css">
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="row">
+        <img id="logo" src="/common/assets/img/ui/logo-custom.png">
+      </div>
+      <div class="row">
+        <div class="language">
+          <a href="javascript:redirect('en_US')">English</a>
+        </div>
+        <div class="language">
+          <a href="javascript:redirect('ja_JP')">日本語</a>
+        </div>
+        <div class="language">
+          <div class="row">
+            <span>Français</span>
+          </div>
+          <div class="row">
+            <a href="javascript:redirect('fr_FR')"><img src="/common/assets/img/ui/fr.png"></a>
+            <!-- <a href="javascript:redirect('fr_CA')"><img src="/common/assets/img/ui/ca.png"></a> -->
+            <img class="disabled" src="/common/assets/img/ui/ca.png">
+          </div>
+          <!-- <span class="soon">(arrive bientôt)</span> -->
+        </div>
+        <div class="language">
+          <div class="row">
+            <span class="disabled">Español</span>
+          </div>
+          <div class="row">
+            <!-- <a href="javascript:redirect('es_ES')"><img src="/common/assets/img/ui/es.png"></a> -->
+            <img class="disabled"src="/common/assets/img/ui/es.png">
+            <!-- <a href="javascript:redirect('es_MX')"><img src="/common/assets/img/ui/mx.png"></a> -->
+            <img class="disabled" src="/common/assets/img/ui/mx.png">
+          </div>
+          <span class="soon">(próximamente)</span>
+        </div>
+        <div class="language">
+          <div class="row">
+            <!-- <a href="javascript:redirect('it_IT')">Italiano</a> -->
+            <span class="disabled">Italiano</span>
+          </div>
+          <span class="soon">(prossimamente)</span>
+        </div>
+        <div class="language">
+          <div class="row">
+            <span class="disabled">中文</span>
+          </div>
+          <div class="row">
+            <!-- <a href="javascript:redirect('zh_HK')"><img src="/common/assets/img/ui/zh_HK.png"></a> -->
+            <img class="disabled" src="/common/assets/img/ui/zh_HK.png">
+          </div>
+          <span class="soon">(快来了)</span>
+        </div>
+      </div>
+    </div>
+  
+
+
+</body></html>

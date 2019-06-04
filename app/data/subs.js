@@ -1,26 +1,26 @@
 angular.module('splatApp').subs = function ($scope) {
   $scope.subs = [
     {
-      name: "Splat Bomb",
+      name: "Autobomb",
       localizedName: {
-        "ja_JP": "スプラッシュボム",
-        "en_US": "Splat Bomb",
-        "en_GB": "Splat Bomb",
-        "es_ES": "Bomba básica",
-        "es_MX": "Plasbomba",
-        "fr_FR": "Bombe splash",
-        "fr_CA": "Bombe splash",
-        "de_DE": "Klecksbombe",
-        "it_IT": "Bomba splash",
-        "nl_NL": "Klodderbom",
-        "ru_RU": "Брызгающая бомба",
-        "zh_HK": "スプラッシュボム (三角形)"
+        "ja_JP": "ロボットボム",
+        "en_US": "Autobomb",
+        "en_GB": "Autobomb",
+        "es_ES": "Robobomba",
+        "es_MX": "Robobomba",
+        "fr_FR": "Bombe robot",
+        "fr_CA": "Bombe robot",
+        "de_DE": "Robo-Bombe",
+        "it_IT": "Robobomba",
+        "nl_NL": "Robobom",
+        "ru_RU": "Робобомб",
+        "zh_HK": "ロボットボム (自走式)"
       },
-      image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
-      cost: 70,
-      inkSaver: "Normal",
+      image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
+      cost: 55,
+      inkSaver: "B",
       damage: {
-        "Near": 180,
+        "Near": 150,
         "Far": 30
       }
     },
@@ -42,59 +42,11 @@ angular.module('splatApp').subs = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Quick.png",
       cost: 40,
-      inkSaver: "Low",
+      inkSaver: "A",
       damage: {
         "Direct": 60,
         "Near": 35,
         "Far": 25
-      }
-    },
-    {
-      name: "Suction Bomb",
-      localizedName: {
-        "ja_JP": "キューバンボム",
-        "en_US": "Suction Bomb",
-        "en_GB": "Suction Bomb",
-        "es_ES": "Bomba ventosa",
-        "es_MX": "Bomba pegajosa",
-        "fr_FR": "Bombe gluante",
-        "fr_CA": "Bombe gluante",
-        "de_DE": "Haftbombe",
-        "it_IT": "Appiccibomba",
-        "nl_NL": "Kleefbom",
-        "ru_RU": "Бомба на присоске",
-        "zh_HK": "キューバンボム (吸盤)"
-      },
-      image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
-      cost: 70,
-      inkSaver: "Normal",
-      damage: {
-        "Near": 180,
-        "Far": 30
-      }
-    },
-    {
-      name: "Autobomb",
-      localizedName: {
-        "ja_JP": "ロボットボム",
-        "en_US": "Autobomb",
-        "en_GB": "Autobomb",
-        "es_ES": "Robobomba",
-        "es_MX": "Robobomba",
-        "fr_FR": "Bombe robot",
-        "fr_CA": "Bombe robot",
-        "de_DE": "Robo-Bombe",
-        "it_IT": "Robobomba",
-        "nl_NL": "Robobom",
-        "ru_RU": "Робобомб",
-        "zh_HK": "ロボットボム (自走式)"
-      },
-      image: "../common/assets/img/subspe/Wsb_Bomb_Robo.png",
-      cost: 70,
-      inkSaver: "Low",
-      damage: {
-        "Near": 150,
-        "Far": 30
       }
     },
     {
@@ -115,10 +67,34 @@ angular.module('splatApp').subs = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsb_Bomb_Curling.png",
       cost: 70,
-      inkSaver: "Normal",
+      inkSaver: "C",
       damage: {
         "Near": 150,
         "Far": 30
+      }
+    },
+    {
+      name: "Fizzy Bomb",
+      localizedName: {
+        "ja_JP": "タンサンボム",
+        "en_US": "Fizzy Bomb",
+        "en_GB": "Fizzy Bomb",
+        "es_ES": "Bomba carbónica",
+        "es_MX": "Bomba carbónica",
+        "fr_FR": "Bombe soda",
+        "fr_CA": "Bombe soda",
+        "de_DE": "Sprudel-Bombe",
+        "it_IT": "Bomba a gassosa",
+        "nl_NL": "Bomblikje",
+        "ru_RU": "Содовая бомба",
+        "zh_HK": ""  
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Piyo.png",
+      cost: 60,
+      inkSaver: "B",
+      damage: {
+        "Near": 50,
+        "Far": 35
       }
     },
     {
@@ -139,71 +115,11 @@ angular.module('splatApp').subs = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsb_TimerTrap.png",
       cost: 60,
-      inkSaver: "Normal",
+      inkSaver: "D",
       damage: {
-        "Near": 35,
-        "Far": 20
+        "Near": 45,
+        "Far": 35
       }
-    },
-    {
-      name: "Squid Beakon",
-      localizedName: {
-        "ja_JP": "ジャンプビーコン",
-        "en_US": "Squid Beakon",
-        "en_GB": "Squid Beakon",
-        "es_ES": "Baliza transportadora",
-        "es_MX": "Baliza",
-        "fr_FR": "Balise de saut",
-        "fr_CA": "Balise de saut",
-        "de_DE": "Sprungboje",
-        "it_IT": "Trasferitore",
-        "nl_NL": "Springschotel",
-        "ru_RU": "Прыжковый маячок",
-        "zh_HK": "ジャンプビーコン (雷達標志)"
-      },
-      image: "../common/assets/img/subspe/Wsb_Flag.png",
-      cost: 75,
-      inkSaver: "Normal"
-    },
-    {
-      name: "Sprinkler",
-      localizedName: {
-        "ja_JP": "スプリンクラー",
-        "en_US": "Sprinkler",
-        "en_GB": "Sprinkler",
-        "es_ES": "Aspersor",
-        "es_MX": "Aspersor",
-        "fr_FR": "Fontaine",
-        "fr_CA": "Gicleur",
-        "de_DE": "Sprinkler",
-        "it_IT": "Spruzzatore",
-        "nl_NL": "Inktsprinkler",
-        "ru_RU": "Распылятор",
-        "zh_HK": "ジャンプビーコン (淋花器)"
-      },
-      image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
-      cost: 70,
-      inkSaver: "Normal"
-    },
-    {
-      name: "Toxic Mist",
-      localizedName: {
-        "ja_JP": "ポイズンミスト",
-        "en_US": "Toxic Mist",
-        "en_GB": "Toxic Mist",
-        "es_ES": "Nebulizador",
-        "es_MX": "Nebulizador",
-        "fr_FR": "Brume toxique",
-        "fr_CA": "Brume toxique",
-        "de_DE": "Sepitox-Nebel",
-        "it_IT": "Nebbia tossica",
-        "nl_NL": "Gifmist",
-        "ru_RU": "Едкий туман",
-        "zh_HK": "ポイズンミスト (毒霧)"
-      },
-      image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
-      cost: 60,
-      inkSaver: "Normal"
     },
     {
       name: "Point Sensor",
@@ -222,8 +138,8 @@ angular.module('splatApp').subs = function ($scope) {
         "zh_HK": "ポイントセンサー (追跡器)"
       },
       image: "../common/assets/img/subspe/Wsb_PointSensor.png",
-      cost: 60,
-      inkSaver: "Normal"
+      cost: 45,
+      inkSaver: "B"
     },
     {
       name: "Splash Wall",
@@ -243,7 +159,139 @@ angular.module('splatApp').subs = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsb_Shield.png",
       cost: 60,
-      inkSaver: "Normal"
+      inkSaver: "C"
+    },
+    {
+      name: "Splat Bomb",
+      localizedName: {
+        "ja_JP": "スプラッシュボム",
+        "en_US": "Splat Bomb",
+        "en_GB": "Splat Bomb",
+        "es_ES": "Bomba básica",
+        "es_MX": "Plasbomba",
+        "fr_FR": "Bombe splash",
+        "fr_CA": "Bombe splash",
+        "de_DE": "Klecksbombe",
+        "it_IT": "Bomba splash",
+        "nl_NL": "Klodderbom",
+        "ru_RU": "Брызгающая бомба",
+        "zh_HK": "スプラッシュボム (三角形)"
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Splash.png",
+      cost: 70,
+      inkSaver: "C",
+      damage: {
+        "Near": 180,
+        "Far": 30
+      }
+    },
+    {
+      name: "Sprinkler",
+      localizedName: {
+        "ja_JP": "スプリンクラー",
+        "en_US": "Sprinkler",
+        "en_GB": "Sprinkler",
+        "es_ES": "Aspersor",
+        "es_MX": "Aspersor",
+        "fr_FR": "Fontaine",
+        "fr_CA": "Gicleur",
+        "de_DE": "Sprinkler",
+        "it_IT": "Spruzzatore",
+        "nl_NL": "Inktsprinkler",
+        "ru_RU": "Распылятор",
+        "zh_HK": "ジャンプビーコン (淋花器)"
+      },
+      image: "../common/assets/img/subspe/Wsb_Sprinkler.png",
+      cost: 60,
+      inkSaver: "D"
+    },
+    {
+      name: "Squid Beakon",
+      localizedName: {
+        "ja_JP": "ジャンプビーコン",
+        "en_US": "Squid Beakon",
+        "en_GB": "Squid Beakon",
+        "es_ES": "Baliza transportadora",
+        "es_MX": "Baliza",
+        "fr_FR": "Balise de saut",
+        "fr_CA": "Balise de saut",
+        "de_DE": "Sprungboje",
+        "it_IT": "Trasferitore",
+        "nl_NL": "Springschotel",
+        "ru_RU": "Прыжковый маячок",
+        "zh_HK": "ジャンプビーコン (雷達標志)"
+      },
+      image: "../common/assets/img/subspe/Wsb_Flag.png",
+      cost: 75,
+      inkSaver: "D"
+    },
+    {
+      name: "Suction Bomb",
+      localizedName: {
+        "ja_JP": "キューバンボム",
+        "en_US": "Suction Bomb",
+        "en_GB": "Suction Bomb",
+        "es_ES": "Bomba ventosa",
+        "es_MX": "Bomba pegajosa",
+        "fr_FR": "Bombe gluante",
+        "fr_CA": "Bombe gluante",
+        "de_DE": "Haftbombe",
+        "it_IT": "Appiccibomba",
+        "nl_NL": "Kleefbom",
+        "ru_RU": "Бомба на присоске",
+        "zh_HK": "キューバンボム (吸盤)"
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Suction.png",
+      cost: 70,
+      inkSaver: "C",
+      damage: {
+        "Near": 180,
+        "Far": 30
+      }
+    },
+    {
+      name: "Torpedo",
+      localizedName: {
+        "ja_JP": "トーピード",
+        "en_US": "Torpedo",
+        "en_GB": "Torpedo",
+        "es_ES": "",
+        "es_MX": "",
+        "fr_FR": "Bentorpille",
+        "fr_CA": "Bentorpille",
+        "de_DE": "",
+        "it_IT": "Torpedinatore",
+        "nl_NL": "Torpedobom",
+        "ru_RU": "Торпедная бомба",
+        "zh_HK": ""  
+      },
+      image: "../common/assets/img/subspe/Wsb_Bomb_Tako.png",
+      cost: 65,
+      inkSaver: "C",
+      damage: {
+        "Near": 60,
+        "Far": 35
+      }
+    },
+    {
+      name: "Toxic Mist",
+      localizedName: {
+        "ja_JP": "ポイズンミスト",
+        "en_US": "Toxic Mist",
+        "en_GB": "Toxic Mist",
+        "es_ES": "Nebulizador",
+        "es_MX": "Nebulizador",
+        "fr_FR": "Brume toxique",
+        "fr_CA": "Brume toxique",
+        "de_DE": "Sepitox-Nebel",
+        "it_IT": "Nebbia tossica",
+        "nl_NL": "Gifmist",
+        "ru_RU": "Едкий туман",
+        "zh_HK": "ポイズンミスト (毒霧)"
+      },
+      image: "../common/assets/img/subspe/Wsb_PoisonFog.png",
+      cost: 60,
+      inkSaver: "B"
     }
   ]
 

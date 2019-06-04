@@ -127,39 +127,39 @@ angular.module('splatApp').skills = function ($scope) {
       id: 7
     },
     {
-      name:"Bomb Defense Up",
+      name:"Bomb Defense Up DX",
       localizedName: {
-        "ja_JP": "爆風ダメージ軽減",
-        "en_US": "Bomb Defense Up",
-        "en_GB": "Bomb Defense Up",
-        "es_ES": "Resistencia explosiva",
-        "es_MX": "Antiexplosivos",
-        "fr_FR": "Filtre à explosions",
-        "fr_CA": "Filtre à explosions",
-        "de_DE": "Bombenschutz",
-        "it_IT": "Antiesplosione",
-        "nl_NL": "Bomvrij",
-        "ru_RU": "Бомбостойкость"
+        "ja_JP": "爆風ダメージ軽減・改",
+        "en_US": "Bomb Defense Up DX",
+        "en_GB": "Bomb Defense Up DX",
+        "es_ES": "Resistencia explosiva II",
+        "es_MX": "Antiexplosivos II",
+        "fr_FR": "Filtre à explosions II",
+        "fr_CA": "Filtre à explosions II",
+        "de_DE": "Bombenschutz 2.0",
+        "it_IT": "Antiesplosione 2.0",
+        "nl_NL": "Bomvrij 2.0",
+        "ru_RU": "Бомбостойкость М-2"
       },
       image:"../common/assets/img/skills/BombDamage_Reduction.png",
       id: 8
     },
     {
-      name:"Cold-Blooded",
+      name:"Main Power Up",
       localizedName: {
-        "ja_JP": "マーキング時間短縮",
-        "en_US": "Cold-Blooded",
-        "en_GB": "Cold-Blooded",
-        "es_ES": "Invisibilidad",
-        "es_MX": "Sangre fría",
-        "fr_FR": "Furtivité",
-        "fr_CA": "Furtivité",
-        "de_DE": "Phantom",
-        "it_IT": "Batteria difettosa",
-        "nl_NL": "Stoorzender",
-        "ru_RU": "Кальмар 004"
+        "ja_JP": "メイン性能アップ",
+        "en_US": "Main Power Up",
+        "en_GB": "Main Power Up",
+        "es_ES": "Superarma principal",
+        "es_MX": "Superarma principal",
+        "fr_FR": "Arme principale +",
+        "fr_CA": "Arme principale +",
+        "de_DE": "Hauptwaffe +",
+        "it_IT": "Arma principale +",
+        "nl_NL": "Hoofdhelper",
+        "ru_RU": "Про-Основа"
       },
-      image:"../common/assets/img/skills/MarkingTime_Reduction.png",
+      image:"../common/assets/img/skills/MainPowerUp.png",
       id: 9
     },
     {
@@ -269,6 +269,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/StartAllUp.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 15
     },
     {
@@ -288,6 +289,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/EndAllUp.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 16
     },
     {
@@ -307,6 +309,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/ComeBack.png",
       exclusive:"loadout.head.main",
+      conditional: true,
       id: 17
     },
     {
@@ -383,6 +386,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/DeathMarking.png",
       exclusive:"loadout.clothes.main",
+      // conditional: true,
       id: 21
     },
     {
@@ -421,6 +425,7 @@ angular.module('splatApp').skills = function ($scope) {
       },
       image:"../common/assets/img/skills/SomersaultLanding.png",
       exclusive:"loadout.shoes.main",
+      conditional: true,
       id: 23
     },
     {

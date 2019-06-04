@@ -1,7 +1,7 @@
 angular.module('splatApp').clothes = function($scope) {
   $scope.clothes = [
   {
-    "image": "../common/assets/img/gear/Clt_FST001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_FST001.png",
     "name": "Basic Tee",
     "localizedName": {
       "ja_JP": "わかばイカＴ",
@@ -20,10 +20,32 @@ angular.module('splatApp').clothes = function($scope) {
     "brand": "SquidForce",
     "stars": 1,
     "id": 0,
-    "splatnet": 2
+    "splatnet": 2,
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_FST002.png",
+    "name": "Fresh Octo Tee",
+    "localizedName": {
+      "ja_JP": "わかばタコT",
+      "en_US": "Fresh Octo Tee",
+      "en_GB": "Fresh Octo Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt basique Octa",
+      "fr_CA": "T-shirt basique Octa",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Cuttlegear",
+    "stars": 1,
+    "id": 1,
+    "splatnet": 3
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES000.png",
     "name": "White Tee",
     "localizedName": {
       "ja_JP": "イカホワイト",
@@ -41,11 +63,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "SquidForce",
     "stars": 1,
-    "id": 1,
+    "id": 2,
     "splatnet": 1000
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES001.png",
     "name": "Black Squideye",
     "localizedName": {
       "ja_JP": "イカノメＴ ブラック",
@@ -63,11 +85,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Tentatek",
     "stars": 1,
-    "id": 2,
+    "id": 3,
     "splatnet": 1001
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES003.png",
     "name": "Sky-Blue Squideye",
     "localizedName": {
       "ja_JP": "イカノメＴ ライトブルー",
@@ -82,14 +104,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Голубая кальмарка",
       "it_IT": "Maglia azzurromare"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Tentatek",
     "stars": 1,
-    "splatnet": 1003,
-    "id": 182
+    "id": 4,
+    "splatnet": 1003
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES004.png",
     "name": "Rockenberg White",
     "localizedName": {
       "ja_JP": "ロッケンベルグＴ ホワイト",
@@ -107,11 +129,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Rockenberg",
     "stars": 2,
-    "splatnet": 1004,
-    "id": 183
+    "id": 5,
+    "splatnet": 1004
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES005.png",
+    "name": "Rockenberg Black",
+    "localizedName": {
+      "ja_JP": "ロッケンベルグＴ ブラック",
+      "en_US": "Rockenberg Black",
+      "en_GB": "Rockenberg Black",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt Iormungand noir",
+      "fr_CA": "T-shirt Iormungand noir",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Respawn Punisher",
+    "brand": "Rockenberg",
+    "stars": 1,
+    "id": 6,
+    "splatnet": 1005
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES006.png",
     "name": "Black Tee",
     "localizedName": {
       "ja_JP": "イカブラック",
@@ -129,11 +173,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "SquidForce",
     "stars": 1,
-    "id": 3,
+    "id": 7,
     "splatnet": 1006
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES007.png",
     "name": "Sunny-Day Tee",
     "localizedName": {
       "ja_JP": "サニーオレンジＴ",
@@ -151,11 +195,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Krak-On",
     "stars": 1,
-    "id": 4,
+    "id": 8,
     "splatnet": 1007
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES008.png",
     "name": "Rainy-Day Tee",
     "localizedName": {
       "ja_JP": "レイニーブルーＴ",
@@ -173,11 +217,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Krak-On",
     "stars": 1,
-    "splatnet": 1008,
-    "id": 184
+    "id": 9,
+    "splatnet": 1008
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES009.png",
     "name": "Reggae Tee",
     "localizedName": {
       "ja_JP": "イカジャマイカ",
@@ -195,11 +239,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Skalop",
     "stars": 3,
-    "splatnet": 1009,
-    "id": 185
+    "id": 10,
+    "splatnet": 1009
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES010.png",
     "name": "Fugu Tee",
     "localizedName": {
       "ja_JP": "マルフグＴ",
@@ -217,11 +261,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 5,
+    "id": 11,
     "splatnet": 1010
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES011.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES011.png",
     "name": "Mint Tee",
     "localizedName": {
       "ja_JP": "ミントＴ",
@@ -236,14 +280,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Мятная майка",
       "it_IT": "T-shirt verdeacqua"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Skalop",
     "stars": 1,
-    "id": 6,
+    "id": 12,
     "splatnet": 1011
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES012.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES012.png",
     "name": "Grape Tee",
     "localizedName": {
       "ja_JP": "グレープＴ",
@@ -261,11 +305,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Skalop",
     "stars": 1,
-    "splatnet": 1012,
-    "id": 186
+    "id": 13,
+    "splatnet": 1012
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES013.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES013.png",
     "name": "Red Vector Tee",
     "localizedName": {
       "ja_JP": "ベクトルパターン レッド",
@@ -283,11 +327,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 7,
+    "id": 14,
     "splatnet": 1013
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES015.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES014.png",
+    "name": "Gray Vector Tee",
+    "localizedName": {
+      "ja_JP": "ベクトルパターン グレー",
+      "en_US": "Gray Vector Tee",
+      "en_GB": "Gray Vector Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt fléché gris",
+      "fr_CA": "T-shirt fléché gris",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Takoroka",
+    "stars": 1,
+    "id": 15,
+    "splatnet": 1014
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES015.png",
     "name": "Blue Peaks Tee",
     "localizedName": {
       "ja_JP": "ヤマビコＴ ブルー",
@@ -305,11 +371,55 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Inkline",
     "stars": 1,
-    "id": 8,
+    "id": 16,
     "splatnet": 1015
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES018.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES016.png",
+    "name": "Ivory Peaks Tee",
+    "localizedName": {
+      "ja_JP": "ヤマビコＴ アイボリー",
+      "en_US": "Ivory Peaks Tee",
+      "en_GB": "Ivory Peaks Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt Abysma ivoire",
+      "fr_CA": "T-shirt Abysma ivoire",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Haunt",
+    "brand": "Inkline",
+    "stars": 1,
+    "id": 17,
+    "splatnet": 1016
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES017.png",
+    "name": "Squid-Stitch Tee",
+    "localizedName": {
+      "ja_JP": "チドリメロンＴ",
+      "en_US": "Squid-Stitch Tee",
+      "en_GB": "Squid-Stitch Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt pied-de-poulpe",
+      "fr_CA": "T-shirt pied-de-poulpe",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Skalop",
+    "stars": 1,
+    "id": 18,
+    "splatnet": 1017
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES018.png",
     "name": "Pirate-Stripe Tee",
     "localizedName": {
       "ja_JP": "パイレーツボーダー",
@@ -327,11 +437,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 1018,
-    "id": 187
+    "id": 19,
+    "splatnet": 1018
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES019.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES019.png",
     "name": "Sailor-Stripe Tee",
     "localizedName": {
       "ja_JP": "マリンボーダー",
@@ -349,11 +459,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 9,
+    "id": 20,
     "splatnet": 1019
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES020.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES020.png",
     "name": "White 8-Bit FishFry",
     "localizedName": {
       "ja_JP": "ヤキフグ8bit ホワイト",
@@ -371,11 +481,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 10,
+    "id": 21,
     "splatnet": 1020
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES021.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES021.png",
     "name": "Black 8-Bit FishFry",
     "localizedName": {
       "ja_JP": "ヤキフグ8bit ブラック",
@@ -390,14 +500,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "«Фугасик-ретро» черная",
       "it_IT": "T-shirt 8 bit nera"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Firefin",
     "stars": 1,
-    "splatnet": 1021,
-    "id": 188
+    "id": 22,
+    "splatnet": 1021
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES022.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES022.png",
     "name": "White Anchor Tee",
     "localizedName": {
       "ja_JP": "ガチホワイト",
@@ -415,11 +525,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 11,
+    "id": 23,
     "splatnet": 1022
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES023.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES023.png",
     "name": "Black Anchor Tee",
     "localizedName": {
       "ja_JP": "ガチブラック",
@@ -437,11 +547,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "SquidForce",
     "stars": 2,
-    "splatnet": 1023,
-    "id": 189
+    "id": 24,
+    "splatnet": 1023
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES026.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES026.png",
     "name": "Carnivore Tee",
     "localizedName": {
       "ja_JP": "ニクショクＴ",
@@ -456,14 +566,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Майка «Хищник»",
       "it_IT": "T-shirt leopardata"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Firefin",
     "stars": 1,
-    "splatnet": 1026,
-    "id": 190
+    "id": 25,
+    "splatnet": 1026
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES027.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES027.png",
     "name": "Pearl Tee",
     "localizedName": {
       "ja_JP": "パールドットＴ",
@@ -481,11 +591,56 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Skalop",
     "stars": 1,
-    "splatnet": 1027,
-    "id": 191
+    "id": 26,
+    "splatnet": 1027
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES030.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES028.png",
+    "name": "Octo Tee",
+    "localizedName": {
+      "ja_JP": "タコＴ",
+      "en_US": "Octo Tee",
+      "en_GB": "Octo Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt octarien",
+      "fr_CA": "T-shirt octarien",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Haunt",
+    "brand": "Cuttlegear",
+    "stars": 3,
+    "id": 27,
+    "splatnet": 1028,
+    "splatnetShop": true
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES029.png",
+    "name": "Herbivore Tee",
+    "localizedName": {
+      "ja_JP": "ソウショクＴ",
+      "en_US": "Herbivore Tee",
+      "en_GB": "Herbivore Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt proie",
+      "fr_CA": "T-shirt proie",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ninja Squid",
+    "brand": "Firefin",
+    "stars": 1,
+    "id": 28,
+    "splatnet": 1029
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES030.png",
     "name": "Black V-Neck Tee",
     "localizedName": {
       "ja_JP": "イカブラックV",
@@ -503,11 +658,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 12,
+    "id": 29,
     "splatnet": 1030
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES031.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES031.png",
     "name": "White Deca Logo Tee",
     "localizedName": {
       "ja_JP": "デカロゴＴ シロ",
@@ -525,11 +680,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Zink",
     "stars": 1,
-    "id": 13,
+    "id": 30,
     "splatnet": 1031
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES032.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES032.png",
     "name": "Half-Sleeve Sweater",
     "localizedName": {
       "ja_JP": "スウェットT ゴブ",
@@ -547,11 +702,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Toni Kensa",
     "stars": 2,
-    "id": 14,
+    "id": 31,
     "splatnet": 1032
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES033.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES033.png",
     "name": "King Jersey",
     "localizedName": {
       "ja_JP": "キングHKシャツ",
@@ -569,11 +724,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Enperry",
     "stars": 2,
-    "id": 15,
+    "id": 32,
     "splatnet": 1033
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES034.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES034.png",
     "name": "Gray 8-Bit FishFry",
     "localizedName": {
       "ja_JP": "ヤキフグ8bit グレー",
@@ -591,11 +746,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Firefin",
     "stars": 1,
-    "id": 16,
+    "id": 33,
     "splatnet": 1034
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES035.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES035.png",
     "name": "White V-Neck Tee",
     "localizedName": {
       "ja_JP": "イカホワイトV",
@@ -613,11 +768,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 17,
+    "id": 34,
     "splatnet": 1035
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES036.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES036.png",
     "name": "White Urchin Rock Tee",
     "localizedName": {
       "ja_JP": "ガンガゼロックT シロ",
@@ -635,11 +790,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 18,
+    "id": 35,
     "splatnet": 1036
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES037.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES037.png",
     "name": "Black Urchin Rock Tee",
     "localizedName": {
       "ja_JP": "ガンガゼロックT クロ",
@@ -657,11 +812,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 19,
+    "id": 36,
     "splatnet": 1037
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES038.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES038.png",
     "name": "Wet Floor Band Tee",
     "localizedName": {
       "ja_JP": "バンドT WETFLOOR",
@@ -679,11 +834,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 20,
+    "id": 37,
     "splatnet": 1038
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES039.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES039.png",
     "name": "Squid Squad Band Tee",
     "localizedName": {
       "ja_JP": "バンドT SQUIDSQUAD",
@@ -701,11 +856,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 21,
+    "id": 38,
     "splatnet": 1039
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES040.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES040.png",
     "name": "Navy Deca Logo Tee",
     "localizedName": {
       "ja_JP": "デカロゴT ノーコン",
@@ -723,11 +878,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Zink",
     "stars": 1,
-    "id": 22,
+    "id": 39,
     "splatnet": 1040
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES041.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES041.png",
     "name": "Mister Shrug Tee",
     "localizedName": {
       "ja_JP": "ミスターシュラッグT",
@@ -745,11 +900,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Krak-On",
     "stars": 3,
-    "id": 23,
+    "id": 40,
     "splatnet": 1041
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES042.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES042.png",
     "name": "Chirpy Chips Band Tee",
     "localizedName": {
       "ja_JP": "バンドT ABXY",
@@ -764,14 +919,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Майка «Chirpy Chips»",
       "it_IT": "T-shirt Chirpy Chips"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 24,
+    "id": 41,
     "splatnet": 1042
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES043.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES043.png",
     "name": "Hightide Era Band Tee",
     "localizedName": {
       "ja_JP": "バンドT HIGHTIDEERA",
@@ -789,11 +944,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 25,
+    "id": 42,
     "splatnet": 1043
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES044.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES044.png",
     "name": "Red V-Neck Limited Tee",
     "localizedName": {
       "ja_JP": "イカレッドV コラボ",
@@ -811,11 +966,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 26,
+    "id": 43,
     "splatnet": 1044
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES045.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES045.png",
     "name": "Green V-Neck Limited Tee",
     "localizedName": {
       "ja_JP": "イカグリーンV コラボ",
@@ -833,11 +988,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 27,
+    "id": 44,
     "splatnet": 1045
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES046.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES046.png",
     "name": "ω-3 Tee",
     "localizedName": {
       "ja_JP": "ω-3T",
@@ -855,11 +1010,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Firefin",
     "stars": 1,
-    "splatnet": 1046,
-    "id": 192
+    "id": 45,
+    "splatnet": 1046
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES048.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES047.png",
+    "name": "Annaki Polpo-Pic Tee",
+    "localizedName": {
+      "ja_JP": "アナアキT ポルポピック",
+      "en_US": "Annaki Polpo-Pic Tee",
+      "en_GB": "Annaki Polpo-Pic Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Débardeur poulpe Aroz",
+      "fr_CA": "Débardeur poulpe Aroz",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Run Speed Up",
+    "brand": "Annaki",
+    "stars": 3,
+    "id": 46,
+    "splatnet": 1047
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES048.png",
     "name": "Firewave Tee",
     "localizedName": {
       "ja_JP": "ホットグラデT",
@@ -877,11 +1054,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Skalop",
     "stars": 1,
-    "splatnet": 1048,
-    "id": 193
+    "id": 47,
+    "splatnet": 1048
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES049.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES049.png",
     "name": "Takoroka Galactic Tie Dye",
     "localizedName": {
       "ja_JP": "ヤコタイダイ ギャラクシー",
@@ -899,11 +1076,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Takoroka",
     "stars": 1,
-    "splatnet": 1049,
-    "id": 194
+    "id": 48,
+    "splatnet": 1049
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES050.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES050.png",
     "name": "Takoroka Rainbow Tie Dye",
     "localizedName": {
       "ja_JP": "ヤコタイダイ レインボー",
@@ -921,11 +1098,77 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Takoroka",
     "stars": 1,
-    "splatnet": 1050,
-    "id": 195
+    "id": 49,
+    "splatnet": 1050
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES054.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES051.png",
+    "name": "Missus Shrug Tee",
+    "localizedName": {
+      "ja_JP": "ミズシュラッグT",
+      "en_US": "Missus Shrug Tee",
+      "en_GB": "Missus Shrug Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt Madame Plouf",
+      "fr_CA": "T-shirt Madame Plouf",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Krak-On",
+    "stars": 3,
+    "id": 50,
+    "splatnet": 1051
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES052.png",
+    "name": "League Tee",
+    "localizedName": {
+      "ja_JP": "リーグT",
+      "en_US": "League Tee",
+      "en_GB": "League Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt match de ligue",
+      "fr_CA": "T-shirt match de ligue",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Power Up",
+    "brand": "SquidForce",
+    "stars": 2,
+    "id": 51,
+    "splatnet": 1052
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES053.png",
+    "name": "Friend Tee",
+    "localizedName": {
+      "ja_JP": "フレンドT",
+      "en_US": "Friend Tee",
+      "en_GB": "Friend Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt match amical",
+      "fr_CA": "T-shirt match amical",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Thermal Ink",
+    "brand": "SquidForce",
+    "stars": 1,
+    "id": 52,
+    "splatnet": 1053
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES054.png",
     "name": "Tentatek Slogan Tee",
     "localizedName": {
       "ja_JP": "アロメスローガンT",
@@ -943,11 +1186,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Tentatek",
     "stars": 2,
-    "splatnet": 1054,
-    "id": 196
+    "id": 53,
+    "splatnet": 1054
   },
   {
-    "image": "../common/assets/img/gear/Clt_TES055.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES055.png",
     "name": "Icewave Tee",
     "localizedName": {
       "ja_JP": "アイスグラデT",
@@ -965,11 +1208,143 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Skalop",
     "stars": 1,
-    "splatnet": 1055,
-    "id": 197
+    "id": 54,
+    "splatnet": 1055
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TES056.png",
+    "name": "Octoking HK Jersey",
+    "localizedName": {
+      "ja_JP": "キングオクトHKシャツ",
+      "en_US": "Octoking HK Jersey",
+      "en_GB": "Octoking HK Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Maillot de hockey OCTADUX",
+      "fr_CA": "Maillot de hockey OCTADUX",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Charge Up",
+    "brand": "Enperry",
+    "stars": 2,
+    "id": 55,
+    "splatnet": 1056
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES057.png",
+    "name": "Dakro Nana Tee",
+    "localizedName": {
+      "ja_JP": "デカロTキウイ",
+      "en_US": "Dakro Nana Tee",
+      "en_GB": "Dakro Nana Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt jaune à logo",
+      "fr_CA": "T-shirt jaune à logo",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Respawn",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 56,
+    "splatnet": 1057,
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES058.png",
+    "name": "Dakro Golden Tee",
+    "localizedName": {
+      "ja_JP": "デカロTゴールデン",
+      "en_US": "Dakro Golden Tee",
+      "en_GB": "Dakro Golden Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt à logo doré",
+      "fr_CA": "T-shirt à logo doré",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Thermal Ink",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 57,
+    "splatnet": 1058
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES059.png",
+    "name": "Black Velour Octoking Tee",
+    "localizedName": {
+      "ja_JP": "キングオクトTブラックベロア",
+      "en_US": "Black Velour Octoking Tee",
+      "en_GB": "Black Velour Octoking Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt noir OCTADUX",
+      "fr_CA": "T-shirt noir OCTADUX",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Main Power Up",
+    "brand": "Enperry",
+    "stars": 2,
+    "id": 58,
+    "splatnet": 1059
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES060.png",
+    "name": "Green Velour Octoking Tee",
+    "localizedName": {
+      "ja_JP": "キングオクトTミドリベロア",
+      "en_US": "Green Velour Octoking Tee",
+      "en_GB": "Green Velour Octoking Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt vert OCTADUX",
+      "fr_CA": "T-shirt vert OCTADUX",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Saver",
+    "brand": "Enperry",
+    "stars": 1,
+    "id": 59,
+    "splatnet": 1060
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TES061.png",
+    "name": "SWC Logo Tee",
+    "localizedName": {
+      "ja_JP": "SWCロゴT",
+      "en_US": "SWC Logo Tee",
+      "en_GB": "SWC Logo Tee",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "T-shirt SWC",
+      "fr_CA": "T-shirt SWC",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Swim Speed Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 60,
+    "splatnet": 1061
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL000.png",
     "name": "White Striped LS",
     "localizedName": {
       "ja_JP": "ボーダーホワイト",
@@ -987,11 +1362,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Splash Mob",
     "stars": 2,
-    "splatnet": 2000,
-    "id": 198
+    "id": 61,
+    "splatnet": 2000
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL001.png",
     "name": "Black LS",
     "localizedName": {
       "ja_JP": "バニーポップ ブラック",
@@ -1009,11 +1384,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Zekko",
     "stars": 2,
-    "id": 28,
+    "id": 62,
     "splatnet": 2001
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL002.png",
     "name": "Purple Camo LS",
     "localizedName": {
       "ja_JP": "カモフラパープル",
@@ -1031,11 +1406,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 29,
+    "id": 63,
     "splatnet": 2002
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL003.png",
     "name": "Navy Striped LS",
     "localizedName": {
       "ja_JP": "ボーダーネイビー",
@@ -1053,11 +1428,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 30,
+    "id": 64,
     "splatnet": 2003
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL004.png",
     "name": "Zekko Baseball LS",
     "localizedName": {
       "ja_JP": "エゾッコラグラン",
@@ -1072,14 +1447,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Футболка от «Йожко»",
       "it_IT": "Maglia Ezko"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Zekko",
     "stars": 1,
-    "id": 31,
+    "id": 65,
     "splatnet": 2004
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL005.png",
     "name": "Varsity Baseball LS",
     "localizedName": {
       "ja_JP": "カレッジラグラン",
@@ -1097,11 +1472,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 2005,
-    "id": 199
+    "id": 66,
+    "splatnet": 2005
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL006.png",
     "name": "Black Baseball LS",
     "localizedName": {
       "ja_JP": "ハラグロラグラン",
@@ -1119,11 +1494,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Rockenberg",
     "stars": 1,
-    "splatnet": 2006,
-    "id": 200
+    "id": 67,
+    "splatnet": 2006
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL007.png",
     "name": "White Baseball LS",
     "localizedName": {
       "ja_JP": "ハラシロラグラン",
@@ -1141,11 +1516,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Rockenberg",
     "stars": 1,
-    "id": 32,
+    "id": 68,
     "splatnet": 2007
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL008.png",
+    "name": "White LS",
+    "localizedName": {
+      "ja_JP": "バトロング ホワイト",
+      "en_US": "White LS",
+      "en_GB": "White LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut blanc",
+      "fr_CA": "Haut blanc",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "SquidForce",
+    "stars": 1,
+    "id": 69,
+    "splatnet": 2008
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL009.png",
     "name": "Green Striped LS",
     "localizedName": {
       "ja_JP": "ボーダーモスグリーン",
@@ -1163,11 +1560,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Inkline",
     "stars": 1,
-    "splatnet": 2009,
-    "id": 201
+    "id": 70,
+    "splatnet": 2009
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL010.png",
     "name": "Squidmark LS",
     "localizedName": {
       "ja_JP": "イカバッテンロング",
@@ -1185,11 +1582,55 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "SquidForce",
     "stars": 1,
-    "splatnet": 2010,
-    "id": 202
+    "id": 71,
+    "splatnet": 2010
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL013.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL011.png",
+    "name": "Zink LS",
+    "localizedName": {
+      "ja_JP": "アイロニックロング",
+      "en_US": "Zink LS",
+      "en_GB": "Zink LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut Leviathus",
+      "fr_CA": "Haut Leviathus",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Power Up",
+    "brand": "Zink",
+    "stars": 1,
+    "id": 72,
+    "splatnet": 2011
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL012.png",
+    "name": "Striped Peaks LS",
+    "localizedName": {
+      "ja_JP": "ヤマビコボーダー",
+      "en_US": "Striped Peaks LS",
+      "en_GB": "Striped Peaks LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut Abysma",
+      "fr_CA": "Haut Abysma",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Inkline",
+    "stars": 1,
+    "id": 73,
+    "splatnet": 2012
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL013.png",
     "name": "Pink Easy-Stripe Shirt",
     "localizedName": {
       "ja_JP": "ゆとりボーダー ピンク",
@@ -1207,11 +1648,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 33,
+    "id": 74,
     "splatnet": 2013
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL014.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL014.png",
     "name": "Inkopolis Squaps Jersey",
     "localizedName": {
       "ja_JP": "トビウォーズHKユニ",
@@ -1226,15 +1667,15 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Свитер ХК «Шпроты»",
       "it_IT": "Maglia Coloropoli Tonnos"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Zink",
     "stars": 1,
-    "id": 34,
+    "id": 75,
     "splatnet": 2014
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL015.png",
-    "name": "Annaki Drive Tee",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL015.png",
+    "name": "Annaki Drive Tee ",
     "localizedName": {
       "ja_JP": "アナアキロンT ドライブ",
       "en_US": "Annaki Drive Tee",
@@ -1251,11 +1692,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Annaki",
     "stars": 2,
-    "id": 35,
+    "id": 76,
     "splatnet": 2015
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL016.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL016.png",
     "name": "Lime Easy-Stripe Shirt",
     "localizedName": {
       "ja_JP": "ゆとりボーダー ライム",
@@ -1273,11 +1714,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 36,
+    "id": 77,
     "splatnet": 2016
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL017.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL017.png",
     "name": "Annaki Evolution Tee",
     "localizedName": {
       "ja_JP": "アナアキロンT イボルブ",
@@ -1295,11 +1736,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Annaki",
     "stars": 3,
-    "id": 37,
+    "id": 78,
     "splatnet": 2017
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL018.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL018.png",
     "name": "Zekko Long Carrot Tee",
     "localizedName": {
       "ja_JP": "エゾッコロンTキャロット",
@@ -1317,11 +1758,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Zekko",
     "stars": 2,
-    "splatnet": 2018,
-    "id": 203
+    "id": 79,
+    "splatnet": 2018
   },
   {
-    "image": "../common/assets/img/gear/Clt_TEL019.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL019.png",
     "name": "Zekko Long Radish Tee",
     "localizedName": {
       "ja_JP": "エゾッコロンTラディッシュ",
@@ -1339,11 +1780,121 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Zekko",
     "stars": 1,
-    "splatnet": 2019,
-    "id": 204
+    "id": 80,
+    "splatnet": 2019
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TEL020.png",
+    "name": "Black Cuttlegear LS",
+    "localizedName": {
+      "ja_JP": "タコロンT 黒",
+      "en_US": "Black Cuttlegear LS",
+      "en_GB": "Black Cuttlegear LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat noir Macalamar",
+      "fr_CA": "Sweat noir Macalamar",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Swim Speed Up",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 81,
+    "splatnet": 2020
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL021.png",
+    "name": "Takoroka Crazy Baseball LS",
+    "localizedName": {
+      "ja_JP": "ヤコラグランクレイジー",
+      "en_US": "Takoroka Crazy Baseball LS",
+      "en_GB": "Takoroka Crazy Baseball LS",
+      "es_ES": "Camiseta béisbol octo",
+      "es_MX": "Camiseta béisbol octo",
+      "fr_FR": "Haut sportif Cubic",
+      "fr_CA": "Haut sportif Cubic",
+      "de_DE": "Kalamati-Baseball-Shirt",
+      "it_IT": "Maglia Sepia baseball",
+      "nl_NL": "Takoroka-honkbalshirt",
+      "ru_RU": "Половинчатая футболка"
+    },
+    "main": "Ninja Squid",
+    "brand": "Takoroka",
+    "stars": 2,
+    "id": 82,
+    "splatnet": 2021
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL022.png",
+    "name": "Red Cuttlegear LS",
+    "localizedName": {
+      "ja_JP": "タコロンT 赤",
+      "en_US": "Red Cuttlegear LS",
+      "en_GB": "Red Cuttlegear LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat rouge Macalamar",
+      "fr_CA": "Sweat rouge Macalamar",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 83,
+    "splatnet": 2022
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL023.png",
+    "name": "Khaki 16-Bit FishFry",
+    "localizedName": {
+      "ja_JP": "ヤキフグ16bit カーキ",
+      "en_US": "Khaki 16-Bit FishFry",
+      "en_GB": "Khaki 16-Bit FishFry",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut 16 bits kaki",
+      "fr_CA": "Haut 16 bits kaki",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Firefin",
+    "stars": 2,
+    "id": 84,
+    "splatnet": 2023
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TEL024.png",
+    "name": "Blue 16-Bit FishFry",
+    "localizedName": {
+      "ja_JP": "ヤキフグ16bit ブルー",
+      "en_US": "Blue 16-Bit FishFry",
+      "en_GB": "Blue 16-Bit FishFry",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut 16 bits bleu",
+      "fr_CA": "Haut 16 bits bleu",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Saver",
+    "brand": "Firefin",
+    "stars": 2,
+    "id": 85,
+    "splatnet": 2024
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TLY000.png",
     "name": "White Layered LS",
     "localizedName": {
       "ja_JP": "レイヤード ホワイト",
@@ -1361,11 +1912,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "SquidForce",
     "stars": 1,
-    "splatnet": 3000,
-    "id": 205
+    "id": 86,
+    "splatnet": 3000
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY001.png",
     "name": "Yellow Layered LS",
     "localizedName": {
       "ja_JP": "マスタードガサネ",
@@ -1383,11 +1934,55 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "SquidForce",
     "stars": 1,
-    "id": 38,
+    "id": 87,
     "splatnet": 3001
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY002.png",
+    "name": "Camo Layered LS",
+    "localizedName": {
+      "ja_JP": "カモガサネ",
+      "en_US": "Camo Layered LS",
+      "en_GB": "Camo Layered LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut double à motif",
+      "fr_CA": "Haut double à motif",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Charge Up",
+    "brand": "SquidForce",
+    "stars": 1,
+    "id": 88,
+    "splatnet": 3002
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TLY003.png",
+    "name": "Black Layered LS",
+    "localizedName": {
+      "ja_JP": "レイヤード ブラック",
+      "en_US": "Black Layered LS",
+      "en_GB": "Black Layered LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut double noir",
+      "fr_CA": "Haut double noir",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "SquidForce",
+    "stars": 1,
+    "id": 89,
+    "splatnet": 3003
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TLY004.png",
     "name": "Zink Layered LS",
     "localizedName": {
       "ja_JP": "アイロニックレイヤード",
@@ -1405,11 +2000,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Zink",
     "stars": 1,
-    "id": 39,
+    "id": 90,
     "splatnet": 3004
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY005.png",
     "name": "Layered Anchor LS",
     "localizedName": {
       "ja_JP": "ガチガサネ",
@@ -1427,11 +2022,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 40,
+    "id": 91,
     "splatnet": 3005
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY006.png",
     "name": "Choco Layered LS",
     "localizedName": {
       "ja_JP": "チョコガサネ",
@@ -1449,11 +2044,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 41,
+    "id": 92,
     "splatnet": 3006
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY007.png",
     "name": "Part-Time Pirate",
     "localizedName": {
       "ja_JP": "かくれパイレーツ",
@@ -1471,11 +2066,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Tentatek",
     "stars": 1,
-    "splatnet": 3007,
-    "id": 206
+    "id": 93,
+    "splatnet": 3007
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY008.png",
     "name": "Layered Vector LS",
     "localizedName": {
       "ja_JP": "ベクトルラインガサネ",
@@ -1489,15 +2084,15 @@ angular.module('splatApp').clothes = function($scope) {
       "nl_NL": "Pijlenlaagjesshirt",
       "ru_RU": "Двойка с узором",
       "it_IT": "A strati frecce"
-    },
+    },    
     "main": "Special Saver",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 42,
+    "id": 94,
     "splatnet": 3008
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY009.png",
     "name": "Green Tee",
     "localizedName": {
       "ja_JP": "グリーンＴ",
@@ -1515,11 +2110,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Forge",
     "stars": 1,
-    "id": 43,
+    "id": 95,
     "splatnet": 3009
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY010.png",
     "name": "Red Tentatek Tee",
     "localizedName": {
       "ja_JP": "アロメテックT レッド",
@@ -1537,11 +2132,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 44,
+    "id": 96,
     "splatnet": 3010
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY011.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY011.png",
     "name": "Blue Tentatek Tee",
     "localizedName": {
       "ja_JP": "アロメテックT ブルー",
@@ -1559,11 +2154,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Tentatek",
     "stars": 2,
-    "id": 45,
+    "id": 97,
     "splatnet": 3011
   },
   {
-    "image": "../common/assets/img/gear/Clt_TLY012.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY012.png",
     "name": "Octo Layered LS",
     "localizedName": {
       "ja_JP": "オクトガサネ",
@@ -1581,11 +2176,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Cuttlegear",
     "stars": 3,
-    "splatnet": 3012,
-    "id": 207
+    "id": 98,
+    "splatnet": 3012
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TLY013.png",
+    "name": "Squid Yellow Layered LS",
+    "localizedName": {
+      "ja_JP": "イカイエローVガサネ",
+      "en_US": "Squid Yellow Layered LS",
+      "en_GB": "Squid Yellow Layered LS",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut double calamar jaune",
+      "fr_CA": "Haut double calamar jaune",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Swim Speed Up",
+    "brand": "SquidForce",
+    "stars": 2,
+    "id": 99,
+    "splatnet": 3013
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_PLO000.png",
     "name": "Shrimp-Pink Polo",
     "localizedName": {
       "ja_JP": "さくらエビポロ",
@@ -1603,11 +2220,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 46,
+    "id": 100,
     "splatnet": 4000
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO001.png",
+    "name": "Striped Rugby",
+    "localizedName": {
+      "ja_JP": "オレンジボーダーラガー",
+      "en_US": "Striped Rugby",
+      "en_GB": "Striped Rugby",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Haut rayé rugby",
+      "fr_CA": "Haut rayé rugby",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Run Speed Up",
+    "brand": "Takoroka",
+    "stars": 2,
+    "id": 101,
+    "splatnet": 4001
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_PLO002.png",
     "name": "Tricolor Rugby",
     "localizedName": {
       "ja_JP": "トリコロールラガー",
@@ -1625,11 +2264,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Takoroka",
     "stars": 1,
-    "splatnet": 4002,
-    "id": 208
+    "id": 102,
+    "splatnet": 4002
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO003.png",
     "name": "Sage Polo",
     "localizedName": {
       "ja_JP": "よもぎポロ",
@@ -1644,14 +2283,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Светло-зеленое поло",
       "it_IT": "Polo verde chiaro"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 4003,
-    "id": 209
+    "id": 103,
+    "splatnet": 4003
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO004.png",
     "name": "Black Polo",
     "localizedName": {
       "ja_JP": "ピンポンポロ",
@@ -1669,11 +2308,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Zekko",
     "stars": 1,
-    "splatnet": 4004,
-    "id": 210
+    "id": 104,
+    "splatnet": 4004
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO005.png",
     "name": "Cycling Shirt",
     "localizedName": {
       "ja_JP": "テッカサイクルシャツ",
@@ -1688,14 +2327,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Веломайка",
       "it_IT": "Maglia da ciclista"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Zink",
     "stars": 2,
-    "splatnet": 4005,
-    "id": 211
+    "id": 105,
+    "splatnet": 4005
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO006.png",
     "name": "Cycle King Jersey",
     "localizedName": {
       "ja_JP": "チャリキングジャージ",
@@ -1710,14 +2349,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Элитная велокуртка",
       "it_IT": "Maglia re della bici"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Tentatek",
     "stars": 3,
-    "id": 47,
+    "id": 106,
     "splatnet": 4006
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO007.png",
     "name": "Slipstream United",
     "localizedName": {
       "ja_JP": "FCカラスミ",
@@ -1732,14 +2371,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "ФK «Кальмарона»",
       "it_IT": "AS Medusana"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Takoroka",
     "stars": 2,
-    "id": 48,
+    "id": 107,
     "splatnet": 4007
   },
   {
-    "image": "../common/assets/img/gear/Clt_PLO008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PLO008.png",
     "name": "FC Albacore",
     "localizedName": {
       "ja_JP": "アオサドーレ",
@@ -1757,11 +2396,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Takoroka",
     "stars": 1,
-    "id": 49,
+    "id": 108,
     "splatnet": 4008
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT000.png",
     "name": "Olive Ski Jacket",
     "localizedName": {
       "ja_JP": "マウンテンオリーブ",
@@ -1779,11 +2418,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Inkline",
     "stars": 3,
-    "splatnet": 5000,
-    "id": 212
+    "id": 109,
+    "splatnet": 5000
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT001.png",
     "name": "Takoroka Nylon Vintage",
     "localizedName": {
       "ja_JP": "ヤコナイロン ヴィンテージ",
@@ -1801,11 +2440,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Takoroka",
     "stars": 3,
-    "splatnet": 5001,
-    "id": 213
+    "id": 110,
+    "splatnet": 5001
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT002.png",
     "name": "Berry Ski Jacket",
     "localizedName": {
       "ja_JP": "マウンテンベリー",
@@ -1823,11 +2462,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Inkline",
     "stars": 2,
-    "id": 50,
+    "id": 111,
     "splatnet": 5002
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT003.png",
     "name": "Varsity Jacket",
     "localizedName": {
       "ja_JP": "スタジャンロゴマシ",
@@ -1845,11 +2484,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Zekko",
     "stars": 3,
-    "id": 51,
+    "id": 112,
     "splatnet": 5003
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT004.png",
     "name": "School Jersey",
     "localizedName": {
       "ja_JP": "スクールジャージー",
@@ -1867,11 +2506,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Zink",
     "stars": 2,
-    "splatnet": 5004,
-    "id": 214
+    "id": 113,
+    "splatnet": 5004
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT005.png",
+    "name": "Green Cardigan",
+    "localizedName": {
+      "ja_JP": "レタード グリーン",
+      "en_US": "Green Cardigan",
+      "en_GB": "Green Cardigan",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet vert",
+      "fr_CA": "Gilet vert",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "Splash Mob",
+    "stars": 2,
+    "id": 114,
+    "splatnet": 5005
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT006.png",
     "name": "Black Inky Rider",
     "localizedName": {
       "ja_JP": "イカライダーBLACK",
@@ -1889,11 +2550,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 52,
+    "id": 115,
     "splatnet": 5006
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT007.png",
     "name": "White Inky Rider",
     "localizedName": {
       "ja_JP": "イカライダーWHITE",
@@ -1911,11 +2572,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 53,
+    "id": 116,
     "splatnet": 5007
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT008.png",
+    "name": "Retro Gamer Jersey",
+    "localizedName": {
+      "ja_JP": "FCジャージー",
+      "en_US": "Retro Gamer Jersey",
+      "en_GB": "Retro Gamer Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouson rétro",
+      "fr_CA": "Blouson rétro",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Respawn",
+    "brand": "Zink",
+    "stars": 3,
+    "id": 117,
+    "splatnet": 5008
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT009.png",
     "name": "Orange Cardigan",
     "localizedName": {
       "ja_JP": "レタード オレンジ",
@@ -1933,11 +2616,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 5009,
-    "id": 215
+    "id": 118,
+    "splatnet": 5009
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT010.png",
     "name": "Forge Inkling Parka",
     "localizedName": {
       "ja_JP": "F-190",
@@ -1955,11 +2638,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Forge",
     "stars": 2,
-    "splatnet": 5010,
-    "id": 216
+    "id": 119,
+    "splatnet": 5010
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT012.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT011.png",
+    "name": "Forge Octarian Jacket",
+    "localizedName": {
+      "ja_JP": "F-010",
+      "en_US": "Forge Octarian Jacket",
+      "en_GB": "Forge Octarian Jacket",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Parka Focus OCT",
+      "fr_CA": "Parka Focus OCT",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Haunt",
+    "brand": "Forge",
+    "stars": 2,
+    "id": 120,
+    "splatnet": 5011
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT012.png",
     "name": "Blue Sailor Suit",
     "localizedName": {
       "ja_JP": "イカセーラー ブルー",
@@ -1977,11 +2682,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Forge",
     "stars": 3,
-    "id": 54,
+    "id": 121,
     "splatnet": 5012
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT013.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT013.png",
     "name": "White Sailor Suit",
     "localizedName": {
       "ja_JP": "イカセーラー ホワイト",
@@ -1999,11 +2704,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Forge",
     "stars": 2,
-    "splatnet": 5013,
-    "id": 217
+    "id": 122,
+    "splatnet": 5013
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT014.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT014.png",
     "name": "Squid Satin Jacket",
     "localizedName": {
       "ja_JP": "イカスカジャン",
@@ -2021,11 +2726,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Zekko",
     "stars": 3,
-    "id": 55,
+    "id": 123,
     "splatnet": 5014
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT015.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT015.png",
     "name": "Zapfish Satin Jacket",
     "localizedName": {
       "ja_JP": "ウラスカジャン",
@@ -2043,11 +2748,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Zekko",
     "stars": 2,
-    "splatnet": 5015,
-    "id": 218
+    "id": 124,
+    "splatnet": 5015
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT016.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT016.png",
     "name": "Krak-On 528",
     "localizedName": {
       "ja_JP": "クラーゲス528",
@@ -2065,11 +2770,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Krak-On",
     "stars": 1,
-    "splatnet": 5016,
-    "id": 219
+    "id": 125,
+    "splatnet": 5016
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT017.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT017.png",
     "name": "Chilly Mountain Coat",
     "localizedName": {
       "ja_JP": "マウンテンフローズン",
@@ -2087,11 +2792,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Inkline",
     "stars": 3,
-    "id": 56,
+    "id": 126,
     "splatnet": 5017
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT018.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT018.png",
     "name": "Takoroka Windcrusher",
     "localizedName": {
       "ja_JP": "ヤコナイロンレトロ",
@@ -2106,14 +2811,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Куртка от «Рыбок»",
       "it_IT": "Tuta vintage Sepia"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Takoroka",
     "stars": 3,
-    "id": 57,
+    "id": 127,
     "splatnet": 5018
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT019.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT019.png",
     "name": "Matcha Down Jacket",
     "localizedName": {
       "ja_JP": "マッチャ ライトダウン",
@@ -2131,11 +2836,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Inkline",
     "stars": 3,
-    "id": 58,
+    "id": 128,
     "splatnet": 5019
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT020.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT020.png",
     "name": "FA-01 Jacket",
     "localizedName": {
       "ja_JP": "FA-01オモテ",
@@ -2153,11 +2858,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Forge",
     "stars": 3,
-    "id": 59,
+    "id": 129,
     "splatnet": 5020
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT021.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT021.png",
     "name": "FA-01 Reversed",
     "localizedName": {
       "ja_JP": "FA-01ウラ",
@@ -2175,11 +2880,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Forge",
     "stars": 3,
-    "id": 60,
+    "id": 130,
     "splatnet": 5021
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT022.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT022.png",
     "name": "Pullover Coat",
     "localizedName": {
       "ja_JP": "プルオーバーコート",
@@ -2197,11 +2902,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Toni Kensa",
     "stars": 3,
-    "id": 61,
+    "id": 131,
     "splatnet": 5022
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT023.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT023.png",
     "name": "Kensa Coat",
     "localizedName": {
       "ja_JP": "ケンサキコーチ",
@@ -2219,11 +2924,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Toni Kensa",
     "stars": 3,
-    "splatnet": 5023,
-    "id": 220
+    "id": 132,
+    "splatnet": 5023
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT024.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT024.png",
     "name": "Birded Corduroy Jacket",
     "localizedName": {
       "ja_JP": "トリスカベッチン",
@@ -2241,11 +2946,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Zekko",
     "stars": 3,
-    "id": 62,
+    "id": 133,
     "splatnet": 5024
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT026.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT025.png",
+    "name": "Deep-Octo Satin Jacket",
+    "localizedName": {
+      "ja_JP": "ウラタコスカジャン",
+      "en_US": "Deep-Octo Satin Jacket",
+      "en_GB": "Deep-Octo Satin Jacket",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouson poulpe",
+      "fr_CA": "Blouson poulpe",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Main Power Up",
+    "brand": "Zekko",
+    "stars": 3,
+    "id": 134,
+    "splatnet": 5025
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT026.png",
     "name": "Zekko Redleaf Coat",
     "localizedName": {
       "ja_JP": "エゾッココーチ アカネ",
@@ -2263,11 +2990,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Zekko",
     "stars": 2,
-    "id": 63,
+    "id": 135,
     "splatnet": 5026
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT027.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT027.png",
     "name": "Eggplant Mountain Coat",
     "localizedName": {
       "ja_JP": "マウンテンノリタマゴ",
@@ -2285,11 +3012,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Inkline",
     "stars": 3,
-    "id": 64,
+    "id": 136,
     "splatnet": 5027
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT028.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT028.png",
     "name": "Zekko Jade Coat",
     "localizedName": {
       "ja_JP": "エゾッココーチ モエギ",
@@ -2307,11 +3034,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Respawn Punisher",
     "brand": "Zekko",
     "stars": 2,
-    "id": 65,
+    "id": 137,
     "splatnet": 5028
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT029.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT029.png",
     "name": "Light Bomber Jacket",
     "localizedName": {
       "ja_JP": "ボンバージャケット ポジ",
@@ -2329,11 +3056,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Toni Kensa",
     "stars": 3,
-    "splatnet": 5029,
-    "id": 221
+    "id": 138,
+    "splatnet": 5029
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT030.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT030.png",
     "name": "Brown FA-11 Bomber",
     "localizedName": {
       "ja_JP": "FA-11オモテ カスタム",
@@ -2348,14 +3075,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Бомбер FA-11",
       "it_IT": "Giacca FA-11"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Forge",
     "stars": 2,
-    "id": 66,
+    "id": 139,
     "splatnet": 5030
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT031.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT031.png",
     "name": "Gray FA-11 Bomber",
     "localizedName": {
       "ja_JP": "FA-11ウラ カスタム",
@@ -2370,14 +3097,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Бомбер FA-11 (изнанка)",
       "it_IT": "Giacca FA-11 a rovescio"
     },
-    "main": "Cold-Blooded",
+    "main": "Bomb Defense Up DX",
     "brand": "Forge",
     "stars": 2,
-    "id": 67,
+    "id": 140,
     "splatnet": 5031
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT032.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT032.png",
     "name": "Milky Eminence Jacket",
     "localizedName": {
       "ja_JP": "キングベンチカイザー",
@@ -2395,11 +3122,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Enperry",
     "stars": 3,
-    "splatnet": 5032,
-    "id": 222
+    "id": 141,
+    "splatnet": 5032
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT033.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT033.png",
     "name": "Navy Eminence Jacket",
     "localizedName": {
       "ja_JP": "キングベンチNV",
@@ -2417,11 +3144,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Enperry",
     "stars": 3,
-    "splatnet": 5033,
-    "id": 223
+    "id": 142,
+    "splatnet": 5033
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT034.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT034.png",
     "name": "Tumeric Zekko Coat",
     "localizedName": {
       "ja_JP": "エゾッココーチ ウコン",
@@ -2439,12 +3166,12 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Zekko",
     "stars": 2,
-    "splatnet": 5034,
-    "id": 224
+    "id": 143,
+    "splatnet": 5034
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT035.png",
-    "name": "Custom Painted F-3",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT035.png",
+    "name": "Custom Painted F-3 ",
     "localizedName": {
       "ja_JP": "F-3 ペイントカスタム",
       "en_US": "Custom Painted F-3",
@@ -2461,11 +3188,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Forge",
     "stars": 3,
-    "splatnet": 5035,
-    "id": 225
+    "id": 144,
+    "splatnet": 5035
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT036.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT036.png",
     "name": "Dark Bomber Jacket",
     "localizedName": {
       "ja_JP": "ボンバージャケットネガ",
@@ -2483,11 +3210,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Toni Kensa",
     "stars": 3,
-    "splatnet": 5036,
-    "id": 226
+    "id": 145,
+    "splatnet": 5036
   },
   {
-    "image": "../common/assets/img/gear/Clt_JKT037.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT037.png",
     "name": "Moist Ghillie Suit",
     "localizedName": {
       "ja_JP": "モイストギリースーツ",
@@ -2505,11 +3232,165 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Forge",
     "stars": 3,
-    "splatnet": 5037,
-    "id": 227
+    "id": 146,
+    "splatnet": 5037
   },
   {
-    "image": "../common/assets/img/gear/Clt_TNK000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_JKT038.png",
+    "name": "White Leather F-3",
+    "localizedName": {
+      "ja_JP": "F-3 ホワイトレザー",
+      "en_US": "White Leather F-3",
+      "en_GB": "White Leather F-3",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouson fourré F-3 blanc",
+      "fr_CA": "Blouson fourré F-3 blanc",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Respawn Punisher",
+    "brand": "Forge",
+    "stars": 3,
+    "id": 147,
+    "splatnet": 5038
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT039.png",
+    "name": "Chili-Pepper Ski Jacket",
+    "localizedName": {
+      "ja_JP": "マウンテンチリペッパー",
+      "en_US": "Chili-Pepper Ski Jacket",
+      "en_GB": "Chili-Pepper Ski Jacket",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Anorak piment rouge",
+      "fr_CA": "Anorak piment rouge",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 148,
+    "splatnet": 5039
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT040.png",
+    "name": "Whale-Knit Sweater",
+    "localizedName": {
+      "ja_JP": "ハウスタグホエールニット",
+      "en_US": "Whale-Knit Sweater",
+      "en_GB": "Whale-Knit Sweater",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet de laine baleines",
+      "fr_CA": "Gilet de laine baleines",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Run Speed Up",
+    "brand": "Splash Mob",
+    "stars": 3,
+    "id": 149,
+    "splatnet": 5040
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT041.png",
+    "name": "Rockin' Leather Jacket",
+    "localizedName": {
+      "ja_JP": "ロッケンブレイクジャケット",
+      "en_US": "Rockin' Leather Jacket",
+      "en_GB": "Rockin' Leather Jacket",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouson en cuir rock",
+      "fr_CA": "Blouson en cuir rock",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Sub Power Up",
+    "brand": "Annaki",
+    "stars": 3,
+    "id": 150,
+    "splatnet": 5041
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT042.png",
+    "name": "Kung-Fu Zip-Up",
+    "localizedName": {
+      "ja_JP": "クンフージャージ",
+      "en_US": "Kung-Fu Zip-Up",
+      "en_GB": "Kung-Fu Zip-Up",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Veste de kung-fu",
+      "fr_CA": "Veste de kung-fu",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ninja Squid",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "id": 151,
+    "splatnet": 5042
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT043.png",
+    "name": "Panda Kung-Fu Zip-Up",
+    "localizedName": {
+      "ja_JP": "クンフーパンジャージ",
+      "en_US": "Panda Kung-Fu Zip-Up",
+      "en_GB": "Panda Kung-Fu Zip-Up",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Veste de kung-fu orque",
+      "fr_CA": "Veste de kung-fu orque",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Sub Power Up",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "id": 152,
+    "splatnet": 5043
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_JKT044.png",
+    "name": "Sennyu Suit",
+    "localizedName": {
+      "ja_JP": "センニュースーツ",
+      "en_US": "Sennyu Suit",
+      "en_GB": "Sennyu Suit",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Costume d'infiltration",
+      "fr_CA": "Costume d'infiltration",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ninja Squid",
+    "brand": "Cuttlegear",
+    "stars": 3,
+    "id": 153,
+    "splatnet": 5044
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_TNK000.png",
     "name": "B-ball Jersey (Home)",
     "localizedName": {
       "ja_JP": "バスケジャージ ホーム",
@@ -2527,11 +3408,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Zink",
     "stars": 2,
-    "splatnet": 6000,
-    "id": 228
+    "id": 154,
+    "splatnet": 6000
   },
   {
-    "image": "../common/assets/img/gear/Clt_TNK001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TNK001.png",
     "name": "B-ball Jersey (Away)",
     "localizedName": {
       "ja_JP": "バスケジャージ アウェイ",
@@ -2549,11 +3430,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Zink",
     "stars": 1,
-    "id": 68,
+    "id": 155,
     "splatnet": 6001
   },
   {
-    "image": "../common/assets/img/gear/Clt_TNK003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TNK003.png",
     "name": "White King Tank",
     "localizedName": {
       "ja_JP": "キングタンク ホワイト",
@@ -2571,11 +3452,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Enperry",
     "stars": 1,
-    "id": 69,
+    "id": 156,
     "splatnet": 6003
   },
   {
-    "image": "../common/assets/img/gear/Clt_TNK004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TNK004.png",
     "name": "Slash King Tank",
     "localizedName": {
       "ja_JP": "キングタンク スラッシュ",
@@ -2593,11 +3474,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Enperry",
     "stars": 1,
-    "id": 70,
+    "id": 157,
     "splatnet": 6004
   },
   {
-    "image": "../common/assets/img/gear/Clt_TNK005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TNK005.png",
     "name": "Navy King Tank",
     "localizedName": {
       "ja_JP": "キングタンク マリン",
@@ -2615,11 +3496,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Enperry",
     "stars": 1,
-    "id": 71,
+    "id": 158,
     "splatnet": 6005
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_TNK006.png",
+    "name": "Lob-Stars Jersey",
+    "localizedName": {
+      "ja_JP": "ロブスターズユニ",
+      "en_US": "Lob-Stars Jersey",
+	    "en_GB": "Lob-Stars Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Maillot des LobStars",
+      "fr_CA": "Maillot des LobStars",
+      "de_DE": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null",
+      "it_IT": "Null"
+    },
+    "main": "Sub Power Up",
+    "brand": "Tentatek",
+    "stars": 2,
+    "id": 159,
+    "splatnet": 6006
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SWT000.png",
     "name": "Gray College Sweat",
     "localizedName": {
       "ja_JP": "カレッジスウェット グレー",
@@ -2637,11 +3540,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 7000,
-    "id": 229
+    "id": 160,
+    "splatnet": 7000
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT001.png",
     "name": "Squidmark Sweat",
     "localizedName": {
       "ja_JP": "イカバッテン マスタード",
@@ -2659,11 +3562,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "SquidForce",
     "stars": 1,
-    "splatnet": 7001,
-    "id": 230
+    "id": 161,
+    "splatnet": 7001
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT002.png",
     "name": "Retro Sweat",
     "localizedName": {
       "ja_JP": "レトロジャッジ",
@@ -2678,14 +3581,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Ретро-свитер",
       "it_IT": "Maglione vintage"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "SquidForce",
     "stars": 3,
-    "id": 72,
+    "id": 162,
     "splatnet": 7002
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT003.png",
     "name": "Firefin Navy Sweat",
     "localizedName": {
       "ja_JP": "ホッコリー ネイビー",
@@ -2703,11 +3606,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Firefin",
     "stars": 2,
-    "splatnet": 7003,
-    "id": 231
+    "id": 163,
+    "splatnet": 7003
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT004.png",
+    "name": "Navy College Sweat",
+    "localizedName": {
+      "ja_JP": "カレッジスウェット ネイビー",
+      "en_US": "Navy College Sweat",
+      "en_GB": "Navy College Sweat",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat université bleu",
+      "fr_CA": "Sweat université bleu",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Splash Mob",
+    "stars": 1,
+    "id": 164,
+    "splatnet": 7004
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SWT005.png",
     "name": "Reel Sweat",
     "localizedName": {
       "ja_JP": "リールロールスウェット",
@@ -2725,11 +3650,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Zekko",
     "stars": 1,
-    "id": 73,
+    "id": 165,
     "splatnet": 7005
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT006.png",
     "name": "Anchor Sweat",
     "localizedName": {
       "ja_JP": "イカリスウェット",
@@ -2744,14 +3669,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Свитер «Якорь»",
       "it_IT": "Maglione ancora"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "SquidForce",
     "stars": 2,
-    "id": 74,
+    "id": 166,
     "splatnet": 7006
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT007.png",
     "name": "Negative Longcuff Sweater",
     "localizedName": {
       "ja_JP": "ドロップスウェット ネガ",
@@ -2769,11 +3694,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Toni Kensa",
     "stars": 3,
-    "id": 75,
+    "id": 167,
     "splatnet": 7007
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT008.png",
     "name": "Short Knit Layers",
     "localizedName": {
       "ja_JP": "ショートニットカサネ",
@@ -2791,11 +3716,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Toni Kensa",
     "stars": 3,
-    "id": 76,
+    "id": 168,
     "splatnet": 7008
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT009.png",
     "name": "Positive Longcuff Sweater",
     "localizedName": {
       "ja_JP": "ドロップスウェット ポジ",
@@ -2813,11 +3738,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Toni Kensa",
     "stars": 3,
-    "id": 77,
+    "id": 169,
     "splatnet": 7009
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT010.png",
     "name": "Annaki Blue Cuff",
     "localizedName": {
       "ja_JP": "アナアキニット アオソデ",
@@ -2835,11 +3760,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Annaki",
     "stars": 2,
-    "splatnet": 7010,
-    "id": 232
+    "id": 170,
+    "splatnet": 7010
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT012.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT011.png",
+    "name": "Annaki Yellow Cuff",
+    "localizedName": {
+      "ja_JP": "アナアキニット キソデ",
+      "en_US": "Annaki Yellow Cuff",
+      "en_GB": "Annaki Yellow Cuff",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Pull grunge poignet jaune",
+      "fr_CA": "Pull grunge poignet jaune",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Respawn",
+    "brand": "Annaki",
+    "stars": 2,
+    "id": 171,
+    "splatnet": 7011
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SWT012.png",
     "name": "Annaki Red Cuff",
     "localizedName": {
       "ja_JP": "アナアキニット アカソデ",
@@ -2857,11 +3804,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Annaki",
     "stars": 2,
-    "splatnet": 7012,
-    "id": 233
+    "id": 172,
+    "splatnet": 7012
   },
   {
-    "image": "../common/assets/img/gear/Clt_SWT013.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT013.png",
     "name": "N-Pacer Sweat",
     "localizedName": {
       "ja_JP": "エンペーサートレーナー",
@@ -2879,11 +3826,55 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Thermal Ink",
     "brand": "Enperry",
     "stars": 3,
-    "splatnet": 7013,
-    "id": 234
+    "id": 173,
+    "splatnet": 7013
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SWT014.png",
+    "name": "Octarian Retro",
+    "localizedName": {
+      "ja_JP": "オクタリアンレトロ",
+      "en_US": "Octarian Retro",
+      "en_GB": "Octarian Retro",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat rétro Octarien",
+      "fr_CA": "Sweat rétro Octarien",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Respawn Punisher",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 174,
+    "splatnet": 7014
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SWT015.png",
+    "name": "Takoroka Jersey",
+    "localizedName": {
+      "ja_JP": "ヤコピステ",
+      "en_US": "Takoroka Jersey",
+      "en_GB": "Takoroka Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat Cubic",
+      "fr_CA": "Sweat Cubic",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Power Up",
+    "brand": "Takoroka",
+    "stars": 3,
+    "id": 175,
+    "splatnet": 7015
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT000.png",
     "name": "Lumberjack Shirt",
     "localizedName": {
       "ja_JP": "オータムネル",
@@ -2901,11 +3892,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Rockenberg",
     "stars": 1,
-    "splatnet": 8000,
-    "id": 235
+    "id": 176,
+    "splatnet": 8000
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT001.png",
     "name": "Rodeo Shirt",
     "localizedName": {
       "ja_JP": "イカスタンシャツ",
@@ -2923,11 +3914,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Krak-On",
     "stars": 1,
-    "splatnet": 8001,
-    "id": 236
+    "id": 177,
+    "splatnet": 8001
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT002.png",
     "name": "Green-Check Shirt",
     "localizedName": {
       "ja_JP": "ギンガムチェック ミドリ",
@@ -2945,11 +3936,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Zekko",
     "stars": 2,
-    "id": 78,
+    "id": 178,
     "splatnet": 8002
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT003.png",
     "name": "White Shirt",
     "localizedName": {
       "ja_JP": "シロシャツ",
@@ -2967,11 +3958,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Splash Mob",
     "stars": 3,
-    "splatnet": 8003,
-    "id": 237
+    "id": 179,
+    "splatnet": 8003
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT004.png",
     "name": "Urchins Jersey",
     "localizedName": {
       "ja_JP": "ウーニーズBBシャツ",
@@ -2989,11 +3980,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "Zink",
     "stars": 1,
-    "id": 79,
+    "id": 180,
     "splatnet": 8004
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT005.png",
     "name": "Aloha Shirt",
     "localizedName": {
       "ja_JP": "おどるイカアロハ",
@@ -3011,11 +4002,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Forge",
     "stars": 1,
-    "splatnet": 8005,
-    "id": 238
+    "id": 181,
+    "splatnet": 8005
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT006.png",
+    "name": "Red-Check Shirt",
+    "localizedName": {
+      "ja_JP": "ギンガムチェック アカ",
+      "en_US": "Red-Check Shirt",
+      "en_GB": "Red-Check Shirt",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Chemise de bûcheron",
+      "fr_CA": "Chemise de bûcheron",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Main)",
+    "brand": "Zekko",
+    "stars": 2,
+    "id": 182,
+    "splatnet": 8006
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT007.png",
     "name": "Baby-Jelly Shirt",
     "localizedName": {
       "ja_JP": "ベイビークラゲシャツ",
@@ -3030,14 +4043,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Рубашка «Медуза»",
       "it_IT": "Camicia meduse"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Splash Mob",
     "stars": 1,
-    "id": 80,
+    "id": 183,
     "splatnet": 8007
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT008.png",
     "name": "Baseball Jersey",
     "localizedName": {
       "ja_JP": "ミスターベースボール",
@@ -3055,11 +4068,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Firefin",
     "stars": 3,
-    "splatnet": 8008,
-    "id": 239
+    "id": 184,
+    "splatnet": 8008
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT009.png",
     "name": "Gray Mixed Shirt",
     "localizedName": {
       "ja_JP": "ミックスシャツグレー",
@@ -3077,11 +4090,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Zekko",
     "stars": 2,
-    "splatnet": 8009,
-    "id": 240
+    "id": 185,
+    "splatnet": 8009
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT010.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT010.png",
     "name": "Vintage Check Shirt",
     "localizedName": {
       "ja_JP": "ヴィンテージチェック",
@@ -3099,11 +4112,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Rockenberg",
     "stars": 3,
-    "id": 81,
+    "id": 186,
     "splatnet": 8010
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT011.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT011.png",
     "name": "Round-Collar Shirt",
     "localizedName": {
       "ja_JP": "マルエリシャツ",
@@ -3121,11 +4134,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Sub)",
     "brand": "Rockenberg",
     "stars": 2,
-    "splatnet": 8011,
-    "id": 241
+    "id": 187,
+    "splatnet": 8011
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT012.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT012.png",
     "name": "Logo Aloha Shirt",
     "localizedName": {
       "ja_JP": "ロゴマシマシアロハ",
@@ -3143,11 +4156,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Zekko",
     "stars": 2,
-    "id": 82,
+    "id": 188,
     "splatnet": 8012
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT013.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT013.png",
     "name": "Striped Shirt",
     "localizedName": {
       "ja_JP": "ブロックストライプシャツ",
@@ -3165,11 +4178,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Super Jump",
     "brand": "Splash Mob",
     "stars": 2,
-    "splatnet": 8013,
-    "id": 242
+    "id": 189,
+    "splatnet": 8013
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT014.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT014.png",
     "name": "Linen Shirt",
     "localizedName": {
       "ja_JP": "シャンブレーシャツ",
@@ -3187,11 +4200,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Splash Mob",
     "stars": 1,
-    "splatnet": 8014,
-    "id": 243
+    "id": 190,
+    "splatnet": 8014
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT015.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT015.png",
     "name": "Shirt & Tie",
     "localizedName": {
       "ja_JP": "タイシャツ",
@@ -3209,11 +4222,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "Splash Mob",
     "stars": 3,
-    "id": 83,
+    "id": 191,
     "splatnet": 8015
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT017.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT017.png",
     "name": "Hula Punk Shirt",
     "localizedName": {
       "ja_JP": "ピーターパンクシャツ",
@@ -3231,11 +4244,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Annaki",
     "stars": 2,
-    "id": 84,
+    "id": 192,
     "splatnet": 8017
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT018.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT018.png",
     "name": "Octobowler Shirt",
     "localizedName": {
       "ja_JP": "タコボウラーシャツ",
@@ -3253,11 +4266,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Saver (Main)",
     "brand": "Krak-On",
     "stars": 2,
-    "id": 85,
+    "id": 193,
     "splatnet": 8018
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT019.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT019.png",
     "name": "Inkfall Shirt",
     "localizedName": {
       "ja_JP": "スミカケシャツ",
@@ -3275,11 +4288,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Toni Kensa",
     "stars": 2,
-    "id": 86,
+    "id": 194,
     "splatnet": 8019
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT020.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT020.png",
     "name": "Crimson Parashooter",
     "localizedName": {
       "ja_JP": "パラシューター ザクロ",
@@ -3297,11 +4310,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Annaki",
     "stars": 3,
-    "id": 87,
+    "id": 195,
     "splatnet": 8020
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT021.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT021.png",
     "name": "Baby-Jelly Shirt & Tie",
     "localizedName": {
       "ja_JP": "タイツキベイビークラゲ",
@@ -3316,14 +4329,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Рубашка с медузами",
       "it_IT": "Camicia meduse con cravatta"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 88,
+    "id": 196,
     "splatnet": 8021
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT022.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT022.png",
     "name": "Prune Parashooter",
     "localizedName": {
       "ja_JP": "パラシューター プルーン",
@@ -3341,11 +4354,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Annaki",
     "stars": 3,
-    "id": 89,
+    "id": 197,
     "splatnet": 8022
   },
   {
-    "image": "../common/assets/img/gear/Clt_SHT023.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT023.png",
     "name": "Red Hula Punk with Tie",
     "localizedName": {
       "ja_JP": "ピーターパンクタイ ブラッド",
@@ -3363,11 +4376,143 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Annaki",
     "stars": 3,
-    "splatnet": 8023,
-    "id": 244
+    "id": 198,
+    "splatnet": 8023
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_SHT024.png",
+    "name": "Chili Octo Aloha",
+    "localizedName": {
+      "ja_JP": "チリメンタコアロハ",
+      "en_US": "Chili Octo Aloha",
+      "en_GB": "Chili Octo Aloha",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Chemisette poulpe farniente",
+      "fr_CA": "Chemisette poulpe farniente",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Krak-On",
+    "stars": 2,
+    "id": 199,
+    "splatnet": 8024
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT025.png",
+    "name": "Annaki Flannel Hoodie",
+    "localizedName": {
+      "ja_JP": "アナアキオンブレネル",
+      "en_US": "Annaki Flannel Hoodie",
+      "en_GB": "Annaki Flannel Hoodie",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Chemise rustique Aroz",
+      "fr_CA": "Chemise rustique Aroz",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Bomb Defense Up DX",
+    "brand": "Annaki",
+    "stars": 3,
+    "id": 200,
+    "splatnet": 8025
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT026.png",
+    "name": "Ink-Wash Shirt",
+    "localizedName": {
+      "ja_JP": "スミヌキシャツ",
+      "en_US": "Ink-Wash Shirt",
+      "en_GB": "Ink-Wash Shirt",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Chemise tache blanche",
+      "fr_CA": "Chemise tache blanche",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Toni Kensa",
+    "stars": 2,
+    "id": 201,
+    "splatnet": 8026
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT027.png",
+    "name": "Dots-On-Dots Shirt",
+    "localizedName": {
+      "ja_JP": "レイヤードットシャツ",
+      "en_US": "Dots-On-Dots Shirt",
+      "en_GB": "Dots-On-Dots Shirt",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Chemise à pois",
+      "fr_CA": "Chemise à pois",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Super Jump",
+    "brand": "Skalop",
+    "stars": 3,
+    "id": 202,
+    "splatnet": 8027
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT028.png",
+    "name": "Toni K. Baseball Jersey",
+    "localizedName": {
+      "ja_JP": "タタキBBBシャツ",
+      "en_US": "Toni K. Baseball Jersey",
+      "en_GB": "Toni K. Baseball Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Maillot baseball K",
+      "fr_CA": "Maillot baseball K",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Charge Up",
+    "brand": "Toni Kensa",
+    "stars": 3,
+    "id": 203,
+    "splatnet": 8028
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_SHT029.png",
+    "name": "Online Jersey",
+    "localizedName": {
+      "ja_JP": "BBシャツ プレミアム",
+      "en_US": "Online Jersey",
+      "en_GB": "Online Jersey",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Maillot baseball Premium",
+      "fr_CA": "Maillot baseball Premium",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 204,
+    "splatnet": 8029
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_VST000.png",
     "name": "Mountain Vest",
     "localizedName": {
       "ja_JP": "マウンテンダウン",
@@ -3385,12 +4530,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Inkline",
     "stars": 3,
-    "splatnet": 9000,
-    "id": 245
+    "id": 205,
+    "splatnet": 9000
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST002.png",
-    "name": "Dark Urban Vest",
+    "image": "../common/assets/img/gear/clothes/Clt_VST001.png",
+    "name": "Forest Vest",
+    "localizedName": {
+      "ja_JP": "フォレストダウン",
+      "en_US": "Forest Vest",
+      "en_GB": "Forest Vest",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet sylvestre",
+      "fr_CA": "Gilet sylvestre",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Recovery Up",
+    "brand": "Inkline",
+    "stars": 3,
+    "id": 206,
+    "splatnet": 9001
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_VST002.png",
     "localizedName": {
       "ja_JP": "アーバンベスト ナイト",
       "en_US": "Dark Urban Vest",
@@ -3404,14 +4570,15 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Темный пуховик",
       "it_IT": "Gilè urbano"
     },
-    "main": "Cold-Blooded",
+    "name": "Dark Urban Vest",
+    "main": "Main Power Up",
     "brand": "Firefin",
     "stars": 3,
-    "id": 90,
+    "id": 207,
     "splatnet": 9002
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_VST003.png",
     "name": "Yellow Urban Vest",
     "localizedName": {
       "ja_JP": "アーバンベスト イエロー",
@@ -3429,11 +4596,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Haunt",
     "brand": "Firefin",
     "stars": 2,
-    "id": 91,
+    "id": 208,
     "splatnet": 9003
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_VST004.png",
+    "localizedName": {
+      "ja_JP": "イカゴッチンベスト",
+      "en_US": "Squid-Pattern Waistcoat",
+      "en_GB": "Squid-Pattern Waistcoat",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet motif calamar",
+      "fr_CA": "Gilet motif calamar",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "name": "Squid-Pattern Waistcoat",
+    "main": "Special Power Up",
+    "brand": "Krak-On",
+    "stars": 1,
+    "id": 209,
+    "splatnet": 9004
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_VST005.png",
     "name": "Squidstar Waistcoat",
     "localizedName": {
       "ja_JP": "イカノボリベスト",
@@ -3448,14 +4637,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Жилет «Звезда»",
       "it_IT": "Gilè aquilamaro"
     },
-    "main": "Cold-Blooded",
+    "main": "Main Power Up",
     "brand": "Krak-On",
     "stars": 1,
-    "splatnet": 9005,
-    "id": 246
+    "id": 210,
+    "splatnet": 9005
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST007.png",
+    "image": "../common/assets/img/gear/clothes/Clt_VST007.png",
     "name": "Fishing Vest",
     "localizedName": {
       "ja_JP": "フィッシャーズベスト オジ",
@@ -3473,11 +4662,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Inkline",
     "stars": 2,
-    "splatnet": 9007,
-    "id": 247
+    "id": 211,
+    "splatnet": 9007
   },
   {
-    "image": "../common/assets/img/gear/Clt_VST008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_VST008.png",
     "name": "Front Zip Vest",
     "localizedName": {
       "ja_JP": "フロントジップベスト",
@@ -3495,11 +4684,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "Toni Kensa",
     "stars": 2,
-    "splatnet": 9008,
-    "id": 248
+    "id": 212,
+    "splatnet": 9008
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_VST009.png",
+    "name": "Silver Tentatek Vest",
+    "localizedName": {
+      "ja_JP": "アロメランベスト シルバー",
+      "en_US": "Silver Tentatek Vest",
+      "en_GB": "Silver Tentatek Vest",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet argent OculR",
+      "fr_CA": "Gilet argent OculR",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Thermal Ink",
+    "brand": "Tentatek",
+    "stars": 2,
+    "id": 213,
+    "splatnet": 9009
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_PRK000.png",
     "name": "Camo Zip Hoodie",
     "localizedName": {
       "ja_JP": "ジップアップ カモ",
@@ -3517,11 +4728,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Firefin",
     "stars": 3,
-    "id": 92,
+    "id": 214,
     "splatnet": 10000
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK001.png",
     "name": "Green Zip Hoodie",
     "localizedName": {
       "ja_JP": "ジップアップ グリーン",
@@ -3539,11 +4750,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Firefin",
     "stars": 2,
-    "splatnet": 10001,
-    "id": 249
+    "id": 215,
+    "splatnet": 10001
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK002.png",
     "name": "Zekko Hoodie",
     "localizedName": {
       "ja_JP": "エゾッコパーカー アズキ",
@@ -3561,11 +4772,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ninja Squid",
     "brand": "Zekko",
     "stars": 2,
-    "id": 93,
+    "id": 216,
     "splatnet": 10002
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK004.png",
     "name": "Shirt with Blue Hoodie",
     "localizedName": {
       "ja_JP": "シャツノゾキブルー",
@@ -3583,11 +4794,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Power Up",
     "brand": "Splash Mob",
     "stars": 2,
-    "id": 94,
+    "id": 217,
     "splatnet": 10004
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK005.png",
     "name": "Grape Hoodie",
     "localizedName": {
       "ja_JP": "キングパーカー グレープ",
@@ -3605,11 +4816,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "Enperry",
     "stars": 1,
-    "id": 95,
+    "id": 218,
     "splatnet": 10005
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK006.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK006.png",
     "name": "Gray Hoodie",
     "localizedName": {
       "ja_JP": "ホタパーカー グレー",
@@ -3627,11 +4838,33 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Sub Power Up",
     "brand": "Skalop",
     "stars": 2,
-    "id": 96,
+    "id": 219,
     "splatnet": 10006
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK008.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK007.png",
+    "name": "Hothouse Hoodie",
+    "localizedName": {
+      "ja_JP": "ホタプラントパーカー",
+      "en_US": "Hothouse Hoodie",
+      "en_GB": "Hothouse Hoodie",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat zippé feuillage",
+      "fr_CA": "Sweat zippé feuillage",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Run Speed Up",
+    "brand": "Skalop",
+    "stars": 2,
+    "id": 220,
+    "splatnet": 10007
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_PRK008.png",
     "name": "Pink Hoodie",
     "localizedName": {
       "ja_JP": "シャツノゾキピンク",
@@ -3646,14 +4879,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Розовая толстовка",
       "it_IT": "Felpa rosa"
     },
-    "main": "Bomb Defense Up",
+    "main": "Bomb Defense Up DX",
     "brand": "Splash Mob",
     "stars": 2,
-    "splatnet": 10008,
-    "id": 250
+    "id": 221,
+    "splatnet": 10008
   },
   {
-    "image": "../common/assets/img/gear/Clt_PRK009.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK009.png",
     "name": "Olive Zekko Parka",
     "localizedName": {
       "ja_JP": "エゾッコパーカー ウグイス",
@@ -3671,11 +4904,55 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Zekko",
     "stars": 2,
-    "splatnet": 10009,
-    "id": 251
+    "id": 222,
+    "splatnet": 10009
   },
   {
-    "image": "../common/assets/img/gear/Clt_COP100.png",
+    "image": "../common/assets/img/gear/clothes/Clt_PRK010.png",
+    "name": "Black Hoodie",
+    "localizedName": {
+      "ja_JP": "ホタパーカー ブラック",
+      "en_US": "Black Hoodie",
+      "en_GB": "Black Hoodie",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat capuche noir",
+      "fr_CA": "Sweat capuche noir",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Skalop",
+    "stars": 2,
+    "id": 223,
+    "splatnet": 10010
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_PRK011.png",
+    "name": "Octo Support Hoodie",
+    "localizedName": {
+      "ja_JP": "おうえんパーカー(タコver.)",
+      "en_US": "Octo Support Hoodie",
+      "en_GB": "Octo Support Hoodie",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat zippé Octa",
+      "fr_CA": "Sweat zippé Octa",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Main Power Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "id": 224,
+    "splatnet": 10011
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP100.png",
     "name": "Squiddor Polo",
     "localizedName": {
       "ja_JP": "イカテンくんポロ",
@@ -3690,14 +4967,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Майка курьера",
       "it_IT": "Polo da lavoro"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
-    "id": 97,
+    "id": 225,
     "splatnet": 21000
   },
   {
-    "image": "../common/assets/img/gear/Clt_COP101.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP101.png",
     "name": "Anchor Life Vest",
     "localizedName": {
       "ja_JP": "アンカーベスト",
@@ -3712,14 +4989,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Спасательный жилет",
       "it_IT": "Giubbotto salvavita"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
-    "id": 98,
+    "id": 226,
     "splatnet": 21001
   },
   {
-    "image": "../common/assets/img/gear/Clt_COP102.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP102.png",
     "name": "Juice Parka",
     "localizedName": {
       "ja_JP": "フューエルブルゾン",
@@ -3734,14 +5011,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Форма заправщика",
       "it_IT": "Giacca benzinaio"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
-    "id": 99,
+    "id": 227,
     "splatnet": 21002
   },
   {
-    "image": "../common/assets/img/gear/Clt_COP103.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP103.png",
     "name": "Garden Gear",
     "localizedName": {
       "ja_JP": "マクレGT",
@@ -3756,14 +5033,14 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Безрукавка и перчатки",
       "it_IT": "Set con guanti da lavoro"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
-    "splatnet": 21003,
-    "id": 252
+    "id": 228,
+    "splatnet": 21003
   },
   {
-    "image": "../common/assets/img/gear/Clt_COP104.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP104.png",
     "name": "Crustwear XXL",
     "localizedName": {
       "ja_JP": "アゲアゲ・10・プラーXXL",
@@ -3778,14 +5055,168 @@ angular.module('splatApp').clothes = function($scope) {
       "ru_RU": "Майка «Мак-да-рак»",
       "it_IT": "T-shirt Fritto e Rifritto"
     },
-    "main": undefined,
+    "main": null,
     "brand": "Grizzco",
     "stars": 3,
-    "splatnet": 21004,
-    "id": 253
+    "id": 229,
+    "splatnet": 21004
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_COP105.png",
+    "name": "North-Country Parka",
+    "localizedName": {
+      "ja_JP": "フロムキタグニ87",
+      "en_US": "North-Country Parka",
+      "en_GB": "North-Country Parka",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Parka nordique",
+      "fr_CA": "Parka nordique",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 230,
+    "splatnet": 21005
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP106.png",
+    "name": "Octoleet Armor",
+    "localizedName": {
+      "ja_JP": "ゾネスティックプロテクター",
+      "en_US": "Octoleet Armor",
+      "en_GB": "Octoleet Armor",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Plastron octalien",
+      "fr_CA": "Plastron octalien",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 231,
+    "splatnet": 21006
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP107.png",
+    "name": "Record Shop Look EP",
+    "localizedName": {
+      "ja_JP": "レコヤルックEP",
+      "en_US": "Record Shop Look EP",
+      "en_GB": "Record Shop Look EP",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Tablier vendeur de disques",
+      "fr_CA": "Tablier vendeur de disques",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 232,
+    "splatnet": 21007
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP108.png",
+    "name": "Dev Uniform",
+    "localizedName": {
+      "ja_JP": "デベロッパーズワークウエア",
+      "en_US": "Dev Uniform",
+      "en_GB": "Dev Uniform",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet de développeur",
+      "fr_CA": "Gilet de développeur",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 233,
+    "splatnet": 21008
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP109.png",
+    "name": "Office Attire",
+    "localizedName": {
+      "ja_JP": "ジムパーソンアーマー",
+      "en_US": "Office Attire",
+      "en_GB": "Office Attire",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Tenue de bureau",
+      "fr_CA": "Tenue de bureau",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 234,
+    "splatnet": 21009
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_COP110.png",
+    "name": "SRL Coat",
+    "localizedName": {
+      "ja_JP": "アカシックコート",
+      "en_US": "SRL Coat",
+      "en_GB": "SRL Coat",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Blouse ésotérique",
+      "fr_CA": "Blouse ésotérique",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Акашический халат"
+    },
+    "main": null,
+    "brand": "Grizzco",
+    "stars": 3,
+    "id": 235,
+    "splatnet": 21010
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_CRC000.png",
+    "name": "Mecha Body - AKM",
+    "localizedName": {
+      "ja_JP": "メカボディ・AKM",
+      "en_US": "Mecha Body - AKM",
+      "en_GB": "Mecha Body - AKM",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Combi blindée démon",
+      "fr_CA": "Combi blindée démon",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Sub Power Up",
+    "brand": "SquidForce",
+    "stars": 3,
+    "splatnet": 22000,
+    "id": 236
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_AMB000.png",
     "name": "School Uniform",
     "localizedName": {
       "ja_JP": "スクールブレザー",
@@ -3803,11 +5234,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 100,
+    "id": 237,
     "splatnet": 25000
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB001.png",
     "name": "Samurai Jacket",
     "localizedName": {
       "ja_JP": "サムライジャケット",
@@ -3825,11 +5256,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 101,
+    "id": 238,
     "splatnet": 25001
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB002.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB002.png",
     "name": "Power Armor",
     "localizedName": {
       "ja_JP": "パワードスーツ",
@@ -3847,11 +5278,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Quick Respawn",
     "brand": "amiibo",
     "stars": 2,
-    "id": 102,
+    "id": 239,
     "splatnet": 25002
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB003.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB003.png",
     "name": "School Cardigan",
     "localizedName": {
       "ja_JP": "スクールカーデ",
@@ -3869,11 +5300,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Run Speed Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 103,
+    "id": 240,
     "splatnet": 25003
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB004.png",
     "name": "Squinja Suit",
     "localizedName": {
       "ja_JP": "ニンジャスーツ",
@@ -3891,11 +5322,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Saver",
     "brand": "amiibo",
     "stars": 2,
-    "id": 104,
+    "id": 241,
     "splatnet": 25004
   },
   {
-    "image": "../common/assets/img/gear/Clt_AMB005.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB005.png",
     "name": "Power Armor Mk I",
     "localizedName": {
       "ja_JP": "パワードスーツ オリジン",
@@ -3913,11 +5344,121 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Resistance Up",
     "brand": "amiibo",
     "stars": 2,
-    "id": 105,
+    "id": 242,
     "splatnet": 25005
   },
   {
-    "image": "../common/assets/img/gear/Clt_HAP001.png",
+    "image": "../common/assets/img/gear/clothes/Clt_AMB006.png",
+    "name": "Pearlescent Hoodie",
+    "localizedName": {
+      "ja_JP": "ヒメイトパーカー",
+      "en_US": "Pearlescent Hoodie",
+      "en_GB": "Pearlescent Hoodie",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Sweat à capuche princier",
+      "fr_CA": "Sweat à capuche princier",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Respawn Punisher",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 243,
+    "splatnet": 25006
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_AMB007.png",
+    "name": "Marinated Top",
+    "localizedName": {
+      "ja_JP": "イイダチトップス",
+      "en_US": "Marinated Top",
+      "en_GB": "Marinated Top",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Top coralien",
+      "fr_CA": "Top coralien",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Special Power Up",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 244,
+    "splatnet": 25007
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_AMB008.png",
+    "name": "Enchanted Robe",
+    "localizedName": {
+      "ja_JP": "エンチャントローブ",
+      "en_US": "Enchanted Robe",
+      "en_GB": "Enchanted Robe",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Tunique magique",
+      "fr_CA": "Tunique magique",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Thermal Ink",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 245,
+    "splatnet": 25008
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_AMB009.png",
+    "name": "Steel Platemail",
+    "localizedName": {
+      "ja_JP": "タコティカルなよろい",
+      "en_US": "Steel Platemail",
+      "en_GB": "Steel Platemail",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Armure d'Octaguerrier",
+      "fr_CA": "Armure d'Octaguerrier",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Saver (Sub)",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 246,
+    "splatnet": 25009
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_AMB010.png",
+    "name": "Fresh Fish Gloves",
+    "localizedName": {
+      "ja_JP": "ひれおくんのて",
+      "en_US": "Fresh Fish Gloves",
+      "en_GB": "Fresh Fish Gloves",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Mains de mascotte",
+      "fr_CA": "Mains de mascotte",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Quick Super Jump",
+    "brand": "amiibo",
+    "stars": 2,
+    "id": 247,
+    "splatnet": 25010
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_HAP001.png",
     "name": "Splatfest Tee",
     "localizedName": {
       "ja_JP": "フェスＴ",
@@ -3934,13 +5475,13 @@ angular.module('splatApp').clothes = function($scope) {
     },
     "main": "Ability Doubler",
     "brand": "SquidForce",
-    "fixed": true,
+    "fixed": true,    
     "stars": 3,
-    "id": 109,
+    "id": 248,
     "splatnet": 26000
   },
   {
-    "image": "../common/assets/img/gear/Clt_MSN000.png",
+    "image": "../common/assets/img/gear/clothes/Clt_MSN000.png",
     "name": "Hero Jacket Replica",
     "localizedName": {
       "ja_JP": "ヒーロージャケット レプリカ",
@@ -3958,11 +5499,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Swim Speed Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 106,
+    "id": 249,
     "splatnet": 27000
   },
   {
-    "image": "../common/assets/img/gear/Clt_MSN004.png",
+    "image": "../common/assets/img/gear/clothes/Clt_MSN004.png",
     "name": "Armor Jacket Replica",
     "localizedName": {
       "ja_JP": "アーマージャケット レプリカ",
@@ -3980,11 +5521,11 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Special Charge Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 107,
+    "id": 250,
     "splatnet": 27004
   },
   {
-    "image": "../common/assets/img/gear/Clt_MSN101.png",
+    "image": "../common/assets/img/gear/clothes/Clt_MSN101.png",
     "name": "Hero Hoodie Replica",
     "localizedName": {
       "ja_JP": "ヒーローフーディー レプリカ",
@@ -4002,8 +5543,73 @@ angular.module('splatApp').clothes = function($scope) {
     "main": "Ink Recovery Up",
     "brand": "Cuttlegear",
     "stars": 2,
-    "id": 108,
+    "id": 251,
     "splatnet": 27101
-  }
-]
-  }
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_MSN104.png",
+    "name": "Neo Octoling Armor",
+    "localizedName": {
+      "ja_JP": "タコゾネスプロテクターネオ",
+      "en_US": "Neo Octoling Armor",
+      "en_GB": "Neo Octoling Armor",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Plastron Octaling Néo",
+      "fr_CA": "Plastron Octaling Néo",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Haunt",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 252,
+    "splatnet": 27104
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_MSN105.png",
+    "name": "Null Armor Replica",
+    "localizedName": {
+      "ja_JP": "ネルアーマー レプリカ",
+      "en_US": "Null Armor Replica",
+      "en_GB": "Null Armor Replica",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Armure Patapoulpe (réplique)",
+      "fr_CA": "Armure Patapoulpe (réplique)",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Ink Resistance Up",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 253,
+    "splatnet": 27105
+  },
+  {
+    "image": "../common/assets/img/gear/clothes/Clt_MSN106.png",
+    "name": "Old-Timey Clothes",
+    "localizedName": {
+      "ja_JP": "グランパなフク",
+      "en_US": "Old-Timey Clothes",
+      "en_GB": "Old-Timey Clothes",
+      "es_ES": "Null",
+      "es_MX": "Null",
+      "fr_FR": "Gilet zippé de papi",
+      "fr_CA": "Gilet zippé de papi",
+      "de_DE": "Null",
+      "it_IT": "Null",
+      "nl_NL": "Null",
+      "ru_RU": "Null"
+    },
+    "main": "Thermal Ink",
+    "brand": "Cuttlegear",
+    "stars": 2,
+    "id": 254,
+    "splatnet": 27106
+  }]
+}

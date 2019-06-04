@@ -85,7 +85,11 @@ angular.module('splatApp').specials = function ($scope) {
         "ru_RU": "Пузырятор",
         "zh_HK": "バブルランチャー (吹波波)"
       },
-      image: "../common/assets/img/subspe/Wsp_SuperBubble.png"
+      image: "../common/assets/img/subspe/Wsp_SuperBubble.png",
+      radius: {
+        "Max": 30.0,
+        "Min": 15.0,
+      }
     },
     {
       name: "Ink Armor",
@@ -147,7 +151,7 @@ angular.module('splatApp').specials = function ($scope) {
         "zh_HK": "ハイパープレッサー (Laser)"
       },
       image: "../common/assets/img/subspe/Wsp_WaterCutter.png",
-      duration: 8
+      duration: 7.17
     },
     {
       name: "Ink Storm",
@@ -262,7 +266,47 @@ angular.module('splatApp').specials = function ($scope) {
       },
       image: "../common/assets/img/subspe/Wsp_LauncherCurling.png",
       duration: 6
-    }
+    },
+    {
+      name: "Booyah Bomb",
+      // TODO: These came from the Wiki or Google Translate. May not be correct.
+      localizedName: {
+        "ja_JP": "ナイスダマ",
+        "en_US": "Booyah Bomb",
+        "en_GB": "Booyah Bomb",
+        "es_ES": "Bola genializante",
+        "es_MX": "Bola genializante",
+        "fr_FR": "Jolizator",
+        "fr_CA": "Excellinator",
+        "de_DE": "Cool-Kugel",
+        "it_IT": "Granbotto",
+        "nl_NL": "Coole bom",
+        "ru_RU": "Йо-хо-плюхер Yo-kho-plyukher",
+        "zh_HK": "好球"
+      },
+      image: "../common/assets/img/subspe/Wsp_BooyahBomb.png",
+      duration: 8.5
+    },
+    {
+      name: "Ultra Stamp",
+      // TODO: These came from the Wiki or Google Translate. May not be correct.
+      localizedName: {
+        "ja_JP": "ウルトラハンコ",
+        "en_US": "Ultra Stamp",
+        "en_GB": "Ultra Stamp",
+        "es_ES": "Ultraselladora",
+        "es_MX": "Ultraselladora",
+        "fr_FR": "Ultra-tamponneur",
+        "fr_CA": "Ultra-tamponneur",
+        "de_DE": "Ultra-Stempel",
+        "it_IT": "Mega timbro",
+        "nl_NL": "Ultrastempel",
+        "ru_RU": "Припечать",
+        "zh_HK": "超级邮票"
+      },
+      image: "../common/assets/img/subspe/Wsp_Ultra_Stamp.png",
+      duration: 9.0
+    }    
   ]
 
   $scope.getSpecialByName = function(name) {
