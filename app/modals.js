@@ -1,10 +1,10 @@
 var modalCloseDelay = 200;
 
 angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, $uibModal, $log, $timeout) {
-  $scope.animationsEnabled = true;
+	$scope.animationsEnabled = true;
 
-  var templates = {
-    weaponPickerNew : `
+	var templates = {
+		weaponPickerNew: `
     <div class="row">
     <div class="col-md-12">
     <div class="card neonstripes" id="dialog">
@@ -87,8 +87,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     `,
-    // TODO / FIXME - handle grizzco more elegantly
-    gearPicker : `<div class="row">
+		// TODO / FIXME - handle grizzco more elegantly
+		gearPicker: `<div class="row">
     <div class="col-md-12">
     <div class="card {{::background}}" id="dialog">
     <div class="row cardheader">
@@ -169,8 +169,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>`,
 
-    //TODO: split this into its own file
-    whatsNew: `<div class="row">
+		//TODO: split this into its own file
+		whatsNew: `<div class="row">
     <div class="col-md-12">
     <div class="card basic purplestripes" id="dialog">
     <div class="row cardheader">
@@ -180,8 +180,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div id="changelog"</div>
     <h4>Development Notice</h4>
     <ul>
-      <li>This is a fork of the original Loadout.ink code base being updated by <a href="https://twitter.com/Selicia2" target="_blank">Selicia</a>. Please consult the Trello Board for progress and status updates.</li>
-      <li>Github Repo: <a href="https://github.com/selicia/splat2-calc" target="_blank">https://github.com/selicia/splat2-calc</a>.
+      <li>Please consult the Trello Board for progress and status updates.</li>
+      <li>Github Repo: <a href="https://github.com/DeviPotato/splat2-calc" target="_blank">https://github.com/DeviPotato/splat2-calc</a>.
       <li>Trello Board: <a href="https://trello.com/b/CjN9IRzJ/loadoutink" target="_blank">https://trello.com/b/CjN9IRzJ/loadoutink</a>.
     </ul>
 
@@ -475,8 +475,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     `,
-    // FIXME / LOCALIZE - Credit to Luke Horwell needs localization.
-    about: `<div class="row">
+		// FIXME / LOCALIZE - Credit to Luke Horwell needs localization.
+		about: `<div class="row">
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
@@ -497,7 +497,8 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     `,
-    update: `<div class="row">
+		update:
+			`<div class="row">
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
@@ -506,16 +507,14 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     <div class="row basic-content readable" id="update">
     <img src="/common/assets/img/ui/update.jpg" width="100%" height="100%"></img>
     <h2 style="text-align:center;">
-    {{ UI_VERSION_PREFIX | translate }}`
-    +
-    $scope.appVersionToString()
-    +
-    `</h2></div><div class="row buttons">
+    {{ UI_VERSION_PREFIX | translate }}` +
+			$scope.appVersionToString() +
+			`</h2></div><div class="row buttons">
     <div class="col-xs-12">
     <button class="btn" type="button" onclick="animateButton(this)" ng-click="ok()"><span>{{ UI_CONFIRM_CASUAL | translate }}</span></button>
     </div>
     </div>`,
-    excessiveAP: `<div class="row">
+		excessiveAP: `<div class="row">
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
@@ -532,7 +531,7 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     </div>`,
-    spyke: `<div class="row">
+		spyke: `<div class="row">
     <div class="col-md-12">
     <div class="card purplestripes" id="dialog">
     <div class="row cardheader">
@@ -552,360 +551,368 @@ angular.module('splatApp').controller('ModalCtrl', function($scope, $rootScope, 
     </div>
     </div>
     </div>`
-  }
+	};
 
-  $scope.openWeaponPicker = function(size) {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["weaponPickerNew"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'WeaponPickerCtrl',
-      size: size,
-      resolve: {
-        selectedSet: function() {
-          return $scope.selectedSet;
-        },
-        weaponSets: function() {
-          return $scope.weaponSets;
-        },
-        subs: function() {
-          return $scope.subs;
-        },
-        selectedWeapon: function() {
-          return $scope.loadout.weapon;
-        },
-        getSubByName: function() {
-          return $scope.getSubByName;
-        },
-        getSpecialByName: function() {
-          return $scope.getSpecialByName;
-        }
-      }
-    });
+	$scope.openWeaponPicker = function(size) {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['weaponPickerNew'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'WeaponPickerCtrl',
+			size: size,
+			resolve: {
+				selectedSet: function() {
+					return $scope.selectedSet;
+				},
+				weaponSets: function() {
+					return $scope.weaponSets;
+				},
+				subs: function() {
+					return $scope.subs;
+				},
+				selectedWeapon: function() {
+					return $scope.loadout.weapon;
+				},
+				getSubByName: function() {
+					return $scope.getSubByName;
+				},
+				getSpecialByName: function() {
+					return $scope.getSpecialByName;
+				}
+			}
+		});
 
-    modalInstance.result.then(function(results) {
-      $scope.$parent.selectedSet=results.set; // ???
-      $scope.$parent.loadout.weapon=results.weapon;
-    }, function() {
- 
-    });
-  };
+		modalInstance.result.then(
+			function(results) {
+				$scope.$parent.selectedSet = results.set; // ???
+				$scope.$parent.loadout.weapon = results.weapon;
+			},
+			function() {}
+		);
+	};
 
-  $scope.openChangelog = function() {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["whatsNew"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'BasicCtrl'
-    });
+	$scope.openChangelog = function() {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['whatsNew'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'BasicCtrl'
+		});
 
-    modalInstance.result.then(function(results) {
+		modalInstance.result.then(function(results) {}, function() {});
+	};
 
-    }, function() {
+	$scope.openAbout = function() {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['about'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'BasicCtrl'
+		});
 
-    });
-  };
+		modalInstance.result.then(function(results) {}, function() {});
+	};
 
-  $scope.openAbout = function() {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["about"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'BasicCtrl'
-    });
+	$scope.openGearPicker = function(gear, equipped, slot) {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['gearPicker'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'GearPickerCtrl',
+			resolve: {
+				slot: function() {
+					return eval('$scope.loadout.' + slot);
+				},
+				getSkillByName: function() {
+					return $scope.getSkillByName;
+				},
+				set: function() {
+					return gear;
+				},
+				brands: function() {
+					return $scope.brands;
+				},
+				filterByMain: function() {
+					return $scope.filterByMain;
+				},
+				selectedGear: function() {
+					return equipped;
+				},
+				background: function() {
+					if (slot == 'head') {
+						return 'redstripes';
+					} else if (slot == 'clothes') {
+						return 'tealstripes';
+					} else if (slot == 'shoes') {
+						return 'orangestripes';
+					} else {
+						return 'neonstripes';
+					}
+				}
+			}
+		});
+		modalInstance.result.then(
+			function(results) {
+				$scope.equip(results.selected, slot);
+				eval('$scope.loadout.' + slot + '.equipped = results.selected');
+				if (eval('$scope.loadout.' + slot + '.main') == null) {
+					eval('$scope.loadout.' + slot + ".main = $scope.getSkillByName('" + results.selected.main + "')");
+				}
+				eval('$scope.loadout.' + slot + '.equipped = results.selected');
+			},
+			function() {}
+		);
+	};
 
-    modalInstance.result.then(function(results) {
+	$scope.openSpykeModal = function() {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['spyke'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'BasicCtrl'
+		});
 
-    }, function() {
+		modalInstance.result.then(
+			function(results) {
+				var url = 'http://spyke.h3xmani.ac/app/loadout?encoding=' + $scope.encodeLoadout();
+				window.open(url, '_blank');
+			},
+			function() {}
+		);
+	};
 
-    });
-  };
+	$rootScope.openExcessiveAPModal = function() {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['excessiveAP'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'BasicCtrl'
+		});
 
-  $scope.openGearPicker = function(gear, equipped, slot) {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["gearPicker"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'GearPickerCtrl',
-      resolve: {
-        slot: function() {
-          return eval("$scope.loadout." + slot)
-        },
-        getSkillByName: function() {
-          return $scope.getSkillByName
-        },
-        set: function() {
-          return gear
-        },
-        brands: function() {
-          return $scope.brands
-        },
-        filterByMain: function() {
-          return $scope.filterByMain
-        },
-        selectedGear: function() {
-          return equipped
-        },
-        background: function() {
-          if(slot=='head') {
-            return 'redstripes'
-          }
-          else if(slot=='clothes') {
-            return 'tealstripes'
-          }
-          else if(slot=='shoes') {
-            return 'orangestripes'
-          }
-          else {
-            return 'neonstripes'
-          }
-        }
-      }
-    });
-    modalInstance.result.then(function(results) {
-      $scope.equip(results.selected, slot)
-      eval("$scope.loadout." + slot + ".equipped = results.selected")
-      if(eval("$scope.loadout." + slot + ".main") == null) {
-        eval(("$scope.loadout." + slot + ".main = $scope.getSkillByName('" + results.selected.main + "')"))
-      }
-      eval("$scope.loadout." + slot + ".equipped = results.selected")
-    }, function() {
+		modalInstance.result.then(function(results) {}, function() {});
+	};
 
-    });
-  };
+	// Update modal
+	var openUpdateModel = function() {
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			template: templates['update'],
+			windowTemplateUrl: 'blankModal.html',
+			controller: 'BasicCtrl'
+		});
 
-  $scope.openSpykeModal = function() {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["spyke"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'BasicCtrl'
-    });
-
-    modalInstance.result.then(function(results) {
-      var url = "http://spyke.h3xmani.ac/app/loadout?encoding=" + $scope.encodeLoadout();
-      window.open(url,'_blank');
-    }, function() {
-
-    });    
-  };
-
-  $rootScope.openExcessiveAPModal = function() {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["excessiveAP"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'BasicCtrl'
-    });
-
-    modalInstance.result.then(function(results) {
-
-    }, function() {
-
-    });
-  };
-
-  // Update modal
-  var openUpdateModel = function() {
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      template: templates["update"],
-      windowTemplateUrl: 'blankModal.html',
-      controller: 'BasicCtrl'
-    });
-
-    modalInstance.result.then(function(results) {
-
-    }, function() {
-
-    });  
-  }
-  if (typeof(Storage) !== "undefined") {
-    if(!localStorage.appVersion || localStorage.appVersion < $scope.appVersion) {
-      localStorage.appVersion = $scope.appVersion;
-      openUpdateModel();
-    }
-  }
+		modalInstance.result.then(function(results) {}, function() {});
+	};
+	if (typeof Storage !== 'undefined') {
+		if (!localStorage.appVersion || localStorage.appVersion < $scope.appVersion) {
+			localStorage.appVersion = $scope.appVersion;
+			openUpdateModel();
+		}
+	}
 });
 
-angular.module('splatApp').controller('WeaponPickerCtrl', function($scope, $rootScope, $uibModalInstance, getSubByName, getSpecialByName, weaponSets, subs, selectedSet, selectedWeapon, $timeout) {
-  $scope.selectedSet = selectedSet;
-  $scope.weaponSets = weaponSets;
-  $scope.selectedWeapon = selectedWeapon;
+angular
+	.module('splatApp')
+	.controller('WeaponPickerCtrl', function(
+		$scope,
+		$rootScope,
+		$uibModalInstance,
+		getSubByName,
+		getSpecialByName,
+		weaponSets,
+		subs,
+		selectedSet,
+		selectedWeapon,
+		$timeout
+	) {
+		$scope.selectedSet = selectedSet;
+		$scope.weaponSets = weaponSets;
+		$scope.selectedWeapon = selectedWeapon;
 
-  $scope.$watch('selectedWeapon', function (newValue, oldValue, scope) {
-    if($rootScope.splatController.weaponRanks.indexOf(newValue.name) != -1) {
-      $scope.weaponRank = 100 - $rootScope.splatController.weaponRanks.indexOf(newValue.name);
-    }
-    else {
-      $scope.weaponRank = 0;
-    }
-  });
+		$scope.$watch('selectedWeapon', function(newValue, oldValue, scope) {
+			if ($rootScope.splatController.weaponRanks.indexOf(newValue.name) != -1) {
+				$scope.weaponRank = 100 - $rootScope.splatController.weaponRanks.indexOf(newValue.name);
+			} else {
+				$scope.weaponRank = 0;
+			}
+		});
 
-  $scope.weaponSearchFilter = function(value) {
-    var current_lang = $rootScope.splatController.getCurrentLang();
-    var searchText = document.getElementById("weaponSearchFilterText").value;
-    
-    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-      return true;
-    }
+		$scope.weaponSearchFilter = function(value) {
+			var current_lang = $rootScope.splatController.getCurrentLang();
+			var searchText = document.getElementById('weaponSearchFilterText').value;
 
-    // Filter on SPECIAL
-    var specials = $rootScope.splatController.specials;
-    var special = null;
-    for(var i = 0; i < specials.length; i++){
-      if(value.special != null && specials[i].name == value.special) {
-        special = specials[i];
-        break;
-      }
-    }
-    if(special != null) {
-        if(special.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-          return true;
-        }
-    }
+			if (value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+				return true;
+			}
 
-    // Filter on SUB ABILITY
-    var subs = $rootScope.splatController.subs;
-    var sub = null;
-    for(var i = 0; i < subs.length; i++){
-      if(value.sub != null && subs[i].name == value.sub) {
-        sub = subs[i];
-        break;
-      }
-    }
-    if(sub != null) {
-      if(sub.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-        return true;
-      }
-    }
+			// Filter on SPECIAL
+			var specials = $rootScope.splatController.specials;
+			var special = null;
+			for (var i = 0; i < specials.length; i++) {
+				if (value.special != null && specials[i].name == value.special) {
+					special = specials[i];
+					break;
+				}
+			}
+			if (special != null) {
+				if (special.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+					return true;
+				}
+			}
 
-    return false;
-  };
+			// Filter on SUB ABILITY
+			var subs = $rootScope.splatController.subs;
+			var sub = null;
+			for (var i = 0; i < subs.length; i++) {
+				if (value.sub != null && subs[i].name == value.sub) {
+					sub = subs[i];
+					break;
+				}
+			}
+			if (sub != null) {
+				if (sub.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+					return true;
+				}
+			}
 
-  $scope.switchSet = function() {
-    $scope.selectedWeapon = this.availableWeapons()[0];
-  }
+			return false;
+		};
 
-  $scope.selectWeapon = function(item) {
-    $scope.selectedWeapon=item;
-  }
+		$scope.switchSet = function() {
+			$scope.selectedWeapon = this.availableWeapons()[0];
+		};
 
-  $scope.availableWeapons = function() {
-    return this.selectedSet.weapons.filter(filter_available)
-  }
+		$scope.selectWeapon = function(item) {
+			$scope.selectedWeapon = item;
+		};
 
-  $scope.getSubByName = getSubByName
+		$scope.availableWeapons = function() {
+			return this.selectedSet.weapons.filter(filter_available);
+		};
 
-  $scope.getSubIcon = function(name) {
-    return $scope.getSubByName(name).image;
-  }
+		$scope.getSubByName = getSubByName;
 
-  $scope.getSpecialByName = getSpecialByName
+		$scope.getSubIcon = function(name) {
+			return $scope.getSubByName(name).image;
+		};
 
-  $scope.getSpecialIcon = function(name) {
-    return $scope.getSpecialByName(name).image;
-  }
+		$scope.getSpecialByName = getSpecialByName;
 
-  $scope.ok = function() {
-    var scope = this;
-    $timeout(function() {
-      $uibModalInstance.close({'set' : scope.selectedSet, 'weapon': scope.selectedWeapon});
-    }, modalCloseDelay);
-  };
+		$scope.getSpecialIcon = function(name) {
+			return $scope.getSpecialByName(name).image;
+		};
 
-  $scope.cancel = function() {
-    $timeout(function() {
-      $uibModalInstance.dismiss('cancel');
-    }, modalCloseDelay);
-  };
-});
+		$scope.ok = function() {
+			var scope = this;
+			$timeout(function() {
+				$uibModalInstance.close({ set: scope.selectedSet, weapon: scope.selectedWeapon });
+			}, modalCloseDelay);
+		};
 
+		$scope.cancel = function() {
+			$timeout(function() {
+				$uibModalInstance.dismiss('cancel');
+			}, modalCloseDelay);
+		};
+	});
 
-angular.module('splatApp').controller('GearPickerCtrl', function($scope, $rootScope, $uibModalInstance, background, slot, set, brands, filterByMain, selectedGear, getSkillByName, $timeout) {
-  $scope.slot = slot;
-  $scope.set = set;
-  $scope.filterByMain = filterByMain;
-  $scope.selectedGear = selectedGear;
-  $scope.getSkillByName = getSkillByName;
-  $scope.brands = brands;
-  $scope.background = background;
+angular
+	.module('splatApp')
+	.controller('GearPickerCtrl', function(
+		$scope,
+		$rootScope,
+		$uibModalInstance,
+		background,
+		slot,
+		set,
+		brands,
+		filterByMain,
+		selectedGear,
+		getSkillByName,
+		$timeout
+	) {
+		$scope.slot = slot;
+		$scope.set = set;
+		$scope.filterByMain = filterByMain;
+		$scope.selectedGear = selectedGear;
+		$scope.getSkillByName = getSkillByName;
+		$scope.brands = brands;
+		$scope.background = background;
 
-  $scope.gearSearchFilter = function(value) {
-    var current_lang = $rootScope.splatController.getCurrentLang();
-    var searchText = document.getElementById("gearSearchFilterText").value;
-    
-    // Filter on NAME
-    if(value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-      return true;
-    }
-    
-    // Filter on BRAND
-    var brand = $rootScope.splatController.brands[value.brand];
-    if(brand.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-      return true;
-    }
-    
-    // Filter on MAIN ABILITY
-    var skills = $rootScope.splatController.skills;
-    var skill = null;
-    for(var i = 0; i < skills.length; i++){
-      if(value.main != null && skills[i].name == value.main) {
-        skill = skills[i];
-        break;
-      }
-    }
-    if(skill != null) {
-      if(skill.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
-        return true;
-      }
-    }
+		$scope.gearSearchFilter = function(value) {
+			var current_lang = $rootScope.splatController.getCurrentLang();
+			var searchText = document.getElementById('gearSearchFilterText').value;
 
-    return false;
-  };
+			// Filter on NAME
+			if (value.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+				return true;
+			}
 
-  if(slot.main != null) {
-    $scope.filtered = filterByMain(set,slot.main.name);
-  }
-  else {
-    $scope.filtered = filterByMain(set,null);
-  }
+			// Filter on BRAND
+			var brand = $rootScope.splatController.brands[value.brand];
+			if (brand.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+				return true;
+			}
 
-  $scope.selectGear = function(item) {
-    $scope.selectedGear=item;
-  }
+			// Filter on MAIN ABILITY
+			var skills = $rootScope.splatController.skills;
+			var skill = null;
+			for (var i = 0; i < skills.length; i++) {
+				if (value.main != null && skills[i].name == value.main) {
+					skill = skills[i];
+					break;
+				}
+			}
+			if (skill != null) {
+				if (skill.localizedName[current_lang].toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+					return true;
+				}
+			}
 
-  $scope.ok = function() {
-    var scope = this;
-    $timeout(function() {
-      $uibModalInstance.close({selected : scope.selectedGear});
-    }, modalCloseDelay);
-  };
+			return false;
+		};
 
-  $scope.cancel = function() {
-    $timeout(function() {
-      $uibModalInstance.dismiss('cancel');
-    }, modalCloseDelay);
-  };
-});
+		if (slot.main != null) {
+			$scope.filtered = filterByMain(set, slot.main.name);
+		} else {
+			$scope.filtered = filterByMain(set, null);
+		}
+
+		$scope.selectGear = function(item) {
+			$scope.selectedGear = item;
+		};
+
+		$scope.ok = function() {
+			var scope = this;
+			$timeout(function() {
+				$uibModalInstance.close({ selected: scope.selectedGear });
+			}, modalCloseDelay);
+		};
+
+		$scope.cancel = function() {
+			$timeout(function() {
+				$uibModalInstance.dismiss('cancel');
+			}, modalCloseDelay);
+		};
+	});
 
 angular.module('splatApp').controller('BasicCtrl', function($scope, $uibModalInstance, $timeout) {
-  $scope.ok = function() {
-    $timeout(function() {
-      $uibModalInstance.close();
-    }, modalCloseDelay);
-  };
+	$scope.ok = function() {
+		$timeout(function() {
+			$uibModalInstance.close();
+		}, modalCloseDelay);
+	};
 
-  $scope.cancel = function() {
-    $timeout(function() {
-      $uibModalInstance.dismiss('cancel');
-    }, modalCloseDelay);
-  };
+	$scope.cancel = function() {
+		$timeout(function() {
+			$uibModalInstance.dismiss('cancel');
+		}, modalCloseDelay);
+	};
 });
 
 function animateButton(self) {
-    $(self).addClass("active");
-    setTimeout(function() {
-      $(".modal-backdrop").remove();
-    }, modalCloseDelay);
+	$(self).addClass('active');
+	setTimeout(function() {
+		$('.modal-backdrop').remove();
+	}, modalCloseDelay);
 }
