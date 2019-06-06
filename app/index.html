@@ -87,7 +87,9 @@
                             <button class="icon-button" ng-click="screenshotMode=!screenshotMode" uib-tooltip="{{ UI_SCREENSHOT_MODE | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-window-maximize"></span></button>
                             <button class="icon-button" ng-click="loadout.clearAbilities()" uib-tooltip="{{ UI_CLEAR_ABILITIES | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-undo"></span></button>
                             <button class="icon-button" ng-click="resetLoadout()" uib-tooltip="{{ UI_CLEAR_ALL | translate }}" tooltip-append-to-body="true"><span class="fa fa-fw fa-bomb"></span></button>
-                            <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" style="padding-bottom:3px;" /></button>
+                            <!-- spyke support currently disabled
+                            <button class="icon-button" ng-controller="ModalCtrl" ng-click="openSpykeModal()" uib-tooltip="{{ UI_SPYKE_TOOLTIP | translate }}" tooltip-append-to-body="true"><img src="../common/assets/img/misc/spyke.png" height="37" width="37" style="padding-bottom:3px;" /></button>  
+                            -->
                         </div>
                     </div>
                       <div class="row" ng-hide="screenshotMode">
