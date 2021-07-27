@@ -7630,7 +7630,7 @@ angular
 					'Tenta Missiles Cross Paint Ray Length': [ 30.0, 30.0, 30.0 ],
 					'Ultra Stamp Duration': [ 660, 600, 540 ],
 					'Baller HP': [ 6000, 5000, 4000 ],
-					'Tenta Missiles Paint Radius': [ 34, 32, 30 ],
+					'Tenta Missiles Paint Radius': [ 36, 33, 30 ],
 					'Booyah Ball Auto Charge Increase': [ 0.01, 0.006, 0.002 ],
 					'Splash Down Burst Radius Far (Stealth Jump)': [ 140.0, 140.0, 140.0 ],
 					'Ink Armor Duration': [ 540, 450, 360 ],
